@@ -8,7 +8,7 @@
 *.sln.docstates
 *.fdb
 *.zip
-Misc/
+/Misc/
 Html/
 Help/
 Output/
