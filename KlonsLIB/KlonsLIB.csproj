@@ -16,18 +16,15 @@
 
   <ItemGroup>
     <PackageReference Include="FirebirdSql.Data.FirebirdClient" Version="10.3.1" />
-    <PackageReference Include="FirebirdSql.EntityFrameworkCore.Firebird" Version="11.0.0" />
     <PackageReference Include="KlonsLIB.Design.Debug" Version="1.247.230922" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.7" />
     <PackageReference Include="Microsoft.WinForms.Designer.SDK" Version="1.6.0" />
-    <PackageReference Include="ReflectionMagic" Version="5.0.1" />
     <PackageReference Include="ReportViewerCore.NETCore" Version="15.1.21" />
     <PackageReference Include="ReportViewerCore.WinForms" Version="15.1.21" />
   </ItemGroup>
 
   <ItemGroup>
     <Reference Include="SourceGrid">
-      <HintPath>..\Libs\SourceGrid3\SourceGrid.dll</HintPath>
+      <HintPath>..\Libs\SourceGrid.dll</HintPath>
     </Reference>
   </ItemGroup>
 

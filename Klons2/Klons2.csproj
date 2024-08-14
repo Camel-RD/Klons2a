@@ -168,18 +168,6 @@
     <PackageReference Include="System.Runtime.CompilerServices.Unsafe" Version="6.0.0" />
   </ItemGroup>
   <ItemGroup>
-    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
-      <Visible>False</Visible>
-      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
-      <Install>true</Install>
-    </BootstrapperPackage>
-    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
-      <Visible>False</Visible>
-      <ProductName>.NET Framework 3.5 SP1</ProductName>
-      <Install>false</Install>
-    </BootstrapperPackage>
-  </ItemGroup>
-  <ItemGroup>
     <PackageReference Include="FirebirdSql.Data.FirebirdClient" Version="10.3.1" />
     <PackageReference Include="NPOI" Version="2.7.1" />
     <PackageReference Include="Portable.BouncyCastle" Version="1.9.0" />
@@ -194,7 +182,7 @@
   </ItemGroup>
   <ItemGroup>
     <Reference Include="SourceGrid">
-      <HintPath>..\Libs\SourceGrid3\SourceGrid.dll</HintPath>
+      <HintPath>..\Libs\SourceGrid.dll</HintPath>
     </Reference>
   </ItemGroup>
 </Project>
