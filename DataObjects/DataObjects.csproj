@@ -1,0 +1,52 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <OutputType>Library</OutputType>
+    <RootNamespace>DataObjectsA</RootNamespace>
+    <AssemblyName>DataObjectsA</AssemblyName>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <Platforms>AnyCPU;x86;x64</Platforms>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Update="DO_A\AamatsData.cs" />
+    <Compile Update="DO_A\BonusData.cs" />
+    <Compile Update="DO_A\CompanyData.cs" />
+    <Compile Update="DO_A\FpPaylistsRowData.cs" />
+    <Compile Update="DO_A\LikmesData.cs" />
+    <Compile Update="DO_A\PayListRowData.cs" />
+    <Compile Update="DO_A\PersonsRData.cs" />
+    <Compile Update="DO_M\DocData.cs" />
+    <Compile Update="DO_M\DocFilterData.cs" />
+    <Compile Update="DO_M\InventoryDocData.cs" />
+    <Compile Update="DO_M\ParamsMData.cs" />
+    <Compile Update="DO_M\PVNRates2Data.cs" />
+    <Compile Update="DO_P\CompanyData.cs" />
+    <Compile Update="DO_P\FilterData.cs" />
+    <Compile Update="DO_P\ItemsEventsData.cs" />
+    <Compile Update="DO_P\ReplacePartData.cs" />
+    <Compile Update="DO_A\SalaryData.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\NotyfyProp\NotyfyProp.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
+    <PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Fody" Version="6.8.1">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="PropertyChanged.Fody" Version="4.1.0" />
+  </ItemGroup>
+  <PropertyGroup>
+    <AssemblyTitle>DataObjectsA</AssemblyTitle>
+    <Product>DataObjectsA</Product>
+    <Copyright>Copyright ©  2015</Copyright>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <FileVersion>1.0.0.0</FileVersion>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+</Project>

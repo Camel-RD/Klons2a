@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<KlonsSettings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <MasterEntry Name="SIA PIA">
+    <FileName>klons_p.fdb</FileName>
+    <Descr>SIA PIA - 2014</Descr>
+    <ConnStr>FBEmbeded</ConnStr>
+    <Path />
+  </MasterEntry>
+  <LastUserName>Admin</LastUserName>
+  <BaseDBPathX>DB</BaseDBPathX>
+  <BaseConnStr>FBEmbeded</BaseConnStr>
+  <DoVersionCheck>NO</DoVersionCheck>
+  <InWine>NO</InWine>
+  <LastVersionCheckDate>18.11.2016</LastVersionCheckDate>
+  <ColorThemeId>system</ColorThemeId>
+  <FormFontSize>12</FormFontSize>
+  <FormFontName>Microsoft Sans Serif</FormFontName>
+  <FormFontStyle>0</FormFontStyle>
+  <ColumnWidths_Docs>
+    <int>51</int>
+    <int>53</int>
+    <int>85</int>
+    <int>68</int>
+    <int>51</int>
+    <int>136</int>
+    <int>127</int>
+    <int>196</int>
+    <int>98</int>
+    <int>91</int>
+    <int>101</int>
+    <int>45</int>
+    <int>101</int>
+    <int>75</int>
+    <int>160</int>
+    <int>101</int>
+  </ColumnWidths_Docs>
+  <ColumnWidths_Ops>
+    <int>40</int>
+    <int>40</int>
+    <int>59</int>
+    <int>59</int>
+    <int>40</int>
+    <int>59</int>
+    <int>45</int>
+    <int>59</int>
+    <int>59</int>
+    <int>40</int>
+    <int>59</int>
+    <int>45</int>
+    <int>94</int>
+    <int>66</int>
+    <int>80</int>
+    <int>80</int>
+    <int>162</int>
+    <int>75</int>
+  </ColumnWidths_Ops>
+  <ColumnWidths_Dops>
+    <int>63</int>
+    <int>99</int>
+    <int>72</int>
+    <int>45</int>
+    <int>90</int>
+    <int>200</int>
+    <int>120</int>
+    <int>130</int>
+    <int>208</int>
+    <int>72</int>
+    <int>72</int>
+    <int>90</int>
+    <int>72</int>
+    <int>45</int>
+    <int>72</int>
+    <int>54</int>
+    <int>72</int>
+    <int>45</int>
+    <int>72</int>
+    <int>54</int>
+    <int>90</int>
+    <int>144</int>
+  </ColumnWidths_Dops>
+  <ReportZoom>150</ReportZoom>
+  <WindowPos>max</WindowPos>
+  <BackUpPlan>0</BackUpPlan>
+  <BackUpFolder />
+  <OpsShowFullPersonName>true</OpsShowFullPersonName>
+  <OpsShowPersonsRegNum>true</OpsShowPersonsRegNum>
+  <OpsShowPersonsPVNRegNum>true</OpsShowPersonsPVNRegNum>
+  <ShowPersonList>true</ShowPersonList>
+  <ShowPayDataPanel>false</ShowPayDataPanel>
+  <ShowPayLists>false</ShowPayLists>
+  <ShowPayListFilterPanel>false</ShowPayListFilterPanel>
+  <ShowFpPayDataPanel>false</ShowFpPayDataPanel>
+  <ShowFpPayLists>false</ShowFpPayLists>
+  <DontShowBetaWarning>false</DontShowBetaWarning>
+  <ShowWindowListToolStrip>true</ShowWindowListToolStrip>
+  <SpecialFeatures>false</SpecialFeatures>
+</KlonsSettings>

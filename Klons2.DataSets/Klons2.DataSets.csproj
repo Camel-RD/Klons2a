@@ -1,0 +1,189 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <OutputType>Library</OutputType>
+    <RootNamespace>KlonsF</RootNamespace>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <AssemblyTitle>DSLib</AssemblyTitle>
+    <Product>DSLib</Product>
+    <Copyright>Copyright ©  2023</Copyright>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <FileVersion>1.0.0.0</FileVersion>
+	<Platforms>AnyCPU;x86;x64</Platforms>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+    <PropertyGroup>
+	    <NoWarn>$(NoWarn);SYSLIB0050</NoWarn>
+    </PropertyGroup>
+  <ItemGroup>
+    <Compile Update="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Update="DataSets\KlonsADataSet.cs">
+      <DependentUpon>KlonsADataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Update="DataSets\KlonsADataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>KlonsADataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Update="DataSets\KlonsARepDataSet.cs">
+      <DependentUpon>KlonsARepDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Update="DataSets\KlonsARepDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>KlonsARepDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Update="DataSets\klonsDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>klonsDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Update="DataSets\KlonsMDataSet.cs">
+      <DependentUpon>KlonsMDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Update="DataSets\KlonsMDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>KlonsMDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Update="DataSets\KlonsMRepDataSet.cs">
+      <DependentUpon>KlonsMRepDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Update="DataSets\KlonsMRepDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>KlonsMRepDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Update="DataSets\KlonsPDataSet.cs">
+      <DependentUpon>KlonsPDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Update="DataSets\KlonsPDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>KlonsPDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Update="DataSets\KlonsPRepDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>KlonsPRepDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Update="DataSets\klonsRepDataSet.cs">
+      <DependentUpon>klonsRepDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Update="DataSets\klonsRepDataSet.Designer.cs">
+      <DependentUpon>klonsRepDataSet.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Update="DataSets\klonsDataSet.cs">
+      <DependentUpon>klonsDataSet.xsd</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="DataSets\KlonsADataSet.xsc">
+      <DependentUpon>KlonsADataSet.xsd</DependentUpon>
+    </None>
+    <None Update="DataSets\KlonsADataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>KlonsADataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Update="DataSets\KlonsADataSet.xss">
+      <DependentUpon>KlonsADataSet.xsd</DependentUpon>
+    </None>
+    <None Update="DataSets\KlonsARepDataSet.xsc">
+      <DependentUpon>KlonsARepDataSet.xsd</DependentUpon>
+    </None>
+    <None Update="DataSets\KlonsARepDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>KlonsARepDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Update="DataSets\KlonsARepDataSet.xss">
+      <DependentUpon>KlonsARepDataSet.xsd</DependentUpon>
+    </None>
+    <None Update="DataSets\KlonsMDataSet.xsc">
+      <DependentUpon>KlonsMDataSet.xsd</DependentUpon>
+    </None>
+    <None Update="DataSets\KlonsMDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>KlonsMDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Update="DataSets\KlonsMDataSet.xss">
+      <DependentUpon>KlonsMDataSet.xsd</DependentUpon>
+    </None>
+    <None Update="DataSets\KlonsMRepDataSet.xsc">
+      <DependentUpon>KlonsMRepDataSet.xsd</DependentUpon>
+    </None>
+    <None Update="DataSets\KlonsMRepDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>KlonsMRepDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Update="DataSets\KlonsMRepDataSet.xss">
+      <DependentUpon>KlonsMRepDataSet.xsd</DependentUpon>
+    </None>
+    <None Update="DataSets\KlonsPDataSet.xsc">
+      <DependentUpon>KlonsPDataSet.xsd</DependentUpon>
+    </None>
+    <None Update="DataSets\KlonsPDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>KlonsPDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Update="DataSets\KlonsPDataSet.xss">
+      <DependentUpon>KlonsPDataSet.xsd</DependentUpon>
+    </None>
+    <None Update="DataSets\KlonsPRepDataSet.xsc">
+      <DependentUpon>KlonsPRepDataSet.xsd</DependentUpon>
+    </None>
+    <None Update="DataSets\KlonsPRepDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>KlonsPRepDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Update="DataSets\KlonsPRepDataSet.xss">
+      <DependentUpon>KlonsPRepDataSet.xsd</DependentUpon>
+    </None>
+    <None Update="DataSets\klonsRepDataSet.xsc">
+      <DependentUpon>klonsRepDataSet.xsd</DependentUpon>
+    </None>
+    <None Update="DataSets\klonsRepDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>klonsRepDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="DataSets\klonsRepDataSet.xss">
+      <DependentUpon>klonsRepDataSet.xsd</DependentUpon>
+    </None>
+    <None Update="DataSets\klonsDataSet.xsc">
+      <DependentUpon>klonsDataSet.xsd</DependentUpon>
+    </None>
+    <None Update="DataSets\klonsDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>klonsDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Update="DataSets\klonsDataSet.xss">
+      <DependentUpon>klonsDataSet.xsd</DependentUpon>
+    </None>
+    <None Update="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="8.0.0" />
+    <PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" />
+    <PackageReference Include="System.Runtime.CompilerServices.Unsafe" Version="6.0.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="FirebirdSql.Data.FirebirdClient" Version="10.3.1" />
+  </ItemGroup>
+</Project>

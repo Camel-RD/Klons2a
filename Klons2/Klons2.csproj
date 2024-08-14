@@ -1,0 +1,200 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>KlonsF</RootNamespace>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <GenerateAssemblyInfo>True</GenerateAssemblyInfo>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
+    <ForceDesignerDpiUnaware>true</ForceDesignerDpiUnaware>
+    <IsPublishable>False</IsPublishable>
+	<Platforms>AnyCPU;x86;x64</Platforms>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationDefaultFont>Microsoft Sans Serif, 10pt</ApplicationDefaultFont>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Pics\Icon1.ico</ApplicationIcon>
+    <ProduceReferenceAssembly>False</ProduceReferenceAssembly>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="Apraksts\**" />
+    <Compile Remove="Config0\**" />
+    <Compile Remove="Config\**" />
+    <Compile Remove="DB\**" />
+    <Compile Remove="FBembed25\**" />
+    <Compile Remove="FBembed4x64\**" />
+    <Compile Remove="FBembed4\**" />
+    <EmbeddedResource Remove="Apraksts\**" />
+    <EmbeddedResource Remove="Config0\**" />
+    <EmbeddedResource Remove="Config\**" />
+    <EmbeddedResource Remove="DB\**" />
+    <EmbeddedResource Remove="FBembed25\**" />
+    <EmbeddedResource Remove="FBembed4x64\**" />
+    <EmbeddedResource Remove="FBembed4\**" />
+    <None Remove="Apraksts\**" />
+    <None Remove="Config0\**" />
+    <None Remove="Config\**" />
+    <None Remove="DB\**" />
+    <None Remove="FBembed25\**" />
+    <None Remove="FBembed4x64\**" />
+    <None Remove="FBembed4\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="ClassesA\DLJoinView.cs" />
+    <Compile Update="ClassesA\MyStyleDefs.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="ClassesA\SalaryInfo.cs" />
+    <Compile Update="ClassesP\MyStyleDefs.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="Classes\SourceGridA.cs" />
+    <Compile Update="Classes\CompanyData.cs" />
+    <Content Include="Reports\Report_AvNor_2.rdlc" />
+    <Content Include="Reports\Report_Koresp_1_a.rdlc" />
+    <Content Include="Reports\Report_Darz_4.rdlc" />
+    <EmbeddedResource Include="SQL\SQLV003.txt" />
+    <EmbeddedResource Include="SQL\SQLV012.txt" />
+    <Content Include="TODO-M.txt" />
+    <Content Include="Reports\Report_PVNZ_1.rdlc" />
+    <Content Include="Reports\Report_Apgr_BilFormula.rdlc" />
+    <Content Include="Reports\Report_Rekins_PZ_1.rdlc" />
+    <Content Include="Reports\Report_Koresp_3.rdlc" />
+    <Content Include="Reports\Report_PVN_dekl_2.rdlc" />
+    <Content Include="Reports\Report_PVN_piel1_2.rdlc" />
+    <Content Include="Reports\Report_PVN_piel3_2.rdlc" />
+    <Content Include="Reports\Report_Bilance_31.rdlc" />
+    <Content Include="Reports\Report_Bilance_41.rdlc" />
+    <Content Include="Reports\Report_Darz_3.rdlc" />
+    <Content Include="Pics\Icon1.ico" />
+    <Content Include="Reports\Report_Koresp_1.rdlc" />
+    <Content Include="Reports\Report_Apgr_Bil.rdlc" />
+    <Content Include="Reports\Report_Koresp_2.rdlc" />
+    <Content Include="Reports\Report_Koresp_1_full.rdlc" />
+    <Content Include="Reports\Report_Koresp_1_byac.rdlc" />
+    <Content Include="Reports\Report_Koresp_1_byacnadcl.rdlc" />
+    <Content Include="Reports\Report_AvNor_1.rdlc" />
+    <Content Include="Reports\Report_Apgr_MT_11.rdlc" />
+    <Content Include="Reports\Report_Apgr_MT_12.rdlc" />
+    <Content Include="Reports\Report_Apgr_MT_13.rdlc" />
+    <Content Include="Reports\Report_Apgr_MT_21.rdlc" />
+    <Content Include="Reports\Report_Apgr_NP.rdlc" />
+    <Content Include="Reports\Report_Apgr_DZ_1.rdlc" />
+    <Content Include="Reports\Report_Apgr_Full_11.rdlc" />
+    <Content Include="Reports\Report_DokSar_1.rdlc" />
+    <Content Include="Reports\Report_Darz_1.rdlc" />
+    <Content Include="Reports\Report_Darz_2.rdlc" />
+    <Content Include="Reports\Report_NPMT_1.rdlc" />
+    <Content Include="Reports\Report_NPMT_2.rdlc" />
+    <Content Include="Reports\Report_NPMT_3.rdlc" />
+    <Content Include="Reports\Report_Pers_1.rdlc" />
+    <Content Include="Reports\Report_Pers_2.rdlc" />
+    <Content Include="Reports\Report_Bilance_1.rdlc" />
+    <Content Include="Reports\Report_PVN_dekl_1.rdlc" />
+    <Content Include="Reports\Report_Bilance_2.rdlc" />
+    <Content Include="Reports\Report_PVN_kops.rdlc" />
+    <Content Include="Reports\Report_CurrDiff.rdlc" />
+    <Content Include="Reports\Report_Ieraksti_1.rdlc" />
+    <Content Include="Reports\ReportM_Rekins_1.rdlc" />
+    <Content Include="Reports\ReportM_Rekins_PZ_1.rdlc" />
+    <Content Include="Reports\ReportM_Rekins_PZ_2.rdlc" />
+    <Content Include="Reports\ReportA_AlgasLapa_1.rdlc" />
+    <Content Include="Reports\ReportA_AlgasLapa_2.rdlc" />
+    <Content Include="Reports\ReportA_AprIzklasts_1.rdlc" />
+    <Content Include="Reports\ReportA_DarbaLaiks_1.rdlc" />
+    <Content Include="Reports\ReportA_DarbaLaiks_1k.rdlc" />
+    <Content Include="Reports\ReportA_DarbaLaiks_2.rdlc" />
+    <Content Include="Reports\ReportA_IINK.rdlc" />
+    <Content Include="Reports\ReportA_IINK2.rdlc" />
+    <Content Include="Reports\ReportA_IIN_10.rdlc" />
+    <Content Include="Reports\ReportA_IIN_11.rdlc" />
+    <Content Include="Reports\ReportA_Kartite_1.rdlc" />
+    <Content Include="Reports\ReportA_Kartite_1a.rdlc" />
+    <Content Include="Reports\ReportA_Kartite_1b.rdlc" />
+    <Content Include="Reports\ReportA_Kartite_1c.rdlc" />
+    <Content Include="Reports\ReportA_Kopsavilkums_1.rdlc" />
+    <Content Include="Reports\ReportA_MaksSar_1.rdlc" />
+    <Content Include="Reports\ReportA_MaksSar_1a.rdlc" />
+    <Content Include="Reports\ReportA_MaksSar_2.rdlc" />
+    <Content Include="Reports\ReportA_MaksSar_2a.rdlc" />
+    <Content Include="Reports\ReportA_SlimibasNauda_1.rdlc" />
+    <Content Include="Reports\ReportA_VidIzp_1.rdlc" />
+    <Content Include="Reports\ReportA_VSAOI_1.rdlc" />
+    <Content Include="Reports\ReportA_Zinas.rdlc" />
+    <Content Include="Reports\ReportP_Kartina_1.rdlc" />
+    <Content Include="Reports\ReportP_Kartina_2.rdlc" />
+    <Content Include="Reports\ReportP_Kartina_2x.rdlc" />
+    <Content Include="Reports\ReportP_Kartina_3.rdlc" />
+    <Content Include="Reports\ReportP_Kartina_4.rdlc" />
+    <Content Include="Reports\ReportP_Kustiba_1.rdlc" />
+    <Content Include="Reports\ReportP_Kustiba_2.rdlc" />
+    <Content Include="Reports\ReportP_Kustiba_3.rdlc" />
+    <Content Include="Reports\ReportP_NodNolGads_1.rdlc" />
+    <Content Include="Reports\ReportP_NodNolKat_1.rdlc" />
+    <Content Include="Reports\ReportP_NodNolPL_1.rdlc" />
+    <Content Include="Reports\ReportP_NodNolPL_1x.rdlc" />
+    <Content Include="Reports\ReportP_NodNol_1.rdlc" />
+    <EmbeddedResource Include="Reports\Report_KasesGr_2.rdlc" />
+    <EmbeddedResource Include="Reports\Report_KasesGr_1.rdlc" />
+    <Content Include="Reports\Report_PVN_piel2_1.rdlc" />
+    <EmbeddedResource Include="Reports\Report_Rekins_PZ_2.rdlc" />
+    <EmbeddedResource Include="Reports\Report_Rekins_3.rdlc" />
+    <EmbeddedResource Include="Reports\Report_Rekins_2.rdlc" />
+    <EmbeddedResource Include="Reports\Report_Rekins_1.rdlc" />
+    <EmbeddedResource Include="Reports\Report_KIEO_1.rdlc" />
+    <EmbeddedResource Include="Reports\Report_KIEOkv_1.rdlc" />
+    <EmbeddedResource Include="Reports\Report_KIZOkv_1.rdlc" />
+    <EmbeddedResource Include="Reports\Report_KIZO_1.rdlc" />
+    <Content Include="Reports\Report_Pers_3.rdlc" />
+    <Content Include="Reports\Report_Pers_4.rdlc" />
+    <Content Include="Reports\Report_PVN_piel1_1.rdlc" />
+    <Content Include="Reports\Report_PVN_piel3_1.rdlc" />
+    <Content Include="Reports\Report_Skaidra_1.rdlc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DataObjects\DataObjects.csproj" />
+    <ProjectReference Include="..\Klons1.DataSets\Klons1.DataSets.csproj" />
+    <ProjectReference Include="..\Klons2.DataSets\Klons2.DataSets.csproj" />
+    <ProjectReference Include="..\KlonsLIB\KlonsLIB.csproj" />
+    <ProjectReference Include="..\MyReportLib\MyReportLib.csproj" />
+    <ProjectReference Include="..\NotyfyProp\NotyfyProp.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
+    <PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" />
+    <PackageReference Include="System.Runtime.CompilerServices.Unsafe" Version="6.0.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="FirebirdSql.Data.FirebirdClient" Version="10.3.1" />
+    <PackageReference Include="NPOI" Version="2.7.1" />
+    <PackageReference Include="Portable.BouncyCastle" Version="1.9.0" />
+    <PackageReference Include="SharpZipLib" Version="1.4.2" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="FormsF\Form_OpsFilter.Designer - Copy.cs" />
+    <Compile Remove="Forms_sys\1\Form1.cs" />
+    <Compile Remove="Forms_sys\1\Form1.Designer.cs" />
+    <Compile Remove="Forms_sys\Form_Main.Designer - Copy.cs" />
+    <EmbeddedResource Remove="Forms_sys\1\Form1.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="SourceGrid">
+      <HintPath>..\Libs\SourceGrid3\SourceGrid.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+</Project>

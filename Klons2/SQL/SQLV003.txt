@@ -1,0 +1,33 @@
+SET TERM ^ ;
+
+CREATE PROCEDURE SP_F_ZDT_OPS_SET(
+  ID INTEGER,
+  ZDT TIMESTAMP)
+AS
+begin
+    update f_ops
+    set zdt = :zdt
+    where id = :id;
+end
+^
+
+CREATE PROCEDURE SP_F_ZDT_OPSD_SET(
+  ID INTEGER,
+  ZDT TIMESTAMP)
+AS
+begin
+    update f_opsd
+    set zdt = :zdt
+    where id = :id;
+end
+^
+
+SET TERM ; ^
+
+GRANT EXECUTE ON PROCEDURE SP_F_ZDT_OPS_SET TO KLONS WITH GRANT OPTION;
+GRANT EXECUTE ON PROCEDURE SP_F_ZDT_OPSD_SET TO KLONS WITH GRANT OPTION;
+
+
+UPDATE Params
+SET PVALUE = '003'
+WHERE PNAME = 'version';

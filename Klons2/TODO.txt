@@ -1,0 +1,2 @@
+Add option to ignore passwords in users table and rely on DB authentication
+
