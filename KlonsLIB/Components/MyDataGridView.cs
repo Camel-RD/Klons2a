@@ -174,10 +174,11 @@ namespace KlonsLIB.Components
                 {
                     var r = row as DataGridViewRow;
                     if (r != null)
-                        r.Height = (int) ((float) (r.Height - 0)*height) + 0;
+                        r.Height = (int)((float)(r.Height - 0) * height) + 0;
                 }
-                //if(this.RowTemplate.Height != Font.Height + 9)
-                //    this.RowTemplate.Height = (int) ((float)(RowTemplate.Height - 2) * height) + 2;
+                if(this.RowTemplate.Height != Font.Height + 9)
+                    //this.RowTemplate.Height = (int) ((float)(RowTemplate.Height - 2) * height) + 2;
+                    this.RowTemplate.Height = Font.Height + 9;
             }
         }
 

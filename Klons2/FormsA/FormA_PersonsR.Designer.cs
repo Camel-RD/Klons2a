@@ -849,7 +849,6 @@ namespace KlonsA.Forms
             // 
             // shedPersonsText
             // 
-            shedPersonsText.DataMember = null;
             shedPersonsText.Name = "shedPersonsText";
             shedPersonsText.RowTitle = null;
             shedPersonsText.RowValueType = KlonsLIB.MySourceGrid.GridRows.EMyGridRowValueType.String;
@@ -1027,12 +1026,14 @@ namespace KlonsA.Forms
             // 
             // shrwAmariDecimal
             // 
+            shrwAmariDecimal.DataMember = null;
             shrwAmariDecimal.Name = "shrwAmariDecimal";
             shrwAmariDecimal.RowTitle = null;
             shrwAmariDecimal.RowValueType = KlonsLIB.MySourceGrid.GridRows.EMyGridRowValueType.Decimal;
             // 
             // shrwAmatiRateType
             // 
+            shrwAmatiRateType.DataMember = null;
             shrwAmatiRateType.ListStrings = new string[]
     {
     "0;%",
@@ -1754,7 +1755,6 @@ namespace KlonsA.Forms
             // 
             // btNextPerson
             // 
-            btNextPerson.BackgroundImage = KlonsF.Properties.Resources.arrow_down_icon;
             btNextPerson.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             btNextPerson.Dock = System.Windows.Forms.DockStyle.Right;
             btNextPerson.FlatAppearance.BorderSize = 0;
@@ -1763,12 +1763,12 @@ namespace KlonsA.Forms
             btNextPerson.Name = "btNextPerson";
             btNextPerson.Size = new System.Drawing.Size(25, 23);
             btNextPerson.TabIndex = 4;
+            btNextPerson.Text = ">";
             btNextPerson.UseVisualStyleBackColor = true;
             btNextPerson.Click += tsbNextPerson_Click;
             // 
             // btPrevPerson
             // 
-            btPrevPerson.BackgroundImage = KlonsF.Properties.Resources.arrow_up_icon;
             btPrevPerson.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             btPrevPerson.Dock = System.Windows.Forms.DockStyle.Left;
             btPrevPerson.FlatAppearance.BorderSize = 0;
@@ -1778,6 +1778,7 @@ namespace KlonsA.Forms
             btPrevPerson.Name = "btPrevPerson";
             btPrevPerson.Size = new System.Drawing.Size(25, 23);
             btPrevPerson.TabIndex = 3;
+            btPrevPerson.Text = "<";
             btPrevPerson.UseVisualStyleBackColor = true;
             btPrevPerson.Click += tsbPrevPerson_Click;
             // 
@@ -2081,7 +2082,6 @@ namespace KlonsA.Forms
             // 
             // sharedPersonsNoYes
             // 
-            sharedPersonsNoYes.DataMember = null;
             sharedPersonsNoYes.ListStrings = new string[]
     {
     "0;nē",
@@ -2093,7 +2093,6 @@ namespace KlonsA.Forms
             // 
             // sharedPersonsDecimal
             // 
-            sharedPersonsDecimal.DataMember = null;
             sharedPersonsDecimal.Name = "sharedPersonsDecimal";
             sharedPersonsDecimal.RowTitle = null;
             sharedPersonsDecimal.RowValueType = KlonsLIB.MySourceGrid.GridRows.EMyGridRowValueType.Decimal;
@@ -2101,6 +2100,7 @@ namespace KlonsA.Forms
             // shedPersonsTextAllowNull
             // 
             shedPersonsTextAllowNull.AllowNull = true;
+            shedPersonsTextAllowNull.DataMember = null;
             shedPersonsTextAllowNull.Name = "shedPersonsTextAllowNull";
             shedPersonsTextAllowNull.RowTitle = null;
             shedPersonsTextAllowNull.RowValueType = KlonsLIB.MySourceGrid.GridRows.EMyGridRowValueType.String;

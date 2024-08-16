@@ -7,9 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-//using Microsoft.SqlServer.Management.Smo;
-//using Microsoft.SqlServer.Management.Common;
-//using System.Data.SqlClient;
 using System.IO;
 using KlonsF.Classes;
 
@@ -22,7 +19,7 @@ namespace KlonsF.Forms
             InitializeComponent();
             Font f = lbTitle.Font;
             CheckMyFontAndColors();
-            lbTitle.Font = new Font(f.FontFamily, f.Size * ScaleFactor.Height, f.Style);
+            lbTitle.Font = new Font(f.FontFamily, f.Size * 4, f.Style);
             lbVersionStr.Text = "versija " + MyData.VersionStr;
         }
 

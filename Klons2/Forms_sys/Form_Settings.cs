@@ -173,6 +173,7 @@ namespace KlonsF.Forms
         private void cmOK_Click(object sender, EventArgs e)
         {
             SaveMyData();
+            MyMainForm.CheckMyFontAndColors1();
             MyMainForm.CheckMyFontAndColors2();
             MyMainForm.CheckMenuColorTheme();
             this.Close();

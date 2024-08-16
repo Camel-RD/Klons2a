@@ -59,6 +59,10 @@ namespace KlonsM.FormsM
         {
             sgrDocA.MakeGrid2();
             sgrDocA.LinkGrid();
+            int h = 0;
+            for (int i = 0; i < sgrDocA.RowsCount; i++)
+                h += sgrDocA.Rows[i].Height;
+            mySplitContainer1.SplitterDistance = h + SystemInformation.HorizontalScrollBarHeight + 6;
             //grDocPVNType.DataCell.View.WordWrap = true;
         }
 

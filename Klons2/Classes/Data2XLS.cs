@@ -1293,7 +1293,7 @@ namespace KlonsF.Classes
             CellStyleCations.SetFont(boldfont);
             CellStyleMoney.DataFormat = dataformat.GetFormat("# ##0.00;-# ##0.00");
             CellStyleDate.DataFormat = dataformat.GetFormat("yyyy.MM.dd");
-            CellStyleDateTime.DataFormat = dataformat.GetFormat("yyyy.MM.dd hh:mm");
+            CellStyleDateTime.DataFormat = dataformat.GetFormat("yyyy.MM.dd HH:mm");
 
             foreach (var shc in SheetsConfig)
             {

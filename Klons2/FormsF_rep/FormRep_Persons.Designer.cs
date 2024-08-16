@@ -146,7 +146,7 @@ namespace KlonsF.FormsReportParams
             cmDoIt.Location = new System.Drawing.Point(417, 109);
             cmDoIt.Margin = new System.Windows.Forms.Padding(2);
             cmDoIt.Name = "cmDoIt";
-            cmDoIt.Size = new System.Drawing.Size(150, 57);
+            cmDoIt.Size = new System.Drawing.Size(120, 49);
             cmDoIt.TabIndex = 4;
             cmDoIt.Text = "Taisīt atskaiti";
             cmDoIt.UseVisualStyleBackColor = true;
@@ -241,7 +241,7 @@ namespace KlonsF.FormsReportParams
             cmShowTable.Location = new System.Drawing.Point(417, 174);
             cmShowTable.Margin = new System.Windows.Forms.Padding(2);
             cmShowTable.Name = "cmShowTable";
-            cmShowTable.Size = new System.Drawing.Size(150, 57);
+            cmShowTable.Size = new System.Drawing.Size(120, 49);
             cmShowTable.TabIndex = 5;
             cmShowTable.Text = "Tabula";
             cmShowTable.UseVisualStyleBackColor = true;

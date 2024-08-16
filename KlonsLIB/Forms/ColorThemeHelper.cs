@@ -376,7 +376,8 @@ namespace KlonsLIB.Forms
             {
                 dgv.BackColor = mycolortheme.GetColor(dgv.BackColor, mycolortheme.ControlColor);
                 dgv.BackgroundColor = mycolortheme.GetColor(dgv.BackColor, mycolortheme.ControlColor);
-                dgv.GridColor = mycolortheme.GetColor(dgv.GridColor, mycolortheme.ControlColorDark);
+                //dgv.GridColor = mycolortheme.GetColor(dgv.GridColor, mycolortheme.ControlColorDark);
+                dgv.GridColor = ColorBetween(dgv.BackColor, mycolortheme.WindowTextColor, 0.5f);
                 dgv.DefaultCellStyle.BackColor =
                     mycolortheme.GetColor(dgv.DefaultCellStyle.BackColor, mycolortheme.WindowColor);
                 dgv.DefaultCellStyle.ForeColor =

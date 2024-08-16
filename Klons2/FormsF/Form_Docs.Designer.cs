@@ -567,10 +567,10 @@ namespace KlonsF.Forms
             // 
             // oPSdBindingNavigatorSaveItem
             // 
-            oPSdBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            oPSdBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.ImageAndText;
             oPSdBindingNavigatorSaveItem.Name = "oPSdBindingNavigatorSaveItem";
             oPSdBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 25);
-            oPSdBindingNavigatorSaveItem.Text = "Save Data";
+            oPSdBindingNavigatorSaveItem.Text = "Saglabāt";
             oPSdBindingNavigatorSaveItem.ToolTipText = "Saglabāt datus (Ctrl + S)";
             oPSdBindingNavigatorSaveItem.Click += oPSdBindingNavigatorSaveItem_Click;
             // 

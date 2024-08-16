@@ -72,8 +72,6 @@ namespace KlonsLIB.Forms
         {
             IsFormClosing = false;
             CloseOnEscape = false;
-            Font = DefaultFont;
-            //SetFont(DefaultFont);
         }
 
         static MyFormBase()
@@ -92,8 +90,7 @@ namespace KlonsLIB.Forms
         protected override void OnShown(EventArgs e)
         {
             base.OnShown(e);
-            //CreateAllTabPages();
-            CheckMyFontAndColors2();
+            //CheckMyFontAndColors2();
         }
 
 
@@ -283,7 +280,13 @@ namespace KlonsLIB.Forms
         public override Font Font
         {
             get => base.Font;
-            set => base.Font = value;
+            set
+            {
+                if (base.Font == value) return;
+                float f = value.Size / base.Font.Size;
+                ScaleToolStrips(this, new SizeF(f, f));
+                base.Font = value;
+            }
         }
 
         protected void SetFontWithoutScaling(Font font)
@@ -308,6 +311,16 @@ namespace KlonsLIB.Forms
 
         public void CheckMyFontAndColors()
         {
+            CheckMyFontAndColors1();
+            _ = Handle;
+            CreateAllHandles();
+            CheckMyFontAndColors2();
+        }
+
+        public void CheckMyFontAndColors1()
+        {
+            SetFontSize(DefaultFont.Size + 0.01f);
+            //Font = DefaultFont;
             MyColorTheme cth = Settings.ColorTheme;
             ColorThemeHelper.ApplyToForm(this, cth);
             if (MainMenuStrip != null)
@@ -315,7 +328,7 @@ namespace KlonsLIB.Forms
             if (MyToolStrip != null)
                 ColorThemeHelper.ApplyToControlA(MyToolStrip, cth);
         }
-
+        
         public void CheckMyFontAndColors2()
         {
             SuspendLayout();
@@ -356,7 +369,7 @@ namespace KlonsLIB.Forms
             SetFontSize(Settings.FormFontSize);
         }
 
-        protected void SetFontSize(int sz)
+        protected void SetFontSize(float sz)
         {
             if (this.Font.Size != sz)
                 this.Font = new Font(this.Font.Name, sz, this.Font.Style);
@@ -371,7 +384,8 @@ namespace KlonsLIB.Forms
         {
             scaleFactor = new SizeF(scaleFactor.Width * factor.Width, scaleFactor.Height * factor.Height);
             base.ScaleControl(factor, specified);
-            ScaleToolStrips(this, factor);
+            //if (InScaleWithFontChange)
+            //    ScaleToolStrips(this, factor);
         }
 
         protected void ScaleToolStrips(Form form, SizeF factor)
@@ -387,10 +401,10 @@ namespace KlonsLIB.Forms
 
         protected void ScaleToolStrip(ToolStrip tsp, SizeF factor)
         {
-            if (factor.Height != 1.0f)
+            float f = Math.Max(factor.Width, factor.Height);
+            if (f != 1.0f)
             {
                 var imgsz = tsp.ImageScalingSize;
-                float f = Math.Max(factor.Width, factor.Height);
                 imgsz.Width = (int)((float)imgsz.Width * f);
                 imgsz.Height = (int)((float)imgsz.Height * f);
                 tsp.ImageScalingSize = imgsz;
@@ -410,6 +424,14 @@ namespace KlonsLIB.Forms
                     tc.SelectedIndex = k1;
                 }
                 tc.SelectedIndex = k0;
+            }
+        }
+
+        protected void CreateAllHandles()
+        {
+            foreach (Control c in GetAllControls(this))
+            {
+                _ = c.Handle;
             }
         }
 

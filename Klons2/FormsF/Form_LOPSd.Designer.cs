@@ -31,429 +31,419 @@ namespace KlonsF.Forms
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_LOPSd));
-            this.bsLOPSd = new KlonsLIB.Data.MyBindingSource(this.components);
-            this.bnavLOPSd = new KlonsLIB.Components.MyBindingNavigator();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
-            this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.tsbSearchPrev = new System.Windows.Forms.ToolStripButton();
-            this.tsbSearch = new System.Windows.Forms.ToolStripTextBox();
-            this.tsbSearchNext = new System.Windows.Forms.ToolStripButton();
-            this.tsbDocLog = new System.Windows.Forms.ToolStripButton();
-            this.dgvLOPSd = new KlonsLIB.Components.MyDataGridView();
-            this.dgcLOPSDidl = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgcLOPSDid = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgcLOPSDZDt = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgcLOPSDdtld = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgcLOPSDODT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgcLOPSDusl = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgcLOPSDZU = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgcLOPSDtpl = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgcLOPSDZNR = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgcLOPSDDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgcLOPSDDocTyp = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgcLOPSDDocSt = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgcLOPSDDocNr = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgcLOPSDClid = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgcLOPSDDerscr = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgcLOPSDSumm = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgcLOPSDPVN = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgcLOPSDNrX = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgcLOPSDClid2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.bsLOPSd)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bnavLOPSd)).BeginInit();
-            this.bnavLOPSd.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvLOPSd)).BeginInit();
-            this.SuspendLayout();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            bsLOPSd = new MyBindingSource(components);
+            bnavLOPSd = new MyBindingNavigator();
+            bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
+            bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
+            bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
+            bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
+            bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
+            bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
+            bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            tsbSearchPrev = new System.Windows.Forms.ToolStripButton();
+            tsbSearch = new System.Windows.Forms.ToolStripTextBox();
+            tsbSearchNext = new System.Windows.Forms.ToolStripButton();
+            tsbDocLog = new System.Windows.Forms.ToolStripButton();
+            dgvLOPSd = new MyDataGridView();
+            dgcLOPSDidl = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            dgcLOPSDid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            dgcLOPSDZDt = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            dgcLOPSDdtld = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            dgcLOPSDODT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            dgcLOPSDusl = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            dgcLOPSDZU = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            dgcLOPSDtpl = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            dgcLOPSDZNR = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            dgcLOPSDDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            dgcLOPSDDocTyp = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            dgcLOPSDDocSt = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            dgcLOPSDDocNr = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            dgcLOPSDClid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            dgcLOPSDDerscr = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            dgcLOPSDSumm = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            dgcLOPSDPVN = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            dgcLOPSDNrX = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            dgcLOPSDClid2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)bsLOPSd).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)bnavLOPSd).BeginInit();
+            bnavLOPSd.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvLOPSd).BeginInit();
+            SuspendLayout();
             // 
             // bsLOPSd
             // 
-            this.bsLOPSd.DataMember = "LOPSD";
-            this.bsLOPSd.MyDataSource = "KlonsData";
-            this.bsLOPSd.Name2 = "bsLOPSd";
+            bsLOPSd.DataMember = "LOPSD";
+            bsLOPSd.MyDataSource = "KlonsData";
+            bsLOPSd.Name2 = "bsLOPSd";
             // 
             // bnavLOPSd
             // 
-            this.bnavLOPSd.AddNewItem = null;
-            this.bnavLOPSd.BindingSource = this.bsLOPSd;
-            this.bnavLOPSd.CountItem = this.bindingNavigatorCountItem;
-            this.bnavLOPSd.CountItemFormat = " no {0}";
-            this.bnavLOPSd.DeleteItem = null;
-            this.bnavLOPSd.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.bnavLOPSd.ImageScalingSize = new System.Drawing.Size(23, 26);
-            this.bnavLOPSd.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.bindingNavigatorMoveFirstItem,
-            this.bindingNavigatorMovePreviousItem,
-            this.bindingNavigatorSeparator,
-            this.bindingNavigatorPositionItem,
-            this.bindingNavigatorCountItem,
-            this.bindingNavigatorSeparator1,
-            this.bindingNavigatorMoveNextItem,
-            this.bindingNavigatorMoveLastItem,
-            this.bindingNavigatorSeparator2,
-            this.tsbSearchPrev,
-            this.tsbSearch,
-            this.tsbSearchNext,
-            this.tsbDocLog});
-            this.bnavLOPSd.Location = new System.Drawing.Point(0, 392);
-            this.bnavLOPSd.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
-            this.bnavLOPSd.MoveLastItem = this.bindingNavigatorMoveLastItem;
-            this.bnavLOPSd.MoveNextItem = this.bindingNavigatorMoveNextItem;
-            this.bnavLOPSd.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
-            this.bnavLOPSd.Name = "bnavLOPSd";
-            this.bnavLOPSd.PositionItem = this.bindingNavigatorPositionItem;
-            this.bnavLOPSd.SaveItem = null;
-            this.bnavLOPSd.Size = new System.Drawing.Size(1023, 39);
-            this.bnavLOPSd.TabIndex = 0;
-            this.bnavLOPSd.Text = "bindingNavigator1";
+            bnavLOPSd.AddNewItem = null;
+            bnavLOPSd.BindingSource = bsLOPSd;
+            bnavLOPSd.CountItem = bindingNavigatorCountItem;
+            bnavLOPSd.CountItemFormat = " no {0}";
+            bnavLOPSd.DeleteItem = null;
+            bnavLOPSd.Dock = System.Windows.Forms.DockStyle.Bottom;
+            bnavLOPSd.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            bnavLOPSd.ImageScalingSize = new System.Drawing.Size(23, 26);
+            bnavLOPSd.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { bindingNavigatorMoveFirstItem, bindingNavigatorMovePreviousItem, bindingNavigatorSeparator, bindingNavigatorPositionItem, bindingNavigatorCountItem, bindingNavigatorSeparator1, bindingNavigatorMoveNextItem, bindingNavigatorMoveLastItem, bindingNavigatorSeparator2, tsbSearchPrev, tsbSearch, tsbSearchNext, tsbDocLog });
+            bnavLOPSd.Location = new System.Drawing.Point(0, 398);
+            bnavLOPSd.MoveFirstItem = bindingNavigatorMoveFirstItem;
+            bnavLOPSd.MoveLastItem = bindingNavigatorMoveLastItem;
+            bnavLOPSd.MoveNextItem = bindingNavigatorMoveNextItem;
+            bnavLOPSd.MovePreviousItem = bindingNavigatorMovePreviousItem;
+            bnavLOPSd.Name = "bnavLOPSd";
+            bnavLOPSd.PositionItem = bindingNavigatorPositionItem;
+            bnavLOPSd.SaveItem = null;
+            bnavLOPSd.Size = new System.Drawing.Size(1023, 33);
+            bnavLOPSd.TabIndex = 0;
+            bnavLOPSd.Text = "bindingNavigator1";
             // 
             // bindingNavigatorCountItem
             // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(76, 34);
-            this.bindingNavigatorCountItem.Text = " no {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Skaits";
+            bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            bindingNavigatorCountItem.Size = new System.Drawing.Size(50, 30);
+            bindingNavigatorCountItem.Text = " no {0}";
+            bindingNavigatorCountItem.ToolTipText = "Skaits";
             // 
             // bindingNavigatorMoveFirstItem
             // 
-            this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
-            this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
-            this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(34, 34);
-            this.bindingNavigatorMoveFirstItem.Text = "Iet uz pirmo";
+            bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            bindingNavigatorMoveFirstItem.Image = (System.Drawing.Image)resources.GetObject("bindingNavigatorMoveFirstItem.Image");
+            bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
+            bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
+            bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(27, 30);
+            bindingNavigatorMoveFirstItem.Text = "Iet uz pirmo";
             // 
             // bindingNavigatorMovePreviousItem
             // 
-            this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
-            this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
-            this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(34, 34);
-            this.bindingNavigatorMovePreviousItem.Text = "Iet uz iepriekšējo";
+            bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            bindingNavigatorMovePreviousItem.Image = (System.Drawing.Image)resources.GetObject("bindingNavigatorMovePreviousItem.Image");
+            bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
+            bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
+            bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(27, 30);
+            bindingNavigatorMovePreviousItem.Text = "Iet uz iepriekšējo";
             // 
             // bindingNavigatorSeparator
             // 
-            this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 39);
+            bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
+            bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 33);
             // 
             // bindingNavigatorPositionItem
             // 
-            this.bindingNavigatorPositionItem.AccessibleName = "Position";
-            this.bindingNavigatorPositionItem.AutoSize = false;
-            this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
-            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(46, 37);
-            this.bindingNavigatorPositionItem.Text = "0";
-            this.bindingNavigatorPositionItem.ToolTipText = "Pašreizējā pozīcija";
+            bindingNavigatorPositionItem.AccessibleName = "Position";
+            bindingNavigatorPositionItem.AutoSize = false;
+            bindingNavigatorPositionItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
+            bindingNavigatorPositionItem.Size = new System.Drawing.Size(46, 23);
+            bindingNavigatorPositionItem.Text = "0";
+            bindingNavigatorPositionItem.ToolTipText = "Pašreizējā pozīcija";
             // 
             // bindingNavigatorSeparator1
             // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 39);
+            bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
+            bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 33);
             // 
             // bindingNavigatorMoveNextItem
             // 
-            this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
-            this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
-            this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(34, 34);
-            this.bindingNavigatorMoveNextItem.Text = "+";
+            bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            bindingNavigatorMoveNextItem.Image = (System.Drawing.Image)resources.GetObject("bindingNavigatorMoveNextItem.Image");
+            bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
+            bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
+            bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(27, 30);
+            bindingNavigatorMoveNextItem.Text = "+";
             // 
             // bindingNavigatorMoveLastItem
             // 
-            this.bindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
-            this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
-            this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(34, 34);
-            this.bindingNavigatorMoveLastItem.Text = "Iet uz pēdējo";
+            bindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            bindingNavigatorMoveLastItem.Image = (System.Drawing.Image)resources.GetObject("bindingNavigatorMoveLastItem.Image");
+            bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
+            bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
+            bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(27, 30);
+            bindingNavigatorMoveLastItem.Text = "Iet uz pēdējo";
             // 
             // bindingNavigatorSeparator2
             // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 39);
+            bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
+            bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 33);
             // 
             // tsbSearchPrev
             // 
-            this.tsbSearchPrev.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsbSearchPrev.Image = ((System.Drawing.Image)(resources.GetObject("tsbSearchPrev.Image")));
-            this.tsbSearchPrev.Name = "tsbSearchPrev";
-            this.tsbSearchPrev.RightToLeftAutoMirrorImage = true;
-            this.tsbSearchPrev.Size = new System.Drawing.Size(34, 34);
-            this.tsbSearchPrev.Text = "Iet uz iepriekšējo";
-            this.tsbSearchPrev.Click += new System.EventHandler(this.tsbSearchPrev_Click);
+            tsbSearchPrev.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            tsbSearchPrev.Image = (System.Drawing.Image)resources.GetObject("tsbSearchPrev.Image");
+            tsbSearchPrev.Name = "tsbSearchPrev";
+            tsbSearchPrev.RightToLeftAutoMirrorImage = true;
+            tsbSearchPrev.Size = new System.Drawing.Size(27, 30);
+            tsbSearchPrev.Text = "Iet uz iepriekšējo";
+            tsbSearchPrev.Click += tsbSearchPrev_Click;
             // 
             // tsbSearch
             // 
-            this.tsbSearch.Name = "tsbSearch";
-            this.tsbSearch.Size = new System.Drawing.Size(91, 39);
-            this.tsbSearch.Enter += new System.EventHandler(this.tsbSearch_Enter);
-            this.tsbSearch.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tsbSearch_KeyPress);
+            tsbSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            tsbSearch.Name = "tsbSearch";
+            tsbSearch.Size = new System.Drawing.Size(91, 33);
+            tsbSearch.Enter += tsbSearch_Enter;
+            tsbSearch.KeyPress += tsbSearch_KeyPress;
             // 
             // tsbSearchNext
             // 
-            this.tsbSearchNext.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsbSearchNext.Image = ((System.Drawing.Image)(resources.GetObject("tsbSearchNext.Image")));
-            this.tsbSearchNext.Name = "tsbSearchNext";
-            this.tsbSearchNext.RightToLeftAutoMirrorImage = true;
-            this.tsbSearchNext.Size = new System.Drawing.Size(34, 34);
-            this.tsbSearchNext.Text = "+";
-            this.tsbSearchNext.Click += new System.EventHandler(this.tsbSearchNext_Click);
+            tsbSearchNext.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            tsbSearchNext.Image = (System.Drawing.Image)resources.GetObject("tsbSearchNext.Image");
+            tsbSearchNext.Name = "tsbSearchNext";
+            tsbSearchNext.RightToLeftAutoMirrorImage = true;
+            tsbSearchNext.Size = new System.Drawing.Size(27, 30);
+            tsbSearchNext.Text = "+";
+            tsbSearchNext.Click += tsbSearchNext_Click;
             // 
             // tsbDocLog
             // 
-            this.tsbDocLog.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.tsbDocLog.Image = ((System.Drawing.Image)(resources.GetObject("tsbDocLog.Image")));
-            this.tsbDocLog.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbDocLog.Name = "tsbDocLog";
-            this.tsbDocLog.Size = new System.Drawing.Size(206, 34);
-            this.tsbDocLog.Text = "Dokumenta vēsture";
-            this.tsbDocLog.Click += new System.EventHandler(this.tsbDocLog_Click);
+            tsbDocLog.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            tsbDocLog.Image = (System.Drawing.Image)resources.GetObject("tsbDocLog.Image");
+            tsbDocLog.ImageTransparentColor = System.Drawing.Color.Magenta;
+            tsbDocLog.Name = "tsbDocLog";
+            tsbDocLog.Size = new System.Drawing.Size(135, 30);
+            tsbDocLog.Text = "Dokumenta vēsture";
+            tsbDocLog.Click += tsbDocLog_Click;
             // 
             // dgvLOPSd
             // 
-            this.dgvLOPSd.AutoGenerateColumns = false;
-            this.dgvLOPSd.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.dgvLOPSd.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvLOPSd.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dgcLOPSDidl,
-            this.dgcLOPSDid,
-            this.dgcLOPSDZDt,
-            this.dgcLOPSDdtld,
-            this.dgcLOPSDODT,
-            this.dgcLOPSDusl,
-            this.dgcLOPSDZU,
-            this.dgcLOPSDtpl,
-            this.dgcLOPSDZNR,
-            this.dgcLOPSDDate,
-            this.dgcLOPSDDocTyp,
-            this.dgcLOPSDDocSt,
-            this.dgcLOPSDDocNr,
-            this.dgcLOPSDClid,
-            this.dgcLOPSDDerscr,
-            this.dgcLOPSDSumm,
-            this.dgcLOPSDPVN,
-            this.dgcLOPSDNrX,
-            this.dgcLOPSDClid2});
-            this.dgvLOPSd.DataSource = this.bsLOPSd;
-            this.dgvLOPSd.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvLOPSd.Location = new System.Drawing.Point(0, 0);
-            this.dgvLOPSd.Margin = new System.Windows.Forms.Padding(2);
-            this.dgvLOPSd.Name = "dgvLOPSd";
-            this.dgvLOPSd.ReadOnly = true;
-            this.dgvLOPSd.RowHeadersWidth = 62;
-            this.dgvLOPSd.ShowCellToolTips = false;
-            this.dgvLOPSd.Size = new System.Drawing.Size(1023, 392);
-            this.dgvLOPSd.TabIndex = 1;
-            this.dgvLOPSd.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dgvLOPSd_KeyDown);
+            dgvLOPSd.AutoGenerateColumns = false;
+            dgvLOPSd.BackgroundColor = System.Drawing.SystemColors.Control;
+            dgvLOPSd.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvLOPSd.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { dgcLOPSDidl, dgcLOPSDid, dgcLOPSDZDt, dgcLOPSDdtld, dgcLOPSDODT, dgcLOPSDusl, dgcLOPSDZU, dgcLOPSDtpl, dgcLOPSDZNR, dgcLOPSDDate, dgcLOPSDDocTyp, dgcLOPSDDocSt, dgcLOPSDDocNr, dgcLOPSDClid, dgcLOPSDDerscr, dgcLOPSDSumm, dgcLOPSDPVN, dgcLOPSDNrX, dgcLOPSDClid2 });
+            dgvLOPSd.DataSource = bsLOPSd;
+            dgvLOPSd.Dock = System.Windows.Forms.DockStyle.Fill;
+            dgvLOPSd.Location = new System.Drawing.Point(0, 0);
+            dgvLOPSd.Margin = new System.Windows.Forms.Padding(2);
+            dgvLOPSd.Name = "dgvLOPSd";
+            dgvLOPSd.ReadOnly = true;
+            dgvLOPSd.RowHeadersWidth = 30;
+            dgvLOPSd.ShowCellToolTips = false;
+            dgvLOPSd.Size = new System.Drawing.Size(1023, 398);
+            dgvLOPSd.TabIndex = 1;
+            dgvLOPSd.KeyDown += dgvLOPSd_KeyDown;
             // 
             // dgcLOPSDidl
             // 
-            this.dgcLOPSDidl.DataPropertyName = "idl";
-            this.dgcLOPSDidl.HeaderText = "idl";
-            this.dgcLOPSDidl.MinimumWidth = 9;
-            this.dgcLOPSDidl.Name = "dgcLOPSDidl";
-            this.dgcLOPSDidl.ReadOnly = true;
-            this.dgcLOPSDidl.Visible = false;
-            this.dgcLOPSDidl.Width = 90;
+            dgcLOPSDidl.DataPropertyName = "idl";
+            dgcLOPSDidl.HeaderText = "idl";
+            dgcLOPSDidl.MinimumWidth = 9;
+            dgcLOPSDidl.Name = "dgcLOPSDidl";
+            dgcLOPSDidl.ReadOnly = true;
+            dgcLOPSDidl.Visible = false;
+            dgcLOPSDidl.Width = 90;
             // 
             // dgcLOPSDid
             // 
-            this.dgcLOPSDid.DataPropertyName = "id";
-            this.dgcLOPSDid.HeaderText = "id";
-            this.dgcLOPSDid.MinimumWidth = 9;
-            this.dgcLOPSDid.Name = "dgcLOPSDid";
-            this.dgcLOPSDid.ReadOnly = true;
-            this.dgcLOPSDid.ToolTipText = "labojuma id";
-            this.dgcLOPSDid.Width = 72;
+            dgcLOPSDid.DataPropertyName = "id";
+            dgcLOPSDid.HeaderText = "id";
+            dgcLOPSDid.MinimumWidth = 9;
+            dgcLOPSDid.Name = "dgcLOPSDid";
+            dgcLOPSDid.ReadOnly = true;
+            dgcLOPSDid.ToolTipText = "labojuma id";
+            dgcLOPSDid.Width = 60;
             // 
             // dgcLOPSDZDt
             // 
-            this.dgcLOPSDZDt.DataPropertyName = "ZDt";
-            this.dgcLOPSDZDt.HeaderText = "labots.dat.";
-            this.dgcLOPSDZDt.MinimumWidth = 9;
-            this.dgcLOPSDZDt.Name = "dgcLOPSDZDt";
-            this.dgcLOPSDZDt.ReadOnly = true;
-            this.dgcLOPSDZDt.ToolTipText = "labojuma datums";
-            this.dgcLOPSDZDt.Width = 144;
+            dgcLOPSDZDt.DataPropertyName = "ZDt";
+            dataGridViewCellStyle1.Format = "dd.MM.yyyy HH:mm";
+            dgcLOPSDZDt.DefaultCellStyle = dataGridViewCellStyle1;
+            dgcLOPSDZDt.HeaderText = "labots.dat.";
+            dgcLOPSDZDt.MinimumWidth = 9;
+            dgcLOPSDZDt.Name = "dgcLOPSDZDt";
+            dgcLOPSDZDt.ReadOnly = true;
+            dgcLOPSDZDt.ToolTipText = "labojuma datums";
+            dgcLOPSDZDt.Width = 130;
             // 
             // dgcLOPSDdtld
             // 
-            this.dgcLOPSDdtld.DataPropertyName = "dtld";
-            this.dgcLOPSDdtld.HeaderText = "dzēsts dat.";
-            this.dgcLOPSDdtld.MinimumWidth = 9;
-            this.dgcLOPSDdtld.Name = "dgcLOPSDdtld";
-            this.dgcLOPSDdtld.ReadOnly = true;
-            this.dgcLOPSDdtld.ToolTipText = "dzēšanas datums";
-            this.dgcLOPSDdtld.Width = 144;
+            dgcLOPSDdtld.DataPropertyName = "dtld";
+            dataGridViewCellStyle2.Format = "dd.MM.yyyy HH:mm";
+            dgcLOPSDdtld.DefaultCellStyle = dataGridViewCellStyle2;
+            dgcLOPSDdtld.HeaderText = "dzēsts dat.";
+            dgcLOPSDdtld.MinimumWidth = 9;
+            dgcLOPSDdtld.Name = "dgcLOPSDdtld";
+            dgcLOPSDdtld.ReadOnly = true;
+            dgcLOPSDdtld.ToolTipText = "dzēšanas datums";
+            dgcLOPSDdtld.Width = 130;
             // 
             // dgcLOPSDODT
             // 
-            this.dgcLOPSDODT.DataPropertyName = "ODT";
-            this.dgcLOPSDODT.HeaderText = "datums no";
-            this.dgcLOPSDODT.MinimumWidth = 8;
-            this.dgcLOPSDODT.Name = "dgcLOPSDODT";
-            this.dgcLOPSDODT.ReadOnly = true;
-            this.dgcLOPSDODT.ToolTipText = "dokumenta izveides vai iepriekšējā labojuma datums";
-            this.dgcLOPSDODT.Width = 144;
+            dgcLOPSDODT.DataPropertyName = "ODT";
+            dataGridViewCellStyle3.Format = "dd.MM.yyyy HH:mm";
+            dgcLOPSDODT.DefaultCellStyle = dataGridViewCellStyle3;
+            dgcLOPSDODT.HeaderText = "datums no";
+            dgcLOPSDODT.MinimumWidth = 8;
+            dgcLOPSDODT.Name = "dgcLOPSDODT";
+            dgcLOPSDODT.ReadOnly = true;
+            dgcLOPSDODT.ToolTipText = "dokumenta izveides vai iepriekšējā labojuma datums";
+            dgcLOPSDODT.Width = 130;
             // 
             // dgcLOPSDusl
             // 
-            this.dgcLOPSDusl.DataPropertyName = "usl";
-            this.dgcLOPSDusl.HeaderText = "lietotājs";
-            this.dgcLOPSDusl.MinimumWidth = 9;
-            this.dgcLOPSDusl.Name = "dgcLOPSDusl";
-            this.dgcLOPSDusl.ReadOnly = true;
-            this.dgcLOPSDusl.Visible = false;
-            this.dgcLOPSDusl.Width = 99;
+            dgcLOPSDusl.DataPropertyName = "usl";
+            dgcLOPSDusl.HeaderText = "lietotājs";
+            dgcLOPSDusl.MinimumWidth = 9;
+            dgcLOPSDusl.Name = "dgcLOPSDusl";
+            dgcLOPSDusl.ReadOnly = true;
+            dgcLOPSDusl.Visible = false;
+            dgcLOPSDusl.Width = 99;
             // 
             // dgcLOPSDZU
             // 
-            this.dgcLOPSDZU.DataPropertyName = "ZU";
-            this.dgcLOPSDZU.HeaderText = "lietotājs";
-            this.dgcLOPSDZU.MinimumWidth = 9;
-            this.dgcLOPSDZU.Name = "dgcLOPSDZU";
-            this.dgcLOPSDZU.ReadOnly = true;
-            this.dgcLOPSDZU.Width = 90;
+            dgcLOPSDZU.DataPropertyName = "ZU";
+            dgcLOPSDZU.HeaderText = "lietotājs";
+            dgcLOPSDZU.MinimumWidth = 9;
+            dgcLOPSDZU.Name = "dgcLOPSDZU";
+            dgcLOPSDZU.ReadOnly = true;
+            dgcLOPSDZU.Width = 90;
             // 
             // dgcLOPSDtpl
             // 
-            this.dgcLOPSDtpl.DataPropertyName = "tpl";
-            this.dgcLOPSDtpl.HeaderText = "tpl";
-            this.dgcLOPSDtpl.MinimumWidth = 9;
-            this.dgcLOPSDtpl.Name = "dgcLOPSDtpl";
-            this.dgcLOPSDtpl.ReadOnly = true;
-            this.dgcLOPSDtpl.Visible = false;
-            this.dgcLOPSDtpl.Width = 90;
+            dgcLOPSDtpl.DataPropertyName = "tpl";
+            dgcLOPSDtpl.HeaderText = "tpl";
+            dgcLOPSDtpl.MinimumWidth = 9;
+            dgcLOPSDtpl.Name = "dgcLOPSDtpl";
+            dgcLOPSDtpl.ReadOnly = true;
+            dgcLOPSDtpl.Visible = false;
+            dgcLOPSDtpl.Width = 90;
             // 
             // dgcLOPSDZNR
             // 
-            this.dgcLOPSDZNR.DataPropertyName = "ZNR";
-            this.dgcLOPSDZNR.HeaderText = "nr.p.k.";
-            this.dgcLOPSDZNR.MinimumWidth = 9;
-            this.dgcLOPSDZNR.Name = "dgcLOPSDZNR";
-            this.dgcLOPSDZNR.ReadOnly = true;
-            this.dgcLOPSDZNR.Width = 72;
+            dgcLOPSDZNR.DataPropertyName = "ZNR";
+            dgcLOPSDZNR.HeaderText = "nr.p.k.";
+            dgcLOPSDZNR.MinimumWidth = 9;
+            dgcLOPSDZNR.Name = "dgcLOPSDZNR";
+            dgcLOPSDZNR.ReadOnly = true;
+            dgcLOPSDZNR.Width = 72;
             // 
             // dgcLOPSDDate
             // 
-            this.dgcLOPSDDate.DataPropertyName = "Dete";
-            this.dgcLOPSDDate.HeaderText = "datums";
-            this.dgcLOPSDDate.MinimumWidth = 9;
-            this.dgcLOPSDDate.Name = "dgcLOPSDDate";
-            this.dgcLOPSDDate.ReadOnly = true;
-            this.dgcLOPSDDate.Width = 99;
+            dgcLOPSDDate.DataPropertyName = "Dete";
+            dataGridViewCellStyle4.Format = "dd.MM.yyyy";
+            dgcLOPSDDate.DefaultCellStyle = dataGridViewCellStyle4;
+            dgcLOPSDDate.HeaderText = "datums";
+            dgcLOPSDDate.MinimumWidth = 9;
+            dgcLOPSDDate.Name = "dgcLOPSDDate";
+            dgcLOPSDDate.ReadOnly = true;
+            dgcLOPSDDate.Width = 85;
             // 
             // dgcLOPSDDocTyp
             // 
-            this.dgcLOPSDDocTyp.DataPropertyName = "DocTyp";
-            this.dgcLOPSDDocTyp.HeaderText = "dok.veids";
-            this.dgcLOPSDDocTyp.MinimumWidth = 9;
-            this.dgcLOPSDDocTyp.Name = "dgcLOPSDDocTyp";
-            this.dgcLOPSDDocTyp.ReadOnly = true;
-            this.dgcLOPSDDocTyp.Width = 90;
+            dgcLOPSDDocTyp.DataPropertyName = "DocTyp";
+            dgcLOPSDDocTyp.HeaderText = "dok.veids";
+            dgcLOPSDDocTyp.MinimumWidth = 9;
+            dgcLOPSDDocTyp.Name = "dgcLOPSDDocTyp";
+            dgcLOPSDDocTyp.ReadOnly = true;
+            dgcLOPSDDocTyp.Width = 90;
             // 
             // dgcLOPSDDocSt
             // 
-            this.dgcLOPSDDocSt.DataPropertyName = "DocSt";
-            this.dgcLOPSDDocSt.HeaderText = "sērija";
-            this.dgcLOPSDDocSt.MinimumWidth = 9;
-            this.dgcLOPSDDocSt.Name = "dgcLOPSDDocSt";
-            this.dgcLOPSDDocSt.ReadOnly = true;
-            this.dgcLOPSDDocSt.Width = 54;
+            dgcLOPSDDocSt.DataPropertyName = "DocSt";
+            dgcLOPSDDocSt.HeaderText = "sērija";
+            dgcLOPSDDocSt.MinimumWidth = 9;
+            dgcLOPSDDocSt.Name = "dgcLOPSDDocSt";
+            dgcLOPSDDocSt.ReadOnly = true;
+            dgcLOPSDDocSt.Width = 54;
             // 
             // dgcLOPSDDocNr
             // 
-            this.dgcLOPSDDocNr.DataPropertyName = "DocNr";
-            this.dgcLOPSDDocNr.HeaderText = "dok.nr.";
-            this.dgcLOPSDDocNr.MinimumWidth = 9;
-            this.dgcLOPSDDocNr.Name = "dgcLOPSDDocNr";
-            this.dgcLOPSDDocNr.ReadOnly = true;
-            this.dgcLOPSDDocNr.Width = 90;
+            dgcLOPSDDocNr.DataPropertyName = "DocNr";
+            dgcLOPSDDocNr.HeaderText = "dok.nr.";
+            dgcLOPSDDocNr.MinimumWidth = 9;
+            dgcLOPSDDocNr.Name = "dgcLOPSDDocNr";
+            dgcLOPSDDocNr.ReadOnly = true;
+            dgcLOPSDDocNr.Width = 110;
             // 
             // dgcLOPSDClid
             // 
-            this.dgcLOPSDClid.DataPropertyName = "ClId";
-            this.dgcLOPSDClid.HeaderText = "persona";
-            this.dgcLOPSDClid.MinimumWidth = 9;
-            this.dgcLOPSDClid.Name = "dgcLOPSDClid";
-            this.dgcLOPSDClid.ReadOnly = true;
-            this.dgcLOPSDClid.Width = 108;
+            dgcLOPSDClid.DataPropertyName = "ClId";
+            dgcLOPSDClid.HeaderText = "persona";
+            dgcLOPSDClid.MinimumWidth = 9;
+            dgcLOPSDClid.Name = "dgcLOPSDClid";
+            dgcLOPSDClid.ReadOnly = true;
+            dgcLOPSDClid.Width = 140;
             // 
             // dgcLOPSDDerscr
             // 
-            this.dgcLOPSDDerscr.DataPropertyName = "Descr";
-            this.dgcLOPSDDerscr.HeaderText = "apraksts";
-            this.dgcLOPSDDerscr.MinimumWidth = 9;
-            this.dgcLOPSDDerscr.Name = "dgcLOPSDDerscr";
-            this.dgcLOPSDDerscr.ReadOnly = true;
-            this.dgcLOPSDDerscr.Width = 135;
+            dgcLOPSDDerscr.DataPropertyName = "Descr";
+            dgcLOPSDDerscr.HeaderText = "apraksts";
+            dgcLOPSDDerscr.MinimumWidth = 9;
+            dgcLOPSDDerscr.Name = "dgcLOPSDDerscr";
+            dgcLOPSDDerscr.ReadOnly = true;
+            dgcLOPSDDerscr.Width = 180;
             // 
             // dgcLOPSDSumm
             // 
-            this.dgcLOPSDSumm.DataPropertyName = "Summ";
-            this.dgcLOPSDSumm.HeaderText = "summa";
-            this.dgcLOPSDSumm.MinimumWidth = 9;
-            this.dgcLOPSDSumm.Name = "dgcLOPSDSumm";
-            this.dgcLOPSDSumm.ReadOnly = true;
-            this.dgcLOPSDSumm.Width = 90;
+            dgcLOPSDSumm.DataPropertyName = "Summ";
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle5.Format = "# ##0.00;-# ##0.00";
+            dgcLOPSDSumm.DefaultCellStyle = dataGridViewCellStyle5;
+            dgcLOPSDSumm.HeaderText = "summa";
+            dgcLOPSDSumm.MinimumWidth = 9;
+            dgcLOPSDSumm.Name = "dgcLOPSDSumm";
+            dgcLOPSDSumm.ReadOnly = true;
+            dgcLOPSDSumm.Width = 90;
             // 
             // dgcLOPSDPVN
             // 
-            this.dgcLOPSDPVN.DataPropertyName = "PVN";
-            this.dgcLOPSDPVN.HeaderText = "PVN";
-            this.dgcLOPSDPVN.MinimumWidth = 9;
-            this.dgcLOPSDPVN.Name = "dgcLOPSDPVN";
-            this.dgcLOPSDPVN.ReadOnly = true;
-            this.dgcLOPSDPVN.Width = 90;
+            dgcLOPSDPVN.DataPropertyName = "PVN";
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle6.Format = "# ##0.00;-# ##0.00";
+            dgcLOPSDPVN.DefaultCellStyle = dataGridViewCellStyle6;
+            dgcLOPSDPVN.HeaderText = "PVN";
+            dgcLOPSDPVN.MinimumWidth = 9;
+            dgcLOPSDPVN.Name = "dgcLOPSDPVN";
+            dgcLOPSDPVN.ReadOnly = true;
+            dgcLOPSDPVN.Width = 90;
             // 
             // dgcLOPSDNrX
             // 
-            this.dgcLOPSDNrX.DataPropertyName = "NrX";
-            this.dgcLOPSDNrX.HeaderText = "nr.2";
-            this.dgcLOPSDNrX.MinimumWidth = 9;
-            this.dgcLOPSDNrX.Name = "dgcLOPSDNrX";
-            this.dgcLOPSDNrX.ReadOnly = true;
-            this.dgcLOPSDNrX.Width = 72;
+            dgcLOPSDNrX.DataPropertyName = "NrX";
+            dgcLOPSDNrX.HeaderText = "nr.2";
+            dgcLOPSDNrX.MinimumWidth = 9;
+            dgcLOPSDNrX.Name = "dgcLOPSDNrX";
+            dgcLOPSDNrX.ReadOnly = true;
+            dgcLOPSDNrX.Width = 72;
             // 
             // dgcLOPSDClid2
             // 
-            this.dgcLOPSDClid2.DataPropertyName = "ClId2";
-            this.dgcLOPSDClid2.HeaderText = "persona2";
-            this.dgcLOPSDClid2.MinimumWidth = 9;
-            this.dgcLOPSDClid2.Name = "dgcLOPSDClid2";
-            this.dgcLOPSDClid2.ReadOnly = true;
-            this.dgcLOPSDClid2.Width = 108;
+            dgcLOPSDClid2.DataPropertyName = "ClId2";
+            dgcLOPSDClid2.HeaderText = "persona2";
+            dgcLOPSDClid2.MinimumWidth = 9;
+            dgcLOPSDClid2.Name = "dgcLOPSDClid2";
+            dgcLOPSDClid2.ReadOnly = true;
+            dgcLOPSDClid2.Width = 140;
             // 
             // Form_LOPSd
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1023, 431);
-            this.CloseOnEscape = true;
-            this.Controls.Add(this.dgvLOPSd);
-            this.Controls.Add(this.bnavLOPSd);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Name = "Form_LOPSd";
-            this.Text = "Dokumentu datu izmaiņu reģistrs";
-            this.Load += new System.EventHandler(this.FormLOPSd_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.bsLOPSd)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bnavLOPSd)).EndInit();
-            this.bnavLOPSd.ResumeLayout(false);
-            this.bnavLOPSd.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvLOPSd)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            ClientSize = new System.Drawing.Size(1023, 431);
+            CloseOnEscape = true;
+            Controls.Add(dgvLOPSd);
+            Controls.Add(bnavLOPSd);
+            Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            Name = "Form_LOPSd";
+            Text = "Dokumentu datu izmaiņu reģistrs";
+            Load += FormLOPSd_Load;
+            ((System.ComponentModel.ISupportInitialize)bsLOPSd).EndInit();
+            ((System.ComponentModel.ISupportInitialize)bnavLOPSd).EndInit();
+            bnavLOPSd.ResumeLayout(false);
+            bnavLOPSd.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvLOPSd).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion

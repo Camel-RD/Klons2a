@@ -31,244 +31,242 @@ namespace KlonsF.FormsReportParams
         /// </summary>
         private void InitializeComponent()
         {
-            this.cbAC = new KlonsLIB.Components.MyMcFlatComboBox();
-            this.bsAC = new KlonsLIB.Data.MyBindingSource();
-            this.tbSD = new KlonsLIB.Components.MyTextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.tbED = new KlonsLIB.Components.MyTextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.lbACName = new System.Windows.Forms.Label();
-            this.cmDoIt = new System.Windows.Forms.Button();
-            this.bsClid = new KlonsLIB.Data.MyBindingSource();
-            this.lbCm = new System.Windows.Forms.ListBox();
-            this.tbNr = new KlonsLIB.Components.MyTextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.cmNrKIEO = new System.Windows.Forms.Button();
-            this.cmNrKIZO = new System.Windows.Forms.Button();
-            this.tbNr2 = new KlonsLIB.Components.MyTextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.bsAC)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bsClid)).BeginInit();
-            this.SuspendLayout();
+            components = new System.ComponentModel.Container();
+            cbAC = new MyMcFlatComboBox();
+            bsAC = new MyBindingSource(components);
+            tbSD = new MyTextBox();
+            label1 = new System.Windows.Forms.Label();
+            tbED = new MyTextBox();
+            label2 = new System.Windows.Forms.Label();
+            lbACName = new System.Windows.Forms.Label();
+            cmDoIt = new System.Windows.Forms.Button();
+            bsClid = new MyBindingSource(components);
+            lbCm = new System.Windows.Forms.ListBox();
+            tbNr = new MyTextBox();
+            label4 = new System.Windows.Forms.Label();
+            cmNrKIEO = new System.Windows.Forms.Button();
+            cmNrKIZO = new System.Windows.Forms.Button();
+            tbNr2 = new MyTextBox();
+            label3 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)bsAC).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)bsClid).BeginInit();
+            SuspendLayout();
             // 
             // cbAC
             // 
-            this.cbAC.BorderColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.cbAC.ColumnNames = new string[] {
-        "ac",
-        "name"};
-            this.cbAC.ColumnWidths = "80;300";
-            this.cbAC.DataSource = this.bsAC;
-            this.cbAC.DisplayMember = "AC";
-            this.cbAC.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbAC.DropDownHeight = 255;
-            this.cbAC.DropDownWidth = 404;
-            this.cbAC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbAC.FormattingEnabled = true;
-            this.cbAC.GridLineColor = System.Drawing.Color.LightGray;
-            this.cbAC.GridLineHorizontal = false;
-            this.cbAC.GridLineVertical = false;
-            this.cbAC.IntegralHeight = false;
-            this.cbAC.Location = new System.Drawing.Point(143, 53);
-            this.cbAC.Margin = new System.Windows.Forms.Padding(2);
-            this.cbAC.MaxDropDownItems = 15;
-            this.cbAC.Name = "cbAC";
-            this.cbAC.Size = new System.Drawing.Size(104, 23);
-            this.cbAC.TabIndex = 2;
-            this.cbAC.ValueMember = "AC";
-            this.cbAC.SelectedIndexChanged += new System.EventHandler(this.cbAC_SelectedIndexChanged);
-            this.cbAC.TextChanged += new System.EventHandler(this.cbAC_TextChanged);
-            this.cbAC.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Control_KeyDown);
-            this.cbAC.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.cbAC_MouseDoubleClick);
+            cbAC.BorderColor = System.Drawing.SystemColors.ControlDarkDark;
+            cbAC.ColumnNames = new string[]
+    {
+    "ac",
+    "name"
+    };
+            cbAC.ColumnWidths = "80;300";
+            cbAC.DataSource = bsAC;
+            cbAC.DisplayMember = "AC";
+            cbAC.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            cbAC.DropDownHeight = 270;
+            cbAC.DropDownWidth = 399;
+            cbAC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            cbAC.FormattingEnabled = true;
+            cbAC.GridLineColor = System.Drawing.Color.LightGray;
+            cbAC.GridLineHorizontal = false;
+            cbAC.GridLineVertical = false;
+            cbAC.IntegralHeight = false;
+            cbAC.Location = new System.Drawing.Point(143, 53);
+            cbAC.Margin = new System.Windows.Forms.Padding(2);
+            cbAC.MaxDropDownItems = 15;
+            cbAC.Name = "cbAC";
+            cbAC.Size = new System.Drawing.Size(104, 24);
+            cbAC.TabIndex = 2;
+            cbAC.ValueMember = "AC";
+            cbAC.SelectedIndexChanged += cbAC_SelectedIndexChanged;
+            cbAC.TextChanged += cbAC_TextChanged;
+            cbAC.KeyDown += Control_KeyDown;
+            cbAC.MouseDoubleClick += cbAC_MouseDoubleClick;
             // 
             // bsAC
             // 
-            this.bsAC.DataMember = "AcP21";
-            this.bsAC.MyDataSource = "KlonsData";
-            this.bsAC.Name2 = "bsAC";
+            bsAC.DataMember = "AcP21";
+            bsAC.MyDataSource = "KlonsData";
+            bsAC.Name2 = "bsAC";
             // 
             // tbSD
             // 
-            this.tbSD.BorderColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.tbSD.IsDate = true;
-            this.tbSD.Location = new System.Drawing.Point(143, 19);
-            this.tbSD.Margin = new System.Windows.Forms.Padding(2);
-            this.tbSD.Name = "tbSD";
-            this.tbSD.Size = new System.Drawing.Size(80, 22);
-            this.tbSD.TabIndex = 0;
-            this.tbSD.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Control_KeyDown);
+            tbSD.BorderColor = System.Drawing.SystemColors.ControlDarkDark;
+            tbSD.IsDate = true;
+            tbSD.Location = new System.Drawing.Point(143, 19);
+            tbSD.Margin = new System.Windows.Forms.Padding(2);
+            tbSD.Name = "tbSD";
+            tbSD.Size = new System.Drawing.Size(80, 23);
+            tbSD.TabIndex = 0;
+            tbSD.KeyDown += Control_KeyDown;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(10, 19);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(113, 16);
-            this.label1.TabIndex = 9;
-            this.label1.Text = "Datums (no - līdz):";
+            label1.AutoSize = true;
+            label1.Location = new System.Drawing.Point(10, 19);
+            label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(124, 17);
+            label1.TabIndex = 9;
+            label1.Text = "Datums (no - līdz):";
             // 
             // tbED
             // 
-            this.tbED.BorderColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.tbED.IsDate = true;
-            this.tbED.Location = new System.Drawing.Point(228, 19);
-            this.tbED.Margin = new System.Windows.Forms.Padding(2);
-            this.tbED.Name = "tbED";
-            this.tbED.Size = new System.Drawing.Size(80, 22);
-            this.tbED.TabIndex = 1;
-            this.tbED.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Control_KeyDown);
+            tbED.BorderColor = System.Drawing.SystemColors.ControlDarkDark;
+            tbED.IsDate = true;
+            tbED.Location = new System.Drawing.Point(228, 19);
+            tbED.Margin = new System.Windows.Forms.Padding(2);
+            tbED.Name = "tbED";
+            tbED.Size = new System.Drawing.Size(80, 23);
+            tbED.TabIndex = 1;
+            tbED.KeyDown += Control_KeyDown;
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(10, 55);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(44, 16);
-            this.label2.TabIndex = 10;
-            this.label2.Text = "Konts:";
+            label2.AutoSize = true;
+            label2.Location = new System.Drawing.Point(10, 55);
+            label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            label2.Name = "label2";
+            label2.Size = new System.Drawing.Size(48, 17);
+            label2.TabIndex = 10;
+            label2.Text = "Konts:";
             // 
             // lbACName
             // 
-            this.lbACName.Location = new System.Drawing.Point(251, 55);
-            this.lbACName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbACName.Name = "lbACName";
-            this.lbACName.Size = new System.Drawing.Size(334, 18);
-            this.lbACName.TabIndex = 11;
-            this.lbACName.Text = "Konts:";
+            lbACName.Location = new System.Drawing.Point(251, 55);
+            lbACName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            lbACName.Name = "lbACName";
+            lbACName.Size = new System.Drawing.Size(334, 18);
+            lbACName.TabIndex = 11;
+            lbACName.Text = "Konts:";
             // 
             // cmDoIt
             // 
-            this.cmDoIt.Location = new System.Drawing.Point(305, 146);
-            this.cmDoIt.Margin = new System.Windows.Forms.Padding(2);
-            this.cmDoIt.Name = "cmDoIt";
-            this.cmDoIt.Size = new System.Drawing.Size(133, 63);
-            this.cmDoIt.TabIndex = 4;
-            this.cmDoIt.Text = "Taisīt atskaiti";
-            this.cmDoIt.UseVisualStyleBackColor = true;
-            this.cmDoIt.Click += new System.EventHandler(this.cmDoIt_Click);
-            this.cmDoIt.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Control_KeyDown);
+            cmDoIt.Location = new System.Drawing.Point(305, 146);
+            cmDoIt.Margin = new System.Windows.Forms.Padding(2);
+            cmDoIt.Name = "cmDoIt";
+            cmDoIt.Size = new System.Drawing.Size(133, 63);
+            cmDoIt.TabIndex = 4;
+            cmDoIt.Text = "Taisīt atskaiti";
+            cmDoIt.UseVisualStyleBackColor = true;
+            cmDoIt.Click += cmDoIt_Click;
+            cmDoIt.KeyDown += Control_KeyDown;
             // 
             // bsClid
             // 
-            this.bsClid.DataMember = "Persons";
-            this.bsClid.MyDataSource = "KlonsData";
-            this.bsClid.Name2 = "bsClid";
+            bsClid.DataMember = "Persons";
+            bsClid.MyDataSource = "KlonsData";
+            bsClid.Name2 = "bsClid";
             // 
             // lbCm
             // 
-            this.lbCm.BackColor = System.Drawing.SystemColors.Control;
-            this.lbCm.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lbCm.FormattingEnabled = true;
-            this.lbCm.ItemHeight = 16;
-            this.lbCm.Items.AddRange(new object[] {
-            "Kases grāmata",
-            "Kases grāmata, visas dienas kopā",
-            "Ieņēmumu orderi",
-            "Izdevumu orderi"});
-            this.lbCm.Location = new System.Drawing.Point(13, 128);
-            this.lbCm.Margin = new System.Windows.Forms.Padding(2);
-            this.lbCm.Name = "lbCm";
-            this.lbCm.Size = new System.Drawing.Size(257, 82);
-            this.lbCm.TabIndex = 3;
-            this.lbCm.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.lbCm_MouseDoubleClick);
+            lbCm.BackColor = System.Drawing.SystemColors.Control;
+            lbCm.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            lbCm.FormattingEnabled = true;
+            lbCm.ItemHeight = 16;
+            lbCm.Items.AddRange(new object[] { "Kases grāmata", "Kases grāmata, visas dienas kopā", "Ieņēmumu orderi", "Izdevumu orderi" });
+            lbCm.Location = new System.Drawing.Point(13, 128);
+            lbCm.Margin = new System.Windows.Forms.Padding(2);
+            lbCm.Name = "lbCm";
+            lbCm.Size = new System.Drawing.Size(257, 82);
+            lbCm.TabIndex = 3;
+            lbCm.MouseDoubleClick += lbCm_MouseDoubleClick;
             // 
             // tbNr
             // 
-            this.tbNr.BorderColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.tbNr.Location = new System.Drawing.Point(266, 91);
-            this.tbNr.Margin = new System.Windows.Forms.Padding(2);
-            this.tbNr.Name = "tbNr";
-            this.tbNr.Size = new System.Drawing.Size(72, 22);
-            this.tbNr.TabIndex = 5;
-            this.tbNr.Text = "1";
-            this.tbNr.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Control_KeyDown);
+            tbNr.BorderColor = System.Drawing.SystemColors.ControlDarkDark;
+            tbNr.Location = new System.Drawing.Point(266, 91);
+            tbNr.Margin = new System.Windows.Forms.Padding(2);
+            tbNr.Name = "tbNr";
+            tbNr.Size = new System.Drawing.Size(72, 23);
+            tbNr.TabIndex = 5;
+            tbNr.Text = "1";
+            tbNr.KeyDown += Control_KeyDown;
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(10, 93);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(236, 16);
-            this.label4.TabIndex = 12;
-            this.label4.Text = "Kases grāmatas pirmās lapas numurs:";
+            label4.AutoSize = true;
+            label4.Location = new System.Drawing.Point(10, 93);
+            label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            label4.Name = "label4";
+            label4.Size = new System.Drawing.Size(249, 17);
+            label4.TabIndex = 12;
+            label4.Text = "Kases grāmatas pirmās lapas numurs:";
             // 
             // cmNrKIEO
             // 
-            this.cmNrKIEO.Location = new System.Drawing.Point(13, 255);
-            this.cmNrKIEO.Margin = new System.Windows.Forms.Padding(2);
-            this.cmNrKIEO.Name = "cmNrKIEO";
-            this.cmNrKIEO.Size = new System.Drawing.Size(133, 63);
-            this.cmNrKIEO.TabIndex = 7;
-            this.cmNrKIEO.Text = "Pārnumuret kases ieņēmumu orderus";
-            this.cmNrKIEO.UseVisualStyleBackColor = true;
-            this.cmNrKIEO.Click += new System.EventHandler(this.cmNrKIEO_Click);
-            this.cmNrKIEO.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Control_KeyDown);
+            cmNrKIEO.Location = new System.Drawing.Point(13, 255);
+            cmNrKIEO.Margin = new System.Windows.Forms.Padding(2);
+            cmNrKIEO.Name = "cmNrKIEO";
+            cmNrKIEO.Size = new System.Drawing.Size(133, 63);
+            cmNrKIEO.TabIndex = 7;
+            cmNrKIEO.Text = "Pārnumuret kases ieņēmumu orderus";
+            cmNrKIEO.UseVisualStyleBackColor = true;
+            cmNrKIEO.Click += cmNrKIEO_Click;
+            cmNrKIEO.KeyDown += Control_KeyDown;
             // 
             // cmNrKIZO
             // 
-            this.cmNrKIZO.Location = new System.Drawing.Point(158, 255);
-            this.cmNrKIZO.Margin = new System.Windows.Forms.Padding(2);
-            this.cmNrKIZO.Name = "cmNrKIZO";
-            this.cmNrKIZO.Size = new System.Drawing.Size(133, 63);
-            this.cmNrKIZO.TabIndex = 8;
-            this.cmNrKIZO.Text = "Pārnumurēt kases izdevumu orderus";
-            this.cmNrKIZO.UseVisualStyleBackColor = true;
-            this.cmNrKIZO.Click += new System.EventHandler(this.cmNrKIZO_Click);
-            this.cmNrKIZO.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Control_KeyDown);
+            cmNrKIZO.Location = new System.Drawing.Point(158, 255);
+            cmNrKIZO.Margin = new System.Windows.Forms.Padding(2);
+            cmNrKIZO.Name = "cmNrKIZO";
+            cmNrKIZO.Size = new System.Drawing.Size(133, 63);
+            cmNrKIZO.TabIndex = 8;
+            cmNrKIZO.Text = "Pārnumurēt kases izdevumu orderus";
+            cmNrKIZO.UseVisualStyleBackColor = true;
+            cmNrKIZO.Click += cmNrKIZO_Click;
+            cmNrKIZO.KeyDown += Control_KeyDown;
             // 
             // tbNr2
             // 
-            this.tbNr2.BorderColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.tbNr2.Location = new System.Drawing.Point(150, 225);
-            this.tbNr2.Margin = new System.Windows.Forms.Padding(2);
-            this.tbNr2.Name = "tbNr2";
-            this.tbNr2.Size = new System.Drawing.Size(72, 22);
-            this.tbNr2.TabIndex = 6;
-            this.tbNr2.Text = "1";
-            this.tbNr2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Control_KeyDown);
+            tbNr2.BorderColor = System.Drawing.SystemColors.ControlDarkDark;
+            tbNr2.Location = new System.Drawing.Point(150, 225);
+            tbNr2.Margin = new System.Windows.Forms.Padding(2);
+            tbNr2.Name = "tbNr2";
+            tbNr2.Size = new System.Drawing.Size(72, 23);
+            tbNr2.TabIndex = 6;
+            tbNr2.Text = "1";
+            tbNr2.KeyDown += Control_KeyDown;
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(14, 226);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(122, 16);
-            this.label3.TabIndex = 13;
-            this.label3.Text = "Numerāciju sākt ar:";
+            label3.AutoSize = true;
+            label3.Location = new System.Drawing.Point(14, 226);
+            label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            label3.Name = "label3";
+            label3.Size = new System.Drawing.Size(130, 17);
+            label3.TabIndex = 13;
+            label3.Text = "Numerāciju sākt ar:";
             // 
             // FormRep_KasesGr
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(455, 330);
-            this.CloseOnEscape = true;
-            this.Controls.Add(this.lbCm);
-            this.Controls.Add(this.cmNrKIZO);
-            this.Controls.Add(this.cmNrKIEO);
-            this.Controls.Add(this.cmDoIt);
-            this.Controls.Add(this.lbACName);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.tbED);
-            this.Controls.Add(this.tbNr2);
-            this.Controls.Add(this.tbNr);
-            this.Controls.Add(this.tbSD);
-            this.Controls.Add(this.cbAC);
-            this.Name = "FormRep_KasesGr";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Kases grāmata";
-            this.Load += new System.EventHandler(this.FormRepKoresp1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.bsAC)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bsClid)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            ClientSize = new System.Drawing.Size(595, 330);
+            CloseOnEscape = true;
+            Controls.Add(lbCm);
+            Controls.Add(cmNrKIZO);
+            Controls.Add(cmNrKIEO);
+            Controls.Add(cmDoIt);
+            Controls.Add(lbACName);
+            Controls.Add(label2);
+            Controls.Add(label3);
+            Controls.Add(label4);
+            Controls.Add(label1);
+            Controls.Add(tbED);
+            Controls.Add(tbNr2);
+            Controls.Add(tbNr);
+            Controls.Add(tbSD);
+            Controls.Add(cbAC);
+            Name = "FormRep_KasesGr";
+            StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            Text = "Kases grāmata";
+            Load += FormRepKoresp1_Load;
+            ((System.ComponentModel.ISupportInitialize)bsAC).EndInit();
+            ((System.ComponentModel.ISupportInitialize)bsClid).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion

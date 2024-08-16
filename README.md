@@ -7,7 +7,7 @@ Klons2 ir bezmaksas grāmatvedības uzskaites programmu komplekts, kurā ietilps
   - Noliktavas uzskaites modulis
 
 Lejuplādēt programmu pēdējo versiju:
-  - Klons2 ver. 2024.07.#1 [lejuplādēt](https://github.com/Camel-RD/Klons2/releases/latest/download/setup_klons.zip)
+  - Klons2 ver. 2024.07.#1 [lejuplādēt](https://github.com/Camel-RD/Klons2a/releases/latest/download/setup_klons.zip)
 
 ## Finanšu uzskaites modulis
 
@@ -150,4 +150,4 @@ Programmas noliktavas uzskaites modulī ietilspst:
   
 **SVARĪGI !!!**
 
-Klons2 izmanto Microsofr .NET Framework 4.7.2 (vai jaunāku). To var lejuplādēt [šeit](https://dotnet.microsoft.com/download/dotnet-framework/net472).
+Klons2 izmanto Microsoft .NET Desktop Runtime 8. To var lejuplādēt [šeit](https://dotnet.microsoft.com/en-us/download/dotnet/8.0).

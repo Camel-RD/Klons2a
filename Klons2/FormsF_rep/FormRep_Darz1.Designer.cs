@@ -81,7 +81,7 @@ namespace KlonsF.FormsReportParams
             cmDoIt.Location = new System.Drawing.Point(309, 124);
             cmDoIt.Margin = new System.Windows.Forms.Padding(2);
             cmDoIt.Name = "cmDoIt";
-            cmDoIt.Size = new System.Drawing.Size(150, 63);
+            cmDoIt.Size = new System.Drawing.Size(109, 52);
             cmDoIt.TabIndex = 3;
             cmDoIt.Text = "Taisīt atskaiti";
             cmDoIt.UseVisualStyleBackColor = true;
@@ -151,7 +151,6 @@ namespace KlonsF.FormsReportParams
             cbMonth.GridLineColor = System.Drawing.Color.LightGray;
             cbMonth.GridLineHorizontal = false;
             cbMonth.GridLineVertical = false;
-            cbMonth.IntegralHeight = false;
             myItem3.Col1 = "01";
             myItem4.Col1 = "02";
             myItem5.Col1 = "03";

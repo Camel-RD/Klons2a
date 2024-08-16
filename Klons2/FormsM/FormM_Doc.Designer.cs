@@ -582,7 +582,7 @@ namespace KlonsM.FormsM
             // 
             // grDocCMCol2
             // 
-            grDocCMCol2.CaptionColumnWidth = 150;
+            grDocCMCol2.CaptionColumnWidth = 130;
             grDocCMCol2.Command = KlonsLIB.MySourceGrid.GridRows.EMyGridRowCommands.StartNewColumn;
             grDocCMCol2.Name = "grDocCMCol2";
             grDocCMCol2.RowTitle = null;

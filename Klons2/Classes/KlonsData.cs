@@ -32,8 +32,8 @@ namespace KlonsF.Classes
         private DataSetHelper _klonsADataSetHelper = null;
         private DataSetHelper _klonsARepDataSetHelper = null;
 
-        public string Version = "016";
-        public string VersionStr = "2024.07.#1";
+        public string Version = "017";
+        public string VersionStr = "2024.08.#1";
 
         public string SettingsFileName = GetBasePath() + "\\Config\\Settings.xml";
         public string MasterListFileName = GetBasePath() + "\\Config\\MasterList.xml";
@@ -168,11 +168,6 @@ namespace KlonsF.Classes
         {
             string filename = GetFileName(me);
 
-            if (!File.Exists(filename))
-            {
-                throw new Exception($"Nav faila: [{filename}]");
-            }
-
             if (CurrentDBTag != null)
             {
                 try
@@ -203,6 +198,12 @@ namespace KlonsF.Classes
                 throw new Exception($"Nekorekti pieslēguma dati:\n{newconnstr}");
             newconnstr = s1;
 
+            var csb = new FbConnectionStringBuilder(newconnstr);
+            if (csb.ServerType == FbServerType.Embedded && !File.Exists(filename))
+            {
+                throw new Exception($"Nav faila: [{filename}]");
+            }
+
             _currentUserName = username;
 
             _klonsFDataSetHelper.ConnectTo(newconnstr);
@@ -230,11 +231,6 @@ namespace KlonsF.Classes
                 throw new Exception($"Nav norādīts lietotāja vārds.");
             string filename = GetFileName(me);
 
-            if (!File.Exists(filename))
-            {
-                throw new Exception($"Nav faila: [{filename}]");
-            }
-
             string newconnstr = MasterList.GetTemplateByName(me.ConnStr);
             if (string.IsNullOrEmpty(newconnstr))
             {
@@ -247,6 +243,12 @@ namespace KlonsF.Classes
             if (s1 == null)
                 throw new Exception($"Nekorekti pieslēguma dati:\n{newconnstr}");
             newconnstr = s1;
+
+            var csb = new FbConnectionStringBuilder(newconnstr);
+            if (csb.ServerType == FbServerType.Embedded && !File.Exists(filename))
+            {
+                throw new Exception($"Nav faila: [{filename}]");
+            }
 
             return newconnstr;
         }
@@ -288,7 +290,7 @@ namespace KlonsF.Classes
                 filename = me.Path;
                 filename = filename.Replace("@", GetBaseDBPath());
             }
-            filename += "\\" + me.FileName;
+            filename = Path.Combine(filename, me.FileName);
             return filename;
         }
 

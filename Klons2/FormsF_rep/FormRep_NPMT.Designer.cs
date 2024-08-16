@@ -139,7 +139,7 @@ namespace KlonsF.FormsReportParams
             cbMonth.ColumnWidths = "44";
             cbMonth.DisplayMember = "col1";
             cbMonth.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            cbMonth.DropDownHeight = 216;
+            cbMonth.DropDownHeight = 234;
             cbMonth.DropDownStyle = MyMcComboBox.CustomDropDownStyle.DropDownListSimple;
             cbMonth.DropDownWidth = 63;
             cbMonth.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -178,7 +178,7 @@ namespace KlonsF.FormsReportParams
     };
             cbMonth.Location = new System.Drawing.Point(236, 36);
             cbMonth.Margin = new System.Windows.Forms.Padding(2);
-            cbMonth.MaxDropDownItems = 12;
+            cbMonth.MaxDropDownItems = 13;
             cbMonth.Name = "cbMonth";
             cbMonth.Size = new System.Drawing.Size(63, 24);
             cbMonth.TabIndex = 6;
