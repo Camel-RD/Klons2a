@@ -18,14 +18,14 @@ namespace KlonsA.Forms
             InitializeComponent();
             CheckMyFontAndColors();
 
-            InsertInToolStrip(toolStrip1, tbCode, 0);
-            InsertInToolStrip(toolStrip1, cbUsed, 2);
-
             bsZinuKodi.Fill();
         }
 
         private void Form_ReportCodes_Load(object sender, EventArgs e)
         {
+            InsertInToolStrip(toolStrip1, tbCode, 0);
+            InsertInToolStrip(toolStrip1, cbUsed, 2);
+
             cbUsed.SelectedIndex = 1;
             CheckSave();
             tbCode.Select();

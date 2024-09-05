@@ -24,7 +24,6 @@ namespace KlonsA.Forms
             myStyleDefs1.MakeStyles(dgvLapa);
             MakeColumnHeaders(CalendarMonth);
             tslPeriod.Text = DataLoader.GetPeriodStr();
-            SetupToolStrips();
             //RefreshHeaderFont();
         }
 
@@ -32,6 +31,8 @@ namespace KlonsA.Forms
 
         private void Form_TimeSheet_Load(object sender, EventArgs e)
         {
+            SetupToolStrips();
+
             IsLoading = false;
             MyData.DataSetKlonsA.TIMESHEET.ColumnChanged += TIMESHEET_ColumnChanged;
             SetCurrentList();
@@ -41,6 +42,7 @@ namespace KlonsA.Forms
         protected override void OnShown(EventArgs e)
         {
             base.OnShown(e);
+
             dgvLapa.DefaultCellStyle.Font = Font;
             dgvLapa.ColumnHeadersDefaultCellStyle.Font = Font;
             myStyleDefs1.HeaderHolyDay.Font = Font;

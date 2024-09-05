@@ -29,12 +29,13 @@ namespace KlonsA.Forms
             dgcKind2.ValueMember = "Key";
 
             cbActive.SelectedIndex = 0;
-            InsertInToolStrip(toolStrip1, tbSearch, 1);
-            InsertInToolStrip(toolStrip1, cbActive, 2);
         }
 
         private void Form_PlanList_Load(object sender, EventArgs e)
         {
+            InsertInToolStrip(toolStrip1, tbSearch, 1);
+            InsertInToolStrip(toolStrip1, cbActive, 2);
+
             CheckSave();
         }
 

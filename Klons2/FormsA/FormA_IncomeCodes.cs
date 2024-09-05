@@ -19,11 +19,12 @@ namespace KlonsA.Forms
             InitializeComponent();
             CheckMyFontAndColors();
             cbActive.SelectedIndex = 0;
-            InsertInToolStrip(bnList, cbActive, -1);
         }
 
         private void Form_IncomeCodes_Load(object sender, EventArgs e)
         {
+            InsertInToolStrip(bnList, cbActive, -1);
+
             CheckSave();
         }
 

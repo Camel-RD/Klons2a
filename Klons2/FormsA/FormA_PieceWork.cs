@@ -22,8 +22,6 @@ namespace KlonsA.Forms
         {
             InitializeComponent();
             CheckMyFontAndColors();
-            SetupToolStrips();
-
           
             var timeunits = SomeDataDefs.MakeListB("0", "st", "1", "min", "2", "sec");
             dgcTimeUnit.DataSource = timeunits;
@@ -36,6 +34,8 @@ namespace KlonsA.Forms
 
         private void Form_PieceWork_Load(object sender, EventArgs e)
         {
+            SetupToolStrips();
+
             MyData.DataSetKlonsA.PIECEWORK.ColumnChanged += PIECEWORK_ColumnChanged;
             CheckSave();
         }

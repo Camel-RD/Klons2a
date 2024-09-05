@@ -23,10 +23,6 @@ namespace KlonsA.Forms
             CheckMyFontAndColors();
 
             ShowOnlyActive = MyData.Params.PersListOnlyUsed;
-
-            InsertInToolStrip(toolStrip1, tbID, 0);
-            InsertInToolStrip(toolStrip1, tbSearch, 2);
-            InsertInToolStrip(toolStrip1, cbActive, 4);
         }
 
         public enum EWhatToSelect { Person, Position, Both}
@@ -38,6 +34,10 @@ namespace KlonsA.Forms
 
         private void Form_Persons_Load(object sender, EventArgs e)
         {
+            InsertInToolStrip(toolStrip1, tbID, 0);
+            InsertInToolStrip(toolStrip1, tbSearch, 2);
+            InsertInToolStrip(toolStrip1, cbActive, 4);
+
             MyData.DataSetKlonsA.PERSONS.PERSONSRowChanged += PersonsOnPersonsRowChanged;
             MyData.DataSetKlonsA.POSITIONS.POSITIONSRowChanged += AmatiOnAmatiRowChanged;
             if (IsMdiChild) WindowState = FormWindowState.Minimized;

@@ -22,11 +22,12 @@ namespace KlonsP.Forms
             InitializeComponent();
             CheckMyFontAndColors();
             dgvRows.AutoGenerateColumns = false;
-            InsertInToolStrip(toolStrip1, cbCat, 1);
         }
 
         private void Form_TaxDeprecCat_Load(object sender, EventArgs e)
         {
+            InsertInToolStrip(toolStrip1, cbCat, 1);
+
             IsLoading = false;
             SetCurrentCat();
         }

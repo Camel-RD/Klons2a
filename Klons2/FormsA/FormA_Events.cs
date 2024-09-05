@@ -20,13 +20,13 @@ namespace KlonsA.Forms
         public FormA_Events()
         {
             InitializeComponent();
-            SetupToolStrips();
             CheckMyFontAndColors();
             LoadColumnWidthsFromSettings();
         }
 
         private void Form_Events_Load(object sender, EventArgs e)
         {
+            SetupToolStrips();
             cbFilterEvent2.SelectedValue = null;
             cbFilterMode.SelectedValue = "0";
         }

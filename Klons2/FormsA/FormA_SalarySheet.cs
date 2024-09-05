@@ -39,7 +39,6 @@ namespace KlonsA.Forms
             CheckMyFontAndColors();
 
             tslPeriod.Text = DataLoader.GetPeriodStr();
-            SetupToolStrips();
 
             dgcPsRateType.DataSource = SomeDataDefs.ProcOrEuro;
             dgcPsRateType.DisplayMember = "Val";
@@ -69,6 +68,8 @@ namespace KlonsA.Forms
 
         private void Form_SalarySheet_Load(object sender, EventArgs e)
         {
+            SetupToolStrips();
+
             MyData.DataSetKlonsA.SALARY_PLUSMINUS.ColumnChanged += SALARY_PLUSMINUS_ColumnChanged;
 
             WindowState = FormWindowState.Maximized;

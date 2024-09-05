@@ -20,13 +20,14 @@ namespace KlonsA.Forms
             InitializeComponent();
             CheckMyFontAndColors();
             cbActive.SelectedIndex = 0;
-            InsertInToolStrip(toolStrip1, tbID, 0);
-            InsertInToolStrip(toolStrip1, tbSearch, 2);
-            InsertInToolStrip(toolStrip1, cbActive, 4);
         }
 
         private void Form_Departments_Load(object sender, EventArgs e)
         {
+            InsertInToolStrip(toolStrip1, tbID, 0);
+            InsertInToolStrip(toolStrip1, tbSearch, 2);
+            InsertInToolStrip(toolStrip1, cbActive, 4);
+
             if (Modal || IsMyDialog)
                 tbID.Select();
 

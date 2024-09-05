@@ -23,7 +23,6 @@ namespace KlonsA.Forms
         {
             InitializeComponent();
             CheckMyFontAndColors();
-            SetupToolStrips();
 
             try
             {
@@ -37,6 +36,8 @@ namespace KlonsA.Forms
 
         private void Form_PayLists_Load(object sender, EventArgs e)
         {
+            SetupToolStrips();
+
             ShowPayLists(MyData.Settings.ShowPayLists);
             ShowPayDataPanel(MyData.Settings.ShowPayDataPanel);
             ShowFilterPanel(MyData.Settings.ShowPayListFilterPanel);

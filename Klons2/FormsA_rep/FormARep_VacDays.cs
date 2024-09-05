@@ -22,13 +22,12 @@ namespace KlonsA.Forms
             InitializeComponent();
             CheckMyFontAndColors();
             tbDate.Text = Utils.DateToString(DateTime.Today);
-            InsertInToolStrip(toolStrip1, tbDate, 1);
             dgvRows.AutoGenerateColumns = false;
         }
 
         private void FormRep_VacDays_Load(object sender, EventArgs e)
         {
-
+            InsertInToolStrip(toolStrip1, tbDate, 1);
         }
 
         public List<RepRowVacDays> RepRows = new List<RepRowVacDays>();

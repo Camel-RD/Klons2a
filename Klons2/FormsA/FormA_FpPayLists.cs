@@ -22,7 +22,6 @@ namespace KlonsA.Forms
         {
             InitializeComponent();
             CheckMyFontAndColors();
-            SetupToolStrips();
 
             try
             {
@@ -36,6 +35,8 @@ namespace KlonsA.Forms
 
         private void Form_FpPayLists_Load(object sender, EventArgs e)
         {
+            SetupToolStrips();
+
             dgcRowsTaxTP.DataSource = SomeDataDefs.FPMaksNodVeids;
             dgcRowsTaxTP.DisplayMember = "Val";
             dgcRowsTaxTP.ValueMember = "Key";

@@ -19,13 +19,13 @@ namespace KlonsA.Forms
         public FormA_PieceWorkCatStruct()
         {
             InitializeComponent();
-            SetupToolStrips();
             CheckMyFontAndColors();
             cbActive.SelectedIndex = 0;
         }
 
         private void Form_PieceWorkCatStruct_Load(object sender, EventArgs e)
         {
+            SetupToolStrips();
             CheckSave();
         }
 

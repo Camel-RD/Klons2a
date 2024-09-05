@@ -22,12 +22,13 @@ namespace KlonsA.Forms
         {
             InitializeComponent();
             CheckMyFontAndColors();
-            SetupToolStrips();
             MakeGrid();
         }
 
         private void Form_Rates_Load(object sender, EventArgs e)
         {
+            SetupToolStrips();
+
             bsLikmes.Position = bsLikmes.Count - 1;
         }
 

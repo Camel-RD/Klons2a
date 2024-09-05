@@ -35,8 +35,6 @@ namespace KlonsP.Forms
             ShowDataPanel(MyData.Params.ShowItemDataPanel);
             ShowFilterPanel(MyData.Params.ShowItemsFilterPanel);
 
-            InsertInToolStrip(bnNav, tbDate, -1);
-
             dgvFilter.AutoGenerateColumns = false;
             dgcFilterSate.DataSource = SomeDataDefs.FilterList;
             dgcFilterSate.ValueMember = "Key";
@@ -49,6 +47,8 @@ namespace KlonsP.Forms
 
         private void Form_Items_Load(object sender, EventArgs e)
         {
+            InsertInToolStrip(bnNav, tbDate, -1);
+
             MyData.DataSetKlonsP.ITEMS_EVENTS.ColumnChanged += ITEMS_EVENTS_ColumnChanged;
 
             mySplitContainer1.Panel1.Select();

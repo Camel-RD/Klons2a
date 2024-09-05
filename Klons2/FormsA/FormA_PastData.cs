@@ -20,12 +20,13 @@ namespace KlonsA.Forms
         {
             InitializeComponent();
             CheckMyFontAndColors();
-            InsertInToolStrip(toolStrip1, tbFilter, -1);
             bsPrevMonths.Fill();
         }
 
         private void Form_PastData_Load(object sender, EventArgs e)
         {
+            InsertInToolStrip(toolStrip1, tbFilter, -1);
+
             CheckSave();
             MyData.DataSetKlonsA.PASTDATA.ColumnChanged += PASTDATA_ColumnChanged;
         }

@@ -21,7 +21,6 @@ namespace KlonsA.Forms
         {
             InitializeComponent();
             CheckMyFontAndColors();
-            SetupToolStrips();
             cbCat.SelectedIndex = -1;
             cbActive.SelectedIndex = 0;
 
@@ -33,6 +32,8 @@ namespace KlonsA.Forms
 
         private void Form_PieceWorkCatalog_Load(object sender, EventArgs e)
         {
+            SetupToolStrips();
+
             MyData.DataSetKlonsA.PIECEWORK_CATALOG.ColumnChanged += PIECEWORK_CATALOG_ColumnChanged;
             CheckSave();
         }

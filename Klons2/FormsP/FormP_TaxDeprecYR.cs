@@ -22,13 +22,12 @@ namespace KlonsP.Forms
             InitializeComponent();
             CheckMyFontAndColors();
 
-            InsertInToolStrip(toolStrip1, cbYear, 3);
             SetYears();
         }
 
         private void Form_TaxDeprecYR_Load(object sender, EventArgs e)
         {
-
+            InsertInToolStrip(toolStrip1, cbYear, 3);
         }
 
         private int Year1 = 0;

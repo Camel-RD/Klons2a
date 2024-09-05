@@ -50,14 +50,14 @@ namespace KlonsA.Forms
 
         private void Form_PersonsR_Load(object sender, EventArgs e)
         {
+            SetupToolStrips();
+
             if (bsPersons.Count == 0)
             {
                 MyMainForm.ShowInfo("Darbinieku saraksts it tukšs.");
                 this.Close();
                 return;
             }
-
-            SetupToolStrips();
 
             try
             {

@@ -24,7 +24,6 @@ namespace KlonsA.Forms
                 InitializeComponent();
                 CheckMyFontAndColors();
                 MakeGrid();
-                SetupToolStrips();
                 cbActive.SelectedIndex = 0;
             }
             catch (Exception e)
@@ -35,6 +34,7 @@ namespace KlonsA.Forms
 
         private void Form_FizPersons_Load(object sender, EventArgs e)
         {
+            SetupToolStrips();
             CheckEnableGrid();
             CheckSave();
         }
