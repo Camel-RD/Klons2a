@@ -43,8 +43,18 @@ namespace KlonsF.Forms
             bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             dgvBal0 = new MyDataGridView();
+            dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            dgcBal0AC11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            dgcBal0AC24 = new MyDgvMcCBColumn();
             bsAc24 = new MyBindingSource(components);
+            dgcBal0Clid = new MyDgvMcCBColumn();
             bsClisd = new MyBindingSource(components);
+            dgcSummDC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            dgcSummCC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            dgcCur = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            dgcCurRate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            dgcSummD = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            dgcSummC = new System.Windows.Forms.DataGridViewTextBoxColumn();
             bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
@@ -61,16 +71,7 @@ namespace KlonsF.Forms
             lbSumDeb = new MyLabel();
             lbSumKred = new MyLabel();
             label2 = new System.Windows.Forms.Label();
-            dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            dgcBal0AC11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            dgcBal0AC24 = new MyDgvMcCBColumn();
-            dgcBal0Clid = new MyDgvMcCBColumn();
-            dgcSummDC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            dgcSummCC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            dgcCur = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            dgcCurRate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            dgcSummD = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            dgcSummC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)bsBal0).BeginInit();
             ((System.ComponentModel.ISupportInitialize)bnavB0).BeginInit();
             bnavB0.SuspendLayout();
@@ -78,6 +79,7 @@ namespace KlonsF.Forms
             ((System.ComponentModel.ISupportInitialize)bsAc24).BeginInit();
             ((System.ComponentModel.ISupportInitialize)bsClisd).BeginInit();
             ((System.ComponentModel.ISupportInitialize)bsAc21).BeginInit();
+            panel1.SuspendLayout();
             SuspendLayout();
             // 
             // bsBal0
@@ -132,17 +134,17 @@ namespace KlonsF.Forms
             // 
             // dgvBal0
             // 
-            dgvBal0.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
             dgvBal0.AutoGenerateColumns = false;
             dgvBal0.BackgroundColor = System.Drawing.SystemColors.Control;
             dgvBal0.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvBal0.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { dataGridViewTextBoxColumn1, dgcBal0AC11, dgcBal0AC24, dgcBal0Clid, dgcSummDC, dgcSummCC, dgcCur, dgcCurRate, dgcSummD, dgcSummC });
             dgvBal0.DataSource = bsBal0;
-            dgvBal0.Location = new System.Drawing.Point(0, 40);
+            dgvBal0.Dock = System.Windows.Forms.DockStyle.Fill;
+            dgvBal0.Location = new System.Drawing.Point(0, 32);
             dgvBal0.Margin = new System.Windows.Forms.Padding(2);
             dgvBal0.Name = "dgvBal0";
             dgvBal0.RowHeadersWidth = 62;
-            dgvBal0.Size = new System.Drawing.Size(907, 415);
+            dgvBal0.Size = new System.Drawing.Size(907, 433);
             dgvBal0.TabIndex = 1;
             dgvBal0.MyKeyDown += dgvBal0_MyKeyDown;
             dgvBal0.MyCheckForChanges += dgvBal0_MyCheckForChanges;
@@ -151,17 +153,149 @@ namespace KlonsF.Forms
             dgvBal0.CellToolTipTextNeeded += dgvBal0_CellToolTipTextNeeded;
             dgvBal0.UserDeletingRow += dgvBal0_UserDeletingRow;
             // 
+            // dataGridViewTextBoxColumn1
+            // 
+            dataGridViewTextBoxColumn1.DataPropertyName = "id";
+            dataGridViewTextBoxColumn1.HeaderText = "id";
+            dataGridViewTextBoxColumn1.MinimumWidth = 9;
+            dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            dataGridViewTextBoxColumn1.ReadOnly = true;
+            dataGridViewTextBoxColumn1.Visible = false;
+            dataGridViewTextBoxColumn1.Width = 90;
+            // 
+            // dgcBal0AC11
+            // 
+            dgcBal0AC11.DataPropertyName = "AC11";
+            dgcBal0AC11.HeaderText = "konts";
+            dgcBal0AC11.MinimumWidth = 9;
+            dgcBal0AC11.Name = "dgcBal0AC11";
+            dgcBal0AC11.ToolTipText = "Bilances konts";
+            dgcBal0AC11.Width = 72;
+            // 
+            // dgcBal0AC24
+            // 
+            dgcBal0AC24.ColumnNames = new string[]
+    {
+    "idx",
+    "name"
+    };
+            dgcBal0AC24.ColumnWidths = "100;300";
+            dgcBal0AC24.DataPropertyName = "AC24";
+            dgcBal0AC24.DataSource = bsAc24;
+            dgcBal0AC24.DisplayMember = "idx";
+            dgcBal0AC24.HeaderText = "paz.4";
+            dgcBal0AC24.MaxDropDownItems = 15;
+            dgcBal0AC24.MinimumWidth = 9;
+            dgcBal0AC24.Name = "dgcBal0AC24";
+            dgcBal0AC24.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            dgcBal0AC24.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            dgcBal0AC24.ToolTipText = "Kontējuma 4. pazīme";
+            dgcBal0AC24.ValueMember = "idx";
+            dgcBal0AC24.Width = 72;
+            // 
             // bsAc24
             // 
             bsAc24.DataMember = "AcP24";
             bsAc24.MyDataSource = "KlonsData";
             bsAc24.Name2 = "bsAc24";
             // 
+            // dgcBal0Clid
+            // 
+            dgcBal0Clid.ColumnNames = new string[]
+    {
+    "clid",
+    "name"
+    };
+            dgcBal0Clid.ColumnWidths = "150;400";
+            dgcBal0Clid.DataPropertyName = "ClId";
+            dgcBal0Clid.DataSource = bsClisd;
+            dgcBal0Clid.DisplayMember = "clid";
+            dgcBal0Clid.HeaderText = "perosna";
+            dgcBal0Clid.MaxDropDownItems = 15;
+            dgcBal0Clid.MinimumWidth = 9;
+            dgcBal0Clid.Name = "dgcBal0Clid";
+            dgcBal0Clid.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            dgcBal0Clid.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            dgcBal0Clid.ValueMember = "clid";
+            dgcBal0Clid.Width = 140;
+            // 
             // bsClisd
             // 
             bsClisd.DataMember = "Persons";
             bsClisd.MyDataSource = "KlonsData";
             bsClisd.Name2 = "bsClisd";
+            // 
+            // dgcSummDC
+            // 
+            dgcSummDC.DataPropertyName = "SummDC";
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle1.Format = "N2";
+            dgcSummDC.DefaultCellStyle = dataGridViewCellStyle1;
+            dgcSummDC.HeaderText = "debetā";
+            dgcSummDC.MinimumWidth = 9;
+            dgcSummDC.Name = "dgcSummDC";
+            dgcSummDC.ToolTipText = "summa debetā, norādītajā valūtā";
+            dgcSummDC.Width = 108;
+            // 
+            // dgcSummCC
+            // 
+            dgcSummCC.DataPropertyName = "SummCC";
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle2.Format = "N2";
+            dgcSummCC.DefaultCellStyle = dataGridViewCellStyle2;
+            dgcSummCC.HeaderText = "kredītā";
+            dgcSummCC.MinimumWidth = 9;
+            dgcSummCC.Name = "dgcSummCC";
+            dgcSummCC.ToolTipText = "summa kredītā, norādītajā valūtā";
+            dgcSummCC.Width = 108;
+            // 
+            // dgcCur
+            // 
+            dgcCur.DataPropertyName = "Cur";
+            dgcCur.HeaderText = "valūta";
+            dgcCur.MaxInputLength = 3;
+            dgcCur.MinimumWidth = 9;
+            dgcCur.Name = "dgcCur";
+            dgcCur.ToolTipText = "valūta (EUR, USD, RUR, ...)";
+            dgcCur.Width = 54;
+            // 
+            // dgcCurRate
+            // 
+            dgcCurRate.DataPropertyName = "CurRate";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dgcCurRate.DefaultCellStyle = dataGridViewCellStyle3;
+            dgcCurRate.HeaderText = "kurss";
+            dgcCurRate.MinimumWidth = 9;
+            dgcCurRate.Name = "dgcCurRate";
+            dgcCurRate.ToolTipText = "valūtas kurss";
+            dgcCurRate.Width = 72;
+            // 
+            // dgcSummD
+            // 
+            dgcSummD.DataPropertyName = "SummD";
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle4.Format = "N2";
+            dgcSummD.DefaultCellStyle = dataGridViewCellStyle4;
+            dgcSummD.HeaderText = "debetā";
+            dgcSummD.MinimumWidth = 9;
+            dgcSummD.Name = "dgcSummD";
+            dgcSummD.ReadOnly = true;
+            dgcSummD.ToolTipText = "summa debetā EUR";
+            dgcSummD.Width = 108;
+            // 
+            // dgcSummC
+            // 
+            dgcSummC.DataPropertyName = "SummC";
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle5.Format = "N2";
+            dataGridViewCellStyle5.NullValue = null;
+            dgcSummC.DefaultCellStyle = dataGridViewCellStyle5;
+            dgcSummC.HeaderText = "kredītā";
+            dgcSummC.MinimumWidth = 9;
+            dgcSummC.Name = "dgcSummC";
+            dgcSummC.ReadOnly = true;
+            dgcSummC.ToolTipText = "summa kredītā EUR";
+            dgcSummC.Width = 108;
             // 
             // bindingNavigatorDeleteItem
             // 
@@ -244,7 +378,7 @@ namespace KlonsF.Forms
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new System.Drawing.Point(7, 9);
+            label1.Location = new System.Drawing.Point(3, 4);
             label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             label1.Name = "label1";
             label1.Size = new System.Drawing.Size(44, 17);
@@ -254,10 +388,10 @@ namespace KlonsF.Forms
             // tbAcc
             // 
             tbAcc.BorderColor = System.Drawing.SystemColors.ControlDarkDark;
-            tbAcc.ColumnNr = 1;
+            tbAcc.ColumnNr = -1;
             tbAcc.DataMember = null;
-            tbAcc.DataSource = bsAc21;
-            tbAcc.Location = new System.Drawing.Point(62, 8);
+            tbAcc.DataSource = bsBal0;
+            tbAcc.Location = new System.Drawing.Point(58, 3);
             tbAcc.Margin = new System.Windows.Forms.Padding(2);
             tbAcc.Name = "tbAcc";
             tbAcc.SelectedIndex = -1;
@@ -274,7 +408,7 @@ namespace KlonsF.Forms
             // 
             lbSumDeb.BorderColor = System.Drawing.SystemColors.ControlDarkDark;
             lbSumDeb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            lbSumDeb.Location = new System.Drawing.Point(267, 8);
+            lbSumDeb.Location = new System.Drawing.Point(263, 3);
             lbSumDeb.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             lbSumDeb.Name = "lbSumDeb";
             lbSumDeb.Padding = new System.Windows.Forms.Padding(2);
@@ -287,7 +421,7 @@ namespace KlonsF.Forms
             // 
             lbSumKred.BorderColor = System.Drawing.SystemColors.ControlDarkDark;
             lbSumKred.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            lbSumKred.Location = new System.Drawing.Point(390, 8);
+            lbSumKred.Location = new System.Drawing.Point(386, 3);
             lbSumKred.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             lbSumKred.Name = "lbSumKred";
             lbSumKred.Padding = new System.Windows.Forms.Padding(2);
@@ -299,144 +433,25 @@ namespace KlonsF.Forms
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new System.Drawing.Point(160, 9);
+            label2.Location = new System.Drawing.Point(156, 4);
             label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             label2.Name = "label2";
             label2.Size = new System.Drawing.Size(89, 17);
             label2.TabIndex = 3;
             label2.Text = "Kopsummas:";
             // 
-            // dataGridViewTextBoxColumn1
+            // panel1
             // 
-            dataGridViewTextBoxColumn1.DataPropertyName = "id";
-            dataGridViewTextBoxColumn1.HeaderText = "id";
-            dataGridViewTextBoxColumn1.MinimumWidth = 9;
-            dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            dataGridViewTextBoxColumn1.ReadOnly = true;
-            dataGridViewTextBoxColumn1.Visible = false;
-            dataGridViewTextBoxColumn1.Width = 90;
-            // 
-            // dgcBal0AC11
-            // 
-            dgcBal0AC11.DataPropertyName = "AC11";
-            dgcBal0AC11.HeaderText = "konts";
-            dgcBal0AC11.MinimumWidth = 9;
-            dgcBal0AC11.Name = "dgcBal0AC11";
-            dgcBal0AC11.ToolTipText = "Bilances konts";
-            dgcBal0AC11.Width = 72;
-            // 
-            // dgcBal0AC24
-            // 
-            dgcBal0AC24.ColumnNames = new string[]
-    {
-    "idx",
-    "name"
-    };
-            dgcBal0AC24.ColumnWidths = "100;300";
-            dgcBal0AC24.DataPropertyName = "AC24";
-            dgcBal0AC24.DataSource = bsAc24;
-            dgcBal0AC24.DisplayMember = "idx";
-            dgcBal0AC24.HeaderText = "paz.4";
-            dgcBal0AC24.MaxDropDownItems = 15;
-            dgcBal0AC24.MinimumWidth = 9;
-            dgcBal0AC24.Name = "dgcBal0AC24";
-            dgcBal0AC24.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            dgcBal0AC24.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            dgcBal0AC24.ToolTipText = "Kontējuma 4. pazīme";
-            dgcBal0AC24.ValueMember = "idx";
-            dgcBal0AC24.Width = 72;
-            // 
-            // dgcBal0Clid
-            // 
-            dgcBal0Clid.ColumnNames = new string[]
-    {
-    "clid",
-    "name"
-    };
-            dgcBal0Clid.ColumnWidths = "150;400";
-            dgcBal0Clid.DataPropertyName = "ClId";
-            dgcBal0Clid.DataSource = bsClisd;
-            dgcBal0Clid.DisplayMember = "clid";
-            dgcBal0Clid.HeaderText = "perosna";
-            dgcBal0Clid.MaxDropDownItems = 15;
-            dgcBal0Clid.MinimumWidth = 9;
-            dgcBal0Clid.Name = "dgcBal0Clid";
-            dgcBal0Clid.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            dgcBal0Clid.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            dgcBal0Clid.ValueMember = "clid";
-            dgcBal0Clid.Width = 140;
-            // 
-            // dgcSummDC
-            // 
-            dgcSummDC.DataPropertyName = "SummDC";
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle1.Format = "N2";
-            dgcSummDC.DefaultCellStyle = dataGridViewCellStyle1;
-            dgcSummDC.HeaderText = "debetā";
-            dgcSummDC.MinimumWidth = 9;
-            dgcSummDC.Name = "dgcSummDC";
-            dgcSummDC.ToolTipText = "summa debetā, norādītajā valūtā";
-            dgcSummDC.Width = 108;
-            // 
-            // dgcSummCC
-            // 
-            dgcSummCC.DataPropertyName = "SummCC";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle2.Format = "N2";
-            dgcSummCC.DefaultCellStyle = dataGridViewCellStyle2;
-            dgcSummCC.HeaderText = "kredītā";
-            dgcSummCC.MinimumWidth = 9;
-            dgcSummCC.Name = "dgcSummCC";
-            dgcSummCC.ToolTipText = "summa kredītā, norādītajā valūtā";
-            dgcSummCC.Width = 108;
-            // 
-            // dgcCur
-            // 
-            dgcCur.DataPropertyName = "Cur";
-            dgcCur.HeaderText = "valūta";
-            dgcCur.MaxInputLength = 3;
-            dgcCur.MinimumWidth = 9;
-            dgcCur.Name = "dgcCur";
-            dgcCur.ToolTipText = "valūta (EUR, USD, RUR, ...)";
-            dgcCur.Width = 54;
-            // 
-            // dgcCurRate
-            // 
-            dgcCurRate.DataPropertyName = "CurRate";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dgcCurRate.DefaultCellStyle = dataGridViewCellStyle3;
-            dgcCurRate.HeaderText = "kurss";
-            dgcCurRate.MinimumWidth = 9;
-            dgcCurRate.Name = "dgcCurRate";
-            dgcCurRate.ToolTipText = "valūtas kurss";
-            dgcCurRate.Width = 72;
-            // 
-            // dgcSummD
-            // 
-            dgcSummD.DataPropertyName = "SummD";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle4.Format = "N2";
-            dgcSummD.DefaultCellStyle = dataGridViewCellStyle4;
-            dgcSummD.HeaderText = "debetā";
-            dgcSummD.MinimumWidth = 9;
-            dgcSummD.Name = "dgcSummD";
-            dgcSummD.ReadOnly = true;
-            dgcSummD.ToolTipText = "summa debetā EUR";
-            dgcSummD.Width = 108;
-            // 
-            // dgcSummC
-            // 
-            dgcSummC.DataPropertyName = "SummC";
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle5.Format = "N2";
-            dataGridViewCellStyle5.NullValue = null;
-            dgcSummC.DefaultCellStyle = dataGridViewCellStyle5;
-            dgcSummC.HeaderText = "kredītā";
-            dgcSummC.MinimumWidth = 9;
-            dgcSummC.Name = "dgcSummC";
-            dgcSummC.ReadOnly = true;
-            dgcSummC.ToolTipText = "summa kredītā EUR";
-            dgcSummC.Width = 108;
+            panel1.Controls.Add(tbAcc);
+            panel1.Controls.Add(label2);
+            panel1.Controls.Add(label1);
+            panel1.Controls.Add(lbSumKred);
+            panel1.Controls.Add(lbSumDeb);
+            panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            panel1.Location = new System.Drawing.Point(0, 0);
+            panel1.Name = "panel1";
+            panel1.Size = new System.Drawing.Size(907, 32);
+            panel1.TabIndex = 7;
             // 
             // Form_Bal0
             // 
@@ -444,12 +459,8 @@ namespace KlonsF.Forms
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             AutoValidate = System.Windows.Forms.AutoValidate.Disable;
             ClientSize = new System.Drawing.Size(907, 498);
-            Controls.Add(label2);
-            Controls.Add(lbSumKred);
-            Controls.Add(lbSumDeb);
-            Controls.Add(label1);
-            Controls.Add(tbAcc);
             Controls.Add(dgvBal0);
+            Controls.Add(panel1);
             Controls.Add(bnavB0);
             Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             Name = "Form_Bal0";
@@ -464,6 +475,8 @@ namespace KlonsF.Forms
             ((System.ComponentModel.ISupportInitialize)bsAc24).EndInit();
             ((System.ComponentModel.ISupportInitialize)bsClisd).EndInit();
             ((System.ComponentModel.ISupportInitialize)bsAc21).EndInit();
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -503,5 +516,6 @@ namespace KlonsF.Forms
         private System.Windows.Forms.DataGridViewTextBoxColumn dgcCurRate;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgcSummD;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgcSummC;
+        private System.Windows.Forms.Panel panel1;
     }
 }

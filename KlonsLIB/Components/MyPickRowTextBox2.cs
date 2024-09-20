@@ -29,9 +29,10 @@ namespace KlonsLIB.Components
             positionChangedHandler = new EventHandler(dataManager_PositionChanged);
         }
 
-        [TypeConverter("System.Windows.Forms.Design.DataSourceConverter, System.Design")]
+        //[TypeConverter("System.Windows.Forms.Design.DataSourceConverter, System.Design")]
         [Category("Data")]
         [DefaultValue(null)]
+        [AttributeProvider(typeof(IListSource))]
         public object DataSource
         {
             get

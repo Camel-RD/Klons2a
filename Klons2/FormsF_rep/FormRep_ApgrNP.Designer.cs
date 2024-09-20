@@ -159,12 +159,12 @@ namespace KlonsF.FormsReportParams
     {
     "col1"
     };
-            cbCharCount.ColumnWidths = "121";
+            cbCharCount.ColumnWidths = "48";
             cbCharCount.DisplayMember = "col1";
             cbCharCount.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             cbCharCount.DropDownHeight = 144;
             cbCharCount.DropDownStyle = MyMcComboBox.CustomDropDownStyle.DropDownListSimple;
-            cbCharCount.DropDownWidth = 140;
+            cbCharCount.DropDownWidth = 67;
             cbCharCount.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             cbCharCount.FormattingEnabled = true;
             cbCharCount.GridLineColor = System.Drawing.Color.LightGray;

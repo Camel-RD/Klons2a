@@ -390,9 +390,10 @@ namespace KlonsF.Forms
             if (!dgvBalA1.EndEditX()) return false;
             if (!dgvBalA2.EndEditX()) return false;
             if (!dgvBalA3.EndEditX()) return false;
-            var ret1 = bsBalA1.SaveTable();
+            var rt = myAdapterManager1.UpdateAll();
             //var ret1 = bsBalA1.SaveTable();
-            return ret1 != EBsSaveResult.Error;
+            CheckSave();
+            return rt;
         }
 
         private bool HasChanges()
@@ -412,14 +413,14 @@ namespace KlonsF.Forms
 
         private void tsbSave_Click(object sender, EventArgs e)
         {
+            SaveData();
             CheckSave();
-            SetSaveButton(HasChanges());
         }
 
         private void bsBalA1_ListChanged(object sender, ListChangedEventArgs e)
         {
             if (IsLoading) return;
-            SetSaveButton(HasChanges());
+            CheckSave();
         }
 
         private void bsBalA2_ListChanged(object sender, ListChangedEventArgs e)

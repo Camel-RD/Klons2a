@@ -7,3 +7,7 @@ namespace KlonsF.DataSets
 namespace KlonsF.DataSets
 {
 }
+
+namespace KlonsF.DataSets
+{
+}

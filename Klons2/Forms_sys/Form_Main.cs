@@ -43,8 +43,8 @@ namespace KlonsF
                 return;
 
             Form_Error.ShowException(e.Exception,
-                "Programmas kļūda!\n" +
-                "Ieteicams programmu aizvērt un palaist no jauna.\n" +
+                "Programmas kļūda!\r\n" +
+                "Ieteicams programmu aizvērt un palaist no jauna.\r\n" +
                 "Ja kļūda bieži atkārtojas, ieteicams par to informēt programmas izstrādātāju.");
         }
 

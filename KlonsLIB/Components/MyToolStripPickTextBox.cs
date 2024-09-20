@@ -25,9 +25,10 @@ namespace KlonsLIB.Components
         }
 
 
-        [TypeConverter("System.Windows.Forms.Design.DataSourceConverter, System.Design")]
+        //[TypeConverter("System.Windows.Forms.Design.DataSourceConverter, System.Design")]
         [Category("Data")]
         [DefaultValue(null)]
+        [AttributeProvider(typeof(IListSource))]
         public object DataSource
         {
             get

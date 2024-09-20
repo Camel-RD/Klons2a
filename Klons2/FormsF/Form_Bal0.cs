@@ -150,7 +150,7 @@ namespace KlonsF.Forms
             if (colind == dgcBal0Clid.Index)
             {
                 dgvBal0.GoingToDialog = true;
-                MyMainForm.ShowFormAcp5Dialog(act);
+                MyMainForm.ShowFormPersonsDialog(act);
                 return;
             }
         }
