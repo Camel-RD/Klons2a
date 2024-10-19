@@ -2363,42 +2363,6 @@ namespace KlonsF.Forms
             tsbSearch.Text = "";
         }
 
-        private void bsOPS_MyBeforeRowInsert(MyRowUpdateEventArgs e)
-        {
-            var dr = e.DataRow as klonsDataSet.OPSRow;
-            if (dr != null)
-            {
-                dr.id = (int)MyData.KlonsFQueriesTableAdapter.SP_OPS_ID();
-            }
-        }
-
-        private void bsOPSd_MyBeforeRowInsert(MyRowUpdateEventArgs e)
-        {
-            var dr = e.DataRow as klonsDataSet.OPSdRow;
-            if (dr != null)
-            {
-                dr.id = (int)MyData.KlonsFQueriesTableAdapter.SP_OPSD_ID();
-                dr.ZNR = (int)MyData.KlonsFQueriesTableAdapter.SP_OPSD_GETNEXTNRFORYEARA(dr.Dete.Year);
-            }
-            bsOPS_MyBeforeRowInsert(e);
-        }
-        private void bsOPSd_MyBeforeRowUpdate(MyRowUpdateEventArgs e)
-        {
-            var dr = e.DataRow as klonsDataSet.OPSdRow;
-            if (dr != null)
-            {
-                if (dr.HasVersion(DataRowVersion.Original))
-                {
-                    var dt_current = dr.Dete;
-                    var dt_original = (DateTime)dr["Dete", DataRowVersion.Original];
-                    if (dt_current.Year != dt_original.Year)
-                    {
-                        dr.ZNR = (int)MyData.KlonsFQueriesTableAdapter.SP_OPSD_GETNEXTNRFORYEARA(dt_current.Year);
-                    }
-                }
-            }
-        }
-
         private void oPSdBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
             SaveData();

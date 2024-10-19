@@ -397,8 +397,6 @@ namespace KlonsF.Forms
             bsOPSd.MyDataSource = "KlonsData";
             bsOPSd.Name2 = "Docs";
             bsOPSd.UseDataGridView = dgvDocs;
-            bsOPSd.MyBeforeRowInsert += bsOPSd_MyBeforeRowInsert;
-            bsOPSd.MyBeforeRowSave += bsOPSd_MyBeforeRowUpdate;
             bsOPSd.AddingNew += bsOPSd_AddingNew;
             bsOPSd.ListChanged += bsOPSd_ListChanged;
             // 
@@ -603,7 +601,6 @@ namespace KlonsF.Forms
             bsOPS.DataSource = bsOPSd;
             bsOPS.Name2 = "Ops";
             bsOPS.Sort = "";
-            bsOPS.MyBeforeRowInsert += bsOPS_MyBeforeRowInsert;
             bsOPS.ListChanged += bsOPS_ListChanged;
             // 
             // bnavNav

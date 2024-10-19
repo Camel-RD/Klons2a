@@ -498,6 +498,18 @@ namespace KlonsLIB.Data
                 .Where(r => r.RowState != DataRowState.Detached)
                 .ToArray();
         }
+
+        public static DataRow[] GetUpdatedRows(DataTable table)
+        {
+            if (table == null) return new DataRow[0];
+
+            DataViewRowState st = DataViewRowState.ModifiedCurrent;
+
+            DataRow[] rows = table.Select(null, null, st);
+            return rows
+                .Where(r => r.RowState != DataRowState.Detached)
+                .ToArray();
+        }
     }
 
 }

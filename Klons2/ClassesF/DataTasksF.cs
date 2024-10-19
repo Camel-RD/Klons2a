@@ -194,6 +194,10 @@ namespace KlonsF.Classes
         {
             if (adaptermanager.TableNames == null) return;
             SetNewIDs(adaptermanager.TableNames);
+            if (adaptermanager.TableNames.Contains("OPSd"))
+            {
+                SetNewOPSdZNR();
+            }
         }
 
         public static void SetNewIDs(params string[] tablenames)
@@ -261,5 +265,34 @@ namespace KlonsF.Classes
                 dr[idcolumnname] = new_id;
             }
         }
+
+        private static void SetNewOPSdZNR()
+        {
+            var table = MyData.DataSetKlonsF.OPSd;
+            var drs = DataSetHelper.GetNewRows(table);
+            var adapter_sp = MyData.KlonsFQueriesTableAdapter.SP_OPSD_GETNEXTNRFORYEARA;
+            foreach (var dr in drs)
+            {
+                var dr_opsd = (klonsDataSet.OPSdRow)dr;
+                int new_znr = (int)adapter_sp(dr_opsd.Dete.Year);
+                dr_opsd.ZNR = new_znr;
+            }
+            drs = DataSetHelper.GetUpdatedRows(table);
+            foreach (var dr in drs)
+            {
+                var dr_opsd = (klonsDataSet.OPSdRow)dr;
+                if (dr_opsd.HasVersion(DataRowVersion.Original))
+                {
+                    var dt_current = dr_opsd.Dete;
+                    var dt_original = (DateTime)dr["Dete", DataRowVersion.Original];
+                    if (dt_current.Year != dt_original.Year)
+                    {
+                        int new_znr = (int)adapter_sp(dr_opsd.Dete.Year);
+                        dr_opsd.ZNR = new_znr;
+                    }
+                }
+            }
+        }
+
     }
 }
