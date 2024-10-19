@@ -44,7 +44,7 @@ namespace KlonsF.FormsReportParams
             });
             MyData.DataSetKlonsFRep.TRepOPSd.Clear();
             if (docid == -1) return;
-            MyData.AddDocsRowToTRepOPSd(docid);
+            DataTasksF.AddDocsRowToTRepOPSd(docid);
             if (MyData.DataSetKlonsFRep.TRepOPSd.Count == 0) return;
         }
 
@@ -110,7 +110,7 @@ namespace KlonsF.FormsReportParams
             foreach (var dr in MyData.DataSetKlonsFRep.TRepOPS)
             {
                 total += dr.Summ;
-                if (MyData.IsPVN(dr.AC15.Nz()) || MyData.IsPVN(dr.AC25.Nz()))
+                if (DataTasksF.IsPVN(dr.AC15.Nz()) || DataTasksF.IsPVN(dr.AC25.Nz()))
                 {
                     haspvn = true;
                     pvn += dr.Summ;

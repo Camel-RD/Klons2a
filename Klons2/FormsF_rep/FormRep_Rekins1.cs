@@ -54,7 +54,7 @@ namespace KlonsF.FormsReportParams
             });
             MyData.DataSetKlonsFRep.TRepOPSd.Clear();
             if (docid == -1) return;
-            MyData.AddDocsRowToTRepOPSd(docid);
+            DataTasksF.AddDocsRowToTRepOPSd(docid);
             if (MyData.DataSetKlonsFRep.TRepOPSd.Count == 0) return;
             tbDescr.Text = MyData.DataSetKlonsFRep.TRepOPSd[0].Descr.Nz();
         }

@@ -184,6 +184,7 @@
             // dgvRows
             // 
             dgvRows.AutoGenerateColumns = false;
+            dgvRows.AutoSave = true;
             dgvRows.BackgroundColor = System.Drawing.SystemColors.Control;
             dgvRows.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvRows.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { dgcOnDate, dgcIDP, dgcUntaxedMin, dgcIINRateType, dgcID });

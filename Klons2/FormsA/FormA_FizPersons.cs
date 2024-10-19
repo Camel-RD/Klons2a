@@ -105,7 +105,7 @@ namespace KlonsA.Forms
         private void dgvPersons_MyCheckForChanges(object sender, EventArgs e)
         {
             if (IsLoading) return;
-            SaveData();
+            CheckSave();
         }
 
         public void DeleteCurrent()

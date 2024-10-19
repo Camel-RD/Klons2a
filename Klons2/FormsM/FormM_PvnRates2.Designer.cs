@@ -368,7 +368,6 @@ namespace KlonsM.FormsM
             this.myGrid1.ColumnWidth1 = 20;
             this.myGrid1.ColumnWidth2 = 180;
             this.myGrid1.ColumnWidth3 = 260;
-            this.myGrid1.DefaultHeight = 22;
             this.myGrid1.Dock = System.Windows.Forms.DockStyle.Right;
             this.myGrid1.EnableSort = true;
             this.myGrid1.Location = new System.Drawing.Point(548, 0);

@@ -1744,7 +1744,6 @@
             sgrAprekins.ColumnWidth1 = 15;
             sgrAprekins.ColumnWidth2 = 220;
             sgrAprekins.ColumnWidth3 = 120;
-            sgrAprekins.DefaultHeight = 22;
             sgrAprekins.Dock = System.Windows.Forms.DockStyle.Fill;
             sgrAprekins.EnableSort = true;
             sgrAprekins.Location = new System.Drawing.Point(0, 0);
@@ -2431,7 +2430,6 @@
             sgrBonus.ColumnWidth1 = 15;
             sgrBonus.ColumnWidth2 = 130;
             sgrBonus.ColumnWidth3 = 200;
-            sgrBonus.DefaultHeight = 22;
             sgrBonus.Dock = System.Windows.Forms.DockStyle.Fill;
             sgrBonus.EnableSort = true;
             sgrBonus.Location = new System.Drawing.Point(0, 0);

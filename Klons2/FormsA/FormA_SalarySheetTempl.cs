@@ -300,7 +300,7 @@ namespace KlonsA.Forms
         private void dgvShL_MyCheckForChanges(object sender, EventArgs e)
         {
             if (IsLoading) return;
-            SaveData();
+            CheckSave();
         }
 
         private void dgvShR_CellBeginEdit(object sender, DataGridViewCellCancelEventArgs e)

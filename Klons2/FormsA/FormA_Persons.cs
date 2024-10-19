@@ -449,7 +449,7 @@ namespace KlonsA.Forms
         private void dgvPersons_MyCheckForChanges(object sender, EventArgs e)
         {
             if (IsLoading) return;
-            SaveData();
+            CheckSave();
         }
 
         private void bsPersons_ListChanged(object sender, ListChangedEventArgs e)

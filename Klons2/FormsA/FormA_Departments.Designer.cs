@@ -74,6 +74,7 @@ namespace KlonsA.Forms
             // 
             this.dgvDep.AllowUserToDeleteRows = false;
             this.dgvDep.AutoGenerateColumns = false;
+            this.dgvDep.AutoSave = true;
             this.dgvDep.BackgroundColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;

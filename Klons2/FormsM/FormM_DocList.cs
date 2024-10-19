@@ -45,8 +45,7 @@ namespace KlonsM.FormsM
         protected override void OnShown(EventArgs e)
         {
             base.OnShown(e);
-            dgvFilter.Height = dgvFilter.ColumnHeadersHeight + dgvFilter.RowTemplate.Height + 4;
-            panel1.Height = dgvFilter.Height + 2;
+            panel1.Height = dgvFilter.ColumnHeadersHeight + dgvFilter.RowTemplate.Height + 4 + 2;
         }
 
         private void LoadColumnWidthsFromSettings()

@@ -366,7 +366,6 @@ namespace KlonsM.FormsM
             sgrDocA.ColumnWidth1 = 5;
             sgrDocA.ColumnWidth2 = 120;
             sgrDocA.ColumnWidth3 = 180;
-            sgrDocA.DefaultHeight = 22;
             sgrDocA.Dock = System.Windows.Forms.DockStyle.Fill;
             sgrDocA.EnableSort = false;
             sgrDocA.Location = new System.Drawing.Point(0, 0);

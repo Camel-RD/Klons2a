@@ -12,6 +12,7 @@ using KlonsF.DataSets;
 using KlonsLIB.Data;
 using KlonsLIB.Forms;
 
+
 namespace KlonsA.Forms
 {
     public partial class FormA_TimeSheetTempl : MyFormBaseF
@@ -54,7 +55,7 @@ namespace KlonsA.Forms
         private void SelectCurrent()
         {
             if (dgvShL.CurrentRow == null || dgvShL.CurrentRow.IsNewRow) return;
-            var dr = bsShL.CurrentDataRow as KlonsF.DataSets.KlonsADataSet.SALARY_SHEET_TEMPLRow;
+            var dr = bsShL.CurrentDataRow as KlonsADataSet.TIMESHEET_TEMPLRow;
             if (!dgvShL.EndEdit()) return;
             if (!SaveData()) return;
             if (dr.RowState == DataRowState.Detached) return;
@@ -345,7 +346,7 @@ namespace KlonsA.Forms
         private void dgvShL_MyCheckForChanges(object sender, EventArgs e)
         {
             if (IsLoading) return;
-            SaveData();
+            CheckSave();
         }
 
         private void bsShL_ListChanged(object sender, ListChangedEventArgs e)

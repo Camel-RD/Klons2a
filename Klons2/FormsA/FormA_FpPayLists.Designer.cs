@@ -327,7 +327,7 @@
             // dgvList
             // 
             dgvList.AutoGenerateColumns = false;
-            dgvList.AutoSave = false;
+            dgvList.AutoSave = true;
             dgvList.BackgroundColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
@@ -741,7 +741,6 @@
             sgrRow.ColumnWidth1 = 15;
             sgrRow.ColumnWidth2 = 130;
             sgrRow.ColumnWidth3 = 150;
-            sgrRow.DefaultHeight = 22;
             sgrRow.Dock = System.Windows.Forms.DockStyle.Right;
             sgrRow.EnableSort = true;
             sgrRow.Location = new System.Drawing.Point(670, 25);

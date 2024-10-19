@@ -75,7 +75,7 @@ namespace KlonsM.FormsM
             // 
             this.dgvRows.AllowUserToResizeRows = false;
             this.dgvRows.AutoGenerateColumns = false;
-            this.dgvRows.AutoSave = false;
+            this.dgvRows.AutoSave = true;
             this.dgvRows.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgvRows.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvRows.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -94,6 +94,7 @@ namespace KlonsM.FormsM
             this.dgvRows.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvRows_CellDoubleClick);
             this.dgvRows.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.dgvRows_UserDeletingRow);
             this.dgvRows.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.dgvRows_KeyPress);
+            this.dgvRows.CellBeginEdit += DgvRows_CellBeginEdit;
             // 
             // dgcId
             // 

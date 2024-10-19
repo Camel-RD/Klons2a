@@ -108,9 +108,6 @@ namespace KlonsF.Forms
             // 
             // bsBalA1
             // 
-            bsBalA1.AutoSaveChildrenDelete = true;
-            bsBalA1.AutoSaveOnDelete = true;
-            bsBalA1.ChildBS = bsBalA2;
             bsBalA1.DataMember = "BalA1";
             bsBalA1.MyDataSource = "KlonsData";
             bsBalA1.Name2 = "bsBalA1";
@@ -121,9 +118,6 @@ namespace KlonsF.Forms
             // 
             // bsBalA2
             // 
-            bsBalA2.AutoSaveChildrenDelete = true;
-            bsBalA2.AutoSaveOnDelete = true;
-            bsBalA2.ChildBS = bsBalA3;
             bsBalA2.DataMember = "FK_BALA2_BALID_BALA1_BALID";
             bsBalA2.DataSource = bsBalA1;
             bsBalA2.Name2 = "bsBalA2";
@@ -148,7 +142,7 @@ namespace KlonsF.Forms
             bnavBalsA1.BindingSource = bsBalA1;
             bnavBalsA1.CountItem = bindingNavigatorCountItem;
             bnavBalsA1.CountItemFormat = " no {0}";
-            bnavBalsA1.DeleteItem = bindingNavigatorDeleteItem;
+            bnavBalsA1.DeleteItem = null;
             bnavBalsA1.Dock = System.Windows.Forms.DockStyle.Bottom;
             bnavBalsA1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             bnavBalsA1.ImageScalingSize = new System.Drawing.Size(21, 21);
@@ -189,6 +183,7 @@ namespace KlonsF.Forms
             bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
             bindingNavigatorDeleteItem.Size = new System.Drawing.Size(69, 25);
             bindingNavigatorDeleteItem.Text = "Dzēst";
+            bindingNavigatorDeleteItem.Click += bindingNavigatorDeleteItem_Click;
             // 
             // tslbActiveTable
             // 
@@ -317,7 +312,6 @@ namespace KlonsF.Forms
             // dgvBalA1
             // 
             dgvBalA1.AutoGenerateColumns = false;
-            dgvBalA1.AutoSave = false;
             dgvBalA1.BackgroundColor = System.Drawing.SystemColors.Control;
             dgvBalA1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvBalA1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { dgcBalA1balid, dataGridViewTextBoxColumn2, dgcBalA1TA, dgcBalA1TP });

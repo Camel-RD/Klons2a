@@ -94,7 +94,7 @@
             // 
             this.dgvSar.AllowUserToDeleteRows = false;
             this.dgvSar.AutoGenerateColumns = false;
-            this.dgvSar.AutoSave = false;
+            this.dgvSar.AutoSave = true;
             this.dgvSar.BackgroundColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;

@@ -503,7 +503,6 @@ namespace KlonsA.Forms
             var fm = new FormA_PlanList();
             var ret = fm.ShowMyDialogModal();
             if (ret != DialogResult.OK) return;
-            var dr = (dgvPlans.CurrentRow.DataBoundItem as DataRowView).Row as KlonsADataSet.PIECEWORK_CATALOGRow;
             if (dgvPlans.CurrentCell != null)
             {
                 try

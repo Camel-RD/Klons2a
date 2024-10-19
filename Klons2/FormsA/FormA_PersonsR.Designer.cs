@@ -1815,7 +1815,6 @@ namespace KlonsA.Forms
             sgrAmati.ColumnWidth1 = 20;
             sgrAmati.ColumnWidth2 = 170;
             sgrAmati.ColumnWidth3 = 160;
-            sgrAmati.DefaultHeight = 22;
             sgrAmati.EnableSort = true;
             sgrAmati.Location = new System.Drawing.Point(412, 1);
             sgrAmati.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -1942,7 +1941,6 @@ namespace KlonsA.Forms
             sgrPersR.ColumnWidth1 = 20;
             sgrPersR.ColumnWidth2 = 190;
             sgrPersR.ColumnWidth3 = 150;
-            sgrPersR.DefaultHeight = 22;
             sgrPersR.EnableSort = true;
             sgrPersR.Location = new System.Drawing.Point(1, 1);
             sgrPersR.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);

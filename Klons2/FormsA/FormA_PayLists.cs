@@ -536,7 +536,7 @@ namespace KlonsA.Forms
         private void dgvLists_MyCheckForChanges(object sender, EventArgs e)
         {
             if (IsLoading) return;
-            SaveData();
+            CheckSave();
         }
 
         private void bsLists_ListChanged(object sender, ListChangedEventArgs e)
@@ -860,7 +860,7 @@ namespace KlonsA.Forms
             string iddep = null;
             if (cbDep.SelectedIndex > -1 && cbDep.SelectedValue != null)
                 iddep = (string)cbDep.SelectedValue;
-            if (dt1 == DateTime.MinValue && dt2 == DateTime.MaxValue && cbDep == null)
+            if (dt1 == DateTime.MinValue && dt2 == DateTime.MaxValue && cbDep.SelectedValue == null)
             {
                 bsLists.RemoveFilter();
                 return;

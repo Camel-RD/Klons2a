@@ -68,8 +68,7 @@ namespace KlonsA.Forms
         private void dgvSar_MyCheckForChanges(object sender, EventArgs e)
         {
             if (IsLoading) return;
-            if (HasChanges())
-                SaveData();
+            CheckSave();
         }
 
         private void bsSar_ListChanged(object sender, ListChangedEventArgs e)

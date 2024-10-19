@@ -149,7 +149,7 @@ namespace KlonsM.FormsM
             // 
             dgvRows.AllowUserToResizeRows = false;
             dgvRows.AutoGenerateColumns = false;
-            dgvRows.AutoSave = false;
+            dgvRows.AutoSave = true;
             dgvRows.BackgroundColor = System.Drawing.SystemColors.Control;
             dgvRows.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvRows.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { dgcID, dgcCode, dgcName, dgcCat, dgcStore1, dgcPVNRate, dgcIsService, dgcIsProduced, dgcUints, dgcSellPrice, dgcAmountInStore, dgcBBuyPrice, dgcLastBuyPrice, dgcProdCosts, dgcLastSaleDate });

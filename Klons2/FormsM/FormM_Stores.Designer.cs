@@ -108,7 +108,7 @@ namespace KlonsM.FormsM
             // dgvRows
             // 
             dgvRows.AutoGenerateColumns = false;
-            dgvRows.AutoSave = false;
+            dgvRows.AutoSave = true;
             dgvRows.BackgroundColor = System.Drawing.SystemColors.Control;
             dgvRows.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvRows.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { dgcCode, dgcName, dgcTP, dgcIdCat, dgcRegNr, dgcPVNRegNr, dgcAddr, dgcPVNTp, dgcAcc21, dgcAcc23, dgcAcc53, dgcID });

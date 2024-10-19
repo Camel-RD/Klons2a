@@ -520,7 +520,7 @@ namespace KlonsM.FormsM
         public override bool SaveData()
         {
             if (!dgvRows.EndEditX()) return false;
-            if (!this.Validate()) return false;
+            if (!Validate()) return false;
             try
             {
                 DataTasks.SetNewIDs(myAdapterManager1);
@@ -577,19 +577,9 @@ namespace KlonsM.FormsM
             return FormM_Stores.GetStoreId(code, storefilter);
         }
 
-        public string GetStoreCode(string code)
-        {
-            return FormM_Stores.GetStoreCode(code);
-        }
-
         public int? GetItemId(string code)
         {
             return FormM_Items.GetItemId(code);
-        }
-
-        public string GetItemCode(string code)
-        {
-            return FormM_Items.GetItemCode(code);
         }
 
         private bool CanEditDocsCurrentCell()
@@ -609,18 +599,16 @@ namespace KlonsM.FormsM
 
         private void SetCurrentDocEditorValue(int value)
         {
-            if (this.ActiveControl == null) return;
+            if (ActiveControl == null) return;
             try
             {
-                if (this.ActiveControl is KlonsLIB.Components.MyMcComboBox)
+                if (ActiveControl is MyMcComboBox c1)
                 {
-                    var c = this.ActiveControl as KlonsLIB.Components.MyMcComboBox;
-                    c.SelectedValue = value;
+                    c1.SelectedValue = value;
                 }
-                else if (this.ActiveControl is KlonsLIB.Components.MyPickRowTextBox2)
+                else if (ActiveControl is MyPickRowTextBox2 c2)
                 {
-                    var c = this.ActiveControl as KlonsLIB.Components.MyPickRowTextBox2;
-                    c.SelectedValue = value;
+                    c2.SelectedValue = value;
                 }
             }
             catch (Exception) { }
@@ -635,15 +623,13 @@ namespace KlonsM.FormsM
                 if (dr_item == null) return;
                 dgvRows.BeginEdit(false);
                 var s = dgvRows.EditingControl.GetType().Name;
-                if (dgvRows.EditingControl is KlonsLIB.Components.MyMcComboBox)
+                if (dgvRows.EditingControl is MyMcComboBox c1)
                 {
-                    var c = dgvRows.EditingControl as KlonsLIB.Components.MyMcComboBox;
-                    c.SelectedValue = itemid;
+                    c1.SelectedValue = itemid;
                 }
-                else if (dgvRows.EditingControl is KlonsLIB.Components.MyPickRowTextBox2)
+                else if (dgvRows.EditingControl is MyPickRowTextBox2 c2)
                 {
-                    var c = dgvRows.EditingControl as KlonsLIB.Components.MyPickRowTextBox2;
-                    c.Text = dr_item.BARCODE;
+                    c2.Text = dr_item.BARCODE;
                 }
                 dgvRows.EndEdit();
             }
@@ -654,7 +640,7 @@ namespace KlonsM.FormsM
         public void GetDocStoreId()
         {
             if (!CanEditDocsCurrentCell()) return;
-            var dv = this.ActiveControl.Text;
+            var dv = ActiveControl.Text;
             var rt = GetStoreId(dv);
             if (rt == null) return;
             SetCurrentDocEditorValue(rt.Value);

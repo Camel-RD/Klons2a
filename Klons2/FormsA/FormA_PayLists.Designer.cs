@@ -227,7 +227,6 @@
             // 
             // bsLists
             // 
-            bsLists.ChildBS = bsRows;
             bsLists.DataMember = "PAYLISTS";
             bsLists.MyDataSource = "KlonsAData";
             bsLists.Sort = "DT, SNR";
@@ -593,7 +592,7 @@
             dgvLists.AllowUserToAddRows = false;
             dgvLists.AllowUserToDeleteRows = false;
             dgvLists.AutoGenerateColumns = false;
-            dgvLists.AutoSave = false;
+            dgvLists.AutoSave = true;
             dgvLists.BackgroundColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle21.BackColor = System.Drawing.SystemColors.Control;
@@ -1157,7 +1156,6 @@
             sgrPayRow.ColumnWidth1 = 15;
             sgrPayRow.ColumnWidth2 = 125;
             sgrPayRow.ColumnWidth3 = 120;
-            sgrPayRow.DefaultHeight = 22;
             sgrPayRow.Dock = System.Windows.Forms.DockStyle.Right;
             sgrPayRow.EnableSort = true;
             sgrPayRow.Location = new System.Drawing.Point(969, 65);

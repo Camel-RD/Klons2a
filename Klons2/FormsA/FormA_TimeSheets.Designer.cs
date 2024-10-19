@@ -112,7 +112,6 @@
             // 
             // bsSar
             // 
-            bsSar.ChildBS = bsSarR;
             bsSar.DataMember = "TIMESHEET_LISTS";
             bsSar.Filter = "ISFIRSTMT = FALSE";
             bsSar.MyDataSource = "KlonsAData";
@@ -133,7 +132,7 @@
             dgvSar.AllowUserToAddRows = false;
             dgvSar.AllowUserToDeleteRows = false;
             dgvSar.AutoGenerateColumns = false;
-            dgvSar.AutoSave = false;
+            dgvSar.AutoSave = true;
             dgvSar.BackgroundColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;

@@ -75,6 +75,7 @@
             // dgvDocs0
             // 
             dgvDocs0.AutoGenerateColumns = false;
+            dgvDocs0.AutoSave = true;
             dgvDocs0.BackgroundColor = System.Drawing.SystemColors.Control;
             dgvDocs0.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvDocs0.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { dgcAC, dgcClid, dgcDate, dgcDocTp, dgcDocSt, dgcDocNr, dgcSum, dgcPVN, dgcDescr, iDDataGridViewTextBoxColumn });

@@ -33,7 +33,6 @@
             this.bsPersons = new KlonsLIB.Data.MyBindingSource(this.components);
             this.cbPosition = new KlonsLIB.Components.MyMcFlatComboBox();
             this.bsAmati = new KlonsLIB.Data.MyBindingSource2(this.components);
-            this.bsPlan = new KlonsLIB.Data.MyBindingSource(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.cmDoIt = new System.Windows.Forms.Button();
@@ -43,7 +42,6 @@
             this.cmGetPerson = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.bsPersons)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsAmati)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bsPlan)).BeginInit();
             this.SuspendLayout();
             // 
             // cbPerson
@@ -113,14 +111,6 @@
             this.bsAmati.DataSource = this.bsPersons;
             this.bsAmati.Filter = "USED=1";
             this.bsAmati.Name2 = null;
-            // 
-            // bsPlan
-            // 
-            this.bsPlan.DataMember = "TIMEPLAN_LIST";
-            this.bsPlan.Filter = "USED=1";
-            this.bsPlan.MyDataSource = "KlonsAData";
-            this.bsPlan.Name2 = null;
-            this.bsPlan.Sort = "SNR";
             // 
             // label1
             // 
@@ -207,7 +197,6 @@
             this.Load += new System.EventHandler(this.Form_SalarySheetNewRow_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bsPersons)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsAmati)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bsPlan)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -222,7 +211,6 @@
         private System.Windows.Forms.Button cmDoIt;
         private System.Windows.Forms.Button cmCancel;
         private KlonsLIB.Data.MyBindingSource bsPersons;
-        private KlonsLIB.Data.MyBindingSource bsPlan;
         private KlonsLIB.Data.MyBindingSource2 bsAmati;
         private System.Windows.Forms.Label label4;
         private KlonsLIB.Components.MyTextBox tbSnr;

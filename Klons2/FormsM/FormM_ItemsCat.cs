@@ -277,7 +277,7 @@ namespace KlonsM.FormsM
         private void dgvRows_MyCheckForChanges(object sender, EventArgs e)
         {
             if (IsLoading) return;
-            SaveData();
+            CheckSave();
         }
 
         private void bsItemsCat_ListChanged(object sender, ListChangedEventArgs e)

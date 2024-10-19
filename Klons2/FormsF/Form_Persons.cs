@@ -152,7 +152,7 @@ namespace KlonsF.Forms
             if (e.ColumnIndex == dgcBankId.Index)
             {
                 string s = dgvPersons.CurrentRow.Cells[dgcBankId.Index].Value.AsString();
-                dr.Bank = MyData.GetBankName(s);
+                dr.Bank = DataTasksF.GetBankName(s);
                 dgvPersons.InvalidateRow(e.RowIndex);
             }
             else if (e.ColumnIndex == dgcRegNr.Index)

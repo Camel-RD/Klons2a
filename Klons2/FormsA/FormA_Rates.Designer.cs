@@ -126,7 +126,6 @@
             this.myGrid1.ColumnWidth1 = 20;
             this.myGrid1.ColumnWidth2 = 400;
             this.myGrid1.ColumnWidth3 = 100;
-            this.myGrid1.DefaultHeight = 22;
             this.myGrid1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.myGrid1.EnableSort = true;
             this.myGrid1.Location = new System.Drawing.Point(0, 0);

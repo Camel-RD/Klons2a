@@ -32,17 +32,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormP_Items));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -59,6 +48,16 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
             sgrEvents = new KlonsLIB.MySourceGrid.MyGrid();
             itemsEventsData1 = new DataObjectsP.ItemsEventsData();
             grTitleItem = new KlonsLIB.MySourceGrid.GridRows.MyGridRowTitle();
@@ -124,6 +123,35 @@
             tsbInfo = new System.Windows.Forms.ToolStripButton();
             toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             dgvEvents = new KlonsLIB.Components.MyDataGridView();
+            dgcEventsSNR = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            dgcEventsEvent = new KlonsLIB.Components.MyDgvMcComboBoxColumn();
+            dgcEventsDT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            dgcEventsDtReg = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            dgcEventsDescr = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            dgcEventsDocNr = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            dgcEventsCat1 = new KlonsLIB.Components.MyDgvMcComboBoxColumn();
+            dgcEventsCatD = new KlonsLIB.Components.MyDgvMcComboBoxColumn();
+            dgcEventsCatT = new KlonsLIB.Components.MyDgvMcComboBoxColumn();
+            dgcEventsDepartment = new KlonsLIB.Components.MyDgvMcComboBoxColumn();
+            dgcEventsPlace = new KlonsLIB.Components.MyDgvMcComboBoxColumn();
+            dgcEventsValue0 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            dgcEventsDeprec0 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            dgcEventsValueC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            dgcEventsDeprecC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            dgcEventsSellValue = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            dgcEventsMtTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            dgcEventsMtUsed = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            dgcEventsRateD = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            dgcEventsRateDMt = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            dgcEventsTaxValC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            dgcEventsTaxVal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            dgcEventsTaxValLeft = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            dgcEventsTaxRate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            dgcEventsTaxEach = new KlonsLIB.Components.MyDgvCheckBoxColumn();
+            dgcEventsZDT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            dgcEventsZU = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            dgcEventsID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            dgcEventsIDIT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             dgvItems = new KlonsLIB.Components.MyDataGridView();
             dgcItemsRegNr = new System.Windows.Forms.DataGridViewTextBoxColumn();
             dgcItemsName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -189,35 +217,6 @@
             bsFilter = new KlonsLIB.Data.MyBindingSourceToObj(components);
             filterData1 = new DataObjectsP.FilterData();
             tbDate = new KlonsLIB.Components.MyTextBox();
-            dgcEventsSNR = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            dgcEventsEvent = new KlonsLIB.Components.MyDgvMcComboBoxColumn();
-            dgcEventsDT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            dgcEventsDtReg = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            dgcEventsDescr = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            dgcEventsDocNr = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            dgcEventsCat1 = new KlonsLIB.Components.MyDgvMcComboBoxColumn();
-            dgcEventsCatD = new KlonsLIB.Components.MyDgvMcComboBoxColumn();
-            dgcEventsCatT = new KlonsLIB.Components.MyDgvMcComboBoxColumn();
-            dgcEventsDepartment = new KlonsLIB.Components.MyDgvMcComboBoxColumn();
-            dgcEventsPlace = new KlonsLIB.Components.MyDgvMcComboBoxColumn();
-            dgcEventsValue0 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            dgcEventsDeprec0 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            dgcEventsValueC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            dgcEventsDeprecC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            dgcEventsSellValue = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            dgcEventsMtTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            dgcEventsMtUsed = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            dgcEventsRateD = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            dgcEventsRateDMt = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            dgcEventsTaxValC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            dgcEventsTaxVal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            dgcEventsTaxValLeft = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            dgcEventsTaxRate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            dgcEventsTaxEach = new KlonsLIB.Components.MyDgvCheckBoxColumn();
-            dgcEventsZDT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            dgcEventsZU = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            dgcEventsID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            dgcEventsIDIT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)bsItems).BeginInit();
             ((System.ComponentModel.ISupportInitialize)bsRows).BeginInit();
             ((System.ComponentModel.ISupportInitialize)bsEvents).BeginInit();
@@ -769,6 +768,7 @@
             // 
             // grtStringReadOnly
             // 
+            grtStringReadOnly.DataMember = null;
             grtStringReadOnly.Name = "grtStringReadOnly";
             grtStringReadOnly.ReadOnly = true;
             grtStringReadOnly.RowTitle = null;
@@ -776,6 +776,7 @@
             // 
             // grtString
             // 
+            grtString.DataMember = null;
             grtString.Name = "grtString";
             grtString.RowTitle = null;
             grtString.RowValueType = KlonsLIB.MySourceGrid.GridRows.EMyGridRowValueType.String;
@@ -966,6 +967,402 @@
             dgvEvents.DefaultValuesNeeded += dgvEvents_DefaultValuesNeeded;
             dgvEvents.UserDeletingRow += dgvEvents_UserDeletingRow;
             dgvEvents.Enter += dgvEvents_Enter;
+            // 
+            // dgcEventsSNR
+            // 
+            dgcEventsSNR.DataPropertyName = "SNR";
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dgcEventsSNR.DefaultCellStyle = dataGridViewCellStyle2;
+            dgcEventsSNR.Frozen = true;
+            dgcEventsSNR.HeaderText = "Npk";
+            dgcEventsSNR.MinimumWidth = 6;
+            dgcEventsSNR.Name = "dgcEventsSNR";
+            dgcEventsSNR.ReadOnly = true;
+            dgcEventsSNR.ToolTipText = "Numurs pēc kārtas";
+            dgcEventsSNR.Width = 30;
+            // 
+            // dgcEventsEvent
+            // 
+            dgcEventsEvent.ColumnNames = new string[]
+    {
+    "CODE",
+    "DESCR"
+    };
+            dgcEventsEvent.ColumnWidths = "60;200";
+            dgcEventsEvent.DataPropertyName = "EVENT";
+            dgcEventsEvent.DataSource = bsEvents;
+            dgcEventsEvent.DisplayMember = "CODE";
+            dgcEventsEvent.DisplayStyleForCurrentCellOnly = true;
+            dgcEventsEvent.DropDownStyle = KlonsLIB.Components.MyDgvMcComboBox.CustomDropDownStyle.DropDownListSimple;
+            dgcEventsEvent.Frozen = true;
+            dgcEventsEvent.HeaderText = "Not. kods";
+            dgcEventsEvent.MaxDropDownItems = 15;
+            dgcEventsEvent.MinimumWidth = 6;
+            dgcEventsEvent.Name = "dgcEventsEvent";
+            dgcEventsEvent.ReadOnly = true;
+            dgcEventsEvent.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            dgcEventsEvent.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            dgcEventsEvent.ToolTipText = "Notikuma kods";
+            dgcEventsEvent.ValueMember = "ID";
+            dgcEventsEvent.Width = 60;
+            // 
+            // dgcEventsDT
+            // 
+            dgcEventsDT.DataPropertyName = "DT";
+            dataGridViewCellStyle3.Format = "dd.MM.yyyy";
+            dgcEventsDT.DefaultCellStyle = dataGridViewCellStyle3;
+            dgcEventsDT.Frozen = true;
+            dgcEventsDT.HeaderText = "Datums";
+            dgcEventsDT.MinimumWidth = 6;
+            dgcEventsDT.Name = "dgcEventsDT";
+            dgcEventsDT.ReadOnly = true;
+            dgcEventsDT.ToolTipText = "Notikuma datums";
+            dgcEventsDT.Width = 85;
+            // 
+            // dgcEventsDtReg
+            // 
+            dgcEventsDtReg.DataPropertyName = "DTREG";
+            dataGridViewCellStyle4.Format = "dd.MM.yyyy";
+            dgcEventsDtReg.DefaultCellStyle = dataGridViewCellStyle4;
+            dgcEventsDtReg.HeaderText = "Reģ.dat.";
+            dgcEventsDtReg.MinimumWidth = 6;
+            dgcEventsDtReg.Name = "dgcEventsDtReg";
+            dgcEventsDtReg.ToolTipText = "Reģistrācijas datums";
+            dgcEventsDtReg.Width = 85;
+            // 
+            // dgcEventsDescr
+            // 
+            dgcEventsDescr.DataPropertyName = "DESCR";
+            dgcEventsDescr.HeaderText = "Apraksts";
+            dgcEventsDescr.MinimumWidth = 6;
+            dgcEventsDescr.Name = "dgcEventsDescr";
+            dgcEventsDescr.Width = 111;
+            // 
+            // dgcEventsDocNr
+            // 
+            dgcEventsDocNr.DataPropertyName = "DOCNR";
+            dgcEventsDocNr.HeaderText = "Dok.nr.";
+            dgcEventsDocNr.MinimumWidth = 6;
+            dgcEventsDocNr.Name = "dgcEventsDocNr";
+            dgcEventsDocNr.ToolTipText = "Dokumenta numurs";
+            dgcEventsDocNr.Width = 111;
+            // 
+            // dgcEventsCat1
+            // 
+            dgcEventsCat1.ColumnNames = new string[]
+    {
+    "CODE",
+    "DESCR"
+    };
+            dgcEventsCat1.ColumnWidths = "100;300";
+            dgcEventsCat1.DataPropertyName = "CAT1";
+            dgcEventsCat1.DataSource = bsCat1;
+            dgcEventsCat1.DisplayMember = "CODE";
+            dgcEventsCat1.DisplayStyleForCurrentCellOnly = true;
+            dgcEventsCat1.HeaderText = "Kat.";
+            dgcEventsCat1.MaxDropDownItems = 15;
+            dgcEventsCat1.MinimumWidth = 6;
+            dgcEventsCat1.Name = "dgcEventsCat1";
+            dgcEventsCat1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            dgcEventsCat1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            dgcEventsCat1.ToolTipText = "Pamatlīdzekļu kategorija";
+            dgcEventsCat1.ValueMember = "ID";
+            dgcEventsCat1.Width = 149;
+            // 
+            // dgcEventsCatD
+            // 
+            dgcEventsCatD.ColumnNames = new string[]
+    {
+    "CODE",
+    "DESCR"
+    };
+            dgcEventsCatD.ColumnWidths = "60;200";
+            dgcEventsCatD.DataPropertyName = "CATD";
+            dgcEventsCatD.DataSource = bsCatD;
+            dgcEventsCatD.DisplayMember = "CODE";
+            dgcEventsCatD.DisplayStyleForCurrentCellOnly = true;
+            dgcEventsCatD.HeaderText = "Nol. kat.";
+            dgcEventsCatD.MaxDropDownItems = 15;
+            dgcEventsCatD.MinimumWidth = 6;
+            dgcEventsCatD.Name = "dgcEventsCatD";
+            dgcEventsCatD.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            dgcEventsCatD.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            dgcEventsCatD.ToolTipText = "Nolietojuma kategorija";
+            dgcEventsCatD.ValueMember = "ID";
+            dgcEventsCatD.Width = 149;
+            // 
+            // dgcEventsCatT
+            // 
+            dgcEventsCatT.ColumnNames = new string[]
+    {
+    "CODE",
+    "DESCR"
+    };
+            dgcEventsCatT.ColumnWidths = "60;200";
+            dgcEventsCatT.DataPropertyName = "CATT";
+            dgcEventsCatT.DataSource = bsCatT;
+            dgcEventsCatT.DisplayMember = "CODE";
+            dgcEventsCatT.DisplayStyleForCurrentCellOnly = true;
+            dgcEventsCatT.HeaderText = "Nod. kat.";
+            dgcEventsCatT.MaxDropDownItems = 15;
+            dgcEventsCatT.MinimumWidth = 6;
+            dgcEventsCatT.Name = "dgcEventsCatT";
+            dgcEventsCatT.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            dgcEventsCatT.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            dgcEventsCatT.ToolTipText = "Nolietojuma kategorija nodokļu vajadzībām";
+            dgcEventsCatT.ValueMember = "ID";
+            dgcEventsCatT.Width = 149;
+            // 
+            // dgcEventsDepartment
+            // 
+            dgcEventsDepartment.ColumnNames = new string[]
+    {
+    "CODE",
+    "DESCR"
+    };
+            dgcEventsDepartment.ColumnWidths = "100;300";
+            dgcEventsDepartment.DataPropertyName = "DEPARTMENT";
+            dgcEventsDepartment.DataSource = bsDepartments;
+            dgcEventsDepartment.DisplayMember = "CODE";
+            dgcEventsDepartment.DisplayStyleForCurrentCellOnly = true;
+            dgcEventsDepartment.HeaderText = "Str.v.";
+            dgcEventsDepartment.MaxDropDownItems = 15;
+            dgcEventsDepartment.MinimumWidth = 6;
+            dgcEventsDepartment.Name = "dgcEventsDepartment";
+            dgcEventsDepartment.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            dgcEventsDepartment.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            dgcEventsDepartment.ToolTipText = "Struktūrvienība";
+            dgcEventsDepartment.ValueMember = "ID";
+            dgcEventsDepartment.Width = 149;
+            // 
+            // dgcEventsPlace
+            // 
+            dgcEventsPlace.ColumnNames = new string[]
+    {
+    "CODE",
+    "DESCR"
+    };
+            dgcEventsPlace.ColumnWidths = "100;300";
+            dgcEventsPlace.DataPropertyName = "PLACE";
+            dgcEventsPlace.DataSource = bsPlaces;
+            dgcEventsPlace.DisplayMember = "CODE";
+            dgcEventsPlace.DisplayStyleForCurrentCellOnly = true;
+            dgcEventsPlace.HeaderText = "Atrodas";
+            dgcEventsPlace.MaxDropDownItems = 15;
+            dgcEventsPlace.MinimumWidth = 6;
+            dgcEventsPlace.Name = "dgcEventsPlace";
+            dgcEventsPlace.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            dgcEventsPlace.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            dgcEventsPlace.ToolTipText = "Atrašanās vieta";
+            dgcEventsPlace.ValueMember = "ID";
+            dgcEventsPlace.Width = 149;
+            // 
+            // dgcEventsValue0
+            // 
+            dgcEventsValue0.DataPropertyName = "VALUE_0";
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle5.Format = "N2";
+            dgcEventsValue0.DefaultCellStyle = dataGridViewCellStyle5;
+            dgcEventsValue0.HeaderText = "Ieg.v.";
+            dgcEventsValue0.MinimumWidth = 6;
+            dgcEventsValue0.Name = "dgcEventsValue0";
+            dgcEventsValue0.ToolTipText = "Iegādes vērtība uz datumu";
+            dgcEventsValue0.Width = 90;
+            // 
+            // dgcEventsDeprec0
+            // 
+            dgcEventsDeprec0.DataPropertyName = "DEPREC_0";
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle6.Format = "N2";
+            dgcEventsDeprec0.DefaultCellStyle = dataGridViewCellStyle6;
+            dgcEventsDeprec0.HeaderText = "Uzrkr. noliet.";
+            dgcEventsDeprec0.MinimumWidth = 6;
+            dgcEventsDeprec0.Name = "dgcEventsDeprec0";
+            dgcEventsDeprec0.ToolTipText = "Uzkrātais nolietojums";
+            dgcEventsDeprec0.Width = 90;
+            // 
+            // dgcEventsValueC
+            // 
+            dgcEventsValueC.DataPropertyName = "VALUE_C";
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle7.Format = "# ##0.00;-# ##0.00;\"\"";
+            dgcEventsValueC.DefaultCellStyle = dataGridViewCellStyle7;
+            dgcEventsValueC.HeaderText = "ieg.v. +/-";
+            dgcEventsValueC.MinimumWidth = 6;
+            dgcEventsValueC.Name = "dgcEventsValueC";
+            dgcEventsValueC.Width = 90;
+            // 
+            // dgcEventsDeprecC
+            // 
+            dgcEventsDeprecC.DataPropertyName = "DEPREC_C";
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle8.Format = "# ##0.00;-# ##0.00;\"\"";
+            dgcEventsDeprecC.DefaultCellStyle = dataGridViewCellStyle8;
+            dgcEventsDeprecC.HeaderText = "Uzkr.nol. +/-";
+            dgcEventsDeprecC.MinimumWidth = 6;
+            dgcEventsDeprecC.Name = "dgcEventsDeprecC";
+            dgcEventsDeprecC.Width = 90;
+            // 
+            // dgcEventsSellValue
+            // 
+            dgcEventsSellValue.DataPropertyName = "SELL_VALUE";
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle9.Format = "N2";
+            dgcEventsSellValue.DefaultCellStyle = dataGridViewCellStyle9;
+            dgcEventsSellValue.HeaderText = "Pārd.v.";
+            dgcEventsSellValue.MinimumWidth = 6;
+            dgcEventsSellValue.Name = "dgcEventsSellValue";
+            dgcEventsSellValue.ToolTipText = "Pārdošanas vērtība";
+            dgcEventsSellValue.Width = 90;
+            // 
+            // dgcEventsMtTotal
+            // 
+            dgcEventsMtTotal.DataPropertyName = "MT_TOTAL";
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dgcEventsMtTotal.DefaultCellStyle = dataGridViewCellStyle10;
+            dgcEventsMtTotal.HeaderText = "Mēn.";
+            dgcEventsMtTotal.MinimumWidth = 6;
+            dgcEventsMtTotal.Name = "dgcEventsMtTotal";
+            dgcEventsMtTotal.ReadOnly = true;
+            dgcEventsMtTotal.ToolTipText = "Nolietojuma periods mēnešos";
+            dgcEventsMtTotal.Width = 30;
+            // 
+            // dgcEventsMtUsed
+            // 
+            dgcEventsMtUsed.DataPropertyName = "MT_USED";
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dgcEventsMtUsed.DefaultCellStyle = dataGridViewCellStyle11;
+            dgcEventsMtUsed.HeaderText = "Mēn. izm.";
+            dgcEventsMtUsed.MinimumWidth = 6;
+            dgcEventsMtUsed.Name = "dgcEventsMtUsed";
+            dgcEventsMtUsed.ToolTipText = "Izmantotais nolietojuma periods mēnešos";
+            dgcEventsMtUsed.Width = 40;
+            // 
+            // dgcEventsRateD
+            // 
+            dgcEventsRateD.DataPropertyName = "RATE_D";
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle12.Format = "%";
+            dgcEventsRateD.DefaultCellStyle = dataGridViewCellStyle12;
+            dgcEventsRateD.HeaderText = "Nol. likme";
+            dgcEventsRateD.MinimumWidth = 6;
+            dgcEventsRateD.Name = "dgcEventsRateD";
+            dgcEventsRateD.ReadOnly = true;
+            dgcEventsRateD.ToolTipText = "Nolietojuma likme";
+            dgcEventsRateD.Width = 40;
+            // 
+            // dgcEventsRateDMt
+            // 
+            dgcEventsRateDMt.DataPropertyName = "RATE_D_MT";
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle13.Format = "N2";
+            dgcEventsRateDMt.DefaultCellStyle = dataGridViewCellStyle13;
+            dgcEventsRateDMt.HeaderText = "Nol.likme mēnesī";
+            dgcEventsRateDMt.MinimumWidth = 6;
+            dgcEventsRateDMt.Name = "dgcEventsRateDMt";
+            dgcEventsRateDMt.ReadOnly = true;
+            dgcEventsRateDMt.ToolTipText = "Nolietojama likme mēnesī";
+            dgcEventsRateDMt.Width = 60;
+            // 
+            // dgcEventsTaxValC
+            // 
+            dgcEventsTaxValC.DataPropertyName = "TAX_VAL_C";
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle14.Format = "# ##0.00;-# ##0.00;\"\"";
+            dgcEventsTaxValC.DefaultCellStyle = dataGridViewCellStyle14;
+            dgcEventsTaxValC.HeaderText = "Nod.nol. +/-";
+            dgcEventsTaxValC.MinimumWidth = 6;
+            dgcEventsTaxValC.Name = "dgcEventsTaxValC";
+            dgcEventsTaxValC.ToolTipText = "Vērtības izmaiņas nodokļa vajadzībām";
+            dgcEventsTaxValC.Width = 90;
+            // 
+            // dgcEventsTaxVal
+            // 
+            dgcEventsTaxVal.DataPropertyName = "TAX_VAL";
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle15.Format = "N2";
+            dgcEventsTaxVal.DefaultCellStyle = dataGridViewCellStyle15;
+            dgcEventsTaxVal.HeaderText = "Nod.nol.";
+            dgcEventsTaxVal.MinimumWidth = 6;
+            dgcEventsTaxVal.Name = "dgcEventsTaxVal";
+            dgcEventsTaxVal.ToolTipText = "Vērtība nodokļa vajadzībām";
+            dgcEventsTaxVal.Width = 90;
+            // 
+            // dgcEventsTaxValLeft
+            // 
+            dgcEventsTaxValLeft.DataPropertyName = "TAX_VAL_LEFT";
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle16.Format = "N2";
+            dgcEventsTaxValLeft.DefaultCellStyle = dataGridViewCellStyle16;
+            dgcEventsTaxValLeft.HeaderText = "Nod.nol. atl.v.";
+            dgcEventsTaxValLeft.MinimumWidth = 6;
+            dgcEventsTaxValLeft.Name = "dgcEventsTaxValLeft";
+            dgcEventsTaxValLeft.ToolTipText = "Atlikusī vērtība nodokļa vajadzībām";
+            dgcEventsTaxValLeft.Width = 90;
+            // 
+            // dgcEventsTaxRate
+            // 
+            dgcEventsTaxRate.DataPropertyName = "TAX_RATE";
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dgcEventsTaxRate.DefaultCellStyle = dataGridViewCellStyle17;
+            dgcEventsTaxRate.HeaderText = "Nod.nol. likme";
+            dgcEventsTaxRate.MinimumWidth = 6;
+            dgcEventsTaxRate.Name = "dgcEventsTaxRate";
+            dgcEventsTaxRate.ReadOnly = true;
+            dgcEventsTaxRate.ToolTipText = "Nolietojuma likme nodokļu vajadzībām";
+            dgcEventsTaxRate.Width = 70;
+            // 
+            // dgcEventsTaxEach
+            // 
+            dgcEventsTaxEach.DataPropertyName = "TAX_EACH";
+            dgcEventsTaxEach.FalseValue = "0";
+            dgcEventsTaxEach.HeaderText = "Nod.nol. katru";
+            dgcEventsTaxEach.MinimumWidth = 6;
+            dgcEventsTaxEach.Name = "dgcEventsTaxEach";
+            dgcEventsTaxEach.ReadOnly = true;
+            dgcEventsTaxEach.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            dgcEventsTaxEach.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            dgcEventsTaxEach.ToolTipText = "Nolietojumu nodokļu vajadzībām rēķina katram pamatlīdzeklim atsevišķi";
+            dgcEventsTaxEach.TrueValue = "1";
+            dgcEventsTaxEach.Width = 70;
+            // 
+            // dgcEventsZDT
+            // 
+            dgcEventsZDT.DataPropertyName = "ZDT";
+            dgcEventsZDT.HeaderText = "ZDT";
+            dgcEventsZDT.MinimumWidth = 6;
+            dgcEventsZDT.Name = "dgcEventsZDT";
+            dgcEventsZDT.ReadOnly = true;
+            dgcEventsZDT.Visible = false;
+            dgcEventsZDT.Width = 111;
+            // 
+            // dgcEventsZU
+            // 
+            dgcEventsZU.DataPropertyName = "ZU";
+            dgcEventsZU.HeaderText = "ZU";
+            dgcEventsZU.MinimumWidth = 6;
+            dgcEventsZU.Name = "dgcEventsZU";
+            dgcEventsZU.ReadOnly = true;
+            dgcEventsZU.Visible = false;
+            dgcEventsZU.Width = 111;
+            // 
+            // dgcEventsID
+            // 
+            dgcEventsID.DataPropertyName = "ID";
+            dgcEventsID.HeaderText = "ID";
+            dgcEventsID.MinimumWidth = 6;
+            dgcEventsID.Name = "dgcEventsID";
+            dgcEventsID.Visible = false;
+            dgcEventsID.Width = 111;
+            // 
+            // dgcEventsIDIT
+            // 
+            dgcEventsIDIT.DataPropertyName = "IDIT";
+            dgcEventsIDIT.HeaderText = "IDIT";
+            dgcEventsIDIT.MinimumWidth = 6;
+            dgcEventsIDIT.Name = "dgcEventsIDIT";
+            dgcEventsIDIT.Visible = false;
+            dgcEventsIDIT.Width = 111;
             // 
             // dgvItems
             // 
@@ -1472,26 +1869,18 @@
             dgvFilter.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvFilter.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { dgcFilterDate, dgcFilterSate, dgcFilterCat1, dgcFilterCatD, dgcFilterCatT, dgcFilterDepartment, dgcFilterPlace });
             dgvFilter.DataSource = bsFilter;
-            dataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle28.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle28.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            dataGridViewCellStyle28.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle28.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle28.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle28.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            dgvFilter.DefaultCellStyle = dataGridViewCellStyle28;
             dgvFilter.Dock = System.Windows.Forms.DockStyle.Fill;
             dgvFilter.Location = new System.Drawing.Point(0, 0);
             dgvFilter.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             dgvFilter.Name = "dgvFilter";
-            dataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle29.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle29.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            dataGridViewCellStyle29.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle29.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle29.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle29.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            dgvFilter.RowHeadersDefaultCellStyle = dataGridViewCellStyle29;
+            dataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle28.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle28.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            dataGridViewCellStyle28.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle28.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle28.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle28.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            dgvFilter.RowHeadersDefaultCellStyle = dataGridViewCellStyle28;
             dgvFilter.RowHeadersVisible = false;
             dgvFilter.RowHeadersWidth = 62;
             dgvFilter.ScrollBars = System.Windows.Forms.ScrollBars.None;
@@ -1685,402 +2074,6 @@
             tbDate.TabIndex = 7;
             tbDate.KeyDown += tbDate_KeyDown;
             // 
-            // dgcEventsSNR
-            // 
-            dgcEventsSNR.DataPropertyName = "SNR";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dgcEventsSNR.DefaultCellStyle = dataGridViewCellStyle2;
-            dgcEventsSNR.Frozen = true;
-            dgcEventsSNR.HeaderText = "Npk";
-            dgcEventsSNR.MinimumWidth = 6;
-            dgcEventsSNR.Name = "dgcEventsSNR";
-            dgcEventsSNR.ReadOnly = true;
-            dgcEventsSNR.ToolTipText = "Numurs pēc kārtas";
-            dgcEventsSNR.Width = 30;
-            // 
-            // dgcEventsEvent
-            // 
-            dgcEventsEvent.ColumnNames = new string[]
-    {
-    "CODE",
-    "DESCR"
-    };
-            dgcEventsEvent.ColumnWidths = "60;200";
-            dgcEventsEvent.DataPropertyName = "EVENT";
-            dgcEventsEvent.DataSource = bsEvents;
-            dgcEventsEvent.DisplayMember = "CODE";
-            dgcEventsEvent.DisplayStyleForCurrentCellOnly = true;
-            dgcEventsEvent.DropDownStyle = KlonsLIB.Components.MyDgvMcComboBox.CustomDropDownStyle.DropDownListSimple;
-            dgcEventsEvent.Frozen = true;
-            dgcEventsEvent.HeaderText = "Not. kods";
-            dgcEventsEvent.MaxDropDownItems = 15;
-            dgcEventsEvent.MinimumWidth = 6;
-            dgcEventsEvent.Name = "dgcEventsEvent";
-            dgcEventsEvent.ReadOnly = true;
-            dgcEventsEvent.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            dgcEventsEvent.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            dgcEventsEvent.ToolTipText = "Notikuma kods";
-            dgcEventsEvent.ValueMember = "ID";
-            dgcEventsEvent.Width = 60;
-            // 
-            // dgcEventsDT
-            // 
-            dgcEventsDT.DataPropertyName = "DT";
-            dataGridViewCellStyle3.Format = "dd.MM.yyyy";
-            dgcEventsDT.DefaultCellStyle = dataGridViewCellStyle3;
-            dgcEventsDT.Frozen = true;
-            dgcEventsDT.HeaderText = "Datums";
-            dgcEventsDT.MinimumWidth = 6;
-            dgcEventsDT.Name = "dgcEventsDT";
-            dgcEventsDT.ReadOnly = true;
-            dgcEventsDT.ToolTipText = "Notikuma datums";
-            dgcEventsDT.Width = 85;
-            // 
-            // dgcEventsDtReg
-            // 
-            dgcEventsDtReg.DataPropertyName = "DTREG";
-            dataGridViewCellStyle4.Format = "dd.MM.yyyy";
-            dgcEventsDtReg.DefaultCellStyle = dataGridViewCellStyle4;
-            dgcEventsDtReg.HeaderText = "Reģ.dat.";
-            dgcEventsDtReg.MinimumWidth = 6;
-            dgcEventsDtReg.Name = "dgcEventsDtReg";
-            dgcEventsDtReg.ToolTipText = "Reģistrācijas datums";
-            dgcEventsDtReg.Width = 85;
-            // 
-            // dgcEventsDescr
-            // 
-            dgcEventsDescr.DataPropertyName = "DESCR";
-            dgcEventsDescr.HeaderText = "Apraksts";
-            dgcEventsDescr.MinimumWidth = 6;
-            dgcEventsDescr.Name = "dgcEventsDescr";
-            dgcEventsDescr.Width = 111;
-            // 
-            // dgcEventsDocNr
-            // 
-            dgcEventsDocNr.DataPropertyName = "DOCNR";
-            dgcEventsDocNr.HeaderText = "Dok.nr.";
-            dgcEventsDocNr.MinimumWidth = 6;
-            dgcEventsDocNr.Name = "dgcEventsDocNr";
-            dgcEventsDocNr.ToolTipText = "Dokumenta numurs";
-            dgcEventsDocNr.Width = 111;
-            // 
-            // dgcEventsCat1
-            // 
-            dgcEventsCat1.ColumnNames = new string[]
-    {
-    "CODE",
-    "DESCR"
-    };
-            dgcEventsCat1.ColumnWidths = "100;300";
-            dgcEventsCat1.DataPropertyName = "CAT1";
-            dgcEventsCat1.DataSource = bsCat1;
-            dgcEventsCat1.DisplayMember = "CODE";
-            dgcEventsCat1.DisplayStyleForCurrentCellOnly = true;
-            dgcEventsCat1.HeaderText = "Kat.";
-            dgcEventsCat1.MaxDropDownItems = 15;
-            dgcEventsCat1.MinimumWidth = 6;
-            dgcEventsCat1.Name = "dgcEventsCat1";
-            dgcEventsCat1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            dgcEventsCat1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            dgcEventsCat1.ToolTipText = "Pamatlīdzekļu kategorija";
-            dgcEventsCat1.ValueMember = "ID";
-            dgcEventsCat1.Width = 149;
-            // 
-            // dgcEventsCatD
-            // 
-            dgcEventsCatD.ColumnNames = new string[]
-    {
-    "CODE",
-    "DESCR"
-    };
-            dgcEventsCatD.ColumnWidths = "60;200";
-            dgcEventsCatD.DataPropertyName = "CATD";
-            dgcEventsCatD.DataSource = bsCatD;
-            dgcEventsCatD.DisplayMember = "CODE";
-            dgcEventsCatD.DisplayStyleForCurrentCellOnly = true;
-            dgcEventsCatD.HeaderText = "Nol. kat.";
-            dgcEventsCatD.MaxDropDownItems = 15;
-            dgcEventsCatD.MinimumWidth = 6;
-            dgcEventsCatD.Name = "dgcEventsCatD";
-            dgcEventsCatD.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            dgcEventsCatD.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            dgcEventsCatD.ToolTipText = "Nolietojuma kategorija";
-            dgcEventsCatD.ValueMember = "ID";
-            dgcEventsCatD.Width = 149;
-            // 
-            // dgcEventsCatT
-            // 
-            dgcEventsCatT.ColumnNames = new string[]
-    {
-    "CODE",
-    "DESCR"
-    };
-            dgcEventsCatT.ColumnWidths = "60;200";
-            dgcEventsCatT.DataPropertyName = "CATT";
-            dgcEventsCatT.DataSource = bsCatT;
-            dgcEventsCatT.DisplayMember = "CODE";
-            dgcEventsCatT.DisplayStyleForCurrentCellOnly = true;
-            dgcEventsCatT.HeaderText = "Nod. kat.";
-            dgcEventsCatT.MaxDropDownItems = 15;
-            dgcEventsCatT.MinimumWidth = 6;
-            dgcEventsCatT.Name = "dgcEventsCatT";
-            dgcEventsCatT.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            dgcEventsCatT.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            dgcEventsCatT.ToolTipText = "Nolietojuma kategorija nodokļu vajadzībām";
-            dgcEventsCatT.ValueMember = "ID";
-            dgcEventsCatT.Width = 149;
-            // 
-            // dgcEventsDepartment
-            // 
-            dgcEventsDepartment.ColumnNames = new string[]
-    {
-    "CODE",
-    "DESCR"
-    };
-            dgcEventsDepartment.ColumnWidths = "100;300";
-            dgcEventsDepartment.DataPropertyName = "DEPARTMENT";
-            dgcEventsDepartment.DataSource = bsDepartments;
-            dgcEventsDepartment.DisplayMember = "CODE";
-            dgcEventsDepartment.DisplayStyleForCurrentCellOnly = true;
-            dgcEventsDepartment.HeaderText = "Str.v.";
-            dgcEventsDepartment.MaxDropDownItems = 15;
-            dgcEventsDepartment.MinimumWidth = 6;
-            dgcEventsDepartment.Name = "dgcEventsDepartment";
-            dgcEventsDepartment.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            dgcEventsDepartment.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            dgcEventsDepartment.ToolTipText = "Struktūrvienība";
-            dgcEventsDepartment.ValueMember = "ID";
-            dgcEventsDepartment.Width = 149;
-            // 
-            // dgcEventsPlace
-            // 
-            dgcEventsPlace.ColumnNames = new string[]
-    {
-    "CODE",
-    "DESCR"
-    };
-            dgcEventsPlace.ColumnWidths = "100;300";
-            dgcEventsPlace.DataPropertyName = "PLACE";
-            dgcEventsPlace.DataSource = bsPlaces;
-            dgcEventsPlace.DisplayMember = "CODE";
-            dgcEventsPlace.DisplayStyleForCurrentCellOnly = true;
-            dgcEventsPlace.HeaderText = "Atrodas";
-            dgcEventsPlace.MaxDropDownItems = 15;
-            dgcEventsPlace.MinimumWidth = 6;
-            dgcEventsPlace.Name = "dgcEventsPlace";
-            dgcEventsPlace.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            dgcEventsPlace.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            dgcEventsPlace.ToolTipText = "Atrašanās vieta";
-            dgcEventsPlace.ValueMember = "ID";
-            dgcEventsPlace.Width = 149;
-            // 
-            // dgcEventsValue0
-            // 
-            dgcEventsValue0.DataPropertyName = "VALUE_0";
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle5.Format = "N2";
-            dgcEventsValue0.DefaultCellStyle = dataGridViewCellStyle5;
-            dgcEventsValue0.HeaderText = "Ieg.v.";
-            dgcEventsValue0.MinimumWidth = 6;
-            dgcEventsValue0.Name = "dgcEventsValue0";
-            dgcEventsValue0.ToolTipText = "Iegādes vērtība uz datumu";
-            dgcEventsValue0.Width = 90;
-            // 
-            // dgcEventsDeprec0
-            // 
-            dgcEventsDeprec0.DataPropertyName = "DEPREC_0";
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle6.Format = "N2";
-            dgcEventsDeprec0.DefaultCellStyle = dataGridViewCellStyle6;
-            dgcEventsDeprec0.HeaderText = "Uzrkr. noliet.";
-            dgcEventsDeprec0.MinimumWidth = 6;
-            dgcEventsDeprec0.Name = "dgcEventsDeprec0";
-            dgcEventsDeprec0.ToolTipText = "Uzkrātais nolietojums";
-            dgcEventsDeprec0.Width = 90;
-            // 
-            // dgcEventsValueC
-            // 
-            dgcEventsValueC.DataPropertyName = "VALUE_C";
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle7.Format = "# ##0.00;-# ##0.00;\"\"";
-            dgcEventsValueC.DefaultCellStyle = dataGridViewCellStyle7;
-            dgcEventsValueC.HeaderText = "ieg.v. +/-";
-            dgcEventsValueC.MinimumWidth = 6;
-            dgcEventsValueC.Name = "dgcEventsValueC";
-            dgcEventsValueC.Width = 90;
-            // 
-            // dgcEventsDeprecC
-            // 
-            dgcEventsDeprecC.DataPropertyName = "DEPREC_C";
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle8.Format = "# ##0.00;-# ##0.00;\"\"";
-            dgcEventsDeprecC.DefaultCellStyle = dataGridViewCellStyle8;
-            dgcEventsDeprecC.HeaderText = "Uzkr.nol. +/-";
-            dgcEventsDeprecC.MinimumWidth = 6;
-            dgcEventsDeprecC.Name = "dgcEventsDeprecC";
-            dgcEventsDeprecC.Width = 90;
-            // 
-            // dgcEventsSellValue
-            // 
-            dgcEventsSellValue.DataPropertyName = "SELL_VALUE";
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle9.Format = "N2";
-            dgcEventsSellValue.DefaultCellStyle = dataGridViewCellStyle9;
-            dgcEventsSellValue.HeaderText = "Pārd.v.";
-            dgcEventsSellValue.MinimumWidth = 6;
-            dgcEventsSellValue.Name = "dgcEventsSellValue";
-            dgcEventsSellValue.ToolTipText = "Pārdošanas vērtība";
-            dgcEventsSellValue.Width = 90;
-            // 
-            // dgcEventsMtTotal
-            // 
-            dgcEventsMtTotal.DataPropertyName = "MT_TOTAL";
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dgcEventsMtTotal.DefaultCellStyle = dataGridViewCellStyle10;
-            dgcEventsMtTotal.HeaderText = "Mēn.";
-            dgcEventsMtTotal.MinimumWidth = 6;
-            dgcEventsMtTotal.Name = "dgcEventsMtTotal";
-            dgcEventsMtTotal.ReadOnly = true;
-            dgcEventsMtTotal.ToolTipText = "Nolietojuma periods mēnešos";
-            dgcEventsMtTotal.Width = 30;
-            // 
-            // dgcEventsMtUsed
-            // 
-            dgcEventsMtUsed.DataPropertyName = "MT_USED";
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dgcEventsMtUsed.DefaultCellStyle = dataGridViewCellStyle11;
-            dgcEventsMtUsed.HeaderText = "Mēn. izm.";
-            dgcEventsMtUsed.MinimumWidth = 6;
-            dgcEventsMtUsed.Name = "dgcEventsMtUsed";
-            dgcEventsMtUsed.ToolTipText = "Izmantotais nolietojuma periods mēnešos";
-            dgcEventsMtUsed.Width = 40;
-            // 
-            // dgcEventsRateD
-            // 
-            dgcEventsRateD.DataPropertyName = "RATE_D";
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle12.Format = "%";
-            dgcEventsRateD.DefaultCellStyle = dataGridViewCellStyle12;
-            dgcEventsRateD.HeaderText = "Nol. likme";
-            dgcEventsRateD.MinimumWidth = 6;
-            dgcEventsRateD.Name = "dgcEventsRateD";
-            dgcEventsRateD.ReadOnly = true;
-            dgcEventsRateD.ToolTipText = "Nolietojuma likme";
-            dgcEventsRateD.Width = 40;
-            // 
-            // dgcEventsRateDMt
-            // 
-            dgcEventsRateDMt.DataPropertyName = "RATE_D_MT";
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle13.Format = "N2";
-            dgcEventsRateDMt.DefaultCellStyle = dataGridViewCellStyle13;
-            dgcEventsRateDMt.HeaderText = "Nol.likme mēnesī";
-            dgcEventsRateDMt.MinimumWidth = 6;
-            dgcEventsRateDMt.Name = "dgcEventsRateDMt";
-            dgcEventsRateDMt.ReadOnly = true;
-            dgcEventsRateDMt.ToolTipText = "Nolietojama likme mēnesī";
-            dgcEventsRateDMt.Width = 60;
-            // 
-            // dgcEventsTaxValC
-            // 
-            dgcEventsTaxValC.DataPropertyName = "TAX_VAL_C";
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle14.Format = "# ##0.00;-# ##0.00;\"\"";
-            dgcEventsTaxValC.DefaultCellStyle = dataGridViewCellStyle14;
-            dgcEventsTaxValC.HeaderText = "Nod.nol. +/-";
-            dgcEventsTaxValC.MinimumWidth = 6;
-            dgcEventsTaxValC.Name = "dgcEventsTaxValC";
-            dgcEventsTaxValC.ToolTipText = "Vērtības izmaiņas nodokļa vajadzībām";
-            dgcEventsTaxValC.Width = 90;
-            // 
-            // dgcEventsTaxVal
-            // 
-            dgcEventsTaxVal.DataPropertyName = "TAX_VAL";
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle15.Format = "N2";
-            dgcEventsTaxVal.DefaultCellStyle = dataGridViewCellStyle15;
-            dgcEventsTaxVal.HeaderText = "Nod.nol.";
-            dgcEventsTaxVal.MinimumWidth = 6;
-            dgcEventsTaxVal.Name = "dgcEventsTaxVal";
-            dgcEventsTaxVal.ToolTipText = "Vērtība nodokļa vajadzībām";
-            dgcEventsTaxVal.Width = 90;
-            // 
-            // dgcEventsTaxValLeft
-            // 
-            dgcEventsTaxValLeft.DataPropertyName = "TAX_VAL_LEFT";
-            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle16.Format = "N2";
-            dgcEventsTaxValLeft.DefaultCellStyle = dataGridViewCellStyle16;
-            dgcEventsTaxValLeft.HeaderText = "Nod.nol. atl.v.";
-            dgcEventsTaxValLeft.MinimumWidth = 6;
-            dgcEventsTaxValLeft.Name = "dgcEventsTaxValLeft";
-            dgcEventsTaxValLeft.ToolTipText = "Atlikusī vērtība nodokļa vajadzībām";
-            dgcEventsTaxValLeft.Width = 90;
-            // 
-            // dgcEventsTaxRate
-            // 
-            dgcEventsTaxRate.DataPropertyName = "TAX_RATE";
-            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dgcEventsTaxRate.DefaultCellStyle = dataGridViewCellStyle17;
-            dgcEventsTaxRate.HeaderText = "Nod.nol. likme";
-            dgcEventsTaxRate.MinimumWidth = 6;
-            dgcEventsTaxRate.Name = "dgcEventsTaxRate";
-            dgcEventsTaxRate.ReadOnly = true;
-            dgcEventsTaxRate.ToolTipText = "Nolietojuma likme nodokļu vajadzībām";
-            dgcEventsTaxRate.Width = 70;
-            // 
-            // dgcEventsTaxEach
-            // 
-            dgcEventsTaxEach.DataPropertyName = "TAX_EACH";
-            dgcEventsTaxEach.FalseValue = "0";
-            dgcEventsTaxEach.HeaderText = "Nod.nol. katru";
-            dgcEventsTaxEach.MinimumWidth = 6;
-            dgcEventsTaxEach.Name = "dgcEventsTaxEach";
-            dgcEventsTaxEach.ReadOnly = true;
-            dgcEventsTaxEach.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            dgcEventsTaxEach.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            dgcEventsTaxEach.ToolTipText = "Nolietojumu nodokļu vajadzībām rēķina katram pamatlīdzeklim atsevišķi";
-            dgcEventsTaxEach.TrueValue = "1";
-            dgcEventsTaxEach.Width = 70;
-            // 
-            // dgcEventsZDT
-            // 
-            dgcEventsZDT.DataPropertyName = "ZDT";
-            dgcEventsZDT.HeaderText = "ZDT";
-            dgcEventsZDT.MinimumWidth = 6;
-            dgcEventsZDT.Name = "dgcEventsZDT";
-            dgcEventsZDT.ReadOnly = true;
-            dgcEventsZDT.Visible = false;
-            dgcEventsZDT.Width = 111;
-            // 
-            // dgcEventsZU
-            // 
-            dgcEventsZU.DataPropertyName = "ZU";
-            dgcEventsZU.HeaderText = "ZU";
-            dgcEventsZU.MinimumWidth = 6;
-            dgcEventsZU.Name = "dgcEventsZU";
-            dgcEventsZU.ReadOnly = true;
-            dgcEventsZU.Visible = false;
-            dgcEventsZU.Width = 111;
-            // 
-            // dgcEventsID
-            // 
-            dgcEventsID.DataPropertyName = "ID";
-            dgcEventsID.HeaderText = "ID";
-            dgcEventsID.MinimumWidth = 6;
-            dgcEventsID.Name = "dgcEventsID";
-            dgcEventsID.Visible = false;
-            dgcEventsID.Width = 111;
-            // 
-            // dgcEventsIDIT
-            // 
-            dgcEventsIDIT.DataPropertyName = "IDIT";
-            dgcEventsIDIT.HeaderText = "IDIT";
-            dgcEventsIDIT.MinimumWidth = 6;
-            dgcEventsIDIT.Name = "dgcEventsIDIT";
-            dgcEventsIDIT.Visible = false;
-            dgcEventsIDIT.Width = 111;
-            // 
             // FormP_Items
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -2095,7 +2088,7 @@
             MainMenuStrip = menuStrip1;
             Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             Name = "FormP_Items";
-            Text = "Pamatlīdzekļu sraksts";
+            Text = "Pamatlīdzekļu saraksts";
             FormClosed += Form_Items_FormClosed;
             Load += Form_Items_Load;
             ((System.ComponentModel.ISupportInitialize)bsItems).EndInit();

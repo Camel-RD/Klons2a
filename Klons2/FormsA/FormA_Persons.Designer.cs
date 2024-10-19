@@ -108,7 +108,7 @@ namespace KlonsA.Forms
             this.dgvPersons.AllowUserToDeleteRows = false;
             this.dgvPersons.AllowUserToResizeRows = false;
             this.dgvPersons.AutoGenerateColumns = false;
-            this.dgvPersons.AutoSave = false;
+            this.dgvPersons.AutoSave = true;
             this.dgvPersons.BackgroundColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;

@@ -119,7 +119,7 @@ namespace KlonsM.FormsM
             // dgvRows
             // 
             dgvRows.AutoGenerateColumns = false;
-            dgvRows.AutoSave = false;
+            dgvRows.AutoSave = true;
             dgvRows.BackgroundColor = System.Drawing.SystemColors.Control;
             dgvRows.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvRows.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { dgcCode, dgcName, dgcIsGroup, dgcIsService, dhcIsProduced, dgcAcc6, dgcAcc7, dgcMethod, dgcID });

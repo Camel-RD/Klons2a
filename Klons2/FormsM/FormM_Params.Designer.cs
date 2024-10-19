@@ -85,7 +85,6 @@ namespace KlonsM.FormsM
             this.myGrid1.ColumnWidth1 = 20;
             this.myGrid1.ColumnWidth2 = 400;
             this.myGrid1.ColumnWidth3 = 200;
-            this.myGrid1.DefaultHeight = 22;
             this.myGrid1.EnableSort = true;
             this.myGrid1.Location = new System.Drawing.Point(12, 12);
             this.myGrid1.MyDataBC = this.paramsMData1;

@@ -18,7 +18,6 @@ using KlonsLIB.Data;
 using KlonsLIB.Forms;
 using KlonsLIB.Misc;
 using OPSdTableAdapter = KlonsF.DataSets.klonsDataSetTableAdapters.OPSdTableAdapter;
-using Timer = System.Timers.Timer;
 
 namespace KlonsF.Forms
 {
@@ -235,11 +234,20 @@ namespace KlonsF.Forms
             if (!dgvDocs.EndEditX()) return false;
             if (!dgvOps.EndEditX()) return false;
 
-            var ret = bsOPSd.SaveTable();
-            if (ret == EBsSaveResult.Error) return false;
-            CheckSave();
-
-            return true;
+            if (!this.Validate()) return false;
+            try
+            {
+                DataTasksF.SetNewIDs(myAdapterManager1);
+                bool rt = myAdapterManager1.UpdateAll();
+                CheckSave();
+                return rt;
+            }
+            catch (Exception e)
+            {
+                CheckSave();
+                Form_Error.ShowException(e, "Neizdevās saglabāt izmaiņas.");
+                return false;
+            }
         }
 
         private void CheckColumns()
@@ -289,7 +297,7 @@ namespace KlonsF.Forms
         private void OPS_RowChanged(object sender, klonsDataSet.OPSRowChangeEvent e)
         {
             //Debug.Print("OPS_RowChanged {0} {1}", e.Action, e.Row.RowState);
-            
+
             if (!detail_update_enabled) return;
 
             if (e.Action == DataRowAction.Add)
@@ -338,7 +346,7 @@ namespace KlonsF.Forms
             dr.ZDt = DateTime.Now;
             dr.ZU = MyData.CurrentUserName;
         }
-        
+
         private void OPS_ColumnChenged(object sender, DataColumnChangeEventArgs e)
         {
             if (!detail_update_enabled) return;
@@ -347,7 +355,7 @@ namespace KlonsF.Forms
             if (dr == null) return;
 
             int cnr = Get_OPS_Col_Nr(e.Column);
-            
+
             if (cnr == 99) return;
 
             dr.ZDt = DateTime.Now;
@@ -424,8 +432,8 @@ namespace KlonsF.Forms
                 }
             }
 
-            if (cnr == 11 || cnr == 21 || cnr == 12 || cnr == 22  || cnr == 13 || cnr == 23)
-            {    
+            if (cnr == 11 || cnr == 21 || cnr == 12 || cnr == 22 || cnr == 13 || cnr == 23)
+            {
                 if (MyData.Params.UPRIIN)
                 {
                     if (bdeb || bkred)
@@ -634,7 +642,7 @@ namespace KlonsF.Forms
             if (string.IsNullOrEmpty(ac14)) return false;
             if (qv == 0.00M) return false;
 
-            var dr4 = MyData.GetAcP24Row(ac14);
+            var dr4 = DataTasksF.GetAcP24Row(ac14);
             if (dr4 == null) return false;
 
             if (!dr4.IsPRICENull() && dr4.PRICE != 0.00M)
@@ -652,7 +660,7 @@ namespace KlonsF.Forms
                 descr = dr4.Name;
             }
 
-            descr = MyData.SetUnitInDescr(descr, dr4.UNIT);
+            descr = DataTasksF.SetUnitInDescr(descr, dr4.UNIT);
             descr = descr.LeftMax(50);
             if (dr.Descr != descr)
             {
@@ -671,7 +679,7 @@ namespace KlonsF.Forms
 
             decimal sum, pvn;
             var dr = e.Row as klonsDataSet.OPSdRow;
-            
+
             if (e.Column == MyData.DataSetKlonsF.OPSd.ZUColumn ||
                 e.Column == MyData.DataSetKlonsF.OPSd.ZDtColumn)
             {
@@ -685,7 +693,7 @@ namespace KlonsF.Forms
             {
                 var drv = bsOPSd.Current as DataRowView;
                 if (drv == null) return;
-                if(drv.Row == dr)
+                if (drv.Row == dr)
                     CheckOpsGrid();
                 return;
             }
@@ -739,7 +747,7 @@ namespace KlonsF.Forms
         private void OPSd_RowChanged(object sender, klonsDataSet.OPSdRowChangeEvent e)
         {
             //Debug.Print("OPSd_RowChanged {0}", e.Action);
-            
+
             if (!detail_update_enabled) return;
 
             if (e.Action == DataRowAction.Change)
@@ -963,7 +971,7 @@ namespace KlonsF.Forms
             }
             if (ksum0 == -1) return;
 
-            for(int i = 0; i < 3; i++)
+            for (int i = 0; i < 3; i++)
             {
                 if (i != kpvn && i != ksum0)
                 {
@@ -1124,11 +1132,11 @@ namespace KlonsF.Forms
                             }
                             dgvDocs.RefreshCurrent();
                              */
-                            
+
                             dgvDocs.BeginEdit(false);
                             dgvDocs.EditingControl.Text = value;
                             dgvDocs.EndEdit();
-                            
+
                         }
                         dgvDocs.Select();
                         if (dgvDocs.EditingControl != null)
@@ -1250,7 +1258,7 @@ namespace KlonsF.Forms
             {
                 return 1.0M;
             }
-            
+
             var dr = MyData.DataSetKlonsF.Currency.FindByidDete(curr, date);
             if (dr != null)
             {
@@ -1447,7 +1455,7 @@ namespace KlonsF.Forms
                 c2 = dr.AC21[0];
 
                 if (bpvnreqpvn && dr.AC11 == "5731" && dr.AC15 != "0"
-                    && (dp3 == -1 || MyData.IsIenemumiA(dp3)))
+                    && (dp3 == -1 || DataTasksF.IsIenemumiA(dp3)))
                 {
                     MyMainForm.ShowError("Debeta PVN pazīme nepareiza.");
                     e.Cancel = true;
@@ -1455,7 +1463,7 @@ namespace KlonsF.Forms
                 }
 
                 if (bpvnreqpvn && dr.AC21 == "5731" && dr.AC25 != "0"
-                    && (kp3 == -1 || MyData.IsIenemumiA(kp3)))
+                    && (kp3 == -1 || DataTasksF.IsIenemumiA(kp3)))
                 {
                     MyMainForm.ShowError("Kredīta PVN pazīme nepareiza.");
                     e.Cancel = true;
@@ -1463,7 +1471,7 @@ namespace KlonsF.Forms
                 }
 
                 if (bpvnreqien && c1 == '6' && dr.AC15 != "0"
-                    && !MyData.IsIenemumiA(dp3))
+                    && !DataTasksF.IsIenemumiA(dp3))
                 {
                     MyMainForm.ShowError("Debeta PVN pazīme nepareiza.");
                     e.Cancel = true;
@@ -1471,7 +1479,7 @@ namespace KlonsF.Forms
                 }
 
                 if (bpvnreqpvn && c2 == '6' && dr.AC25 != "0"
-                    && !MyData.IsIenemumiA(kp3))
+                    && !DataTasksF.IsIenemumiA(kp3))
                 {
                     MyMainForm.ShowError("Kredīta PVN pazīme nepareiza.");
                     e.Cancel = true;
@@ -1479,7 +1487,7 @@ namespace KlonsF.Forms
                 }
 
                 if (bpvn5 && dr.AC12 == "5731" && dr.AC15 != "0"
-                    && (dp3 == -1 || MyData.IsIenemumiA(dp3)))
+                    && (dp3 == -1 || DataTasksF.IsIenemumiA(dp3)))
                 {
                     MyMainForm.ShowError("Debeta PVN pazīme nepareiza.");
                     e.Cancel = true;
@@ -1487,7 +1495,7 @@ namespace KlonsF.Forms
                 }
 
                 if (bpvn5 && dr.AC22 == "5731" && dr.AC25 != "0"
-                    && (kp3 == -1 || MyData.IsIenemumiA(kp3)))
+                    && (kp3 == -1 || DataTasksF.IsIenemumiA(kp3)))
                 {
                     MyMainForm.ShowError("Kredīta PVN pazīme nepareiza.");
                     e.Cancel = true;
@@ -1657,10 +1665,10 @@ namespace KlonsF.Forms
             }
             if (e.KeyCode == Keys.Delete && e.Control)
             {
-                if(!dgvOps.EndEdit()) return;
+                if (!dgvOps.EndEdit()) return;
                 if (dgvOps.CurrentRow != null && !dgvOps.CurrentRow.IsNewRow)
                 {
-                    bnavNav.DeleteCurrent();
+                    DeleteCurrent();
                     e.Handled = true;
                 }
                 return;
@@ -1720,7 +1728,7 @@ namespace KlonsF.Forms
                 if (!dgvDocs.EndEdit()) return;
                 if (dgvDocs.CurrentRow != null && !dgvDocs.CurrentRow.IsNewRow)
                 {
-                    bnavNav.DeleteCurrent();
+                    DeleteCurrent();
                     e.Handled = true;
                 }
                 return;
@@ -1749,19 +1757,19 @@ namespace KlonsF.Forms
 
         private bool IsPVNx(string dac5, string kac5)
         {
-            return MyData.IsPVN(dac5) || MyData.IsPVN(kac5);
+            return DataTasksF.IsPVN(dac5) || DataTasksF.IsPVN(kac5);
         }
 
         private bool IsGoodPVNx(string dac5, string kac5)
         {
-            return MyData.IsGoodPVN(dac5) || MyData.IsGoodPVN(kac5);
+            return DataTasksF.IsGoodPVN(dac5) || DataTasksF.IsGoodPVN(kac5);
         }
 
         private int GetPVNRateAX(string dac5, string kac5, DateTime date)
         {
-            int k = MyData.GetPVNRateA(dac5, date);
+            int k = DataTasksF.GetPVNRateA(dac5, date);
             if (k > 0) return k;
-            return MyData.GetPVNRateA(kac5, date);
+            return DataTasksF.GetPVNRateA(kac5, date);
         }
 
         private bool GetDocSums2(klonsDataSet.OPSdRow docrow
@@ -1769,11 +1777,11 @@ namespace KlonsF.Forms
         {
             sum = 0.0M;
             pvn = 0.0M;
-            
+
             if (docrow == null) return false;
             var opsrows = docrow.GetOPSRows();
             if (opsrows == null || opsrows.Length == 0) return false;
-            
+
             klonsDataSet.OPSRow dr;
 
             for (int i = 0; i < opsrows.Length; i++)
@@ -1808,7 +1816,7 @@ namespace KlonsF.Forms
             }
             catch (Exception)
             {
-                
+
             }
             return null;
         }
@@ -1843,7 +1851,7 @@ namespace KlonsF.Forms
             {
                 if (e.Value == null || e.Value == DBNull.Value) return;
                 if (!(e.Value is string)) return;
-                string s = (string) e.Value;
+                string s = (string)e.Value;
                 if (string.IsNullOrEmpty(s)) return;
                 if (lastDate == DateTime.MinValue)
                     lastDate = DateTime.Today;
@@ -1898,7 +1906,7 @@ namespace KlonsF.Forms
             {
                 if (e.Value == null || e.Value == DBNull.Value) return;
                 if (!(e.Value is string)) return;
-                string s = (string) e.Value;
+                string s = (string)e.Value;
                 if (string.IsNullOrEmpty(s)) return;
                 DateTime dt;
                 if (Utils.StringToDate(s, out dt))
@@ -1943,7 +1951,7 @@ namespace KlonsF.Forms
             {
                 string s = o.ToString();
                 if (string.IsNullOrEmpty(s)) return;
-                e.ToolTipText = MyData.GetClName(s);
+                e.ToolTipText = DataTasksF.GetClName(s);
                 return;
             }
         }
@@ -1960,25 +1968,25 @@ namespace KlonsF.Forms
                 e.ColumnIndex == dgcOpsAC21.Index ||
                 e.ColumnIndex == dgcOpsAC22.Index)
             {
-                e.ToolTipText = MyData.GetAcName(s);
+                e.ToolTipText = DataTasksF.GetAcName(s);
                 return;
             }
             if (e.ColumnIndex == dgcOpsAC13.Index ||
                 e.ColumnIndex == dgcOpsAC23.Index)
             {
-                e.ToolTipText = MyData.GetAc3Name(s);
+                e.ToolTipText = DataTasksF.GetAc3Name(s);
                 return;
             }
             if (e.ColumnIndex == dgcOpsAC14.Index ||
                 e.ColumnIndex == dgcOpsAC24.Index)
             {
-                e.ToolTipText = MyData.GetAc4Name(s);
+                e.ToolTipText = DataTasksF.GetAc4Name(s);
                 return;
             }
             if (e.ColumnIndex == dgcOpsAC15.Index ||
                 e.ColumnIndex == dgcOpsAC25.Index)
             {
-                e.ToolTipText = MyData.GetAc5Name(s);
+                e.ToolTipText = DataTasksF.GetAc5Name(s);
                 return;
             }
 
@@ -2008,10 +2016,9 @@ namespace KlonsF.Forms
         private void DoKasesOrderis(int reportid)
         {
             if (dgvDocs.CurrentRow == null || dgvDocs.CurrentRow.IsNewRow) return;
-            if (!dgvDocs.EndEditX()) return;
-            if (bsOPSd.SaveCurrentItem() == EBsSaveResult.Error) return;
+            if (!SaveData()) return;
             if (dgvDocs.CurrentRow == null || dgvDocs.CurrentRow.IsNewRow) return;
-            
+
             int did = (int)dgvDocs.CurrentRow.Cells[dgcDocsId.Index].Value;
             ROps1aTableAdapter ad1 = MyData.GetKlonsFRepAdapter("ROps1a") as ROps1aTableAdapter;
             ReportViewerData rd = new ReportViewerData();
@@ -2020,7 +2027,7 @@ namespace KlonsF.Forms
             {
                 ad1.FillBy_kieo_1(MyData.DataSetKlonsFRep.ROps1a, did);
             })) return;
-            
+
             MyData.ReportHelperF.PrepareRops1aForKO();
 
             switch (reportid)
@@ -2075,7 +2082,7 @@ namespace KlonsF.Forms
             if (dgvDocs.CurrentRow == null || dgvDocs.CurrentRow.IsNewRow) return;
             if (dgvDocs.IsCurrentCellDirty)
             {
-                if(!dgvDocs.EndEdit()) return;
+                if (!dgvDocs.EndEdit()) return;
             }
             if (dgvDocs.CurrentRow == null) return;
             if (bsOPS.Count == 0)
@@ -2091,7 +2098,7 @@ namespace KlonsF.Forms
                 MyMainForm.ShowInfo("Jāievada dokumenta numurs un persona.");
                 return;
             }
-            
+
             Form_LinkedDocs f = new Form_LinkedDocs(clid, docnr);
             if (f.ShowDialog(MyMainForm) != DialogResult.OK) return;
 
@@ -2152,8 +2159,7 @@ namespace KlonsF.Forms
         private void vienkārssRēķinsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (dgvDocs.CurrentRow == null || dgvDocs.CurrentRow.IsNewRow) return;
-            if (!dgvDocs.EndEditX()) return;
-            if (bsOPSd.SaveCurrentItem() == EBsSaveResult.Error) return;
+            if (!SaveData()) return;
             if (dgvDocs.CurrentRow == null || dgvDocs.CurrentRow.IsNewRow) return;
             int id = (int)(dgvDocs.CurrentRow.Cells[dgcDocsId.Index].Value);
             if (id < 0) return;
@@ -2162,8 +2168,7 @@ namespace KlonsF.Forms
         private void rēkins2ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (dgvDocs.CurrentRow == null || dgvDocs.CurrentRow.IsNewRow) return;
-            if (!dgvDocs.EndEditX()) return;
-            if (bsOPSd.SaveCurrentItem() == EBsSaveResult.Error) return;
+            if (!SaveData()) return;
             if (dgvDocs.CurrentRow == null || dgvDocs.CurrentRow.IsNewRow) return;
             int id = (int)(dgvDocs.CurrentRow.Cells[dgcDocsId.Index].Value);
             if (id < 0) return;
@@ -2172,8 +2177,7 @@ namespace KlonsF.Forms
         private void rēķinsArDaudzumiemToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (dgvDocs.CurrentRow == null || dgvDocs.CurrentRow.IsNewRow) return;
-            if (!dgvDocs.EndEditX()) return;
-            if (bsOPSd.SaveCurrentItem() == EBsSaveResult.Error) return;
+            if (!SaveData()) return;
             if (dgvDocs.CurrentRow == null || dgvDocs.CurrentRow.IsNewRow) return;
             int id = (int)(dgvDocs.CurrentRow.Cells[dgcDocsId.Index].Value);
             if (id < 0) return;
@@ -2182,12 +2186,11 @@ namespace KlonsF.Forms
         private void pavadzīmeToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (dgvDocs.CurrentRow == null || dgvDocs.CurrentRow.IsNewRow) return;
-            if (!dgvDocs.EndEditX()) return;
-            if (bsOPSd.SaveCurrentItem() == EBsSaveResult.Error) return;
+            if (!SaveData()) return;
             if (dgvDocs.CurrentRow == null || dgvDocs.CurrentRow.IsNewRow) return;
             int id = (int)(dgvDocs.CurrentRow.Cells[dgcDocsId.Index].Value);
             if (id < 0) return;
-            MyMainForm.ShowFormDialog(typeof (FormRep_RekinsPZ1), id, 1);
+            MyMainForm.ShowFormDialog(typeof(FormRep_RekinsPZ1), id, 1);
         }
 
         private void dgvDocs_Leave(object sender, EventArgs e)
@@ -2249,7 +2252,7 @@ namespace KlonsF.Forms
             if (bsOPSd.Count == 0) return;
             if (!dgvDocs.EndEditX()) return;
 
-            for (int i = 0; i < bsOPSd.Count; i ++)
+            for (int i = 0; i < bsOPSd.Count; i++)
             {
                 var rv1 = bsOPSd[i] as DataRowView;
                 var dr = rv1.Row as klonsDataSet.OPSdRow;
@@ -2311,7 +2314,7 @@ namespace KlonsF.Forms
 
         private void tsbSearch_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyChar == (char) Keys.Return)
+            if (e.KeyChar == (char)Keys.Return)
             {
                 SearchText();
                 dgvDocs.Focus();
@@ -2365,7 +2368,7 @@ namespace KlonsF.Forms
             var dr = e.DataRow as klonsDataSet.OPSRow;
             if (dr != null)
             {
-                dr.id = (int) MyData.KlonsFQueriesTableAdapter.SP_OPS_ID();
+                dr.id = (int)MyData.KlonsFQueriesTableAdapter.SP_OPS_ID();
             }
         }
 
@@ -2374,8 +2377,8 @@ namespace KlonsF.Forms
             var dr = e.DataRow as klonsDataSet.OPSdRow;
             if (dr != null)
             {
-                dr.id = (int) MyData.KlonsFQueriesTableAdapter.SP_OPSD_ID();
-                dr.ZNR = (int) MyData.KlonsFQueriesTableAdapter.SP_OPSD_GETNEXTNRFORYEARA(dr.Dete.Year);
+                dr.id = (int)MyData.KlonsFQueriesTableAdapter.SP_OPSD_ID();
+                dr.ZNR = (int)MyData.KlonsFQueriesTableAdapter.SP_OPSD_GETNEXTNRFORYEARA(dr.Dete.Year);
             }
             bsOPS_MyBeforeRowInsert(e);
         }
@@ -2482,6 +2485,17 @@ namespace KlonsF.Forms
         {
             detail_update_enabled = b;
             CheckOpsGrid(!b);
+        }
+
+        public void DeleteCurrent()
+        {
+            bnavNav.DeleteCurrent();
+            SaveData();
+        }
+
+        private void bindingNavigatorDeleteItem_Click(object sender, EventArgs e)
+        {
+            DeleteCurrent();
         }
 
     }

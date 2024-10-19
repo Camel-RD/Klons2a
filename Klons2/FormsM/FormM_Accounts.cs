@@ -122,7 +122,7 @@ namespace KlonsM.FormsM
             if (rownr == dgvRows.NewRowIndex) return false;
             var dr = dgvRows.GetDataRow(rownr) as KlonsMDataSet.M_ACCOUNTSRow;
             if (dr == null) return false;
-            return dr.ID == "?";
+            return dr.ID == ".?";
         }
 
         private void bindingNavigatorSaveItem_Click(object sender, EventArgs e)

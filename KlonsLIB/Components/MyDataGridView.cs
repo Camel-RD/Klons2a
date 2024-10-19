@@ -441,7 +441,14 @@ namespace KlonsLIB.Components
                 !this.IsCurrentRowDirty && !CurrentRow.IsNewRow &&
                 (DateTime.Now - lastCheckCurrentRowTime).Seconds > 2)
             {
-                bs.SaveTable();
+                if (FindForm() is MyFormBase fm)
+                {
+                    fm.SaveData();
+                }
+                else
+                {
+                    bs.SaveTable();
+                }
                 lastCheckCurrentRowTime = DateTime.Now;
             }
             if (o != null && MyCheckForChanges != null)

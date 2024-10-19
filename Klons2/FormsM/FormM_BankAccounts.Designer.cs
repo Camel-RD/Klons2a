@@ -81,7 +81,7 @@ namespace KlonsM.FormsM
             // 
             this.dgvRows.AllowUserToResizeRows = false;
             this.dgvRows.AutoGenerateColumns = false;
-            this.dgvRows.AutoSave = false;
+            this.dgvRows.AutoSave = true;
             this.dgvRows.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgvRows.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvRows.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {

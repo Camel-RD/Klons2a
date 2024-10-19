@@ -13,7 +13,6 @@ namespace KlonsLIB.Data
 {
     public class MyBindingSource2 : BindingSource
     {
-        private MyBindingSource2 childBS = null;
         private DataGridView useDataGridView = null;
 
         [DefaultValue(null)]
@@ -30,18 +29,6 @@ namespace KlonsLIB.Data
         [DefaultValue(false)]
         [Category("Data")]
         public bool AutoSaveOnDelete { get; set; }
-
-        [DefaultValue(false)]
-        [Category("Data")]
-        public bool AutoSaveChildrenDelete { get; set; }
-
-        [DefaultValue(null)]
-        [Category("Data")]
-        public MyBindingSource2 ChildBS
-        {
-            get { return childBS; }
-            set { childBS = value; }
-        }
 
 
         [Browsable(false)]
@@ -268,18 +255,6 @@ namespace KlonsLIB.Data
             return SaveDataRow(rowview.Row);
         }
 
-        public virtual EBsSaveResult SaveCurrentItem()
-        {
-            if(this.Current == null) return EBsSaveResult.SaveSkipped;
-            DataRowView rowview = this.Current as DataRowView;
-            if (rowview == null)
-            {
-                throw new Exception("Not supported item type.");
-            }
-
-            return SaveDataRow(rowview.Row);
-        }
-
         private DataRow processingrow = null;
 
 
@@ -290,60 +265,9 @@ namespace KlonsLIB.Data
             return SaveDataRow_(row);
         }
 
-        public virtual EBsSaveResult SaveDataRowOnlyDeleted(DataRow row)
-        {
-            if (!SaveEnabled) return EBsSaveResult.SaveSkipped;
-            return SaveDataRowOnlyDeleted_(row);
-        }
-
         protected virtual EBsSaveResult SaveDataRow_(DataRow row)
         {
-            if (!AutoSaveChildrenDelete)
-                return SaveDataRowA_(row);
-
-            EBsSaveResult ret1 = EBsSaveResult.Saved;
-            EBsSaveResult ret2 = EBsSaveResult.Saved;
-
-            if (childBS != null)
-                ret1 = SaveDeletedChildren(row);
-
-            ret2 = SaveDataRowA_(row);
-
-            if (ret2 == EBsSaveResult.Error)
-                ret1 = ret2;
-
-            if (childBS != null)
-                ret2 = SaveChildren(row);
-
-            if (ret2 == EBsSaveResult.Error)
-                ret1 = ret2;
-
-            return ret1;
-        }
-
-        protected virtual EBsSaveResult SaveDataRowOnlyDeleted_(DataRow row)
-        {
-            if (!AutoSaveChildrenDelete)
-                return SaveDataRowA_(row, true);
-
-            EBsSaveResult ret1 = EBsSaveResult.Saved;
-            EBsSaveResult ret2 = EBsSaveResult.Saved;
-
-            if (childBS != null)
-                ret1 = SaveDeletedChildren(row);
-
-            ret2 = SaveDataRowA_(row, true);
-
-            if (ret2 == EBsSaveResult.Error)
-                ret1 = ret2;
-
-            return ret1;
-        }
-
-        public virtual EBsSaveResult SaveDataRowA(DataRow row, bool onlydeleted = false)
-        {
-            if (!SaveEnabled) return EBsSaveResult.SaveSkipped;
-            return SaveDataRowA_(row, onlydeleted);
+            return SaveDataRowA_(row);
         }
 
         protected virtual EBsSaveResult SaveDataRowA_(DataRow row, bool onlydeleted = false)
@@ -410,35 +334,6 @@ namespace KlonsLIB.Data
             }
         }
 
-        public virtual EBsSaveResult SaveList()
-        {
-            if (!SaveEnabled) return EBsSaveResult.SaveSkipped;
-            return SaveList_();
-        }
-
-        protected virtual EBsSaveResult SaveList_()
-        {
-            if (!SaveEnabled) return EBsSaveResult.SaveSkipped;
-            if (Count == 0) return EBsSaveResult.SaveSkipped;
-
-            DataRow[] rows = new DataRow[Count];
-            for (int i = 0; i < Count; i++)
-            {
-                rows[i] = (List[i] as DataRowView).Row;
-            }
-            
-            EBsSaveResult ret = EBsSaveResult.Saved;
-
-            foreach (var dr in rows)
-            {
-                var ret1 = SaveDataRow(dr);
-                if (ret1 == EBsSaveResult.Error)
-                    ret = ret1;
-            }
-
-            return ret;
-        }
-
         public bool HasNewParent(DataRow dr)
         {
             if (dr == null || dr.RowState == DataRowState.Deleted) return false;
@@ -493,54 +388,9 @@ namespace KlonsLIB.Data
             return SaveTable_();
         }
 
-        public virtual EBsSaveResult SaveTableOnlyDeleted()
-        {
-            if (!SaveEnabled) return EBsSaveResult.SaveSkipped;
-            return SaveTableOnlyDeleted_();
-        }
-
         protected virtual EBsSaveResult SaveTable_()
         {
-            if (!AutoSaveChildrenDelete) 
-                return SaveTableA_();
-
-            EBsSaveResult ret1 = EBsSaveResult.Saved;
-            EBsSaveResult ret2 = EBsSaveResult.Saved;
-
-            if (childBS != null)
-                ret1 = childBS.SaveTableOnlyDeleted();
-            
-            ret2 = SaveTableA_();
-            
-            if (ret2 == EBsSaveResult.Error)
-                ret1 = ret2;
-
-            if (childBS != null) 
-                ret2 = childBS.SaveTable();
-
-            if (ret2 == EBsSaveResult.Error)
-                ret1 = ret2;
-
-            return ret1;
-        }
-
-        protected virtual EBsSaveResult SaveTableOnlyDeleted_()
-        {
-            if (!AutoSaveChildrenDelete)
-                return SaveTableA_(true);
-
-            EBsSaveResult ret1 = EBsSaveResult.Saved;
-            EBsSaveResult ret2 = EBsSaveResult.Saved;
-
-            if (childBS != null)
-                ret1 = childBS.SaveTableOnlyDeleted();
-
-            ret2 = SaveTableA_(true);
-
-            if (ret2 == EBsSaveResult.Error)
-                ret1 = ret2;
-
-            return ret1;
+            return SaveTableA_();
         }
 
         public virtual EBsSaveResult SaveTableA(bool onlydeleted = false)
@@ -748,54 +598,6 @@ namespace KlonsLIB.Data
             base.RemoveAt(index);
             OnMyItemRemoved(new MyItemRemovedEventArgs(item));
             OnMyUpForChecks();
-        }
-
-        protected EBsSaveResult SaveDeletedChildren(DataRow dr)
-        {
-            EBsSaveResult ret = EBsSaveResult.Saved;
-            if (dr == null || dr.RowState != DataRowState.Deleted) return EBsSaveResult.SaveSkipped;
-            if (childBS == null) return EBsSaveResult.SaveSkipped;
-            var childtable = childBS.GetTable();
-            if (childtable == null) return EBsSaveResult.Error;
-            foreach (DataRelation rel in dr.Table.ChildRelations)
-            {
-                if (rel.ChildTable != childtable) continue;
-                DataRow[] drs = dr.GetChildRows(rel, DataRowVersion.Original);
-                if (drs == null || drs.Length == 0) continue;
-                foreach (var dr1 in drs)
-                {
-                    if (dr1.RowState == DataRowState.Deleted)
-                    {
-                        var ret1 = childBS.SaveDataRow(dr1);
-                        if(ret1 == EBsSaveResult.Error)
-                            ret = EBsSaveResult.Error;
-                    }
-                }
-            }
-            return ret;
-        }
-
-        protected EBsSaveResult SaveChildren(DataRow dr)
-        {
-            EBsSaveResult ret = EBsSaveResult.Saved;
-            if (dr == null || dr.RowState == DataRowState.Deleted ||
-                dr.RowState == DataRowState.Detached) return EBsSaveResult.SaveSkipped;
-            if (childBS == null) return EBsSaveResult.SaveSkipped;
-            var childtable = childBS.GetTable();
-            if (childtable == null) return EBsSaveResult.Error;
-            foreach (DataRelation rel in dr.Table.ChildRelations)
-            {
-                if (rel.ChildTable != childtable) continue;
-                DataRow[] drs = dr.GetChildRows(rel);
-                if (drs == null || drs.Length == 0) continue;
-                foreach (var dr1 in drs)
-                {
-                    var ret1 = childBS.SaveDataRow(dr1);
-                    if (ret1 == EBsSaveResult.Error)
-                        ret = EBsSaveResult.Error;
-                }
-            }
-            return ret;
         }
 
         protected void OnMyItemRemoved(MyItemRemovedEventArgs e)

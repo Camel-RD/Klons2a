@@ -12,6 +12,7 @@ using KlonsF.DataSets;
 using KlonsF.DataSets.klonsDataSetTableAdapters;
 using KlonsLIB.Components;
 using KlonsLIB.Data;
+using KlonsLIB.Forms;
 using KlonsLIB.Misc;
 
 namespace KlonsF.Forms
@@ -42,7 +43,7 @@ namespace KlonsF.Forms
 
         private void tbSearch_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyChar == (char) Keys.Return)
+            if (e.KeyChar == (char)Keys.Return)
             {
                 string s = tbSearch.Text;
                 if (s == "")
@@ -169,7 +170,7 @@ namespace KlonsF.Forms
                 if (dgvDocTyp.CurrentRow != null && !dgvDocTyp.CurrentRow.IsNewRow)
                 {
                     if (!dgvDocTyp.EndEdit()) return;
-                    bnavDocTyp.DeleteCurrent();
+                    DeleteCurrent();
                     e.Handled = true;
                 }
             }
@@ -187,7 +188,7 @@ namespace KlonsF.Forms
                 if (dgvDocTypA.CurrentRow != null && !dgvDocTypA.CurrentRow.IsNewRow)
                 {
                     if (!dgvDocTypA.EndEdit()) return;
-                    bnavDocTyp.DeleteCurrent();
+                    DeleteCurrent();
                     e.Handled = true;
                 }
             }
@@ -205,7 +206,7 @@ namespace KlonsF.Forms
                 if (dgvDocTypB.CurrentRow != null && !dgvDocTypB.CurrentRow.IsNewRow)
                 {
                     if (!dgvDocTypB.EndEdit()) return;
-                    bnavDocTyp.DeleteCurrent();
+                    DeleteCurrent();
                     e.Handled = true;
                 }
             }
@@ -238,9 +239,20 @@ namespace KlonsF.Forms
             if (!dgvDocTyp.EndEditX()) return false;
             if (!dgvDocTypA.EndEditX()) return false;
             if (!dgvDocTypB.EndEditX()) return false;
-            var ret1 = bsDocTyp.SaveTable();
-            var ret2 = bsDocTypA.SaveTable();
-            return ret1 != EBsSaveResult.Error && ret2 != EBsSaveResult.Error;
+            if (!this.Validate()) return false;
+            try
+            {
+                DataTasksF.SetNewIDs(myAdapterManager1);
+                bool rt = myAdapterManager1.UpdateAll();
+                CheckSave();
+                return rt;
+            }
+            catch (Exception e)
+            {
+                CheckSave();
+                Form_Error.ShowException(e, "Neizdevās saglabāt izmaiņas.");
+                return false;
+            }
         }
 
         private bool HasChanges()
@@ -296,5 +308,15 @@ namespace KlonsF.Forms
             //ChecChildGrid();
         }
 
+        public void DeleteCurrent()
+        {
+            bnavDocTyp.DeleteCurrent();
+            SaveData();
+        }
+
+        private void bindingNavigatorDeleteItem_Click(object sender, EventArgs e)
+        {
+            DeleteCurrent();
+        }
     }
 }

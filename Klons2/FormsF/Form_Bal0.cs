@@ -187,17 +187,17 @@ namespace KlonsF.Forms
             if (string.IsNullOrEmpty(s)) return;
             if (e.ColumnIndex == dgcBal0AC11.Index)
             {
-                e.ToolTipText = MyData.GetAcName(s);
+                e.ToolTipText = DataTasksF.GetAcName(s);
                 return;
             }
             if (e.ColumnIndex == dgcBal0AC24.Index)
             {
-                e.ToolTipText = MyData.GetAc4Name(s);
+                e.ToolTipText = DataTasksF.GetAc4Name(s);
                 return;
             }
             if (e.ColumnIndex == dgcBal0Clid.Index)
             {
-                e.ToolTipText = MyData.GetClName(s);
+                e.ToolTipText = DataTasksF.GetClName(s);
                 return;
             }
         }

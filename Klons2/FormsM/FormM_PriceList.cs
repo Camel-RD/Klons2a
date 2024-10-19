@@ -89,9 +89,9 @@ namespace KlonsM.FormsM
             SaveData();
         }
 
-        public int? GetDiscountListId()
+        public int? GetPriceListId()
         {
-            return FormM_DiscountLists.GetListId();
+            return FormM_PriceLists.GetListId();
         }
 
         public int? GetStoreId(string code, EStoreType storefilter = EStoreType.Partneris)
@@ -99,19 +99,9 @@ namespace KlonsM.FormsM
             return FormM_Stores.GetStoreId(code, storefilter);
         }
 
-        public string GetStoreCode(string code)
-        {
-            return FormM_Stores.GetStoreCode(code);
-        }
-
         public int? GetStoreCatId(string code)
         {
             return FormM_StoresCat.GetStoresCatId();
-        }
-
-        public string GetStoreCatCode(string code)
-        {
-            return FormM_StoresCat.GetStoresCatCode(code);
         }
 
         public int? GetItemId(string code)
@@ -119,19 +109,9 @@ namespace KlonsM.FormsM
             return FormM_Items.GetItemId(code);
         }
 
-        public string GetItemCode(string code)
-        {
-            return FormM_Items.GetItemCode(code);
-        }
-
         public int? GetItemsCatId(string code)
         {
             return FormM_ItemsCat.GetItemsCatId(code);
-        }
-
-        public string GetItemsCatCode(string code)
-        {
-            return FormM_ItemsCat.GetItemsCatCode(code);
         }
 
         private void SetCurrentCellValue(DataGridView dgv, int value)
@@ -214,7 +194,7 @@ namespace KlonsM.FormsM
             text = text.ToLower();
             for (int i = startindex; i >= 0 && i < bsRowsR.Count; i += di)
             {
-                var dr = (bsRowsR[i] as DataRowView).Row as KlonsMDataSet.M_DISC_LISTS_RRow;
+                var dr = (bsRowsR[i] as DataRowView).Row as KlonsMDataSet.M_PRICE_LISTS_RRow;
                 if (dr == null) continue;
                 val = null;
                 if (colindex == dgcRItemName.Index)
@@ -267,7 +247,7 @@ namespace KlonsM.FormsM
             text = text.ToLower();
             for (int i = startindex; i >= 0 && i < bsRowsP.Count; i += di)
             {
-                var dr = (bsRowsP[i] as DataRowView).Row as KlonsMDataSet.M_DISC_LISTS_PRow;
+                var dr = (bsRowsP[i] as DataRowView).Row as KlonsMDataSet.M_PRICE_LISTS_PRow;
                 if (dr == null) continue;
                 val = null;
                 if (colindex == dgcPIdStore.Index)
@@ -545,7 +525,7 @@ namespace KlonsM.FormsM
 
         private void tbLists_ButtonClicked(object sender, EventArgs e)
         {
-            int? rt = GetDiscountListId();
+            int? rt = GetPriceListId();
             if (!rt.HasValue) return;
             tbLists.SelectedValue = rt.Value;
         }

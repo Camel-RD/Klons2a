@@ -139,7 +139,6 @@
             // 
             // grid
             // 
-            grid.DefaultHeight = 22;
             grid.Dock = System.Windows.Forms.DockStyle.Fill;
             grid.EnableSort = true;
             grid.Location = new System.Drawing.Point(0, 34);

@@ -132,6 +132,7 @@ namespace KlonsF.Forms
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvAcp21.AutoGenerateColumns = false;
+            this.dgvAcp21.AutoSave = true;
             this.dgvAcp21.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgvAcp21.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvAcp21.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {

@@ -308,7 +308,7 @@ namespace KlonsM.FormsM
             // 
             this.dgvRows.AllowUserToDeleteRows = false;
             this.dgvRows.AutoGenerateColumns = false;
-            this.dgvRows.AutoSave = false;
+            this.dgvRows.AutoSave = true;
             this.dgvRows.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgvRows.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvRows.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -494,7 +494,6 @@ namespace KlonsM.FormsM
             this.sgrDoc.ColumnWidth1 = 20;
             this.sgrDoc.ColumnWidth2 = 90;
             this.sgrDoc.ColumnWidth3 = 180;
-            this.sgrDoc.DefaultHeight = 22;
             this.sgrDoc.DefaultWidth = 20;
             this.sgrDoc.Dock = System.Windows.Forms.DockStyle.Top;
             this.sgrDoc.EnableSort = true;

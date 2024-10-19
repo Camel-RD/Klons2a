@@ -30,17 +30,31 @@ namespace KlonsM.FormsM
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormM_DocList));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             bNav = new KlonsLIB.Components.MyBindingNavigator();
             bsDocs = new KlonsLIB.Data.MyBindingSource(components);
             dgvDocs = new KlonsLIB.Components.MyDataGridView();
+            dgcDocsDT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            dgcDocsSR = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            dgcDocsNr = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            dgcDocsTP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            dgcDocsPVNType = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            dgcDocsState = new KlonsLIB.Components.DataGridViewColorMarkColumn();
+            dgcDocsIdStoreOut = new KlonsLIB.Components.MyDgvTextboxColumn2();
             bsStoreOut = new KlonsLIB.Data.MyBindingSource(components);
+            dgcDocsIdStoreIn = new KlonsLIB.Components.MyDgvTextboxColumn2();
             bsStoreIn = new KlonsLIB.Data.MyBindingSource(components);
+            dgcDocsSumm = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            dgcDocsCredDocDt = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            dgcDocsCredDocSr = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            dgcDocsCredDocNr = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            dgcDocsId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            dgcDocsIdSeq = new System.Windows.Forms.DataGridViewTextBoxColumn();
             bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
@@ -64,9 +78,6 @@ namespace KlonsM.FormsM
             myConfigA1 = new MyConfigA();
             panel1 = new System.Windows.Forms.Panel();
             dgvFilter = new KlonsLIB.Components.MyDataGridView();
-            bsDocFilter = new KlonsLIB.Data.MyBindingSourceToObj(components);
-            docFilterData1 = new DataObjectsFM.DocFilterData();
-            btFilter = new System.Windows.Forms.Button();
             dgcFilterDt1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             dgcFilterDt2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             dgcFilterDocType = new KlonsLIB.Components.MyDgvMcCBColumn();
@@ -74,20 +85,10 @@ namespace KlonsM.FormsM
             dgcFilterIdStoreOut = new KlonsLIB.Components.MyDgvTextboxColumn2();
             dgcFilterIdStoreIn = new KlonsLIB.Components.MyDgvTextboxColumn2();
             dgcFilterIdStoreOutOrIn = new KlonsLIB.Components.MyDgvTextboxColumn2();
-            dgcDocsDT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            dgcDocsSR = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            dgcDocsNr = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            dgcDocsTP = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            dgcDocsPVNType = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            dgcDocsState = new KlonsLIB.Components.DataGridViewColorMarkColumn();
-            dgcDocsIdStoreOut = new KlonsLIB.Components.MyDgvTextboxColumn2();
-            dgcDocsIdStoreIn = new KlonsLIB.Components.MyDgvTextboxColumn2();
-            dgcDocsSumm = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            dgcDocsCredDocDt = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            dgcDocsCredDocSr = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            dgcDocsCredDocNr = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            dgcDocsId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            dgcDocsIdSeq = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            bsDocFilter = new KlonsLIB.Data.MyBindingSourceToObj(components);
+            docFilterData1 = new DataObjectsFM.DocFilterData();
+            btFilter = new System.Windows.Forms.Button();
+            panel2 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)bNav).BeginInit();
             bNav.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)bsDocs).BeginInit();
@@ -102,6 +103,7 @@ namespace KlonsM.FormsM
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvFilter).BeginInit();
             ((System.ComponentModel.ISupportInitialize)bsDocFilter).BeginInit();
+            panel2.SuspendLayout();
             SuspendLayout();
             // 
             // bNav
@@ -160,17 +162,164 @@ namespace KlonsM.FormsM
             dgvDocs.CellFormatting += dgvDocs_CellFormatting;
             dgvDocs.UserDeletingRow += dgvDocs_UserDeletingRow;
             // 
+            // dgcDocsDT
+            // 
+            dgcDocsDT.DataPropertyName = "DT";
+            dataGridViewCellStyle6.Format = "dd.MM.yyyy";
+            dgcDocsDT.DefaultCellStyle = dataGridViewCellStyle6;
+            dgcDocsDT.HeaderText = "datums";
+            dgcDocsDT.MinimumWidth = 8;
+            dgcDocsDT.Name = "dgcDocsDT";
+            dgcDocsDT.ReadOnly = true;
+            dgcDocsDT.Width = 85;
+            // 
+            // dgcDocsSR
+            // 
+            dgcDocsSR.DataPropertyName = "SR";
+            dgcDocsSR.HeaderText = "sr.";
+            dgcDocsSR.MinimumWidth = 8;
+            dgcDocsSR.Name = "dgcDocsSR";
+            dgcDocsSR.ReadOnly = true;
+            dgcDocsSR.Width = 55;
+            // 
+            // dgcDocsNr
+            // 
+            dgcDocsNr.DataPropertyName = "NR";
+            dgcDocsNr.HeaderText = "numurs";
+            dgcDocsNr.MinimumWidth = 8;
+            dgcDocsNr.Name = "dgcDocsNr";
+            dgcDocsNr.ReadOnly = true;
+            dgcDocsNr.Width = 90;
+            // 
+            // dgcDocsTP
+            // 
+            dgcDocsTP.DataPropertyName = "TP";
+            dgcDocsTP.HeaderText = "veids";
+            dgcDocsTP.MinimumWidth = 8;
+            dgcDocsTP.Name = "dgcDocsTP";
+            dgcDocsTP.ReadOnly = true;
+            dgcDocsTP.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            dgcDocsTP.Width = 160;
+            // 
+            // dgcDocsPVNType
+            // 
+            dgcDocsPVNType.DataPropertyName = "PVNTYPE";
+            dgcDocsPVNType.HeaderText = "PVN id";
+            dgcDocsPVNType.MinimumWidth = 8;
+            dgcDocsPVNType.Name = "dgcDocsPVNType";
+            dgcDocsPVNType.ReadOnly = true;
+            dgcDocsPVNType.Width = 95;
+            // 
+            // dgcDocsState
+            // 
+            dgcDocsState.DataPropertyName = "STATE";
+            dgcDocsState.HeaderText = "statuss";
+            dgcDocsState.MinimumWidth = 8;
+            dgcDocsState.Name = "dgcDocsState";
+            dgcDocsState.ReadOnly = true;
+            dgcDocsState.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            dgcDocsState.Width = 110;
+            // 
+            // dgcDocsIdStoreOut
+            // 
+            dgcDocsIdStoreOut.DataPropertyName = "IDSTOREOUT";
+            dgcDocsIdStoreOut.DataSource = bsStoreOut;
+            dgcDocsIdStoreOut.DisplayMember = "CODE";
+            dgcDocsIdStoreOut.HeaderText = "izsniedzējs";
+            dgcDocsIdStoreOut.MinimumWidth = 8;
+            dgcDocsIdStoreOut.Name = "dgcDocsIdStoreOut";
+            dgcDocsIdStoreOut.ReadOnly = true;
+            dgcDocsIdStoreOut.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            dgcDocsIdStoreOut.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            dgcDocsIdStoreOut.ValueMember = "ID";
+            dgcDocsIdStoreOut.Width = 160;
+            // 
             // bsStoreOut
             // 
             bsStoreOut.DataMember = "M_STORES";
             bsStoreOut.MyDataSource = "KlonsMData";
             bsStoreOut.Sort = "CODE";
             // 
+            // dgcDocsIdStoreIn
+            // 
+            dgcDocsIdStoreIn.DataPropertyName = "IDSTOREIN";
+            dgcDocsIdStoreIn.DataSource = bsStoreIn;
+            dgcDocsIdStoreIn.DisplayMember = "CODE";
+            dgcDocsIdStoreIn.HeaderText = "saņēmējs";
+            dgcDocsIdStoreIn.MinimumWidth = 8;
+            dgcDocsIdStoreIn.Name = "dgcDocsIdStoreIn";
+            dgcDocsIdStoreIn.ReadOnly = true;
+            dgcDocsIdStoreIn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            dgcDocsIdStoreIn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            dgcDocsIdStoreIn.ValueMember = "ID";
+            dgcDocsIdStoreIn.Width = 160;
+            // 
             // bsStoreIn
             // 
             bsStoreIn.DataMember = "M_STORES";
             bsStoreIn.MyDataSource = "KlonsMData";
             bsStoreIn.Sort = "CODE";
+            // 
+            // dgcDocsSumm
+            // 
+            dgcDocsSumm.DataPropertyName = "SUMM";
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle7.Format = "N2";
+            dgcDocsSumm.DefaultCellStyle = dataGridViewCellStyle7;
+            dgcDocsSumm.HeaderText = "summa";
+            dgcDocsSumm.MinimumWidth = 8;
+            dgcDocsSumm.Name = "dgcDocsSumm";
+            dgcDocsSumm.ReadOnly = true;
+            dgcDocsSumm.Width = 90;
+            // 
+            // dgcDocsCredDocDt
+            // 
+            dgcDocsCredDocDt.DataPropertyName = "CREDDOCDT";
+            dataGridViewCellStyle8.Format = "dd.MM.yyyy";
+            dgcDocsCredDocDt.DefaultCellStyle = dataGridViewCellStyle8;
+            dgcDocsCredDocDt.HeaderText = "kd. dat.";
+            dgcDocsCredDocDt.MinimumWidth = 8;
+            dgcDocsCredDocDt.Name = "dgcDocsCredDocDt";
+            dgcDocsCredDocDt.ReadOnly = true;
+            dgcDocsCredDocDt.Width = 85;
+            // 
+            // dgcDocsCredDocSr
+            // 
+            dgcDocsCredDocSr.DataPropertyName = "CREDDOCSR";
+            dgcDocsCredDocSr.HeaderText = "kd.sr.";
+            dgcDocsCredDocSr.MinimumWidth = 8;
+            dgcDocsCredDocSr.Name = "dgcDocsCredDocSr";
+            dgcDocsCredDocSr.ReadOnly = true;
+            dgcDocsCredDocSr.Width = 55;
+            // 
+            // dgcDocsCredDocNr
+            // 
+            dgcDocsCredDocNr.DataPropertyName = "CREDDOCNR";
+            dgcDocsCredDocNr.HeaderText = "kd. nr.";
+            dgcDocsCredDocNr.MinimumWidth = 8;
+            dgcDocsCredDocNr.Name = "dgcDocsCredDocNr";
+            dgcDocsCredDocNr.ReadOnly = true;
+            dgcDocsCredDocNr.Width = 90;
+            // 
+            // dgcDocsId
+            // 
+            dgcDocsId.DataPropertyName = "ID";
+            dgcDocsId.HeaderText = "ID";
+            dgcDocsId.MinimumWidth = 8;
+            dgcDocsId.Name = "dgcDocsId";
+            dgcDocsId.ReadOnly = true;
+            dgcDocsId.Visible = false;
+            dgcDocsId.Width = 50;
+            // 
+            // dgcDocsIdSeq
+            // 
+            dgcDocsIdSeq.DataPropertyName = "IDSEQ";
+            dgcDocsIdSeq.HeaderText = "IDSEQ";
+            dgcDocsIdSeq.MinimumWidth = 8;
+            dgcDocsIdSeq.Name = "dgcDocsIdSeq";
+            dgcDocsIdSeq.ReadOnly = true;
+            dgcDocsIdSeq.Visible = false;
+            dgcDocsIdSeq.Width = 80;
             // 
             // bindingNavigatorCountItem
             // 
@@ -343,7 +492,7 @@ namespace KlonsM.FormsM
             // panel1
             // 
             panel1.Controls.Add(dgvFilter);
-            panel1.Controls.Add(btFilter);
+            panel1.Controls.Add(panel2);
             panel1.Dock = System.Windows.Forms.DockStyle.Top;
             panel1.Location = new System.Drawing.Point(0, 0);
             panel1.Name = "panel1";
@@ -360,49 +509,23 @@ namespace KlonsM.FormsM
             dgvFilter.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvFilter.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { dgcFilterDt1, dgcFilterDt2, dgcFilterDocType, dgcFilterDocState, dgcFilterIdStoreOut, dgcFilterIdStoreIn, dgcFilterIdStoreOutOrIn });
             dgvFilter.DataSource = bsDocFilter;
-            dgvFilter.Dock = System.Windows.Forms.DockStyle.Top;
+            dgvFilter.Dock = System.Windows.Forms.DockStyle.Fill;
             dgvFilter.Location = new System.Drawing.Point(0, 0);
             dgvFilter.Name = "dgvFilter";
             dgvFilter.RowHeadersVisible = false;
             dgvFilter.RowHeadersWidth = 62;
             dgvFilter.ScrollBars = System.Windows.Forms.ScrollBars.None;
             dgvFilter.ShowCellToolTips = false;
-            dgvFilter.Size = new System.Drawing.Size(924, 59);
+            dgvFilter.Size = new System.Drawing.Size(969, 63);
             dgvFilter.TabIndex = 0;
             dgvFilter.CellFormatting += dgvFilter_CellFormatting;
             dgvFilter.CellParsing += dgvFilter_CellParsing;
             // 
-            // bsDocFilter
-            // 
-            bsDocFilter.MyDataSource = docFilterData1;
-            bsDocFilter.Position = 0;
-            // 
-            // docFilterData1
-            // 
-            docFilterData1.DocState = null;
-            docFilterData1.DocType = null;
-            docFilterData1.Dt1 = null;
-            docFilterData1.Dt2 = null;
-            docFilterData1.IdStoreIn = null;
-            docFilterData1.IdStoreOut = null;
-            docFilterData1.IdStoreOutOrIn = null;
-            // 
-            // btFilter
-            // 
-            btFilter.Dock = System.Windows.Forms.DockStyle.Right;
-            btFilter.Location = new System.Drawing.Point(924, 0);
-            btFilter.Name = "btFilter";
-            btFilter.Size = new System.Drawing.Size(114, 63);
-            btFilter.TabIndex = 1;
-            btFilter.Text = "Atlasīt dokumentus";
-            btFilter.UseVisualStyleBackColor = true;
-            btFilter.Click += btFilter_Click;
-            // 
             // dgcFilterDt1
             // 
             dgcFilterDt1.DataPropertyName = "Dt1";
-            dataGridViewCellStyle4.Format = "dd.MM.yyyy";
-            dgcFilterDt1.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle9.Format = "dd.MM.yyyy";
+            dgcFilterDt1.DefaultCellStyle = dataGridViewCellStyle9;
             dgcFilterDt1.HeaderText = "datums no";
             dgcFilterDt1.MinimumWidth = 8;
             dgcFilterDt1.Name = "dgcFilterDt1";
@@ -412,8 +535,8 @@ namespace KlonsM.FormsM
             // dgcFilterDt2
             // 
             dgcFilterDt2.DataPropertyName = "Dt2";
-            dataGridViewCellStyle5.Format = "dd.MM.yyyy";
-            dgcFilterDt2.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle10.Format = "dd.MM.yyyy";
+            dgcFilterDt2.DefaultCellStyle = dataGridViewCellStyle10;
             dgcFilterDt2.HeaderText = "datums līdz";
             dgcFilterDt2.MinimumWidth = 8;
             dgcFilterDt2.Name = "dgcFilterDt2";
@@ -485,152 +608,41 @@ namespace KlonsM.FormsM
             dgcFilterIdStoreOutOrIn.ValueMember = "ID";
             dgcFilterIdStoreOutOrIn.Width = 200;
             // 
-            // dgcDocsDT
+            // bsDocFilter
             // 
-            dgcDocsDT.DataPropertyName = "DT";
-            dataGridViewCellStyle1.Format = "dd.MM.yyyy";
-            dgcDocsDT.DefaultCellStyle = dataGridViewCellStyle1;
-            dgcDocsDT.HeaderText = "datums";
-            dgcDocsDT.MinimumWidth = 8;
-            dgcDocsDT.Name = "dgcDocsDT";
-            dgcDocsDT.ReadOnly = true;
-            dgcDocsDT.Width = 85;
+            bsDocFilter.MyDataSource = docFilterData1;
+            bsDocFilter.Position = 0;
             // 
-            // dgcDocsSR
+            // docFilterData1
             // 
-            dgcDocsSR.DataPropertyName = "SR";
-            dgcDocsSR.HeaderText = "sr.";
-            dgcDocsSR.MinimumWidth = 8;
-            dgcDocsSR.Name = "dgcDocsSR";
-            dgcDocsSR.ReadOnly = true;
-            dgcDocsSR.Width = 55;
+            docFilterData1.DocState = null;
+            docFilterData1.DocType = null;
+            docFilterData1.Dt1 = null;
+            docFilterData1.Dt2 = null;
+            docFilterData1.IdStoreIn = null;
+            docFilterData1.IdStoreOut = null;
+            docFilterData1.IdStoreOutOrIn = null;
             // 
-            // dgcDocsNr
+            // btFilter
             // 
-            dgcDocsNr.DataPropertyName = "NR";
-            dgcDocsNr.HeaderText = "numurs";
-            dgcDocsNr.MinimumWidth = 8;
-            dgcDocsNr.Name = "dgcDocsNr";
-            dgcDocsNr.ReadOnly = true;
-            dgcDocsNr.Width = 90;
+            btFilter.Dock = System.Windows.Forms.DockStyle.Fill;
+            btFilter.Location = new System.Drawing.Point(3, 3);
+            btFilter.Name = "btFilter";
+            btFilter.Size = new System.Drawing.Size(63, 57);
+            btFilter.TabIndex = 1;
+            btFilter.Text = "Atlasīt";
+            btFilter.UseVisualStyleBackColor = true;
+            btFilter.Click += btFilter_Click;
             // 
-            // dgcDocsTP
+            // panel2
             // 
-            dgcDocsTP.DataPropertyName = "TP";
-            dgcDocsTP.HeaderText = "veids";
-            dgcDocsTP.MinimumWidth = 8;
-            dgcDocsTP.Name = "dgcDocsTP";
-            dgcDocsTP.ReadOnly = true;
-            dgcDocsTP.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            dgcDocsTP.Width = 160;
-            // 
-            // dgcDocsPVNType
-            // 
-            dgcDocsPVNType.DataPropertyName = "PVNTYPE";
-            dgcDocsPVNType.HeaderText = "PVN id";
-            dgcDocsPVNType.MinimumWidth = 8;
-            dgcDocsPVNType.Name = "dgcDocsPVNType";
-            dgcDocsPVNType.ReadOnly = true;
-            dgcDocsPVNType.Width = 95;
-            // 
-            // dgcDocsState
-            // 
-            dgcDocsState.DataPropertyName = "STATE";
-            dgcDocsState.HeaderText = "statuss";
-            dgcDocsState.MinimumWidth = 8;
-            dgcDocsState.Name = "dgcDocsState";
-            dgcDocsState.ReadOnly = true;
-            dgcDocsState.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            dgcDocsState.Width = 110;
-            // 
-            // dgcDocsIdStoreOut
-            // 
-            dgcDocsIdStoreOut.DataPropertyName = "IDSTOREOUT";
-            dgcDocsIdStoreOut.DataSource = bsStoreOut;
-            dgcDocsIdStoreOut.DisplayMember = "CODE";
-            dgcDocsIdStoreOut.HeaderText = "izsniedzējs";
-            dgcDocsIdStoreOut.MinimumWidth = 8;
-            dgcDocsIdStoreOut.Name = "dgcDocsIdStoreOut";
-            dgcDocsIdStoreOut.ReadOnly = true;
-            dgcDocsIdStoreOut.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            dgcDocsIdStoreOut.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            dgcDocsIdStoreOut.ValueMember = "ID";
-            dgcDocsIdStoreOut.Width = 160;
-            // 
-            // dgcDocsIdStoreIn
-            // 
-            dgcDocsIdStoreIn.DataPropertyName = "IDSTOREIN";
-            dgcDocsIdStoreIn.DataSource = bsStoreIn;
-            dgcDocsIdStoreIn.DisplayMember = "CODE";
-            dgcDocsIdStoreIn.HeaderText = "saņēmējs";
-            dgcDocsIdStoreIn.MinimumWidth = 8;
-            dgcDocsIdStoreIn.Name = "dgcDocsIdStoreIn";
-            dgcDocsIdStoreIn.ReadOnly = true;
-            dgcDocsIdStoreIn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            dgcDocsIdStoreIn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            dgcDocsIdStoreIn.ValueMember = "ID";
-            dgcDocsIdStoreIn.Width = 160;
-            // 
-            // dgcDocsSumm
-            // 
-            dgcDocsSumm.DataPropertyName = "SUMM";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle2.Format = "N2";
-            dgcDocsSumm.DefaultCellStyle = dataGridViewCellStyle2;
-            dgcDocsSumm.HeaderText = "summa";
-            dgcDocsSumm.MinimumWidth = 8;
-            dgcDocsSumm.Name = "dgcDocsSumm";
-            dgcDocsSumm.ReadOnly = true;
-            dgcDocsSumm.Width = 90;
-            // 
-            // dgcDocsCredDocDt
-            // 
-            dgcDocsCredDocDt.DataPropertyName = "CREDDOCDT";
-            dataGridViewCellStyle3.Format = "dd.MM.yyyy";
-            dgcDocsCredDocDt.DefaultCellStyle = dataGridViewCellStyle3;
-            dgcDocsCredDocDt.HeaderText = "kd. dat.";
-            dgcDocsCredDocDt.MinimumWidth = 8;
-            dgcDocsCredDocDt.Name = "dgcDocsCredDocDt";
-            dgcDocsCredDocDt.ReadOnly = true;
-            dgcDocsCredDocDt.Width = 85;
-            // 
-            // dgcDocsCredDocSr
-            // 
-            dgcDocsCredDocSr.DataPropertyName = "CREDDOCSR";
-            dgcDocsCredDocSr.HeaderText = "kd.sr.";
-            dgcDocsCredDocSr.MinimumWidth = 8;
-            dgcDocsCredDocSr.Name = "dgcDocsCredDocSr";
-            dgcDocsCredDocSr.ReadOnly = true;
-            dgcDocsCredDocSr.Width = 55;
-            // 
-            // dgcDocsCredDocNr
-            // 
-            dgcDocsCredDocNr.DataPropertyName = "CREDDOCNR";
-            dgcDocsCredDocNr.HeaderText = "kd. nr.";
-            dgcDocsCredDocNr.MinimumWidth = 8;
-            dgcDocsCredDocNr.Name = "dgcDocsCredDocNr";
-            dgcDocsCredDocNr.ReadOnly = true;
-            dgcDocsCredDocNr.Width = 90;
-            // 
-            // dgcDocsId
-            // 
-            dgcDocsId.DataPropertyName = "ID";
-            dgcDocsId.HeaderText = "ID";
-            dgcDocsId.MinimumWidth = 8;
-            dgcDocsId.Name = "dgcDocsId";
-            dgcDocsId.ReadOnly = true;
-            dgcDocsId.Visible = false;
-            dgcDocsId.Width = 50;
-            // 
-            // dgcDocsIdSeq
-            // 
-            dgcDocsIdSeq.DataPropertyName = "IDSEQ";
-            dgcDocsIdSeq.HeaderText = "IDSEQ";
-            dgcDocsIdSeq.MinimumWidth = 8;
-            dgcDocsIdSeq.Name = "dgcDocsIdSeq";
-            dgcDocsIdSeq.ReadOnly = true;
-            dgcDocsIdSeq.Visible = false;
-            dgcDocsIdSeq.Width = 80;
+            panel2.Controls.Add(btFilter);
+            panel2.Dock = System.Windows.Forms.DockStyle.Right;
+            panel2.Location = new System.Drawing.Point(969, 0);
+            panel2.Name = "panel2";
+            panel2.Padding = new System.Windows.Forms.Padding(3);
+            panel2.Size = new System.Drawing.Size(69, 63);
+            panel2.TabIndex = 2;
             // 
             // FormM_DocList
             // 
@@ -658,6 +670,7 @@ namespace KlonsM.FormsM
             panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dgvFilter).EndInit();
             ((System.ComponentModel.ISupportInitialize)bsDocFilter).EndInit();
+            panel2.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -716,5 +729,6 @@ namespace KlonsM.FormsM
         private KlonsLIB.Components.MyDgvTextboxColumn2 dgcFilterIdStoreOut;
         private KlonsLIB.Components.MyDgvTextboxColumn2 dgcFilterIdStoreIn;
         private KlonsLIB.Components.MyDgvTextboxColumn2 dgcFilterIdStoreOutOrIn;
+        private System.Windows.Forms.Panel panel2;
     }
 }

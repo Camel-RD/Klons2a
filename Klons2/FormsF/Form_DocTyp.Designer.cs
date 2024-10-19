@@ -65,9 +65,9 @@ namespace KlonsF.Forms
             dgcDocTypAId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             dgcDocTypAName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             bsDocTypA = new MyBindingSource(components);
-            bsDocTypB = new MyBindingSource2(components);
             dgvDocTypB = new MyDataGridView();
             idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            bsDocTypB = new MyBindingSource2(components);
             bsDocTyp2 = new MyBindingSource(components);
             myAdapterManager1 = new MyAdapterManager();
             ((System.ComponentModel.ISupportInitialize)bnavDocTyp).BeginInit();
@@ -84,8 +84,8 @@ namespace KlonsF.Forms
             splitContainer2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvDocTypA).BeginInit();
             ((System.ComponentModel.ISupportInitialize)bsDocTypA).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)bsDocTypB).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dgvDocTypB).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)bsDocTypB).BeginInit();
             ((System.ComponentModel.ISupportInitialize)bsDocTyp2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)myAdapterManager1).BeginInit();
             SuspendLayout();
@@ -96,7 +96,7 @@ namespace KlonsF.Forms
             bnavDocTyp.BindingSource = bsDocTyp;
             bnavDocTyp.CountItem = bindingNavigatorCountItem;
             bnavDocTyp.CountItemFormat = " no {0}";
-            bnavDocTyp.DeleteItem = bindingNavigatorDeleteItem;
+            bnavDocTyp.DeleteItem = null;
             bnavDocTyp.Dock = System.Windows.Forms.DockStyle.Bottom;
             bnavDocTyp.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             bnavDocTyp.ImageScalingSize = new System.Drawing.Size(21, 21);
@@ -125,7 +125,6 @@ namespace KlonsF.Forms
             // 
             // bsDocTyp
             // 
-            bsDocTyp.AutoSaveOnDelete = true;
             bsDocTyp.DataMember = "DocTyp";
             bsDocTyp.MyDataSource = "KlonsData";
             bsDocTyp.Name2 = "bsDocTyp";
@@ -147,6 +146,7 @@ namespace KlonsF.Forms
             bindingNavigatorDeleteItem.Size = new System.Drawing.Size(69, 25);
             bindingNavigatorDeleteItem.Text = "Dzēst";
             bindingNavigatorDeleteItem.ToolTipText = "Dzēst (Ctrl+Delete)";
+            bindingNavigatorDeleteItem.Click += bindingNavigatorDeleteItem_Click;
             // 
             // toolStripLabel1
             // 
@@ -388,7 +388,7 @@ namespace KlonsF.Forms
             // 
             splitContainer2.Panel2.Controls.Add(dgvDocTypB);
             splitContainer2.Size = new System.Drawing.Size(721, 167);
-            splitContainer2.SplitterDistance = 490;
+            splitContainer2.SplitterDistance = 489;
             splitContainer2.SplitterWidth = 3;
             splitContainer2.TabIndex = 0;
             // 
@@ -404,7 +404,7 @@ namespace KlonsF.Forms
             dgvDocTypA.Margin = new System.Windows.Forms.Padding(2);
             dgvDocTypA.Name = "dgvDocTypA";
             dgvDocTypA.RowHeadersWidth = 62;
-            dgvDocTypA.Size = new System.Drawing.Size(490, 167);
+            dgvDocTypA.Size = new System.Drawing.Size(489, 167);
             dgvDocTypA.TabIndex = 7;
             dgvDocTypA.MyKeyDown += dgvDocTypA_MyKeyDown;
             dgvDocTypA.MyCheckForChanges += dgvDocTyp_MyCheckForChanges;
@@ -433,22 +433,11 @@ namespace KlonsF.Forms
             // 
             // bsDocTypA
             // 
-            bsDocTypA.AutoSaveChildrenDelete = true;
-            bsDocTypA.AutoSaveOnDelete = true;
-            bsDocTypA.ChildBS = bsDocTypB;
             bsDocTypA.DataMember = "DocTypA";
             bsDocTypA.MyDataSource = "KlonsData";
             bsDocTypA.Name2 = "bsDocTypA";
             bsDocTypA.Sort = "id";
             bsDocTypA.ListChanged += bsDocTyp_ListChanged;
-            // 
-            // bsDocTypB
-            // 
-            bsDocTypB.AutoSaveOnDelete = true;
-            bsDocTypB.DataMember = "FK_DOCTYPB_IDA_DOCTYPA_ID";
-            bsDocTypB.DataSource = bsDocTypA;
-            bsDocTypB.Name2 = "bsDocTypB";
-            bsDocTypB.ListChanged += bsDocTyp_ListChanged;
             // 
             // dgvDocTypB
             // 
@@ -462,7 +451,7 @@ namespace KlonsF.Forms
             dgvDocTypB.Margin = new System.Windows.Forms.Padding(2);
             dgvDocTypB.Name = "dgvDocTypB";
             dgvDocTypB.RowHeadersWidth = 62;
-            dgvDocTypB.Size = new System.Drawing.Size(228, 167);
+            dgvDocTypB.Size = new System.Drawing.Size(229, 167);
             dgvDocTypB.TabIndex = 8;
             dgvDocTypB.MyKeyDown += dgvDocTypB_MyKeyDown;
             dgvDocTypB.MyCheckForChanges += dgvDocTyp_MyCheckForChanges;
@@ -477,9 +466,15 @@ namespace KlonsF.Forms
             idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
             idDataGridViewTextBoxColumn.Width = 90;
             // 
+            // bsDocTypB
+            // 
+            bsDocTypB.DataMember = "FK_DOCTYPB_IDA_DOCTYPA_ID";
+            bsDocTypB.DataSource = bsDocTypA;
+            bsDocTypB.Name2 = "bsDocTypB";
+            bsDocTypB.ListChanged += bsDocTyp_ListChanged;
+            // 
             // bsDocTyp2
             // 
-            bsDocTyp2.AutoSaveOnDelete = true;
             bsDocTyp2.DataMember = "DocTyp";
             bsDocTyp2.MyDataSource = "KlonsData";
             bsDocTyp2.Name2 = "bsDocTyp2";
@@ -527,8 +522,8 @@ namespace KlonsF.Forms
             splitContainer2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dgvDocTypA).EndInit();
             ((System.ComponentModel.ISupportInitialize)bsDocTypA).EndInit();
-            ((System.ComponentModel.ISupportInitialize)bsDocTypB).EndInit();
             ((System.ComponentModel.ISupportInitialize)dgvDocTypB).EndInit();
+            ((System.ComponentModel.ISupportInitialize)bsDocTypB).EndInit();
             ((System.ComponentModel.ISupportInitialize)bsDocTyp2).EndInit();
             ((System.ComponentModel.ISupportInitialize)myAdapterManager1).EndInit();
             ResumeLayout(false);

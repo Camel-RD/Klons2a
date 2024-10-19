@@ -130,7 +130,7 @@ namespace KlonsP.Forms
         private bool IsRow0(int rownr)
         {
             if (rownr == dgvDepartments.NewRowIndex) return false;
-            var dr = dgvDepartments.GetDataRow(rownr) as KlonsPDataSet.CAT1Row;
+            var dr = dgvDepartments.GetDataRow(rownr) as KlonsPDataSet.DEPARTMENTSRow;
             if (dr == null) return false;
             return dr.ID == 0;
         }

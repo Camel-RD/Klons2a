@@ -167,7 +167,7 @@ namespace KlonsF.Forms
                     bnavBalsA1.BindingSource == bsBalA3 &&
                     dgvBalA3.CurrentRow != null && !dgvBalA3.CurrentRow.IsNewRow)
                 {
-                    bnavBalsA1.DeleteCurrent();
+                    DeleteCurrent();
                     e.Handled = true;
                 }
             }
@@ -233,8 +233,8 @@ namespace KlonsF.Forms
             var o = dgvBalA1.GetCurrentDataItem();
             if (o == null) return;
 
-            string balid = (string) dgvBalA1.CurrentRow.Cells[dgcBalA1balid.Index].Value;
-            
+            string balid = (string)dgvBalA1.CurrentRow.Cells[dgcBalA1balid.Index].Value;
+
             var dt = MyData.KlonsFTableAdapterManager.AcP21TableAdapter.GetDataBy_bal_13(balid);
             if (pza)
             {
@@ -390,10 +390,20 @@ namespace KlonsF.Forms
             if (!dgvBalA1.EndEditX()) return false;
             if (!dgvBalA2.EndEditX()) return false;
             if (!dgvBalA3.EndEditX()) return false;
-            var rt = myAdapterManager1.UpdateAll();
-            //var ret1 = bsBalA1.SaveTable();
-            CheckSave();
-            return rt;
+            if (!this.Validate()) return false;
+            try
+            {
+                DataTasksF.SetNewIDs(myAdapterManager1);
+                bool rt = myAdapterManager1.UpdateAll();
+                CheckSave();
+                return rt;
+            }
+            catch (Exception e)
+            {
+                CheckSave();
+                Form_Error.ShowException(e, "Neizdevās saglabāt izmaiņas.");
+                return false;
+            }
         }
 
         private bool HasChanges()
@@ -443,6 +453,17 @@ namespace KlonsF.Forms
         private void dgvBalA3_DefaultValuesNeeded(object sender, DataGridViewRowEventArgs e)
         {
             e.Row.Cells[dgcBalA3tp.Index].Value = cbReportPart.SelectedIndex == 0 ? "Db" : "Kr";
+        }
+
+        public void DeleteCurrent()
+        {
+            bnavBalsA1.DeleteCurrent();
+            SaveData();
+        }
+
+        private void bindingNavigatorDeleteItem_Click(object sender, EventArgs e)
+        {
+            DeleteCurrent();
         }
     }
 }

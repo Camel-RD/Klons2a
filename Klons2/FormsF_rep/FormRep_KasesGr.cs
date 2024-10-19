@@ -55,7 +55,7 @@ namespace KlonsF.FormsReportParams
                 lbACName.Text = "";
                 return;
             }
-            lbACName.Text = MyData.GetAcName(s);
+            lbACName.Text = DataTasksF.GetAcName(s);
         }
 
         private void cbAC_SelectedIndexChanged(object sender, EventArgs e)

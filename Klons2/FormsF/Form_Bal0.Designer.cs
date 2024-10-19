@@ -135,6 +135,7 @@ namespace KlonsF.Forms
             // dgvBal0
             // 
             dgvBal0.AutoGenerateColumns = false;
+            dgvBal0.AutoSave = true;
             dgvBal0.BackgroundColor = System.Drawing.SystemColors.Control;
             dgvBal0.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvBal0.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { dataGridViewTextBoxColumn1, dgcBal0AC11, dgcBal0AC24, dgcBal0Clid, dgcSummDC, dgcSummCC, dgcCur, dgcCurRate, dgcSummD, dgcSummC });
@@ -388,7 +389,7 @@ namespace KlonsF.Forms
             // tbAcc
             // 
             tbAcc.BorderColor = System.Drawing.SystemColors.ControlDarkDark;
-            tbAcc.ColumnNr = -1;
+            tbAcc.ColumnNr = 1;
             tbAcc.DataMember = null;
             tbAcc.DataSource = bsBal0;
             tbAcc.Location = new System.Drawing.Point(58, 3);

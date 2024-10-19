@@ -156,7 +156,7 @@ namespace KlonsM.FormsM
         private void dgvRows_MyCheckForChanges(object sender, EventArgs e)
         {
             if (IsLoading) return;
-            SaveData();
+            CheckSave();
         }
 
         private void bsRows_ListChanged(object sender, ListChangedEventArgs e)
@@ -167,12 +167,30 @@ namespace KlonsM.FormsM
 
         private void dgvRows_UserDeletingRow(object sender, DataGridViewRowCancelEventArgs e)
         {
-            e.Cancel = e.Row.IsNewRow || !AskCanDelete();
+            e.Cancel = e.Row.IsNewRow || IsRow0(e.Row.Index) ||!AskCanDelete();
         }
 
         private void bNav_ItemDeleting(object sender, CancelEventArgs e)
         {
-            e.Cancel = !AskCanDelete();
+            e.Cancel = IsRow0(bsRows.Position) || !AskCanDelete();
+        }
+
+        private bool IsRow0(int rownr)
+        {
+            if (rownr == dgvRows.NewRowIndex) return false;
+            var dr = dgvRows.GetDataRow(rownr) as KlonsMDataSet.M_TRANSACTIONTYPERow    ;
+            if (dr == null) return false;
+            return dr.ID == 0;
+        }
+
+        private void DgvRows_CellBeginEdit(object sender, DataGridViewCellCancelEventArgs e)
+        {
+            //can edit can't delete
+            /*
+            if (e.RowIndex == dgvRows.NewRowIndex) return;
+            if (IsRow0(e.RowIndex))
+                e.Cancel = true;
+            */
         }
 
     }

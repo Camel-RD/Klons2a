@@ -599,12 +599,12 @@ namespace KlonsF.Forms
             if (string.IsNullOrEmpty(s)) return;
             if (e.ColumnIndex == dgcDocTyp.Index)
             {
-                e.ToolTipText = MyData.GetDocTypName(s);
+                e.ToolTipText = DataTasksF.GetDocTypName(s);
                 return;
             }
             if (e.ColumnIndex == dgcClid.Index)
             {
-                e.ToolTipText = MyData.GetClName(s);
+                e.ToolTipText = DataTasksF.GetClName(s);
                 return;
             }
             if (e.ColumnIndex == dgcAC11.Index ||
@@ -612,25 +612,25 @@ namespace KlonsF.Forms
                 e.ColumnIndex == dgcAC21.Index ||
                 e.ColumnIndex == dgcAC22.Index)
             {
-                e.ToolTipText = MyData.GetAcName(s);
+                e.ToolTipText = DataTasksF.GetAcName(s);
                 return;
             }
             if (e.ColumnIndex == dgcAC13.Index ||
                 e.ColumnIndex == dgcAC23.Index)
             {
-                e.ToolTipText = MyData.GetAc3Name(s);
+                e.ToolTipText = DataTasksF.GetAc3Name(s);
                 return;
             }
             if (e.ColumnIndex == dgcAC14.Index ||
                 e.ColumnIndex == dgcAC24.Index)
             {
-                e.ToolTipText = MyData.GetAc4Name(s);
+                e.ToolTipText = DataTasksF.GetAc4Name(s);
                 return;
             }
             if (e.ColumnIndex == dgcAC15.Index ||
                 e.ColumnIndex == dgcAC25.Index)
             {
-                e.ToolTipText = MyData.GetAc5Name(s);
+                e.ToolTipText = DataTasksF.GetAc5Name(s);
                 return;
             }
         }

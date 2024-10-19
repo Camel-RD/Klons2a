@@ -111,7 +111,7 @@ namespace KlonsF.Forms
             if (colind == dgcClid.Index)
             {
                 dgvDocs0.GoingToDialog = true;
-                MyMainForm.ShowFormAcp5Dialog(act);
+                MyMainForm.ShowFormPersonsDialog(act);
                 return;
             }
         }
@@ -184,12 +184,12 @@ namespace KlonsF.Forms
             if (string.IsNullOrEmpty(s)) return;
             if (e.ColumnIndex == dgcAC.Index)
             {
-                e.ToolTipText = MyData.GetAcName(s);
+                e.ToolTipText = DataTasksF.GetAcName(s);
                 return;
             }
             if (e.ColumnIndex == dgcClid.Index)
             {
-                e.ToolTipText = MyData.GetClName(s);
+                e.ToolTipText = DataTasksF.GetClName(s);
                 return;
             }
         }

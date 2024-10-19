@@ -274,7 +274,7 @@ namespace KlonsA.Forms
         private void dgvSar_MyCheckForChanges(object sender, EventArgs e)
         {
             if (IsLoading) return;
-            SaveData();
+            CheckSave();
         }
 
         private void tsbSave_Click(object sender, EventArgs e)
