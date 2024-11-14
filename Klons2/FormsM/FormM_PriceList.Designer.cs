@@ -105,7 +105,7 @@ namespace KlonsM.FormsM
             bNav.DeleteItem = bniDelete;
             bNav.Dock = System.Windows.Forms.DockStyle.Bottom;
             bNav.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            bNav.ImageScalingSize = new System.Drawing.Size(24, 24);
+            bNav.ImageScalingSize = new System.Drawing.Size(16, 16);
             bNav.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { tslActiveTable, bindingNavigatorMoveFirstItem, bindingNavigatorMovePreviousItem, bindingNavigatorSeparator, bindingNavigatorPositionItem, bindingNavigatorCountItem, bindingNavigatorSeparator1, bindingNavigatorMoveNextItem, bindingNavigatorMoveLastItem, bindingNavigatorSeparator2, bniNew, bniDelete, bniSave, tsbFindPrev, tsbFind, tsbFindNext });
             bNav.Location = new System.Drawing.Point(0, 512);
             bNav.MoveFirstItem = bindingNavigatorMoveFirstItem;
@@ -465,7 +465,7 @@ namespace KlonsM.FormsM
             // 
             menuStrip1.Dock = System.Windows.Forms.DockStyle.None;
             menuStrip1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
+            menuStrip1.ImageScalingSize = new System.Drawing.Size(16, 16);
             menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { miCenuLapaTools });
             menuStrip1.Location = new System.Drawing.Point(671, 0);
             menuStrip1.Name = "menuStrip1";
@@ -499,7 +499,6 @@ namespace KlonsM.FormsM
             MainMenuStrip = menuStrip1;
             Name = "FormM_PriceList";
             Text = "Cenu lapa";
-            Load += FormM_DiscountList_Load;
             ((System.ComponentModel.ISupportInitialize)bsLists).EndInit();
             ((System.ComponentModel.ISupportInitialize)bNav).EndInit();
             bNav.ResumeLayout(false);

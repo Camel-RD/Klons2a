@@ -122,7 +122,7 @@
             bnavBanks.DeleteItem = bindingNavigatorDeleteItem;
             bnavBanks.Dock = System.Windows.Forms.DockStyle.Bottom;
             bnavBanks.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            bnavBanks.ImageScalingSize = new System.Drawing.Size(21, 21);
+            bnavBanks.ImageScalingSize = new System.Drawing.Size(16, 16);
             bnavBanks.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { bindingNavigatorMoveFirstItem, bindingNavigatorMovePreviousItem, bindingNavigatorSeparator, bindingNavigatorPositionItem, bindingNavigatorCountItem, bindingNavigatorSeparator1, bindingNavigatorMoveNextItem, bindingNavigatorMoveLastItem, bindingNavigatorSeparator2, bindingNavigatorAddNewItem, bindingNavigatorDeleteItem, tsbSave });
             bnavBanks.Location = new System.Drawing.Point(0, 241);
             bnavBanks.MoveFirstItem = bindingNavigatorMoveFirstItem;

@@ -55,7 +55,7 @@
             // 
             // toolStrip1
             // 
-            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(21, 21);
+            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(16, 16);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripLabel2,
             this.cbYR,

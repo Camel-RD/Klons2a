@@ -1393,10 +1393,12 @@ namespace KlonsA.Classes
                 if (dr.PAY0 != PAY0) return true;
                 if (dr.IIN0 != IIN0) return true;
                 if (dr.ADVANCE0 != ADVANCE0) return true;
+                if (dr.WITHHOLDINGS0 != WITHHOLDINGS0) return true;
                 if (dr.TPAY0 != TPAY0) return true;
                 if (dr.PAY != PAY) return true;
                 if (dr.IIN != IIN) return true;
                 if (dr.ADVANCE != ADVANCE) return true;
+                if (dr.WITHHOLDINGS != WITHHOLDINGS) return true;
                 if (dr.TPAY != TPAY) return true;
                 if (dr.IIN_REVERSE != IIN_REVERSE) return true;
                 if (dr.PAY_REVERSE != PAY_REVERSE) return true;
@@ -1410,10 +1412,12 @@ namespace KlonsA.Classes
                 if (dr.PAY0 != PAY0) dr.PAY0 = PAY0;
                 if (dr.IIN0 != IIN0) dr.IIN0 = IIN0;
                 if (dr.ADVANCE0 != ADVANCE0) dr.ADVANCE0 = ADVANCE0;
+                if (dr.WITHHOLDINGS0 != WITHHOLDINGS0) dr.WITHHOLDINGS0 = WITHHOLDINGS0;
                 if (dr.TPAY0 != TPAY0) dr.TPAY0 = TPAY0;
                 if (dr.PAY != PAY) dr.PAY = PAY;
                 if (dr.IIN != IIN) dr.IIN = IIN;
                 if (dr.ADVANCE != ADVANCE) dr.ADVANCE = ADVANCE;
+                if (dr.WITHHOLDINGS != WITHHOLDINGS) dr.WITHHOLDINGS = WITHHOLDINGS;
                 if (dr.TPAY != TPAY) dr.TPAY = TPAY;
                 if (dr.IIN_REVERSE != IIN_REVERSE) dr.IIN_REVERSE = IIN_REVERSE;
                 if (dr.PAY_REVERSE != PAY_REVERSE) dr.PAY_REVERSE = PAY_REVERSE;

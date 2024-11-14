@@ -169,7 +169,7 @@ namespace KlonsM.FormsM
             this.bNav.DataGrid = this.dgvRows;
             this.bNav.DeleteItem = this.bindingNavigatorDeleteItem;
             this.bNav.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.bNav.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.bNav.ImageScalingSize = new System.Drawing.Size(16, 16);
             this.bNav.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bindingNavigatorMoveFirstItem,
             this.bindingNavigatorMovePreviousItem,
@@ -291,7 +291,7 @@ namespace KlonsM.FormsM
             // 
             // toolStrip1
             // 
-            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(16, 16);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.lbPersonName});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);

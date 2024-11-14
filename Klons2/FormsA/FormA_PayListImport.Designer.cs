@@ -29,327 +29,309 @@ namespace KlonsA.Forms
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormA_PayListImport));
-            this.bsRows = new System.Windows.Forms.BindingSource(this.components);
-            this.bnavRows = new KlonsLIB.Components.MyBindingNavigator();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
-            this.dgvRows = new KlonsLIB.Components.MyDataGridView();
-            this.dgcDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgcIDP = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.bsPersons = new KlonsLIB.Data.MyBindingSource(this.components);
-            this.dgcIDAM = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.bsAmati = new KlonsLIB.Data.MyBindingSource(this.components);
-            this.dgcAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.tbReadText = new System.Windows.Forms.ToolStripButton();
-            this.tbMakeLists = new System.Windows.Forms.ToolStripButton();
-            this.mySplitContainer1 = new KlonsLIB.Components.MySplitContainer();
-            this.tbText = new KlonsLIB.Components.MyTextBox();
-            this.bsAmatiF = new KlonsLIB.Data.MyBindingSource(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.bsRows)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bnavRows)).BeginInit();
-            this.bnavRows.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvRows)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bsPersons)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bsAmati)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mySplitContainer1)).BeginInit();
-            this.mySplitContainer1.Panel1.SuspendLayout();
-            this.mySplitContainer1.Panel2.SuspendLayout();
-            this.mySplitContainer1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bsAmatiF)).BeginInit();
-            this.SuspendLayout();
+            bsRows = new System.Windows.Forms.BindingSource(components);
+            bnavRows = new KlonsLIB.Components.MyBindingNavigator();
+            bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            dgvRows = new KlonsLIB.Components.MyDataGridView();
+            dgcDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            dgcIDP = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            bsPersons = new KlonsLIB.Data.MyBindingSource(components);
+            dgcIDAM = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            bsAmati = new KlonsLIB.Data.MyBindingSource(components);
+            dgcAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
+            bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
+            bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
+            bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
+            bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
+            bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
+            bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
+            bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            tbReadText = new System.Windows.Forms.ToolStripButton();
+            tbMakeLists = new System.Windows.Forms.ToolStripButton();
+            mySplitContainer1 = new KlonsLIB.Components.MySplitContainer();
+            tbText = new KlonsLIB.Components.MyTextBox();
+            bsAmatiF = new KlonsLIB.Data.MyBindingSource(components);
+            ((System.ComponentModel.ISupportInitialize)bsRows).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)bnavRows).BeginInit();
+            bnavRows.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvRows).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)bsPersons).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)bsAmati).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)mySplitContainer1).BeginInit();
+            mySplitContainer1.Panel1.SuspendLayout();
+            mySplitContainer1.Panel2.SuspendLayout();
+            mySplitContainer1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)bsAmatiF).BeginInit();
+            SuspendLayout();
             // 
             // bnavRows
             // 
-            this.bnavRows.AddNewItem = null;
-            this.bnavRows.BindingSource = this.bsRows;
-            this.bnavRows.CountItem = this.bindingNavigatorCountItem;
-            this.bnavRows.CountItemFormat = " no {0}";
-            this.bnavRows.DataGrid = this.dgvRows;
-            this.bnavRows.DeleteItem = this.bindingNavigatorDeleteItem;
-            this.bnavRows.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.bnavRows.ImageScalingSize = new System.Drawing.Size(24, 24);
-            this.bnavRows.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.bindingNavigatorMoveFirstItem,
-            this.bindingNavigatorMovePreviousItem,
-            this.bindingNavigatorSeparator,
-            this.bindingNavigatorPositionItem,
-            this.bindingNavigatorCountItem,
-            this.bindingNavigatorSeparator1,
-            this.bindingNavigatorMoveNextItem,
-            this.bindingNavigatorMoveLastItem,
-            this.bindingNavigatorSeparator2,
-            this.bindingNavigatorDeleteItem,
-            this.tbReadText,
-            this.tbMakeLists});
-            this.bnavRows.Location = new System.Drawing.Point(0, 508);
-            this.bnavRows.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
-            this.bnavRows.MoveLastItem = this.bindingNavigatorMoveLastItem;
-            this.bnavRows.MoveNextItem = this.bindingNavigatorMoveNextItem;
-            this.bnavRows.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
-            this.bnavRows.Name = "bnavRows";
-            this.bnavRows.PositionItem = this.bindingNavigatorPositionItem;
-            this.bnavRows.SaveItem = null;
-            this.bnavRows.Size = new System.Drawing.Size(806, 39);
-            this.bnavRows.TabIndex = 0;
-            this.bnavRows.Text = "myBindingNavigator1";
+            bnavRows.AddNewItem = null;
+            bnavRows.BindingSource = bsRows;
+            bnavRows.CountItem = bindingNavigatorCountItem;
+            bnavRows.CountItemFormat = " no {0}";
+            bnavRows.DataGrid = dgvRows;
+            bnavRows.DeleteItem = bindingNavigatorDeleteItem;
+            bnavRows.Dock = System.Windows.Forms.DockStyle.Bottom;
+            bnavRows.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { bindingNavigatorMoveFirstItem, bindingNavigatorMovePreviousItem, bindingNavigatorSeparator, bindingNavigatorPositionItem, bindingNavigatorCountItem, bindingNavigatorSeparator1, bindingNavigatorMoveNextItem, bindingNavigatorMoveLastItem, bindingNavigatorSeparator2, bindingNavigatorDeleteItem, tbReadText, tbMakeLists });
+            bnavRows.Location = new System.Drawing.Point(0, 380);
+            bnavRows.MoveFirstItem = bindingNavigatorMoveFirstItem;
+            bnavRows.MoveLastItem = bindingNavigatorMoveLastItem;
+            bnavRows.MoveNextItem = bindingNavigatorMoveNextItem;
+            bnavRows.MovePreviousItem = bindingNavigatorMovePreviousItem;
+            bnavRows.Name = "bnavRows";
+            bnavRows.PositionItem = bindingNavigatorPositionItem;
+            bnavRows.SaveItem = null;
+            bnavRows.Size = new System.Drawing.Size(806, 37);
+            bnavRows.TabIndex = 0;
+            bnavRows.Text = "myBindingNavigator1";
             // 
             // bindingNavigatorCountItem
             // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(76, 34);
-            this.bindingNavigatorCountItem.Text = " no {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Ierakstu skaits";
+            bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            bindingNavigatorCountItem.Size = new System.Drawing.Size(49, 34);
+            bindingNavigatorCountItem.Text = " no {0}";
+            bindingNavigatorCountItem.ToolTipText = "Ierakstu skaits";
             // 
             // dgvRows
             // 
-            this.dgvRows.AutoGenerateColumns = false;
-            this.dgvRows.AutoSave = false;
-            this.dgvRows.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.dgvRows.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvRows.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dgcDate,
-            this.dgcIDP,
-            this.dgcIDAM,
-            this.dgcAmount});
-            this.dgvRows.DataSource = this.bsRows;
-            this.dgvRows.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvRows.Location = new System.Drawing.Point(10, 5);
-            this.dgvRows.Name = "dgvRows";
-            this.dgvRows.RowHeadersWidth = 62;
-            this.dgvRows.ShowCellToolTips = false;
-            this.dgvRows.Size = new System.Drawing.Size(786, 281);
-            this.dgvRows.TabIndex = 0;
-            this.dgvRows.CellBeginEdit += new System.Windows.Forms.DataGridViewCellCancelEventHandler(this.dgvRows_CellBeginEdit);
-            this.dgvRows.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvRows_CellDoubleClick);
-            this.dgvRows.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvRows_CellEndEdit);
-            this.dgvRows.CellParsing += new System.Windows.Forms.DataGridViewCellParsingEventHandler(this.dgvRows_CellParsing);
+            dgvRows.AutoGenerateColumns = false;
+            dgvRows.AutoSave = false;
+            dgvRows.BackgroundColor = System.Drawing.SystemColors.Control;
+            dgvRows.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvRows.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { dgcDate, dgcIDP, dgcIDAM, dgcAmount });
+            dgvRows.DataSource = bsRows;
+            dgvRows.Dock = System.Windows.Forms.DockStyle.Fill;
+            dgvRows.Location = new System.Drawing.Point(10, 5);
+            dgvRows.Name = "dgvRows";
+            dgvRows.RowHeadersWidth = 62;
+            dgvRows.ShowCellToolTips = false;
+            dgvRows.Size = new System.Drawing.Size(786, 206);
+            dgvRows.TabIndex = 0;
+            dgvRows.CellBeginEdit += dgvRows_CellBeginEdit;
+            dgvRows.CellDoubleClick += dgvRows_CellDoubleClick;
+            dgvRows.CellEndEdit += dgvRows_CellEndEdit;
+            dgvRows.CellParsing += dgvRows_CellParsing;
             // 
             // dgcDate
             // 
-            this.dgcDate.DataPropertyName = "Date";
+            dgcDate.DataPropertyName = "Date";
             dataGridViewCellStyle1.Format = "dd.MM.yyyy";
-            this.dgcDate.DefaultCellStyle = dataGridViewCellStyle1;
-            this.dgcDate.HeaderText = "datums";
-            this.dgcDate.MinimumWidth = 8;
-            this.dgcDate.Name = "dgcDate";
-            this.dgcDate.Width = 85;
+            dgcDate.DefaultCellStyle = dataGridViewCellStyle1;
+            dgcDate.HeaderText = "datums";
+            dgcDate.MinimumWidth = 8;
+            dgcDate.Name = "dgcDate";
+            dgcDate.Width = 85;
             // 
             // dgcIDP
             // 
-            this.dgcIDP.DataPropertyName = "IDP";
-            this.dgcIDP.DataSource = this.bsPersons;
-            this.dgcIDP.DisplayMember = "YNAME";
-            this.dgcIDP.DisplayStyleForCurrentCellOnly = true;
-            this.dgcIDP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.dgcIDP.HeaderText = "darbinieks";
-            this.dgcIDP.MaxDropDownItems = 12;
-            this.dgcIDP.MinimumWidth = 8;
-            this.dgcIDP.Name = "dgcIDP";
-            this.dgcIDP.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgcIDP.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.dgcIDP.ValueMember = "ID";
-            this.dgcIDP.Width = 180;
+            dgcIDP.DataPropertyName = "IDP";
+            dgcIDP.DataSource = bsPersons;
+            dgcIDP.DisplayMember = "YNAME";
+            dgcIDP.DisplayStyleForCurrentCellOnly = true;
+            dgcIDP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            dgcIDP.HeaderText = "darbinieks";
+            dgcIDP.MaxDropDownItems = 12;
+            dgcIDP.MinimumWidth = 8;
+            dgcIDP.Name = "dgcIDP";
+            dgcIDP.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            dgcIDP.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            dgcIDP.ValueMember = "ID";
+            dgcIDP.Width = 180;
             // 
             // bsPersons
             // 
-            this.bsPersons.DataMember = "PERSONS";
-            this.bsPersons.MyDataSource = "KlonsAData";
-            this.bsPersons.Sort = "ZNAME";
+            bsPersons.DataMember = "PERSONS";
+            bsPersons.MyDataSource = "KlonsAData";
+            bsPersons.Sort = "ZNAME";
             // 
             // dgcIDAM
             // 
-            this.dgcIDAM.DataPropertyName = "IDAM";
-            this.dgcIDAM.DataSource = this.bsAmati;
-            this.dgcIDAM.DisplayMember = "TITLE";
-            this.dgcIDAM.DisplayStyleForCurrentCellOnly = true;
-            this.dgcIDAM.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.dgcIDAM.HeaderText = "amats";
-            this.dgcIDAM.MinimumWidth = 8;
-            this.dgcIDAM.Name = "dgcIDAM";
-            this.dgcIDAM.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgcIDAM.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.dgcIDAM.ValueMember = "ID";
-            this.dgcIDAM.Width = 180;
+            dgcIDAM.DataPropertyName = "IDAM";
+            dgcIDAM.DataSource = bsAmati;
+            dgcIDAM.DisplayMember = "TITLE";
+            dgcIDAM.DisplayStyleForCurrentCellOnly = true;
+            dgcIDAM.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            dgcIDAM.HeaderText = "amats";
+            dgcIDAM.MinimumWidth = 8;
+            dgcIDAM.Name = "dgcIDAM";
+            dgcIDAM.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            dgcIDAM.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            dgcIDAM.ValueMember = "ID";
+            dgcIDAM.Width = 180;
             // 
             // bsAmati
             // 
-            this.bsAmati.DataMember = "POSITIONS";
-            this.bsAmati.MyDataSource = "KlonsAData";
+            bsAmati.DataMember = "POSITIONS";
+            bsAmati.MyDataSource = "KlonsAData";
             // 
             // dgcAmount
             // 
-            this.dgcAmount.DataPropertyName = "Amount";
+            dgcAmount.DataPropertyName = "Amount";
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
             dataGridViewCellStyle2.Format = "N2";
-            this.dgcAmount.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgcAmount.HeaderText = "summa";
-            this.dgcAmount.MinimumWidth = 8;
-            this.dgcAmount.Name = "dgcAmount";
-            this.dgcAmount.Width = 150;
+            dgcAmount.DefaultCellStyle = dataGridViewCellStyle2;
+            dgcAmount.HeaderText = "summa";
+            dgcAmount.MinimumWidth = 8;
+            dgcAmount.Name = "dgcAmount";
+            dgcAmount.Width = 150;
             // 
             // bindingNavigatorDeleteItem
             // 
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(94, 34);
-            this.bindingNavigatorDeleteItem.Text = "Dzēst";
+            bindingNavigatorDeleteItem.Image = (System.Drawing.Image)resources.GetObject("bindingNavigatorDeleteItem.Image");
+            bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            bindingNavigatorDeleteItem.Size = new System.Drawing.Size(63, 34);
+            bindingNavigatorDeleteItem.Text = "Dzēst";
             // 
             // bindingNavigatorMoveFirstItem
             // 
-            this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
-            this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
-            this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(34, 34);
-            this.bindingNavigatorMoveFirstItem.Text = "Iet uz pirmo";
+            bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            bindingNavigatorMoveFirstItem.Image = (System.Drawing.Image)resources.GetObject("bindingNavigatorMoveFirstItem.Image");
+            bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
+            bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
+            bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(23, 34);
+            bindingNavigatorMoveFirstItem.Text = "Iet uz pirmo";
             // 
             // bindingNavigatorMovePreviousItem
             // 
-            this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
-            this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
-            this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(34, 34);
-            this.bindingNavigatorMovePreviousItem.Text = "Iet uz iepriekšējo";
+            bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            bindingNavigatorMovePreviousItem.Image = (System.Drawing.Image)resources.GetObject("bindingNavigatorMovePreviousItem.Image");
+            bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
+            bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
+            bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(23, 34);
+            bindingNavigatorMovePreviousItem.Text = "Iet uz iepriekšējo";
             // 
             // bindingNavigatorSeparator
             // 
-            this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 39);
+            bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
+            bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 37);
             // 
             // bindingNavigatorPositionItem
             // 
-            this.bindingNavigatorPositionItem.AutoSize = false;
-            this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
-            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 37);
-            this.bindingNavigatorPositionItem.Text = "0";
-            this.bindingNavigatorPositionItem.ToolTipText = "Pašreizējā pozīcija";
+            bindingNavigatorPositionItem.AutoSize = false;
+            bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
+            bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 37);
+            bindingNavigatorPositionItem.Text = "0";
+            bindingNavigatorPositionItem.ToolTipText = "Pašreizējā pozīcija";
             // 
             // bindingNavigatorSeparator1
             // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 39);
+            bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
+            bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 37);
             // 
             // bindingNavigatorMoveNextItem
             // 
-            this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
-            this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
-            this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(34, 34);
-            this.bindingNavigatorMoveNextItem.Text = "Iet uz nākošo";
+            bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            bindingNavigatorMoveNextItem.Image = (System.Drawing.Image)resources.GetObject("bindingNavigatorMoveNextItem.Image");
+            bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
+            bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
+            bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 34);
+            bindingNavigatorMoveNextItem.Text = "Iet uz nākošo";
             // 
             // bindingNavigatorMoveLastItem
             // 
-            this.bindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
-            this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
-            this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(34, 34);
-            this.bindingNavigatorMoveLastItem.Text = "Iet uz pēdējo";
+            bindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            bindingNavigatorMoveLastItem.Image = (System.Drawing.Image)resources.GetObject("bindingNavigatorMoveLastItem.Image");
+            bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
+            bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
+            bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 34);
+            bindingNavigatorMoveLastItem.Text = "Iet uz pēdējo";
             // 
             // bindingNavigatorSeparator2
             // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 39);
+            bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
+            bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 37);
             // 
             // tbReadText
             // 
-            this.tbReadText.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.tbReadText.Image = ((System.Drawing.Image)(resources.GetObject("tbReadText.Image")));
-            this.tbReadText.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tbReadText.Name = "tbReadText";
-            this.tbReadText.Size = new System.Drawing.Size(177, 34);
-            this.tbReadText.Text = "Nolasīt no teksta";
-            this.tbReadText.Click += new System.EventHandler(this.tbReadText_Click);
+            tbReadText.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            tbReadText.Image = (System.Drawing.Image)resources.GetObject("tbReadText.Image");
+            tbReadText.ImageTransparentColor = System.Drawing.Color.Magenta;
+            tbReadText.Name = "tbReadText";
+            tbReadText.Size = new System.Drawing.Size(116, 34);
+            tbReadText.Text = "Nolasīt no teksta";
+            tbReadText.Click += tbReadText_Click;
             // 
             // tbMakeLists
             // 
-            this.tbMakeLists.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.tbMakeLists.Image = ((System.Drawing.Image)(resources.GetObject("tbMakeLists.Image")));
-            this.tbMakeLists.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tbMakeLists.Name = "tbMakeLists";
-            this.tbMakeLists.Size = new System.Drawing.Size(187, 34);
-            this.tbMakeLists.Text = "Izveidot sarakstus";
-            this.tbMakeLists.Click += new System.EventHandler(this.tbMakeLists_Click);
+            tbMakeLists.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            tbMakeLists.Image = (System.Drawing.Image)resources.GetObject("tbMakeLists.Image");
+            tbMakeLists.ImageTransparentColor = System.Drawing.Color.Magenta;
+            tbMakeLists.Name = "tbMakeLists";
+            tbMakeLists.Size = new System.Drawing.Size(122, 34);
+            tbMakeLists.Text = "Izveidot sarakstus";
+            tbMakeLists.Click += tbMakeLists_Click;
             // 
             // mySplitContainer1
             // 
-            this.mySplitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mySplitContainer1.Location = new System.Drawing.Point(0, 0);
-            this.mySplitContainer1.Name = "mySplitContainer1";
-            this.mySplitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            mySplitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            mySplitContainer1.Location = new System.Drawing.Point(0, 0);
+            mySplitContainer1.Name = "mySplitContainer1";
+            mySplitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
             // mySplitContainer1.Panel1
             // 
-            this.mySplitContainer1.Panel1.Controls.Add(this.tbText);
-            this.mySplitContainer1.Panel1.Padding = new System.Windows.Forms.Padding(10, 10, 10, 5);
+            mySplitContainer1.Panel1.Controls.Add(tbText);
+            mySplitContainer1.Panel1.Padding = new System.Windows.Forms.Padding(10, 10, 10, 5);
             // 
             // mySplitContainer1.Panel2
             // 
-            this.mySplitContainer1.Panel2.Controls.Add(this.dgvRows);
-            this.mySplitContainer1.Panel2.Padding = new System.Windows.Forms.Padding(10, 5, 10, 10);
-            this.mySplitContainer1.Size = new System.Drawing.Size(806, 508);
-            this.mySplitContainer1.SplitterDistance = 208;
-            this.mySplitContainer1.TabIndex = 1;
+            mySplitContainer1.Panel2.Controls.Add(dgvRows);
+            mySplitContainer1.Panel2.Padding = new System.Windows.Forms.Padding(10, 5, 10, 10);
+            mySplitContainer1.Size = new System.Drawing.Size(806, 380);
+            mySplitContainer1.SplitterDistance = 155;
+            mySplitContainer1.TabIndex = 1;
             // 
             // tbText
             // 
-            this.tbText.BorderColor = System.Drawing.SystemColors.ControlText;
-            this.tbText.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tbText.Location = new System.Drawing.Point(10, 10);
-            this.tbText.Multiline = true;
-            this.tbText.Name = "tbText";
-            this.tbText.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.tbText.Size = new System.Drawing.Size(786, 193);
-            this.tbText.TabIndex = 0;
-            this.tbText.WordWrap = false;
+            tbText.BorderColor = System.Drawing.SystemColors.ControlText;
+            tbText.Dock = System.Windows.Forms.DockStyle.Fill;
+            tbText.Location = new System.Drawing.Point(10, 10);
+            tbText.Multiline = true;
+            tbText.Name = "tbText";
+            tbText.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            tbText.Size = new System.Drawing.Size(786, 140);
+            tbText.TabIndex = 0;
+            tbText.WordWrap = false;
             // 
             // bsAmatiF
             // 
-            this.bsAmatiF.DataMember = "POSITIONS";
-            this.bsAmatiF.MyDataSource = "KlonsAData";
+            bsAmatiF.DataMember = "POSITIONS";
+            bsAmatiF.MyDataSource = "KlonsAData";
             // 
             // FormA_PayListImport
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(806, 547);
-            this.Controls.Add(this.mySplitContainer1);
-            this.Controls.Add(this.bnavRows);
-            this.Name = "FormA_PayListImport";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Maksājumu sarakstu imports";
-            this.Load += new System.EventHandler(this.Form_PayListImport_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.bsRows)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bnavRows)).EndInit();
-            this.bnavRows.ResumeLayout(false);
-            this.bnavRows.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvRows)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bsPersons)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bsAmati)).EndInit();
-            this.mySplitContainer1.Panel1.ResumeLayout(false);
-            this.mySplitContainer1.Panel1.PerformLayout();
-            this.mySplitContainer1.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.mySplitContainer1)).EndInit();
-            this.mySplitContainer1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.bsAmatiF)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            ClientSize = new System.Drawing.Size(806, 417);
+            Controls.Add(mySplitContainer1);
+            Controls.Add(bnavRows);
+            Name = "FormA_PayListImport";
+            StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            Text = "Maksājumu sarakstu imports";
+            Load += Form_PayListImport_Load;
+            ((System.ComponentModel.ISupportInitialize)bsRows).EndInit();
+            ((System.ComponentModel.ISupportInitialize)bnavRows).EndInit();
+            bnavRows.ResumeLayout(false);
+            bnavRows.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvRows).EndInit();
+            ((System.ComponentModel.ISupportInitialize)bsPersons).EndInit();
+            ((System.ComponentModel.ISupportInitialize)bsAmati).EndInit();
+            mySplitContainer1.Panel1.ResumeLayout(false);
+            mySplitContainer1.Panel1.PerformLayout();
+            mySplitContainer1.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)mySplitContainer1).EndInit();
+            mySplitContainer1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)bsAmatiF).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion

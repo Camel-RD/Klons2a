@@ -112,7 +112,7 @@ namespace KlonsA.Forms
             bnavPersons.DeleteItem = null;
             bnavPersons.Dock = System.Windows.Forms.DockStyle.Bottom;
             bnavPersons.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            bnavPersons.ImageScalingSize = new System.Drawing.Size(21, 21);
+            bnavPersons.ImageScalingSize = new System.Drawing.Size(16, 16);
             bnavPersons.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { bindingNavigatorMoveFirstItem, bindingNavigatorMovePreviousItem, bindingNavigatorSeparator, bindingNavigatorPositionItem, bindingNavigatorCountItem, bindingNavigatorSeparator1, bindingNavigatorMoveNextItem, bindingNavigatorMoveLastItem, bindingNavigatorSeparator2, bindingNavigatorAddNewItem, bindingNavigatorDeleteItem, tsbSave });
             bnavPersons.Location = new System.Drawing.Point(0, 343);
             bnavPersons.MoveFirstItem = bindingNavigatorMoveFirstItem;

@@ -111,7 +111,7 @@
             bNav.DeleteItem = null;
             bNav.Dock = System.Windows.Forms.DockStyle.Bottom;
             bNav.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            bNav.ImageScalingSize = new System.Drawing.Size(21, 21);
+            bNav.ImageScalingSize = new System.Drawing.Size(16, 16);
             bNav.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { bindingNavigatorMoveFirstItem, bindingNavigatorMovePreviousItem, bindingNavigatorSeparator, bindingNavigatorPositionItem, bindingNavigatorCountItem, bindingNavigatorSeparator1, bindingNavigatorMoveNextItem, bindingNavigatorMoveLastItem, bindingNavigatorSeparator2 });
             bNav.Location = new System.Drawing.Point(0, 534);
             bNav.MoveFirstItem = bindingNavigatorMoveFirstItem;
@@ -289,7 +289,7 @@
             // menuStrip1
             // 
             menuStrip1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
+            menuStrip1.ImageScalingSize = new System.Drawing.Size(16, 16);
             menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { miMaksājumuPārskats });
             menuStrip1.Location = new System.Drawing.Point(0, 0);
             menuStrip1.Name = "menuStrip1";

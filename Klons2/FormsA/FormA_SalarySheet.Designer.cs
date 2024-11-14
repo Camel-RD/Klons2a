@@ -517,7 +517,7 @@
             // 
             toolStrip2.Dock = System.Windows.Forms.DockStyle.Bottom;
             toolStrip2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            toolStrip2.ImageScalingSize = new System.Drawing.Size(23, 26);
+            toolStrip2.ImageScalingSize = new System.Drawing.Size(16, 16);
             toolStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { tslLabel, tsbNew, tsbDelete, tsbSave, tslAmati });
             toolStrip2.Location = new System.Drawing.Point(0, 562);
             toolStrip2.Name = "toolStrip2";
@@ -573,7 +573,7 @@
             toolStrip1.AllowMerge = false;
             toolStrip1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             toolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
-            toolStrip1.ImageScalingSize = new System.Drawing.Size(23, 26);
+            toolStrip1.ImageScalingSize = new System.Drawing.Size(16, 16);
             toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { tslPeriod });
             toolStrip1.Location = new System.Drawing.Point(0, 0);
             toolStrip1.Name = "toolStrip1";
@@ -2989,7 +2989,7 @@
             // menuStrip1
             // 
             menuStrip1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            menuStrip1.ImageScalingSize = new System.Drawing.Size(21, 21);
+            menuStrip1.ImageScalingSize = new System.Drawing.Size(16, 16);
             menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { algasAprēķinaLapaToolStripMenuItem });
             menuStrip1.Location = new System.Drawing.Point(0, 0);
             menuStrip1.Name = "menuStrip1";

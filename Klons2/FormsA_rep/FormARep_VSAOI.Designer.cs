@@ -489,7 +489,7 @@
             // 
             this.menuStrip1.AllowMerge = false;
             this.menuStrip1.Dock = System.Windows.Forms.DockStyle.None;
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(21, 21);
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(16, 16);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.miTable,
             this.miReport,
@@ -530,7 +530,7 @@
             this.bnRows.DataGrid = this.dgvRep;
             this.bnRows.DeleteItem = this.bindingNavigatorDeleteItem;
             this.bnRows.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.bnRows.ImageScalingSize = new System.Drawing.Size(21, 21);
+            this.bnRows.ImageScalingSize = new System.Drawing.Size(16, 16);
             this.bnRows.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bindingNavigatorMoveFirstItem,
             this.bindingNavigatorMovePreviousItem,

@@ -49,7 +49,6 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form_ReportViewer";
             this.Text = "Atskaite";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form_ReportViewer_FormClosing);
             this.Load += new System.EventHandler(this.Form2_Load);
             this.Shown += new System.EventHandler(this.Form2_Shown);

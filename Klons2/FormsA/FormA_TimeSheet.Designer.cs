@@ -594,7 +594,7 @@ namespace KlonsA.Forms
             toolStrip1.AllowMerge = false;
             toolStrip1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             toolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
-            toolStrip1.ImageScalingSize = new System.Drawing.Size(23, 26);
+            toolStrip1.ImageScalingSize = new System.Drawing.Size(16, 16);
             toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { tslPeriod });
             toolStrip1.Location = new System.Drawing.Point(0, 0);
             toolStrip1.Name = "toolStrip1";
@@ -650,7 +650,7 @@ namespace KlonsA.Forms
             // 
             toolStrip2.Dock = System.Windows.Forms.DockStyle.Bottom;
             toolStrip2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            toolStrip2.ImageScalingSize = new System.Drawing.Size(23, 26);
+            toolStrip2.ImageScalingSize = new System.Drawing.Size(16, 16);
             toolStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { tsbNew, tsbEdit, tsbDelete, tsbSave });
             toolStrip2.Location = new System.Drawing.Point(0, 411);
             toolStrip2.Name = "toolStrip2";
@@ -723,7 +723,7 @@ namespace KlonsA.Forms
             // 
             // cmsMenuMarkDayFact
             // 
-            cmsMenuMarkDayFact.ImageScalingSize = new System.Drawing.Size(21, 21);
+            cmsMenuMarkDayFact.ImageScalingSize = new System.Drawing.Size(16, 16);
             cmsMenuMarkDayFact.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { miFactD, miFactB, miFactK, miFactSVVI, miFactVI, miFactN, miFactDS, miFactKS });
             cmsMenuMarkDayFact.Name = "cmsMenuMarkDay";
             cmsMenuMarkDayFact.Size = new System.Drawing.Size(354, 196);
@@ -779,7 +779,7 @@ namespace KlonsA.Forms
             // 
             // cmsMenuMarkDayPlan
             // 
-            cmsMenuMarkDayPlan.ImageScalingSize = new System.Drawing.Size(21, 21);
+            cmsMenuMarkDayPlan.ImageScalingSize = new System.Drawing.Size(16, 16);
             cmsMenuMarkDayPlan.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { miPlanDD, miPlanBD, miPlanSD, miPlanSDDD, miPlanDDSD });
             cmsMenuMarkDayPlan.Name = "cmsMenuMarkDayPlan";
             cmsMenuMarkDayPlan.Size = new System.Drawing.Size(265, 124);
@@ -818,7 +818,7 @@ namespace KlonsA.Forms
             // menuStrip1
             // 
             menuStrip1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            menuStrip1.ImageScalingSize = new System.Drawing.Size(21, 21);
+            menuStrip1.ImageScalingSize = new System.Drawing.Size(16, 16);
             menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { darbaLaikaUzskaitesLapaToolStripMenuItem });
             menuStrip1.Location = new System.Drawing.Point(0, 0);
             menuStrip1.Name = "menuStrip1";

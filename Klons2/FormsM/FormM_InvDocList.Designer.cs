@@ -111,7 +111,7 @@ namespace KlonsM.FormsM
             bNav.DataGrid = dgvDocs;
             bNav.DeleteItem = null;
             bNav.Dock = System.Windows.Forms.DockStyle.Bottom;
-            bNav.ImageScalingSize = new System.Drawing.Size(24, 24);
+            bNav.ImageScalingSize = new System.Drawing.Size(16, 16);
             bNav.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { bindingNavigatorMoveFirstItem, bindingNavigatorMovePreviousItem, bindingNavigatorSeparator, bindingNavigatorPositionItem, bindingNavigatorCountItem, bindingNavigatorSeparator1, bindingNavigatorMoveNextItem, bindingNavigatorMoveLastItem, bindingNavigatorSeparator2, tsbOpenDoc, bniAdd, bniDelete, bniSave, tsbFindPrev, tsbFind, tsbFindNext });
             bNav.Location = new System.Drawing.Point(0, 413);
             bNav.MoveFirstItem = bindingNavigatorMoveFirstItem;

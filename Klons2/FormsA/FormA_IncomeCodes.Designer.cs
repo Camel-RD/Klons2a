@@ -74,7 +74,7 @@
             this.bnList.DataGrid = this.dgvList;
             this.bnList.DeleteItem = this.bindingNavigatorDeleteItem;
             this.bnList.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.bnList.ImageScalingSize = new System.Drawing.Size(21, 21);
+            this.bnList.ImageScalingSize = new System.Drawing.Size(16, 16);
             this.bnList.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bindingNavigatorMoveFirstItem,
             this.bindingNavigatorMovePreviousItem,

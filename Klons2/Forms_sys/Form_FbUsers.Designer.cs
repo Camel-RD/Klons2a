@@ -253,7 +253,7 @@ namespace KlonsF.Forms
             // menuStrip1
             // 
             menuStrip1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
+            menuStrip1.ImageScalingSize = new System.Drawing.Size(16, 16);
             menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { lietotājiToolStripMenuItem, lomasToolStripMenuItem });
             menuStrip1.Location = new System.Drawing.Point(0, 0);
             menuStrip1.Name = "menuStrip1";

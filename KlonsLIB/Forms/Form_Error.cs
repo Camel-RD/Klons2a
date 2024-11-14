@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel;
 using System.Data;
 using System.Windows.Forms;
 using KlonsLIB.Data;
@@ -15,17 +16,47 @@ namespace KlonsLIB.Forms
             CheckMyFontAndColors();
         }
 
-        public static void ShowException(Form owner, Exception e)
+        private EPromptType _promptType = EPromptType.None;
+
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
+        [Browsable(false)]
+        public EPromptType PromptType
         {
-            if (e == null) return;
+            get => _promptType;
+            set
+            {
+                _promptType = value;
+                cmRollBack.Visible = _promptType == EPromptType.CanRollBack ||
+                    _promptType == EPromptType.CanRollBackWithConfirmation;
+            }
+        }
+
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
+        [Browsable(false)]
+        public EResult DialogResult2 { get; private set; } = EResult.Ok;
+
+        
+        static string CheckEOL(string s)
+        {
+            if (s.IsNOE()) return s;
+            s = s.Replace("\n", "\r\n").Replace("\r\r", "\r");
+            return s;
+        }
+
+        public static EResult ShowException(Form owner, Exception e, EPromptType prompttype = EPromptType.None)
+        {
+            if (e == null) return EResult.Ok;
             Form_Error fe = new Form_Error();
-            fe.tbMsg.Text = e.Message;
-            fe.tbDescr.Text = e.ToString();
+            fe.tbMsg.Text = CheckEOL(e.Message);
+            fe.tbDescr.Text = CheckEOL(e.ToString());
+            fe.PromptType = prompttype;
             try
             {
                 fe.ShowDialog(owner);
+                return fe.DialogResult2;
             }
-            catch(Exception) { }
+            catch (Exception) { }
+            return EResult.Ok;
         }
         public static void ShowException(Form owner, Exception e, DataGridView dgv)
         {
@@ -61,9 +92,9 @@ namespace KlonsLIB.Forms
             ShowException(owner, e1);
         }
 
-        public static void ShowException(Exception e)
+        public static EResult ShowException(Exception e, EPromptType prompttype = EPromptType.None)
         {
-            ShowException(MyMainForm, e);
+            return ShowException(MyMainForm, e, prompttype);
         }
         public static void ShowException(Exception e, DataGridView dgv)
         {
@@ -130,10 +161,28 @@ namespace KlonsLIB.Forms
             }
             else
             {
-                Height = tbDescr.Bottom + 10 + (Height - ClientSize.Height); 
+                Height = tbDescr.Bottom + 10 + (Height - ClientSize.Height);
                 tbDescr.Visible = true;
             }
         }
+
+        private void cmRollBack_Click(object sender, EventArgs e)
+        {
+            if (PromptType == EPromptType.CanRollBackWithConfirmation)
+            {
+                var rt = MyMessageBox.Show(
+                    "Tiks atceltas izmaiņas visās nesagalabātajās tabulās.\n" +
+                    "Vai vēliet turpināt?", "Klons",
+                    MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1, this);
+                if (rt != DialogResult.Yes) return;
+            }
+            DialogResult2 = EResult.RollBack;
+            DialogResult = DialogResult.OK;
+        }
+
+        public enum EPromptType { None, CanRollBack, WillRollBack, CanRollBackWithConfirmation }
+        public enum EResult { Ok, RollBack }
+
     }
     public class MyException : Exception
     {

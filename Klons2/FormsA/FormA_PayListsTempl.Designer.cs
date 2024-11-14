@@ -94,7 +94,7 @@
             bnavSh.DeleteItem = null;
             bnavSh.Dock = System.Windows.Forms.DockStyle.Bottom;
             bnavSh.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            bnavSh.ImageScalingSize = new System.Drawing.Size(21, 21);
+            bnavSh.ImageScalingSize = new System.Drawing.Size(16, 16);
             bnavSh.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { toolStripLabel1, bindingNavigatorMoveFirstItem, bindingNavigatorMovePreviousItem, bindingNavigatorSeparator, bindingNavigatorPositionItem, bindingNavigatorCountItem, bindingNavigatorSeparator1, bindingNavigatorMoveNextItem, bindingNavigatorMoveLastItem, bindingNavigatorSeparator2, bindingNavigatorAddNewItem, bindingNavigatorDeleteItem, tsbSave, tsbRenum });
             bnavSh.Location = new System.Drawing.Point(0, 413);
             bnavSh.MoveFirstItem = bindingNavigatorMoveFirstItem;

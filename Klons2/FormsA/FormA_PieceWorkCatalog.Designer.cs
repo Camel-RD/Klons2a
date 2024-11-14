@@ -82,7 +82,7 @@
             // 
             // toolStrip1
             // 
-            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(21, 21);
+            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(16, 16);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripLabel1,
             this.toolStripLabel2});
@@ -278,7 +278,7 @@
             this.bnavSar.DataGrid = this.dgvSar;
             this.bnavSar.DeleteItem = null;
             this.bnavSar.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.bnavSar.ImageScalingSize = new System.Drawing.Size(21, 21);
+            this.bnavSar.ImageScalingSize = new System.Drawing.Size(16, 16);
             this.bnavSar.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bindingNavigatorMoveFirstItem,
             this.bindingNavigatorMovePreviousItem,

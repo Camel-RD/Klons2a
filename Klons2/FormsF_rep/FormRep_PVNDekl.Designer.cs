@@ -210,7 +210,7 @@ namespace KlonsF.FormsReportParams
             // toolStrip1
             // 
             this.toolStrip1.Dock = System.Windows.Forms.DockStyle.None;
-            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(21, 21);
+            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(16, 16);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripDropDownButton1,
             this.toolStripDropDownButton2,

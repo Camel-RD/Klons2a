@@ -124,7 +124,7 @@
             bnavDocs0.DeleteItem = tsbDelete;
             bnavDocs0.Dock = System.Windows.Forms.DockStyle.Bottom;
             bnavDocs0.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            bnavDocs0.ImageScalingSize = new System.Drawing.Size(21, 21);
+            bnavDocs0.ImageScalingSize = new System.Drawing.Size(16, 16);
             bnavDocs0.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { bindingNavigatorMoveFirstItem, bindingNavigatorMovePreviousItem, bindingNavigatorSeparator, bindingNavigatorPositionItem, bindingNavigatorCountItem, bindingNavigatorSeparator1, bindingNavigatorMoveNextItem, bindingNavigatorMoveLastItem, bindingNavigatorSeparator2, tspRefresh, tsbNew, tsbDelete, tsbSave, tsbSearchPrev, tsbSearch, tsbSearchNext });
             bnavDocs0.Location = new System.Drawing.Point(0, 310);
             bnavDocs0.MoveFirstItem = bindingNavigatorMoveFirstItem;

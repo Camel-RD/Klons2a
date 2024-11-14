@@ -30,92 +30,112 @@ namespace KlonsLIB.Forms
         /// </summary>
         private void InitializeComponent()
         {
-            this.tbMsg = new KlonsLIB.Components.MyTextBox();
-            this.tbDescr = new KlonsLIB.Components.MyTextBox();
-            this.cmClose = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.cmDetails = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.SuspendLayout();
+            components = new System.ComponentModel.Container();
+            tbMsg = new MyTextBox();
+            tbDescr = new MyTextBox();
+            cmClose = new Button();
+            pictureBox1 = new PictureBox();
+            cmDetails = new Button();
+            cmRollBack = new Button();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            SuspendLayout();
             // 
             // tbMsg
             // 
-            this.tbMsg.BackColor = System.Drawing.SystemColors.Control;
-            this.tbMsg.BorderColor = System.Drawing.SystemColors.Control;
-            this.tbMsg.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
-            this.tbMsg.Location = new System.Drawing.Point(60, 10);
-            this.tbMsg.Multiline = true;
-            this.tbMsg.Name = "tbMsg";
-            this.tbMsg.ReadOnly = true;
-            this.tbMsg.Size = new System.Drawing.Size(348, 100);
-            this.tbMsg.TabIndex = 2;
+            tbMsg.BackColor = SystemColors.Control;
+            tbMsg.BorderColor = SystemColors.Control;
+            tbMsg.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold, GraphicsUnit.Point, 186);
+            tbMsg.Location = new Point(45, 8);
+            tbMsg.Margin = new Padding(2, 2, 2, 2);
+            tbMsg.Multiline = true;
+            tbMsg.Name = "tbMsg";
+            tbMsg.ReadOnly = true;
+            tbMsg.Size = new Size(262, 93);
+            tbMsg.TabIndex = 3;
             // 
             // tbDescr
             // 
-            this.tbDescr.BackColor = System.Drawing.SystemColors.Control;
-            this.tbDescr.BorderColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.tbDescr.Location = new System.Drawing.Point(3, 120);
-            this.tbDescr.Multiline = true;
-            this.tbDescr.Name = "tbDescr";
-            this.tbDescr.ReadOnly = true;
-            this.tbDescr.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.tbDescr.Size = new System.Drawing.Size(507, 186);
-            this.tbDescr.TabIndex = 3;
-            this.tbDescr.WordWrap = false;
+            tbDescr.BackColor = SystemColors.Control;
+            tbDescr.BorderColor = SystemColors.ControlDarkDark;
+            tbDescr.Dock = DockStyle.Bottom;
+            tbDescr.Location = new Point(0, 110);
+            tbDescr.Margin = new Padding(2, 2, 2, 2);
+            tbDescr.Multiline = true;
+            tbDescr.Name = "tbDescr";
+            tbDescr.ReadOnly = true;
+            tbDescr.ScrollBars = ScrollBars.Both;
+            tbDescr.Size = new Size(386, 159);
+            tbDescr.TabIndex = 4;
+            tbDescr.WordWrap = false;
             // 
             // cmClose
             // 
-            this.cmClose.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.cmClose.Location = new System.Drawing.Point(421, 8);
-            this.cmClose.Name = "cmClose";
-            this.cmClose.Size = new System.Drawing.Size(87, 35);
-            this.cmClose.TabIndex = 0;
-            this.cmClose.Text = "Aizvērt";
-            this.cmClose.UseVisualStyleBackColor = true;
-            this.cmClose.Click += new System.EventHandler(this.cmClose_Click);
+            cmClose.DialogResult = DialogResult.Cancel;
+            cmClose.Location = new Point(316, 1);
+            cmClose.Margin = new Padding(2, 2, 2, 2);
+            cmClose.Name = "cmClose";
+            cmClose.Size = new Size(65, 28);
+            cmClose.TabIndex = 0;
+            cmClose.Text = "Aizvērt";
+            cmClose.UseVisualStyleBackColor = true;
+            cmClose.Click += cmClose_Click;
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = KlonsLIB.Resource1.error3;
-            this.pictureBox1.Location = new System.Drawing.Point(5, 10);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(48, 48);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
+            pictureBox1.Image = Resource1.error3;
+            pictureBox1.Location = new Point(4, 8);
+            pictureBox1.Margin = new Padding(2, 2, 2, 2);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(36, 39);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 3;
+            pictureBox1.TabStop = false;
             // 
             // cmDetails
             // 
-            this.cmDetails.Location = new System.Drawing.Point(421, 59);
-            this.cmDetails.Name = "cmDetails";
-            this.cmDetails.Size = new System.Drawing.Size(87, 35);
-            this.cmDetails.TabIndex = 1;
-            this.cmDetails.Text = "Detaļas";
-            this.cmDetails.UseVisualStyleBackColor = true;
-            this.cmDetails.Click += new System.EventHandler(this.cmDetails_Click);
+            cmDetails.Location = new Point(316, 30);
+            cmDetails.Margin = new Padding(2, 2, 2, 2);
+            cmDetails.Name = "cmDetails";
+            cmDetails.Size = new Size(65, 28);
+            cmDetails.TabIndex = 1;
+            cmDetails.Text = "Detaļas";
+            cmDetails.UseVisualStyleBackColor = true;
+            cmDetails.Click += cmDetails_Click;
+            // 
+            // cmRollBack
+            // 
+            cmRollBack.Location = new Point(316, 59);
+            cmRollBack.Margin = new Padding(2);
+            cmRollBack.Name = "cmRollBack";
+            cmRollBack.Size = new Size(65, 37);
+            cmRollBack.TabIndex = 2;
+            cmRollBack.Text = "Atcel izmaiņas";
+            cmRollBack.UseVisualStyleBackColor = true;
+            cmRollBack.Click += cmRollBack_Click;
             // 
             // Form_Error
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.CancelButton = this.cmClose;
-            this.ClientSize = new System.Drawing.Size(514, 310);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.cmDetails);
-            this.Controls.Add(this.cmClose);
-            this.Controls.Add(this.tbDescr);
-            this.Controls.Add(this.tbMsg);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
-            this.Name = "Form_Error";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Kļūda!";
-            this.Load += new System.EventHandler(this.FormError_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(6F, 13F);
+            AutoScaleMode = AutoScaleMode.Font;
+            CancelButton = cmClose;
+            ClientSize = new Size(386, 269);
+            Controls.Add(pictureBox1);
+            Controls.Add(cmRollBack);
+            Controls.Add(cmDetails);
+            Controls.Add(cmClose);
+            Controls.Add(tbDescr);
+            Controls.Add(tbMsg);
+            FormBorderStyle = FormBorderStyle.FixedDialog;
+            Margin = new Padding(2, 2, 2, 2);
+            MaximizeBox = false;
+            MinimizeBox = false;
+            Name = "Form_Error";
+            StartPosition = FormStartPosition.CenterParent;
+            Text = "Kļūda!";
+            Load += FormError_Load;
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -125,5 +145,6 @@ namespace KlonsLIB.Forms
         private System.Windows.Forms.Button cmClose;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button cmDetails;
+        private Button cmRollBack;
     }
 }

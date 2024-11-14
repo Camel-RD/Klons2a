@@ -99,7 +99,7 @@ namespace KlonsF.Forms
             bnavDocTyp.DeleteItem = null;
             bnavDocTyp.Dock = System.Windows.Forms.DockStyle.Bottom;
             bnavDocTyp.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            bnavDocTyp.ImageScalingSize = new System.Drawing.Size(21, 21);
+            bnavDocTyp.ImageScalingSize = new System.Drawing.Size(16, 16);
             bnavDocTyp.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { toolStripLabel1, bindingNavigatorMoveFirstItem, bindingNavigatorMovePreviousItem, bindingNavigatorSeparator, bindingNavigatorPositionItem, bindingNavigatorCountItem, bindingNavigatorSeparator1, bindingNavigatorMoveNextItem, bindingNavigatorMoveLastItem, bindingNavigatorSeparator2, bindingNavigatorAddNewItem, bindingNavigatorDeleteItem, tsbInfo, tsbSave });
             bnavDocTyp.Location = new System.Drawing.Point(0, 476);
             bnavDocTyp.MoveFirstItem = bindingNavigatorMoveFirstItem;

@@ -210,7 +210,7 @@
             bNav.DeleteItem = null;
             bNav.Dock = System.Windows.Forms.DockStyle.Bottom;
             bNav.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            bNav.ImageScalingSize = new System.Drawing.Size(23, 26);
+            bNav.ImageScalingSize = new System.Drawing.Size(16, 16);
             bNav.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { tsLabel1, bindingNavigatorMoveFirstItem, bindingNavigatorMovePreviousItem, bindingNavigatorSeparator, bindingNavigatorPositionItem, bindingNavigatorCountItem, bindingNavigatorSeparator1, bindingNavigatorMoveNextItem, bindingNavigatorMoveLastItem, bindingNavigatorSeparator2, bindingNavigatorAddNewItem, bindingNavigatorDeleteItem, tsbSave, tsbRenum });
             bNav.Location = new System.Drawing.Point(0, 532);
             bNav.MoveFirstItem = bindingNavigatorMoveFirstItem;
@@ -871,7 +871,7 @@
             // menuStrip1
             // 
             menuStrip1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            menuStrip1.ImageScalingSize = new System.Drawing.Size(21, 21);
+            menuStrip1.ImageScalingSize = new System.Drawing.Size(16, 16);
             menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { maksājumuSarakstiToolStripMenuItem });
             menuStrip1.Location = new System.Drawing.Point(0, 0);
             menuStrip1.Name = "menuStrip1";
@@ -1078,7 +1078,7 @@
             toolStrip1.AllowMerge = false;
             toolStrip1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             toolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
-            toolStrip1.ImageScalingSize = new System.Drawing.Size(23, 26);
+            toolStrip1.ImageScalingSize = new System.Drawing.Size(16, 16);
             toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { tslPeriod });
             toolStrip1.Location = new System.Drawing.Point(0, 0);
             toolStrip1.Name = "toolStrip1";

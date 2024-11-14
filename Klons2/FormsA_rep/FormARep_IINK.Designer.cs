@@ -537,7 +537,7 @@
             // 
             toolStrip1.Dock = System.Windows.Forms.DockStyle.Bottom;
             toolStrip1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            toolStrip1.ImageScalingSize = new System.Drawing.Size(21, 21);
+            toolStrip1.ImageScalingSize = new System.Drawing.Size(16, 16);
             toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { tsbGetRows, tsbReport, tsbXML, tsbMark });
             toolStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
             toolStrip1.Location = new System.Drawing.Point(0, 52);
@@ -625,7 +625,7 @@
             bnRows.DeleteItem = bindingNavigatorDeleteItem;
             bnRows.Dock = System.Windows.Forms.DockStyle.Bottom;
             bnRows.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            bnRows.ImageScalingSize = new System.Drawing.Size(21, 21);
+            bnRows.ImageScalingSize = new System.Drawing.Size(16, 16);
             bnRows.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { bindingNavigatorMoveFirstItem, bindingNavigatorMovePreviousItem, bindingNavigatorSeparator, bindingNavigatorPositionItem, bindingNavigatorCountItem, bindingNavigatorSeparator1, bindingNavigatorMoveNextItem, bindingNavigatorMoveLastItem, bindingNavigatorSeparator2, bindingNavigatorAddNewItem, bindingNavigatorDeleteItem });
             bnRows.Location = new System.Drawing.Point(0, 456);
             bnRows.MoveFirstItem = bindingNavigatorMoveFirstItem;

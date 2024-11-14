@@ -556,7 +556,7 @@ namespace KlonsLIB.MySourceGrid
             ScaleControlA(factor);
             scaleFactor.Width *= factor.Width;
             scaleFactor.Height *= factor.Height;
-            //this.DefaultHeight = (int)Math.Round((float)this.DefaultHeight * (float)factor.Height);
+            this.DefaultHeight = (int)Math.Round((float)this.DefaultHeight * (float)factor.Height);
         }
 
         protected void ScaleControlA(SizeF factor)
@@ -573,11 +573,13 @@ namespace KlonsLIB.MySourceGrid
             }
             if (height != 1.0f)
             {
+                /*
                 foreach (var r in Rows)
                 {
                     var ri = r as RowInfo;
                     ri.Height = (int)Math.Round((double)ri.Height * (double)height);
                 }
+                */
             }
 
             Dictionary<Control, bool> cd = new Dictionary<Control, bool>();

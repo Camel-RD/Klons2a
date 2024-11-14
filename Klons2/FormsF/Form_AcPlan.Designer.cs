@@ -32,345 +32,344 @@ namespace KlonsF.Forms
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_AcPlan));
-            this.bnavAcp21 = new KlonsLIB.Components.MyBindingNavigator();
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bsAcPlan = new KlonsLIB.Data.MyBindingSource(this.components);
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
-            this.dgvAcp21 = new KlonsLIB.Components.MyDataGridView();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButtonInfo = new System.Windows.Forms.ToolStripButton();
-            this.tsbSave = new System.Windows.Forms.ToolStripButton();
-            this.tbAcc = new KlonsLIB.Components.MyPickRowTextBox();
-            this.tbSearch = new KlonsLIB.Components.MyTextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.dgcAc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgcName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgcId1 = new KlonsLIB.Components.MyDgvMcCBColumn();
-            this.dgcId2 = new KlonsLIB.Components.MyDgvMcCBColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.bnavAcp21)).BeginInit();
-            this.bnavAcp21.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bsAcPlan)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvAcp21)).BeginInit();
-            this.SuspendLayout();
+            bnavAcp21 = new MyBindingNavigator();
+            bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            bsAcPlan = new MyBindingSource(components);
+            bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            dgvAcp21 = new MyDataGridView();
+            dgcAc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            dgcName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            dgcId1 = new MyDgvMcCBColumn();
+            dgcId2 = new MyDgvMcCBColumn();
+            bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
+            bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
+            bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
+            bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
+            bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
+            bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
+            bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
+            bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            toolStripButtonInfo = new System.Windows.Forms.ToolStripButton();
+            tsbSave = new System.Windows.Forms.ToolStripButton();
+            tbAcc = new MyPickRowTextBox();
+            tbSearch = new MyTextBox();
+            label1 = new System.Windows.Forms.Label();
+            label2 = new System.Windows.Forms.Label();
+            panel1 = new System.Windows.Forms.Panel();
+            ((System.ComponentModel.ISupportInitialize)bnavAcp21).BeginInit();
+            bnavAcp21.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)bsAcPlan).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvAcp21).BeginInit();
+            panel1.SuspendLayout();
+            SuspendLayout();
             // 
             // bnavAcp21
             // 
-            this.bnavAcp21.AddNewItem = this.bindingNavigatorAddNewItem;
-            this.bnavAcp21.BindingSource = this.bsAcPlan;
-            this.bnavAcp21.CountItem = this.bindingNavigatorCountItem;
-            this.bnavAcp21.CountItemFormat = " no {0}";
-            this.bnavAcp21.DataGrid = this.dgvAcp21;
-            this.bnavAcp21.DeleteItem = this.bindingNavigatorDeleteItem;
-            this.bnavAcp21.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.bnavAcp21.ImageScalingSize = new System.Drawing.Size(23, 26);
-            this.bnavAcp21.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.bindingNavigatorMoveFirstItem,
-            this.bindingNavigatorMovePreviousItem,
-            this.bindingNavigatorSeparator,
-            this.bindingNavigatorPositionItem,
-            this.bindingNavigatorCountItem,
-            this.bindingNavigatorSeparator1,
-            this.bindingNavigatorMoveNextItem,
-            this.bindingNavigatorMoveLastItem,
-            this.bindingNavigatorSeparator2,
-            this.bindingNavigatorAddNewItem,
-            this.bindingNavigatorDeleteItem,
-            this.toolStripButtonInfo,
-            this.tsbSave});
-            this.bnavAcp21.Location = new System.Drawing.Point(0, 452);
-            this.bnavAcp21.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
-            this.bnavAcp21.MoveLastItem = this.bindingNavigatorMoveLastItem;
-            this.bnavAcp21.MoveNextItem = this.bindingNavigatorMoveNextItem;
-            this.bnavAcp21.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
-            this.bnavAcp21.Name = "bnavAcp21";
-            this.bnavAcp21.PositionItem = this.bindingNavigatorPositionItem;
-            this.bnavAcp21.SaveItem = null;
-            this.bnavAcp21.Size = new System.Drawing.Size(929, 39);
-            this.bnavAcp21.TabIndex = 0;
-            this.bnavAcp21.Text = "bindingNavigator1";
-            this.bnavAcp21.ItemDeleting += new System.ComponentModel.CancelEventHandler(this.acP21BindingNavigator_ItemDeleting);
+            bnavAcp21.AddNewItem = bindingNavigatorAddNewItem;
+            bnavAcp21.BindingSource = bsAcPlan;
+            bnavAcp21.CountItem = bindingNavigatorCountItem;
+            bnavAcp21.CountItemFormat = " no {0}";
+            bnavAcp21.DataGrid = dgvAcp21;
+            bnavAcp21.DeleteItem = bindingNavigatorDeleteItem;
+            bnavAcp21.Dock = System.Windows.Forms.DockStyle.Bottom;
+            bnavAcp21.ImageScalingSize = new System.Drawing.Size(16, 16);
+            bnavAcp21.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { bindingNavigatorMoveFirstItem, bindingNavigatorMovePreviousItem, bindingNavigatorSeparator, bindingNavigatorPositionItem, bindingNavigatorCountItem, bindingNavigatorSeparator1, bindingNavigatorMoveNextItem, bindingNavigatorMoveLastItem, bindingNavigatorSeparator2, bindingNavigatorAddNewItem, bindingNavigatorDeleteItem, toolStripButtonInfo, tsbSave });
+            bnavAcp21.Location = new System.Drawing.Point(0, 334);
+            bnavAcp21.MoveFirstItem = bindingNavigatorMoveFirstItem;
+            bnavAcp21.MoveLastItem = bindingNavigatorMoveLastItem;
+            bnavAcp21.MoveNextItem = bindingNavigatorMoveNextItem;
+            bnavAcp21.MovePreviousItem = bindingNavigatorMovePreviousItem;
+            bnavAcp21.Name = "bnavAcp21";
+            bnavAcp21.PositionItem = bindingNavigatorPositionItem;
+            bnavAcp21.SaveItem = null;
+            bnavAcp21.Size = new System.Drawing.Size(826, 33);
+            bnavAcp21.TabIndex = 0;
+            bnavAcp21.Text = "bindingNavigator1";
+            bnavAcp21.ItemDeleting += acP21BindingNavigator_ItemDeleting;
             // 
             // bindingNavigatorAddNewItem
             // 
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(92, 34);
-            this.bindingNavigatorAddNewItem.Text = "Jauns";
-            this.bindingNavigatorAddNewItem.ToolTipText = "Jauns (Ctrl+Insert)";
+            bindingNavigatorAddNewItem.Image = (System.Drawing.Image)resources.GetObject("bindingNavigatorAddNewItem.Image");
+            bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            bindingNavigatorAddNewItem.Size = new System.Drawing.Size(73, 30);
+            bindingNavigatorAddNewItem.Text = "Jauns";
+            bindingNavigatorAddNewItem.ToolTipText = "Jauns (Ctrl+Insert)";
             // 
             // bsAcPlan
             // 
-            this.bsAcPlan.AutoSaveOnDelete = true;
-            this.bsAcPlan.DataMember = "AcP21";
-            this.bsAcPlan.MyDataSource = "KlonsData";
-            this.bsAcPlan.Name2 = "AcPlan";
-            this.bsAcPlan.Sort = "Ac";
-            this.bsAcPlan.ListChanged += new System.ComponentModel.ListChangedEventHandler(this.bsAcPlan_ListChanged);
+            bsAcPlan.AutoSaveOnDelete = true;
+            bsAcPlan.DataMember = "AcP21";
+            bsAcPlan.MyDataSource = "KlonsData";
+            bsAcPlan.Name2 = "AcPlan";
+            bsAcPlan.Sort = "Ac";
+            bsAcPlan.ListChanged += bsAcPlan_ListChanged;
             // 
             // bindingNavigatorCountItem
             // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(76, 34);
-            this.bindingNavigatorCountItem.Text = " no {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Skaits";
+            bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            bindingNavigatorCountItem.Size = new System.Drawing.Size(49, 30);
+            bindingNavigatorCountItem.Text = " no {0}";
+            bindingNavigatorCountItem.ToolTipText = "Skaits";
             // 
             // dgvAcp21
             // 
-            this.dgvAcp21.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvAcp21.AutoGenerateColumns = false;
-            this.dgvAcp21.AutoSave = true;
-            this.dgvAcp21.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.dgvAcp21.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAcp21.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dgcAc,
-            this.dgcName,
-            this.dgcId1,
-            this.dgcId2});
-            this.dgvAcp21.DataSource = this.bsAcPlan;
-            this.dgvAcp21.Location = new System.Drawing.Point(0, 40);
-            this.dgvAcp21.Margin = new System.Windows.Forms.Padding(2);
-            this.dgvAcp21.Name = "dgvAcp21";
-            this.dgvAcp21.RowHeadersWidth = 53;
-            this.dgvAcp21.Size = new System.Drawing.Size(929, 418);
-            this.dgvAcp21.TabIndex = 2;
-            this.dgvAcp21.MyKeyDown += new System.Windows.Forms.KeyEventHandler(this.acP21DataGridView_MyKeyDown);
-            this.dgvAcp21.MyCheckForChanges += new System.EventHandler(this.dgvAcp21_MyCheckForChanges);
-            this.dgvAcp21.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.acP21DataGridView_CellDoubleClick);
-            this.dgvAcp21.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.acP21DataGridView_UserDeletingRow);
-            this.dgvAcp21.KeyDown += new System.Windows.Forms.KeyEventHandler(this.acP21DataGridView_KeyDown);
-            this.dgvAcp21.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.acP21DataGridView_KeyPress);
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(93, 34);
-            this.bindingNavigatorDeleteItem.Text = "Dzēst";
-            this.bindingNavigatorDeleteItem.ToolTipText = "Dzēst (Ctrl+Delete)";
-            // 
-            // bindingNavigatorMoveFirstItem
-            // 
-            this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
-            this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
-            this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(34, 34);
-            this.bindingNavigatorMoveFirstItem.Text = "Iet uz pirmo";
-            // 
-            // bindingNavigatorMovePreviousItem
-            // 
-            this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
-            this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
-            this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(34, 34);
-            this.bindingNavigatorMovePreviousItem.Text = "Iet uz iepriekšējo";
-            // 
-            // bindingNavigatorSeparator
-            // 
-            this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 39);
-            // 
-            // bindingNavigatorPositionItem
-            // 
-            this.bindingNavigatorPositionItem.AccessibleName = "Position";
-            this.bindingNavigatorPositionItem.AutoSize = false;
-            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
-            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(46, 37);
-            this.bindingNavigatorPositionItem.Text = "0";
-            this.bindingNavigatorPositionItem.ToolTipText = "Pašreizējā pozīcija";
-            // 
-            // bindingNavigatorSeparator1
-            // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 39);
-            // 
-            // bindingNavigatorMoveNextItem
-            // 
-            this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
-            this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
-            this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(34, 34);
-            this.bindingNavigatorMoveNextItem.Text = "Iet uz nākošo";
-            // 
-            // bindingNavigatorMoveLastItem
-            // 
-            this.bindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
-            this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
-            this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(34, 34);
-            this.bindingNavigatorMoveLastItem.Text = "Iet uz pirmo";
-            // 
-            // bindingNavigatorSeparator2
-            // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 39);
-            // 
-            // toolStripButtonInfo
-            // 
-            this.toolStripButtonInfo.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButtonInfo.Image")));
-            this.toolStripButtonInfo.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButtonInfo.Name = "toolStripButtonInfo";
-            this.toolStripButtonInfo.Size = new System.Drawing.Size(78, 34);
-            this.toolStripButtonInfo.Text = "Info";
-            this.toolStripButtonInfo.Click += new System.EventHandler(this.toolStripButtonInfo_Click);
-            // 
-            // tsbSave
-            // 
-            this.tsbSave.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsbSave.Image = ((System.Drawing.Image)(resources.GetObject("tsbSave.Image")));
-            this.tsbSave.Name = "tsbSave";
-            this.tsbSave.Size = new System.Drawing.Size(34, 34);
-            this.tsbSave.Text = "Sagalbāt datus";
-            this.tsbSave.Click += new System.EventHandler(this.tsbSave_Click);
-            // 
-            // tbAcc
-            // 
-            this.tbAcc.BorderColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.tbAcc.DataMember = null;
-            this.tbAcc.DataSource = this.bsAcPlan;
-            this.tbAcc.Location = new System.Drawing.Point(62, 8);
-            this.tbAcc.Margin = new System.Windows.Forms.Padding(2);
-            this.tbAcc.Name = "tbAcc";
-            this.tbAcc.SelectedIndex = -1;
-            this.tbAcc.Size = new System.Drawing.Size(92, 26);
-            this.tbAcc.TabIndex = 0;
-            this.tbAcc.RowSelectedEvent += new KlonsLIB.Components.RowSelectedEventHandler(this.tbAcc_RowSelectedEvent);
-            this.tbAcc.Enter += new System.EventHandler(this.tbAcc_Enter);
-            // 
-            // tbSearch
-            // 
-            this.tbSearch.BorderColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.tbSearch.Location = new System.Drawing.Point(230, 8);
-            this.tbSearch.Margin = new System.Windows.Forms.Padding(2);
-            this.tbSearch.Name = "tbSearch";
-            this.tbSearch.Size = new System.Drawing.Size(132, 26);
-            this.tbSearch.TabIndex = 1;
-            this.tbSearch.Enter += new System.EventHandler(this.tbSearch_Enter);
-            this.tbSearch.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbSearch_KeyPress);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(7, 9);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(49, 20);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Kods:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(164, 9);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(60, 20);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "meklēt:";
+            dgvAcp21.AutoGenerateColumns = false;
+            dgvAcp21.BackgroundColor = System.Drawing.SystemColors.Control;
+            dgvAcp21.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvAcp21.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { dgcAc, dgcName, dgcId1, dgcId2 });
+            dgvAcp21.DataSource = bsAcPlan;
+            dgvAcp21.Dock = System.Windows.Forms.DockStyle.Fill;
+            dgvAcp21.Location = new System.Drawing.Point(0, 28);
+            dgvAcp21.Margin = new System.Windows.Forms.Padding(2);
+            dgvAcp21.Name = "dgvAcp21";
+            dgvAcp21.RowHeadersWidth = 53;
+            dgvAcp21.RowTemplate.Height = 25;
+            dgvAcp21.Size = new System.Drawing.Size(826, 306);
+            dgvAcp21.TabIndex = 2;
+            dgvAcp21.MyKeyDown += acP21DataGridView_MyKeyDown;
+            dgvAcp21.MyCheckForChanges += dgvAcp21_MyCheckForChanges;
+            dgvAcp21.CellDoubleClick += acP21DataGridView_CellDoubleClick;
+            dgvAcp21.UserDeletingRow += acP21DataGridView_UserDeletingRow;
+            dgvAcp21.KeyDown += acP21DataGridView_KeyDown;
+            dgvAcp21.KeyPress += acP21DataGridView_KeyPress;
             // 
             // dgcAc
             // 
-            this.dgcAc.DataPropertyName = "AC";
-            this.dgcAc.HeaderText = "kods";
-            this.dgcAc.MinimumWidth = 7;
-            this.dgcAc.Name = "dgcAc";
-            this.dgcAc.Width = 72;
+            dgcAc.DataPropertyName = "AC";
+            dgcAc.HeaderText = "kods";
+            dgcAc.MinimumWidth = 6;
+            dgcAc.Name = "dgcAc";
+            dgcAc.Width = 64;
             // 
             // dgcName
             // 
-            this.dgcName.DataPropertyName = "Name";
-            this.dgcName.HeaderText = "nosaukums";
-            this.dgcName.MinimumWidth = 7;
-            this.dgcName.Name = "dgcName";
-            this.dgcName.Width = 562;
+            dgcName.DataPropertyName = "Name";
+            dgcName.HeaderText = "nosaukums";
+            dgcName.MinimumWidth = 6;
+            dgcName.Name = "dgcName";
+            dgcName.Width = 499;
             // 
             // dgcId1
             // 
-            this.dgcId1.ColumnNames = new string[] {
-        "col1",
-        "col2"};
-            this.dgcId1.ColumnWidths = "50;100";
-            this.dgcId1.DataPropertyName = "id1";
-            this.dgcId1.DisplayMember = "col1";
-            this.dgcId1.DropDownStyle = KlonsLIB.Components.MyMcComboBox.CustomDropDownStyle.DropDownList;
-            this.dgcId1.HeaderText = "paz.np.";
-            this.dgcId1.ItemStrings = new string[] {
-        "BA;banka",
-        "CN;cita nauda",
-        "KA;kase"};
-            this.dgcId1.MaxDropDownItems = 15;
-            this.dgcId1.MinimumWidth = 7;
-            this.dgcId1.Name = "dgcId1";
-            this.dgcId1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgcId1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.dgcId1.ToolTipText = "pazīme naudas plūsmai";
-            this.dgcId1.ValueMember = "col1";
-            this.dgcId1.Width = 90;
+            dgcId1.ColumnNames = new string[]
+    {
+    "col1",
+    "col2"
+    };
+            dgcId1.ColumnWidths = "50;100";
+            dgcId1.DataPropertyName = "id1";
+            dgcId1.DisplayMember = "col1";
+            dgcId1.DropDownStyle = MyMcComboBox.CustomDropDownStyle.DropDownList;
+            dgcId1.HeaderText = "paz.np.";
+            dgcId1.ItemStrings = new string[]
+    {
+    "BA;banka",
+    "CN;cita nauda",
+    "KA;kase"
+    };
+            dgcId1.MaxDropDownItems = 15;
+            dgcId1.MinimumWidth = 6;
+            dgcId1.Name = "dgcId1";
+            dgcId1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            dgcId1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            dgcId1.ToolTipText = "pazīme naudas plūsmai";
+            dgcId1.ValueMember = "col1";
+            dgcId1.Width = 80;
             // 
             // dgcId2
             // 
-            this.dgcId2.ColumnNames = new string[] {
-        "col1",
-        "col2"};
-            this.dgcId2.ColumnWidths = "50;100";
-            this.dgcId2.DataPropertyName = "id2";
-            this.dgcId2.DisplayMember = "col1";
-            this.dgcId2.DropDownStyle = KlonsLIB.Components.MyMcComboBox.CustomDropDownStyle.DropDownList;
-            this.dgcId2.HeaderText = "paz.2";
-            this.dgcId2.ItemStrings = new string[] {
-        "DB;debitoriem",
-        "KR;kreditoriem"};
-            this.dgcId2.MaxDropDownItems = 15;
-            this.dgcId2.MinimumWidth = 7;
-            this.dgcId2.Name = "dgcId2";
-            this.dgcId2.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgcId2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.dgcId2.ValueMember = "col1";
-            this.dgcId2.Width = 90;
+            dgcId2.ColumnNames = new string[]
+    {
+    "col1",
+    "col2"
+    };
+            dgcId2.ColumnWidths = "50;100";
+            dgcId2.DataPropertyName = "id2";
+            dgcId2.DisplayMember = "col1";
+            dgcId2.DropDownStyle = MyMcComboBox.CustomDropDownStyle.DropDownList;
+            dgcId2.HeaderText = "paz.2";
+            dgcId2.ItemStrings = new string[]
+    {
+    "DB;debitoriem",
+    "KR;kreditoriem"
+    };
+            dgcId2.MaxDropDownItems = 15;
+            dgcId2.MinimumWidth = 6;
+            dgcId2.Name = "dgcId2";
+            dgcId2.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            dgcId2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            dgcId2.ValueMember = "col1";
+            dgcId2.Width = 80;
+            // 
+            // bindingNavigatorDeleteItem
+            // 
+            bindingNavigatorDeleteItem.Image = (System.Drawing.Image)resources.GetObject("bindingNavigatorDeleteItem.Image");
+            bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            bindingNavigatorDeleteItem.Size = new System.Drawing.Size(73, 30);
+            bindingNavigatorDeleteItem.Text = "Dzēst";
+            bindingNavigatorDeleteItem.ToolTipText = "Dzēst (Ctrl+Delete)";
+            // 
+            // bindingNavigatorMoveFirstItem
+            // 
+            bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            bindingNavigatorMoveFirstItem.Image = (System.Drawing.Image)resources.GetObject("bindingNavigatorMoveFirstItem.Image");
+            bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
+            bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
+            bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(30, 30);
+            bindingNavigatorMoveFirstItem.Text = "Iet uz pirmo";
+            // 
+            // bindingNavigatorMovePreviousItem
+            // 
+            bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            bindingNavigatorMovePreviousItem.Image = (System.Drawing.Image)resources.GetObject("bindingNavigatorMovePreviousItem.Image");
+            bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
+            bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
+            bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(30, 30);
+            bindingNavigatorMovePreviousItem.Text = "Iet uz iepriekšējo";
+            // 
+            // bindingNavigatorSeparator
+            // 
+            bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
+            bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 33);
+            // 
+            // bindingNavigatorPositionItem
+            // 
+            bindingNavigatorPositionItem.AccessibleName = "Position";
+            bindingNavigatorPositionItem.AutoSize = false;
+            bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 11F);
+            bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
+            bindingNavigatorPositionItem.Size = new System.Drawing.Size(41, 27);
+            bindingNavigatorPositionItem.Text = "0";
+            bindingNavigatorPositionItem.ToolTipText = "Pašreizējā pozīcija";
+            // 
+            // bindingNavigatorSeparator1
+            // 
+            bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
+            bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 33);
+            // 
+            // bindingNavigatorMoveNextItem
+            // 
+            bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            bindingNavigatorMoveNextItem.Image = (System.Drawing.Image)resources.GetObject("bindingNavigatorMoveNextItem.Image");
+            bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
+            bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
+            bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(30, 30);
+            bindingNavigatorMoveNextItem.Text = "Iet uz nākošo";
+            // 
+            // bindingNavigatorMoveLastItem
+            // 
+            bindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            bindingNavigatorMoveLastItem.Image = (System.Drawing.Image)resources.GetObject("bindingNavigatorMoveLastItem.Image");
+            bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
+            bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
+            bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(30, 30);
+            bindingNavigatorMoveLastItem.Text = "Iet uz pirmo";
+            // 
+            // bindingNavigatorSeparator2
+            // 
+            bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
+            bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 33);
+            // 
+            // toolStripButtonInfo
+            // 
+            toolStripButtonInfo.Image = (System.Drawing.Image)resources.GetObject("toolStripButtonInfo.Image");
+            toolStripButtonInfo.ImageTransparentColor = System.Drawing.Color.Magenta;
+            toolStripButtonInfo.Name = "toolStripButtonInfo";
+            toolStripButtonInfo.Size = new System.Drawing.Size(63, 30);
+            toolStripButtonInfo.Text = "Info";
+            toolStripButtonInfo.Click += toolStripButtonInfo_Click;
+            // 
+            // tsbSave
+            // 
+            tsbSave.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            tsbSave.Image = (System.Drawing.Image)resources.GetObject("tsbSave.Image");
+            tsbSave.Name = "tsbSave";
+            tsbSave.Size = new System.Drawing.Size(30, 30);
+            tsbSave.Text = "Sagalbāt datus";
+            tsbSave.Click += tsbSave_Click;
+            // 
+            // tbAcc
+            // 
+            tbAcc.BorderColor = System.Drawing.SystemColors.ControlDarkDark;
+            tbAcc.DataMember = null;
+            tbAcc.DataSource = bsAcPlan;
+            tbAcc.Location = new System.Drawing.Point(54, 4);
+            tbAcc.Margin = new System.Windows.Forms.Padding(2);
+            tbAcc.Name = "tbAcc";
+            tbAcc.SelectedIndex = -1;
+            tbAcc.Size = new System.Drawing.Size(82, 23);
+            tbAcc.TabIndex = 0;
+            tbAcc.RowSelectedEvent += tbAcc_RowSelectedEvent;
+            tbAcc.Enter += tbAcc_Enter;
+            // 
+            // tbSearch
+            // 
+            tbSearch.BorderColor = System.Drawing.SystemColors.ControlDarkDark;
+            tbSearch.Location = new System.Drawing.Point(203, 4);
+            tbSearch.Margin = new System.Windows.Forms.Padding(2);
+            tbSearch.Name = "tbSearch";
+            tbSearch.Size = new System.Drawing.Size(118, 23);
+            tbSearch.TabIndex = 1;
+            tbSearch.Enter += tbSearch_Enter;
+            tbSearch.KeyPress += tbSearch_KeyPress;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new System.Drawing.Point(5, 5);
+            label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(44, 17);
+            label1.TabIndex = 4;
+            label1.Text = "Kods:";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new System.Drawing.Point(145, 5);
+            label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            label2.Name = "label2";
+            label2.Size = new System.Drawing.Size(53, 17);
+            label2.TabIndex = 5;
+            label2.Text = "meklēt:";
+            // 
+            // panel1
+            // 
+            panel1.Controls.Add(tbAcc);
+            panel1.Controls.Add(label2);
+            panel1.Controls.Add(tbSearch);
+            panel1.Controls.Add(label1);
+            panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            panel1.Location = new System.Drawing.Point(0, 0);
+            panel1.Name = "panel1";
+            panel1.Size = new System.Drawing.Size(826, 28);
+            panel1.TabIndex = 6;
             // 
             // Form_AcPlan
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(929, 491);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.tbSearch);
-            this.Controls.Add(this.tbAcc);
-            this.Controls.Add(this.dgvAcp21);
-            this.Controls.Add(this.bnavAcp21);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Name = "Form_AcPlan";
-            this.Text = "Kontu plāns";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.FormAcPlan_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.bnavAcp21)).EndInit();
-            this.bnavAcp21.ResumeLayout(false);
-            this.bnavAcp21.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bsAcPlan)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvAcp21)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            ClientSize = new System.Drawing.Size(826, 367);
+            Controls.Add(dgvAcp21);
+            Controls.Add(panel1);
+            Controls.Add(bnavAcp21);
+            Name = "Form_AcPlan";
+            Text = "Kontu plāns";
+            Load += FormAcPlan_Load;
+            ((System.ComponentModel.ISupportInitialize)bnavAcp21).EndInit();
+            bnavAcp21.ResumeLayout(false);
+            bnavAcp21.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)bsAcPlan).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvAcp21).EndInit();
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -399,5 +398,6 @@ namespace KlonsF.Forms
         private System.Windows.Forms.DataGridViewTextBoxColumn dgcName;
         private MyDgvMcCBColumn dgcId1;
         private MyDgvMcCBColumn dgcId2;
+        private System.Windows.Forms.Panel panel1;
     }
 }

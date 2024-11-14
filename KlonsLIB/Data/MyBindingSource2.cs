@@ -328,6 +328,8 @@ namespace KlonsLIB.Data
                     ex2 = new MyException("Neizdevās saglabāt izmaiņas.", ex);
                 }
                 row.RejectChanges();
+                if (row.HasErrors)
+                    row.ClearErrors();
                 //row.RowError = ex2.Message;
                 Form_Error.ShowException(ex2);
                 return EBsSaveResult.Error;
@@ -402,7 +404,7 @@ namespace KlonsLIB.Data
         protected virtual EBsSaveResult SaveTableA_(bool onlydeleted = false)
         {
             DataTable table = GetTable();
-            if(table == null) return EBsSaveResult.SaveSkipped;
+            if (table == null) return EBsSaveResult.SaveSkipped;
             var sqlad = KlonsDataModule.St.GetSqlDataAdapter(table);
             if (sqlad == null)
                 throw new Exception("SaveTable failed");
@@ -430,15 +432,29 @@ namespace KlonsLIB.Data
                 sqlad.Update(rows);
                 ClearAllErrors(rows);
                 //Debug.Print("MyBindingSource2.SaveTableA {1} onlydeleted:{0}", onlydeleted, Name2);
+                return EBsSaveResult.Saved;
             }
             catch (Exception ex)
             {
                 MyException ex2 = ExceptionHelper.TranslateException(ex, table);
                 ex2 = new MyException("Neizdevās saglabāt izmaiņas.", ex2);
-                Form_Error.ShowException(ex2);
+                var rt = Form_Error.ShowException(ex2, Form_Error.EPromptType.CanRollBack);
+                if (rt == Form_Error.EResult.RollBack)
+                {
+                    try
+                    {
+                        table.RejectChanges();
+                        ClearAllErrors(rows);
+                    }
+                    catch (Exception)
+                    {
+                        MyMainFormBase.MyInstance.ShowWarning("Neizdevās atecelt veiktās izmaiņas.");
+                        return EBsSaveResult.Error;
+                    }
+                    return EBsSaveResult.RolledBack;
+                }
                 return EBsSaveResult.Error;
             }
-            return EBsSaveResult.Saved;
         }
 
         public virtual void DoRowEvents()
@@ -693,7 +709,7 @@ namespace KlonsLIB.Data
 
     public enum EBsSaveResult
     {
-        Saved, SaveSkipped, Error
+        Saved, SaveSkipped, Error, RolledBack
     }
 
     public delegate void MyRowUpdateEventHandler(MyRowUpdateEventArgs e);

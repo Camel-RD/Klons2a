@@ -28,204 +28,185 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.cmReport = new System.Windows.Forms.Button();
-            this.cmGetData = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.cbYear = new KlonsLIB.Components.FlatComboBox();
-            this.bsRows = new KlonsLIB.Data.MyBindingSource2(this.components);
-            this.dgvRows = new KlonsLIB.Components.MyDataGridView();
-            this.dgcCatT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgcName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgcTaxValLeft0 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgcTaxValChange = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgcTaxDeprecCalc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgcTaxValLeft = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bsRows)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvRows)).BeginInit();
-            this.SuspendLayout();
+            panel1 = new System.Windows.Forms.Panel();
+            cmReport = new System.Windows.Forms.Button();
+            cmGetData = new System.Windows.Forms.Button();
+            label1 = new System.Windows.Forms.Label();
+            cbYear = new KlonsLIB.Components.FlatComboBox();
+            bsRows = new KlonsLIB.Data.MyBindingSource2(components);
+            dgvRows = new KlonsLIB.Components.MyDataGridView();
+            dgcCatT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            dgcName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            dgcTaxValLeft0 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            dgcTaxValChange = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            dgcTaxDeprecCalc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            dgcTaxValLeft = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)bsRows).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvRows).BeginInit();
+            SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.cmReport);
-            this.panel1.Controls.Add(this.cmGetData);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.cbYear);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(803, 36);
-            this.panel1.TabIndex = 0;
+            panel1.Controls.Add(cmReport);
+            panel1.Controls.Add(cmGetData);
+            panel1.Controls.Add(label1);
+            panel1.Controls.Add(cbYear);
+            panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            panel1.Location = new System.Drawing.Point(0, 0);
+            panel1.Name = "panel1";
+            panel1.Size = new System.Drawing.Size(803, 36);
+            panel1.TabIndex = 0;
             // 
             // cmReport
             // 
-            this.cmReport.Location = new System.Drawing.Point(306, 3);
-            this.cmReport.Name = "cmReport";
-            this.cmReport.Size = new System.Drawing.Size(86, 29);
-            this.cmReport.TabIndex = 9;
-            this.cmReport.Text = "Atskaite";
-            this.cmReport.UseVisualStyleBackColor = true;
-            this.cmReport.Click += new System.EventHandler(this.cmReport_Click);
+            cmReport.Location = new System.Drawing.Point(306, 3);
+            cmReport.Name = "cmReport";
+            cmReport.Size = new System.Drawing.Size(86, 29);
+            cmReport.TabIndex = 9;
+            cmReport.Text = "Atskaite";
+            cmReport.UseVisualStyleBackColor = true;
+            cmReport.Click += cmReport_Click;
             // 
             // cmGetData
             // 
-            this.cmGetData.Location = new System.Drawing.Point(214, 3);
-            this.cmGetData.Name = "cmGetData";
-            this.cmGetData.Size = new System.Drawing.Size(86, 29);
-            this.cmGetData.TabIndex = 2;
-            this.cmGetData.Text = "Atlasīt";
-            this.cmGetData.UseVisualStyleBackColor = true;
-            this.cmGetData.Click += new System.EventHandler(this.cmGetData_Click);
+            cmGetData.Location = new System.Drawing.Point(214, 3);
+            cmGetData.Name = "cmGetData";
+            cmGetData.Size = new System.Drawing.Size(86, 29);
+            cmGetData.TabIndex = 2;
+            cmGetData.Text = "Atlasīt";
+            cmGetData.UseVisualStyleBackColor = true;
+            cmGetData.Click += cmGetData_Click;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(3, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(99, 16);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Pārksata gads:";
+            label1.AutoSize = true;
+            label1.Location = new System.Drawing.Point(3, 9);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(103, 17);
+            label1.TabIndex = 1;
+            label1.Text = "Pārksata gads:";
             // 
             // cbYear
             // 
-            this.cbYear.BorderColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.cbYear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbYear.FormattingEnabled = true;
-            this.cbYear.Items.AddRange(new object[] {
-            "2010",
-            "2011",
-            "2012",
-            "2013",
-            "2014",
-            "2015",
-            "2016",
-            "2017",
-            "2018",
-            "2019",
-            "2020"});
-            this.cbYear.Location = new System.Drawing.Point(108, 6);
-            this.cbYear.MaxDropDownItems = 15;
-            this.cbYear.Name = "cbYear";
-            this.cbYear.Size = new System.Drawing.Size(75, 24);
-            this.cbYear.TabIndex = 0;
+            cbYear.BorderColor = System.Drawing.SystemColors.ControlDarkDark;
+            cbYear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            cbYear.FormattingEnabled = true;
+            cbYear.Items.AddRange(new object[] { "2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020" });
+            cbYear.Location = new System.Drawing.Point(108, 6);
+            cbYear.MaxDropDownItems = 15;
+            cbYear.Name = "cbYear";
+            cbYear.Size = new System.Drawing.Size(75, 24);
+            cbYear.TabIndex = 0;
             // 
             // dgvRows
             // 
-            this.dgvRows.AllowUserToAddRows = false;
-            this.dgvRows.AllowUserToDeleteRows = false;
-            this.dgvRows.AutoGenerateColumns = false;
-            this.dgvRows.AutoSave = false;
-            this.dgvRows.BackgroundColor = System.Drawing.SystemColors.Control;
+            dgvRows.AllowUserToAddRows = false;
+            dgvRows.AllowUserToDeleteRows = false;
+            dgvRows.AutoGenerateColumns = false;
+            dgvRows.AutoSave = false;
+            dgvRows.BackgroundColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.488F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvRows.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvRows.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvRows.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dgcCatT,
-            this.dgcName,
-            this.dgcTaxValLeft0,
-            this.dgcTaxValChange,
-            this.dgcTaxDeprecCalc,
-            this.dgcTaxValLeft});
-            this.dgvRows.DataSource = this.bsRows;
-            this.dgvRows.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvRows.Location = new System.Drawing.Point(0, 36);
-            this.dgvRows.Name = "dgvRows";
-            this.dgvRows.ReadOnly = true;
-            this.dgvRows.Size = new System.Drawing.Size(803, 319);
-            this.dgvRows.TabIndex = 1;
+            dgvRows.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dgvRows.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvRows.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { dgcCatT, dgcName, dgcTaxValLeft0, dgcTaxValChange, dgcTaxDeprecCalc, dgcTaxValLeft });
+            dgvRows.DataSource = bsRows;
+            dgvRows.Dock = System.Windows.Forms.DockStyle.Fill;
+            dgvRows.Location = new System.Drawing.Point(0, 36);
+            dgvRows.Name = "dgvRows";
+            dgvRows.ReadOnly = true;
+            dgvRows.Size = new System.Drawing.Size(803, 319);
+            dgvRows.TabIndex = 1;
             // 
             // dgcCatT
             // 
-            this.dgcCatT.DataPropertyName = "SCatT";
-            this.dgcCatT.HeaderText = "Kat.";
-            this.dgcCatT.Name = "dgcCatT";
-            this.dgcCatT.ReadOnly = true;
-            this.dgcCatT.ToolTipText = "Nolietojumu kategorija";
+            dgcCatT.DataPropertyName = "SCatT";
+            dgcCatT.HeaderText = "Kat.";
+            dgcCatT.Name = "dgcCatT";
+            dgcCatT.ReadOnly = true;
+            dgcCatT.ToolTipText = "Nolietojumu kategorija";
             // 
             // dgcName
             // 
-            this.dgcName.DataPropertyName = "Name";
-            this.dgcName.HeaderText = "Nosaukums";
-            this.dgcName.Name = "dgcName";
-            this.dgcName.ReadOnly = true;
-            this.dgcName.Width = 200;
+            dgcName.DataPropertyName = "Name";
+            dgcName.HeaderText = "Nosaukums";
+            dgcName.Name = "dgcName";
+            dgcName.ReadOnly = true;
+            dgcName.Width = 200;
             // 
             // dgcTaxValLeft0
             // 
-            this.dgcTaxValLeft0.DataPropertyName = "TaxValLeft0";
+            dgcTaxValLeft0.DataPropertyName = "TaxValLeft0";
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
             dataGridViewCellStyle2.Format = "N2";
-            this.dgcTaxValLeft0.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgcTaxValLeft0.HeaderText = "Atl.v. sākumā";
-            this.dgcTaxValLeft0.Name = "dgcTaxValLeft0";
-            this.dgcTaxValLeft0.ReadOnly = true;
-            this.dgcTaxValLeft0.ToolTipText = "Atlikusī vērtība perioda sākumā";
-            this.dgcTaxValLeft0.Width = 80;
+            dgcTaxValLeft0.DefaultCellStyle = dataGridViewCellStyle2;
+            dgcTaxValLeft0.HeaderText = "Atl.v. sākumā";
+            dgcTaxValLeft0.Name = "dgcTaxValLeft0";
+            dgcTaxValLeft0.ReadOnly = true;
+            dgcTaxValLeft0.ToolTipText = "Atlikusī vērtība perioda sākumā";
+            dgcTaxValLeft0.Width = 80;
             // 
             // dgcTaxValChange
             // 
-            this.dgcTaxValChange.DataPropertyName = "TaxValChange";
+            dgcTaxValChange.DataPropertyName = "TaxValChange";
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
             dataGridViewCellStyle3.Format = "# ##0.00;-# ##0.00;\"\"";
-            this.dgcTaxValChange.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dgcTaxValChange.HeaderText = "Izmaiņas +/-";
-            this.dgcTaxValChange.Name = "dgcTaxValChange";
-            this.dgcTaxValChange.ReadOnly = true;
-            this.dgcTaxValChange.Width = 80;
+            dgcTaxValChange.DefaultCellStyle = dataGridViewCellStyle3;
+            dgcTaxValChange.HeaderText = "Izmaiņas +/-";
+            dgcTaxValChange.Name = "dgcTaxValChange";
+            dgcTaxValChange.ReadOnly = true;
+            dgcTaxValChange.Width = 80;
             // 
             // dgcTaxDeprecCalc
             // 
-            this.dgcTaxDeprecCalc.DataPropertyName = "TaxDeprecCalc";
+            dgcTaxDeprecCalc.DataPropertyName = "TaxDeprecCalc";
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
             dataGridViewCellStyle4.Format = "N2";
-            this.dgcTaxDeprecCalc.DefaultCellStyle = dataGridViewCellStyle4;
-            this.dgcTaxDeprecCalc.HeaderText = "Apr. nol.";
-            this.dgcTaxDeprecCalc.Name = "dgcTaxDeprecCalc";
-            this.dgcTaxDeprecCalc.ReadOnly = true;
-            this.dgcTaxDeprecCalc.ToolTipText = "Aprēķinātais nolietojums nodokļu vajadzībām";
-            this.dgcTaxDeprecCalc.Width = 80;
+            dgcTaxDeprecCalc.DefaultCellStyle = dataGridViewCellStyle4;
+            dgcTaxDeprecCalc.HeaderText = "Apr. nol.";
+            dgcTaxDeprecCalc.Name = "dgcTaxDeprecCalc";
+            dgcTaxDeprecCalc.ReadOnly = true;
+            dgcTaxDeprecCalc.ToolTipText = "Aprēķinātais nolietojums nodokļu vajadzībām";
+            dgcTaxDeprecCalc.Width = 80;
             // 
             // dgcTaxValLeft
             // 
-            this.dgcTaxValLeft.DataPropertyName = "TaxValLeft1";
+            dgcTaxValLeft.DataPropertyName = "TaxValLeft1";
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
             dataGridViewCellStyle5.Format = "N2";
-            this.dgcTaxValLeft.DefaultCellStyle = dataGridViewCellStyle5;
-            this.dgcTaxValLeft.HeaderText = "Atl.v. beigās";
-            this.dgcTaxValLeft.Name = "dgcTaxValLeft";
-            this.dgcTaxValLeft.ReadOnly = true;
-            this.dgcTaxValLeft.ToolTipText = "Atlikusī vērtība perioda beigās";
-            this.dgcTaxValLeft.Width = 80;
+            dgcTaxValLeft.DefaultCellStyle = dataGridViewCellStyle5;
+            dgcTaxValLeft.HeaderText = "Atl.v. beigās";
+            dgcTaxValLeft.Name = "dgcTaxValLeft";
+            dgcTaxValLeft.ReadOnly = true;
+            dgcTaxValLeft.ToolTipText = "Atlikusī vērtība perioda beigās";
+            dgcTaxValLeft.Width = 80;
             // 
-            // FormRep_TaxDeprec
+            // FormPRep_TaxDeprec
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(803, 355);
-            this.Controls.Add(this.dgvRows);
-            this.Controls.Add(this.panel1);
-            this.Name = "FormRep_TaxDeprec";
-            this.Text = "Nolietojums nodokļa vajadzībām";
-            this.Load += new System.EventHandler(this.FormRep_TaxDeprec_Load);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bsRows)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvRows)).EndInit();
-            this.ResumeLayout(false);
-
+            AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            ClientSize = new System.Drawing.Size(803, 355);
+            Controls.Add(dgvRows);
+            Controls.Add(panel1);
+            Name = "FormPRep_TaxDeprec";
+            Text = "Nolietojums nodokļa vajadzībām";
+            Load += FormRep_TaxDeprec_Load;
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)bsRows).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvRows).EndInit();
+            ResumeLayout(false);
         }
 
         #endregion

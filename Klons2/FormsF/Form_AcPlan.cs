@@ -26,7 +26,6 @@ namespace KlonsF.Forms
         private void FormAcPlan_Load(object sender, EventArgs e)
         {
             CheckSave();
-            WindowState = FormWindowState.Maximized;
         }
 
         private void SelectCurrent()

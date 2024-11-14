@@ -527,7 +527,7 @@
             this.bnavLikmes.CountItemFormat = " no {0}";
             this.bnavLikmes.DeleteItem = null;
             this.bnavLikmes.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.bnavLikmes.ImageScalingSize = new System.Drawing.Size(21, 21);
+            this.bnavLikmes.ImageScalingSize = new System.Drawing.Size(16, 16);
             this.bnavLikmes.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bindingNavigatorMoveFirstItem,
             this.bindingNavigatorMovePreviousItem,

@@ -28,11 +28,6 @@ namespace KlonsM.FormsM
             dgcRPrice.DefaultCellStyle.Format = price_format;
         }
 
-        private void FormM_DiscountList_Load(object sender, EventArgs e)
-        {
-
-        }
-
         protected override void OnShown(EventArgs e)
         {
             base.OnShown(e);

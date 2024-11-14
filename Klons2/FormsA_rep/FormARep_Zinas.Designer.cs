@@ -323,7 +323,7 @@
             bnRows.DeleteItem = bindingNavigatorDeleteItem;
             bnRows.Dock = System.Windows.Forms.DockStyle.Bottom;
             bnRows.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            bnRows.ImageScalingSize = new System.Drawing.Size(21, 23);
+            bnRows.ImageScalingSize = new System.Drawing.Size(16, 16);
             bnRows.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { bindingNavigatorMoveFirstItem, bindingNavigatorMovePreviousItem, bindingNavigatorSeparator, bindingNavigatorPositionItem, bindingNavigatorCountItem, bindingNavigatorSeparator1, bindingNavigatorMoveNextItem, bindingNavigatorMoveLastItem, bindingNavigatorSeparator2, bindingNavigatorAddNewItem, bindingNavigatorDeleteItem });
             bnRows.Location = new System.Drawing.Point(0, 391);
             bnRows.MoveFirstItem = bindingNavigatorMoveFirstItem;

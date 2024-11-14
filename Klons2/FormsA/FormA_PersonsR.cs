@@ -737,6 +737,7 @@ namespace KlonsA.Forms
 
         private void dgvPapildSummas_DefaultValuesNeeded(object sender, DataGridViewRowEventArgs e)
         {
+            e.Row.Cells[dgcPSRateType.Index].Value = (short)0;
             /*
             if (bsPersons.Current == null) return;
             var ida = (int)(bsAmati.Current as DataRowView)[0];

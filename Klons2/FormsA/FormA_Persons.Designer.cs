@@ -232,7 +232,7 @@ namespace KlonsA.Forms
             this.bnavNav.CountItemFormat = " no {0}";
             this.bnavNav.DeleteItem = null;
             this.bnavNav.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.bnavNav.ImageScalingSize = new System.Drawing.Size(23, 26);
+            this.bnavNav.ImageScalingSize = new System.Drawing.Size(16, 16);
             this.bnavNav.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tslLabel,
             this.bindingNavigatorMoveFirstItem,
@@ -425,7 +425,7 @@ namespace KlonsA.Forms
             // 
             // toolStrip1
             // 
-            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(23, 26);
+            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(16, 16);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripLabel1,
             this.toolStripLabel2});

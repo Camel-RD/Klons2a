@@ -99,7 +99,7 @@
             this.bnavSh.CountItemFormat = " no {0}";
             this.bnavSh.DeleteItem = null;
             this.bnavSh.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.bnavSh.ImageScalingSize = new System.Drawing.Size(21, 21);
+            this.bnavSh.ImageScalingSize = new System.Drawing.Size(16, 16);
             this.bnavSh.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripLabel1,
             this.bindingNavigatorMoveFirstItem,

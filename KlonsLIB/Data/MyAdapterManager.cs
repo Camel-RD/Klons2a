@@ -212,6 +212,27 @@ namespace KlonsLIB.Data
             return tablename + adapterClassSuffix;
         }
 
+        public static void ClearAllErrors(DataTable table)
+        {
+            if (table == null) return;
+            if (table.HasErrors)
+            {
+                var rows = table.GetErrors();
+                foreach (var r in rows)
+                {
+                    r.ClearErrors();
+                }
+            }
+        }
+        
+        public static void ClearAllErrors(DataSet dataset)
+        {
+            foreach (var table in dataset.Tables.Cast<DataTable>())
+            {
+                ClearAllErrors(table);
+            }
+        }
+
         public bool UpdateAll(bool bthrow = false)
         {
             if (tableAdapterManager == null) return false;
@@ -241,7 +262,19 @@ namespace KlonsLIB.Data
             }
             else
             {
-                Form_Error.ShowException(e2);
+                var rt = Form_Error.ShowException(e2, Form_Error.EPromptType.CanRollBackWithConfirmation);
+                if (rt == Form_Error.EResult.RollBack)
+                {
+                    try
+                    {
+                        ds.RejectChanges();
+                        ClearAllErrors(ds);
+                    }
+                    catch (Exception)
+                    {
+                        MyMainFormBase.MyInstance.ShowWarning("Neizdevās atecelt veiktās izmaiņas.");
+                    }
+                }
                 return false;
             }
         }

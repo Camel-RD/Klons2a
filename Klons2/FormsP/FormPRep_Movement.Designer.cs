@@ -150,7 +150,7 @@
             toolStrip2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             toolStrip2.GripMargin = new System.Windows.Forms.Padding(0);
             toolStrip2.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
-            toolStrip2.ImageScalingSize = new System.Drawing.Size(22, 22);
+            toolStrip2.ImageScalingSize = new System.Drawing.Size(16, 16);
             toolStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { tsbPrevMonth, tsbNextMonth });
             toolStrip2.Location = new System.Drawing.Point(284, 3);
             toolStrip2.Name = "toolStrip2";

@@ -790,7 +790,7 @@
             bnNav.DeleteItem = null;
             bnNav.Dock = System.Windows.Forms.DockStyle.Bottom;
             bnNav.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            bnNav.ImageScalingSize = new System.Drawing.Size(20, 22);
+            bnNav.ImageScalingSize = new System.Drawing.Size(16, 16);
             bnNav.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { tslActiveTable, bindingNavigatorMoveFirstItem, bindingNavigatorMovePreviousItem, bindingNavigatorSeparator, bindingNavigatorPositionItem, bindingNavigatorCountItem, bindingNavigatorSeparator1, bindingNavigatorMoveNextItem, bindingNavigatorMoveLastItem, bindingNavigatorSeparator2, bindingNavigatorAddNewItem, bindingNavigatorDeleteItem, bindingNavigatorSaveItem, tsbInfo, toolStripLabel1 });
             bnNav.Location = new System.Drawing.Point(0, 439);
             bnNav.MoveFirstItem = bindingNavigatorMoveFirstItem;
@@ -1660,7 +1660,7 @@
             // menuStrip1
             // 
             menuStrip1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            menuStrip1.ImageScalingSize = new System.Drawing.Size(21, 21);
+            menuStrip1.ImageScalingSize = new System.Drawing.Size(16, 16);
             menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { pamatlīdzekļuSarakstsToolStripMenuItem });
             menuStrip1.Location = new System.Drawing.Point(0, 0);
             menuStrip1.Name = "menuStrip1";

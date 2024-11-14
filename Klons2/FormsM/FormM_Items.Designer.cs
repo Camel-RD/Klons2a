@@ -114,7 +114,7 @@ namespace KlonsM.FormsM
             bNav.DeleteItem = bindingNavigatorDeleteItem;
             bNav.Dock = System.Windows.Forms.DockStyle.Bottom;
             bNav.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            bNav.ImageScalingSize = new System.Drawing.Size(24, 24);
+            bNav.ImageScalingSize = new System.Drawing.Size(16, 16);
             bNav.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { bindingNavigatorMoveFirstItem, bindingNavigatorMovePreviousItem, bindingNavigatorSeparator, bindingNavigatorPositionItem, bindingNavigatorCountItem, bindingNavigatorSeparator1, bindingNavigatorMoveNextItem, bindingNavigatorMoveLastItem, bindingNavigatorSeparator2, bindingNavigatorAddNewItem, bindingNavigatorDeleteItem, bindingNavigatorSaveItem, tsbFindPrev, tsbFind, tsbFindNext });
             bNav.Location = new System.Drawing.Point(0, 419);
             bNav.MoveFirstItem = bindingNavigatorMoveFirstItem;
@@ -563,7 +563,7 @@ namespace KlonsM.FormsM
             // 
             menuStrip1.Dock = System.Windows.Forms.DockStyle.None;
             menuStrip1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
+            menuStrip1.ImageScalingSize = new System.Drawing.Size(16, 16);
             menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { miArtikuliTools });
             menuStrip1.Location = new System.Drawing.Point(917, 0);
             menuStrip1.Name = "menuStrip1";

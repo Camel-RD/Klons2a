@@ -106,7 +106,7 @@ namespace KlonsF.Forms
             // 
             // myToolStrip
             // 
-            this.myToolStrip.ImageScalingSize = new System.Drawing.Size(21, 21);
+            this.myToolStrip.ImageScalingSize = new System.Drawing.Size(16, 16);
             this.myToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsbFilter,
             this.tsbFilterDocs,

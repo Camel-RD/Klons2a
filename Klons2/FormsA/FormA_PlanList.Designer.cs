@@ -221,7 +221,7 @@ namespace KlonsA.Forms
             this.bnavPlanuSar.DataGrid = this.dgvPlanuSar;
             this.bnavPlanuSar.DeleteItem = null;
             this.bnavPlanuSar.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.bnavPlanuSar.ImageScalingSize = new System.Drawing.Size(21, 21);
+            this.bnavPlanuSar.ImageScalingSize = new System.Drawing.Size(16, 16);
             this.bnavPlanuSar.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bindingNavigatorMoveFirstItem,
             this.bindingNavigatorMovePreviousItem,
@@ -352,7 +352,7 @@ namespace KlonsA.Forms
             // 
             // toolStrip1
             // 
-            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(21, 21);
+            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(16, 16);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripLabel1});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);

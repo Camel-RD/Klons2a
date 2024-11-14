@@ -94,7 +94,7 @@
             // toolStrip1
             // 
             toolStrip1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            toolStrip1.ImageScalingSize = new System.Drawing.Size(21, 21);
+            toolStrip1.ImageScalingSize = new System.Drawing.Size(16, 16);
             toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { toolStripLabel1, toolStripLabel2, toolStripLabel3, cmFilter });
             toolStrip1.Location = new System.Drawing.Point(0, 0);
             toolStrip1.Name = "toolStrip1";
@@ -141,7 +141,7 @@
             bnavSar.DeleteItem = null;
             bnavSar.Dock = System.Windows.Forms.DockStyle.Bottom;
             bnavSar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            bnavSar.ImageScalingSize = new System.Drawing.Size(21, 21);
+            bnavSar.ImageScalingSize = new System.Drawing.Size(16, 16);
             bnavSar.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { bindingNavigatorMoveFirstItem, bindingNavigatorMovePreviousItem, bindingNavigatorSeparator, bindingNavigatorPositionItem, bindingNavigatorCountItem, bindingNavigatorSeparator1, bindingNavigatorMoveNextItem, bindingNavigatorMoveLastItem, bindingNavigatorSeparator2, bindingNavigatorAddNewItem, toolStripButton1, bindingNavigatorDeleteItem, tsbSave });
             bnavSar.Location = new System.Drawing.Point(0, 374);
             bnavSar.MoveFirstItem = bindingNavigatorMoveFirstItem;

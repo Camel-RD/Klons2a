@@ -527,7 +527,7 @@ namespace KlonsA.Forms
             bnavPlans.DeleteItem = null;
             bnavPlans.Dock = System.Windows.Forms.DockStyle.Bottom;
             bnavPlans.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            bnavPlans.ImageScalingSize = new System.Drawing.Size(21, 21);
+            bnavPlans.ImageScalingSize = new System.Drawing.Size(16, 16);
             bnavPlans.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { bindingNavigatorMoveFirstItem, bindingNavigatorMovePreviousItem, bindingNavigatorSeparator, bindingNavigatorPositionItem, bindingNavigatorCountItem, bindingNavigatorSeparator1, bindingNavigatorMoveNextItem, bindingNavigatorMoveLastItem, bindingNavigatorSeparator2, bindingNavigatorAddNewItem, bindingNavigatorDeleteItem, tsbSave });
             bnavPlans.Location = new System.Drawing.Point(0, 338);
             bnavPlans.MoveFirstItem = bindingNavigatorMoveFirstItem;
@@ -642,7 +642,7 @@ namespace KlonsA.Forms
             toolStrip1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             toolStrip1.GripMargin = new System.Windows.Forms.Padding(0);
             toolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
-            toolStrip1.ImageScalingSize = new System.Drawing.Size(21, 21);
+            toolStrip1.ImageScalingSize = new System.Drawing.Size(16, 16);
             toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { tslPeriod, toolStripLabel1, toolStripLabel2, cbYR, cbMT });
             toolStrip1.Location = new System.Drawing.Point(0, 0);
             toolStrip1.Name = "toolStrip1";
@@ -712,7 +712,7 @@ namespace KlonsA.Forms
             // 
             // cmsMenuMarkDay
             // 
-            cmsMenuMarkDay.ImageScalingSize = new System.Drawing.Size(21, 21);
+            cmsMenuMarkDay.ImageScalingSize = new System.Drawing.Size(16, 16);
             cmsMenuMarkDay.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { miDD, miBD, miSD, miDDSD, miSDDD });
             cmsMenuMarkDay.Name = "cmsDayCodes";
             cmsMenuMarkDay.Size = new System.Drawing.Size(265, 124);
@@ -762,7 +762,7 @@ namespace KlonsA.Forms
             // menuStrip1
             // 
             menuStrip1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            menuStrip1.ImageScalingSize = new System.Drawing.Size(21, 21);
+            menuStrip1.ImageScalingSize = new System.Drawing.Size(16, 16);
             menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { darbaLaikaKopplānsToolStripMenuItem });
             menuStrip1.Location = new System.Drawing.Point(0, 0);
             menuStrip1.Name = "menuStrip1";

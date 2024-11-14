@@ -257,7 +257,7 @@ namespace KlonsA.Forms
             bnavNav.DeleteItem = null;
             bnavNav.Dock = System.Windows.Forms.DockStyle.Bottom;
             bnavNav.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            bnavNav.ImageScalingSize = new System.Drawing.Size(23, 26);
+            bnavNav.ImageScalingSize = new System.Drawing.Size(16, 16);
             bnavNav.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { tslLabel, bindingNavigatorMoveFirstItem, bindingNavigatorMovePreviousItem, bindingNavigatorSeparator, bnavNavPosItem, bnavNavCountItem, bindingNavigatorSeparator1, bindingNavigatorMoveNextItem, bindingNavigatorMoveLastItem, bindingNavigatorSeparator2, bindingNavigatorAddNewItem, bindingNavigatorDeleteItem, tsbSave });
             bnavNav.Location = new System.Drawing.Point(0, 568);
             bnavNav.MoveFirstItem = bindingNavigatorMoveFirstItem;
@@ -1578,7 +1578,7 @@ namespace KlonsA.Forms
             // 
             toolStrip1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             toolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
-            toolStrip1.ImageScalingSize = new System.Drawing.Size(21, 21);
+            toolStrip1.ImageScalingSize = new System.Drawing.Size(16, 16);
             toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { lbArrow1, toolStripLabel2 });
             toolStrip1.Location = new System.Drawing.Point(0, 0);
             toolStrip1.Name = "toolStrip1";
@@ -2130,7 +2130,7 @@ namespace KlonsA.Forms
             // menuStrip1
             // 
             menuStrip1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            menuStrip1.ImageScalingSize = new System.Drawing.Size(21, 21);
+            menuStrip1.ImageScalingSize = new System.Drawing.Size(16, 16);
             menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { darbiniekuDatiToolStripMenuItem });
             menuStrip1.Location = new System.Drawing.Point(0, 0);
             menuStrip1.Name = "menuStrip1";

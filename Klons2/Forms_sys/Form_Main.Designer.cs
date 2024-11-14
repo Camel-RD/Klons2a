@@ -232,7 +232,7 @@ namespace KlonsF
             // menuStrip1
             // 
             this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(21, 21);
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(16, 16);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.miSistēma,
             this.miFReģistri,
@@ -1714,7 +1714,7 @@ namespace KlonsF
             // 
             // myToolStrip
             // 
-            this.myToolStrip.ImageScalingSize = new System.Drawing.Size(23, 26);
+            this.myToolStrip.ImageScalingSize = new System.Drawing.Size(16, 16);
             this.myToolStrip.Location = new System.Drawing.Point(0, 41);
             this.myToolStrip.Name = "myToolStrip";
             this.myToolStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
@@ -1733,7 +1733,7 @@ namespace KlonsF
             // 
             this.tsWindowList.CanOverflow = false;
             this.tsWindowList.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.tsWindowList.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.tsWindowList.ImageScalingSize = new System.Drawing.Size(16, 16);
             this.tsWindowList.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow;
             this.tsWindowList.Location = new System.Drawing.Point(0, 580);
             this.tsWindowList.Name = "tsWindowList";

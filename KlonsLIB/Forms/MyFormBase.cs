@@ -219,7 +219,7 @@ namespace KlonsLIB.Forms
                 }
                 if (!SaveData())
                 {
-                    var s = String.Format("Logs [{0}] tiks aizvērt, bet\niespējams, ka datos bija kļūda.", this.Text);
+                    var s = $"Logs [{Text}] tiks aizvērt, bet\niespējams, ka datos bija kļūda.";
                     MyMainForm.ShowWarning(s);
                     IsFormClosing = false;
                     return;
@@ -390,6 +390,8 @@ namespace KlonsLIB.Forms
 
         protected void ScaleToolStrips(Form form, SizeF factor)
         {
+            float fontscalefactor = DefaultFont.Size / 10.0f;
+            factor *= fontscalefactor;
             foreach (var c in GetAllControls(form))
             {
                 if (c is ToolStrip tsp && !(c is MenuStrip))
