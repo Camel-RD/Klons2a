@@ -25,7 +25,7 @@ namespace Klons2
             return prop;
         }
 
-        public static ApplicationSettingsBase Settings => KlonsF.Properties.Settings.Default;
+        public static ApplicationSettingsBase Settings => KlonsF.Settings.Default;
 
     }
 }

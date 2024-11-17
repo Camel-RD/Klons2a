@@ -33,24 +33,13 @@ namespace KlonsM.FormsM
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormM_Stores));
             bsStores = new KlonsLIB.Data.MyBindingSource(components);
             dgvRows = new KlonsLIB.Components.MyDataGridView();
-            dgcCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            dgcName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            dgcTP = new KlonsLIB.Components.MyDgvTextboxColumn2();
             bsStoreType = new KlonsLIB.Data.MyBindingSource(components);
-            dgcIdCat = new KlonsLIB.Components.MyDgvTextboxColumn2();
             bsStoresCat = new KlonsLIB.Data.MyBindingSource(components);
-            dgcRegNr = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            dgcPVNRegNr = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            dgcAddr = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            dgcPVNTp = new KlonsLIB.Components.MyDgvTextboxColumn2();
             bsPVNType = new KlonsLIB.Data.MyBindingSource(components);
-            dgcAcc21 = new KlonsLIB.Components.MyDgvTextboxColumn2();
             bsAccounts21 = new KlonsLIB.Data.MyBindingSource(components);
-            dgcAcc23 = new KlonsLIB.Components.MyDgvTextboxColumn2();
             bsAccounts23 = new KlonsLIB.Data.MyBindingSource(components);
-            dgcAcc53 = new KlonsLIB.Components.MyDgvTextboxColumn2();
             bsAccounts53 = new KlonsLIB.Data.MyBindingSource(components);
-            dgcID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            bsCountry = new KlonsLIB.Data.MyBindingSource(components);
             bNav = new KlonsLIB.Components.MyBindingNavigator();
             bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
@@ -81,6 +70,25 @@ namespace KlonsM.FormsM
             btContacts = new System.Windows.Forms.ToolStripButton();
             btBankAccounts = new System.Windows.Forms.ToolStripButton();
             btVehicles = new System.Windows.Forms.ToolStripButton();
+            dgcCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            dgcName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            dgcTP = new KlonsLIB.Components.MyDgvTextboxColumn2();
+            dgcIdCat = new KlonsLIB.Components.MyDgvTextboxColumn2();
+            dgcRegNr = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            dgcPVNRegNr = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            dgcAddr = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            dgcPVNTp = new KlonsLIB.Components.MyDgvTextboxColumn2();
+            dgcAcc21 = new KlonsLIB.Components.MyDgvTextboxColumn2();
+            dgcAcc23 = new KlonsLIB.Components.MyDgvTextboxColumn2();
+            dgcAcc53 = new KlonsLIB.Components.MyDgvTextboxColumn2();
+            dgcStreet = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            dgcCity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            dgcState = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            dgcParish = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            dgcPostalCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            dgcIdCountry = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            dgcEMail = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            dgcID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)bsStores).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dgvRows).BeginInit();
             ((System.ComponentModel.ISupportInitialize)bsStoreType).BeginInit();
@@ -89,6 +97,7 @@ namespace KlonsM.FormsM
             ((System.ComponentModel.ISupportInitialize)bsAccounts21).BeginInit();
             ((System.ComponentModel.ISupportInitialize)bsAccounts23).BeginInit();
             ((System.ComponentModel.ISupportInitialize)bsAccounts53).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)bsCountry).BeginInit();
             ((System.ComponentModel.ISupportInitialize)bNav).BeginInit();
             bNav.SuspendLayout();
             panel1.SuspendLayout();
@@ -108,17 +117,16 @@ namespace KlonsM.FormsM
             // dgvRows
             // 
             dgvRows.AutoGenerateColumns = false;
-            dgvRows.AutoSave = true;
             dgvRows.BackgroundColor = System.Drawing.SystemColors.Control;
             dgvRows.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvRows.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { dgcCode, dgcName, dgcTP, dgcIdCat, dgcRegNr, dgcPVNRegNr, dgcAddr, dgcPVNTp, dgcAcc21, dgcAcc23, dgcAcc53, dgcID });
+            dgvRows.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { dgcCode, dgcName, dgcTP, dgcIdCat, dgcRegNr, dgcPVNRegNr, dgcAddr, dgcPVNTp, dgcAcc21, dgcAcc23, dgcAcc53, dgcStreet, dgcCity, dgcState, dgcParish, dgcPostalCode, dgcIdCountry, dgcEMail, dgcID });
             dgvRows.DataSource = bsStores;
             dgvRows.Dock = System.Windows.Forms.DockStyle.Fill;
             dgvRows.Location = new System.Drawing.Point(0, 30);
             dgvRows.Name = "dgvRows";
-            dgvRows.RowHeadersWidth = 62;
+            dgvRows.RowHeadersWidth = 40;
             dgvRows.ShowCellToolTips = false;
-            dgvRows.Size = new System.Drawing.Size(1149, 364);
+            dgvRows.Size = new System.Drawing.Size(1149, 370);
             dgvRows.TabIndex = 1;
             dgvRows.MyKeyDown += dgvRows_MyKeyDown;
             dgvRows.MyCheckForChanges += dgvRows_MyCheckForChanges;
@@ -128,50 +136,10 @@ namespace KlonsM.FormsM
             dgvRows.UserDeletingRow += dgvRows_UserDeletingRow;
             dgvRows.KeyPress += dgvRows_KeyPress;
             // 
-            // dgcCode
-            // 
-            dgcCode.DataPropertyName = "CODE";
-            dgcCode.Frozen = true;
-            dgcCode.HeaderText = "kods";
-            dgcCode.MinimumWidth = 8;
-            dgcCode.Name = "dgcCode";
-            dgcCode.Width = 140;
-            // 
-            // dgcName
-            // 
-            dgcName.DataPropertyName = "NAME";
-            dgcName.Frozen = true;
-            dgcName.HeaderText = "nosaukums";
-            dgcName.MinimumWidth = 8;
-            dgcName.Name = "dgcName";
-            dgcName.Width = 250;
-            // 
-            // dgcTP
-            // 
-            dgcTP.DataPropertyName = "TP";
-            dgcTP.DataSource = bsStoreType;
-            dgcTP.DisplayMember = "NAME";
-            dgcTP.HeaderText = "veids";
-            dgcTP.MinimumWidth = 8;
-            dgcTP.Name = "dgcTP";
-            dgcTP.ValueMember = "ID";
-            dgcTP.Width = 140;
-            // 
             // bsStoreType
             // 
             bsStoreType.DataMember = "M_STORETYPE";
             bsStoreType.MyDataSource = "KlonsMData";
-            // 
-            // dgcIdCat
-            // 
-            dgcIdCat.DataPropertyName = "IDCAT";
-            dgcIdCat.DataSource = bsStoresCat;
-            dgcIdCat.DisplayMember = "CODE";
-            dgcIdCat.HeaderText = "kategorija";
-            dgcIdCat.MinimumWidth = 8;
-            dgcIdCat.Name = "dgcIdCat";
-            dgcIdCat.ValueMember = "ID";
-            dgcIdCat.Width = 160;
             // 
             // bsStoresCat
             // 
@@ -179,57 +147,11 @@ namespace KlonsM.FormsM
             bsStoresCat.MyDataSource = "KlonsMData";
             bsStoresCat.Sort = "CODE";
             // 
-            // dgcRegNr
-            // 
-            dgcRegNr.DataPropertyName = "REGNR";
-            dgcRegNr.HeaderText = "reģ.nr.";
-            dgcRegNr.MinimumWidth = 8;
-            dgcRegNr.Name = "dgcRegNr";
-            dgcRegNr.Width = 130;
-            // 
-            // dgcPVNRegNr
-            // 
-            dgcPVNRegNr.DataPropertyName = "PVNREGNR";
-            dgcPVNRegNr.HeaderText = "PVN reģ.nr.";
-            dgcPVNRegNr.MinimumWidth = 8;
-            dgcPVNRegNr.Name = "dgcPVNRegNr";
-            dgcPVNRegNr.Width = 130;
-            // 
-            // dgcAddr
-            // 
-            dgcAddr.DataPropertyName = "ADDR";
-            dgcAddr.HeaderText = "adrese";
-            dgcAddr.MinimumWidth = 8;
-            dgcAddr.Name = "dgcAddr";
-            dgcAddr.Width = 180;
-            // 
-            // dgcPVNTp
-            // 
-            dgcPVNTp.DataPropertyName = "PVNTP";
-            dgcPVNTp.DataSource = bsPVNType;
-            dgcPVNTp.DisplayMember = "CODE";
-            dgcPVNTp.HeaderText = "PVN veids";
-            dgcPVNTp.MinimumWidth = 8;
-            dgcPVNTp.Name = "dgcPVNTp";
-            dgcPVNTp.ValueMember = "ID";
-            dgcPVNTp.Width = 120;
-            // 
             // bsPVNType
             // 
             bsPVNType.DataMember = "M_PVNTYPE";
             bsPVNType.MyDataSource = "KlonsMData";
             bsPVNType.Sort = "ID";
-            // 
-            // dgcAcc21
-            // 
-            dgcAcc21.DataPropertyName = "ACC21";
-            dgcAcc21.DataSource = bsAccounts21;
-            dgcAcc21.DisplayMember = "ID";
-            dgcAcc21.HeaderText = "konts 21";
-            dgcAcc21.MinimumWidth = 8;
-            dgcAcc21.Name = "dgcAcc21";
-            dgcAcc21.ValueMember = "ID";
-            dgcAcc21.Width = 80;
             // 
             // bsAccounts21
             // 
@@ -238,34 +160,12 @@ namespace KlonsM.FormsM
             bsAccounts21.MyDataSource = "KlonsMData";
             bsAccounts21.Sort = "ID";
             // 
-            // dgcAcc23
-            // 
-            dgcAcc23.DataPropertyName = "ACC23";
-            dgcAcc23.DataSource = bsAccounts23;
-            dgcAcc23.DisplayMember = "ID";
-            dgcAcc23.HeaderText = "konts 23";
-            dgcAcc23.MinimumWidth = 8;
-            dgcAcc23.Name = "dgcAcc23";
-            dgcAcc23.ValueMember = "ID";
-            dgcAcc23.Width = 80;
-            // 
             // bsAccounts23
             // 
             bsAccounts23.DataMember = "M_ACCOUNTS";
             bsAccounts23.Filter = "TP=5 OR TP=1";
             bsAccounts23.MyDataSource = "KlonsMData";
             bsAccounts23.Sort = "ID";
-            // 
-            // dgcAcc53
-            // 
-            dgcAcc53.DataPropertyName = "ACC53";
-            dgcAcc53.DataSource = bsAccounts53;
-            dgcAcc53.DisplayMember = "ID";
-            dgcAcc53.HeaderText = "konts 53";
-            dgcAcc53.MinimumWidth = 8;
-            dgcAcc53.Name = "dgcAcc53";
-            dgcAcc53.ValueMember = "ID";
-            dgcAcc53.Width = 80;
             // 
             // bsAccounts53
             // 
@@ -274,14 +174,11 @@ namespace KlonsM.FormsM
             bsAccounts53.MyDataSource = "KlonsMData";
             bsAccounts53.Sort = "ID";
             // 
-            // dgcID
+            // bsCountry
             // 
-            dgcID.DataPropertyName = "ID";
-            dgcID.HeaderText = "ID";
-            dgcID.MinimumWidth = 8;
-            dgcID.Name = "dgcID";
-            dgcID.Visible = false;
-            dgcID.Width = 60;
+            bsCountry.DataMember = "M_COUNTRIES";
+            bsCountry.MyDataSource = "KlonsMData";
+            bsCountry.Sort = "NAME";
             // 
             // bNav
             // 
@@ -293,9 +190,8 @@ namespace KlonsM.FormsM
             bNav.DeleteItem = bindingNavigatorDeleteItem;
             bNav.Dock = System.Windows.Forms.DockStyle.Bottom;
             bNav.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            bNav.ImageScalingSize = new System.Drawing.Size(16, 16);
             bNav.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { bindingNavigatorMoveFirstItem, bindingNavigatorMovePreviousItem, bindingNavigatorSeparator, bindingNavigatorPositionItem, bindingNavigatorCountItem, bindingNavigatorSeparator1, bindingNavigatorMoveNextItem, bindingNavigatorMoveLastItem, bindingNavigatorSeparator2, bindingNavigatorAddNewItem, bindingNavigatorDeleteItem, bindingNavigatorSaveItem, tsbFindPrev, tsbFind, tsbFindNext });
-            bNav.Location = new System.Drawing.Point(0, 419);
+            bNav.Location = new System.Drawing.Point(0, 425);
             bNav.MoveFirstItem = bindingNavigatorMoveFirstItem;
             bNav.MoveLastItem = bindingNavigatorMoveLastItem;
             bNav.MoveNextItem = bindingNavigatorMoveNextItem;
@@ -303,7 +199,7 @@ namespace KlonsM.FormsM
             bNav.Name = "bNav";
             bNav.PositionItem = bindingNavigatorPositionItem;
             bNav.SaveItem = bindingNavigatorSaveItem;
-            bNav.Size = new System.Drawing.Size(1149, 31);
+            bNav.Size = new System.Drawing.Size(1149, 25);
             bNav.TabIndex = 2;
             bNav.Text = "myBindingNavigator1";
             bNav.ItemDeleting += bNav_ItemDeleting;
@@ -313,13 +209,13 @@ namespace KlonsM.FormsM
             bindingNavigatorAddNewItem.Image = (System.Drawing.Image)resources.GetObject("bindingNavigatorAddNewItem.Image");
             bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
             bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            bindingNavigatorAddNewItem.Size = new System.Drawing.Size(74, 28);
+            bindingNavigatorAddNewItem.Size = new System.Drawing.Size(66, 22);
             bindingNavigatorAddNewItem.Text = "Jauns";
             // 
             // bindingNavigatorCountItem
             // 
             bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            bindingNavigatorCountItem.Size = new System.Drawing.Size(50, 28);
+            bindingNavigatorCountItem.Size = new System.Drawing.Size(50, 22);
             bindingNavigatorCountItem.Text = " no {0}";
             bindingNavigatorCountItem.ToolTipText = "Ierakstu skaits";
             // 
@@ -328,7 +224,7 @@ namespace KlonsM.FormsM
             bindingNavigatorDeleteItem.Image = (System.Drawing.Image)resources.GetObject("bindingNavigatorDeleteItem.Image");
             bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
             bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            bindingNavigatorDeleteItem.Size = new System.Drawing.Size(72, 28);
+            bindingNavigatorDeleteItem.Size = new System.Drawing.Size(64, 22);
             bindingNavigatorDeleteItem.Text = "Dzēst";
             // 
             // bindingNavigatorMoveFirstItem
@@ -337,7 +233,7 @@ namespace KlonsM.FormsM
             bindingNavigatorMoveFirstItem.Image = (System.Drawing.Image)resources.GetObject("bindingNavigatorMoveFirstItem.Image");
             bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
             bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(28, 28);
+            bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(23, 22);
             bindingNavigatorMoveFirstItem.Text = "Iet uz pirmo";
             // 
             // bindingNavigatorMovePreviousItem
@@ -346,13 +242,13 @@ namespace KlonsM.FormsM
             bindingNavigatorMovePreviousItem.Image = (System.Drawing.Image)resources.GetObject("bindingNavigatorMovePreviousItem.Image");
             bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
             bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(28, 28);
+            bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(23, 22);
             bindingNavigatorMovePreviousItem.Text = "Iet uz iepriekšējo";
             // 
             // bindingNavigatorSeparator
             // 
             bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 31);
+            bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 25);
             // 
             // bindingNavigatorPositionItem
             // 
@@ -366,7 +262,7 @@ namespace KlonsM.FormsM
             // bindingNavigatorSeparator1
             // 
             bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
-            bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 31);
+            bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
             // bindingNavigatorMoveNextItem
             // 
@@ -374,7 +270,7 @@ namespace KlonsM.FormsM
             bindingNavigatorMoveNextItem.Image = (System.Drawing.Image)resources.GetObject("bindingNavigatorMoveNextItem.Image");
             bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
             bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(28, 28);
+            bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 22);
             bindingNavigatorMoveNextItem.Text = "Iet uz nākošo";
             // 
             // bindingNavigatorMoveLastItem
@@ -383,19 +279,19 @@ namespace KlonsM.FormsM
             bindingNavigatorMoveLastItem.Image = (System.Drawing.Image)resources.GetObject("bindingNavigatorMoveLastItem.Image");
             bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
             bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(28, 28);
+            bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 22);
             bindingNavigatorMoveLastItem.Text = "Iet uz pēdējo";
             // 
             // bindingNavigatorSeparator2
             // 
             bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
-            bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 31);
+            bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
             // 
             // bindingNavigatorSaveItem
             // 
             bindingNavigatorSaveItem.Image = (System.Drawing.Image)resources.GetObject("bindingNavigatorSaveItem.Image");
             bindingNavigatorSaveItem.Name = "bindingNavigatorSaveItem";
-            bindingNavigatorSaveItem.Size = new System.Drawing.Size(92, 28);
+            bindingNavigatorSaveItem.Size = new System.Drawing.Size(84, 22);
             bindingNavigatorSaveItem.Text = "Saglabāt";
             bindingNavigatorSaveItem.Click += bindingNavigatorSaveItem_Click;
             // 
@@ -405,7 +301,7 @@ namespace KlonsM.FormsM
             tsbFindPrev.Image = (System.Drawing.Image)resources.GetObject("tsbFindPrev.Image");
             tsbFindPrev.Name = "tsbFindPrev";
             tsbFindPrev.RightToLeftAutoMirrorImage = true;
-            tsbFindPrev.Size = new System.Drawing.Size(28, 28);
+            tsbFindPrev.Size = new System.Drawing.Size(23, 22);
             tsbFindPrev.Text = "Iet uz iepriekšējo";
             tsbFindPrev.Click += tsbFindPrev_Click;
             // 
@@ -413,7 +309,7 @@ namespace KlonsM.FormsM
             // 
             tsbFind.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             tsbFind.Name = "tsbFind";
-            tsbFind.Size = new System.Drawing.Size(100, 31);
+            tsbFind.Size = new System.Drawing.Size(100, 25);
             tsbFind.ToolTipText = "meklēt tekstu kolonnā";
             tsbFind.Enter += tsbFind_Enter;
             tsbFind.KeyDown += tsbFind_KeyDown;
@@ -424,7 +320,7 @@ namespace KlonsM.FormsM
             tsbFindNext.Image = (System.Drawing.Image)resources.GetObject("tsbFindNext.Image");
             tsbFindNext.Name = "tsbFindNext";
             tsbFindNext.RightToLeftAutoMirrorImage = true;
-            tsbFindNext.Size = new System.Drawing.Size(28, 28);
+            tsbFindNext.Size = new System.Drawing.Size(23, 22);
             tsbFindNext.Text = "Iet uz nākošo";
             tsbFindNext.Click += tsbFindNext_Click;
             // 
@@ -522,9 +418,8 @@ namespace KlonsM.FormsM
             // 
             toolStrip1.Dock = System.Windows.Forms.DockStyle.Bottom;
             toolStrip1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            toolStrip1.ImageScalingSize = new System.Drawing.Size(16, 16);
             toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { btAtlikumi, btAddresses, btContacts, btBankAccounts, btVehicles });
-            toolStrip1.Location = new System.Drawing.Point(0, 394);
+            toolStrip1.Location = new System.Drawing.Point(0, 400);
             toolStrip1.Name = "toolStrip1";
             toolStrip1.Size = new System.Drawing.Size(1149, 25);
             toolStrip1.TabIndex = 3;
@@ -580,6 +475,179 @@ namespace KlonsM.FormsM
             btVehicles.Text = "❏ Transports";
             btVehicles.Click += btVehicles_Click;
             // 
+            // dgcCode
+            // 
+            dgcCode.DataPropertyName = "CODE";
+            dgcCode.Frozen = true;
+            dgcCode.HeaderText = "kods";
+            dgcCode.MinimumWidth = 8;
+            dgcCode.Name = "dgcCode";
+            dgcCode.Width = 140;
+            // 
+            // dgcName
+            // 
+            dgcName.DataPropertyName = "NAME";
+            dgcName.Frozen = true;
+            dgcName.HeaderText = "nosaukums";
+            dgcName.MinimumWidth = 8;
+            dgcName.Name = "dgcName";
+            dgcName.Width = 250;
+            // 
+            // dgcTP
+            // 
+            dgcTP.DataPropertyName = "TP";
+            dgcTP.DataSource = bsStoreType;
+            dgcTP.DisplayMember = "NAME";
+            dgcTP.HeaderText = "veids";
+            dgcTP.MinimumWidth = 8;
+            dgcTP.Name = "dgcTP";
+            dgcTP.ValueMember = "ID";
+            dgcTP.Width = 140;
+            // 
+            // dgcIdCat
+            // 
+            dgcIdCat.DataPropertyName = "IDCAT";
+            dgcIdCat.DataSource = bsStoresCat;
+            dgcIdCat.DisplayMember = "CODE";
+            dgcIdCat.HeaderText = "kategorija";
+            dgcIdCat.MinimumWidth = 8;
+            dgcIdCat.Name = "dgcIdCat";
+            dgcIdCat.ValueMember = "ID";
+            dgcIdCat.Width = 160;
+            // 
+            // dgcRegNr
+            // 
+            dgcRegNr.DataPropertyName = "REGNR";
+            dgcRegNr.HeaderText = "reģ.nr.";
+            dgcRegNr.MinimumWidth = 8;
+            dgcRegNr.Name = "dgcRegNr";
+            dgcRegNr.Width = 130;
+            // 
+            // dgcPVNRegNr
+            // 
+            dgcPVNRegNr.DataPropertyName = "PVNREGNR";
+            dgcPVNRegNr.HeaderText = "PVN reģ.nr.";
+            dgcPVNRegNr.MinimumWidth = 8;
+            dgcPVNRegNr.Name = "dgcPVNRegNr";
+            dgcPVNRegNr.Width = 130;
+            // 
+            // dgcAddr
+            // 
+            dgcAddr.DataPropertyName = "ADDR";
+            dgcAddr.HeaderText = "adrese";
+            dgcAddr.MinimumWidth = 8;
+            dgcAddr.Name = "dgcAddr";
+            dgcAddr.Width = 180;
+            // 
+            // dgcPVNTp
+            // 
+            dgcPVNTp.DataPropertyName = "PVNTP";
+            dgcPVNTp.DataSource = bsPVNType;
+            dgcPVNTp.DisplayMember = "CODE";
+            dgcPVNTp.HeaderText = "PVN veids";
+            dgcPVNTp.MinimumWidth = 8;
+            dgcPVNTp.Name = "dgcPVNTp";
+            dgcPVNTp.ValueMember = "ID";
+            dgcPVNTp.Width = 120;
+            // 
+            // dgcAcc21
+            // 
+            dgcAcc21.DataPropertyName = "ACC21";
+            dgcAcc21.DataSource = bsAccounts21;
+            dgcAcc21.DisplayMember = "ID";
+            dgcAcc21.HeaderText = "konts 21";
+            dgcAcc21.MinimumWidth = 8;
+            dgcAcc21.Name = "dgcAcc21";
+            dgcAcc21.ValueMember = "ID";
+            dgcAcc21.Width = 80;
+            // 
+            // dgcAcc23
+            // 
+            dgcAcc23.DataPropertyName = "ACC23";
+            dgcAcc23.DataSource = bsAccounts23;
+            dgcAcc23.DisplayMember = "ID";
+            dgcAcc23.HeaderText = "konts 23";
+            dgcAcc23.MinimumWidth = 8;
+            dgcAcc23.Name = "dgcAcc23";
+            dgcAcc23.ValueMember = "ID";
+            dgcAcc23.Width = 80;
+            // 
+            // dgcAcc53
+            // 
+            dgcAcc53.DataPropertyName = "ACC53";
+            dgcAcc53.DataSource = bsAccounts53;
+            dgcAcc53.DisplayMember = "ID";
+            dgcAcc53.HeaderText = "konts 53";
+            dgcAcc53.MinimumWidth = 8;
+            dgcAcc53.Name = "dgcAcc53";
+            dgcAcc53.ValueMember = "ID";
+            dgcAcc53.Width = 80;
+            // 
+            // dgcStreet
+            // 
+            dgcStreet.DataPropertyName = "STREET";
+            dgcStreet.HeaderText = "iela, nr.";
+            dgcStreet.Name = "dgcStreet";
+            dgcStreet.Width = 125;
+            // 
+            // dgcCity
+            // 
+            dgcCity.DataPropertyName = "CITY";
+            dgcCity.HeaderText = "pilsēta";
+            dgcCity.Name = "dgcCity";
+            dgcCity.Width = 125;
+            // 
+            // dgcState
+            // 
+            dgcState.DataPropertyName = "STATE";
+            dgcState.HeaderText = "novads";
+            dgcState.Name = "dgcState";
+            dgcState.Width = 125;
+            // 
+            // dgcParish
+            // 
+            dgcParish.DataPropertyName = "PARISH";
+            dgcParish.HeaderText = "pagasts";
+            dgcParish.Name = "dgcParish";
+            dgcParish.Width = 125;
+            // 
+            // dgcPostalCode
+            // 
+            dgcPostalCode.DataPropertyName = "POSTALCODE";
+            dgcPostalCode.HeaderText = "indeks";
+            dgcPostalCode.Name = "dgcPostalCode";
+            dgcPostalCode.Width = 90;
+            // 
+            // dgcIdCountry
+            // 
+            dgcIdCountry.DataPropertyName = "IDCOUNTRY";
+            dgcIdCountry.DataSource = bsCountry;
+            dgcIdCountry.DisplayMember = "NAME";
+            dgcIdCountry.DisplayStyleForCurrentCellOnly = true;
+            dgcIdCountry.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            dgcIdCountry.HeaderText = "valsts";
+            dgcIdCountry.Name = "dgcIdCountry";
+            dgcIdCountry.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            dgcIdCountry.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            dgcIdCountry.ValueMember = "ID";
+            dgcIdCountry.Width = 125;
+            // 
+            // dgcEMail
+            // 
+            dgcEMail.DataPropertyName = "EMAIL";
+            dgcEMail.HeaderText = "e-pasts";
+            dgcEMail.Name = "dgcEMail";
+            dgcEMail.Width = 125;
+            // 
+            // dgcID
+            // 
+            dgcID.DataPropertyName = "ID";
+            dgcID.HeaderText = "ID";
+            dgcID.MinimumWidth = 8;
+            dgcID.Name = "dgcID";
+            dgcID.Visible = false;
+            dgcID.Width = 60;
+            // 
             // FormM_Stores
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -601,6 +669,7 @@ namespace KlonsM.FormsM
             ((System.ComponentModel.ISupportInitialize)bsAccounts21).EndInit();
             ((System.ComponentModel.ISupportInitialize)bsAccounts23).EndInit();
             ((System.ComponentModel.ISupportInitialize)bsAccounts53).EndInit();
+            ((System.ComponentModel.ISupportInitialize)bsCountry).EndInit();
             ((System.ComponentModel.ISupportInitialize)bNav).EndInit();
             bNav.ResumeLayout(false);
             bNav.PerformLayout();
@@ -654,6 +723,7 @@ namespace KlonsM.FormsM
         private System.Windows.Forms.ToolStripButton btVehicles;
         private KlonsLIB.Components.MyPickRowTextBox2 cbType;
         private KlonsLIB.Data.MyBindingSource bsStoresCat;
+        private KlonsLIB.Data.MyBindingSource bsCountry;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgcCode;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgcName;
         private KlonsLIB.Components.MyDgvTextboxColumn2 dgcTP;
@@ -665,6 +735,13 @@ namespace KlonsM.FormsM
         private KlonsLIB.Components.MyDgvTextboxColumn2 dgcAcc21;
         private KlonsLIB.Components.MyDgvTextboxColumn2 dgcAcc23;
         private KlonsLIB.Components.MyDgvTextboxColumn2 dgcAcc53;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgcStreet;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgcCity;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgcState;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgcParish;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgcPostalCode;
+        private System.Windows.Forms.DataGridViewComboBoxColumn dgcIdCountry;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgcEMail;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgcID;
     }
 }

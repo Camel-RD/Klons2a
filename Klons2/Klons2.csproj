@@ -58,6 +58,7 @@
     <Content Include="Reports\Report_Darz_4.rdlc" />
     <EmbeddedResource Include="SQL\SQLV003.txt" />
     <EmbeddedResource Include="SQL\SQLV012.txt" />
+    <EmbeddedResource Include="SQL\SQLV023.txt" />
     <Content Include="TODO-M.txt" />
     <Content Include="Reports\Report_PVNZ_1.rdlc" />
     <Content Include="Reports\Report_Apgr_BilFormula.rdlc" />
@@ -179,6 +180,9 @@
     <Compile Remove="Forms_sys\1\Form1.Designer.cs" />
     <Compile Remove="Forms_sys\Form_Main.Designer - Copy.cs" />
     <EmbeddedResource Remove="Forms_sys\1\Form1.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="SQL\SQLV023.txt" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="SourceGrid">

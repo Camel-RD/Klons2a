@@ -90,11 +90,13 @@ namespace KlonsF.DataSets {
         
         private global::System.Data.DataRelation relationFK_M_ACCOUNTS_TP;
         
+        private global::System.Data.DataRelation relationFK_M_STORES_PVNTP;
+        
+        private global::System.Data.DataRelation relationFK_M_STORES_IDCOUNTRY1;
+        
         private global::System.Data.DataRelation relationFK_M_STORES_IDCAT;
         
         private global::System.Data.DataRelation relationFK_M_STORES_TP;
-        
-        private global::System.Data.DataRelation relationFK_M_STORES_PVNTP1;
         
         private global::System.Data.DataRelation relationFK_M_ITEMS_UNITS;
         
@@ -128,6 +130,8 @@ namespace KlonsF.DataSets {
         
         private global::System.Data.DataRelation relationFK_M_CONTACTS_IDSTORE;
         
+        private global::System.Data.DataRelation relationFK_M_ADDRESSSES_IDCOUNTRY;
+        
         private global::System.Data.DataRelation relationFK_M_ADDRESSSES_IDSTORE;
         
         private global::System.Data.DataRelation relationFK_M_VEHICLES_IDSTORE;
@@ -144,7 +148,11 @@ namespace KlonsF.DataSets {
         
         private global::System.Data.DataRelation relationFK_M_PRICE_LISTS_R_IDL;
         
+        private global::System.Data.DataRelation relationFK_M_DISC_LISTS_P_IDSTORE1;
+        
         private global::System.Data.DataRelation relationFK_M_DISC_LISTS_P_IDL;
+        
+        private global::System.Data.DataRelation relationFK_M_PRICE_LISTS_P_IDSTORE1;
         
         private global::System.Data.DataRelation relationFK_M_PRICE_LISTS_P_IDL;
         
@@ -1017,9 +1025,10 @@ namespace KlonsF.DataSets {
                 }
             }
             this.relationFK_M_ACCOUNTS_TP = this.Relations["FK_M_ACCOUNTS_TP"];
+            this.relationFK_M_STORES_PVNTP = this.Relations["FK_M_STORES_PVNTP"];
+            this.relationFK_M_STORES_IDCOUNTRY1 = this.Relations["FK_M_STORES_IDCOUNTRY1"];
             this.relationFK_M_STORES_IDCAT = this.Relations["FK_M_STORES_IDCAT"];
             this.relationFK_M_STORES_TP = this.Relations["FK_M_STORES_TP"];
-            this.relationFK_M_STORES_PVNTP1 = this.Relations["FK_M_STORES_PVNTP1"];
             this.relationFK_M_ITEMS_UNITS = this.Relations["FK_M_ITEMS_UNITS"];
             this.relationFK_M_ITEMS_STORE1 = this.Relations["FK_M_ITEMS_STORE1"];
             this.relationFK_M_ITEMS_CAT = this.Relations["FK_M_ITEMS_CAT"];
@@ -1036,6 +1045,7 @@ namespace KlonsF.DataSets {
             this.relationFK_M_ROWS_UNITS1 = this.Relations["FK_M_ROWS_UNITS1"];
             this.relationFK_M_BANKACCOUNTS_IDSTORE = this.Relations["FK_M_BANKACCOUNTS_IDSTORE"];
             this.relationFK_M_CONTACTS_IDSTORE = this.Relations["FK_M_CONTACTS_IDSTORE"];
+            this.relationFK_M_ADDRESSSES_IDCOUNTRY = this.Relations["FK_M_ADDRESSSES_IDCOUNTRY"];
             this.relationFK_M_ADDRESSSES_IDSTORE = this.Relations["FK_M_ADDRESSSES_IDSTORE"];
             this.relationFK_M_VEHICLES_IDSTORE = this.Relations["FK_M_VEHICLES_IDSTORE"];
             this.relationFK_M_PVNRATES2_IDTP = this.Relations["FK_M_PVNRATES2_IDTP"];
@@ -1044,7 +1054,9 @@ namespace KlonsF.DataSets {
             this.relationFK_M_INV_ROWS_IDDOC = this.Relations["FK_M_INV_ROWS_IDDOC"];
             this.relationFK_M_DISC_LISTS_R_IDL = this.Relations["FK_M_DISC_LISTS_R_IDL"];
             this.relationFK_M_PRICE_LISTS_R_IDL = this.Relations["FK_M_PRICE_LISTS_R_IDL"];
+            this.relationFK_M_DISC_LISTS_P_IDSTORE1 = this.Relations["FK_M_DISC_LISTS_P_IDSTORE1"];
             this.relationFK_M_DISC_LISTS_P_IDL = this.Relations["FK_M_DISC_LISTS_P_IDL"];
+            this.relationFK_M_PRICE_LISTS_P_IDSTORE1 = this.Relations["FK_M_PRICE_LISTS_P_IDSTORE1"];
             this.relationFK_M_PRICE_LISTS_P_IDL = this.Relations["FK_M_PRICE_LISTS_P_IDL"];
             this.relationFK_M_DOCS_IDADDRESSIN = this.Relations["FK_M_DOCS_IDADDRESSIN"];
             this.relationFK_M_DOCS_IDADDRESSOUT = this.Relations["FK_M_DOCS_IDADDRESSOUT"];
@@ -1136,6 +1148,20 @@ namespace KlonsF.DataSets {
             fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
             fkc.DeleteRule = global::System.Data.Rule.None;
             fkc.UpdateRule = global::System.Data.Rule.None;
+            fkc = new global::System.Data.ForeignKeyConstraint("FK_M_STORES_PVNTP1", new global::System.Data.DataColumn[] {
+                        this.tableM_PVNTYPE.IDColumn}, new global::System.Data.DataColumn[] {
+                        this.tableM_STORES.PVNTPColumn});
+            this.tableM_STORES.Constraints.Add(fkc);
+            fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
+            fkc.DeleteRule = global::System.Data.Rule.None;
+            fkc.UpdateRule = global::System.Data.Rule.Cascade;
+            fkc = new global::System.Data.ForeignKeyConstraint("FK_M_STORES_IDCOUNTRY", new global::System.Data.DataColumn[] {
+                        this.tableM_COUNTRIES.IDColumn}, new global::System.Data.DataColumn[] {
+                        this.tableM_STORES.IDCOUNTRYColumn});
+            this.tableM_STORES.Constraints.Add(fkc);
+            fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
+            fkc.DeleteRule = global::System.Data.Rule.None;
+            fkc.UpdateRule = global::System.Data.Rule.Cascade;
             fkc = new global::System.Data.ForeignKeyConstraint("FK_M_STORES_IDCAT", new global::System.Data.DataColumn[] {
                         this.tableM_STORES_CAT.IDColumn}, new global::System.Data.DataColumn[] {
                         this.tableM_STORES.IDCATColumn});
@@ -1150,13 +1176,6 @@ namespace KlonsF.DataSets {
             fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
             fkc.DeleteRule = global::System.Data.Rule.None;
             fkc.UpdateRule = global::System.Data.Rule.Cascade;
-            fkc = new global::System.Data.ForeignKeyConstraint("FK_M_STORES_PVNTP", new global::System.Data.DataColumn[] {
-                        this.tableM_PVNTYPE.IDColumn}, new global::System.Data.DataColumn[] {
-                        this.tableM_STORES.PVNTPColumn});
-            this.tableM_STORES.Constraints.Add(fkc);
-            fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
-            fkc.DeleteRule = global::System.Data.Rule.None;
-            fkc.UpdateRule = global::System.Data.Rule.None;
             fkc = new global::System.Data.ForeignKeyConstraint("FK_M_ITEMS_UNITS", new global::System.Data.DataColumn[] {
                         this.tableM_UNITS.IDColumn}, new global::System.Data.DataColumn[] {
                         this.tableM_ITEMS.UNITSColumn});
@@ -1276,7 +1295,7 @@ namespace KlonsF.DataSets {
             fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
             fkc.DeleteRule = global::System.Data.Rule.None;
             fkc.UpdateRule = global::System.Data.Rule.Cascade;
-            fkc = new global::System.Data.ForeignKeyConstraint("FK_M_ADDRESSSES_IDCOUNTRY", new global::System.Data.DataColumn[] {
+            fkc = new global::System.Data.ForeignKeyConstraint("FK_M_ADDRESSSES_IDCOUNTRY1", new global::System.Data.DataColumn[] {
                         this.tableM_COUNTRIES.IDColumn}, new global::System.Data.DataColumn[] {
                         this.tableM_ADDRESSSES.IDCOUNTRYColumn});
             this.tableM_ADDRESSSES.Constraints.Add(fkc);
@@ -1392,6 +1411,14 @@ namespace KlonsF.DataSets {
                         this.tableM_ACCOUNTTYPE.IDColumn}, new global::System.Data.DataColumn[] {
                         this.tableM_ACCOUNTS.TPColumn}, false);
             this.Relations.Add(this.relationFK_M_ACCOUNTS_TP);
+            this.relationFK_M_STORES_PVNTP = new global::System.Data.DataRelation("FK_M_STORES_PVNTP", new global::System.Data.DataColumn[] {
+                        this.tableM_PVNTYPE.IDColumn}, new global::System.Data.DataColumn[] {
+                        this.tableM_STORES.PVNTPColumn}, false);
+            this.Relations.Add(this.relationFK_M_STORES_PVNTP);
+            this.relationFK_M_STORES_IDCOUNTRY1 = new global::System.Data.DataRelation("FK_M_STORES_IDCOUNTRY1", new global::System.Data.DataColumn[] {
+                        this.tableM_COUNTRIES.IDColumn}, new global::System.Data.DataColumn[] {
+                        this.tableM_STORES.IDCOUNTRYColumn}, false);
+            this.Relations.Add(this.relationFK_M_STORES_IDCOUNTRY1);
             this.relationFK_M_STORES_IDCAT = new global::System.Data.DataRelation("FK_M_STORES_IDCAT", new global::System.Data.DataColumn[] {
                         this.tableM_STORES_CAT.IDColumn}, new global::System.Data.DataColumn[] {
                         this.tableM_STORES.IDCATColumn}, false);
@@ -1400,10 +1427,6 @@ namespace KlonsF.DataSets {
                         this.tableM_STORETYPE.IDColumn}, new global::System.Data.DataColumn[] {
                         this.tableM_STORES.TPColumn}, false);
             this.Relations.Add(this.relationFK_M_STORES_TP);
-            this.relationFK_M_STORES_PVNTP1 = new global::System.Data.DataRelation("FK_M_STORES_PVNTP1", new global::System.Data.DataColumn[] {
-                        this.tableM_PVNTYPE.IDColumn}, new global::System.Data.DataColumn[] {
-                        this.tableM_STORES.PVNTPColumn}, false);
-            this.Relations.Add(this.relationFK_M_STORES_PVNTP1);
             this.relationFK_M_ITEMS_UNITS = new global::System.Data.DataRelation("FK_M_ITEMS_UNITS", new global::System.Data.DataColumn[] {
                         this.tableM_UNITS.IDColumn}, new global::System.Data.DataColumn[] {
                         this.tableM_ITEMS.UNITSColumn}, false);
@@ -1468,6 +1491,10 @@ namespace KlonsF.DataSets {
                         this.tableM_STORES.IDColumn}, new global::System.Data.DataColumn[] {
                         this.tableM_CONTACTS.IDSTOREColumn}, false);
             this.Relations.Add(this.relationFK_M_CONTACTS_IDSTORE);
+            this.relationFK_M_ADDRESSSES_IDCOUNTRY = new global::System.Data.DataRelation("FK_M_ADDRESSSES_IDCOUNTRY", new global::System.Data.DataColumn[] {
+                        this.tableM_COUNTRIES.IDColumn}, new global::System.Data.DataColumn[] {
+                        this.tableM_ADDRESSSES.IDCOUNTRYColumn}, false);
+            this.Relations.Add(this.relationFK_M_ADDRESSSES_IDCOUNTRY);
             this.relationFK_M_ADDRESSSES_IDSTORE = new global::System.Data.DataRelation("FK_M_ADDRESSSES_IDSTORE", new global::System.Data.DataColumn[] {
                         this.tableM_STORES.IDColumn}, new global::System.Data.DataColumn[] {
                         this.tableM_ADDRESSSES.IDSTOREColumn}, false);
@@ -1500,10 +1527,18 @@ namespace KlonsF.DataSets {
                         this.tableM_PRICE_LISTS.IDColumn}, new global::System.Data.DataColumn[] {
                         this.tableM_PRICE_LISTS_R.IDLColumn}, false);
             this.Relations.Add(this.relationFK_M_PRICE_LISTS_R_IDL);
+            this.relationFK_M_DISC_LISTS_P_IDSTORE1 = new global::System.Data.DataRelation("FK_M_DISC_LISTS_P_IDSTORE1", new global::System.Data.DataColumn[] {
+                        this.tableM_STORES.IDColumn}, new global::System.Data.DataColumn[] {
+                        this.tableM_DISC_LISTS_P.IDSTOREColumn}, false);
+            this.Relations.Add(this.relationFK_M_DISC_LISTS_P_IDSTORE1);
             this.relationFK_M_DISC_LISTS_P_IDL = new global::System.Data.DataRelation("FK_M_DISC_LISTS_P_IDL", new global::System.Data.DataColumn[] {
                         this.tableM_DISC_LISTS.IDColumn}, new global::System.Data.DataColumn[] {
                         this.tableM_DISC_LISTS_P.IDLColumn}, false);
             this.Relations.Add(this.relationFK_M_DISC_LISTS_P_IDL);
+            this.relationFK_M_PRICE_LISTS_P_IDSTORE1 = new global::System.Data.DataRelation("FK_M_PRICE_LISTS_P_IDSTORE1", new global::System.Data.DataColumn[] {
+                        this.tableM_STORES.IDColumn}, new global::System.Data.DataColumn[] {
+                        this.tableM_PRICE_LISTS_P.IDSTOREColumn}, false);
+            this.Relations.Add(this.relationFK_M_PRICE_LISTS_P_IDSTORE1);
             this.relationFK_M_PRICE_LISTS_P_IDL = new global::System.Data.DataRelation("FK_M_PRICE_LISTS_P_IDL", new global::System.Data.DataColumn[] {
                         this.tableM_PRICE_LISTS.IDColumn}, new global::System.Data.DataColumn[] {
                         this.tableM_PRICE_LISTS_P.IDLColumn}, false);
@@ -3074,6 +3109,20 @@ namespace KlonsF.DataSets {
             
             private global::System.Data.DataColumn columnACC53;
             
+            private global::System.Data.DataColumn columnSTREET;
+            
+            private global::System.Data.DataColumn columnCITY;
+            
+            private global::System.Data.DataColumn columnSTATE;
+            
+            private global::System.Data.DataColumn columnPARISH;
+            
+            private global::System.Data.DataColumn columnPOSTALCODE;
+            
+            private global::System.Data.DataColumn columnIDCOUNTRY;
+            
+            private global::System.Data.DataColumn columnEMAIL;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public M_STORESDataTable() {
@@ -3207,6 +3256,62 @@ namespace KlonsF.DataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn STREETColumn {
+                get {
+                    return this.columnSTREET;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn CITYColumn {
+                get {
+                    return this.columnCITY;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn STATEColumn {
+                get {
+                    return this.columnSTATE;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn PARISHColumn {
+                get {
+                    return this.columnPARISH;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn POSTALCODEColumn {
+                get {
+                    return this.columnPOSTALCODE;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn IDCOUNTRYColumn {
+                get {
+                    return this.columnIDCOUNTRY;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn EMAILColumn {
+                get {
+                    return this.columnEMAIL;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -3242,7 +3347,25 @@ namespace KlonsF.DataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public M_STORESRow AddM_STORESRow(string CODE, string NAME, M_STORETYPERow parentM_STORETYPERowByFK_M_STORES_TP, M_STORES_CATRow parentM_STORES_CATRowByFK_M_STORES_IDCAT, string REGNR, string PVNREGNR, string ADDR, M_PVNTYPERow parentM_PVNTYPERowByFK_M_STORES_PVNTP1, string ACC21, string ACC23, string ACC53) {
+            public M_STORESRow AddM_STORESRow(
+                        string CODE, 
+                        string NAME, 
+                        M_STORETYPERow parentM_STORETYPERowByFK_M_STORES_TP, 
+                        M_STORES_CATRow parentM_STORES_CATRowByFK_M_STORES_IDCAT, 
+                        string REGNR, 
+                        string PVNREGNR, 
+                        string ADDR, 
+                        M_PVNTYPERow parentM_PVNTYPERowByFK_M_STORES_PVNTP, 
+                        string ACC21, 
+                        string ACC23, 
+                        string ACC53, 
+                        string STREET, 
+                        string CITY, 
+                        string STATE, 
+                        string PARISH, 
+                        string POSTALCODE, 
+                        M_COUNTRIESRow parentM_COUNTRIESRowByFK_M_STORES_IDCOUNTRY1, 
+                        string EMAIL) {
                 M_STORESRow rowM_STORESRow = ((M_STORESRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -3256,15 +3379,25 @@ namespace KlonsF.DataSets {
                         null,
                         ACC21,
                         ACC23,
-                        ACC53};
+                        ACC53,
+                        STREET,
+                        CITY,
+                        STATE,
+                        PARISH,
+                        POSTALCODE,
+                        null,
+                        EMAIL};
                 if ((parentM_STORETYPERowByFK_M_STORES_TP != null)) {
                     columnValuesArray[3] = parentM_STORETYPERowByFK_M_STORES_TP[0];
                 }
                 if ((parentM_STORES_CATRowByFK_M_STORES_IDCAT != null)) {
                     columnValuesArray[4] = parentM_STORES_CATRowByFK_M_STORES_IDCAT[0];
                 }
-                if ((parentM_PVNTYPERowByFK_M_STORES_PVNTP1 != null)) {
-                    columnValuesArray[8] = parentM_PVNTYPERowByFK_M_STORES_PVNTP1[0];
+                if ((parentM_PVNTYPERowByFK_M_STORES_PVNTP != null)) {
+                    columnValuesArray[8] = parentM_PVNTYPERowByFK_M_STORES_PVNTP[0];
+                }
+                if ((parentM_COUNTRIESRowByFK_M_STORES_IDCOUNTRY1 != null)) {
+                    columnValuesArray[17] = parentM_COUNTRIESRowByFK_M_STORES_IDCOUNTRY1[0];
                 }
                 rowM_STORESRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowM_STORESRow);
@@ -3307,6 +3440,13 @@ namespace KlonsF.DataSets {
                 this.columnACC21 = base.Columns["ACC21"];
                 this.columnACC23 = base.Columns["ACC23"];
                 this.columnACC53 = base.Columns["ACC53"];
+                this.columnSTREET = base.Columns["STREET"];
+                this.columnCITY = base.Columns["CITY"];
+                this.columnSTATE = base.Columns["STATE"];
+                this.columnPARISH = base.Columns["PARISH"];
+                this.columnPOSTALCODE = base.Columns["POSTALCODE"];
+                this.columnIDCOUNTRY = base.Columns["IDCOUNTRY"];
+                this.columnEMAIL = base.Columns["EMAIL"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3336,6 +3476,20 @@ namespace KlonsF.DataSets {
                 base.Columns.Add(this.columnACC23);
                 this.columnACC53 = new global::System.Data.DataColumn("ACC53", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnACC53);
+                this.columnSTREET = new global::System.Data.DataColumn("STREET", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSTREET);
+                this.columnCITY = new global::System.Data.DataColumn("CITY", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCITY);
+                this.columnSTATE = new global::System.Data.DataColumn("STATE", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSTATE);
+                this.columnPARISH = new global::System.Data.DataColumn("PARISH", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPARISH);
+                this.columnPOSTALCODE = new global::System.Data.DataColumn("POSTALCODE", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPOSTALCODE);
+                this.columnIDCOUNTRY = new global::System.Data.DataColumn("IDCOUNTRY", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnIDCOUNTRY);
+                this.columnEMAIL = new global::System.Data.DataColumn("EMAIL", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnEMAIL);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnID}, true));
                 this.columnID.AutoIncrement = true;
@@ -3365,6 +3519,12 @@ namespace KlonsF.DataSets {
                 this.columnACC53.AllowDBNull = false;
                 this.columnACC53.DefaultValue = ((string)(".?"));
                 this.columnACC53.MaxLength = 8;
+                this.columnSTREET.MaxLength = 50;
+                this.columnCITY.MaxLength = 50;
+                this.columnSTATE.MaxLength = 50;
+                this.columnPARISH.MaxLength = 50;
+                this.columnPOSTALCODE.MaxLength = 20;
+                this.columnEMAIL.MaxLength = 256;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6637,6 +6797,8 @@ namespace KlonsF.DataSets {
             
             private global::System.Data.DataColumn columnNAME;
             
+            private global::System.Data.DataColumn columnCODE2;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public M_UNITSDataTable() {
@@ -6698,6 +6860,14 @@ namespace KlonsF.DataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn CODE2Column {
+                get {
+                    return this.columnCODE2;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -6733,12 +6903,13 @@ namespace KlonsF.DataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public M_UNITSRow AddM_UNITSRow(string CODE, string NAME) {
+            public M_UNITSRow AddM_UNITSRow(string CODE, string NAME, string CODE2) {
                 M_UNITSRow rowM_UNITSRow = ((M_UNITSRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         CODE,
-                        NAME};
+                        NAME,
+                        CODE2};
                 rowM_UNITSRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowM_UNITSRow);
                 return rowM_UNITSRow;
@@ -6771,6 +6942,7 @@ namespace KlonsF.DataSets {
                 this.columnID = base.Columns["ID"];
                 this.columnCODE = base.Columns["CODE"];
                 this.columnNAME = base.Columns["NAME"];
+                this.columnCODE2 = base.Columns["CODE2"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6782,6 +6954,8 @@ namespace KlonsF.DataSets {
                 base.Columns.Add(this.columnCODE);
                 this.columnNAME = new global::System.Data.DataColumn("NAME", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnNAME);
+                this.columnCODE2 = new global::System.Data.DataColumn("CODE2", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCODE2);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnID}, true));
                 this.columnID.AutoIncrement = true;
@@ -6793,6 +6967,7 @@ namespace KlonsF.DataSets {
                 this.columnCODE.DefaultValue = ((string)("?"));
                 this.columnCODE.MaxLength = 20;
                 this.columnNAME.MaxLength = 100;
+                this.columnCODE2.MaxLength = 5;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -8194,6 +8369,18 @@ namespace KlonsF.DataSets {
             
             private global::System.Data.DataColumn columnADDRESS;
             
+            private global::System.Data.DataColumn columnSTREET;
+            
+            private global::System.Data.DataColumn columnCITY;
+            
+            private global::System.Data.DataColumn columnSTATE;
+            
+            private global::System.Data.DataColumn columnPARISH;
+            
+            private global::System.Data.DataColumn columnPOSTALCODE;
+            
+            private global::System.Data.DataColumn columnCOMMENTS;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public M_ADDRESSSESDataTable() {
@@ -8271,6 +8458,54 @@ namespace KlonsF.DataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn STREETColumn {
+                get {
+                    return this.columnSTREET;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn CITYColumn {
+                get {
+                    return this.columnCITY;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn STATEColumn {
+                get {
+                    return this.columnSTATE;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn PARISHColumn {
+                get {
+                    return this.columnPARISH;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn POSTALCODEColumn {
+                get {
+                    return this.columnPOSTALCODE;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn COMMENTSColumn {
+                get {
+                    return this.columnCOMMENTS;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -8306,16 +8541,25 @@ namespace KlonsF.DataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public M_ADDRESSSESRow AddM_ADDRESSSESRow(M_STORESRow parentM_STORESRowByFK_M_ADDRESSSES_IDSTORE, int IDCOUNTRY, string NAME, string ADDRESS) {
+            public M_ADDRESSSESRow AddM_ADDRESSSESRow(M_STORESRow parentM_STORESRowByFK_M_ADDRESSSES_IDSTORE, M_COUNTRIESRow parentM_COUNTRIESRowByFK_M_ADDRESSSES_IDCOUNTRY, string NAME, string ADDRESS, string STREET, string CITY, string STATE, string PARISH, string POSTALCODE, string COMMENTS) {
                 M_ADDRESSSESRow rowM_ADDRESSSESRow = ((M_ADDRESSSESRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         null,
-                        IDCOUNTRY,
+                        null,
                         NAME,
-                        ADDRESS};
+                        ADDRESS,
+                        STREET,
+                        CITY,
+                        STATE,
+                        PARISH,
+                        POSTALCODE,
+                        COMMENTS};
                 if ((parentM_STORESRowByFK_M_ADDRESSSES_IDSTORE != null)) {
                     columnValuesArray[1] = parentM_STORESRowByFK_M_ADDRESSSES_IDSTORE[0];
+                }
+                if ((parentM_COUNTRIESRowByFK_M_ADDRESSSES_IDCOUNTRY != null)) {
+                    columnValuesArray[2] = parentM_COUNTRIESRowByFK_M_ADDRESSSES_IDCOUNTRY[0];
                 }
                 rowM_ADDRESSSESRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowM_ADDRESSSESRow);
@@ -8351,6 +8595,12 @@ namespace KlonsF.DataSets {
                 this.columnIDCOUNTRY = base.Columns["IDCOUNTRY"];
                 this.columnNAME = base.Columns["NAME"];
                 this.columnADDRESS = base.Columns["ADDRESS"];
+                this.columnSTREET = base.Columns["STREET"];
+                this.columnCITY = base.Columns["CITY"];
+                this.columnSTATE = base.Columns["STATE"];
+                this.columnPARISH = base.Columns["PARISH"];
+                this.columnPOSTALCODE = base.Columns["POSTALCODE"];
+                this.columnCOMMENTS = base.Columns["COMMENTS"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -8366,6 +8616,18 @@ namespace KlonsF.DataSets {
                 base.Columns.Add(this.columnNAME);
                 this.columnADDRESS = new global::System.Data.DataColumn("ADDRESS", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnADDRESS);
+                this.columnSTREET = new global::System.Data.DataColumn("STREET", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSTREET);
+                this.columnCITY = new global::System.Data.DataColumn("CITY", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCITY);
+                this.columnSTATE = new global::System.Data.DataColumn("STATE", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSTATE);
+                this.columnPARISH = new global::System.Data.DataColumn("PARISH", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPARISH);
+                this.columnPOSTALCODE = new global::System.Data.DataColumn("POSTALCODE", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPOSTALCODE);
+                this.columnCOMMENTS = new global::System.Data.DataColumn("COMMENTS", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCOMMENTS);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnID}, true));
                 this.columnID.AutoIncrement = true;
@@ -8379,6 +8641,12 @@ namespace KlonsF.DataSets {
                 this.columnADDRESS.AllowDBNull = false;
                 this.columnADDRESS.DefaultValue = ((string)("?"));
                 this.columnADDRESS.MaxLength = 300;
+                this.columnSTREET.MaxLength = 50;
+                this.columnCITY.MaxLength = 50;
+                this.columnSTATE.MaxLength = 50;
+                this.columnPARISH.MaxLength = 50;
+                this.columnPOSTALCODE.MaxLength = 20;
+                this.columnCOMMENTS.MaxLength = 250;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -12256,15 +12524,18 @@ namespace KlonsF.DataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public M_DISC_LISTS_PRow AddM_DISC_LISTS_PRow(M_DISC_LISTSRow parentM_DISC_LISTSRowByFK_M_DISC_LISTS_P_IDL, int IDSTORESCAT, int IDSTORE) {
+            public M_DISC_LISTS_PRow AddM_DISC_LISTS_PRow(M_DISC_LISTSRow parentM_DISC_LISTSRowByFK_M_DISC_LISTS_P_IDL, int IDSTORESCAT, M_STORESRow parentM_STORESRowByFK_M_DISC_LISTS_P_IDSTORE1) {
                 M_DISC_LISTS_PRow rowM_DISC_LISTS_PRow = ((M_DISC_LISTS_PRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         null,
                         IDSTORESCAT,
-                        IDSTORE};
+                        null};
                 if ((parentM_DISC_LISTSRowByFK_M_DISC_LISTS_P_IDL != null)) {
                     columnValuesArray[1] = parentM_DISC_LISTSRowByFK_M_DISC_LISTS_P_IDL[0];
+                }
+                if ((parentM_STORESRowByFK_M_DISC_LISTS_P_IDSTORE1 != null)) {
+                    columnValuesArray[3] = parentM_STORESRowByFK_M_DISC_LISTS_P_IDSTORE1[0];
                 }
                 rowM_DISC_LISTS_PRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowM_DISC_LISTS_PRow);
@@ -12878,15 +13149,18 @@ namespace KlonsF.DataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public M_PRICE_LISTS_PRow AddM_PRICE_LISTS_PRow(M_PRICE_LISTSRow parentM_PRICE_LISTSRowByFK_M_PRICE_LISTS_P_IDL, int IDSTORESCAT, int IDSTORE) {
+            public M_PRICE_LISTS_PRow AddM_PRICE_LISTS_PRow(M_PRICE_LISTSRow parentM_PRICE_LISTSRowByFK_M_PRICE_LISTS_P_IDL, int IDSTORESCAT, M_STORESRow parentM_STORESRowByFK_M_PRICE_LISTS_P_IDSTORE1) {
                 M_PRICE_LISTS_PRow rowM_PRICE_LISTS_PRow = ((M_PRICE_LISTS_PRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         null,
                         IDSTORESCAT,
-                        IDSTORE};
+                        null};
                 if ((parentM_PRICE_LISTSRowByFK_M_PRICE_LISTS_P_IDL != null)) {
                     columnValuesArray[1] = parentM_PRICE_LISTSRowByFK_M_PRICE_LISTS_P_IDL[0];
+                }
+                if ((parentM_STORESRowByFK_M_PRICE_LISTS_P_IDSTORE1 != null)) {
+                    columnValuesArray[3] = parentM_STORESRowByFK_M_PRICE_LISTS_P_IDSTORE1[0];
                 }
                 rowM_PRICE_LISTS_PRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowM_PRICE_LISTS_PRow);
@@ -13304,11 +13578,11 @@ namespace KlonsF.DataSets {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public M_STORESRow[] GetM_STORESRows() {
-                if ((this.Table.ChildRelations["FK_M_STORES_PVNTP1"] == null)) {
+                if ((this.Table.ChildRelations["FK_M_STORES_PVNTP"] == null)) {
                     return new M_STORESRow[0];
                 }
                 else {
-                    return ((M_STORESRow[])(base.GetChildRows(this.Table.ChildRelations["FK_M_STORES_PVNTP1"])));
+                    return ((M_STORESRow[])(base.GetChildRows(this.Table.ChildRelations["FK_M_STORES_PVNTP"])));
                 }
             }
         }
@@ -13562,6 +13836,140 @@ namespace KlonsF.DataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string STREET {
+                get {
+                    if (this.IsSTREETNull()) {
+                        return null;
+                    }
+                    else {
+                        return ((string)(this[this.tableM_STORES.STREETColumn]));
+                    }
+                }
+                set {
+                    this[this.tableM_STORES.STREETColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string CITY {
+                get {
+                    if (this.IsCITYNull()) {
+                        return null;
+                    }
+                    else {
+                        return ((string)(this[this.tableM_STORES.CITYColumn]));
+                    }
+                }
+                set {
+                    this[this.tableM_STORES.CITYColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string STATE {
+                get {
+                    if (this.IsSTATENull()) {
+                        return null;
+                    }
+                    else {
+                        return ((string)(this[this.tableM_STORES.STATEColumn]));
+                    }
+                }
+                set {
+                    this[this.tableM_STORES.STATEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string PARISH {
+                get {
+                    if (this.IsPARISHNull()) {
+                        return null;
+                    }
+                    else {
+                        return ((string)(this[this.tableM_STORES.PARISHColumn]));
+                    }
+                }
+                set {
+                    this[this.tableM_STORES.PARISHColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string POSTALCODE {
+                get {
+                    if (this.IsPOSTALCODENull()) {
+                        return null;
+                    }
+                    else {
+                        return ((string)(this[this.tableM_STORES.POSTALCODEColumn]));
+                    }
+                }
+                set {
+                    this[this.tableM_STORES.POSTALCODEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int IDCOUNTRY {
+                get {
+                    try {
+                        return ((int)(this[this.tableM_STORES.IDCOUNTRYColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'IDCOUNTRY\' in table \'M_STORES\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableM_STORES.IDCOUNTRYColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string EMAIL {
+                get {
+                    if (this.IsEMAILNull()) {
+                        return null;
+                    }
+                    else {
+                        return ((string)(this[this.tableM_STORES.EMAILColumn]));
+                    }
+                }
+                set {
+                    this[this.tableM_STORES.EMAILColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public M_PVNTYPERow M_PVNTYPERow {
+                get {
+                    return ((M_PVNTYPERow)(this.GetParentRow(this.Table.ParentRelations["FK_M_STORES_PVNTP"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_M_STORES_PVNTP"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public M_COUNTRIESRow M_COUNTRIESRow {
+                get {
+                    return ((M_COUNTRIESRow)(this.GetParentRow(this.Table.ParentRelations["FK_M_STORES_IDCOUNTRY1"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_M_STORES_IDCOUNTRY1"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public M_STORES_CATRow M_STORES_CATRow {
                 get {
                     return ((M_STORES_CATRow)(this.GetParentRow(this.Table.ParentRelations["FK_M_STORES_IDCAT"])));
@@ -13579,17 +13987,6 @@ namespace KlonsF.DataSets {
                 }
                 set {
                     this.SetParentRow(value, this.Table.ParentRelations["FK_M_STORES_TP"]);
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public M_PVNTYPERow M_PVNTYPERow {
-                get {
-                    return ((M_PVNTYPERow)(this.GetParentRow(this.Table.ParentRelations["FK_M_STORES_PVNTP1"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK_M_STORES_PVNTP1"]);
                 }
             }
             
@@ -13651,6 +14048,112 @@ namespace KlonsF.DataSets {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetADDRNull() {
                 this[this.tableM_STORES.ADDRColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsSTREETNull() {
+                return this.IsNull(this.tableM_STORES.STREETColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetSTREETNull() {
+                this[this.tableM_STORES.STREETColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsCITYNull() {
+                return this.IsNull(this.tableM_STORES.CITYColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetCITYNull() {
+                this[this.tableM_STORES.CITYColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsSTATENull() {
+                return this.IsNull(this.tableM_STORES.STATEColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetSTATENull() {
+                this[this.tableM_STORES.STATEColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsPARISHNull() {
+                return this.IsNull(this.tableM_STORES.PARISHColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetPARISHNull() {
+                this[this.tableM_STORES.PARISHColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsPOSTALCODENull() {
+                return this.IsNull(this.tableM_STORES.POSTALCODEColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetPOSTALCODENull() {
+                this[this.tableM_STORES.POSTALCODEColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsIDCOUNTRYNull() {
+                return this.IsNull(this.tableM_STORES.IDCOUNTRYColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetIDCOUNTRYNull() {
+                this[this.tableM_STORES.IDCOUNTRYColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsEMAILNull() {
+                return this.IsNull(this.tableM_STORES.EMAILColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetEMAILNull() {
+                this[this.tableM_STORES.EMAILColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public M_PRICE_LISTS_PRow[] GetM_PRICE_LISTS_PRows() {
+                if ((this.Table.ChildRelations["FK_M_PRICE_LISTS_P_IDSTORE1"] == null)) {
+                    return new M_PRICE_LISTS_PRow[0];
+                }
+                else {
+                    return ((M_PRICE_LISTS_PRow[])(base.GetChildRows(this.Table.ChildRelations["FK_M_PRICE_LISTS_P_IDSTORE1"])));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public M_DISC_LISTS_PRow[] GetM_DISC_LISTS_PRows() {
+                if ((this.Table.ChildRelations["FK_M_DISC_LISTS_P_IDSTORE1"] == null)) {
+                    return new M_DISC_LISTS_PRow[0];
+                }
+                else {
+                    return ((M_DISC_LISTS_PRow[])(base.GetChildRows(this.Table.ChildRelations["FK_M_DISC_LISTS_P_IDSTORE1"])));
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -15495,6 +15998,22 @@ namespace KlonsF.DataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string CODE2 {
+                get {
+                    if (this.IsCODE2Null()) {
+                        return null;
+                    }
+                    else {
+                        return ((string)(this[this.tableM_UNITS.CODE2Column]));
+                    }
+                }
+                set {
+                    this[this.tableM_UNITS.CODE2Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsNAMENull() {
                 return this.IsNull(this.tableM_UNITS.NAMEColumn);
             }
@@ -15503,6 +16022,18 @@ namespace KlonsF.DataSets {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetNAMENull() {
                 this[this.tableM_UNITS.NAMEColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsCODE2Null() {
+                return this.IsNull(this.tableM_UNITS.CODE2Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetCODE2Null() {
+                this[this.tableM_UNITS.CODE2Column] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -15936,6 +16467,28 @@ namespace KlonsF.DataSets {
                     this[this.tableM_COUNTRIES.CODE2Column] = value;
                 }
             }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public M_ADDRESSSESRow[] GetM_ADDRESSSESRows() {
+                if ((this.Table.ChildRelations["FK_M_ADDRESSSES_IDCOUNTRY"] == null)) {
+                    return new M_ADDRESSSESRow[0];
+                }
+                else {
+                    return ((M_ADDRESSSESRow[])(base.GetChildRows(this.Table.ChildRelations["FK_M_ADDRESSSES_IDCOUNTRY"])));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public M_STORESRow[] GetM_STORESRows() {
+                if ((this.Table.ChildRelations["FK_M_STORES_IDCOUNTRY1"] == null)) {
+                    return new M_STORESRow[0];
+                }
+                else {
+                    return ((M_STORESRow[])(base.GetChildRows(this.Table.ChildRelations["FK_M_STORES_IDCOUNTRY1"])));
+                }
+            }
         }
         
         /// <summary>
@@ -16019,6 +16572,113 @@ namespace KlonsF.DataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string STREET {
+                get {
+                    if (this.IsSTREETNull()) {
+                        return null;
+                    }
+                    else {
+                        return ((string)(this[this.tableM_ADDRESSSES.STREETColumn]));
+                    }
+                }
+                set {
+                    this[this.tableM_ADDRESSSES.STREETColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string CITY {
+                get {
+                    if (this.IsCITYNull()) {
+                        return null;
+                    }
+                    else {
+                        return ((string)(this[this.tableM_ADDRESSSES.CITYColumn]));
+                    }
+                }
+                set {
+                    this[this.tableM_ADDRESSSES.CITYColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string STATE {
+                get {
+                    if (this.IsSTATENull()) {
+                        return null;
+                    }
+                    else {
+                        return ((string)(this[this.tableM_ADDRESSSES.STATEColumn]));
+                    }
+                }
+                set {
+                    this[this.tableM_ADDRESSSES.STATEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string PARISH {
+                get {
+                    if (this.IsPARISHNull()) {
+                        return null;
+                    }
+                    else {
+                        return ((string)(this[this.tableM_ADDRESSSES.PARISHColumn]));
+                    }
+                }
+                set {
+                    this[this.tableM_ADDRESSSES.PARISHColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string POSTALCODE {
+                get {
+                    if (this.IsPOSTALCODENull()) {
+                        return null;
+                    }
+                    else {
+                        return ((string)(this[this.tableM_ADDRESSSES.POSTALCODEColumn]));
+                    }
+                }
+                set {
+                    this[this.tableM_ADDRESSSES.POSTALCODEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string COMMENTS {
+                get {
+                    if (this.IsCOMMENTSNull()) {
+                        return null;
+                    }
+                    else {
+                        return ((string)(this[this.tableM_ADDRESSSES.COMMENTSColumn]));
+                    }
+                }
+                set {
+                    this[this.tableM_ADDRESSSES.COMMENTSColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public M_COUNTRIESRow M_COUNTRIESRow {
+                get {
+                    return ((M_COUNTRIESRow)(this.GetParentRow(this.Table.ParentRelations["FK_M_ADDRESSSES_IDCOUNTRY"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_M_ADDRESSSES_IDCOUNTRY"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public M_STORESRow M_STORESRow {
                 get {
                     return ((M_STORESRow)(this.GetParentRow(this.Table.ParentRelations["FK_M_ADDRESSSES_IDSTORE"])));
@@ -16050,6 +16710,78 @@ namespace KlonsF.DataSets {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetIDCOUNTRYNull() {
                 this[this.tableM_ADDRESSSES.IDCOUNTRYColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsSTREETNull() {
+                return this.IsNull(this.tableM_ADDRESSSES.STREETColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetSTREETNull() {
+                this[this.tableM_ADDRESSSES.STREETColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsCITYNull() {
+                return this.IsNull(this.tableM_ADDRESSSES.CITYColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetCITYNull() {
+                this[this.tableM_ADDRESSSES.CITYColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsSTATENull() {
+                return this.IsNull(this.tableM_ADDRESSSES.STATEColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetSTATENull() {
+                this[this.tableM_ADDRESSSES.STATEColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsPARISHNull() {
+                return this.IsNull(this.tableM_ADDRESSSES.PARISHColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetPARISHNull() {
+                this[this.tableM_ADDRESSSES.PARISHColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsPOSTALCODENull() {
+                return this.IsNull(this.tableM_ADDRESSSES.POSTALCODEColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetPOSTALCODENull() {
+                this[this.tableM_ADDRESSSES.POSTALCODEColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsCOMMENTSNull() {
+                return this.IsNull(this.tableM_ADDRESSSES.COMMENTSColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetCOMMENTSNull() {
+                this[this.tableM_ADDRESSSES.COMMENTSColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -17430,6 +18162,17 @@ namespace KlonsF.DataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public M_STORESRow M_STORESRow {
+                get {
+                    return ((M_STORESRow)(this.GetParentRow(this.Table.ParentRelations["FK_M_DISC_LISTS_P_IDSTORE1"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_M_DISC_LISTS_P_IDSTORE1"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public M_DISC_LISTSRow M_DISC_LISTSRow {
                 get {
                     return ((M_DISC_LISTSRow)(this.GetParentRow(this.Table.ParentRelations["FK_M_DISC_LISTS_P_IDL"])));
@@ -17599,6 +18342,17 @@ namespace KlonsF.DataSets {
                 }
                 set {
                     this[this.tableM_PRICE_LISTS_P.IDSTOREColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public M_STORESRow M_STORESRow {
+                get {
+                    return ((M_STORESRow)(this.GetParentRow(this.Table.ParentRelations["FK_M_PRICE_LISTS_P_IDSTORE1"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_M_PRICE_LISTS_P_IDSTORE1"]);
                 }
             }
             
@@ -18940,7 +19694,7 @@ namespace KlonsF.DataSets.KlonsMDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection();
-            this._connection.ConnectionString = global::KlonsF.Properties.Settings.Default.ConnectionString1;
+            this._connection.ConnectionString = global::KlonsF.Settings.Default.ConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -19225,7 +19979,7 @@ namespace KlonsF.DataSets.KlonsMDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection();
-            this._connection.ConnectionString = global::KlonsF.Properties.Settings.Default.ConnectionString1;
+            this._connection.ConnectionString = global::KlonsF.Settings.Default.ConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -19661,7 +20415,7 @@ namespace KlonsF.DataSets.KlonsMDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection();
-            this._connection.ConnectionString = global::KlonsF.Properties.Settings.Default.ConnectionString1;
+            this._connection.ConnectionString = global::KlonsF.Settings.Default.ConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -20109,7 +20863,7 @@ namespace KlonsF.DataSets.KlonsMDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection();
-            this._connection.ConnectionString = global::KlonsF.Properties.Settings.Default.ConnectionString1;
+            this._connection.ConnectionString = global::KlonsF.Settings.Default.ConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -20416,10 +21170,17 @@ namespace KlonsF.DataSets.KlonsMDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("ACC23", "ACC23");
             tableMapping.ColumnMappings.Add("ACC53", "ACC53");
             tableMapping.ColumnMappings.Add("IDCAT", "IDCAT");
+            tableMapping.ColumnMappings.Add("CITY", "CITY");
+            tableMapping.ColumnMappings.Add("STATE", "STATE");
+            tableMapping.ColumnMappings.Add("PARISH", "PARISH");
+            tableMapping.ColumnMappings.Add("POSTALCODE", "POSTALCODE");
+            tableMapping.ColumnMappings.Add("IDCOUNTRY", "IDCOUNTRY");
+            tableMapping.ColumnMappings.Add("EMAIL", "EMAIL");
+            tableMapping.ColumnMappings.Add("STREET", "STREET");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::FirebirdSql.Data.FirebirdClient.FbCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM ""M_STORES"" WHERE ((""ID"" = @Original_ID) AND ((@IsNull_CODE = 1 AND ""CODE"" IS NULL) OR (""CODE"" = @Original_CODE)) AND ((@IsNull_NAME = 1 AND ""NAME"" IS NULL) OR (""NAME"" = @Original_NAME)) AND (""TP"" = @Original_TP) AND (""IDCAT"" = @Original_IDCAT) AND ((@IsNull_REGNR = 1 AND ""REGNR"" IS NULL) OR (""REGNR"" = @Original_REGNR)) AND ((@IsNull_PVNREGNR = 1 AND ""PVNREGNR"" IS NULL) OR (""PVNREGNR"" = @Original_PVNREGNR)) AND ((@IsNull_ADDR = 1 AND ""ADDR"" IS NULL) OR (""ADDR"" = @Original_ADDR)) AND (""PVNTP"" = @Original_PVNTP) AND (""ACC21"" = @Original_ACC21) AND (""ACC23"" = @Original_ACC23) AND (""ACC53"" = @Original_ACC53))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM ""M_STORES"" WHERE ((""ID"" = @Original_ID) AND ((@IsNull_CODE = 1 AND ""CODE"" IS NULL) OR (""CODE"" = @Original_CODE)) AND ((@IsNull_NAME = 1 AND ""NAME"" IS NULL) OR (""NAME"" = @Original_NAME)) AND (""TP"" = @Original_TP) AND (""IDCAT"" = @Original_IDCAT) AND ((@IsNull_REGNR = 1 AND ""REGNR"" IS NULL) OR (""REGNR"" = @Original_REGNR)) AND ((@IsNull_PVNREGNR = 1 AND ""PVNREGNR"" IS NULL) OR (""PVNREGNR"" = @Original_PVNREGNR)) AND ((@IsNull_ADDR = 1 AND ""ADDR"" IS NULL) OR (""ADDR"" = @Original_ADDR)) AND (""PVNTP"" = @Original_PVNTP) AND (""ACC21"" = @Original_ACC21) AND (""ACC23"" = @Original_ACC23) AND (""ACC53"" = @Original_ACC53) AND ((@IsNull_STREET = 1 AND ""STREET"" IS NULL) OR (""STREET"" = @Original_STREET)) AND ((@IsNull_CITY = 1 AND ""CITY"" IS NULL) OR (""CITY"" = @Original_CITY)) AND ((@IsNull_STATE = 1 AND ""STATE"" IS NULL) OR (""STATE"" = @Original_STATE)) AND ((@IsNull_PARISH = 1 AND ""PARISH"" IS NULL) OR (""PARISH"" = @Original_PARISH)) AND ((@IsNull_POSTALCODE = 1 AND ""POSTALCODE"" IS NULL) OR (""POSTALCODE"" = @Original_POSTALCODE)) AND ((@IsNull_IDCOUNTRY = 1 AND ""IDCOUNTRY"" IS NULL) OR (""IDCOUNTRY"" = @Original_IDCOUNTRY)) AND ((@IsNull_EMAIL = 1 AND ""EMAIL"" IS NULL) OR (""EMAIL"" = @Original_EMAIL)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             global::FirebirdSql.Data.FirebirdClient.FbParameter param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
             param.ParameterName = "@Original_ID";
@@ -20554,11 +21315,122 @@ namespace KlonsF.DataSets.KlonsMDataSetTableAdapters {
             param.SourceColumn = "ACC53";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@IsNull_STREET";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.Size = 50;
+            param.IsNullable = true;
+            param.SourceColumn = "STREET";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@Original_STREET";
+            param.Size = 50;
+            param.IsNullable = true;
+            param.SourceColumn = "STREET";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@IsNull_CITY";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.Size = 50;
+            param.IsNullable = true;
+            param.SourceColumn = "CITY";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@Original_CITY";
+            param.Size = 50;
+            param.IsNullable = true;
+            param.SourceColumn = "CITY";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@IsNull_STATE";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.Size = 50;
+            param.IsNullable = true;
+            param.SourceColumn = "STATE";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@Original_STATE";
+            param.Size = 50;
+            param.IsNullable = true;
+            param.SourceColumn = "STATE";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@IsNull_PARISH";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.Size = 50;
+            param.IsNullable = true;
+            param.SourceColumn = "PARISH";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@Original_PARISH";
+            param.Size = 50;
+            param.IsNullable = true;
+            param.SourceColumn = "PARISH";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@IsNull_POSTALCODE";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.Size = 20;
+            param.IsNullable = true;
+            param.SourceColumn = "POSTALCODE";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@Original_POSTALCODE";
+            param.Size = 20;
+            param.IsNullable = true;
+            param.SourceColumn = "POSTALCODE";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@IsNull_IDCOUNTRY";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.Size = 4;
+            param.IsNullable = true;
+            param.SourceColumn = "IDCOUNTRY";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@Original_IDCOUNTRY";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.Size = 4;
+            param.IsNullable = true;
+            param.SourceColumn = "IDCOUNTRY";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@IsNull_EMAIL";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.Size = 256;
+            param.IsNullable = true;
+            param.SourceColumn = "EMAIL";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@Original_EMAIL";
+            param.Size = 256;
+            param.IsNullable = true;
+            param.SourceColumn = "EMAIL";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.DeleteCommand.Parameters.Add(param);
             this._adapter.InsertCommand = new global::FirebirdSql.Data.FirebirdClient.FbCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO \"M_STORES\" (\"ID\", \"CODE\", \"NAME\", \"TP\", \"IDCAT\", \"REGNR\", \"PVNREGNR\"," +
-                " \"ADDR\", \"PVNTP\", \"ACC21\", \"ACC23\", \"ACC53\") VALUES (@ID, @CODE, @NAME, @TP, @ID" +
-                "CAT, @REGNR, @PVNREGNR, @ADDR, @PVNTP, @ACC21, @ACC23, @ACC53)";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO ""M_STORES"" (""ID"", ""CODE"", ""NAME"", ""TP"", ""IDCAT"", ""REGNR"", ""PVNREGNR"", ""ADDR"", ""PVNTP"", ""ACC21"", ""ACC23"", ""ACC53"", ""STREET"", ""CITY"", ""STATE"", ""PARISH"", ""POSTALCODE"", ""IDCOUNTRY"", ""EMAIL"") VALUES (@ID, @CODE, @NAME, @TP, @IDCAT, @REGNR, @PVNREGNR, @ADDR, @PVNTP, @ACC21, @ACC23, @ACC53, @STREET, @CITY, @STATE, @PARISH, @POSTALCODE, @IDCOUNTRY, @EMAIL)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
             param.ParameterName = "@ID";
@@ -20636,9 +21508,71 @@ namespace KlonsF.DataSets.KlonsMDataSetTableAdapters {
             param.IsNullable = true;
             param.SourceColumn = "ACC53";
             this._adapter.InsertCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@STREET";
+            param.Size = 50;
+            param.IsNullable = true;
+            param.SourceColumn = "STREET";
+            this._adapter.InsertCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@CITY";
+            param.Size = 50;
+            param.IsNullable = true;
+            param.SourceColumn = "CITY";
+            this._adapter.InsertCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@STATE";
+            param.Size = 50;
+            param.IsNullable = true;
+            param.SourceColumn = "STATE";
+            this._adapter.InsertCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@PARISH";
+            param.Size = 50;
+            param.IsNullable = true;
+            param.SourceColumn = "PARISH";
+            this._adapter.InsertCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@POSTALCODE";
+            param.Size = 20;
+            param.IsNullable = true;
+            param.SourceColumn = "POSTALCODE";
+            this._adapter.InsertCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@IDCOUNTRY";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.Size = 4;
+            param.IsNullable = true;
+            param.SourceColumn = "IDCOUNTRY";
+            this._adapter.InsertCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@EMAIL";
+            param.Size = 256;
+            param.IsNullable = true;
+            param.SourceColumn = "EMAIL";
+            this._adapter.InsertCommand.Parameters.Add(param);
             this._adapter.UpdateCommand = new global::FirebirdSql.Data.FirebirdClient.FbCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE ""M_STORES"" SET ""ID"" = @ID, ""CODE"" = @CODE, ""NAME"" = @NAME, ""TP"" = @TP, ""IDCAT"" = @IDCAT, ""REGNR"" = @REGNR, ""PVNREGNR"" = @PVNREGNR, ""ADDR"" = @ADDR, ""PVNTP"" = @PVNTP, ""ACC21"" = @ACC21, ""ACC23"" = @ACC23, ""ACC53"" = @ACC53 WHERE ((""ID"" = @Original_ID) AND ((@IsNull_CODE = 1 AND ""CODE"" IS NULL) OR (""CODE"" = @Original_CODE)) AND ((@IsNull_NAME = 1 AND ""NAME"" IS NULL) OR (""NAME"" = @Original_NAME)) AND (""TP"" = @Original_TP) AND (""IDCAT"" = @Original_IDCAT) AND ((@IsNull_REGNR = 1 AND ""REGNR"" IS NULL) OR (""REGNR"" = @Original_REGNR)) AND ((@IsNull_PVNREGNR = 1 AND ""PVNREGNR"" IS NULL) OR (""PVNREGNR"" = @Original_PVNREGNR)) AND ((@IsNull_ADDR = 1 AND ""ADDR"" IS NULL) OR (""ADDR"" = @Original_ADDR)) AND (""PVNTP"" = @Original_PVNTP) AND (""ACC21"" = @Original_ACC21) AND (""ACC23"" = @Original_ACC23) AND (""ACC53"" = @Original_ACC53))";
+            this._adapter.UpdateCommand.CommandText = "UPDATE \"M_STORES\" SET \"ID\" = @ID, \"CODE\" = @CODE, \"NAME\" = @NAME, \"TP\" = @TP, \"ID" +
+                "CAT\" = @IDCAT, \"REGNR\" = @REGNR, \"PVNREGNR\" = @PVNREGNR, \"ADDR\" = @ADDR, \"PVNTP\"" +
+                " = @PVNTP, \"ACC21\" = @ACC21, \"ACC23\" = @ACC23, \"ACC53\" = @ACC53, \"STREET\" = @STR" +
+                "EET, \"CITY\" = @CITY, \"STATE\" = @STATE, \"PARISH\" = @PARISH, \"POSTALCODE\" = @POSTA" +
+                "LCODE, \"IDCOUNTRY\" = @IDCOUNTRY, \"EMAIL\" = @EMAIL WHERE ((\"ID\" = @Original_ID) A" +
+                "ND ((@IsNull_CODE = 1 AND \"CODE\" IS NULL) OR (\"CODE\" = @Original_CODE)) AND ((@I" +
+                "sNull_NAME = 1 AND \"NAME\" IS NULL) OR (\"NAME\" = @Original_NAME)) AND (\"TP\" = @Or" +
+                "iginal_TP) AND (\"IDCAT\" = @Original_IDCAT) AND ((@IsNull_REGNR = 1 AND \"REGNR\" I" +
+                "S NULL) OR (\"REGNR\" = @Original_REGNR)) AND ((@IsNull_PVNREGNR = 1 AND \"PVNREGNR" +
+                "\" IS NULL) OR (\"PVNREGNR\" = @Original_PVNREGNR)) AND ((@IsNull_ADDR = 1 AND \"ADD" +
+                "R\" IS NULL) OR (\"ADDR\" = @Original_ADDR)) AND (\"PVNTP\" = @Original_PVNTP) AND (\"" +
+                "ACC21\" = @Original_ACC21) AND (\"ACC23\" = @Original_ACC23) AND (\"ACC53\" = @Origin" +
+                "al_ACC53) AND ((@IsNull_STREET = 1 AND \"STREET\" IS NULL) OR (\"STREET\" = @Origina" +
+                "l_STREET)) AND ((@IsNull_CITY = 1 AND \"CITY\" IS NULL) OR (\"CITY\" = @Original_CIT" +
+                "Y)) AND ((@IsNull_STATE = 1 AND \"STATE\" IS NULL) OR (\"STATE\" = @Original_STATE))" +
+                " AND ((@IsNull_PARISH = 1 AND \"PARISH\" IS NULL) OR (\"PARISH\" = @Original_PARISH)" +
+                ") AND ((@IsNull_POSTALCODE = 1 AND \"POSTALCODE\" IS NULL) OR (\"POSTALCODE\" = @Ori" +
+                "ginal_POSTALCODE)) AND ((@IsNull_IDCOUNTRY = 1 AND \"IDCOUNTRY\" IS NULL) OR (\"IDC" +
+                "OUNTRY\" = @Original_IDCOUNTRY)) AND ((@IsNull_EMAIL = 1 AND \"EMAIL\" IS NULL) OR " +
+                "(\"EMAIL\" = @Original_EMAIL)))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
             param.ParameterName = "@ID";
@@ -20715,6 +21649,49 @@ namespace KlonsF.DataSets.KlonsMDataSetTableAdapters {
             param.Size = 8;
             param.IsNullable = true;
             param.SourceColumn = "ACC53";
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@STREET";
+            param.Size = 50;
+            param.IsNullable = true;
+            param.SourceColumn = "STREET";
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@CITY";
+            param.Size = 50;
+            param.IsNullable = true;
+            param.SourceColumn = "CITY";
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@STATE";
+            param.Size = 50;
+            param.IsNullable = true;
+            param.SourceColumn = "STATE";
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@PARISH";
+            param.Size = 50;
+            param.IsNullable = true;
+            param.SourceColumn = "PARISH";
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@POSTALCODE";
+            param.Size = 20;
+            param.IsNullable = true;
+            param.SourceColumn = "POSTALCODE";
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@IDCOUNTRY";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.Size = 4;
+            param.IsNullable = true;
+            param.SourceColumn = "IDCOUNTRY";
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@EMAIL";
+            param.Size = 256;
+            param.IsNullable = true;
+            param.SourceColumn = "EMAIL";
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
             param.ParameterName = "@Original_ID";
@@ -20849,13 +21826,126 @@ namespace KlonsF.DataSets.KlonsMDataSetTableAdapters {
             param.SourceColumn = "ACC53";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@IsNull_STREET";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.Size = 50;
+            param.IsNullable = true;
+            param.SourceColumn = "STREET";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@Original_STREET";
+            param.Size = 50;
+            param.IsNullable = true;
+            param.SourceColumn = "STREET";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@IsNull_CITY";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.Size = 50;
+            param.IsNullable = true;
+            param.SourceColumn = "CITY";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@Original_CITY";
+            param.Size = 50;
+            param.IsNullable = true;
+            param.SourceColumn = "CITY";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@IsNull_STATE";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.Size = 50;
+            param.IsNullable = true;
+            param.SourceColumn = "STATE";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@Original_STATE";
+            param.Size = 50;
+            param.IsNullable = true;
+            param.SourceColumn = "STATE";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@IsNull_PARISH";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.Size = 50;
+            param.IsNullable = true;
+            param.SourceColumn = "PARISH";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@Original_PARISH";
+            param.Size = 50;
+            param.IsNullable = true;
+            param.SourceColumn = "PARISH";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@IsNull_POSTALCODE";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.Size = 20;
+            param.IsNullable = true;
+            param.SourceColumn = "POSTALCODE";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@Original_POSTALCODE";
+            param.Size = 20;
+            param.IsNullable = true;
+            param.SourceColumn = "POSTALCODE";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@IsNull_IDCOUNTRY";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.Size = 4;
+            param.IsNullable = true;
+            param.SourceColumn = "IDCOUNTRY";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@Original_IDCOUNTRY";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.Size = 4;
+            param.IsNullable = true;
+            param.SourceColumn = "IDCOUNTRY";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@IsNull_EMAIL";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.Size = 256;
+            param.IsNullable = true;
+            param.SourceColumn = "EMAIL";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@Original_EMAIL";
+            param.Size = 256;
+            param.IsNullable = true;
+            param.SourceColumn = "EMAIL";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.UpdateCommand.Parameters.Add(param);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection();
-            this._connection.ConnectionString = global::KlonsF.Properties.Settings.Default.ConnectionString1;
+            this._connection.ConnectionString = global::KlonsF.Settings.Default.ConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -20864,8 +21954,8 @@ namespace KlonsF.DataSets.KlonsMDataSetTableAdapters {
             this._commandCollection = new global::FirebirdSql.Data.FirebirdClient.FbCommand[1];
             this._commandCollection[0] = new global::FirebirdSql.Data.FirebirdClient.FbCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT ID, CODE, NAME, TP, IDCAT,  REGNR, PVNREGNR, ADDR, PVNTP, ACC21, ACC23, AC" +
-                "C53\r\nFROM   M_STORES";
+            this._commandCollection[0].CommandText = "SELECT ID, CODE, NAME, TP, IDCAT, REGNR, PVNREGNR, ADDR, PVNTP, ACC21, ACC23, ACC" +
+                "53, STREET, CITY, STATE, PARISH, POSTALCODE, IDCOUNTRY, EMAIL\r\nFROM   M_STORES";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -20926,7 +22016,26 @@ namespace KlonsF.DataSets.KlonsMDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_ID, string Original_CODE, string Original_NAME, int Original_TP, int Original_IDCAT, string Original_REGNR, string Original_PVNREGNR, string Original_ADDR, int Original_PVNTP, string Original_ACC21, string Original_ACC23, string Original_ACC53) {
+        public virtual int Delete(
+                    int Original_ID, 
+                    string Original_CODE, 
+                    string Original_NAME, 
+                    int Original_TP, 
+                    int Original_IDCAT, 
+                    string Original_REGNR, 
+                    string Original_PVNREGNR, 
+                    string Original_ADDR, 
+                    int Original_PVNTP, 
+                    string Original_ACC21, 
+                    string Original_ACC23, 
+                    string Original_ACC53, 
+                    string Original_STREET, 
+                    string Original_CITY, 
+                    string Original_STATE, 
+                    string Original_PARISH, 
+                    string Original_POSTALCODE, 
+                    global::System.Nullable<int> Original_IDCOUNTRY, 
+                    string Original_EMAIL) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_ID));
             if ((Original_CODE == null)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
@@ -20989,6 +22098,62 @@ namespace KlonsF.DataSets.KlonsMDataSetTableAdapters {
             else {
                 this.Adapter.DeleteCommand.Parameters[16].Value = ((string)(Original_ACC53));
             }
+            if ((Original_STREET == null)) {
+                this.Adapter.DeleteCommand.Parameters[17].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[18].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[17].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[18].Value = ((string)(Original_STREET));
+            }
+            if ((Original_CITY == null)) {
+                this.Adapter.DeleteCommand.Parameters[19].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[20].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[19].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[20].Value = ((string)(Original_CITY));
+            }
+            if ((Original_STATE == null)) {
+                this.Adapter.DeleteCommand.Parameters[21].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[22].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[21].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[22].Value = ((string)(Original_STATE));
+            }
+            if ((Original_PARISH == null)) {
+                this.Adapter.DeleteCommand.Parameters[23].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[24].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[23].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[24].Value = ((string)(Original_PARISH));
+            }
+            if ((Original_POSTALCODE == null)) {
+                this.Adapter.DeleteCommand.Parameters[25].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[26].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[25].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[26].Value = ((string)(Original_POSTALCODE));
+            }
+            if ((Original_IDCOUNTRY.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[27].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[28].Value = ((int)(Original_IDCOUNTRY.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[27].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[28].Value = global::System.DBNull.Value;
+            }
+            if ((Original_EMAIL == null)) {
+                this.Adapter.DeleteCommand.Parameters[29].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[30].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[29].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[30].Value = ((string)(Original_EMAIL));
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -21009,7 +22174,26 @@ namespace KlonsF.DataSets.KlonsMDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int ID, string CODE, string NAME, int TP, int IDCAT, string REGNR, string PVNREGNR, string ADDR, int PVNTP, string ACC21, string ACC23, string ACC53) {
+        public virtual int Insert(
+                    int ID, 
+                    string CODE, 
+                    string NAME, 
+                    int TP, 
+                    int IDCAT, 
+                    string REGNR, 
+                    string PVNREGNR, 
+                    string ADDR, 
+                    int PVNTP, 
+                    string ACC21, 
+                    string ACC23, 
+                    string ACC53, 
+                    string STREET, 
+                    string CITY, 
+                    string STATE, 
+                    string PARISH, 
+                    string POSTALCODE, 
+                    global::System.Nullable<int> IDCOUNTRY, 
+                    string EMAIL) {
             this.Adapter.InsertCommand.Parameters[0].Value = ((int)(ID));
             if ((CODE == null)) {
                 this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
@@ -21062,6 +22246,48 @@ namespace KlonsF.DataSets.KlonsMDataSetTableAdapters {
             else {
                 this.Adapter.InsertCommand.Parameters[11].Value = ((string)(ACC53));
             }
+            if ((STREET == null)) {
+                this.Adapter.InsertCommand.Parameters[12].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[12].Value = ((string)(STREET));
+            }
+            if ((CITY == null)) {
+                this.Adapter.InsertCommand.Parameters[13].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[13].Value = ((string)(CITY));
+            }
+            if ((STATE == null)) {
+                this.Adapter.InsertCommand.Parameters[14].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[14].Value = ((string)(STATE));
+            }
+            if ((PARISH == null)) {
+                this.Adapter.InsertCommand.Parameters[15].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[15].Value = ((string)(PARISH));
+            }
+            if ((POSTALCODE == null)) {
+                this.Adapter.InsertCommand.Parameters[16].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[16].Value = ((string)(POSTALCODE));
+            }
+            if ((IDCOUNTRY.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[17].Value = ((int)(IDCOUNTRY.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[17].Value = global::System.DBNull.Value;
+            }
+            if ((EMAIL == null)) {
+                this.Adapter.InsertCommand.Parameters[18].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[18].Value = ((string)(EMAIL));
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -21095,6 +22321,13 @@ namespace KlonsF.DataSets.KlonsMDataSetTableAdapters {
                     string ACC21, 
                     string ACC23, 
                     string ACC53, 
+                    string STREET, 
+                    string CITY, 
+                    string STATE, 
+                    string PARISH, 
+                    string POSTALCODE, 
+                    global::System.Nullable<int> IDCOUNTRY, 
+                    string EMAIL, 
                     int Original_ID, 
                     string Original_CODE, 
                     string Original_NAME, 
@@ -21106,7 +22339,14 @@ namespace KlonsF.DataSets.KlonsMDataSetTableAdapters {
                     int Original_PVNTP, 
                     string Original_ACC21, 
                     string Original_ACC23, 
-                    string Original_ACC53) {
+                    string Original_ACC53, 
+                    string Original_STREET, 
+                    string Original_CITY, 
+                    string Original_STATE, 
+                    string Original_PARISH, 
+                    string Original_POSTALCODE, 
+                    global::System.Nullable<int> Original_IDCOUNTRY, 
+                    string Original_EMAIL) {
             this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(ID));
             if ((CODE == null)) {
                 this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
@@ -21159,67 +22399,165 @@ namespace KlonsF.DataSets.KlonsMDataSetTableAdapters {
             else {
                 this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(ACC53));
             }
-            this.Adapter.UpdateCommand.Parameters[12].Value = ((int)(Original_ID));
-            if ((Original_CODE == null)) {
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(1));
+            if ((STREET == null)) {
+                this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((string)(STREET));
+            }
+            if ((CITY == null)) {
+                this.Adapter.UpdateCommand.Parameters[13].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((string)(CITY));
+            }
+            if ((STATE == null)) {
                 this.Adapter.UpdateCommand.Parameters[14].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((string)(Original_CODE));
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((string)(STATE));
             }
-            if ((Original_NAME == null)) {
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(1));
+            if ((PARISH == null)) {
+                this.Adapter.UpdateCommand.Parameters[15].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((string)(PARISH));
+            }
+            if ((POSTALCODE == null)) {
                 this.Adapter.UpdateCommand.Parameters[16].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((string)(Original_NAME));
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((string)(POSTALCODE));
             }
-            this.Adapter.UpdateCommand.Parameters[17].Value = ((int)(Original_TP));
-            this.Adapter.UpdateCommand.Parameters[18].Value = ((int)(Original_IDCAT));
-            if ((Original_REGNR == null)) {
-                this.Adapter.UpdateCommand.Parameters[19].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[20].Value = global::System.DBNull.Value;
+            if ((IDCOUNTRY.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[17].Value = ((int)(IDCOUNTRY.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[19].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[20].Value = ((string)(Original_REGNR));
+                this.Adapter.UpdateCommand.Parameters[17].Value = global::System.DBNull.Value;
+            }
+            if ((EMAIL == null)) {
+                this.Adapter.UpdateCommand.Parameters[18].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((string)(EMAIL));
+            }
+            this.Adapter.UpdateCommand.Parameters[19].Value = ((int)(Original_ID));
+            if ((Original_CODE == null)) {
+                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[21].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((string)(Original_CODE));
+            }
+            if ((Original_NAME == null)) {
+                this.Adapter.UpdateCommand.Parameters[22].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[23].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[22].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[23].Value = ((string)(Original_NAME));
+            }
+            this.Adapter.UpdateCommand.Parameters[24].Value = ((int)(Original_TP));
+            this.Adapter.UpdateCommand.Parameters[25].Value = ((int)(Original_IDCAT));
+            if ((Original_REGNR == null)) {
+                this.Adapter.UpdateCommand.Parameters[26].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[27].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[26].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[27].Value = ((string)(Original_REGNR));
             }
             if ((Original_PVNREGNR == null)) {
-                this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[22].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[28].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[29].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[22].Value = ((string)(Original_PVNREGNR));
+                this.Adapter.UpdateCommand.Parameters[28].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[29].Value = ((string)(Original_PVNREGNR));
             }
             if ((Original_ADDR == null)) {
-                this.Adapter.UpdateCommand.Parameters[23].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[24].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[30].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[31].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[23].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[24].Value = ((string)(Original_ADDR));
+                this.Adapter.UpdateCommand.Parameters[30].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[31].Value = ((string)(Original_ADDR));
             }
-            this.Adapter.UpdateCommand.Parameters[25].Value = ((int)(Original_PVNTP));
+            this.Adapter.UpdateCommand.Parameters[32].Value = ((int)(Original_PVNTP));
             if ((Original_ACC21 == null)) {
                 throw new global::System.ArgumentNullException("Original_ACC21");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[26].Value = ((string)(Original_ACC21));
+                this.Adapter.UpdateCommand.Parameters[33].Value = ((string)(Original_ACC21));
             }
             if ((Original_ACC23 == null)) {
                 throw new global::System.ArgumentNullException("Original_ACC23");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[27].Value = ((string)(Original_ACC23));
+                this.Adapter.UpdateCommand.Parameters[34].Value = ((string)(Original_ACC23));
             }
             if ((Original_ACC53 == null)) {
                 throw new global::System.ArgumentNullException("Original_ACC53");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[28].Value = ((string)(Original_ACC53));
+                this.Adapter.UpdateCommand.Parameters[35].Value = ((string)(Original_ACC53));
+            }
+            if ((Original_STREET == null)) {
+                this.Adapter.UpdateCommand.Parameters[36].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[37].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[36].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[37].Value = ((string)(Original_STREET));
+            }
+            if ((Original_CITY == null)) {
+                this.Adapter.UpdateCommand.Parameters[38].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[39].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[38].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[39].Value = ((string)(Original_CITY));
+            }
+            if ((Original_STATE == null)) {
+                this.Adapter.UpdateCommand.Parameters[40].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[41].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[40].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[41].Value = ((string)(Original_STATE));
+            }
+            if ((Original_PARISH == null)) {
+                this.Adapter.UpdateCommand.Parameters[42].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[43].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[42].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[43].Value = ((string)(Original_PARISH));
+            }
+            if ((Original_POSTALCODE == null)) {
+                this.Adapter.UpdateCommand.Parameters[44].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[45].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[44].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[45].Value = ((string)(Original_POSTALCODE));
+            }
+            if ((Original_IDCOUNTRY.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[46].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[47].Value = ((int)(Original_IDCOUNTRY.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[46].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[47].Value = global::System.DBNull.Value;
+            }
+            if ((Original_EMAIL == null)) {
+                this.Adapter.UpdateCommand.Parameters[48].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[49].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[48].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[49].Value = ((string)(Original_EMAIL));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -21253,6 +22591,13 @@ namespace KlonsF.DataSets.KlonsMDataSetTableAdapters {
                     string ACC21, 
                     string ACC23, 
                     string ACC53, 
+                    string STREET, 
+                    string CITY, 
+                    string STATE, 
+                    string PARISH, 
+                    string POSTALCODE, 
+                    global::System.Nullable<int> IDCOUNTRY, 
+                    string EMAIL, 
                     int Original_ID, 
                     string Original_CODE, 
                     string Original_NAME, 
@@ -21264,8 +22609,15 @@ namespace KlonsF.DataSets.KlonsMDataSetTableAdapters {
                     int Original_PVNTP, 
                     string Original_ACC21, 
                     string Original_ACC23, 
-                    string Original_ACC53) {
-            return this.Update(Original_ID, CODE, NAME, TP, IDCAT, REGNR, PVNREGNR, ADDR, PVNTP, ACC21, ACC23, ACC53, Original_ID, Original_CODE, Original_NAME, Original_TP, Original_IDCAT, Original_REGNR, Original_PVNREGNR, Original_ADDR, Original_PVNTP, Original_ACC21, Original_ACC23, Original_ACC53);
+                    string Original_ACC53, 
+                    string Original_STREET, 
+                    string Original_CITY, 
+                    string Original_STATE, 
+                    string Original_PARISH, 
+                    string Original_POSTALCODE, 
+                    global::System.Nullable<int> Original_IDCOUNTRY, 
+                    string Original_EMAIL) {
+            return this.Update(Original_ID, CODE, NAME, TP, IDCAT, REGNR, PVNREGNR, ADDR, PVNTP, ACC21, ACC23, ACC53, STREET, CITY, STATE, PARISH, POSTALCODE, IDCOUNTRY, EMAIL, Original_ID, Original_CODE, Original_NAME, Original_TP, Original_IDCAT, Original_REGNR, Original_PVNREGNR, Original_ADDR, Original_PVNTP, Original_ACC21, Original_ACC23, Original_ACC53, Original_STREET, Original_CITY, Original_STATE, Original_PARISH, Original_POSTALCODE, Original_IDCOUNTRY, Original_EMAIL);
         }
     }
     
@@ -21577,7 +22929,7 @@ namespace KlonsF.DataSets.KlonsMDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection();
-            this._connection.ConnectionString = global::KlonsF.Properties.Settings.Default.ConnectionString1;
+            this._connection.ConnectionString = global::KlonsF.Settings.Default.ConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -22184,7 +23536,7 @@ namespace KlonsF.DataSets.KlonsMDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection();
-            this._connection.ConnectionString = global::KlonsF.Properties.Settings.Default.ConnectionString1;
+            this._connection.ConnectionString = global::KlonsF.Settings.Default.ConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -23138,7 +24490,7 @@ namespace KlonsF.DataSets.KlonsMDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection();
-            this._connection.ConnectionString = global::KlonsF.Properties.Settings.Default.ConnectionString1;
+            this._connection.ConnectionString = global::KlonsF.Settings.Default.ConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -23809,7 +25161,7 @@ namespace KlonsF.DataSets.KlonsMDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection();
-            this._connection.ConnectionString = global::KlonsF.Properties.Settings.Default.ConnectionString1;
+            this._connection.ConnectionString = global::KlonsF.Settings.Default.ConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -24366,7 +25718,7 @@ namespace KlonsF.DataSets.KlonsMDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection();
-            this._connection.ConnectionString = global::KlonsF.Properties.Settings.Default.ConnectionString1;
+            this._connection.ConnectionString = global::KlonsF.Settings.Default.ConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -25865,7 +27217,7 @@ namespace KlonsF.DataSets.KlonsMDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection();
-            this._connection.ConnectionString = global::KlonsF.Properties.Settings.Default.ConnectionString1;
+            this._connection.ConnectionString = global::KlonsF.Settings.Default.ConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -27580,7 +28932,7 @@ ORDER BY IDSEQ, ID";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection();
-            this._connection.ConnectionString = global::KlonsF.Properties.Settings.Default.ConnectionString1;
+            this._connection.ConnectionString = global::KlonsF.Settings.Default.ConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -28158,11 +29510,13 @@ ORDER BY IDSEQ, ID";
             tableMapping.ColumnMappings.Add("ID", "ID");
             tableMapping.ColumnMappings.Add("CODE", "CODE");
             tableMapping.ColumnMappings.Add("NAME", "NAME");
+            tableMapping.ColumnMappings.Add("CODE2", "CODE2");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::FirebirdSql.Data.FirebirdClient.FbCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
             this._adapter.DeleteCommand.CommandText = "DELETE FROM \"M_UNITS\" WHERE ((\"ID\" = @Original_ID) AND (\"CODE\" = @Original_CODE) " +
-                "AND ((@IsNull_NAME = 1 AND \"NAME\" IS NULL) OR (\"NAME\" = @Original_NAME)))";
+                "AND ((@IsNull_NAME = 1 AND \"NAME\" IS NULL) OR (\"NAME\" = @Original_NAME)) AND ((@" +
+                "IsNull_CODE2 = 1 AND \"CODE2\" IS NULL) OR (\"CODE2\" = @Original_CODE2)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             global::FirebirdSql.Data.FirebirdClient.FbParameter param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
             param.ParameterName = "@Original_ID";
@@ -28195,9 +29549,26 @@ ORDER BY IDSEQ, ID";
             param.SourceColumn = "NAME";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@IsNull_CODE2";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.Size = 5;
+            param.IsNullable = true;
+            param.SourceColumn = "CODE2";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@Original_CODE2";
+            param.Size = 5;
+            param.IsNullable = true;
+            param.SourceColumn = "CODE2";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.DeleteCommand.Parameters.Add(param);
             this._adapter.InsertCommand = new global::FirebirdSql.Data.FirebirdClient.FbCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO \"M_UNITS\" (\"ID\", \"CODE\", \"NAME\") VALUES (@ID, @CODE, @NAME)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO \"M_UNITS\" (\"ID\", \"CODE\", \"NAME\", \"CODE2\") VALUES (@ID, @CODE, @NAME, " +
+                "@CODE2)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
             param.ParameterName = "@ID";
@@ -28218,11 +29589,15 @@ ORDER BY IDSEQ, ID";
             param.IsNullable = true;
             param.SourceColumn = "NAME";
             this._adapter.InsertCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@CODE2";
+            param.Size = 5;
+            param.IsNullable = true;
+            param.SourceColumn = "CODE2";
+            this._adapter.InsertCommand.Parameters.Add(param);
             this._adapter.UpdateCommand = new global::FirebirdSql.Data.FirebirdClient.FbCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = "UPDATE \"M_UNITS\" SET \"ID\" = @ID, \"CODE\" = @CODE, \"NAME\" = @NAME WHERE ((\"ID\" = @O" +
-                "riginal_ID) AND (\"CODE\" = @Original_CODE) AND ((@IsNull_NAME = 1 AND \"NAME\" IS N" +
-                "ULL) OR (\"NAME\" = @Original_NAME)))";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE ""M_UNITS"" SET ""ID"" = @ID, ""CODE"" = @CODE, ""NAME"" = @NAME, ""CODE2"" = @CODE2 WHERE ((""ID"" = @Original_ID) AND (""CODE"" = @Original_CODE) AND ((@IsNull_NAME = 1 AND ""NAME"" IS NULL) OR (""NAME"" = @Original_NAME)) AND ((@IsNull_CODE2 = 1 AND ""CODE2"" IS NULL) OR (""CODE2"" = @Original_CODE2)))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
             param.ParameterName = "@ID";
@@ -28242,6 +29617,12 @@ ORDER BY IDSEQ, ID";
             param.Size = 100;
             param.IsNullable = true;
             param.SourceColumn = "NAME";
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@CODE2";
+            param.Size = 5;
+            param.IsNullable = true;
+            param.SourceColumn = "CODE2";
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
             param.ParameterName = "@Original_ID";
@@ -28274,13 +29655,29 @@ ORDER BY IDSEQ, ID";
             param.SourceColumn = "NAME";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@IsNull_CODE2";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.Size = 5;
+            param.IsNullable = true;
+            param.SourceColumn = "CODE2";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@Original_CODE2";
+            param.Size = 5;
+            param.IsNullable = true;
+            param.SourceColumn = "CODE2";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.UpdateCommand.Parameters.Add(param);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection();
-            this._connection.ConnectionString = global::KlonsF.Properties.Settings.Default.ConnectionString1;
+            this._connection.ConnectionString = global::KlonsF.Settings.Default.ConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -28289,7 +29686,7 @@ ORDER BY IDSEQ, ID";
             this._commandCollection = new global::FirebirdSql.Data.FirebirdClient.FbCommand[1];
             this._commandCollection[0] = new global::FirebirdSql.Data.FirebirdClient.FbCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT ID, CODE, NAME\r\nFROM   M_UNITS";
+            this._commandCollection[0].CommandText = "SELECT ID, CODE, NAME, CODE2\r\nFROM   M_UNITS";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -28350,7 +29747,7 @@ ORDER BY IDSEQ, ID";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_ID, string Original_CODE, string Original_NAME) {
+        public virtual int Delete(int Original_ID, string Original_CODE, string Original_NAME, string Original_CODE2) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_ID));
             if ((Original_CODE == null)) {
                 throw new global::System.ArgumentNullException("Original_CODE");
@@ -28365,6 +29762,14 @@ ORDER BY IDSEQ, ID";
             else {
                 this.Adapter.DeleteCommand.Parameters[2].Value = ((object)(0));
                 this.Adapter.DeleteCommand.Parameters[3].Value = ((string)(Original_NAME));
+            }
+            if ((Original_CODE2 == null)) {
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((string)(Original_CODE2));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -28386,7 +29791,7 @@ ORDER BY IDSEQ, ID";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int ID, string CODE, string NAME) {
+        public virtual int Insert(int ID, string CODE, string NAME, string CODE2) {
             this.Adapter.InsertCommand.Parameters[0].Value = ((int)(ID));
             if ((CODE == null)) {
                 throw new global::System.ArgumentNullException("CODE");
@@ -28399,6 +29804,12 @@ ORDER BY IDSEQ, ID";
             }
             else {
                 this.Adapter.InsertCommand.Parameters[2].Value = ((string)(NAME));
+            }
+            if ((CODE2 == null)) {
+                this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(CODE2));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -28420,7 +29831,7 @@ ORDER BY IDSEQ, ID";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int ID, string CODE, string NAME, int Original_ID, string Original_CODE, string Original_NAME) {
+        public virtual int Update(int ID, string CODE, string NAME, string CODE2, int Original_ID, string Original_CODE, string Original_NAME, string Original_CODE2) {
             this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(ID));
             if ((CODE == null)) {
                 throw new global::System.ArgumentNullException("CODE");
@@ -28434,20 +29845,34 @@ ORDER BY IDSEQ, ID";
             else {
                 this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(NAME));
             }
-            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(Original_ID));
+            if ((CODE2 == null)) {
+                this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(CODE2));
+            }
+            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Original_ID));
             if ((Original_CODE == null)) {
                 throw new global::System.ArgumentNullException("Original_CODE");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(Original_CODE));
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(Original_CODE));
             }
             if ((Original_NAME == null)) {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Original_NAME));
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(Original_NAME));
+            }
+            if ((Original_CODE2 == null)) {
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(Original_CODE2));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -28469,8 +29894,8 @@ ORDER BY IDSEQ, ID";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string CODE, string NAME, int Original_ID, string Original_CODE, string Original_NAME) {
-            return this.Update(Original_ID, CODE, NAME, Original_ID, Original_CODE, Original_NAME);
+        public virtual int Update(string CODE, string NAME, string CODE2, int Original_ID, string Original_CODE, string Original_NAME, string Original_CODE2) {
+            return this.Update(Original_ID, CODE, NAME, CODE2, Original_ID, Original_CODE, Original_NAME, Original_CODE2);
         }
     }
     
@@ -28739,7 +30164,7 @@ ORDER BY IDSEQ, ID";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection();
-            this._connection.ConnectionString = global::KlonsF.Properties.Settings.Default.ConnectionString1;
+            this._connection.ConnectionString = global::KlonsF.Settings.Default.ConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -29218,7 +30643,7 @@ ORDER BY IDSEQ, ID";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection();
-            this._connection.ConnectionString = global::KlonsF.Properties.Settings.Default.ConnectionString1;
+            this._connection.ConnectionString = global::KlonsF.Settings.Default.ConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -29799,7 +31224,7 @@ ORDER BY IDSEQ, ID";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection();
-            this._connection.ConnectionString = global::KlonsF.Properties.Settings.Default.ConnectionString1;
+            this._connection.ConnectionString = global::KlonsF.Settings.Default.ConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -30333,7 +31758,7 @@ ORDER BY IDSEQ, ID";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection();
-            this._connection.ConnectionString = global::KlonsF.Properties.Settings.Default.ConnectionString1;
+            this._connection.ConnectionString = global::KlonsF.Settings.Default.ConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -30673,10 +32098,16 @@ ORDER BY IDSEQ, ID";
             tableMapping.ColumnMappings.Add("IDCOUNTRY", "IDCOUNTRY");
             tableMapping.ColumnMappings.Add("NAME", "NAME");
             tableMapping.ColumnMappings.Add("ADDRESS", "ADDRESS");
+            tableMapping.ColumnMappings.Add("CITY", "CITY");
+            tableMapping.ColumnMappings.Add("STATE", "STATE");
+            tableMapping.ColumnMappings.Add("PARISH", "PARISH");
+            tableMapping.ColumnMappings.Add("POSTALCODE", "POSTALCODE");
+            tableMapping.ColumnMappings.Add("COMMENTS", "COMMENTS");
+            tableMapping.ColumnMappings.Add("STREET", "STREET");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::FirebirdSql.Data.FirebirdClient.FbCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM ""M_ADDRESSSES"" WHERE ((""ID"" = @Original_ID) AND ((@IsNull_IDSTORE = 1 AND ""IDSTORE"" IS NULL) OR (""IDSTORE"" = @Original_IDSTORE)) AND ((@IsNull_IDCOUNTRY = 1 AND ""IDCOUNTRY"" IS NULL) OR (""IDCOUNTRY"" = @Original_IDCOUNTRY)) AND (""NAME"" = @Original_NAME) AND (""ADDRESS"" = @Original_ADDRESS))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM ""M_ADDRESSSES"" WHERE ((""ID"" = @Original_ID) AND ((@IsNull_IDSTORE = 1 AND ""IDSTORE"" IS NULL) OR (""IDSTORE"" = @Original_IDSTORE)) AND ((@IsNull_IDCOUNTRY = 1 AND ""IDCOUNTRY"" IS NULL) OR (""IDCOUNTRY"" = @Original_IDCOUNTRY)) AND (""NAME"" = @Original_NAME) AND (""ADDRESS"" = @Original_ADDRESS) AND ((@IsNull_STREET = 1 AND ""STREET"" IS NULL) OR (""STREET"" = @Original_STREET)) AND ((@IsNull_CITY = 1 AND ""CITY"" IS NULL) OR (""CITY"" = @Original_CITY)) AND ((@IsNull_STATE = 1 AND ""STATE"" IS NULL) OR (""STATE"" = @Original_STATE)) AND ((@IsNull_PARISH = 1 AND ""PARISH"" IS NULL) OR (""PARISH"" = @Original_PARISH)) AND ((@IsNull_POSTALCODE = 1 AND ""POSTALCODE"" IS NULL) OR (""POSTALCODE"" = @Original_POSTALCODE)) AND ((@IsNull_COMMENTS = 1 AND ""COMMENTS"" IS NULL) OR (""COMMENTS"" = @Original_COMMENTS)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             global::FirebirdSql.Data.FirebirdClient.FbParameter param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
             param.ParameterName = "@Original_ID";
@@ -30734,10 +32165,108 @@ ORDER BY IDSEQ, ID";
             param.SourceColumn = "ADDRESS";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@IsNull_STREET";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.Size = 50;
+            param.IsNullable = true;
+            param.SourceColumn = "STREET";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@Original_STREET";
+            param.Size = 50;
+            param.IsNullable = true;
+            param.SourceColumn = "STREET";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@IsNull_CITY";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.Size = 50;
+            param.IsNullable = true;
+            param.SourceColumn = "CITY";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@Original_CITY";
+            param.Size = 50;
+            param.IsNullable = true;
+            param.SourceColumn = "CITY";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@IsNull_STATE";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.Size = 50;
+            param.IsNullable = true;
+            param.SourceColumn = "STATE";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@Original_STATE";
+            param.Size = 50;
+            param.IsNullable = true;
+            param.SourceColumn = "STATE";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@IsNull_PARISH";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.Size = 50;
+            param.IsNullable = true;
+            param.SourceColumn = "PARISH";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@Original_PARISH";
+            param.Size = 50;
+            param.IsNullable = true;
+            param.SourceColumn = "PARISH";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@IsNull_POSTALCODE";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.Size = 20;
+            param.IsNullable = true;
+            param.SourceColumn = "POSTALCODE";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@Original_POSTALCODE";
+            param.Size = 20;
+            param.IsNullable = true;
+            param.SourceColumn = "POSTALCODE";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@IsNull_COMMENTS";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.Size = 250;
+            param.IsNullable = true;
+            param.SourceColumn = "COMMENTS";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@Original_COMMENTS";
+            param.Size = 250;
+            param.IsNullable = true;
+            param.SourceColumn = "COMMENTS";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.DeleteCommand.Parameters.Add(param);
             this._adapter.InsertCommand = new global::FirebirdSql.Data.FirebirdClient.FbCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO \"M_ADDRESSSES\" (\"ID\", \"IDSTORE\", \"IDCOUNTRY\", \"NAME\", \"ADDRESS\") VALU" +
-                "ES (@ID, @IDSTORE, @IDCOUNTRY, @NAME, @ADDRESS)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO \"M_ADDRESSSES\" (\"ID\", \"IDSTORE\", \"IDCOUNTRY\", \"NAME\", \"ADDRESS\", \"STR" +
+                "EET\", \"CITY\", \"STATE\", \"PARISH\", \"POSTALCODE\", \"COMMENTS\") VALUES (@ID, @IDSTORE" +
+                ", @IDCOUNTRY, @NAME, @ADDRESS, @STREET, @CITY, @STATE, @PARISH, @POSTALCODE, @CO" +
+                "MMENTS)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
             param.ParameterName = "@ID";
@@ -30772,9 +32301,45 @@ ORDER BY IDSEQ, ID";
             param.IsNullable = true;
             param.SourceColumn = "ADDRESS";
             this._adapter.InsertCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@STREET";
+            param.Size = 50;
+            param.IsNullable = true;
+            param.SourceColumn = "STREET";
+            this._adapter.InsertCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@CITY";
+            param.Size = 50;
+            param.IsNullable = true;
+            param.SourceColumn = "CITY";
+            this._adapter.InsertCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@STATE";
+            param.Size = 50;
+            param.IsNullable = true;
+            param.SourceColumn = "STATE";
+            this._adapter.InsertCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@PARISH";
+            param.Size = 50;
+            param.IsNullable = true;
+            param.SourceColumn = "PARISH";
+            this._adapter.InsertCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@POSTALCODE";
+            param.Size = 20;
+            param.IsNullable = true;
+            param.SourceColumn = "POSTALCODE";
+            this._adapter.InsertCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@COMMENTS";
+            param.Size = 250;
+            param.IsNullable = true;
+            param.SourceColumn = "COMMENTS";
+            this._adapter.InsertCommand.Parameters.Add(param);
             this._adapter.UpdateCommand = new global::FirebirdSql.Data.FirebirdClient.FbCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE ""M_ADDRESSSES"" SET ""ID"" = @ID, ""IDSTORE"" = @IDSTORE, ""IDCOUNTRY"" = @IDCOUNTRY, ""NAME"" = @NAME, ""ADDRESS"" = @ADDRESS WHERE ((""ID"" = @Original_ID) AND ((@IsNull_IDSTORE = 1 AND ""IDSTORE"" IS NULL) OR (""IDSTORE"" = @Original_IDSTORE)) AND ((@IsNull_IDCOUNTRY = 1 AND ""IDCOUNTRY"" IS NULL) OR (""IDCOUNTRY"" = @Original_IDCOUNTRY)) AND (""NAME"" = @Original_NAME) AND (""ADDRESS"" = @Original_ADDRESS))";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE ""M_ADDRESSSES"" SET ""ID"" = @ID, ""IDSTORE"" = @IDSTORE, ""IDCOUNTRY"" = @IDCOUNTRY, ""NAME"" = @NAME, ""ADDRESS"" = @ADDRESS, ""STREET"" = @STREET, ""CITY"" = @CITY, ""STATE"" = @STATE, ""PARISH"" = @PARISH, ""POSTALCODE"" = @POSTALCODE, ""COMMENTS"" = @COMMENTS WHERE ((""ID"" = @Original_ID) AND ((@IsNull_IDSTORE = 1 AND ""IDSTORE"" IS NULL) OR (""IDSTORE"" = @Original_IDSTORE)) AND ((@IsNull_IDCOUNTRY = 1 AND ""IDCOUNTRY"" IS NULL) OR (""IDCOUNTRY"" = @Original_IDCOUNTRY)) AND (""NAME"" = @Original_NAME) AND (""ADDRESS"" = @Original_ADDRESS) AND ((@IsNull_STREET = 1 AND ""STREET"" IS NULL) OR (""STREET"" = @Original_STREET)) AND ((@IsNull_CITY = 1 AND ""CITY"" IS NULL) OR (""CITY"" = @Original_CITY)) AND ((@IsNull_STATE = 1 AND ""STATE"" IS NULL) OR (""STATE"" = @Original_STATE)) AND ((@IsNull_PARISH = 1 AND ""PARISH"" IS NULL) OR (""PARISH"" = @Original_PARISH)) AND ((@IsNull_POSTALCODE = 1 AND ""POSTALCODE"" IS NULL) OR (""POSTALCODE"" = @Original_POSTALCODE)) AND ((@IsNull_COMMENTS = 1 AND ""COMMENTS"" IS NULL) OR (""COMMENTS"" = @Original_COMMENTS)))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
             param.ParameterName = "@ID";
@@ -30808,6 +32373,42 @@ ORDER BY IDSEQ, ID";
             param.Size = 300;
             param.IsNullable = true;
             param.SourceColumn = "ADDRESS";
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@STREET";
+            param.Size = 50;
+            param.IsNullable = true;
+            param.SourceColumn = "STREET";
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@CITY";
+            param.Size = 50;
+            param.IsNullable = true;
+            param.SourceColumn = "CITY";
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@STATE";
+            param.Size = 50;
+            param.IsNullable = true;
+            param.SourceColumn = "STATE";
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@PARISH";
+            param.Size = 50;
+            param.IsNullable = true;
+            param.SourceColumn = "PARISH";
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@POSTALCODE";
+            param.Size = 20;
+            param.IsNullable = true;
+            param.SourceColumn = "POSTALCODE";
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@COMMENTS";
+            param.Size = 250;
+            param.IsNullable = true;
+            param.SourceColumn = "COMMENTS";
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
             param.ParameterName = "@Original_ID";
@@ -30865,13 +32466,109 @@ ORDER BY IDSEQ, ID";
             param.SourceColumn = "ADDRESS";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@IsNull_STREET";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.Size = 50;
+            param.IsNullable = true;
+            param.SourceColumn = "STREET";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@Original_STREET";
+            param.Size = 50;
+            param.IsNullable = true;
+            param.SourceColumn = "STREET";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@IsNull_CITY";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.Size = 50;
+            param.IsNullable = true;
+            param.SourceColumn = "CITY";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@Original_CITY";
+            param.Size = 50;
+            param.IsNullable = true;
+            param.SourceColumn = "CITY";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@IsNull_STATE";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.Size = 50;
+            param.IsNullable = true;
+            param.SourceColumn = "STATE";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@Original_STATE";
+            param.Size = 50;
+            param.IsNullable = true;
+            param.SourceColumn = "STATE";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@IsNull_PARISH";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.Size = 50;
+            param.IsNullable = true;
+            param.SourceColumn = "PARISH";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@Original_PARISH";
+            param.Size = 50;
+            param.IsNullable = true;
+            param.SourceColumn = "PARISH";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@IsNull_POSTALCODE";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.Size = 20;
+            param.IsNullable = true;
+            param.SourceColumn = "POSTALCODE";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@Original_POSTALCODE";
+            param.Size = 20;
+            param.IsNullable = true;
+            param.SourceColumn = "POSTALCODE";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@IsNull_COMMENTS";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.Size = 250;
+            param.IsNullable = true;
+            param.SourceColumn = "COMMENTS";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "@Original_COMMENTS";
+            param.Size = 250;
+            param.IsNullable = true;
+            param.SourceColumn = "COMMENTS";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.UpdateCommand.Parameters.Add(param);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection();
-            this._connection.ConnectionString = global::KlonsF.Properties.Settings.Default.ConnectionString1;
+            this._connection.ConnectionString = global::KlonsF.Settings.Default.ConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -30880,7 +32577,8 @@ ORDER BY IDSEQ, ID";
             this._commandCollection = new global::FirebirdSql.Data.FirebirdClient.FbCommand[1];
             this._commandCollection[0] = new global::FirebirdSql.Data.FirebirdClient.FbCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT ID, IDSTORE, IDCOUNTRY, NAME, ADDRESS\r\nFROM   M_ADDRESSSES";
+            this._commandCollection[0].CommandText = "SELECT ID, IDSTORE, IDCOUNTRY, NAME, ADDRESS, STREET, CITY, STATE, PARISH, POSTAL" +
+                "CODE, COMMENTS\r\nFROM   M_ADDRESSSES";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -30941,7 +32639,7 @@ ORDER BY IDSEQ, ID";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_ID, global::System.Nullable<int> Original_IDSTORE, global::System.Nullable<int> Original_IDCOUNTRY, string Original_NAME, string Original_ADDRESS) {
+        public virtual int Delete(int Original_ID, global::System.Nullable<int> Original_IDSTORE, global::System.Nullable<int> Original_IDCOUNTRY, string Original_NAME, string Original_ADDRESS, string Original_STREET, string Original_CITY, string Original_STATE, string Original_PARISH, string Original_POSTALCODE, string Original_COMMENTS) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_ID));
             if ((Original_IDSTORE.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
@@ -30971,6 +32669,54 @@ ORDER BY IDSEQ, ID";
             else {
                 this.Adapter.DeleteCommand.Parameters[6].Value = ((string)(Original_ADDRESS));
             }
+            if ((Original_STREET == null)) {
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[8].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[8].Value = ((string)(Original_STREET));
+            }
+            if ((Original_CITY == null)) {
+                this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[10].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[10].Value = ((string)(Original_CITY));
+            }
+            if ((Original_STATE == null)) {
+                this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[12].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[12].Value = ((string)(Original_STATE));
+            }
+            if ((Original_PARISH == null)) {
+                this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[14].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[14].Value = ((string)(Original_PARISH));
+            }
+            if ((Original_POSTALCODE == null)) {
+                this.Adapter.DeleteCommand.Parameters[15].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[16].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[15].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[16].Value = ((string)(Original_POSTALCODE));
+            }
+            if ((Original_COMMENTS == null)) {
+                this.Adapter.DeleteCommand.Parameters[17].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[18].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[17].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[18].Value = ((string)(Original_COMMENTS));
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -30991,7 +32737,7 @@ ORDER BY IDSEQ, ID";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int ID, global::System.Nullable<int> IDSTORE, global::System.Nullable<int> IDCOUNTRY, string NAME, string ADDRESS) {
+        public virtual int Insert(int ID, global::System.Nullable<int> IDSTORE, global::System.Nullable<int> IDCOUNTRY, string NAME, string ADDRESS, string STREET, string CITY, string STATE, string PARISH, string POSTALCODE, string COMMENTS) {
             this.Adapter.InsertCommand.Parameters[0].Value = ((int)(ID));
             if ((IDSTORE.HasValue == true)) {
                 this.Adapter.InsertCommand.Parameters[1].Value = ((int)(IDSTORE.Value));
@@ -31017,6 +32763,42 @@ ORDER BY IDSEQ, ID";
             else {
                 this.Adapter.InsertCommand.Parameters[4].Value = ((string)(ADDRESS));
             }
+            if ((STREET == null)) {
+                this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[5].Value = ((string)(STREET));
+            }
+            if ((CITY == null)) {
+                this.Adapter.InsertCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[6].Value = ((string)(CITY));
+            }
+            if ((STATE == null)) {
+                this.Adapter.InsertCommand.Parameters[7].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[7].Value = ((string)(STATE));
+            }
+            if ((PARISH == null)) {
+                this.Adapter.InsertCommand.Parameters[8].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[8].Value = ((string)(PARISH));
+            }
+            if ((POSTALCODE == null)) {
+                this.Adapter.InsertCommand.Parameters[9].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[9].Value = ((string)(POSTALCODE));
+            }
+            if ((COMMENTS == null)) {
+                this.Adapter.InsertCommand.Parameters[10].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[10].Value = ((string)(COMMENTS));
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -31037,7 +32819,29 @@ ORDER BY IDSEQ, ID";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int ID, global::System.Nullable<int> IDSTORE, global::System.Nullable<int> IDCOUNTRY, string NAME, string ADDRESS, int Original_ID, global::System.Nullable<int> Original_IDSTORE, global::System.Nullable<int> Original_IDCOUNTRY, string Original_NAME, string Original_ADDRESS) {
+        public virtual int Update(
+                    int ID, 
+                    global::System.Nullable<int> IDSTORE, 
+                    global::System.Nullable<int> IDCOUNTRY, 
+                    string NAME, 
+                    string ADDRESS, 
+                    string STREET, 
+                    string CITY, 
+                    string STATE, 
+                    string PARISH, 
+                    string POSTALCODE, 
+                    string COMMENTS, 
+                    int Original_ID, 
+                    global::System.Nullable<int> Original_IDSTORE, 
+                    global::System.Nullable<int> Original_IDCOUNTRY, 
+                    string Original_NAME, 
+                    string Original_ADDRESS, 
+                    string Original_STREET, 
+                    string Original_CITY, 
+                    string Original_STATE, 
+                    string Original_PARISH, 
+                    string Original_POSTALCODE, 
+                    string Original_COMMENTS) {
             this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(ID));
             if ((IDSTORE.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(IDSTORE.Value));
@@ -31063,34 +32867,118 @@ ORDER BY IDSEQ, ID";
             else {
                 this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(ADDRESS));
             }
-            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Original_ID));
-            if ((Original_IDSTORE.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(Original_IDSTORE.Value));
+            if ((STREET == null)) {
+                this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(STREET));
+            }
+            if ((CITY == null)) {
+                this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(CITY));
+            }
+            if ((STATE == null)) {
                 this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
             }
-            if ((Original_IDCOUNTRY.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((int)(Original_IDCOUNTRY.Value));
+            else {
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(STATE));
+            }
+            if ((PARISH == null)) {
+                this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(PARISH));
+            }
+            if ((POSTALCODE == null)) {
                 this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(POSTALCODE));
+            }
+            if ((COMMENTS == null)) {
+                this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(COMMENTS));
+            }
+            this.Adapter.UpdateCommand.Parameters[11].Value = ((int)(Original_ID));
+            if ((Original_IDSTORE.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((int)(Original_IDSTORE.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[13].Value = global::System.DBNull.Value;
+            }
+            if ((Original_IDCOUNTRY.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((int)(Original_IDCOUNTRY.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[15].Value = global::System.DBNull.Value;
             }
             if ((Original_NAME == null)) {
                 throw new global::System.ArgumentNullException("Original_NAME");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(Original_NAME));
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((string)(Original_NAME));
             }
             if ((Original_ADDRESS == null)) {
                 throw new global::System.ArgumentNullException("Original_ADDRESS");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(Original_ADDRESS));
+                this.Adapter.UpdateCommand.Parameters[17].Value = ((string)(Original_ADDRESS));
+            }
+            if ((Original_STREET == null)) {
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[19].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[19].Value = ((string)(Original_STREET));
+            }
+            if ((Original_CITY == null)) {
+                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[21].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((string)(Original_CITY));
+            }
+            if ((Original_STATE == null)) {
+                this.Adapter.UpdateCommand.Parameters[22].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[23].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[22].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[23].Value = ((string)(Original_STATE));
+            }
+            if ((Original_PARISH == null)) {
+                this.Adapter.UpdateCommand.Parameters[24].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[25].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[24].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[25].Value = ((string)(Original_PARISH));
+            }
+            if ((Original_POSTALCODE == null)) {
+                this.Adapter.UpdateCommand.Parameters[26].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[27].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[26].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[27].Value = ((string)(Original_POSTALCODE));
+            }
+            if ((Original_COMMENTS == null)) {
+                this.Adapter.UpdateCommand.Parameters[28].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[29].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[28].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[29].Value = ((string)(Original_COMMENTS));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -31112,8 +33000,29 @@ ORDER BY IDSEQ, ID";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(global::System.Nullable<int> IDSTORE, global::System.Nullable<int> IDCOUNTRY, string NAME, string ADDRESS, int Original_ID, global::System.Nullable<int> Original_IDSTORE, global::System.Nullable<int> Original_IDCOUNTRY, string Original_NAME, string Original_ADDRESS) {
-            return this.Update(Original_ID, IDSTORE, IDCOUNTRY, NAME, ADDRESS, Original_ID, Original_IDSTORE, Original_IDCOUNTRY, Original_NAME, Original_ADDRESS);
+        public virtual int Update(
+                    global::System.Nullable<int> IDSTORE, 
+                    global::System.Nullable<int> IDCOUNTRY, 
+                    string NAME, 
+                    string ADDRESS, 
+                    string STREET, 
+                    string CITY, 
+                    string STATE, 
+                    string PARISH, 
+                    string POSTALCODE, 
+                    string COMMENTS, 
+                    int Original_ID, 
+                    global::System.Nullable<int> Original_IDSTORE, 
+                    global::System.Nullable<int> Original_IDCOUNTRY, 
+                    string Original_NAME, 
+                    string Original_ADDRESS, 
+                    string Original_STREET, 
+                    string Original_CITY, 
+                    string Original_STATE, 
+                    string Original_PARISH, 
+                    string Original_POSTALCODE, 
+                    string Original_COMMENTS) {
+            return this.Update(Original_ID, IDSTORE, IDCOUNTRY, NAME, ADDRESS, STREET, CITY, STATE, PARISH, POSTALCODE, COMMENTS, Original_ID, Original_IDSTORE, Original_IDCOUNTRY, Original_NAME, Original_ADDRESS, Original_STREET, Original_CITY, Original_STATE, Original_PARISH, Original_POSTALCODE, Original_COMMENTS);
         }
     }
     
@@ -31428,7 +33337,7 @@ ORDER BY IDSEQ, ID";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection();
-            this._connection.ConnectionString = global::KlonsF.Properties.Settings.Default.ConnectionString1;
+            this._connection.ConnectionString = global::KlonsF.Settings.Default.ConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -31872,7 +33781,7 @@ ORDER BY IDSEQ, ID";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection();
-            this._connection.ConnectionString = global::KlonsF.Properties.Settings.Default.ConnectionString1;
+            this._connection.ConnectionString = global::KlonsF.Settings.Default.ConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -32260,7 +34169,7 @@ ORDER BY IDSEQ, ID";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection();
-            this._connection.ConnectionString = global::KlonsF.Properties.Settings.Default.ConnectionString1;
+            this._connection.ConnectionString = global::KlonsF.Settings.Default.ConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -33109,7 +35018,7 @@ ORDER BY IDSEQ, ID";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection();
-            this._connection.ConnectionString = global::KlonsF.Properties.Settings.Default.ConnectionString1;
+            this._connection.ConnectionString = global::KlonsF.Settings.Default.ConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -33822,7 +35731,7 @@ ORDER BY IDSEQ, ID";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection();
-            this._connection.ConnectionString = global::KlonsF.Properties.Settings.Default.ConnectionString1;
+            this._connection.ConnectionString = global::KlonsF.Settings.Default.ConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -34427,7 +36336,7 @@ ORDER BY IDSEQ, ID";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection();
-            this._connection.ConnectionString = global::KlonsF.Properties.Settings.Default.ConnectionString1;
+            this._connection.ConnectionString = global::KlonsF.Settings.Default.ConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -35149,7 +37058,7 @@ ORDER BY IDSEQ, ID";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection();
-            this._connection.ConnectionString = global::KlonsF.Properties.Settings.Default.ConnectionString1;
+            this._connection.ConnectionString = global::KlonsF.Settings.Default.ConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -35634,7 +37543,7 @@ ORDER BY IDSEQ, ID";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection();
-            this._connection.ConnectionString = global::KlonsF.Properties.Settings.Default.ConnectionString1;
+            this._connection.ConnectionString = global::KlonsF.Settings.Default.ConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -36156,7 +38065,7 @@ ORDER BY IDSEQ, ID";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection();
-            this._connection.ConnectionString = global::KlonsF.Properties.Settings.Default.ConnectionString1;
+            this._connection.ConnectionString = global::KlonsF.Settings.Default.ConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -36589,7 +38498,7 @@ ORDER BY IDSEQ, ID";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection();
-            this._connection.ConnectionString = global::KlonsF.Properties.Settings.Default.ConnectionString1;
+            this._connection.ConnectionString = global::KlonsF.Settings.Default.ConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -37047,7 +38956,7 @@ ORDER BY IDSEQ, ID";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection();
-            this._connection.ConnectionString = global::KlonsF.Properties.Settings.Default.ConnectionString1;
+            this._connection.ConnectionString = global::KlonsF.Settings.Default.ConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -37502,7 +39411,7 @@ ORDER BY IDSEQ, ID";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection();
-            this._connection.ConnectionString = global::KlonsF.Properties.Settings.Default.ConnectionString1;
+            this._connection.ConnectionString = global::KlonsF.Settings.Default.ConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -37964,7 +39873,7 @@ ORDER BY IDSEQ, ID";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection();
-            this._connection.ConnectionString = global::KlonsF.Properties.Settings.Default.ConnectionString1;
+            this._connection.ConnectionString = global::KlonsF.Settings.Default.ConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -38459,7 +40368,7 @@ ORDER BY IDSEQ, ID";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection();
-            this._connection.ConnectionString = global::KlonsF.Properties.Settings.Default.ConnectionString1;
+            this._connection.ConnectionString = global::KlonsF.Settings.Default.ConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -38691,87 +40600,87 @@ ORDER BY IDSEQ, ID";
         private void InitCommandCollection() {
             this._commandCollection = new global::System.Data.IDbCommand[43];
             this._commandCollection[0] = new global::FirebirdSql.Data.FirebirdClient.FbCommand();
-            ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[0])).Connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection(global::KlonsF.Properties.Settings.Default.ConnectionString1);
+            ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[0])).Connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection(global::KlonsF.Settings.Default.ConnectionString1);
             ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[0])).CommandText = "\"SP_M_GEN_DOCS_ID\"";
             ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[0])).CommandType = global::System.Data.CommandType.StoredProcedure;
             this._commandCollection[1] = new global::FirebirdSql.Data.FirebirdClient.FbCommand();
-            ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[1])).Connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection(global::KlonsF.Properties.Settings.Default.ConnectionString1);
+            ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[1])).Connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection(global::KlonsF.Settings.Default.ConnectionString1);
             ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[1])).CommandText = "\"SP_M_GEN_DOCTYPES_ID\"";
             ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[1])).CommandType = global::System.Data.CommandType.StoredProcedure;
             this._commandCollection[2] = new global::FirebirdSql.Data.FirebirdClient.FbCommand();
-            ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[2])).Connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection(global::KlonsF.Properties.Settings.Default.ConnectionString1);
+            ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[2])).Connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection(global::KlonsF.Settings.Default.ConnectionString1);
             ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[2])).CommandText = "\"SP_M_GEN_ITEMS_CAT_ID\"";
             ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[2])).CommandType = global::System.Data.CommandType.StoredProcedure;
             this._commandCollection[3] = new global::FirebirdSql.Data.FirebirdClient.FbCommand();
-            ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[3])).Connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection(global::KlonsF.Properties.Settings.Default.ConnectionString1);
+            ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[3])).Connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection(global::KlonsF.Settings.Default.ConnectionString1);
             ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[3])).CommandText = "\"SP_M_GEN_ITEMS_ID\"";
             ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[3])).CommandType = global::System.Data.CommandType.StoredProcedure;
             this._commandCollection[4] = new global::FirebirdSql.Data.FirebirdClient.FbCommand();
-            ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[4])).Connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection(global::KlonsF.Properties.Settings.Default.ConnectionString1);
+            ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[4])).Connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection(global::KlonsF.Settings.Default.ConnectionString1);
             ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[4])).CommandText = "\"SP_M_GEN_ROWS_ID\"";
             ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[4])).CommandType = global::System.Data.CommandType.StoredProcedure;
             this._commandCollection[5] = new global::FirebirdSql.Data.FirebirdClient.FbCommand();
-            ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[5])).Connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection(global::KlonsF.Properties.Settings.Default.ConnectionString1);
+            ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[5])).Connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection(global::KlonsF.Settings.Default.ConnectionString1);
             ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[5])).CommandText = "\"SP_M_GEN_STORES_ID\"";
             ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[5])).CommandType = global::System.Data.CommandType.StoredProcedure;
             this._commandCollection[6] = new global::FirebirdSql.Data.FirebirdClient.FbCommand();
-            ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[6])).Connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection(global::KlonsF.Properties.Settings.Default.ConnectionString1);
+            ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[6])).Connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection(global::KlonsF.Settings.Default.ConnectionString1);
             ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[6])).CommandText = "\"SP_M_GEN_STORETYPE_ID\"";
             ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[6])).CommandType = global::System.Data.CommandType.StoredProcedure;
             this._commandCollection[7] = new global::FirebirdSql.Data.FirebirdClient.FbCommand();
-            ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[7])).Connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection(global::KlonsF.Properties.Settings.Default.ConnectionString1);
+            ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[7])).Connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection(global::KlonsF.Settings.Default.ConnectionString1);
             ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[7])).CommandText = "\"SP_M_GEN_DOCSEQ\"";
             ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[7])).CommandType = global::System.Data.CommandType.StoredProcedure;
             this._commandCollection[8] = new global::FirebirdSql.Data.FirebirdClient.FbCommand();
-            ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[8])).Connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection(global::KlonsF.Properties.Settings.Default.ConnectionString1);
+            ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[8])).Connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection(global::KlonsF.Settings.Default.ConnectionString1);
             ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[8])).CommandText = "\"SP_M_GEN_UNITS_ID\"";
             ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[8])).CommandType = global::System.Data.CommandType.StoredProcedure;
             this._commandCollection[9] = new global::FirebirdSql.Data.FirebirdClient.FbCommand();
-            ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[9])).Connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection(global::KlonsF.Properties.Settings.Default.ConnectionString1);
+            ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[9])).Connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection(global::KlonsF.Settings.Default.ConnectionString1);
             ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[9])).CommandText = "\"SP_M_GEN_BANKS_ID\"";
             ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[9])).CommandType = global::System.Data.CommandType.StoredProcedure;
             this._commandCollection[10] = new global::FirebirdSql.Data.FirebirdClient.FbCommand();
-            ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[10])).Connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection(global::KlonsF.Properties.Settings.Default.ConnectionString1);
+            ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[10])).Connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection(global::KlonsF.Settings.Default.ConnectionString1);
             ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[10])).CommandText = "\"SP_M_GEN_BANKACCOUNTS_ID\"";
             ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[10])).CommandType = global::System.Data.CommandType.StoredProcedure;
             this._commandCollection[11] = new global::FirebirdSql.Data.FirebirdClient.FbCommand();
-            ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[11])).Connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection(global::KlonsF.Properties.Settings.Default.ConnectionString1);
+            ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[11])).Connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection(global::KlonsF.Settings.Default.ConnectionString1);
             ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[11])).CommandText = "\"SP_M_GEN_CONTACTS_ID\"";
             ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[11])).CommandType = global::System.Data.CommandType.StoredProcedure;
             this._commandCollection[12] = new global::FirebirdSql.Data.FirebirdClient.FbCommand();
-            ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[12])).Connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection(global::KlonsF.Properties.Settings.Default.ConnectionString1);
+            ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[12])).Connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection(global::KlonsF.Settings.Default.ConnectionString1);
             ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[12])).CommandText = "\"SP_M_GEN_COUNTRIES_ID\"";
             ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[12])).CommandType = global::System.Data.CommandType.StoredProcedure;
             this._commandCollection[13] = new global::FirebirdSql.Data.FirebirdClient.FbCommand();
-            ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[13])).Connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection(global::KlonsF.Properties.Settings.Default.ConnectionString1);
+            ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[13])).Connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection(global::KlonsF.Settings.Default.ConnectionString1);
             ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[13])).CommandText = "\"SP_M_GEN_ADDRESSSES_ID\"";
             ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[13])).CommandType = global::System.Data.CommandType.StoredProcedure;
             this._commandCollection[14] = new global::FirebirdSql.Data.FirebirdClient.FbCommand();
-            ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[14])).Connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection(global::KlonsF.Properties.Settings.Default.ConnectionString1);
+            ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[14])).Connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection(global::KlonsF.Settings.Default.ConnectionString1);
             ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[14])).CommandText = "\"SP_M_GEN_VEHICLES_ID\"";
             ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[14])).CommandType = global::System.Data.CommandType.StoredProcedure;
             this._commandCollection[15] = new global::FirebirdSql.Data.FirebirdClient.FbCommand();
-            ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[15])).Connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection(global::KlonsF.Properties.Settings.Default.ConnectionString1);
+            ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[15])).Connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection(global::KlonsF.Settings.Default.ConnectionString1);
             ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[15])).CommandText = "\"SP_M_GEN_PAYMENTTYPE_ID\"";
             ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[15])).CommandType = global::System.Data.CommandType.StoredProcedure;
             this._commandCollection[16] = new global::FirebirdSql.Data.FirebirdClient.FbCommand();
-            ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[16])).Connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection(global::KlonsF.Properties.Settings.Default.ConnectionString1);
+            ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[16])).Connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection(global::KlonsF.Settings.Default.ConnectionString1);
             ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[16])).CommandText = "\"SP_M_GEN_TRANSACTIONTYPE_ID\"";
             ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[16])).CommandType = global::System.Data.CommandType.StoredProcedure;
             this._commandCollection[17] = new global::FirebirdSql.Data.FirebirdClient.FbCommand();
-            ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[17])).Connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection(global::KlonsF.Properties.Settings.Default.ConnectionString1);
+            ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[17])).Connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection(global::KlonsF.Settings.Default.ConnectionString1);
             ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[17])).CommandText = "\"SP_M_GEN_PVNRATES2_ID\"";
             ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[17])).CommandType = global::System.Data.CommandType.StoredProcedure;
             this._commandCollection[18] = new global::FirebirdSql.Data.FirebirdClient.FbCommand();
-            ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[18])).Connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection(global::KlonsF.Properties.Settings.Default.ConnectionString1);
+            ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[18])).Connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection(global::KlonsF.Settings.Default.ConnectionString1);
             ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[18])).CommandText = "\"SP_M_GEN_PVNRATES_ID\"";
             ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[18])).CommandType = global::System.Data.CommandType.StoredProcedure;
             this._commandCollection[19] = new global::FirebirdSql.Data.FirebirdClient.FbCommand();
-            ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[19])).Connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection(global::KlonsF.Properties.Settings.Default.ConnectionString1);
+            ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[19])).Connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection(global::KlonsF.Settings.Default.ConnectionString1);
             ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[19])).CommandText = "\"SP_M_GEN_PVNTEXTS_ID\"";
             ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[19])).CommandType = global::System.Data.CommandType.StoredProcedure;
             this._commandCollection[20] = new global::FirebirdSql.Data.FirebirdClient.FbCommand();
-            ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[20])).Connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection(global::KlonsF.Properties.Settings.Default.ConnectionString1);
+            ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[20])).Connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection(global::KlonsF.Settings.Default.ConnectionString1);
             ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[20])).CommandText = "\"SP_M_DEL_FINDOC\"";
             ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[20])).CommandType = global::System.Data.CommandType.StoredProcedure;
             global::FirebirdSql.Data.FirebirdClient.FbParameter param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
@@ -38782,7 +40691,7 @@ ORDER BY IDSEQ, ID";
             param.SourceColumn = null;
             ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[20])).Parameters.Add(param);
             this._commandCollection[21] = new global::FirebirdSql.Data.FirebirdClient.FbCommand();
-            ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[21])).Connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection(global::KlonsF.Properties.Settings.Default.ConnectionString1);
+            ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[21])).Connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection(global::KlonsF.Settings.Default.ConnectionString1);
             ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[21])).CommandText = "\"SP_M_MAKELINKS_01B\"";
             ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[21])).CommandType = global::System.Data.CommandType.StoredProcedure;
             param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
@@ -38800,7 +40709,7 @@ ORDER BY IDSEQ, ID";
             param.SourceColumn = null;
             ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[21])).Parameters.Add(param);
             this._commandCollection[22] = new global::FirebirdSql.Data.FirebirdClient.FbCommand();
-            ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[22])).Connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection(global::KlonsF.Properties.Settings.Default.ConnectionString1);
+            ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[22])).Connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection(global::KlonsF.Settings.Default.ConnectionString1);
             ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[22])).CommandText = "\"SP_M_MAKELINKS_11\"";
             ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[22])).CommandType = global::System.Data.CommandType.StoredProcedure;
             param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
@@ -38818,7 +40727,7 @@ ORDER BY IDSEQ, ID";
             param.SourceColumn = null;
             ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[22])).Parameters.Add(param);
             this._commandCollection[23] = new global::FirebirdSql.Data.FirebirdClient.FbCommand();
-            ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[23])).Connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection(global::KlonsF.Properties.Settings.Default.ConnectionString1);
+            ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[23])).Connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection(global::KlonsF.Settings.Default.ConnectionString1);
             ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[23])).CommandText = "\"SP_M_MAKELINKS_21B\"";
             ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[23])).CommandType = global::System.Data.CommandType.StoredProcedure;
             param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
@@ -38836,7 +40745,7 @@ ORDER BY IDSEQ, ID";
             param.SourceColumn = null;
             ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[23])).Parameters.Add(param);
             this._commandCollection[24] = new global::FirebirdSql.Data.FirebirdClient.FbCommand();
-            ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[24])).Connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection(global::KlonsF.Properties.Settings.Default.ConnectionString1);
+            ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[24])).Connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection(global::KlonsF.Settings.Default.ConnectionString1);
             ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[24])).CommandText = "\"SP_M_MAKELINKS_31B\"";
             ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[24])).CommandType = global::System.Data.CommandType.StoredProcedure;
             param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
@@ -38854,7 +40763,7 @@ ORDER BY IDSEQ, ID";
             param.SourceColumn = null;
             ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[24])).Parameters.Add(param);
             this._commandCollection[25] = new global::FirebirdSql.Data.FirebirdClient.FbCommand();
-            ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[25])).Connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection(global::KlonsF.Properties.Settings.Default.ConnectionString1);
+            ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[25])).Connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection(global::KlonsF.Settings.Default.ConnectionString1);
             ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[25])).CommandText = "\"SP_M_MAKELINKS_41\"";
             ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[25])).CommandType = global::System.Data.CommandType.StoredProcedure;
             param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
@@ -38872,7 +40781,7 @@ ORDER BY IDSEQ, ID";
             param.SourceColumn = null;
             ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[25])).Parameters.Add(param);
             this._commandCollection[26] = new global::FirebirdSql.Data.FirebirdClient.FbCommand();
-            ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[26])).Connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection(global::KlonsF.Properties.Settings.Default.ConnectionString1);
+            ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[26])).Connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection(global::KlonsF.Settings.Default.ConnectionString1);
             ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[26])).CommandText = "\"SP_M_MAKELINKS_51B\"";
             ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[26])).CommandType = global::System.Data.CommandType.StoredProcedure;
             param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
@@ -38890,7 +40799,7 @@ ORDER BY IDSEQ, ID";
             param.SourceColumn = null;
             ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[26])).Parameters.Add(param);
             this._commandCollection[27] = new global::FirebirdSql.Data.FirebirdClient.FbCommand();
-            ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[27])).Connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection(global::KlonsF.Properties.Settings.Default.ConnectionString1);
+            ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[27])).Connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection(global::KlonsF.Settings.Default.ConnectionString1);
             ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[27])).CommandText = "\"SP_M_MAKELINKS_61B\"";
             ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[27])).CommandType = global::System.Data.CommandType.StoredProcedure;
             param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
@@ -38908,7 +40817,7 @@ ORDER BY IDSEQ, ID";
             param.SourceColumn = null;
             ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[27])).Parameters.Add(param);
             this._commandCollection[28] = new global::FirebirdSql.Data.FirebirdClient.FbCommand();
-            ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[28])).Connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection(global::KlonsF.Properties.Settings.Default.ConnectionString1);
+            ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[28])).Connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection(global::KlonsF.Settings.Default.ConnectionString1);
             ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[28])).CommandText = "\"SP_M_REMOVELINKS_01\"";
             ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[28])).CommandType = global::System.Data.CommandType.StoredProcedure;
             param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
@@ -38926,7 +40835,7 @@ ORDER BY IDSEQ, ID";
             param.SourceColumn = null;
             ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[28])).Parameters.Add(param);
             this._commandCollection[29] = new global::FirebirdSql.Data.FirebirdClient.FbCommand();
-            ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[29])).Connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection(global::KlonsF.Properties.Settings.Default.ConnectionString1);
+            ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[29])).Connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection(global::KlonsF.Settings.Default.ConnectionString1);
             ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[29])).CommandText = "\"SP_M_RECALCITEM_01A\"";
             ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[29])).CommandType = global::System.Data.CommandType.StoredProcedure;
             param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
@@ -38944,7 +40853,7 @@ ORDER BY IDSEQ, ID";
             param.SourceColumn = null;
             ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[29])).Parameters.Add(param);
             this._commandCollection[30] = new global::FirebirdSql.Data.FirebirdClient.FbCommand();
-            ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[30])).Connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection(global::KlonsF.Properties.Settings.Default.ConnectionString1);
+            ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[30])).Connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection(global::KlonsF.Settings.Default.ConnectionString1);
             ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[30])).CommandText = "\"SP_M_RECALCITEM_01C\"";
             ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[30])).CommandType = global::System.Data.CommandType.StoredProcedure;
             param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
@@ -38969,15 +40878,15 @@ ORDER BY IDSEQ, ID";
             param.SourceColumn = null;
             ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[30])).Parameters.Add(param);
             this._commandCollection[31] = new global::FirebirdSql.Data.FirebirdClient.FbCommand();
-            ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[31])).Connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection(global::KlonsF.Properties.Settings.Default.ConnectionString1);
+            ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[31])).Connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection(global::KlonsF.Settings.Default.ConnectionString1);
             ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[31])).CommandText = "\"SP_M_GEN_INV_DOCS_ID\"";
             ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[31])).CommandType = global::System.Data.CommandType.StoredProcedure;
             this._commandCollection[32] = new global::FirebirdSql.Data.FirebirdClient.FbCommand();
-            ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[32])).Connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection(global::KlonsF.Properties.Settings.Default.ConnectionString1);
+            ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[32])).Connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection(global::KlonsF.Settings.Default.ConnectionString1);
             ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[32])).CommandText = "\"SP_M_GEN_INV_ROWS_ID\"";
             ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[32])).CommandType = global::System.Data.CommandType.StoredProcedure;
             this._commandCollection[33] = new global::FirebirdSql.Data.FirebirdClient.FbCommand();
-            ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[33])).Connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection(global::KlonsF.Properties.Settings.Default.ConnectionString1);
+            ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[33])).Connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection(global::KlonsF.Settings.Default.ConnectionString1);
             ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[33])).CommandText = "\"SP_M_MAKELINKS_13\"";
             ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[33])).CommandType = global::System.Data.CommandType.StoredProcedure;
             param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
@@ -38995,7 +40904,7 @@ ORDER BY IDSEQ, ID";
             param.SourceColumn = null;
             ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[33])).Parameters.Add(param);
             this._commandCollection[34] = new global::FirebirdSql.Data.FirebirdClient.FbCommand();
-            ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[34])).Connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection(global::KlonsF.Properties.Settings.Default.ConnectionString1);
+            ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[34])).Connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection(global::KlonsF.Settings.Default.ConnectionString1);
             ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[34])).CommandText = "\"SP_M_MAKELINKS_14B\"";
             ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[34])).CommandType = global::System.Data.CommandType.StoredProcedure;
             param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
@@ -39013,35 +40922,35 @@ ORDER BY IDSEQ, ID";
             param.SourceColumn = null;
             ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[34])).Parameters.Add(param);
             this._commandCollection[35] = new global::FirebirdSql.Data.FirebirdClient.FbCommand();
-            ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[35])).Connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection(global::KlonsF.Properties.Settings.Default.ConnectionString1);
+            ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[35])).Connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection(global::KlonsF.Settings.Default.ConnectionString1);
             ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[35])).CommandText = "\"SP_M_GEN_DISC_LISTS_ID\"";
             ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[35])).CommandType = global::System.Data.CommandType.StoredProcedure;
             this._commandCollection[36] = new global::FirebirdSql.Data.FirebirdClient.FbCommand();
-            ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[36])).Connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection(global::KlonsF.Properties.Settings.Default.ConnectionString1);
+            ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[36])).Connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection(global::KlonsF.Settings.Default.ConnectionString1);
             ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[36])).CommandText = "\"SP_M_GEN_DISC_LISTS_P_ID\"";
             ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[36])).CommandType = global::System.Data.CommandType.StoredProcedure;
             this._commandCollection[37] = new global::FirebirdSql.Data.FirebirdClient.FbCommand();
-            ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[37])).Connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection(global::KlonsF.Properties.Settings.Default.ConnectionString1);
+            ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[37])).Connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection(global::KlonsF.Settings.Default.ConnectionString1);
             ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[37])).CommandText = "\"SP_M_GEN_DISC_LISTS_R_ID\"";
             ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[37])).CommandType = global::System.Data.CommandType.StoredProcedure;
             this._commandCollection[38] = new global::FirebirdSql.Data.FirebirdClient.FbCommand();
-            ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[38])).Connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection(global::KlonsF.Properties.Settings.Default.ConnectionString1);
+            ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[38])).Connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection(global::KlonsF.Settings.Default.ConnectionString1);
             ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[38])).CommandText = "\"SP_M_GEN_STORES_CAT_ID\"";
             ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[38])).CommandType = global::System.Data.CommandType.StoredProcedure;
             this._commandCollection[39] = new global::FirebirdSql.Data.FirebirdClient.FbCommand();
-            ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[39])).Connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection(global::KlonsF.Properties.Settings.Default.ConnectionString1);
+            ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[39])).Connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection(global::KlonsF.Settings.Default.ConnectionString1);
             ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[39])).CommandText = "\"SP_M_GEN_PRICE_LISTS_ID\"";
             ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[39])).CommandType = global::System.Data.CommandType.StoredProcedure;
             this._commandCollection[40] = new global::FirebirdSql.Data.FirebirdClient.FbCommand();
-            ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[40])).Connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection(global::KlonsF.Properties.Settings.Default.ConnectionString1);
+            ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[40])).Connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection(global::KlonsF.Settings.Default.ConnectionString1);
             ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[40])).CommandText = "\"SP_M_GEN_PRICE_LISTS_R_ID\"";
             ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[40])).CommandType = global::System.Data.CommandType.StoredProcedure;
             this._commandCollection[41] = new global::FirebirdSql.Data.FirebirdClient.FbCommand();
-            ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[41])).Connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection(global::KlonsF.Properties.Settings.Default.ConnectionString1);
+            ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[41])).Connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection(global::KlonsF.Settings.Default.ConnectionString1);
             ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[41])).CommandText = "\"SP_M_GEN_PRICE_LISTS_P_ID\"";
             ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[41])).CommandType = global::System.Data.CommandType.StoredProcedure;
             this._commandCollection[42] = new global::FirebirdSql.Data.FirebirdClient.FbCommand();
-            ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[42])).Connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection(global::KlonsF.Properties.Settings.Default.ConnectionString1);
+            ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[42])).Connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection(global::KlonsF.Settings.Default.ConnectionString1);
             ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[42])).CommandText = "\"SP_M_GEN_DOCSEQ2\"";
             ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[42])).CommandType = global::System.Data.CommandType.StoredProcedure;
             param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
@@ -41238,6 +43147,15 @@ ORDER BY IDSEQ, ID";
                     allChangedRows.AddRange(updatedRows);
                 }
             }
+            if ((this._m_COUNTRIESTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.M_COUNTRIES.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._m_COUNTRIESTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
             if ((this._m_STORES_CATTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.M_STORES_CAT.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
@@ -41253,15 +43171,6 @@ ORDER BY IDSEQ, ID";
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
                     result = (result + this._m_STORESTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
-            if ((this._m_COUNTRIESTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.M_COUNTRIES.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._m_COUNTRIESTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -41534,6 +43443,14 @@ ORDER BY IDSEQ, ID";
                     allAddedRows.AddRange(addedRows);
                 }
             }
+            if ((this._m_COUNTRIESTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.M_COUNTRIES.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._m_COUNTRIESTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
             if ((this._m_STORES_CATTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.M_STORES_CAT.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
@@ -41547,14 +43464,6 @@ ORDER BY IDSEQ, ID";
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
                     result = (result + this._m_STORESTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
-            if ((this._m_COUNTRIESTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.M_COUNTRIES.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._m_COUNTRIESTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -42000,14 +43909,6 @@ ORDER BY IDSEQ, ID";
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._m_COUNTRIESTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.M_COUNTRIES.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._m_COUNTRIESTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
             if ((this._m_STORESTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.M_STORES.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
@@ -42021,6 +43922,14 @@ ORDER BY IDSEQ, ID";
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
                     result = (result + this._m_STORES_CATTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._m_COUNTRIESTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.M_COUNTRIES.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._m_COUNTRIESTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }

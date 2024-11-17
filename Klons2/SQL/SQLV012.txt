@@ -1,4 +1,4 @@
-﻿SET TERM ^ ;
+SET TERM ^ ;
 
 create or alter procedure SP_SYS_CHECK_USER (
     pusr type of column users.nm,
@@ -70,7 +70,7 @@ EXECUTE BLOCK AS BEGIN
 END!!
 
 SET TERM ; !!
-  
+
   
 UPDATE Params
 SET PVALUE = '012'

@@ -148,6 +148,11 @@ namespace KlonsF.Classes
             get { return GetParamStr("CompAddr4"); }
             set { SetParamStr("CompAddr4", value); }
         }
+        public string CompEMail
+        {
+            get { return GetParamStr("CompEMail"); }
+            set { SetParamStr("CompEMail", value); }
+        }
         public string CompRegNrPVN
         {
             get { return GetParamStr("CompRegNrPVN"); }

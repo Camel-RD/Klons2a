@@ -457,7 +457,6 @@ namespace KlonsF.Forms
             MinimumSize = new System.Drawing.Size(16, 365);
             Name = "Form_OpsRules";
             Text = "Kontējumu kontrole";
-            WindowState = System.Windows.Forms.FormWindowState.Maximized;
             FormClosed += FormOpsRules_FormClosed;
             Load += FormOpsRules_Load;
             panel1.ResumeLayout(false);

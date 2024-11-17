@@ -273,6 +273,11 @@ namespace KlonsA.Classes
             IINLikmesVeids = MakeListB(
                 "0", "20",
                 "1", "23");
+
+            PaylistTpPay = MakeListB(
+                "0", "banka",
+                "1", "kase",
+                "3", "cits");
         }
 
         public const string IdBrivdienaStr = "br";
@@ -381,6 +386,7 @@ namespace KlonsA.Classes
         public static List<MyListItemInt16> FPMaksNodVeids { private set; get; } = null;
         public static List<MyListItemInt16> FPMaksSILikmesVeids { private set; get; } = null;
         public static List<MyListItemInt> IINLikmesVeids { private set; get; } = null;
+        public static List<MyListItemInt> PaylistTpPay { private set; get; } = null;
 
 
         public static List<MyListItemInt16> MakeListA(params string[] data)

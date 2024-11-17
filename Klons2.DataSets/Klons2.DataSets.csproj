@@ -16,11 +16,6 @@
 	    <NoWarn>$(NoWarn);SYSLIB0050</NoWarn>
     </PropertyGroup>
   <ItemGroup>
-    <Compile Update="Properties\Settings.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTimeSharedInput>True</DesignTimeSharedInput>
-      <DependentUpon>Settings.settings</DependentUpon>
-    </Compile>
     <Compile Update="DataSets\KlonsADataSet.cs">
       <DependentUpon>KlonsADataSet.xsd</DependentUpon>
     </Compile>
@@ -82,8 +77,21 @@
     <Compile Update="DataSets\klonsDataSet.cs">
       <DependentUpon>klonsDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Update="Properties\Settings.Designer.cs">
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Update="Settings.Designer.cs">
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <None Update="app.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="DataSets\KlonsADataSet.xsc">
       <DependentUpon>KlonsADataSet.xsd</DependentUpon>
     </None>
@@ -173,6 +181,10 @@
       <DependentUpon>klonsDataSet.xsd</DependentUpon>
     </None>
     <None Update="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Update="Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>

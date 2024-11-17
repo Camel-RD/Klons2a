@@ -24,6 +24,10 @@ namespace KlonsA.Forms
             InitializeComponent();
             CheckMyFontAndColors();
 
+            dgcListTpPay.DataSource = SomeDataDefs.PaylistTpPay;
+            dgcListTpPay.DisplayMember = "Val";
+            dgcListTpPay.ValueMember = "Key";
+
             try
             {
                 MakeGrid();

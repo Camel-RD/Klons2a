@@ -12,6 +12,8 @@ using KlonsF.DataSets;
 using KlonsLIB.Components;
 using KlonsLIB.Data;
 using KlonsLIB.Misc;
+using KlonsM.Classes;
+using KlonsM.FormsM;
 
 namespace KlonsF.Forms
 {
@@ -27,13 +29,41 @@ namespace KlonsF.Forms
             CheckFilter();
         }
 
+        public static string GetClId(string clid)
+        {
+            var fm = new Form_Persons();
+            //fm.tbCode.Text = code;
+            fm.SelectedValue = clid;
+            var ret = fm.ShowMyDialogModal();
+            fm.FindPerson(clid);
+            if (ret != DialogResult.OK) return null;
+            return fm.SelectedValue;
+        }
+
         private void FormPersons_Load(object sender, EventArgs e)
         {
             CheckSave();
-            WindowState = FormWindowState.Maximized;
+            if (!SelectedValue.IsNOE())
+                FindPerson(SelectedValue);
+
         }
         private void FormPersons_Shown(object sender, EventArgs e)
         {
+        }
+
+        public void FindPerson(string clid)
+        {
+            if (bsPersons.Count == 0) return;
+            if (clid.IsNOE()) return;
+            for (int i = 0; i < bsPersons.Count; i++)
+            {
+                var dr = (bsPersons[i] as DataRowView).Row as klonsDataSet.PersonsRow;
+                if (dr.ClId == clid)
+                {
+                    bsPersons.Position = i;
+                    return;
+                }
+            }
         }
 
         private void CheckFilter()

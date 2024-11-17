@@ -22860,7 +22860,7 @@ namespace KlonsF.DataSets.klonsRepDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection();
-            this._connection.ConnectionString = global::KlonsF.Properties.Settings.Default.ConnectionString1;
+            this._connection.ConnectionString = global::KlonsF.Settings.Default.ConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -27111,7 +27111,7 @@ namespace KlonsF.DataSets.klonsRepDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection();
-            this._connection.ConnectionString = global::KlonsF.Properties.Settings.Default.ConnectionString1;
+            this._connection.ConnectionString = global::KlonsF.Settings.Default.ConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -29775,7 +29775,7 @@ namespace KlonsF.DataSets.klonsRepDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection();
-            this._connection.ConnectionString = global::KlonsF.Properties.Settings.Default.ConnectionString1;
+            this._connection.ConnectionString = global::KlonsF.Settings.Default.ConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -30676,7 +30676,7 @@ namespace KlonsF.DataSets.klonsRepDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection();
-            this._connection.ConnectionString = global::KlonsF.Properties.Settings.Default.ConnectionString1;
+            this._connection.ConnectionString = global::KlonsF.Settings.Default.ConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -32336,7 +32336,7 @@ namespace KlonsF.DataSets.klonsRepDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection();
-            this._connection.ConnectionString = global::KlonsF.Properties.Settings.Default.ConnectionString1;
+            this._connection.ConnectionString = global::KlonsF.Settings.Default.ConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -33897,7 +33897,7 @@ namespace KlonsF.DataSets.klonsRepDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection();
-            this._connection.ConnectionString = global::KlonsF.Properties.Settings.Default.ConnectionString1;
+            this._connection.ConnectionString = global::KlonsF.Settings.Default.ConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -36542,7 +36542,7 @@ namespace KlonsF.DataSets.klonsRepDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection();
-            this._connection.ConnectionString = global::KlonsF.Properties.Settings.Default.ConnectionString1;
+            this._connection.ConnectionString = global::KlonsF.Settings.Default.ConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -39280,7 +39280,7 @@ namespace KlonsF.DataSets.klonsRepDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection();
-            this._connection.ConnectionString = global::KlonsF.Properties.Settings.Default.ConnectionString1;
+            this._connection.ConnectionString = global::KlonsF.Settings.Default.ConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -40732,7 +40732,7 @@ namespace KlonsF.DataSets.klonsRepDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection();
-            this._connection.ConnectionString = global::KlonsF.Properties.Settings.Default.ConnectionString1;
+            this._connection.ConnectionString = global::KlonsF.Settings.Default.ConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -41417,7 +41417,7 @@ namespace KlonsF.DataSets.klonsRepDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection();
-            this._connection.ConnectionString = global::KlonsF.Properties.Settings.Default.ConnectionString1;
+            this._connection.ConnectionString = global::KlonsF.Settings.Default.ConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -42116,7 +42116,7 @@ namespace KlonsF.DataSets.klonsRepDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection();
-            this._connection.ConnectionString = global::KlonsF.Properties.Settings.Default.ConnectionString1;
+            this._connection.ConnectionString = global::KlonsF.Settings.Default.ConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -44176,7 +44176,7 @@ namespace KlonsF.DataSets.klonsRepDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection();
-            this._connection.ConnectionString = global::KlonsF.Properties.Settings.Default.ConnectionString1;
+            this._connection.ConnectionString = global::KlonsF.Settings.Default.ConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -46982,7 +46982,7 @@ namespace KlonsF.DataSets.klonsRepDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection();
-            this._connection.ConnectionString = global::KlonsF.Properties.Settings.Default.ConnectionString1;
+            this._connection.ConnectionString = global::KlonsF.Settings.Default.ConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -48778,7 +48778,7 @@ namespace KlonsF.DataSets.klonsRepDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection();
-            this._connection.ConnectionString = global::KlonsF.Properties.Settings.Default.ConnectionString1;
+            this._connection.ConnectionString = global::KlonsF.Settings.Default.ConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -51662,7 +51662,7 @@ namespace KlonsF.DataSets.klonsRepDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection();
-            this._connection.ConnectionString = global::KlonsF.Properties.Settings.Default.ConnectionString1;
+            this._connection.ConnectionString = global::KlonsF.Settings.Default.ConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -53312,7 +53312,7 @@ namespace KlonsF.DataSets.klonsRepDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection();
-            this._connection.ConnectionString = global::KlonsF.Properties.Settings.Default.ConnectionString1;
+            this._connection.ConnectionString = global::KlonsF.Settings.Default.ConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -53579,7 +53579,7 @@ namespace KlonsF.DataSets.klonsRepDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection();
-            this._connection.ConnectionString = global::KlonsF.Properties.Settings.Default.ConnectionString1;
+            this._connection.ConnectionString = global::KlonsF.Settings.Default.ConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -53837,7 +53837,7 @@ namespace KlonsF.DataSets.klonsRepDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection();
-            this._connection.ConnectionString = global::KlonsF.Properties.Settings.Default.ConnectionString1;
+            this._connection.ConnectionString = global::KlonsF.Settings.Default.ConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

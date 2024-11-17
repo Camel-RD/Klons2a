@@ -30,10 +30,7 @@
         {
             components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormA_PayLists));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -54,9 +51,28 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormA_PayLists));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             bNav = new KlonsLIB.Components.MyBindingNavigator();
             bsLists = new KlonsLIB.Data.MyBindingSource(components);
+            dgvLists = new KlonsLIB.Components.MyDataGridView();
+            bsDep = new KlonsLIB.Data.MyBindingSource(components);
+            bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            tsLabel1 = new System.Windows.Forms.ToolStripLabel();
+            bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
+            bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
+            bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
+            bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
+            bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
+            bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
+            bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
+            tsbSave = new System.Windows.Forms.ToolStripButton();
+            tsbRenum = new System.Windows.Forms.ToolStripButton();
             bsRows = new KlonsLIB.Data.MyBindingSource2(components);
             dgvRows = new KlonsLIB.Components.MyDataGridView();
             dgcRowsSNR = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -85,31 +101,6 @@
             dgcRowS2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             dgcRowsID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             dgcRowsIDS = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            dgvLists = new KlonsLIB.Components.MyDataGridView();
-            dgcListsYR = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            dgcListsMT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            dgcListsSNR = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            dgcListsDT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            dgcListTotalPay = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            dgcListsDep = new KlonsLIB.Components.MyDgvMcCBColumn();
-            bsDep = new KlonsLIB.Data.MyBindingSource(components);
-            dgcListsDescr = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            dgcListDoPay = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            dgcListsId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
-            tsLabel1 = new System.Windows.Forms.ToolStripLabel();
-            bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
-            bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
-            bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
-            bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
-            bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
-            bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
-            tsbSave = new System.Windows.Forms.ToolStripButton();
-            tsbRenum = new System.Windows.Forms.ToolStripButton();
             mySplitContainer1 = new KlonsLIB.Components.MySplitContainer();
             menuStrip1 = new System.Windows.Forms.MenuStrip();
             maksājumuSarakstiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -180,15 +171,25 @@
             tbDate1 = new KlonsLIB.Components.MyTextBox();
             label2 = new System.Windows.Forms.Label();
             label1 = new System.Windows.Forms.Label();
+            dgcListsYR = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            dgcListsMT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            dgcListsSNR = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            dgcListsDT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            dgcListTotalPay = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            dgcListTpPay = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            dgcListsDep = new KlonsLIB.Components.MyDgvMcCBColumn();
+            dgcListsDescr = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            dgcListDoPay = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            dgcListsId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)bNav).BeginInit();
             bNav.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)bsLists).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvLists).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)bsDep).BeginInit();
             ((System.ComponentModel.ISupportInitialize)bsRows).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dgvRows).BeginInit();
             ((System.ComponentModel.ISupportInitialize)bsPersons).BeginInit();
             ((System.ComponentModel.ISupportInitialize)bsAmati).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dgvLists).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)bsDep).BeginInit();
             ((System.ComponentModel.ISupportInitialize)mySplitContainer1).BeginInit();
             mySplitContainer1.Panel1.SuspendLayout();
             mySplitContainer1.Panel2.SuspendLayout();
@@ -210,9 +211,8 @@
             bNav.DeleteItem = null;
             bNav.Dock = System.Windows.Forms.DockStyle.Bottom;
             bNav.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            bNav.ImageScalingSize = new System.Drawing.Size(16, 16);
             bNav.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { tsLabel1, bindingNavigatorMoveFirstItem, bindingNavigatorMovePreviousItem, bindingNavigatorSeparator, bindingNavigatorPositionItem, bindingNavigatorCountItem, bindingNavigatorSeparator1, bindingNavigatorMoveNextItem, bindingNavigatorMoveLastItem, bindingNavigatorSeparator2, bindingNavigatorAddNewItem, bindingNavigatorDeleteItem, tsbSave, tsbRenum });
-            bNav.Location = new System.Drawing.Point(0, 532);
+            bNav.Location = new System.Drawing.Point(0, 540);
             bNav.MoveFirstItem = bindingNavigatorMoveFirstItem;
             bNav.MoveLastItem = bindingNavigatorMoveLastItem;
             bNav.MoveNextItem = bindingNavigatorMoveNextItem;
@@ -220,7 +220,7 @@
             bNav.Name = "bNav";
             bNav.PositionItem = bindingNavigatorPositionItem;
             bNav.SaveItem = null;
-            bNav.Size = new System.Drawing.Size(1284, 33);
+            bNav.Size = new System.Drawing.Size(1153, 25);
             bNav.TabIndex = 0;
             bNav.Text = "myBindingNavigator1";
             bNav.ItemDeleting += bNav_ItemDeleting;
@@ -232,6 +232,159 @@
             bsLists.Sort = "DT, SNR";
             bsLists.UseDataGridView = dgvLists;
             bsLists.ListChanged += bsLists_ListChanged;
+            // 
+            // dgvLists
+            // 
+            dgvLists.AllowUserToAddRows = false;
+            dgvLists.AllowUserToDeleteRows = false;
+            dgvLists.AutoGenerateColumns = false;
+            dgvLists.BackgroundColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            dgvLists.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dgvLists.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvLists.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { dgcListsYR, dgcListsMT, dgcListsSNR, dgcListsDT, dgcListTotalPay, dgcListTpPay, dgcListsDep, dgcListsDescr, dgcListDoPay, dgcListsId });
+            dgvLists.DataSource = bsLists;
+            dgvLists.Dock = System.Windows.Forms.DockStyle.Fill;
+            dgvLists.Location = new System.Drawing.Point(0, 0);
+            dgvLists.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            dgvLists.Name = "dgvLists";
+            dgvLists.RowHeadersWidth = 53;
+            dgvLists.ShowCellToolTips = false;
+            dgvLists.Size = new System.Drawing.Size(838, 217);
+            dgvLists.TabIndex = 0;
+            dgvLists.MyKeyDown += dgvLists_MyKeyDown;
+            dgvLists.MyCheckForChanges += dgvLists_MyCheckForChanges;
+            dgvLists.CellDoubleClick += dgvLists_CellDoubleClick;
+            dgvLists.CellParsing += dgvLists_CellParsing;
+            dgvLists.CurrentCellChanged += dgvLists_CurrentCellChanged;
+            dgvLists.DefaultValuesNeeded += dgvLists_DefaultValuesNeeded;
+            dgvLists.UserDeletingRow += dgvLists_UserDeletingRow;
+            dgvLists.Enter += dgvLists_Enter;
+            dgvLists.KeyDown += dgvLists_KeyDown;
+            // 
+            // bsDep
+            // 
+            bsDep.DataMember = "DEPARTMENTS";
+            bsDep.MyDataSource = "KlonsAData";
+            bsDep.Sort = "ID";
+            // 
+            // bindingNavigatorCountItem
+            // 
+            bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            bindingNavigatorCountItem.Size = new System.Drawing.Size(50, 22);
+            bindingNavigatorCountItem.Text = " no {0}";
+            bindingNavigatorCountItem.ToolTipText = "Ierakstu skaits";
+            // 
+            // tsLabel1
+            // 
+            tsLabel1.Name = "tsLabel1";
+            tsLabel1.Size = new System.Drawing.Size(63, 22);
+            tsLabel1.Text = "Saraksti:";
+            // 
+            // bindingNavigatorMoveFirstItem
+            // 
+            bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            bindingNavigatorMoveFirstItem.Image = (System.Drawing.Image)resources.GetObject("bindingNavigatorMoveFirstItem.Image");
+            bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
+            bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
+            bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(23, 22);
+            bindingNavigatorMoveFirstItem.Text = "Iet uz pirmo";
+            // 
+            // bindingNavigatorMovePreviousItem
+            // 
+            bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            bindingNavigatorMovePreviousItem.Image = (System.Drawing.Image)resources.GetObject("bindingNavigatorMovePreviousItem.Image");
+            bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
+            bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
+            bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(23, 22);
+            bindingNavigatorMovePreviousItem.Text = "Iet uz iepriekšējo";
+            // 
+            // bindingNavigatorSeparator
+            // 
+            bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
+            bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 25);
+            // 
+            // bindingNavigatorPositionItem
+            // 
+            bindingNavigatorPositionItem.AutoSize = false;
+            bindingNavigatorPositionItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
+            bindingNavigatorPositionItem.Size = new System.Drawing.Size(56, 23);
+            bindingNavigatorPositionItem.Text = "0";
+            bindingNavigatorPositionItem.ToolTipText = "Pašreizējā pozīcija";
+            // 
+            // bindingNavigatorSeparator1
+            // 
+            bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
+            bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
+            // 
+            // bindingNavigatorMoveNextItem
+            // 
+            bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            bindingNavigatorMoveNextItem.Image = (System.Drawing.Image)resources.GetObject("bindingNavigatorMoveNextItem.Image");
+            bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
+            bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
+            bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 22);
+            bindingNavigatorMoveNextItem.Text = "Iet uz nākošo";
+            // 
+            // bindingNavigatorMoveLastItem
+            // 
+            bindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            bindingNavigatorMoveLastItem.Image = (System.Drawing.Image)resources.GetObject("bindingNavigatorMoveLastItem.Image");
+            bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
+            bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
+            bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 22);
+            bindingNavigatorMoveLastItem.Text = "Iet uz pēdējo";
+            // 
+            // bindingNavigatorSeparator2
+            // 
+            bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
+            bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
+            // 
+            // bindingNavigatorAddNewItem
+            // 
+            bindingNavigatorAddNewItem.Image = (System.Drawing.Image)resources.GetObject("bindingNavigatorAddNewItem.Image");
+            bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            bindingNavigatorAddNewItem.Size = new System.Drawing.Size(66, 22);
+            bindingNavigatorAddNewItem.Text = "Jauns";
+            bindingNavigatorAddNewItem.Click += bindingNavigatorAddNewItem_Click;
+            // 
+            // bindingNavigatorDeleteItem
+            // 
+            bindingNavigatorDeleteItem.Image = (System.Drawing.Image)resources.GetObject("bindingNavigatorDeleteItem.Image");
+            bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            bindingNavigatorDeleteItem.Size = new System.Drawing.Size(64, 22);
+            bindingNavigatorDeleteItem.Text = "Dzēst";
+            bindingNavigatorDeleteItem.Click += bindingNavigatorDeleteItem_Click;
+            // 
+            // tsbSave
+            // 
+            tsbSave.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            tsbSave.Image = (System.Drawing.Image)resources.GetObject("tsbSave.Image");
+            tsbSave.ImageTransparentColor = System.Drawing.Color.Magenta;
+            tsbSave.Name = "tsbSave";
+            tsbSave.Size = new System.Drawing.Size(23, 22);
+            tsbSave.Text = "Saglabāt";
+            tsbSave.Click += tsbSave_Click;
+            // 
+            // tsbRenum
+            // 
+            tsbRenum.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            tsbRenum.Image = (System.Drawing.Image)resources.GetObject("tsbRenum.Image");
+            tsbRenum.ImageTransparentColor = System.Drawing.Color.Magenta;
+            tsbRenum.Margin = new System.Windows.Forms.Padding(5, 1, 0, 2);
+            tsbRenum.Name = "tsbRenum";
+            tsbRenum.Size = new System.Drawing.Size(86, 22);
+            tsbRenum.Text = "Pārnumurēt";
+            tsbRenum.Click += tsbRenum_Click;
             // 
             // bsRows
             // 
@@ -247,14 +400,14 @@
             dgvRows.AutoGenerateColumns = false;
             dgvRows.AutoSave = false;
             dgvRows.BackgroundColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            dgvRows.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            dgvRows.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
             dgvRows.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvRows.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { dgcRowsSNR, dgcRowsIDP, dgcRowsIDAM, dgcRowsPay0, dgcRowsIIN0, dgcRowsAdvance0, dgcWithholdings0, dgcTPay0, dgcTPay, dgcRowsPay, dgcRowsAdvance, dgcWithholdings, dgcRowsIIN, dgcRowsPayReverse, dgcRowsIINReverse, dgcRowsDT1, dgcRowsDT2, dgcRowsR1, dgcRowsR2, dgcRowsS0, dgcRowS1, dgcRowS2, dgcRowsID, dgcRowsIDS });
             dgvRows.DataSource = bsRows;
@@ -264,7 +417,7 @@
             dgvRows.Name = "dgvRows";
             dgvRows.RowHeadersWidth = 53;
             dgvRows.ShowCellToolTips = false;
-            dgvRows.Size = new System.Drawing.Size(969, 247);
+            dgvRows.Size = new System.Drawing.Size(838, 252);
             dgvRows.TabIndex = 0;
             dgvRows.MyKeyDown += dgvRows_MyKeyDown;
             dgvRows.CellBeginEdit += dgvRows_CellBeginEdit;
@@ -332,9 +485,9 @@
             // dgcRowsPay0
             // 
             dgcRowsPay0.DataPropertyName = "PAY0";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle2.Format = "N2";
-            dgcRowsPay0.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle7.Format = "N2";
+            dgcRowsPay0.DefaultCellStyle = dataGridViewCellStyle7;
             dgcRowsPay0.HeaderText = "nesamaks.";
             dgcRowsPay0.MinimumWidth = 7;
             dgcRowsPay0.Name = "dgcRowsPay0";
@@ -345,9 +498,9 @@
             // dgcRowsIIN0
             // 
             dgcRowsIIN0.DataPropertyName = "IIN0";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle3.Format = "N2";
-            dgcRowsIIN0.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle8.Format = "N2";
+            dgcRowsIIN0.DefaultCellStyle = dataGridViewCellStyle8;
             dgcRowsIIN0.HeaderText = "neiet. IIN";
             dgcRowsIIN0.MinimumWidth = 7;
             dgcRowsIIN0.Name = "dgcRowsIIN0";
@@ -359,9 +512,9 @@
             // dgcRowsAdvance0
             // 
             dgcRowsAdvance0.DataPropertyName = "ADVANCE0";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle4.Format = "N2";
-            dgcRowsAdvance0.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle9.Format = "N2";
+            dgcRowsAdvance0.DefaultCellStyle = dataGridViewCellStyle9;
             dgcRowsAdvance0.HeaderText = "avanss";
             dgcRowsAdvance0.MinimumWidth = 7;
             dgcRowsAdvance0.Name = "dgcRowsAdvance0";
@@ -373,9 +526,9 @@
             // dgcWithholdings0
             // 
             dgcWithholdings0.DataPropertyName = "WITHHOLDINGS0";
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle5.Format = "N2";
-            dgcWithholdings0.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle10.Format = "N2";
+            dgcWithholdings0.DefaultCellStyle = dataGridViewCellStyle10;
             dgcWithholdings0.HeaderText = "ietur.";
             dgcWithholdings0.MinimumWidth = 7;
             dgcWithholdings0.Name = "dgcWithholdings0";
@@ -386,9 +539,9 @@
             // dgcTPay0
             // 
             dgcTPay0.DataPropertyName = "TPAY0";
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle6.Format = "N2";
-            dgcTPay0.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle11.Format = "N2";
+            dgcTPay0.DefaultCellStyle = dataGridViewCellStyle11;
             dgcTPay0.HeaderText = "kopā parāds";
             dgcTPay0.MinimumWidth = 7;
             dgcTPay0.Name = "dgcTPay0";
@@ -398,9 +551,9 @@
             // dgcTPay
             // 
             dgcTPay.DataPropertyName = "TPAY";
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle7.Format = "N2";
-            dgcTPay.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle12.Format = "N2";
+            dgcTPay.DefaultCellStyle = dataGridViewCellStyle12;
             dgcTPay.HeaderText = "maksāt";
             dgcTPay.MinimumWidth = 7;
             dgcTPay.Name = "dgcTPay";
@@ -409,9 +562,9 @@
             // dgcRowsPay
             // 
             dgcRowsPay.DataPropertyName = "PAY";
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle8.Format = "N2";
-            dgcRowsPay.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle13.Format = "N2";
+            dgcRowsPay.DefaultCellStyle = dataGridViewCellStyle13;
             dgcRowsPay.HeaderText = "maksāt algu";
             dgcRowsPay.MinimumWidth = 7;
             dgcRowsPay.Name = "dgcRowsPay";
@@ -420,9 +573,9 @@
             // dgcRowsAdvance
             // 
             dgcRowsAdvance.DataPropertyName = "ADVANCE";
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle9.Format = "N2";
-            dgcRowsAdvance.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle14.Format = "N2";
+            dgcRowsAdvance.DefaultCellStyle = dataGridViewCellStyle14;
             dgcRowsAdvance.HeaderText = "avanss";
             dgcRowsAdvance.MinimumWidth = 7;
             dgcRowsAdvance.Name = "dgcRowsAdvance";
@@ -432,9 +585,9 @@
             // dgcWithholdings
             // 
             dgcWithholdings.DataPropertyName = "WITHHOLDINGS";
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle10.Format = "N2";
-            dgcWithholdings.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle15.Format = "N2";
+            dgcWithholdings.DefaultCellStyle = dataGridViewCellStyle15;
             dgcWithholdings.HeaderText = "ietur.";
             dgcWithholdings.MinimumWidth = 7;
             dgcWithholdings.Name = "dgcWithholdings";
@@ -444,9 +597,9 @@
             // dgcRowsIIN
             // 
             dgcRowsIIN.DataPropertyName = "IIN";
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle11.Format = "N2";
-            dgcRowsIIN.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle16.Format = "N2";
+            dgcRowsIIN.DefaultCellStyle = dataGridViewCellStyle16;
             dgcRowsIIN.HeaderText = "ietur. IIN";
             dgcRowsIIN.MinimumWidth = 7;
             dgcRowsIIN.Name = "dgcRowsIIN";
@@ -458,9 +611,9 @@
             // dgcRowsPayReverse
             // 
             dgcRowsPayReverse.DataPropertyName = "PAY_REVERSE";
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle12.Format = "N2";
-            dgcRowsPayReverse.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle17.Format = "N2";
+            dgcRowsPayReverse.DefaultCellStyle = dataGridViewCellStyle17;
             dgcRowsPayReverse.HeaderText = "korekc.";
             dgcRowsPayReverse.MinimumWidth = 7;
             dgcRowsPayReverse.Name = "dgcRowsPayReverse";
@@ -470,9 +623,9 @@
             // dgcRowsIINReverse
             // 
             dgcRowsIINReverse.DataPropertyName = "IIN_REVERSE";
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle13.Format = "N2";
-            dgcRowsIINReverse.DefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle18.Format = "N2";
+            dgcRowsIINReverse.DefaultCellStyle = dataGridViewCellStyle18;
             dgcRowsIINReverse.HeaderText = "IIN korekc.";
             dgcRowsIINReverse.MinimumWidth = 7;
             dgcRowsIINReverse.Name = "dgcRowsIINReverse";
@@ -482,8 +635,8 @@
             // dgcRowsDT1
             // 
             dgcRowsDT1.DataPropertyName = "DT1";
-            dataGridViewCellStyle14.Format = "dd.MM.yyyy";
-            dgcRowsDT1.DefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle19.Format = "dd.MM.yyyy";
+            dgcRowsDT1.DefaultCellStyle = dataGridViewCellStyle19;
             dgcRowsDT1.HeaderText = "dat.1";
             dgcRowsDT1.MinimumWidth = 7;
             dgcRowsDT1.Name = "dgcRowsDT1";
@@ -494,8 +647,8 @@
             // dgcRowsDT2
             // 
             dgcRowsDT2.DataPropertyName = "DT2";
-            dataGridViewCellStyle15.Format = "dd.MM.yyyy";
-            dgcRowsDT2.DefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle20.Format = "dd.MM.yyyy";
+            dgcRowsDT2.DefaultCellStyle = dataGridViewCellStyle20;
             dgcRowsDT2.HeaderText = "dat.2";
             dgcRowsDT2.MinimumWidth = 7;
             dgcRowsDT2.Name = "dgcRowsDT2";
@@ -506,9 +659,9 @@
             // dgcRowsR1
             // 
             dgcRowsR1.DataPropertyName = "R1";
-            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle16.Format = "0.00";
-            dgcRowsR1.DefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle21.Format = "0.00";
+            dgcRowsR1.DefaultCellStyle = dataGridViewCellStyle21;
             dgcRowsR1.HeaderText = "1%";
             dgcRowsR1.MinimumWidth = 7;
             dgcRowsR1.Name = "dgcRowsR1";
@@ -519,9 +672,9 @@
             // dgcRowsR2
             // 
             dgcRowsR2.DataPropertyName = "R2";
-            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle17.Format = "0.00";
-            dgcRowsR2.DefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle22.Format = "0.00";
+            dgcRowsR2.DefaultCellStyle = dataGridViewCellStyle22;
             dgcRowsR2.HeaderText = "2%";
             dgcRowsR2.MinimumWidth = 7;
             dgcRowsR2.Name = "dgcRowsR2";
@@ -532,9 +685,9 @@
             // dgcRowsS0
             // 
             dgcRowsS0.DataPropertyName = "S0";
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle18.Format = "N2";
-            dgcRowsS0.DefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle23.Format = "N2";
+            dgcRowsS0.DefaultCellStyle = dataGridViewCellStyle23;
             dgcRowsS0.HeaderText = "no sāk.atl.";
             dgcRowsS0.MinimumWidth = 7;
             dgcRowsS0.Name = "dgcRowsS0";
@@ -546,9 +699,9 @@
             // dgcRowS1
             // 
             dgcRowS1.DataPropertyName = "S1";
-            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle19.Format = "N2";
-            dgcRowS1.DefaultCellStyle = dataGridViewCellStyle19;
+            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle24.Format = "N2";
+            dgcRowS1.DefaultCellStyle = dataGridViewCellStyle24;
             dgcRowS1.HeaderText = "1€";
             dgcRowS1.MinimumWidth = 7;
             dgcRowS1.Name = "dgcRowS1";
@@ -559,9 +712,9 @@
             // dgcRowS2
             // 
             dgcRowS2.DataPropertyName = "S2";
-            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle20.Format = "N2";
-            dgcRowS2.DefaultCellStyle = dataGridViewCellStyle20;
+            dataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle25.Format = "N2";
+            dgcRowS2.DefaultCellStyle = dataGridViewCellStyle25;
             dgcRowS2.HeaderText = "2€";
             dgcRowS2.MinimumWidth = 7;
             dgcRowS2.Name = "dgcRowS2";
@@ -587,265 +740,6 @@
             dgcRowsIDS.Visible = false;
             dgcRowsIDS.Width = 56;
             // 
-            // dgvLists
-            // 
-            dgvLists.AllowUserToAddRows = false;
-            dgvLists.AllowUserToDeleteRows = false;
-            dgvLists.AutoGenerateColumns = false;
-            dgvLists.AutoSave = true;
-            dgvLists.BackgroundColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle21.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle21.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            dataGridViewCellStyle21.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle21.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            dgvLists.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle21;
-            dgvLists.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvLists.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { dgcListsYR, dgcListsMT, dgcListsSNR, dgcListsDT, dgcListTotalPay, dgcListsDep, dgcListsDescr, dgcListDoPay, dgcListsId });
-            dgvLists.DataSource = bsLists;
-            dgvLists.Dock = System.Windows.Forms.DockStyle.Fill;
-            dgvLists.Location = new System.Drawing.Point(0, 0);
-            dgvLists.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            dgvLists.Name = "dgvLists";
-            dgvLists.RowHeadersWidth = 53;
-            dgvLists.ShowCellToolTips = false;
-            dgvLists.Size = new System.Drawing.Size(969, 214);
-            dgvLists.TabIndex = 0;
-            dgvLists.MyKeyDown += dgvLists_MyKeyDown;
-            dgvLists.MyCheckForChanges += dgvLists_MyCheckForChanges;
-            dgvLists.CellDoubleClick += dgvLists_CellDoubleClick;
-            dgvLists.CellParsing += dgvLists_CellParsing;
-            dgvLists.CurrentCellChanged += dgvLists_CurrentCellChanged;
-            dgvLists.DefaultValuesNeeded += dgvLists_DefaultValuesNeeded;
-            dgvLists.UserDeletingRow += dgvLists_UserDeletingRow;
-            dgvLists.Enter += dgvLists_Enter;
-            dgvLists.KeyDown += dgvLists_KeyDown;
-            // 
-            // dgcListsYR
-            // 
-            dgcListsYR.DataPropertyName = "YR";
-            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dgcListsYR.DefaultCellStyle = dataGridViewCellStyle22;
-            dgcListsYR.HeaderText = "gsds";
-            dgcListsYR.MinimumWidth = 7;
-            dgcListsYR.Name = "dgcListsYR";
-            dgcListsYR.ReadOnly = true;
-            dgcListsYR.Width = 56;
-            // 
-            // dgcListsMT
-            // 
-            dgcListsMT.DataPropertyName = "MT";
-            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dgcListsMT.DefaultCellStyle = dataGridViewCellStyle23;
-            dgcListsMT.HeaderText = "mēn.";
-            dgcListsMT.MinimumWidth = 7;
-            dgcListsMT.Name = "dgcListsMT";
-            dgcListsMT.ReadOnly = true;
-            dgcListsMT.ToolTipText = "mēnesis";
-            dgcListsMT.Width = 56;
-            // 
-            // dgcListsSNR
-            // 
-            dgcListsSNR.DataPropertyName = "SNR";
-            dgcListsSNR.HeaderText = "npk.";
-            dgcListsSNR.MinimumWidth = 7;
-            dgcListsSNR.Name = "dgcListsSNR";
-            dgcListsSNR.Width = 56;
-            // 
-            // dgcListsDT
-            // 
-            dgcListsDT.DataPropertyName = "DT";
-            dataGridViewCellStyle24.Format = "dd.MM.yyyy";
-            dgcListsDT.DefaultCellStyle = dataGridViewCellStyle24;
-            dgcListsDT.HeaderText = "datums";
-            dgcListsDT.MinimumWidth = 7;
-            dgcListsDT.Name = "dgcListsDT";
-            dgcListsDT.ToolTipText = "izmaksas datums";
-            dgcListsDT.Width = 85;
-            // 
-            // dgcListTotalPay
-            // 
-            dgcListTotalPay.DataPropertyName = "TOTAL_PAY";
-            dataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle25.Format = "N2";
-            dgcListTotalPay.DefaultCellStyle = dataGridViewCellStyle25;
-            dgcListTotalPay.HeaderText = "summa";
-            dgcListTotalPay.MinimumWidth = 7;
-            dgcListTotalPay.Name = "dgcListTotalPay";
-            dgcListTotalPay.ReadOnly = true;
-            dgcListTotalPay.Width = 105;
-            // 
-            // dgcListsDep
-            // 
-            dgcListsDep.ColumnNames = new string[]
-    {
-    "ID",
-    "DESCR"
-    };
-            dgcListsDep.ColumnWidths = "60;200";
-            dgcListsDep.DataPropertyName = "DEP";
-            dgcListsDep.DataSource = bsDep;
-            dgcListsDep.DisplayMember = "ID";
-            dgcListsDep.HeaderText = "str.v.";
-            dgcListsDep.MaxDropDownItems = 15;
-            dgcListsDep.MinimumWidth = 7;
-            dgcListsDep.Name = "dgcListsDep";
-            dgcListsDep.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            dgcListsDep.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            dgcListsDep.ToolTipText = "struktūrvienība";
-            dgcListsDep.ValueMember = "ID";
-            dgcListsDep.Width = 168;
-            // 
-            // bsDep
-            // 
-            bsDep.DataMember = "DEPARTMENTS";
-            bsDep.MyDataSource = "KlonsAData";
-            bsDep.Sort = "ID";
-            // 
-            // dgcListsDescr
-            // 
-            dgcListsDescr.DataPropertyName = "DESCR";
-            dgcListsDescr.HeaderText = "apraksts";
-            dgcListsDescr.MinimumWidth = 7;
-            dgcListsDescr.Name = "dgcListsDescr";
-            dgcListsDescr.Width = 225;
-            // 
-            // dgcListDoPay
-            // 
-            dgcListDoPay.DataPropertyName = "DOPAY";
-            dgcListDoPay.FalseValue = "0";
-            dgcListDoPay.HeaderText = "izmaksai";
-            dgcListDoPay.MinimumWidth = 7;
-            dgcListDoPay.Name = "dgcListDoPay";
-            dgcListDoPay.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            dgcListDoPay.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            dgcListDoPay.TrueValue = "1";
-            dgcListDoPay.Visible = false;
-            dgcListDoPay.Width = 67;
-            // 
-            // dgcListsId
-            // 
-            dgcListsId.DataPropertyName = "ID";
-            dgcListsId.HeaderText = "ID";
-            dgcListsId.MinimumWidth = 7;
-            dgcListsId.Name = "dgcListsId";
-            dgcListsId.Visible = false;
-            dgcListsId.Width = 146;
-            // 
-            // bindingNavigatorCountItem
-            // 
-            bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            bindingNavigatorCountItem.Size = new System.Drawing.Size(50, 30);
-            bindingNavigatorCountItem.Text = " no {0}";
-            bindingNavigatorCountItem.ToolTipText = "Ierakstu skaits";
-            // 
-            // tsLabel1
-            // 
-            tsLabel1.Name = "tsLabel1";
-            tsLabel1.Size = new System.Drawing.Size(63, 30);
-            tsLabel1.Text = "Saraksti:";
-            // 
-            // bindingNavigatorMoveFirstItem
-            // 
-            bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            bindingNavigatorMoveFirstItem.Image = (System.Drawing.Image)resources.GetObject("bindingNavigatorMoveFirstItem.Image");
-            bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
-            bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(27, 30);
-            bindingNavigatorMoveFirstItem.Text = "Iet uz pirmo";
-            // 
-            // bindingNavigatorMovePreviousItem
-            // 
-            bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            bindingNavigatorMovePreviousItem.Image = (System.Drawing.Image)resources.GetObject("bindingNavigatorMovePreviousItem.Image");
-            bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
-            bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(27, 30);
-            bindingNavigatorMovePreviousItem.Text = "Iet uz iepriekšējo";
-            // 
-            // bindingNavigatorSeparator
-            // 
-            bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 33);
-            // 
-            // bindingNavigatorPositionItem
-            // 
-            bindingNavigatorPositionItem.AutoSize = false;
-            bindingNavigatorPositionItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
-            bindingNavigatorPositionItem.Size = new System.Drawing.Size(56, 23);
-            bindingNavigatorPositionItem.Text = "0";
-            bindingNavigatorPositionItem.ToolTipText = "Pašreizējā pozīcija";
-            // 
-            // bindingNavigatorSeparator1
-            // 
-            bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
-            bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 33);
-            // 
-            // bindingNavigatorMoveNextItem
-            // 
-            bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            bindingNavigatorMoveNextItem.Image = (System.Drawing.Image)resources.GetObject("bindingNavigatorMoveNextItem.Image");
-            bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
-            bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(27, 30);
-            bindingNavigatorMoveNextItem.Text = "Iet uz nākošo";
-            // 
-            // bindingNavigatorMoveLastItem
-            // 
-            bindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            bindingNavigatorMoveLastItem.Image = (System.Drawing.Image)resources.GetObject("bindingNavigatorMoveLastItem.Image");
-            bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
-            bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(27, 30);
-            bindingNavigatorMoveLastItem.Text = "Iet uz pēdējo";
-            // 
-            // bindingNavigatorSeparator2
-            // 
-            bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
-            bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 33);
-            // 
-            // bindingNavigatorAddNewItem
-            // 
-            bindingNavigatorAddNewItem.Image = (System.Drawing.Image)resources.GetObject("bindingNavigatorAddNewItem.Image");
-            bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            bindingNavigatorAddNewItem.Size = new System.Drawing.Size(73, 30);
-            bindingNavigatorAddNewItem.Text = "Jauns";
-            bindingNavigatorAddNewItem.Click += bindingNavigatorAddNewItem_Click;
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            bindingNavigatorDeleteItem.Image = (System.Drawing.Image)resources.GetObject("bindingNavigatorDeleteItem.Image");
-            bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            bindingNavigatorDeleteItem.Size = new System.Drawing.Size(71, 30);
-            bindingNavigatorDeleteItem.Text = "Dzēst";
-            bindingNavigatorDeleteItem.Click += bindingNavigatorDeleteItem_Click;
-            // 
-            // tsbSave
-            // 
-            tsbSave.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            tsbSave.Image = (System.Drawing.Image)resources.GetObject("tsbSave.Image");
-            tsbSave.ImageTransparentColor = System.Drawing.Color.Magenta;
-            tsbSave.Name = "tsbSave";
-            tsbSave.Size = new System.Drawing.Size(27, 30);
-            tsbSave.Text = "Saglabāt";
-            tsbSave.Click += tsbSave_Click;
-            // 
-            // tsbRenum
-            // 
-            tsbRenum.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            tsbRenum.Image = (System.Drawing.Image)resources.GetObject("tsbRenum.Image");
-            tsbRenum.ImageTransparentColor = System.Drawing.Color.Magenta;
-            tsbRenum.Margin = new System.Windows.Forms.Padding(5, 1, 0, 2);
-            tsbRenum.Name = "tsbRenum";
-            tsbRenum.Size = new System.Drawing.Size(86, 30);
-            tsbRenum.Text = "Pārnumurēt";
-            tsbRenum.Click += tsbRenum_Click;
-            // 
             // mySplitContainer1
             // 
             mySplitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -863,15 +757,14 @@
             // 
             mySplitContainer1.Panel2.Controls.Add(dgvRows);
             mySplitContainer1.Panel2MinSize = 31;
-            mySplitContainer1.Size = new System.Drawing.Size(969, 467);
-            mySplitContainer1.SplitterDistance = 214;
+            mySplitContainer1.Size = new System.Drawing.Size(838, 475);
+            mySplitContainer1.SplitterDistance = 217;
             mySplitContainer1.SplitterWidth = 6;
             mySplitContainer1.TabIndex = 1;
             // 
             // menuStrip1
             // 
             menuStrip1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            menuStrip1.ImageScalingSize = new System.Drawing.Size(16, 16);
             menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { maksājumuSarakstiToolStripMenuItem });
             menuStrip1.Location = new System.Drawing.Point(0, 0);
             menuStrip1.Name = "menuStrip1";
@@ -1078,12 +971,11 @@
             toolStrip1.AllowMerge = false;
             toolStrip1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             toolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
-            toolStrip1.ImageScalingSize = new System.Drawing.Size(16, 16);
             toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { tslPeriod });
             toolStrip1.Location = new System.Drawing.Point(0, 0);
             toolStrip1.Name = "toolStrip1";
             toolStrip1.Padding = new System.Windows.Forms.Padding(3);
-            toolStrip1.Size = new System.Drawing.Size(1284, 26);
+            toolStrip1.Size = new System.Drawing.Size(1153, 26);
             toolStrip1.TabIndex = 2;
             toolStrip1.Text = "toolStrip1";
             // 
@@ -1158,7 +1050,7 @@
             sgrPayRow.ColumnWidth3 = 120;
             sgrPayRow.Dock = System.Windows.Forms.DockStyle.Right;
             sgrPayRow.EnableSort = true;
-            sgrPayRow.Location = new System.Drawing.Point(969, 65);
+            sgrPayRow.Location = new System.Drawing.Point(838, 65);
             sgrPayRow.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             sgrPayRow.MyDataBC = payListRowData1;
             sgrPayRow.Name = "sgrPayRow";
@@ -1190,7 +1082,7 @@
             sgrPayRow.RowTemplateList.Add(grtPayRowDecimal);
             sgrPayRow.RowTemplateList.Add(grtPayRowDecimalReadOnly);
             sgrPayRow.SelectionMode = SourceGrid.GridSelectionMode.Cell;
-            sgrPayRow.Size = new System.Drawing.Size(315, 467);
+            sgrPayRow.Size = new System.Drawing.Size(315, 475);
             sgrPayRow.TabIndex = 4;
             sgrPayRow.TabStop = true;
             sgrPayRow.ToolTipText = "";
@@ -1215,7 +1107,6 @@
             // grRowLName
             // 
             grRowLName.CustomConversions = true;
-            grRowLName.DataMember = null;
             grRowLName.GridPropertyName = "_IDP";
             grRowLName.Name = "grRowLName";
             grRowLName.ReadOnly = true;
@@ -1431,12 +1322,14 @@
             // 
             // grtPayRowDecimal
             // 
+            grtPayRowDecimal.DataMember = null;
             grtPayRowDecimal.Name = "grtPayRowDecimal";
             grtPayRowDecimal.RowTitle = null;
             grtPayRowDecimal.RowValueType = KlonsLIB.MySourceGrid.GridRows.EMyGridRowValueType.Decimal;
             // 
             // grtPayRowDecimalReadOnly
             // 
+            grtPayRowDecimalReadOnly.DataMember = null;
             grtPayRowDecimalReadOnly.Name = "grtPayRowDecimalReadOnly";
             grtPayRowDecimalReadOnly.ReadOnly = true;
             grtPayRowDecimalReadOnly.RowTitle = null;
@@ -1454,7 +1347,7 @@
             plFilter.Location = new System.Drawing.Point(0, 26);
             plFilter.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             plFilter.Name = "plFilter";
-            plFilter.Size = new System.Drawing.Size(1284, 39);
+            plFilter.Size = new System.Drawing.Size(1153, 39);
             plFilter.TabIndex = 5;
             // 
             // cmFilter
@@ -1539,11 +1432,128 @@
             label1.TabIndex = 0;
             label1.Text = "Datums:";
             // 
+            // dgcListsYR
+            // 
+            dgcListsYR.DataPropertyName = "YR";
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dgcListsYR.DefaultCellStyle = dataGridViewCellStyle2;
+            dgcListsYR.HeaderText = "gsds";
+            dgcListsYR.MinimumWidth = 7;
+            dgcListsYR.Name = "dgcListsYR";
+            dgcListsYR.ReadOnly = true;
+            dgcListsYR.Width = 56;
+            // 
+            // dgcListsMT
+            // 
+            dgcListsMT.DataPropertyName = "MT";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dgcListsMT.DefaultCellStyle = dataGridViewCellStyle3;
+            dgcListsMT.HeaderText = "mēn.";
+            dgcListsMT.MinimumWidth = 7;
+            dgcListsMT.Name = "dgcListsMT";
+            dgcListsMT.ReadOnly = true;
+            dgcListsMT.ToolTipText = "mēnesis";
+            dgcListsMT.Width = 56;
+            // 
+            // dgcListsSNR
+            // 
+            dgcListsSNR.DataPropertyName = "SNR";
+            dgcListsSNR.HeaderText = "npk.";
+            dgcListsSNR.MinimumWidth = 7;
+            dgcListsSNR.Name = "dgcListsSNR";
+            dgcListsSNR.Width = 56;
+            // 
+            // dgcListsDT
+            // 
+            dgcListsDT.DataPropertyName = "DT";
+            dataGridViewCellStyle4.Format = "dd.MM.yyyy";
+            dgcListsDT.DefaultCellStyle = dataGridViewCellStyle4;
+            dgcListsDT.HeaderText = "datums";
+            dgcListsDT.MinimumWidth = 7;
+            dgcListsDT.Name = "dgcListsDT";
+            dgcListsDT.ToolTipText = "izmaksas datums";
+            dgcListsDT.Width = 85;
+            // 
+            // dgcListTotalPay
+            // 
+            dgcListTotalPay.DataPropertyName = "TOTAL_PAY";
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle5.Format = "N2";
+            dgcListTotalPay.DefaultCellStyle = dataGridViewCellStyle5;
+            dgcListTotalPay.HeaderText = "summa";
+            dgcListTotalPay.MinimumWidth = 7;
+            dgcListTotalPay.Name = "dgcListTotalPay";
+            dgcListTotalPay.ReadOnly = true;
+            dgcListTotalPay.Width = 105;
+            // 
+            // dgcTpPay
+            // 
+            dgcListTpPay.DataPropertyName = "TPPAY";
+            dgcListTpPay.DisplayStyleForCurrentCellOnly = true;
+            dgcListTpPay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            dgcListTpPay.HeaderText = "veids";
+            dgcListTpPay.Name = "dgcTpPay";
+            dgcListTpPay.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            dgcListTpPay.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            dgcListTpPay.ToolTipText = "kur/kā izmaksāts";
+            dgcListTpPay.Width = 90;
+            // 
+            // dgcListsDep
+            // 
+            dgcListsDep.ColumnNames = new string[]
+    {
+    "ID",
+    "DESCR"
+    };
+            dgcListsDep.ColumnWidths = "60;200";
+            dgcListsDep.DataPropertyName = "DEP";
+            dgcListsDep.DataSource = bsDep;
+            dgcListsDep.DisplayMember = "ID";
+            dgcListsDep.HeaderText = "str.v.";
+            dgcListsDep.MaxDropDownItems = 15;
+            dgcListsDep.MinimumWidth = 7;
+            dgcListsDep.Name = "dgcListsDep";
+            dgcListsDep.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            dgcListsDep.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            dgcListsDep.ToolTipText = "struktūrvienība";
+            dgcListsDep.ValueMember = "ID";
+            dgcListsDep.Width = 168;
+            // 
+            // dgcListsDescr
+            // 
+            dgcListsDescr.DataPropertyName = "DESCR";
+            dgcListsDescr.HeaderText = "apraksts";
+            dgcListsDescr.MinimumWidth = 7;
+            dgcListsDescr.Name = "dgcListsDescr";
+            dgcListsDescr.Width = 225;
+            // 
+            // dgcListDoPay
+            // 
+            dgcListDoPay.DataPropertyName = "DOPAY";
+            dgcListDoPay.FalseValue = "0";
+            dgcListDoPay.HeaderText = "izmaksai";
+            dgcListDoPay.MinimumWidth = 7;
+            dgcListDoPay.Name = "dgcListDoPay";
+            dgcListDoPay.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            dgcListDoPay.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            dgcListDoPay.TrueValue = "1";
+            dgcListDoPay.Visible = false;
+            dgcListDoPay.Width = 67;
+            // 
+            // dgcListsId
+            // 
+            dgcListsId.DataPropertyName = "ID";
+            dgcListsId.HeaderText = "ID";
+            dgcListsId.MinimumWidth = 7;
+            dgcListsId.Name = "dgcListsId";
+            dgcListsId.Visible = false;
+            dgcListsId.Width = 146;
+            // 
             // FormA_PayLists
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            ClientSize = new System.Drawing.Size(1284, 565);
+            ClientSize = new System.Drawing.Size(1153, 565);
             Controls.Add(mySplitContainer1);
             Controls.Add(sgrPayRow);
             Controls.Add(cbLists);
@@ -1561,12 +1571,12 @@
             bNav.ResumeLayout(false);
             bNav.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)bsLists).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvLists).EndInit();
+            ((System.ComponentModel.ISupportInitialize)bsDep).EndInit();
             ((System.ComponentModel.ISupportInitialize)bsRows).EndInit();
             ((System.ComponentModel.ISupportInitialize)dgvRows).EndInit();
             ((System.ComponentModel.ISupportInitialize)bsPersons).EndInit();
             ((System.ComponentModel.ISupportInitialize)bsAmati).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dgvLists).EndInit();
-            ((System.ComponentModel.ISupportInitialize)bsDep).EndInit();
             mySplitContainer1.Panel1.ResumeLayout(false);
             mySplitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)mySplitContainer1).EndInit();
@@ -1707,6 +1717,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dgcListsSNR;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgcListsDT;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgcListTotalPay;
+        private System.Windows.Forms.DataGridViewComboBoxColumn dgcListTpPay;
         private KlonsLIB.Components.MyDgvMcCBColumn dgcListsDep;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgcListsDescr;
         private System.Windows.Forms.DataGridViewCheckBoxColumn dgcListDoPay;

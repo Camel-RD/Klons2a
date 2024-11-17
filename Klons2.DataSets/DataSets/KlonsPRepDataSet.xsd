@@ -4,7 +4,7 @@
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
       <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" GeneratorFunctionsComponentClassName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" UserFunctionsComponentName="QueriesTableAdapter" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
-          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="ConnectionString1" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ConnectionString1 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.KlonsF.Properties.Settings.GlobalReference.Default.ConnectionString1" Provider="FirebirdSql.Data.FirebirdClient" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="ConnectionString1" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ConnectionString1 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.KlonsF.Settings.GlobalReference.Default.ConnectionString1" Provider="FirebirdSql.Data.FirebirdClient" />
         </Connections>
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="TUSERSTableAdapter" GeneratorDataComponentClassName="TUSERSTableAdapter" Name="TUSERS" UserDataComponentName="TUSERSTableAdapter">

@@ -938,7 +938,6 @@ namespace KlonsF.Forms
             MyToolStrip = myToolStrip;
             Name = "Form_OpsFilter";
             Text = "Ierakstu žurnāls";
-            WindowState = System.Windows.Forms.FormWindowState.Maximized;
             FormClosing += Form_OpsFilter_FormClosing;
             FormClosed += FormOpsFilter_FormClosed;
             Load += FormOpsFilter_Load;

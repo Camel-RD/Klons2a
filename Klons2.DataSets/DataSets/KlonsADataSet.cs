@@ -218,8 +218,17 @@ namespace KlonsF.DataSets
         public partial class UNTAXED_MINRow
         {
 
-
         }
+
+        public partial class PAYLISTSRow
+        {
+            public EPaylistPaymentType XTpPay
+            {
+                get { return (EPaylistPaymentType)this.TPPAY; }
+                set { this.TPPAY = (int)value; }
+            }
+        }
+
     }
 }
 

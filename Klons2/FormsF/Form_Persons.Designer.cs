@@ -93,9 +93,8 @@ namespace KlonsF.Forms
             bnavPersons.DeleteItem = bindingNavigatorDeleteItem;
             bnavPersons.Dock = System.Windows.Forms.DockStyle.Bottom;
             bnavPersons.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            bnavPersons.ImageScalingSize = new System.Drawing.Size(16, 16);
             bnavPersons.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { bindingNavigatorMoveFirstItem, bindingNavigatorMovePreviousItem, bindingNavigatorSeparator, bindingNavigatorPositionItem, bindingNavigatorCountItem, bindingNavigatorSeparator1, bindingNavigatorMoveNextItem, bindingNavigatorMoveLastItem, bindingNavigatorSeparator2, bindingNavigatorAddNewItem, bindingNavigatorDeleteItem, tsbSave });
-            bnavPersons.Location = new System.Drawing.Point(0, 340);
+            bnavPersons.Location = new System.Drawing.Point(0, 348);
             bnavPersons.MoveFirstItem = bindingNavigatorMoveFirstItem;
             bnavPersons.MoveLastItem = bindingNavigatorMoveLastItem;
             bnavPersons.MoveNextItem = bindingNavigatorMoveNextItem;
@@ -103,8 +102,8 @@ namespace KlonsF.Forms
             bnavPersons.Name = "bnavPersons";
             bnavPersons.PositionItem = bindingNavigatorPositionItem;
             bnavPersons.SaveItem = null;
-            bnavPersons.Size = new System.Drawing.Size(901, 33);
-            bnavPersons.TabIndex = 0;
+            bnavPersons.Size = new System.Drawing.Size(901, 25);
+            bnavPersons.TabIndex = 2;
             bnavPersons.Text = "bindingNavigator1";
             bnavPersons.ItemDeleting += bnavPersons_ItemDeleting;
             // 
@@ -113,7 +112,7 @@ namespace KlonsF.Forms
             bindingNavigatorAddNewItem.Image = (System.Drawing.Image)resources.GetObject("bindingNavigatorAddNewItem.Image");
             bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
             bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            bindingNavigatorAddNewItem.Size = new System.Drawing.Size(76, 30);
+            bindingNavigatorAddNewItem.Size = new System.Drawing.Size(66, 22);
             bindingNavigatorAddNewItem.Text = "Jauns";
             bindingNavigatorAddNewItem.ToolTipText = "Jauns (Shift+Insert)";
             // 
@@ -146,8 +145,8 @@ namespace KlonsF.Forms
             dgvPersons.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             dgvPersons.Name = "dgvPersons";
             dgvPersons.RowHeadersWidth = 62;
-            dgvPersons.Size = new System.Drawing.Size(901, 310);
-            dgvPersons.TabIndex = 3;
+            dgvPersons.Size = new System.Drawing.Size(901, 318);
+            dgvPersons.TabIndex = 1;
             dgvPersons.MyKeyDown += dgvPersons_MyKeyDown;
             dgvPersons.MyCheckForChanges += dgvPersons_MyCheckForChanges;
             dgvPersons.CellDoubleClick += dgvPersons_CellDoubleClick;
@@ -341,7 +340,7 @@ namespace KlonsF.Forms
             // bindingNavigatorCountItem
             // 
             bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            bindingNavigatorCountItem.Size = new System.Drawing.Size(50, 30);
+            bindingNavigatorCountItem.Size = new System.Drawing.Size(50, 22);
             bindingNavigatorCountItem.Text = " no {0}";
             bindingNavigatorCountItem.ToolTipText = "Skaits";
             // 
@@ -350,7 +349,7 @@ namespace KlonsF.Forms
             bindingNavigatorDeleteItem.Image = (System.Drawing.Image)resources.GetObject("bindingNavigatorDeleteItem.Image");
             bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
             bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            bindingNavigatorDeleteItem.Size = new System.Drawing.Size(74, 30);
+            bindingNavigatorDeleteItem.Size = new System.Drawing.Size(64, 22);
             bindingNavigatorDeleteItem.Text = "Dzēst";
             bindingNavigatorDeleteItem.ToolTipText = "Dzēst (Ctrl+Delete)";
             // 
@@ -360,7 +359,7 @@ namespace KlonsF.Forms
             bindingNavigatorMoveFirstItem.Image = (System.Drawing.Image)resources.GetObject("bindingNavigatorMoveFirstItem.Image");
             bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
             bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(30, 30);
+            bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(23, 22);
             bindingNavigatorMoveFirstItem.Text = "Iet uz pirmo";
             // 
             // bindingNavigatorMovePreviousItem
@@ -369,13 +368,13 @@ namespace KlonsF.Forms
             bindingNavigatorMovePreviousItem.Image = (System.Drawing.Image)resources.GetObject("bindingNavigatorMovePreviousItem.Image");
             bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
             bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(30, 30);
+            bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(23, 22);
             bindingNavigatorMovePreviousItem.Text = "Iet uz iepriekšējo";
             // 
             // bindingNavigatorSeparator
             // 
             bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 33);
+            bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 25);
             // 
             // bindingNavigatorPositionItem
             // 
@@ -390,7 +389,7 @@ namespace KlonsF.Forms
             // bindingNavigatorSeparator1
             // 
             bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
-            bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 33);
+            bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
             // bindingNavigatorMoveNextItem
             // 
@@ -398,7 +397,7 @@ namespace KlonsF.Forms
             bindingNavigatorMoveNextItem.Image = (System.Drawing.Image)resources.GetObject("bindingNavigatorMoveNextItem.Image");
             bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
             bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(30, 30);
+            bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 22);
             bindingNavigatorMoveNextItem.Text = "Iet uz nākošo";
             bindingNavigatorMoveNextItem.ToolTipText = "Iet uz nākošo";
             // 
@@ -408,20 +407,20 @@ namespace KlonsF.Forms
             bindingNavigatorMoveLastItem.Image = (System.Drawing.Image)resources.GetObject("bindingNavigatorMoveLastItem.Image");
             bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
             bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(30, 30);
+            bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 22);
             bindingNavigatorMoveLastItem.Text = "Iet uz pēdējo";
             // 
             // bindingNavigatorSeparator2
             // 
             bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
-            bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 33);
+            bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
             // 
             // tsbSave
             // 
             tsbSave.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             tsbSave.Image = (System.Drawing.Image)resources.GetObject("tsbSave.Image");
             tsbSave.Name = "tsbSave";
-            tsbSave.Size = new System.Drawing.Size(30, 30);
+            tsbSave.Size = new System.Drawing.Size(23, 22);
             tsbSave.Text = "Saglabāt datus";
             tsbSave.Click += tsbSave_Click;
             // 
@@ -432,7 +431,7 @@ namespace KlonsF.Forms
             tbSearch.Margin = new System.Windows.Forms.Padding(2);
             tbSearch.Name = "tbSearch";
             tbSearch.Size = new System.Drawing.Size(138, 23);
-            tbSearch.TabIndex = 2;
+            tbSearch.TabIndex = 1;
             tbSearch.Enter += tbSearch_Enter;
             tbSearch.KeyPress += tbSearch_KeyPress;
             // 
@@ -443,7 +442,7 @@ namespace KlonsF.Forms
             label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             label1.Name = "label1";
             label1.Size = new System.Drawing.Size(42, 17);
-            label1.TabIndex = 4;
+            label1.TabIndex = 3;
             label1.Text = "kods:";
             // 
             // label2
@@ -501,7 +500,7 @@ namespace KlonsF.Forms
             cbAct.Margin = new System.Windows.Forms.Padding(2);
             cbAct.Name = "cbAct";
             cbAct.Size = new System.Drawing.Size(86, 24);
-            cbAct.TabIndex = 5;
+            cbAct.TabIndex = 2;
             cbAct.ValueMember = "col1";
             cbAct.SelectedIndexChanged += cbAct_SelectedIndexChanged;
             // 
@@ -512,7 +511,7 @@ namespace KlonsF.Forms
             label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             label3.Name = "label3";
             label3.Size = new System.Drawing.Size(40, 17);
-            label3.TabIndex = 4;
+            label3.TabIndex = 5;
             label3.Text = "rādīt:";
             // 
             // panel1
@@ -527,7 +526,7 @@ namespace KlonsF.Forms
             panel1.Location = new System.Drawing.Point(0, 0);
             panel1.Name = "panel1";
             panel1.Size = new System.Drawing.Size(901, 30);
-            panel1.TabIndex = 6;
+            panel1.TabIndex = 0;
             // 
             // Form_Persons
             // 
@@ -540,7 +539,6 @@ namespace KlonsF.Forms
             Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             Name = "Form_Persons";
             Text = "Personas";
-            WindowState = System.Windows.Forms.FormWindowState.Maximized;
             Load += FormPersons_Load;
             Shown += FormPersons_Shown;
             ((System.ComponentModel.ISupportInitialize)bnavPersons).EndInit();

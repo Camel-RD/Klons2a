@@ -734,7 +734,6 @@ namespace KlonsF.Forms
             MinimumSize = new System.Drawing.Size(8, 416);
             Name = "Form_BilancesFormula";
             Text = "Bilances atskaišu formulas";
-            WindowState = System.Windows.Forms.FormWindowState.Maximized;
             Load += Form_Bilance_Load;
             ((System.ComponentModel.ISupportInitialize)bsBalA1).EndInit();
             ((System.ComponentModel.ISupportInitialize)bsBalA2).EndInit();

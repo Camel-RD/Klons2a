@@ -19,6 +19,7 @@ namespace DataObjectsA
         public string _CompAddr3 { get; set; } = null;
         public string _CompAddr4 { get; set; } = null;
         public string _CompAddrG { get; set; } = null;
+        public string _CompEMail { get; set; } = null;
         public string _CompMName { get; set; } = null;
         public string _CompMpk { get; set; } = null;
         public string _CompPhone { get; set; } = null;

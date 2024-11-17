@@ -8989,7 +8989,7 @@ namespace KlonsF.DataSets.KlonsPDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection();
-            this._connection.ConnectionString = global::KlonsF.Properties.Settings.Default.ConnectionString1;
+            this._connection.ConnectionString = global::KlonsF.Settings.Default.ConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -9549,7 +9549,7 @@ namespace KlonsF.DataSets.KlonsPDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection();
-            this._connection.ConnectionString = global::KlonsF.Properties.Settings.Default.ConnectionString1;
+            this._connection.ConnectionString = global::KlonsF.Settings.Default.ConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -10137,7 +10137,7 @@ namespace KlonsF.DataSets.KlonsPDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection();
-            this._connection.ConnectionString = global::KlonsF.Properties.Settings.Default.ConnectionString1;
+            this._connection.ConnectionString = global::KlonsF.Settings.Default.ConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -10627,7 +10627,7 @@ namespace KlonsF.DataSets.KlonsPDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection();
-            this._connection.ConnectionString = global::KlonsF.Properties.Settings.Default.ConnectionString1;
+            this._connection.ConnectionString = global::KlonsF.Settings.Default.ConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -11165,7 +11165,7 @@ namespace KlonsF.DataSets.KlonsPDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection();
-            this._connection.ConnectionString = global::KlonsF.Properties.Settings.Default.ConnectionString1;
+            this._connection.ConnectionString = global::KlonsF.Settings.Default.ConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -11691,7 +11691,7 @@ namespace KlonsF.DataSets.KlonsPDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection();
-            this._connection.ConnectionString = global::KlonsF.Properties.Settings.Default.ConnectionString1;
+            this._connection.ConnectionString = global::KlonsF.Settings.Default.ConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -12225,7 +12225,7 @@ namespace KlonsF.DataSets.KlonsPDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection();
-            this._connection.ConnectionString = global::KlonsF.Properties.Settings.Default.ConnectionString1;
+            this._connection.ConnectionString = global::KlonsF.Settings.Default.ConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -13172,7 +13172,7 @@ namespace KlonsF.DataSets.KlonsPDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection();
-            this._connection.ConnectionString = global::KlonsF.Properties.Settings.Default.ConnectionString1;
+            this._connection.ConnectionString = global::KlonsF.Settings.Default.ConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -14804,7 +14804,7 @@ namespace KlonsF.DataSets.KlonsPDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection();
-            this._connection.ConnectionString = global::KlonsF.Properties.Settings.Default.ConnectionString1;
+            this._connection.ConnectionString = global::KlonsF.Settings.Default.ConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -15626,7 +15626,7 @@ FROM    P_ITEMS_EVENTS";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection();
-            this._connection.ConnectionString = global::KlonsF.Properties.Settings.Default.ConnectionString1;
+            this._connection.ConnectionString = global::KlonsF.Settings.Default.ConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -16460,7 +16460,7 @@ FROM    P_ITEMS_EVENTS";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection();
-            this._connection.ConnectionString = global::KlonsF.Properties.Settings.Default.ConnectionString1;
+            this._connection.ConnectionString = global::KlonsF.Settings.Default.ConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -16788,11 +16788,11 @@ FROM    P_ITEMS_EVENTS";
         private void InitCommandCollection() {
             this._commandCollection = new global::System.Data.IDbCommand[11];
             this._commandCollection[0] = new global::FirebirdSql.Data.FirebirdClient.FbCommand();
-            ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[0])).Connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection(global::KlonsF.Properties.Settings.Default.ConnectionString1);
+            ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[0])).Connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection(global::KlonsF.Settings.Default.ConnectionString1);
             ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[0])).CommandText = "\"SP_GEN_PARAMS_ID\"";
             ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[0])).CommandType = global::System.Data.CommandType.StoredProcedure;
             this._commandCollection[1] = new global::FirebirdSql.Data.FirebirdClient.FbCommand();
-            ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[1])).Connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection(global::KlonsF.Properties.Settings.Default.ConnectionString1);
+            ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[1])).Connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection(global::KlonsF.Settings.Default.ConnectionString1);
             ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[1])).CommandText = "\"SP_SET_USERNAME\"";
             ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[1])).CommandType = global::System.Data.CommandType.StoredProcedure;
             global::FirebirdSql.Data.FirebirdClient.FbParameter param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
@@ -16802,39 +16802,39 @@ FROM    P_ITEMS_EVENTS";
             param.SourceColumn = null;
             ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[1])).Parameters.Add(param);
             this._commandCollection[2] = new global::FirebirdSql.Data.FirebirdClient.FbCommand();
-            ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[2])).Connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection(global::KlonsF.Properties.Settings.Default.ConnectionString1);
+            ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[2])).Connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection(global::KlonsF.Settings.Default.ConnectionString1);
             ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[2])).CommandText = "\"SP_P_GEN_CAT1_ID\"";
             ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[2])).CommandType = global::System.Data.CommandType.StoredProcedure;
             this._commandCollection[3] = new global::FirebirdSql.Data.FirebirdClient.FbCommand();
-            ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[3])).Connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection(global::KlonsF.Properties.Settings.Default.ConnectionString1);
+            ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[3])).Connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection(global::KlonsF.Settings.Default.ConnectionString1);
             ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[3])).CommandText = "\"SP_P_GEN_CATD_ID\"";
             ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[3])).CommandType = global::System.Data.CommandType.StoredProcedure;
             this._commandCollection[4] = new global::FirebirdSql.Data.FirebirdClient.FbCommand();
-            ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[4])).Connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection(global::KlonsF.Properties.Settings.Default.ConnectionString1);
+            ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[4])).Connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection(global::KlonsF.Settings.Default.ConnectionString1);
             ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[4])).CommandText = "\"SP_P_GEN_CATT_ID\"";
             ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[4])).CommandType = global::System.Data.CommandType.StoredProcedure;
             this._commandCollection[5] = new global::FirebirdSql.Data.FirebirdClient.FbCommand();
-            ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[5])).Connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection(global::KlonsF.Properties.Settings.Default.ConnectionString1);
+            ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[5])).Connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection(global::KlonsF.Settings.Default.ConnectionString1);
             ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[5])).CommandText = "\"SP_P_GEN_EVENTS_ID\"";
             ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[5])).CommandType = global::System.Data.CommandType.StoredProcedure;
             this._commandCollection[6] = new global::FirebirdSql.Data.FirebirdClient.FbCommand();
-            ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[6])).Connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection(global::KlonsF.Properties.Settings.Default.ConnectionString1);
+            ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[6])).Connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection(global::KlonsF.Settings.Default.ConnectionString1);
             ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[6])).CommandText = "\"SP_P_GEN_ITEMS_EVENTS_ID\"";
             ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[6])).CommandType = global::System.Data.CommandType.StoredProcedure;
             this._commandCollection[7] = new global::FirebirdSql.Data.FirebirdClient.FbCommand();
-            ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[7])).Connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection(global::KlonsF.Properties.Settings.Default.ConnectionString1);
+            ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[7])).Connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection(global::KlonsF.Settings.Default.ConnectionString1);
             ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[7])).CommandText = "\"SP_P_GEN_ITEMS_ID\"";
             ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[7])).CommandType = global::System.Data.CommandType.StoredProcedure;
             this._commandCollection[8] = new global::FirebirdSql.Data.FirebirdClient.FbCommand();
-            ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[8])).Connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection(global::KlonsF.Properties.Settings.Default.ConnectionString1);
+            ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[8])).Connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection(global::KlonsF.Settings.Default.ConnectionString1);
             ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[8])).CommandText = "\"SP_P_GEN_PLACES_ID\"";
             ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[8])).CommandType = global::System.Data.CommandType.StoredProcedure;
             this._commandCollection[9] = new global::FirebirdSql.Data.FirebirdClient.FbCommand();
-            ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[9])).Connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection(global::KlonsF.Properties.Settings.Default.ConnectionString1);
+            ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[9])).Connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection(global::KlonsF.Settings.Default.ConnectionString1);
             ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[9])).CommandText = "\"SP_P_GEN_DEPARTMENTS_ID\"";
             ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[9])).CommandType = global::System.Data.CommandType.StoredProcedure;
             this._commandCollection[10] = new global::FirebirdSql.Data.FirebirdClient.FbCommand();
-            ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[10])).Connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection(global::KlonsF.Properties.Settings.Default.ConnectionString1);
+            ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[10])).Connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection(global::KlonsF.Settings.Default.ConnectionString1);
             ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[10])).CommandText = "\"SP_P_GEN_TAXDEPRECYEAR_ID\"";
             ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[10])).CommandType = global::System.Data.CommandType.StoredProcedure;
         }

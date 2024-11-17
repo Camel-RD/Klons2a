@@ -166,4 +166,10 @@ namespace KlonsA.Classes
         Error = 99
     }
 
+    public enum EPaylistPaymentType : int
+    {
+        Bank = 0,
+        Cash = 1,
+        Other = 3
+    }
 }

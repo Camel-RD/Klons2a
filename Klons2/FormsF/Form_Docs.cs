@@ -17,11 +17,15 @@ using KlonsF.DataSets.klonsRepDataSetTableAdapters;
 using KlonsLIB.Data;
 using KlonsLIB.Forms;
 using KlonsLIB.Misc;
+using KlonsLIB.Components;
 using OPSdTableAdapter = KlonsF.DataSets.klonsDataSetTableAdapters.OPSdTableAdapter;
+using NPOI.OpenXmlFormats.Dml;
+using KlonsM.Classes;
+using KlonsM.FormsM;
 
 namespace KlonsF.Forms
 {
-    public partial class Form_Docs : MyFormBaseF
+    public partial class Form_Docs : MyFormBaseF, IMyDgvTextboxEditingControlEvents2
     {
         public Form_Docs()
         {
@@ -1717,6 +1721,15 @@ namespace KlonsF.Forms
                 e.Handled = true;
                 return;
             }
+            if (e.KeyCode == Keys.F4)
+            {
+                if (dgvDocs.CurrentCell.ColumnIndex == dgcDocsClid.Index)
+                {
+                    GetClId();
+                }
+                e.Handled = true;
+                return;
+            }
             if (e.KeyCode == Keys.F5)
             {
                 dgvDocsGetCellValue(sender, dgvDocs.CurrentCell.ColumnIndex);
@@ -2462,6 +2475,53 @@ namespace KlonsF.Forms
             DeleteCurrent();
         }
 
+        private bool CanEditDocsCurrentCell()
+        {
+            if (bsOPSd.Count == 0 || bsOPSd.Current == null) return false;
+            return true;
+        }
+
+        private void SetCurrentDocEditorValue(string value)
+        {
+            if (ActiveControl == null) return;
+            try
+            {
+                dgvDocs.BeginEdit(false);
+                if (dgvDocs.EditingControl is MyMcComboBox cb1)
+                {
+                    cb1.SelectedValue = value;
+                }
+                else if (dgvDocs.EditingControl is MyPickRowTextBox2 cb2)
+                {
+                    cb2.SelectedValue = value;
+                }
+                dgvDocs.EndEdit();
+            }
+            catch (Exception) { }
+        }
+
+        public string GetClId(string clid)
+        {
+            return Form_Persons.GetClId(clid);
+        }
+
+        public void GetClId()
+        {
+            if (!CanEditDocsCurrentCell()) return;
+            var clid = dgvDocs.CurrentCell.FormattedValue as string;
+            var rt = GetClId(clid);
+            if (rt == null) return;
+            SetCurrentDocEditorValue(rt);
+        }
+
+        void IMyDgvTextboxEditingControlEvents2.OnButtonClicked(MyDgvTextboxEditingControl2 control)
+        {
+            if (control.DataSource == bsClid)
+            {
+                GetClId();
+                return;
+            }
+        }
     }
 
 }

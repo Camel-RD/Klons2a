@@ -75,9 +75,8 @@ namespace KlonsF.Forms
             bnavAcp21.DataGrid = dgvAcp21;
             bnavAcp21.DeleteItem = bindingNavigatorDeleteItem;
             bnavAcp21.Dock = System.Windows.Forms.DockStyle.Bottom;
-            bnavAcp21.ImageScalingSize = new System.Drawing.Size(16, 16);
             bnavAcp21.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { bindingNavigatorMoveFirstItem, bindingNavigatorMovePreviousItem, bindingNavigatorSeparator, bindingNavigatorPositionItem, bindingNavigatorCountItem, bindingNavigatorSeparator1, bindingNavigatorMoveNextItem, bindingNavigatorMoveLastItem, bindingNavigatorSeparator2, bindingNavigatorAddNewItem, bindingNavigatorDeleteItem, toolStripButtonInfo, tsbSave });
-            bnavAcp21.Location = new System.Drawing.Point(0, 334);
+            bnavAcp21.Location = new System.Drawing.Point(0, 340);
             bnavAcp21.MoveFirstItem = bindingNavigatorMoveFirstItem;
             bnavAcp21.MoveLastItem = bindingNavigatorMoveLastItem;
             bnavAcp21.MoveNextItem = bindingNavigatorMoveNextItem;
@@ -85,8 +84,8 @@ namespace KlonsF.Forms
             bnavAcp21.Name = "bnavAcp21";
             bnavAcp21.PositionItem = bindingNavigatorPositionItem;
             bnavAcp21.SaveItem = null;
-            bnavAcp21.Size = new System.Drawing.Size(826, 33);
-            bnavAcp21.TabIndex = 0;
+            bnavAcp21.Size = new System.Drawing.Size(826, 27);
+            bnavAcp21.TabIndex = 2;
             bnavAcp21.Text = "bindingNavigator1";
             bnavAcp21.ItemDeleting += acP21BindingNavigator_ItemDeleting;
             // 
@@ -95,7 +94,7 @@ namespace KlonsF.Forms
             bindingNavigatorAddNewItem.Image = (System.Drawing.Image)resources.GetObject("bindingNavigatorAddNewItem.Image");
             bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
             bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            bindingNavigatorAddNewItem.Size = new System.Drawing.Size(73, 30);
+            bindingNavigatorAddNewItem.Size = new System.Drawing.Size(63, 24);
             bindingNavigatorAddNewItem.Text = "Jauns";
             bindingNavigatorAddNewItem.ToolTipText = "Jauns (Ctrl+Insert)";
             // 
@@ -111,7 +110,7 @@ namespace KlonsF.Forms
             // bindingNavigatorCountItem
             // 
             bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            bindingNavigatorCountItem.Size = new System.Drawing.Size(49, 30);
+            bindingNavigatorCountItem.Size = new System.Drawing.Size(49, 24);
             bindingNavigatorCountItem.Text = " no {0}";
             bindingNavigatorCountItem.ToolTipText = "Skaits";
             // 
@@ -128,8 +127,8 @@ namespace KlonsF.Forms
             dgvAcp21.Name = "dgvAcp21";
             dgvAcp21.RowHeadersWidth = 53;
             dgvAcp21.RowTemplate.Height = 25;
-            dgvAcp21.Size = new System.Drawing.Size(826, 306);
-            dgvAcp21.TabIndex = 2;
+            dgvAcp21.Size = new System.Drawing.Size(826, 312);
+            dgvAcp21.TabIndex = 1;
             dgvAcp21.MyKeyDown += acP21DataGridView_MyKeyDown;
             dgvAcp21.MyCheckForChanges += dgvAcp21_MyCheckForChanges;
             dgvAcp21.CellDoubleClick += acP21DataGridView_CellDoubleClick;
@@ -210,7 +209,7 @@ namespace KlonsF.Forms
             bindingNavigatorDeleteItem.Image = (System.Drawing.Image)resources.GetObject("bindingNavigatorDeleteItem.Image");
             bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
             bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            bindingNavigatorDeleteItem.Size = new System.Drawing.Size(73, 30);
+            bindingNavigatorDeleteItem.Size = new System.Drawing.Size(63, 24);
             bindingNavigatorDeleteItem.Text = "Dzēst";
             bindingNavigatorDeleteItem.ToolTipText = "Dzēst (Ctrl+Delete)";
             // 
@@ -220,7 +219,7 @@ namespace KlonsF.Forms
             bindingNavigatorMoveFirstItem.Image = (System.Drawing.Image)resources.GetObject("bindingNavigatorMoveFirstItem.Image");
             bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
             bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(30, 30);
+            bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(23, 24);
             bindingNavigatorMoveFirstItem.Text = "Iet uz pirmo";
             // 
             // bindingNavigatorMovePreviousItem
@@ -229,13 +228,13 @@ namespace KlonsF.Forms
             bindingNavigatorMovePreviousItem.Image = (System.Drawing.Image)resources.GetObject("bindingNavigatorMovePreviousItem.Image");
             bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
             bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(30, 30);
+            bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(23, 24);
             bindingNavigatorMovePreviousItem.Text = "Iet uz iepriekšējo";
             // 
             // bindingNavigatorSeparator
             // 
             bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 33);
+            bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 27);
             // 
             // bindingNavigatorPositionItem
             // 
@@ -250,7 +249,7 @@ namespace KlonsF.Forms
             // bindingNavigatorSeparator1
             // 
             bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
-            bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 33);
+            bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 27);
             // 
             // bindingNavigatorMoveNextItem
             // 
@@ -258,7 +257,7 @@ namespace KlonsF.Forms
             bindingNavigatorMoveNextItem.Image = (System.Drawing.Image)resources.GetObject("bindingNavigatorMoveNextItem.Image");
             bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
             bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(30, 30);
+            bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 24);
             bindingNavigatorMoveNextItem.Text = "Iet uz nākošo";
             // 
             // bindingNavigatorMoveLastItem
@@ -267,20 +266,20 @@ namespace KlonsF.Forms
             bindingNavigatorMoveLastItem.Image = (System.Drawing.Image)resources.GetObject("bindingNavigatorMoveLastItem.Image");
             bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
             bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(30, 30);
+            bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 24);
             bindingNavigatorMoveLastItem.Text = "Iet uz pirmo";
             // 
             // bindingNavigatorSeparator2
             // 
             bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
-            bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 33);
+            bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 27);
             // 
             // toolStripButtonInfo
             // 
             toolStripButtonInfo.Image = (System.Drawing.Image)resources.GetObject("toolStripButtonInfo.Image");
             toolStripButtonInfo.ImageTransparentColor = System.Drawing.Color.Magenta;
             toolStripButtonInfo.Name = "toolStripButtonInfo";
-            toolStripButtonInfo.Size = new System.Drawing.Size(63, 30);
+            toolStripButtonInfo.Size = new System.Drawing.Size(53, 24);
             toolStripButtonInfo.Text = "Info";
             toolStripButtonInfo.Click += toolStripButtonInfo_Click;
             // 
@@ -289,7 +288,7 @@ namespace KlonsF.Forms
             tsbSave.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             tsbSave.Image = (System.Drawing.Image)resources.GetObject("tsbSave.Image");
             tsbSave.Name = "tsbSave";
-            tsbSave.Size = new System.Drawing.Size(30, 30);
+            tsbSave.Size = new System.Drawing.Size(23, 24);
             tsbSave.Text = "Sagalbāt datus";
             tsbSave.Click += tsbSave_Click;
             // 
@@ -325,7 +324,7 @@ namespace KlonsF.Forms
             label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             label1.Name = "label1";
             label1.Size = new System.Drawing.Size(44, 17);
-            label1.TabIndex = 4;
+            label1.TabIndex = 2;
             label1.Text = "Kods:";
             // 
             // label2
@@ -335,7 +334,7 @@ namespace KlonsF.Forms
             label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             label2.Name = "label2";
             label2.Size = new System.Drawing.Size(53, 17);
-            label2.TabIndex = 5;
+            label2.TabIndex = 3;
             label2.Text = "meklēt:";
             // 
             // panel1
@@ -348,7 +347,7 @@ namespace KlonsF.Forms
             panel1.Location = new System.Drawing.Point(0, 0);
             panel1.Name = "panel1";
             panel1.Size = new System.Drawing.Size(826, 28);
-            panel1.TabIndex = 6;
+            panel1.TabIndex = 0;
             // 
             // Form_AcPlan
             // 

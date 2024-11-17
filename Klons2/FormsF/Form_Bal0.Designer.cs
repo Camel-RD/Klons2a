@@ -466,7 +466,6 @@ namespace KlonsF.Forms
             Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             Name = "Form_Bal0";
             Text = "Sākuma atlikumi";
-            WindowState = System.Windows.Forms.FormWindowState.Maximized;
             Load += FormBal0_Load;
             ((System.ComponentModel.ISupportInitialize)bsBal0).EndInit();
             ((System.ComponentModel.ISupportInitialize)bnavB0).EndInit();
