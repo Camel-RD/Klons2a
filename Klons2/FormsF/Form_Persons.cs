@@ -34,6 +34,7 @@ namespace KlonsF.Forms
             var fm = new Form_Persons();
             //fm.tbCode.Text = code;
             fm.SelectedValue = clid;
+            fm.StartPosition = FormStartPosition.CenterParent;
             var ret = fm.ShowMyDialogModal();
             fm.FindPerson(clid);
             if (ret != DialogResult.OK) return null;

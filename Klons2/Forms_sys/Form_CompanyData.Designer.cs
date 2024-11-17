@@ -43,6 +43,7 @@
             grCompAddr4 = new KlonsLIB.MySourceGrid.GridRows.MyGridRowTextBoxA();
             grCompAddrInd = new KlonsLIB.MySourceGrid.GridRows.MyGridRowTextBoxA();
             grCompAddrG = new KlonsLIB.MySourceGrid.GridRows.MyGridRowTextBoxA();
+            grCompEMail = new KlonsLIB.MySourceGrid.GridRows.MyGridRowTextBoxA();
             grManTitle = new KlonsLIB.MySourceGrid.GridRows.MyGridRowTitle();
             grCompMName = new KlonsLIB.MySourceGrid.GridRows.MyGridRowTextBoxA();
             grCompMpk = new KlonsLIB.MySourceGrid.GridRows.MyGridRowTextBoxA();
@@ -54,7 +55,6 @@
             grBankId = new KlonsLIB.MySourceGrid.GridRows.MyGridRowTextBoxA();
             grBankName = new KlonsLIB.MySourceGrid.GridRows.MyGridRowTextBoxA();
             grBankAcc = new KlonsLIB.MySourceGrid.GridRows.MyGridRowTextBoxA();
-            grCompEMail = new KlonsLIB.MySourceGrid.GridRows.MyGridRowTextBoxA();
             grtString = new KlonsLIB.MySourceGrid.GridRows.MyGridRowTextBoxA();
             SuspendLayout();
             // 
@@ -133,7 +133,6 @@
             // 
             // grCompanyName
             // 
-            grCompanyName.DataMember = null;
             grCompanyName.EditorTemplateName = "grtString";
             grCompanyName.GridPropertyName = "_CompName";
             grCompanyName.Name = "grCompanyName";
@@ -142,7 +141,6 @@
             // 
             // grCompRegNr
             // 
-            grCompRegNr.DataMember = null;
             grCompRegNr.EditorTemplateName = "grtString";
             grCompRegNr.GridPropertyName = "_CompRegNr";
             grCompRegNr.Name = "grCompRegNr";
@@ -151,7 +149,6 @@
             // 
             // grCompRegNrPVN
             // 
-            grCompRegNrPVN.DataMember = null;
             grCompRegNrPVN.EditorTemplateName = "grtString";
             grCompRegNrPVN.GridPropertyName = "_CompRegNrPVN";
             grCompRegNrPVN.Name = "grCompRegNrPVN";
@@ -160,7 +157,6 @@
             // 
             // grCompVID
             // 
-            grCompVID.DataMember = null;
             grCompVID.EditorTemplateName = "grtString";
             grCompVID.GridPropertyName = "_CompVID";
             grCompVID.Name = "grCompVID";
@@ -174,7 +170,6 @@
             // 
             // grCompAddr
             // 
-            grCompAddr.DataMember = null;
             grCompAddr.EditorTemplateName = "grtString";
             grCompAddr.GridPropertyName = "_CompAddr";
             grCompAddr.Name = "grCompAddr";
@@ -183,7 +178,6 @@
             // 
             // grCompAddr1
             // 
-            grCompAddr1.DataMember = null;
             grCompAddr1.EditorTemplateName = "grtString";
             grCompAddr1.GridPropertyName = "_CompAddr1";
             grCompAddr1.Name = "grCompAddr1";
@@ -192,7 +186,6 @@
             // 
             // grCompAddr2
             // 
-            grCompAddr2.DataMember = null;
             grCompAddr2.EditorTemplateName = "grtString";
             grCompAddr2.GridPropertyName = "_CompAddr2";
             grCompAddr2.Name = "grCompAddr2";
@@ -201,7 +194,6 @@
             // 
             // grCompAddr3
             // 
-            grCompAddr3.DataMember = null;
             grCompAddr3.EditorTemplateName = "grtString";
             grCompAddr3.GridPropertyName = "_CompAddr3";
             grCompAddr3.Name = "grCompAddr3";
@@ -210,16 +202,14 @@
             // 
             // grCompAddr4
             // 
-            grCompAddr4.DataMember = null;
             grCompAddr4.EditorTemplateName = "grtString";
             grCompAddr4.GridPropertyName = "_CompAddr4";
             grCompAddr4.Name = "grCompAddr4";
-            grCompAddr4.RowTitle = "Valsts";
+            grCompAddr4.RowTitle = "Pagasts";
             grCompAddr4.RowValueType = KlonsLIB.MySourceGrid.GridRows.EMyGridRowValueType.String;
             // 
             // grCompAddrInd
             // 
-            grCompAddrInd.DataMember = null;
             grCompAddrInd.EditorTemplateName = "grtString";
             grCompAddrInd.GridPropertyName = "_CompAddrInd";
             grCompAddrInd.Name = "grCompAddrInd";
@@ -228,12 +218,20 @@
             // 
             // grCompAddrG
             // 
-            grCompAddrG.DataMember = null;
             grCompAddrG.EditorTemplateName = "grtString";
             grCompAddrG.GridPropertyName = "_CompAddrG";
             grCompAddrG.Name = "grCompAddrG";
             grCompAddrG.RowTitle = "Preču izsn. adrese";
             grCompAddrG.RowValueType = KlonsLIB.MySourceGrid.GridRows.EMyGridRowValueType.String;
+            // 
+            // grCompEMail
+            // 
+            grCompEMail.DataMember = null;
+            grCompEMail.EditorTemplateName = "grtString";
+            grCompEMail.GridPropertyName = "_CompEMail";
+            grCompEMail.Name = "grCompEMail";
+            grCompEMail.RowTitle = "E-pasts";
+            grCompEMail.RowValueType = KlonsLIB.MySourceGrid.GridRows.EMyGridRowValueType.String;
             // 
             // grManTitle
             // 
@@ -242,7 +240,6 @@
             // 
             // grCompMName
             // 
-            grCompMName.DataMember = null;
             grCompMName.EditorTemplateName = "grtString";
             grCompMName.GridPropertyName = "_CompMName";
             grCompMName.Name = "grCompMName";
@@ -251,7 +248,6 @@
             // 
             // grCompMpk
             // 
-            grCompMpk.DataMember = null;
             grCompMpk.EditorTemplateName = "grtString";
             grCompMpk.GridPropertyName = "_CompMpk";
             grCompMpk.Name = "grCompMpk";
@@ -260,7 +256,6 @@
             // 
             // grCompPhone
             // 
-            grCompPhone.DataMember = null;
             grCompPhone.EditorTemplateName = "grtString";
             grCompPhone.GridPropertyName = "_CompPhone";
             grCompPhone.Name = "grCompPhone";
@@ -274,7 +269,6 @@
             // 
             // grCompAccName
             // 
-            grCompAccName.DataMember = null;
             grCompAccName.EditorTemplateName = "grtString";
             grCompAccName.GridPropertyName = "_CompAccName";
             grCompAccName.Name = "grCompAccName";
@@ -283,7 +277,6 @@
             // 
             // grCompAccPh
             // 
-            grCompAccPh.DataMember = null;
             grCompAccPh.EditorTemplateName = "grtString";
             grCompAccPh.GridPropertyName = "_CompAccPh";
             grCompAccPh.Name = "grCompAccPh";
@@ -297,7 +290,6 @@
             // 
             // grBankId
             // 
-            grBankId.DataMember = null;
             grBankId.EditorTemplateName = "grtString";
             grBankId.GridPropertyName = "_BankId";
             grBankId.Name = "grBankId";
@@ -306,7 +298,6 @@
             // 
             // grBankName
             // 
-            grBankName.DataMember = null;
             grBankName.EditorTemplateName = "grtString";
             grBankName.GridPropertyName = "_BankName";
             grBankName.Name = "grBankName";
@@ -315,25 +306,15 @@
             // 
             // grBankAcc
             // 
-            grBankAcc.DataMember = null;
             grBankAcc.EditorTemplateName = "grtString";
             grBankAcc.GridPropertyName = "_BankAcc";
             grBankAcc.Name = "grBankAcc";
             grBankAcc.RowTitle = "Konts";
             grBankAcc.RowValueType = KlonsLIB.MySourceGrid.GridRows.EMyGridRowValueType.String;
             // 
-            // grCompEMail
-            // 
-            grCompEMail.EditorTemplateName = "grtString";
-            grCompEMail.GridPropertyName = "_CompEMail";
-            grCompEMail.Name = "grCompEMail";
-            grCompEMail.RowTitle = "E-pasts";
-            grCompEMail.RowValueType = KlonsLIB.MySourceGrid.GridRows.EMyGridRowValueType.String;
-            // 
             // grtString
             // 
             grtString.AllowNull = true;
-            grtString.DataMember = null;
             grtString.Name = "grtString";
             grtString.RowTitle = null;
             grtString.RowValueType = KlonsLIB.MySourceGrid.GridRows.EMyGridRowValueType.String;

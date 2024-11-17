@@ -14,10 +14,10 @@ namespace KlonsF.Classes
         public static string CompVID => KlonsData.St.Params.CompVID;
         public static string CompAddr => KlonsData.St.Params.CompAddr;
         public static string CompAddrInd => KlonsData.St.Params.CompAddrInd;
-        public static string CompAddr1 => KlonsData.St.Params.CompAddr1;
-        public static string CompAddr2 => KlonsData.St.Params.CompAddr2;
-        public static string CompAddr3 => KlonsData.St.Params.CompAddr3;
-        public static string CompAddr4 => KlonsData.St.Params.CompAddr4;
+        public static string CompAddrStreet => KlonsData.St.Params.CompAddr1;
+        public static string CompAddrCity => KlonsData.St.Params.CompAddr2;
+        public static string CompAddrState => KlonsData.St.Params.CompAddr3;
+        public static string CompAddrParish => KlonsData.St.Params.CompAddr4;
         public static string CompAddrG => KlonsData.St.Params.CompAddrG;
         public static string CompEMail => KlonsData.St.Params.CompEMail;
         public static string CompMName => KlonsData.St.Params.CompMName;
