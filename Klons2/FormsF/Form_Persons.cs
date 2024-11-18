@@ -35,8 +35,8 @@ namespace KlonsF.Forms
             //fm.tbCode.Text = code;
             fm.SelectedValue = clid;
             fm.StartPosition = FormStartPosition.CenterParent;
-            var ret = fm.ShowMyDialogModal();
             fm.FindPerson(clid);
+            var ret = fm.ShowMyDialogModal();
             if (ret != DialogResult.OK) return null;
             return fm.SelectedValue;
         }
@@ -94,6 +94,12 @@ namespace KlonsF.Forms
             if (e.KeyChar == (char) Keys.Return)
             {
                 CheckFilter();
+            }
+            if (e.KeyChar == (char)Keys.Escape)
+            {
+                tbSearch.Text = null;
+                CheckFilter();
+                e.Handled = true;
             }
         }
 

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using KlonsF.Classes;
+using KlonsF.DataSets;
 using KlonsLIB.Components;
 using KlonsLIB.Data;
 using KlonsLIB.Misc;
@@ -39,7 +40,32 @@ namespace KlonsF.Forms
             }
             bsAcP3.Fill();
             CheckSave();
-            WindowState = FormWindowState.Maximized;
+        }
+
+        public static string GetAcP3(string acp3)
+        {
+            var fm = new Form_AcP3();
+            fm.SelectedValue = acp3;
+            fm.StartPosition = FormStartPosition.CenterParent;
+            fm.FindAcP3(acp3);
+            var ret = fm.ShowMyDialogModal();
+            if (ret != DialogResult.OK) return null;
+            return fm.SelectedValue;
+        }
+
+        public void FindAcP3(string acp3)
+        {
+            if (bsAcP3.Count == 0) return;
+            if (acp3.IsNOE()) return;
+            for (int i = 0; i < bsAcP3.Count; i++)
+            {
+                var dr = (bsAcP3[i] as DataRowView).Row as klonsDataSet.Acp23Row;
+                if (dr.idx == acp3)
+                {
+                    bsAcP3.Position = i;
+                    return;
+                }
+            }
         }
 
         private void SelectCurrent()

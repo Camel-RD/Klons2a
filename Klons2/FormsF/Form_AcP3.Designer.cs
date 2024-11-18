@@ -67,7 +67,7 @@ namespace KlonsF.Forms
             label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             label2.Name = "label2";
             label2.Size = new System.Drawing.Size(53, 17);
-            label2.TabIndex = 5;
+            label2.TabIndex = 3;
             label2.Text = "meklēt:";
             // 
             // label1
@@ -77,7 +77,7 @@ namespace KlonsF.Forms
             label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             label1.Name = "label1";
             label1.Size = new System.Drawing.Size(44, 17);
-            label1.TabIndex = 4;
+            label1.TabIndex = 2;
             label1.Text = "Kods:";
             // 
             // tbSearch
@@ -118,7 +118,7 @@ namespace KlonsF.Forms
             dgvAcP3.Name = "dgvAcP3";
             dgvAcP3.ReadOnly = true;
             dgvAcP3.Size = new System.Drawing.Size(462, 285);
-            dgvAcP3.TabIndex = 2;
+            dgvAcP3.TabIndex = 1;
             dgvAcP3.MyKeyDown += dgvAcP3_MyKeyDown;
             dgvAcP3.MyCheckForChanges += dgvAcP3_MyCheckForChanges;
             dgvAcP3.CellDoubleClick += dgvAcP3_CellDoubleClick;
@@ -170,7 +170,7 @@ namespace KlonsF.Forms
             bnavAcp3.PositionItem = bindingNavigatorPositionItem;
             bnavAcp3.SaveItem = null;
             bnavAcp3.Size = new System.Drawing.Size(462, 30);
-            bnavAcp3.TabIndex = 3;
+            bnavAcp3.TabIndex = 2;
             bnavAcp3.Text = "bindingNavigator1";
             // 
             // bindingNavigatorCountItem
@@ -264,7 +264,7 @@ namespace KlonsF.Forms
             panel1.Location = new System.Drawing.Point(0, 0);
             panel1.Name = "panel1";
             panel1.Size = new System.Drawing.Size(462, 27);
-            panel1.TabIndex = 6;
+            panel1.TabIndex = 0;
             // 
             // Form_AcP3
             // 

@@ -108,7 +108,7 @@ namespace KlonsF.Forms
             dgvAcPVN.Margin = new System.Windows.Forms.Padding(2);
             dgvAcPVN.Name = "dgvAcPVN";
             dgvAcPVN.RowHeadersWidth = 62;
-            dgvAcPVN.Size = new System.Drawing.Size(523, 326);
+            dgvAcPVN.Size = new System.Drawing.Size(784, 326);
             dgvAcPVN.TabIndex = 1;
             dgvAcPVN.MyKeyDown += dgvAcPVN_MyKeyDown;
             dgvAcPVN.MyCheckForChanges += dgvAcPVN_MyCheckForChanges;
@@ -173,7 +173,7 @@ namespace KlonsF.Forms
             bnavAcp5.Name = "bnavAcp5";
             bnavAcp5.PositionItem = bindingNavigatorPositionItem;
             bnavAcp5.SaveItem = null;
-            bnavAcp5.Size = new System.Drawing.Size(523, 25);
+            bnavAcp5.Size = new System.Drawing.Size(784, 25);
             bnavAcp5.TabIndex = 2;
             bnavAcp5.Text = "bindingNavigator1";
             bnavAcp5.ItemDeleting += bnavAcp5_ItemDeleting;
@@ -280,14 +280,14 @@ namespace KlonsF.Forms
             panel1.Dock = System.Windows.Forms.DockStyle.Top;
             panel1.Location = new System.Drawing.Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new System.Drawing.Size(523, 29);
+            panel1.Size = new System.Drawing.Size(784, 29);
             panel1.TabIndex = 0;
             // 
             // Form_AcPVN
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            ClientSize = new System.Drawing.Size(523, 380);
+            ClientSize = new System.Drawing.Size(784, 380);
             Controls.Add(dgvAcPVN);
             Controls.Add(panel1);
             Controls.Add(bnavAcp5);

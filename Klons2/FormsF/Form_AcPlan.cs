@@ -9,8 +9,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using KlonsF.Classes;
+using KlonsF.DataSets;
 using KlonsLIB.Components;
 using KlonsLIB.Data;
+using KlonsLIB.Misc;
 
 namespace KlonsF.Forms
 {
@@ -26,6 +28,32 @@ namespace KlonsF.Forms
         private void FormAcPlan_Load(object sender, EventArgs e)
         {
             CheckSave();
+        }
+
+        public static string GetAcP1(string acp1)
+        {
+            var fm = new Form_AcPlan();
+            fm.SelectedValue = acp1;
+            fm.StartPosition = FormStartPosition.CenterParent;
+            fm.FindAcP1(acp1);
+            var ret = fm.ShowMyDialogModal();
+            if (ret != DialogResult.OK) return null;
+            return fm.SelectedValue;
+        }
+
+        public void FindAcP1(string acp1)
+        {
+            if (bsAcPlan.Count == 0) return;
+            if (acp1.IsNOE()) return;
+            for (int i = 0; i < bsAcPlan.Count; i++)
+            {
+                var dr = (bsAcPlan[i] as DataRowView).Row as klonsDataSet.AcP21Row;
+                if (dr.AC == acp1)
+                {
+                    bsAcPlan.Position = i;
+                    return;
+                }
+            }
         }
 
         private void SelectCurrent()
@@ -92,6 +120,13 @@ namespace KlonsF.Forms
                     bsAcPlan.Filter = string.Format("Name LIKE '*{0}*'", s);
                 }
             }
+            if (e.KeyChar == (char)Keys.Escape)
+            {
+                tbSearch.Text = null;
+                bsAcPlan.RemoveFilter();
+                e.Handled = true;
+            }
+
         }
 
         private void acP21BindingNavigator_ItemDeleting(object sender, CancelEventArgs e)

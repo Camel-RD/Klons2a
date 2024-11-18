@@ -34,8 +34,8 @@ namespace KlonsF.Forms
         {
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_OpsFilter));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             label1 = new System.Windows.Forms.Label();
             myToolStrip = new System.Windows.Forms.ToolStrip();
             tsbFilter = new System.Windows.Forms.ToolStripButton();
@@ -47,32 +47,6 @@ namespace KlonsF.Forms
             tsbDocs = new System.Windows.Forms.ToolStripButton();
             cmAndOr = new System.Windows.Forms.Button();
             dgvOPS = new MyDataGridView();
-            bs_vwOPS = new MyBindingSource(components);
-            cbAC25 = new MyMcFlatComboBox();
-            cbAC24 = new MyMcFlatComboBox();
-            cbAC23 = new MyMcFlatComboBox();
-            cbAC22 = new MyMcFlatComboBox();
-            cbAC21 = new MyMcFlatComboBox();
-            cbAC15 = new MyMcFlatComboBox();
-            cbAC14 = new MyMcFlatComboBox();
-            cbAC13 = new MyMcFlatComboBox();
-            cbAC12 = new MyMcFlatComboBox();
-            cbAC11 = new MyMcFlatComboBox();
-            tbText = new MyTextBox();
-            cbClid = new MyMcFlatComboBox();
-            tbDate2 = new MyTextBox();
-            tbDate1 = new MyTextBox();
-            tbSum = new MyTextBox();
-            label2 = new System.Windows.Forms.Label();
-            cbDocGr = new MyMcFlatComboBox();
-            menuStrip1 = new System.Windows.Forms.MenuStrip();
-            ierakstuŽurnālsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            rādītPilnuPersonasNosaukumuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            rādītPersonasReģistrācijasNumuruToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            rādītPersonasPVNReģistrācijasNumuruToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            panel1 = new System.Windows.Forms.Panel();
-            label3 = new System.Windows.Forms.Label();
-            tbAmount = new MyTextBox();
             dgcZNR = new System.Windows.Forms.DataGridViewTextBoxColumn();
             dgcDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             dgcDocTyp = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -95,11 +69,49 @@ namespace KlonsF.Forms
             dgcAC25 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             dgcQV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             dgcDescr2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            bs_vwOPS = new MyBindingSource(components);
+            cbAC25 = new MyPickRowTextBox2();
+            bsAcp5 = new MyBindingSource(components);
+            cbAC24 = new MyPickRowTextBox2();
+            bsAcp4 = new MyBindingSource(components);
+            cbAC23 = new MyPickRowTextBox2();
+            bsAcp3 = new MyBindingSource(components);
+            cbAC22 = new MyPickRowTextBox2();
+            bsAcPlan = new MyBindingSource(components);
+            cbAC21 = new MyPickRowTextBox2();
+            cbAC15 = new MyPickRowTextBox2();
+            cbAC14 = new MyPickRowTextBox2();
+            cbAC13 = new MyPickRowTextBox2();
+            cbAC12 = new MyPickRowTextBox2();
+            cbAC11 = new MyPickRowTextBox2();
+            tbText = new MyTextBox();
+            cbClid = new MyPickRowTextBox2();
+            bsClid = new MyBindingSource(components);
+            tbDate2 = new MyTextBox();
+            tbDate1 = new MyTextBox();
+            tbSum = new MyTextBox();
+            label2 = new System.Windows.Forms.Label();
+            cbDocGr = new MyMcFlatComboBox();
+            menuStrip1 = new System.Windows.Forms.MenuStrip();
+            ierakstuŽurnālsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            rādītPilnuPersonasNosaukumuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            rādītPersonasReģistrācijasNumuruToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            rādītPersonasPVNReģistrācijasNumuruToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            panel1 = new System.Windows.Forms.Panel();
+            label3 = new System.Windows.Forms.Label();
+            tbAmount = new MyTextBox();
+            bsDocGr = new MyBindingSource(components);
             myToolStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvOPS).BeginInit();
             ((System.ComponentModel.ISupportInitialize)bs_vwOPS).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)bsAcp5).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)bsAcp4).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)bsAcp3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)bsAcPlan).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)bsClid).BeginInit();
             menuStrip1.SuspendLayout();
             panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)bsDocGr).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -219,506 +231,6 @@ namespace KlonsF.Forms
             dgvOPS.CellFormatting += dgvOPS_CellFormatting;
             dgvOPS.CellToolTipTextNeeded += dgvOPS_CellToolTipTextNeeded;
             // 
-            // bs_vwOPS
-            // 
-            bs_vwOPS.AllowNew = false;
-            bs_vwOPS.DataMember = "vw_OPS";
-            bs_vwOPS.MyDataSource = "KlonsData";
-            bs_vwOPS.Name2 = "vwOPS";
-            // 
-            // cbAC25
-            // 
-            cbAC25.BorderColor = System.Drawing.SystemColors.ControlDarkDark;
-            cbAC25.ColumnNames = new string[]
-    {
-    "idx",
-    "name"
-    };
-            cbAC25.ColumnWidths = "100;400";
-            cbAC25.DisplayMember = "idx";
-            cbAC25.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            cbAC25.DropDownHeight = 270;
-            cbAC25.DropDownWidth = 519;
-            cbAC25.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            cbAC25.FormattingEnabled = true;
-            cbAC25.GridLineColor = System.Drawing.SystemColors.WindowText;
-            cbAC25.GridLineHorizontal = false;
-            cbAC25.GridLineVertical = true;
-            cbAC25.IntegralHeight = false;
-            cbAC25.Location = new System.Drawing.Point(351, 53);
-            cbAC25.Margin = new System.Windows.Forms.Padding(2);
-            cbAC25.MaxDropDownItems = 15;
-            cbAC25.Name = "cbAC25";
-            cbAC25.Size = new System.Drawing.Size(70, 24);
-            cbAC25.TabIndex = 15;
-            cbAC25.ValueMember = "idx";
-            cbAC25.KeyDown += control_KeyDown;
-            cbAC25.MouseDoubleClick += cbACp5_MouseDoubleClick;
-            // 
-            // cbAC24
-            // 
-            cbAC24.BorderColor = System.Drawing.SystemColors.ControlDarkDark;
-            cbAC24.ColumnNames = new string[]
-    {
-    "idx",
-    "name"
-    };
-            cbAC24.ColumnWidths = "100;400";
-            cbAC24.DisplayMember = "idx";
-            cbAC24.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            cbAC24.DropDownHeight = 270;
-            cbAC24.DropDownWidth = 519;
-            cbAC24.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            cbAC24.FormattingEnabled = true;
-            cbAC24.GridLineColor = System.Drawing.SystemColors.WindowText;
-            cbAC24.GridLineHorizontal = false;
-            cbAC24.GridLineVertical = true;
-            cbAC24.IntegralHeight = false;
-            cbAC24.Location = new System.Drawing.Point(277, 53);
-            cbAC24.Margin = new System.Windows.Forms.Padding(2);
-            cbAC24.MaxDropDownItems = 15;
-            cbAC24.Name = "cbAC24";
-            cbAC24.Size = new System.Drawing.Size(70, 24);
-            cbAC24.TabIndex = 14;
-            cbAC24.ValueMember = "idx";
-            cbAC24.KeyDown += control_KeyDown;
-            cbAC24.MouseDoubleClick += cbACp4_MouseDoubleClick;
-            // 
-            // cbAC23
-            // 
-            cbAC23.BorderColor = System.Drawing.SystemColors.ControlDarkDark;
-            cbAC23.ColumnNames = new string[]
-    {
-    "idx",
-    "name"
-    };
-            cbAC23.ColumnWidths = "100;400";
-            cbAC23.DisplayMember = "idx";
-            cbAC23.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            cbAC23.DropDownHeight = 270;
-            cbAC23.DropDownWidth = 519;
-            cbAC23.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            cbAC23.FormattingEnabled = true;
-            cbAC23.GridLineColor = System.Drawing.SystemColors.WindowText;
-            cbAC23.GridLineHorizontal = false;
-            cbAC23.GridLineVertical = true;
-            cbAC23.IntegralHeight = false;
-            cbAC23.Location = new System.Drawing.Point(203, 53);
-            cbAC23.Margin = new System.Windows.Forms.Padding(2);
-            cbAC23.MaxDropDownItems = 15;
-            cbAC23.Name = "cbAC23";
-            cbAC23.Size = new System.Drawing.Size(70, 24);
-            cbAC23.TabIndex = 13;
-            cbAC23.ValueMember = "idx";
-            cbAC23.KeyDown += control_KeyDown;
-            cbAC23.MouseDoubleClick += cbACp3_MouseDoubleClick;
-            // 
-            // cbAC22
-            // 
-            cbAC22.BorderColor = System.Drawing.SystemColors.ControlDarkDark;
-            cbAC22.ColumnNames = new string[]
-    {
-    "ac",
-    "name"
-    };
-            cbAC22.ColumnWidths = "100;400";
-            cbAC22.DisplayMember = "AC";
-            cbAC22.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            cbAC22.DropDownHeight = 270;
-            cbAC22.DropDownWidth = 519;
-            cbAC22.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            cbAC22.FormattingEnabled = true;
-            cbAC22.GridLineColor = System.Drawing.SystemColors.WindowText;
-            cbAC22.GridLineHorizontal = false;
-            cbAC22.GridLineVertical = true;
-            cbAC22.IntegralHeight = false;
-            cbAC22.Location = new System.Drawing.Point(129, 53);
-            cbAC22.Margin = new System.Windows.Forms.Padding(2);
-            cbAC22.MaxDropDownItems = 15;
-            cbAC22.Name = "cbAC22";
-            cbAC22.Size = new System.Drawing.Size(70, 24);
-            cbAC22.TabIndex = 12;
-            cbAC22.KeyDown += control_KeyDown;
-            cbAC22.MouseDoubleClick += cbAC_MouseDoubleClick;
-            // 
-            // cbAC21
-            // 
-            cbAC21.BorderColor = System.Drawing.SystemColors.ControlDarkDark;
-            cbAC21.ColumnNames = new string[]
-    {
-    "ac",
-    "name"
-    };
-            cbAC21.ColumnWidths = "100;400";
-            cbAC21.DisplayMember = "AC";
-            cbAC21.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            cbAC21.DropDownHeight = 270;
-            cbAC21.DropDownWidth = 519;
-            cbAC21.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            cbAC21.FormattingEnabled = true;
-            cbAC21.GridLineColor = System.Drawing.SystemColors.WindowText;
-            cbAC21.GridLineHorizontal = false;
-            cbAC21.GridLineVertical = true;
-            cbAC21.IntegralHeight = false;
-            cbAC21.Location = new System.Drawing.Point(54, 53);
-            cbAC21.Margin = new System.Windows.Forms.Padding(2);
-            cbAC21.MaxDropDownItems = 15;
-            cbAC21.Name = "cbAC21";
-            cbAC21.Size = new System.Drawing.Size(70, 24);
-            cbAC21.TabIndex = 11;
-            cbAC21.KeyDown += control_KeyDown;
-            cbAC21.MouseDoubleClick += cbAC_MouseDoubleClick;
-            // 
-            // cbAC15
-            // 
-            cbAC15.BorderColor = System.Drawing.SystemColors.ControlDarkDark;
-            cbAC15.ColumnNames = new string[]
-    {
-    "idx",
-    "name"
-    };
-            cbAC15.ColumnWidths = "100;400";
-            cbAC15.DisplayMember = "idx";
-            cbAC15.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            cbAC15.DropDownHeight = 270;
-            cbAC15.DropDownWidth = 519;
-            cbAC15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            cbAC15.FormattingEnabled = true;
-            cbAC15.GridLineColor = System.Drawing.SystemColors.WindowText;
-            cbAC15.GridLineHorizontal = false;
-            cbAC15.GridLineVertical = true;
-            cbAC15.IntegralHeight = false;
-            cbAC15.Location = new System.Drawing.Point(351, 28);
-            cbAC15.Margin = new System.Windows.Forms.Padding(2);
-            cbAC15.MaxDropDownItems = 15;
-            cbAC15.Name = "cbAC15";
-            cbAC15.Size = new System.Drawing.Size(70, 24);
-            cbAC15.TabIndex = 9;
-            cbAC15.ValueMember = "idx";
-            cbAC15.KeyDown += control_KeyDown;
-            cbAC15.MouseDoubleClick += cbACp5_MouseDoubleClick;
-            // 
-            // cbAC14
-            // 
-            cbAC14.BorderColor = System.Drawing.SystemColors.ControlDarkDark;
-            cbAC14.ColumnNames = new string[]
-    {
-    "idx",
-    "name"
-    };
-            cbAC14.ColumnWidths = "100;400";
-            cbAC14.DisplayMember = "idx";
-            cbAC14.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            cbAC14.DropDownHeight = 270;
-            cbAC14.DropDownWidth = 519;
-            cbAC14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            cbAC14.FormattingEnabled = true;
-            cbAC14.GridLineColor = System.Drawing.SystemColors.WindowText;
-            cbAC14.GridLineHorizontal = false;
-            cbAC14.GridLineVertical = true;
-            cbAC14.IntegralHeight = false;
-            cbAC14.Location = new System.Drawing.Point(277, 28);
-            cbAC14.Margin = new System.Windows.Forms.Padding(2);
-            cbAC14.MaxDropDownItems = 15;
-            cbAC14.Name = "cbAC14";
-            cbAC14.Size = new System.Drawing.Size(70, 24);
-            cbAC14.TabIndex = 8;
-            cbAC14.ValueMember = "idx";
-            cbAC14.KeyDown += control_KeyDown;
-            cbAC14.MouseDoubleClick += cbACp4_MouseDoubleClick;
-            // 
-            // cbAC13
-            // 
-            cbAC13.BorderColor = System.Drawing.SystemColors.ControlDarkDark;
-            cbAC13.ColumnNames = new string[]
-    {
-    "idx",
-    "name"
-    };
-            cbAC13.ColumnWidths = "100;400";
-            cbAC13.DisplayMember = "idx";
-            cbAC13.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            cbAC13.DropDownHeight = 270;
-            cbAC13.DropDownWidth = 519;
-            cbAC13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            cbAC13.FormattingEnabled = true;
-            cbAC13.GridLineColor = System.Drawing.SystemColors.WindowText;
-            cbAC13.GridLineHorizontal = false;
-            cbAC13.GridLineVertical = true;
-            cbAC13.IntegralHeight = false;
-            cbAC13.Location = new System.Drawing.Point(203, 28);
-            cbAC13.Margin = new System.Windows.Forms.Padding(2);
-            cbAC13.MaxDropDownItems = 15;
-            cbAC13.Name = "cbAC13";
-            cbAC13.Size = new System.Drawing.Size(70, 24);
-            cbAC13.TabIndex = 7;
-            cbAC13.ValueMember = "idx";
-            cbAC13.KeyDown += control_KeyDown;
-            cbAC13.MouseDoubleClick += cbACp3_MouseDoubleClick;
-            // 
-            // cbAC12
-            // 
-            cbAC12.BorderColor = System.Drawing.SystemColors.ControlDarkDark;
-            cbAC12.ColumnNames = new string[]
-    {
-    "ac",
-    "name"
-    };
-            cbAC12.ColumnWidths = "100;400";
-            cbAC12.DisplayMember = "AC";
-            cbAC12.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            cbAC12.DropDownHeight = 270;
-            cbAC12.DropDownWidth = 519;
-            cbAC12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            cbAC12.FormattingEnabled = true;
-            cbAC12.GridLineColor = System.Drawing.SystemColors.WindowText;
-            cbAC12.GridLineHorizontal = false;
-            cbAC12.GridLineVertical = true;
-            cbAC12.IntegralHeight = false;
-            cbAC12.Location = new System.Drawing.Point(129, 28);
-            cbAC12.Margin = new System.Windows.Forms.Padding(2);
-            cbAC12.MaxDropDownItems = 15;
-            cbAC12.Name = "cbAC12";
-            cbAC12.Size = new System.Drawing.Size(70, 24);
-            cbAC12.TabIndex = 6;
-            cbAC12.KeyDown += control_KeyDown;
-            cbAC12.MouseDoubleClick += cbAC_MouseDoubleClick;
-            // 
-            // cbAC11
-            // 
-            cbAC11.BorderColor = System.Drawing.SystemColors.ControlDarkDark;
-            cbAC11.ColumnNames = new string[]
-    {
-    "ac",
-    "name"
-    };
-            cbAC11.ColumnWidths = "100;400";
-            cbAC11.DisplayMember = "AC";
-            cbAC11.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            cbAC11.DropDownHeight = 270;
-            cbAC11.DropDownWidth = 519;
-            cbAC11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            cbAC11.FormattingEnabled = true;
-            cbAC11.GridLineColor = System.Drawing.SystemColors.WindowText;
-            cbAC11.GridLineHorizontal = false;
-            cbAC11.GridLineVertical = true;
-            cbAC11.IntegralHeight = false;
-            cbAC11.Location = new System.Drawing.Point(54, 28);
-            cbAC11.Margin = new System.Windows.Forms.Padding(2);
-            cbAC11.MaxDropDownItems = 15;
-            cbAC11.Name = "cbAC11";
-            cbAC11.Size = new System.Drawing.Size(70, 24);
-            cbAC11.TabIndex = 5;
-            cbAC11.KeyDown += control_KeyDown;
-            cbAC11.MouseDoubleClick += cbAC_MouseDoubleClick;
-            // 
-            // tbText
-            // 
-            tbText.BorderColor = System.Drawing.SystemColors.ControlDarkDark;
-            tbText.Location = new System.Drawing.Point(310, 3);
-            tbText.Margin = new System.Windows.Forms.Padding(2);
-            tbText.Name = "tbText";
-            tbText.Size = new System.Drawing.Size(82, 23);
-            tbText.TabIndex = 3;
-            tbText.KeyDown += control_KeyDown;
-            // 
-            // cbClid
-            // 
-            cbClid.BorderColor = System.Drawing.SystemColors.ControlDarkDark;
-            cbClid.ColumnNames = new string[]
-    {
-    "clid",
-    "name"
-    };
-            cbClid.ColumnWidths = "120;400";
-            cbClid.DisplayMember = "clid";
-            cbClid.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            cbClid.DropDownHeight = 270;
-            cbClid.DropDownWidth = 539;
-            cbClid.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            cbClid.FormattingEnabled = true;
-            cbClid.GridLineColor = System.Drawing.SystemColors.WindowText;
-            cbClid.GridLineHorizontal = false;
-            cbClid.GridLineVertical = true;
-            cbClid.IntegralHeight = false;
-            cbClid.Location = new System.Drawing.Point(206, 3);
-            cbClid.Margin = new System.Windows.Forms.Padding(2);
-            cbClid.MaxDropDownItems = 15;
-            cbClid.Name = "cbClid";
-            cbClid.Size = new System.Drawing.Size(101, 24);
-            cbClid.TabIndex = 2;
-            cbClid.ValueMember = "clid";
-            cbClid.KeyDown += control_KeyDown;
-            cbClid.MouseDoubleClick += cbClid_MouseDoubleClick;
-            // 
-            // tbDate2
-            // 
-            tbDate2.BorderColor = System.Drawing.SystemColors.ControlDarkDark;
-            tbDate2.Location = new System.Drawing.Point(105, 3);
-            tbDate2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            tbDate2.Name = "tbDate2";
-            tbDate2.Size = new System.Drawing.Size(79, 23);
-            tbDate2.TabIndex = 1;
-            tbDate2.Text = "01.01.2014";
-            tbDate2.KeyDown += control_KeyDown;
-            tbDate2.Leave += tbDate1_Leave;
-            // 
-            // tbDate1
-            // 
-            tbDate1.BorderColor = System.Drawing.SystemColors.ControlDarkDark;
-            tbDate1.Location = new System.Drawing.Point(6, 3);
-            tbDate1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            tbDate1.Name = "tbDate1";
-            tbDate1.Size = new System.Drawing.Size(79, 23);
-            tbDate1.TabIndex = 0;
-            tbDate1.Text = "01.01.2014";
-            tbDate1.KeyDown += control_KeyDown;
-            tbDate1.Leave += tbDate1_Leave;
-            // 
-            // tbSum
-            // 
-            tbSum.BackColor = System.Drawing.SystemColors.Control;
-            tbSum.BorderColor = System.Drawing.SystemColors.ControlDarkDark;
-            tbSum.Location = new System.Drawing.Point(425, 54);
-            tbSum.Margin = new System.Windows.Forms.Padding(2);
-            tbSum.Name = "tbSum";
-            tbSum.ReadOnly = true;
-            tbSum.Size = new System.Drawing.Size(94, 23);
-            tbSum.TabIndex = 17;
-            tbSum.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Location = new System.Drawing.Point(425, 35);
-            label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            label2.Name = "label2";
-            label2.Size = new System.Drawing.Size(59, 17);
-            label2.TabIndex = 16;
-            label2.Text = "Summa:";
-            // 
-            // cbDocGr
-            // 
-            cbDocGr.BorderColor = System.Drawing.SystemColors.ControlDarkDark;
-            cbDocGr.ColumnNames = new string[]
-    {
-    "id",
-    "name"
-    };
-            cbDocGr.ColumnWidths = "100;400";
-            cbDocGr.DisplayMember = "id";
-            cbDocGr.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            cbDocGr.DropDownHeight = 270;
-            cbDocGr.DropDownWidth = 519;
-            cbDocGr.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            cbDocGr.FormattingEnabled = true;
-            cbDocGr.GridLineColor = System.Drawing.SystemColors.WindowText;
-            cbDocGr.GridLineHorizontal = false;
-            cbDocGr.GridLineVertical = true;
-            cbDocGr.IntegralHeight = false;
-            cbDocGr.Location = new System.Drawing.Point(396, 3);
-            cbDocGr.Margin = new System.Windows.Forms.Padding(2);
-            cbDocGr.MaxDropDownItems = 15;
-            cbDocGr.Name = "cbDocGr";
-            cbDocGr.Size = new System.Drawing.Size(108, 24);
-            cbDocGr.TabIndex = 4;
-            cbDocGr.ValueMember = "id";
-            cbDocGr.KeyDown += control_KeyDown;
-            cbDocGr.MouseDoubleClick += cbACp5_MouseDoubleClick;
-            // 
-            // menuStrip1
-            // 
-            menuStrip1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            menuStrip1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            menuStrip1.ImageScalingSize = new System.Drawing.Size(16, 16);
-            menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { ierakstuŽurnālsToolStripMenuItem });
-            menuStrip1.Location = new System.Drawing.Point(0, 409);
-            menuStrip1.Name = "menuStrip1";
-            menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            menuStrip1.Size = new System.Drawing.Size(825, 36);
-            menuStrip1.TabIndex = 20;
-            menuStrip1.Text = "menuStrip1";
-            menuStrip1.Visible = false;
-            // 
-            // ierakstuŽurnālsToolStripMenuItem
-            // 
-            ierakstuŽurnālsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { rādītPilnuPersonasNosaukumuToolStripMenuItem, rādītPersonasReģistrācijasNumuruToolStripMenuItem, rādītPersonasPVNReģistrācijasNumuruToolStripMenuItem });
-            ierakstuŽurnālsToolStripMenuItem.Name = "ierakstuŽurnālsToolStripMenuItem";
-            ierakstuŽurnālsToolStripMenuItem.Size = new System.Drawing.Size(120, 32);
-            ierakstuŽurnālsToolStripMenuItem.Text = "Ierakstu žurnāls";
-            // 
-            // rādītPilnuPersonasNosaukumuToolStripMenuItem
-            // 
-            rādītPilnuPersonasNosaukumuToolStripMenuItem.Name = "rādītPilnuPersonasNosaukumuToolStripMenuItem";
-            rādītPilnuPersonasNosaukumuToolStripMenuItem.Size = new System.Drawing.Size(336, 22);
-            rādītPilnuPersonasNosaukumuToolStripMenuItem.Text = "Rādīt pilnu personas nosaukumu";
-            rādītPilnuPersonasNosaukumuToolStripMenuItem.Click += rādītPilnuPersonasNosaukumuToolStripMenuItem_Click;
-            // 
-            // rādītPersonasReģistrācijasNumuruToolStripMenuItem
-            // 
-            rādītPersonasReģistrācijasNumuruToolStripMenuItem.Name = "rādītPersonasReģistrācijasNumuruToolStripMenuItem";
-            rādītPersonasReģistrācijasNumuruToolStripMenuItem.Size = new System.Drawing.Size(336, 22);
-            rādītPersonasReģistrācijasNumuruToolStripMenuItem.Text = "Rādīt personas reģistrācijas numuru";
-            rādītPersonasReģistrācijasNumuruToolStripMenuItem.Click += rādītPersonasReģistrācijasNumuruToolStripMenuItem_Click;
-            // 
-            // rādītPersonasPVNReģistrācijasNumuruToolStripMenuItem
-            // 
-            rādītPersonasPVNReģistrācijasNumuruToolStripMenuItem.Name = "rādītPersonasPVNReģistrācijasNumuruToolStripMenuItem";
-            rādītPersonasPVNReģistrācijasNumuruToolStripMenuItem.Size = new System.Drawing.Size(336, 22);
-            rādītPersonasPVNReģistrācijasNumuruToolStripMenuItem.Text = "Rādīt personas PVN reģistrācijas numuru";
-            rādītPersonasPVNReģistrācijasNumuruToolStripMenuItem.Click += rādītPersonasPVNReģistrācijasNumuruToolStripMenuItem_Click;
-            // 
-            // panel1
-            // 
-            panel1.Controls.Add(cbAC21);
-            panel1.Controls.Add(tbDate1);
-            panel1.Controls.Add(tbDate2);
-            panel1.Controls.Add(label3);
-            panel1.Controls.Add(label2);
-            panel1.Controls.Add(label1);
-            panel1.Controls.Add(cmAndOr);
-            panel1.Controls.Add(cbClid);
-            panel1.Controls.Add(cbAC25);
-            panel1.Controls.Add(tbText);
-            panel1.Controls.Add(cbAC24);
-            panel1.Controls.Add(tbAmount);
-            panel1.Controls.Add(tbSum);
-            panel1.Controls.Add(cbAC23);
-            panel1.Controls.Add(cbAC11);
-            panel1.Controls.Add(cbAC22);
-            panel1.Controls.Add(cbAC12);
-            panel1.Controls.Add(cbAC13);
-            panel1.Controls.Add(cbDocGr);
-            panel1.Controls.Add(cbAC14);
-            panel1.Controls.Add(cbAC15);
-            panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            panel1.Location = new System.Drawing.Point(0, 0);
-            panel1.Name = "panel1";
-            panel1.Size = new System.Drawing.Size(825, 80);
-            panel1.TabIndex = 21;
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Location = new System.Drawing.Point(522, 36);
-            label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            label3.Name = "label3";
-            label3.Size = new System.Drawing.Size(75, 17);
-            label3.TabIndex = 16;
-            label3.Text = "Daudzums";
-            // 
-            // tbAmount
-            // 
-            tbAmount.BackColor = System.Drawing.SystemColors.Control;
-            tbAmount.BorderColor = System.Drawing.SystemColors.ControlDarkDark;
-            tbAmount.Location = new System.Drawing.Point(523, 55);
-            tbAmount.Margin = new System.Windows.Forms.Padding(2);
-            tbAmount.Name = "tbAmount";
-            tbAmount.ReadOnly = true;
-            tbAmount.Size = new System.Drawing.Size(94, 23);
-            tbAmount.TabIndex = 17;
-            tbAmount.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
             // dgcZNR
             // 
             dgcZNR.DataPropertyName = "ZNR";
@@ -731,8 +243,8 @@ namespace KlonsF.Forms
             // dgcDate
             // 
             dgcDate.DataPropertyName = "Dete";
-            dataGridViewCellStyle1.Format = "dd.MM.yyyy";
-            dgcDate.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Format = "dd.MM.yyyy";
+            dgcDate.DefaultCellStyle = dataGridViewCellStyle3;
             dgcDate.HeaderText = "Datums";
             dgcDate.MinimumWidth = 7;
             dgcDate.Name = "dgcDate";
@@ -824,10 +336,10 @@ namespace KlonsF.Forms
             // sgcSumm
             // 
             sgcSumm.DataPropertyName = "Summ";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle2.Format = "N2";
-            dataGridViewCellStyle2.NullValue = null;
-            sgcSumm.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle4.Format = "N2";
+            dataGridViewCellStyle4.NullValue = null;
+            sgcSumm.DefaultCellStyle = dataGridViewCellStyle4;
             sgcSumm.HeaderText = "Summa";
             sgcSumm.MinimumWidth = 7;
             sgcSumm.Name = "sgcSumm";
@@ -924,6 +436,420 @@ namespace KlonsF.Forms
             dgcDescr2.ReadOnly = true;
             dgcDescr2.Width = 126;
             // 
+            // bs_vwOPS
+            // 
+            bs_vwOPS.AllowNew = false;
+            bs_vwOPS.DataMember = "vw_OPS";
+            bs_vwOPS.MyDataSource = "KlonsData";
+            bs_vwOPS.Name2 = "vwOPS";
+            // 
+            // cbAC25
+            // 
+            cbAC25.BorderColor = System.Drawing.SystemColors.ControlDarkDark;
+            cbAC25.DataMember = null;
+            cbAC25.DataSource = bsAcp5;
+            cbAC25.DisplayMember = "idx";
+            cbAC25.LimitToList = false;
+            cbAC25.Location = new System.Drawing.Point(351, 53);
+            cbAC25.Name = "cbAC25";
+            cbAC25.ShowButton = true;
+            cbAC25.Size = new System.Drawing.Size(70, 23);
+            cbAC25.SyncPosition = false;
+            cbAC25.TabIndex = 15;
+            cbAC25.ValueMember = "idx";
+            cbAC25.ButtonClicked += CbXXX_ButtonClicked;
+            cbAC25.KeyDown += control_KeyDown;
+            cbAC25.MouseDoubleClick += cbACp5_MouseDoubleClick;
+            // 
+            // bsAcp5
+            // 
+            bsAcp5.DataMember = "Acp25";
+            bsAcp5.MyDataSource = "KlonsData";
+            bsAcp5.Sort = "idx";
+            // 
+            // cbAC24
+            // 
+            cbAC24.BorderColor = System.Drawing.SystemColors.ControlDarkDark;
+            cbAC24.DataMember = null;
+            cbAC24.DataSource = bsAcp4;
+            cbAC24.DisplayMember = "idx";
+            cbAC24.LimitToList = false;
+            cbAC24.Location = new System.Drawing.Point(277, 53);
+            cbAC24.Name = "cbAC24";
+            cbAC24.ShowButton = true;
+            cbAC24.Size = new System.Drawing.Size(70, 23);
+            cbAC24.SyncPosition = false;
+            cbAC24.TabIndex = 14;
+            cbAC24.ValueMember = "idx";
+            cbAC24.ButtonClicked += CbXXX_ButtonClicked;
+            cbAC24.KeyDown += control_KeyDown;
+            cbAC24.MouseDoubleClick += cbACp4_MouseDoubleClick;
+            // 
+            // bsAcp4
+            // 
+            bsAcp4.DataMember = "AcP24";
+            bsAcp4.MyDataSource = "KlonsData";
+            bsAcp4.Sort = "idx";
+            // 
+            // cbAC23
+            // 
+            cbAC23.BorderColor = System.Drawing.SystemColors.ControlDarkDark;
+            cbAC23.DataMember = null;
+            cbAC23.DataSource = bsAcp3;
+            cbAC23.DisplayMember = "idx";
+            cbAC23.LimitToList = false;
+            cbAC23.Location = new System.Drawing.Point(203, 53);
+            cbAC23.Name = "cbAC23";
+            cbAC23.ShowButton = true;
+            cbAC23.Size = new System.Drawing.Size(70, 23);
+            cbAC23.SyncPosition = false;
+            cbAC23.TabIndex = 13;
+            cbAC23.ValueMember = "idx";
+            cbAC23.ButtonClicked += CbXXX_ButtonClicked;
+            cbAC23.KeyDown += control_KeyDown;
+            cbAC23.MouseDoubleClick += cbACp3_MouseDoubleClick;
+            // 
+            // bsAcp3
+            // 
+            bsAcp3.DataMember = "Acp23";
+            bsAcp3.MyDataSource = "KlonsData";
+            bsAcp3.Sort = "idx";
+            // 
+            // cbAC22
+            // 
+            cbAC22.BorderColor = System.Drawing.SystemColors.ControlDarkDark;
+            cbAC22.DataMember = null;
+            cbAC22.DataSource = bsAcPlan;
+            cbAC22.DisplayMember = "AC";
+            cbAC22.LimitToList = false;
+            cbAC22.Location = new System.Drawing.Point(129, 53);
+            cbAC22.Name = "cbAC22";
+            cbAC22.ShowButton = true;
+            cbAC22.Size = new System.Drawing.Size(70, 23);
+            cbAC22.SyncPosition = false;
+            cbAC22.TabIndex = 12;
+            cbAC22.ButtonClicked += CbXXX_ButtonClicked;
+            cbAC22.KeyDown += control_KeyDown;
+            cbAC22.MouseDoubleClick += cbAC_MouseDoubleClick;
+            // 
+            // bsAcPlan
+            // 
+            bsAcPlan.DataMember = "AcP21";
+            bsAcPlan.MyDataSource = "KlonsData";
+            bsAcPlan.Sort = "Ac";
+            // 
+            // cbAC21
+            // 
+            cbAC21.BorderColor = System.Drawing.SystemColors.ControlDarkDark;
+            cbAC21.DataMember = null;
+            cbAC21.DataSource = bsAcPlan;
+            cbAC21.DisplayMember = "AC";
+            cbAC21.LimitToList = false;
+            cbAC21.Location = new System.Drawing.Point(54, 53);
+            cbAC21.Name = "cbAC21";
+            cbAC21.ShowButton = true;
+            cbAC21.Size = new System.Drawing.Size(70, 23);
+            cbAC21.SyncPosition = false;
+            cbAC21.TabIndex = 11;
+            cbAC21.ButtonClicked += CbXXX_ButtonClicked;
+            cbAC21.KeyDown += control_KeyDown;
+            cbAC21.MouseDoubleClick += cbAC_MouseDoubleClick;
+            // 
+            // cbAC15
+            // 
+            cbAC15.BorderColor = System.Drawing.SystemColors.ControlDarkDark;
+            cbAC15.DataMember = null;
+            cbAC15.DataSource = bsAcp5;
+            cbAC15.DisplayMember = "idx";
+            cbAC15.LimitToList = false;
+            cbAC15.Location = new System.Drawing.Point(351, 28);
+            cbAC15.Name = "cbAC15";
+            cbAC15.ShowButton = true;
+            cbAC15.Size = new System.Drawing.Size(70, 23);
+            cbAC15.SyncPosition = false;
+            cbAC15.TabIndex = 9;
+            cbAC15.ValueMember = "idx";
+            cbAC15.ButtonClicked += CbXXX_ButtonClicked;
+            cbAC15.KeyDown += control_KeyDown;
+            cbAC15.MouseDoubleClick += cbACp5_MouseDoubleClick;
+            // 
+            // cbAC14
+            // 
+            cbAC14.BorderColor = System.Drawing.SystemColors.ControlDarkDark;
+            cbAC14.DataMember = null;
+            cbAC14.DataSource = bsAcp4;
+            cbAC14.DisplayMember = "idx";
+            cbAC14.LimitToList = false;
+            cbAC14.Location = new System.Drawing.Point(277, 28);
+            cbAC14.Name = "cbAC14";
+            cbAC14.ShowButton = true;
+            cbAC14.Size = new System.Drawing.Size(70, 23);
+            cbAC14.SyncPosition = false;
+            cbAC14.TabIndex = 8;
+            cbAC14.ValueMember = "idx";
+            cbAC14.ButtonClicked += CbXXX_ButtonClicked;
+            cbAC14.KeyDown += control_KeyDown;
+            cbAC14.MouseDoubleClick += cbACp4_MouseDoubleClick;
+            // 
+            // cbAC13
+            // 
+            cbAC13.BorderColor = System.Drawing.SystemColors.ControlDarkDark;
+            cbAC13.DataMember = null;
+            cbAC13.DataSource = bsAcp3;
+            cbAC13.DisplayMember = "idx";
+            cbAC13.LimitToList = false;
+            cbAC13.Location = new System.Drawing.Point(203, 28);
+            cbAC13.Name = "cbAC13";
+            cbAC13.ShowButton = true;
+            cbAC13.Size = new System.Drawing.Size(70, 23);
+            cbAC13.SyncPosition = false;
+            cbAC13.TabIndex = 7;
+            cbAC13.ValueMember = "idx";
+            cbAC13.ButtonClicked += CbXXX_ButtonClicked;
+            cbAC13.KeyDown += control_KeyDown;
+            cbAC13.MouseDoubleClick += cbACp3_MouseDoubleClick;
+            // 
+            // cbAC12
+            // 
+            cbAC12.BorderColor = System.Drawing.SystemColors.ControlDarkDark;
+            cbAC12.DataMember = null;
+            cbAC12.DataSource = bsAcPlan;
+            cbAC12.DisplayMember = "AC";
+            cbAC12.LimitToList = false;
+            cbAC12.Location = new System.Drawing.Point(129, 28);
+            cbAC12.Name = "cbAC12";
+            cbAC12.ShowButton = true;
+            cbAC12.Size = new System.Drawing.Size(70, 23);
+            cbAC12.SyncPosition = false;
+            cbAC12.TabIndex = 6;
+            cbAC12.ButtonClicked += CbXXX_ButtonClicked;
+            cbAC12.KeyDown += control_KeyDown;
+            cbAC12.MouseDoubleClick += cbAC_MouseDoubleClick;
+            // 
+            // cbAC11
+            // 
+            cbAC11.BorderColor = System.Drawing.SystemColors.ControlDarkDark;
+            cbAC11.DataMember = null;
+            cbAC11.DataSource = bsAcPlan;
+            cbAC11.DisplayMember = "AC";
+            cbAC11.LimitToList = false;
+            cbAC11.Location = new System.Drawing.Point(54, 28);
+            cbAC11.Name = "cbAC11";
+            cbAC11.ShowButton = true;
+            cbAC11.Size = new System.Drawing.Size(70, 23);
+            cbAC11.SyncPosition = false;
+            cbAC11.TabIndex = 5;
+            cbAC11.ButtonClicked += CbXXX_ButtonClicked;
+            cbAC11.KeyDown += control_KeyDown;
+            cbAC11.MouseDoubleClick += cbAC_MouseDoubleClick;
+            // 
+            // tbText
+            // 
+            tbText.BorderColor = System.Drawing.SystemColors.ControlDarkDark;
+            tbText.Location = new System.Drawing.Point(310, 3);
+            tbText.Margin = new System.Windows.Forms.Padding(2);
+            tbText.Name = "tbText";
+            tbText.Size = new System.Drawing.Size(82, 23);
+            tbText.TabIndex = 3;
+            tbText.KeyDown += control_KeyDown;
+            // 
+            // cbClid
+            // 
+            cbClid.BorderColor = System.Drawing.SystemColors.ControlDarkDark;
+            cbClid.DataMember = null;
+            cbClid.DataSource = bsClid;
+            cbClid.DisplayMember = "clid";
+            cbClid.Location = new System.Drawing.Point(206, 3);
+            cbClid.Name = "cbClid";
+            cbClid.ShowButton = true;
+            cbClid.Size = new System.Drawing.Size(101, 23);
+            cbClid.SyncPosition = false;
+            cbClid.TabIndex = 2;
+            cbClid.ValueMember = "clid";
+            cbClid.ButtonClicked += CbXXX_ButtonClicked;
+            cbClid.KeyDown += control_KeyDown;
+            cbClid.MouseDoubleClick += cbClid_MouseDoubleClick;
+            // 
+            // bsClid
+            // 
+            bsClid.DataMember = "Persons";
+            bsClid.MyDataSource = "KlonsData";
+            bsClid.Sort = "clid";
+            // 
+            // tbDate2
+            // 
+            tbDate2.BorderColor = System.Drawing.SystemColors.ControlDarkDark;
+            tbDate2.Location = new System.Drawing.Point(105, 3);
+            tbDate2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            tbDate2.Name = "tbDate2";
+            tbDate2.Size = new System.Drawing.Size(79, 23);
+            tbDate2.TabIndex = 1;
+            tbDate2.Text = "01.01.2014";
+            tbDate2.KeyDown += control_KeyDown;
+            tbDate2.Leave += tbDate1_Leave;
+            // 
+            // tbDate1
+            // 
+            tbDate1.BorderColor = System.Drawing.SystemColors.ControlDarkDark;
+            tbDate1.Location = new System.Drawing.Point(6, 3);
+            tbDate1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            tbDate1.Name = "tbDate1";
+            tbDate1.Size = new System.Drawing.Size(79, 23);
+            tbDate1.TabIndex = 0;
+            tbDate1.Text = "01.01.2014";
+            tbDate1.KeyDown += control_KeyDown;
+            tbDate1.Leave += tbDate1_Leave;
+            // 
+            // tbSum
+            // 
+            tbSum.BackColor = System.Drawing.SystemColors.Control;
+            tbSum.BorderColor = System.Drawing.SystemColors.ControlDarkDark;
+            tbSum.Location = new System.Drawing.Point(425, 54);
+            tbSum.Margin = new System.Windows.Forms.Padding(2);
+            tbSum.Name = "tbSum";
+            tbSum.ReadOnly = true;
+            tbSum.Size = new System.Drawing.Size(94, 23);
+            tbSum.TabIndex = 17;
+            tbSum.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new System.Drawing.Point(425, 35);
+            label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            label2.Name = "label2";
+            label2.Size = new System.Drawing.Size(59, 17);
+            label2.TabIndex = 16;
+            label2.Text = "Summa:";
+            // 
+            // cbDocGr
+            // 
+            cbDocGr.BorderColor = System.Drawing.SystemColors.ControlDarkDark;
+            cbDocGr.ColumnNames = new string[]
+    {
+    "id",
+    "name"
+    };
+            cbDocGr.ColumnWidths = "100;400";
+            cbDocGr.DataSource = bsDocGr;
+            cbDocGr.DisplayMember = "id";
+            cbDocGr.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            cbDocGr.DropDownHeight = 270;
+            cbDocGr.DropDownWidth = 519;
+            cbDocGr.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            cbDocGr.FormattingEnabled = true;
+            cbDocGr.GridLineColor = System.Drawing.SystemColors.WindowText;
+            cbDocGr.GridLineHorizontal = false;
+            cbDocGr.GridLineVertical = true;
+            cbDocGr.IntegralHeight = false;
+            cbDocGr.Location = new System.Drawing.Point(396, 3);
+            cbDocGr.Margin = new System.Windows.Forms.Padding(2);
+            cbDocGr.MaxDropDownItems = 15;
+            cbDocGr.Name = "cbDocGr";
+            cbDocGr.Size = new System.Drawing.Size(108, 24);
+            cbDocGr.TabIndex = 4;
+            cbDocGr.ValueMember = "id";
+            cbDocGr.KeyDown += control_KeyDown;
+            cbDocGr.MouseDoubleClick += cbACp5_MouseDoubleClick;
+            // 
+            // menuStrip1
+            // 
+            menuStrip1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            menuStrip1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { ierakstuŽurnālsToolStripMenuItem });
+            menuStrip1.Location = new System.Drawing.Point(0, 409);
+            menuStrip1.Name = "menuStrip1";
+            menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
+            menuStrip1.Size = new System.Drawing.Size(825, 36);
+            menuStrip1.TabIndex = 20;
+            menuStrip1.Text = "menuStrip1";
+            menuStrip1.Visible = false;
+            // 
+            // ierakstuŽurnālsToolStripMenuItem
+            // 
+            ierakstuŽurnālsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { rādītPilnuPersonasNosaukumuToolStripMenuItem, rādītPersonasReģistrācijasNumuruToolStripMenuItem, rādītPersonasPVNReģistrācijasNumuruToolStripMenuItem });
+            ierakstuŽurnālsToolStripMenuItem.Name = "ierakstuŽurnālsToolStripMenuItem";
+            ierakstuŽurnālsToolStripMenuItem.Size = new System.Drawing.Size(120, 32);
+            ierakstuŽurnālsToolStripMenuItem.Text = "Ierakstu žurnāls";
+            // 
+            // rādītPilnuPersonasNosaukumuToolStripMenuItem
+            // 
+            rādītPilnuPersonasNosaukumuToolStripMenuItem.Name = "rādītPilnuPersonasNosaukumuToolStripMenuItem";
+            rādītPilnuPersonasNosaukumuToolStripMenuItem.Size = new System.Drawing.Size(336, 22);
+            rādītPilnuPersonasNosaukumuToolStripMenuItem.Text = "Rādīt pilnu personas nosaukumu";
+            rādītPilnuPersonasNosaukumuToolStripMenuItem.Click += rādītPilnuPersonasNosaukumuToolStripMenuItem_Click;
+            // 
+            // rādītPersonasReģistrācijasNumuruToolStripMenuItem
+            // 
+            rādītPersonasReģistrācijasNumuruToolStripMenuItem.Name = "rādītPersonasReģistrācijasNumuruToolStripMenuItem";
+            rādītPersonasReģistrācijasNumuruToolStripMenuItem.Size = new System.Drawing.Size(336, 22);
+            rādītPersonasReģistrācijasNumuruToolStripMenuItem.Text = "Rādīt personas reģistrācijas numuru";
+            rādītPersonasReģistrācijasNumuruToolStripMenuItem.Click += rādītPersonasReģistrācijasNumuruToolStripMenuItem_Click;
+            // 
+            // rādītPersonasPVNReģistrācijasNumuruToolStripMenuItem
+            // 
+            rādītPersonasPVNReģistrācijasNumuruToolStripMenuItem.Name = "rādītPersonasPVNReģistrācijasNumuruToolStripMenuItem";
+            rādītPersonasPVNReģistrācijasNumuruToolStripMenuItem.Size = new System.Drawing.Size(336, 22);
+            rādītPersonasPVNReģistrācijasNumuruToolStripMenuItem.Text = "Rādīt personas PVN reģistrācijas numuru";
+            rādītPersonasPVNReģistrācijasNumuruToolStripMenuItem.Click += rādītPersonasPVNReģistrācijasNumuruToolStripMenuItem_Click;
+            // 
+            // panel1
+            // 
+            panel1.Controls.Add(cbAC21);
+            panel1.Controls.Add(tbDate1);
+            panel1.Controls.Add(tbDate2);
+            panel1.Controls.Add(label3);
+            panel1.Controls.Add(label2);
+            panel1.Controls.Add(label1);
+            panel1.Controls.Add(cmAndOr);
+            panel1.Controls.Add(cbClid);
+            panel1.Controls.Add(cbAC25);
+            panel1.Controls.Add(tbText);
+            panel1.Controls.Add(cbAC24);
+            panel1.Controls.Add(tbAmount);
+            panel1.Controls.Add(tbSum);
+            panel1.Controls.Add(cbAC23);
+            panel1.Controls.Add(cbAC11);
+            panel1.Controls.Add(cbAC22);
+            panel1.Controls.Add(cbAC12);
+            panel1.Controls.Add(cbAC13);
+            panel1.Controls.Add(cbDocGr);
+            panel1.Controls.Add(cbAC14);
+            panel1.Controls.Add(cbAC15);
+            panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            panel1.Location = new System.Drawing.Point(0, 0);
+            panel1.Name = "panel1";
+            panel1.Size = new System.Drawing.Size(825, 80);
+            panel1.TabIndex = 21;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new System.Drawing.Point(522, 36);
+            label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            label3.Name = "label3";
+            label3.Size = new System.Drawing.Size(75, 17);
+            label3.TabIndex = 16;
+            label3.Text = "Daudzums";
+            // 
+            // tbAmount
+            // 
+            tbAmount.BackColor = System.Drawing.SystemColors.Control;
+            tbAmount.BorderColor = System.Drawing.SystemColors.ControlDarkDark;
+            tbAmount.Location = new System.Drawing.Point(523, 55);
+            tbAmount.Margin = new System.Windows.Forms.Padding(2);
+            tbAmount.Name = "tbAmount";
+            tbAmount.ReadOnly = true;
+            tbAmount.Size = new System.Drawing.Size(94, 23);
+            tbAmount.TabIndex = 17;
+            tbAmount.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // bsDocGr
+            // 
+            bsDocGr.DataMember = "DocTypA";
+            bsDocGr.MyDataSource = "KlonsData";
+            bsDocGr.Sort = "id";
+            // 
             // Form_OpsFilter
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -945,10 +871,16 @@ namespace KlonsF.Forms
             myToolStrip.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dgvOPS).EndInit();
             ((System.ComponentModel.ISupportInitialize)bs_vwOPS).EndInit();
+            ((System.ComponentModel.ISupportInitialize)bsAcp5).EndInit();
+            ((System.ComponentModel.ISupportInitialize)bsAcp4).EndInit();
+            ((System.ComponentModel.ISupportInitialize)bsAcp3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)bsAcPlan).EndInit();
+            ((System.ComponentModel.ISupportInitialize)bsClid).EndInit();
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)bsDocGr).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -958,18 +890,18 @@ namespace KlonsF.Forms
         private MyTextBox tbDate1;
         private MyTextBox tbDate2;
         private System.Windows.Forms.Label label1;
-        private MyMcFlatComboBox cbClid;
+        private MyPickRowTextBox2 cbClid;
         private MyTextBox tbText;
-        private MyMcFlatComboBox cbAC11;
-        private MyMcFlatComboBox cbAC21;
-        private MyMcFlatComboBox cbAC12;
-        private MyMcFlatComboBox cbAC22;
-        private MyMcFlatComboBox cbAC13;
-        private MyMcFlatComboBox cbAC23;
-        private MyMcFlatComboBox cbAC14;
-        private MyMcFlatComboBox cbAC24;
-        private MyMcFlatComboBox cbAC15;
-        private MyMcFlatComboBox cbAC25;
+        private MyPickRowTextBox2 cbAC11;
+        private MyPickRowTextBox2 cbAC21;
+        private MyPickRowTextBox2 cbAC12;
+        private MyPickRowTextBox2 cbAC22;
+        private MyPickRowTextBox2 cbAC13;
+        private MyPickRowTextBox2 cbAC23;
+        private MyPickRowTextBox2 cbAC14;
+        private MyPickRowTextBox2 cbAC24;
+        private MyPickRowTextBox2 cbAC15;
+        private MyPickRowTextBox2 cbAC25;
         private MyDataGridView dgvOPS;
         private MyBindingSource bs_vwOPS;
         private System.Windows.Forms.ToolStripButton tsbFilter;
@@ -1014,5 +946,11 @@ namespace KlonsF.Forms
         private System.Windows.Forms.DataGridViewTextBoxColumn dgcAC25;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgcQV;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgcDescr2;
+        private MyBindingSource bsAcPlan;
+        private MyBindingSource bsAcp3;
+        private MyBindingSource bsAcp4;
+        private MyBindingSource bsAcp5;
+        private MyBindingSource bsClid;
+        private MyBindingSource bsDocGr;
     }
 }

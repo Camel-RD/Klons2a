@@ -100,6 +100,10 @@ namespace KlonsLIB.Components
             set { syncPosition = value; }
         }
 
+        [DefaultValue(true)]
+        [Category("Data")]
+        public bool LimitToList { get; set; } = true;
+
         protected override void OnBindingContextChanged(EventArgs e)
         {
             this.tryDataBinding();
@@ -109,6 +113,8 @@ namespace KlonsLIB.Components
         private bool IsInPositionChanged = false;
         private bool isInSetSelectedIndex = false;
 
+        [Browsable(false)]
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public int SelectedIndex
         {
             get { return selectedIndex; }
@@ -606,13 +612,15 @@ namespace KlonsLIB.Components
             if (e.KeyCode == Keys.Down) k = 1;
             if (dataManager != null && k != 0)
             {
+                base.OnKeyDown(e);
+                if (e.Handled) return;
                 if (SyncPosition)
                     dataManager.Position = dataManager.Position + k;
                 else
                     SelectedIndex = SelectedIndex + k;
                 e.Handled = true;
+                return;
             }
-
             base.OnKeyDown(e);
         }
 
@@ -667,7 +675,14 @@ namespace KlonsLIB.Components
             }
             else
             {
-                SelectedIndex = -1;
+                if (LimitToList)
+                {
+                    SelectedIndex = -1;
+                }
+                else
+                {
+                    selectedIndex = -1;
+                }
             }
 
             isInOnTextChanged = false;
