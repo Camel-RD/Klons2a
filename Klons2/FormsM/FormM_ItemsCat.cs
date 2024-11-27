@@ -342,7 +342,7 @@ namespace KlonsM.FormsM
 
         private void bNav_ItemDeleting(object sender, CancelEventArgs e)
         {
-            e.Cancel = IsRow0(bsItemsCat.Position) || !AskCanDelete();
+                e.Cancel = IsRow0(bsItemsCat.Position) || !AskCanDelete();
         }
 
         private void dgvRows_CellDoubleClick(object sender, DataGridViewCellEventArgs e)

@@ -220,6 +220,7 @@ namespace KlonsM.Classes
                     return EDocType2.Iekšējs;
                 case EDocType.Iepirkums:
                 case EDocType.Saņemti_pakalpojumi:
+                case EDocType.Iepirkuma_rēķins:
                     return EDocType2.Saņemts_no_partnera;
                 case EDocType.Realizācija:
                 case EDocType.Atgriezts_piegādātājam:
@@ -227,6 +228,7 @@ namespace KlonsM.Classes
                 case EDocType.Sniegti_pakalpojumi:
                 case EDocType.Atgriezts_no_pircēja:
                 case EDocType.Kredītrēķins_pircējam:
+                case EDocType.Pārdošanas_rēķins:
                     return EDocType2.Izdots_partnerim;
             }
             throw new Exception("DocType list incomplete");
@@ -282,6 +284,7 @@ namespace KlonsM.Classes
 
                 case EDocType.Iepirkums:
                 case EDocType.Saņemti_pakalpojumi:
+                case EDocType.Iepirkuma_rēķins:
                     return storeouttype == EStoreType.Partneris;
 
                 case EDocType.Realizācija:
@@ -293,6 +296,7 @@ namespace KlonsM.Classes
                 case EDocType.Norakstīts:
                 case EDocType.Izlietots:
                 case EDocType.Uz_noliktavu:
+                case EDocType.Pārdošanas_rēķins:
                     return storeouttype == EStoreType.Noliktava;
 
                 case EDocType.Sākuma_atlikums:
@@ -325,6 +329,7 @@ namespace KlonsM.Classes
                 case EDocType.No_noliktavas:
                 case EDocType.Sākuma_atlikums:
                 case EDocType.Saražots:
+                case EDocType.Iepirkuma_rēķins:
                     return storeintype == EStoreType.Noliktava;
 
                 case EDocType.Saņemti_pakalpojumi:
@@ -336,6 +341,7 @@ namespace KlonsM.Classes
                 case EDocType.Atgriezts_no_pircēja:
                 case EDocType.Kredītrēķins_pircējam:
                 case EDocType.Sniegti_pakalpojumi:
+                case EDocType.Pārdošanas_rēķins:
                     return storeintype == EStoreType.Partneris;
 
                 case EDocType.Norakstīts:
@@ -364,6 +370,7 @@ namespace KlonsM.Classes
                 case EDocType.Atgriezts_no_pircēja:
                 case EDocType.Kredītrēķins_pircējam:
                 case EDocType.Sniegti_pakalpojumi:
+                case EDocType.Pārdošanas_rēķins:
                     return true;
             }
             return false;
@@ -377,6 +384,7 @@ namespace KlonsM.Classes
                 case EDocType.Atgriezts_piegādātājam:
                 case EDocType.Kredītrēķins_no_piegādātāja:
                 case EDocType.Saņemti_pakalpojumi:
+                case EDocType.Iepirkuma_rēķins:
                     return true;
             }
             return false;
@@ -447,6 +455,7 @@ namespace KlonsM.Classes
                 case EDocType.No_noliktavas:
                 case EDocType.Uz_noliktavu:
                 case EDocType.Sākuma_atlikums:
+                case EDocType.Iepirkuma_rēķins:
                     return true;
             }
             return false;
@@ -485,6 +494,8 @@ namespace KlonsM.Classes
                 case EDocType.Sniegti_pakalpojumi:
                 case EDocType.Norakstīts:
                 case EDocType.Pierakstīts:
+                case EDocType.Iepirkuma_rēķins:
+                case EDocType.Pārdošanas_rēķins:
                     return true;
             }
             return false;

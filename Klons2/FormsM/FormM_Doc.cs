@@ -14,6 +14,8 @@ using KlonsLIB.Data;
 using KlonsLIB.Misc;
 using KlonsF.Classes;
 using KlonsLIB.Components;
+using System.IO;
+using KlonsF;
 
 namespace KlonsM.FormsM
 {
@@ -273,6 +275,7 @@ namespace KlonsM.FormsM
                 dr.BeginEdit();
                 if(dr.M_DOCSRow.XDocType == EDocType.Realizācija ||
                     dr.M_DOCSRow.XDocType == EDocType.Sniegti_pakalpojumi ||
+                    dr.M_DOCSRow.XDocType == EDocType.Pārdošanas_rēķins ||
                     dr.M_DOCSRow.XDocType == EDocType.Pārvietots)
                 {
                     dr.PRICE0 = RoundPrice(dr_item.SELLPRICE);
@@ -582,6 +585,11 @@ namespace KlonsM.FormsM
             return FormM_Items.GetItemId(code);
         }
 
+        public (bool, int?) GetItemTextId(int iditem, int? iditemtext)
+        {
+            return FormM_ItemsTexts.GetItemTextId(iditem, iditem);
+        }
+
         private bool CanEditDocsCurrentCell()
         {
             if (bsDocs.Count == 0 || bsDocs.Current == null) return false;
@@ -654,6 +662,21 @@ namespace KlonsM.FormsM
             if (ret == null) return;
             //var dr = (dgvRows.CurrentRow.DataBoundItem as DataRowView).Row as KlonsMDataSet.M_ROWSRow;
             SetCurrentRowsItemId(ret.Value);
+        }
+
+        public void GetRowItemTextID()
+        {
+            if (!CanEditRowsCurrentCell()) return;
+            var dr_row = (KlonsMDataSet.M_ROWSRow)dgvRows.GetCurrentDataRow();
+            if (dr_row == null) return;
+            int? id_itemtext = dr_row.IsIDITEMTEXTNull() ? null : dr_row.IDITEMTEXT;
+            (bool ret, int? idtext) = GetItemTextId(dr_row.IDITEM, id_itemtext);
+            if (!ret) return;
+            if (idtext == null)
+                dr_row.SetIDITEMTEXTNull();
+            else
+                dr_row.IDITEMTEXT = idtext.Value;
+            dgvRows.InvalidateCell(dgvRows.CurrentCell);
         }
 
         public void SelectDoc(int id)
@@ -731,12 +754,28 @@ namespace KlonsM.FormsM
 
             if (e.ColumnIndex == dgcRowsItemName.Index)
             {
-                int id = (int)e.Value;
-                var table_items = MyData.DataSetKlonsM.M_ITEMS;
-                var dr = table_items.FindByID(id);
-                if (dr == null) return;
-                e.Value = dr.NAME;
-                e.FormattingApplied = true;
+                var dr_row = (KlonsMDataSet.M_ROWSRow)dgvRows.GetDataRow(e.RowIndex);
+                if (dr_row == null)
+                {
+                    return;
+                }
+                int id_item = dr_row.ID;
+                if (dr_row.IsIDITEMTEXTNull())
+                {
+                    var table_items = MyData.DataSetKlonsM.M_ITEMS;
+                    var dr = table_items.FindByID(dr_row.IDITEM);
+                    if (dr == null) return;
+                    e.Value = dr.NAME;
+                    e.FormattingApplied = true;
+                }
+                else
+                {
+                    var table_itemstexts = MyData.DataSetKlonsM.M_ITEMS_TEXTS;
+                    var dr = table_itemstexts.FindByID(dr_row.IDITEMTEXT);
+                    if (dr == null) return;
+                    e.Value = dr.TEXT;
+                    e.FormattingApplied = true;
+                }
             }
             if (e.ColumnIndex == dgcRowsUnits.Index)
             {
@@ -840,6 +879,22 @@ namespace KlonsM.FormsM
                     e.Handled = true;
                     return;
                 }
+                if (colnr == dgcRowsItemName.Index)
+                {
+                    GetRowItemTextID();
+                    e.Handled = true;
+                    return;
+                }
+            }
+            if (e.KeyCode == Keys.F2)
+            {
+                if (!CanEditCurrentDoc()) return;
+                if (colnr == dgcRowsItemName.Index)
+                {
+                    GetRowItemTextID();
+                    e.Handled = true;
+                    return;
+                }
             }
         }
 
@@ -854,6 +909,11 @@ namespace KlonsM.FormsM
             if (colnr == dgcRowsIdItem.Index)
             {
                 GetRowItemID();
+                return;
+            }
+            if (colnr == dgcRowsItemName.Index)
+            {
+                GetRowItemTextID();
                 return;
             }
         }
@@ -1326,6 +1386,42 @@ namespace KlonsM.FormsM
             MyMainForm.ShowInfo("Datu imports pabeigts.", "", this);
         }
 
+        public void DoMakeEInvoice()
+        {
+            var dr_doc = GetGoodCurrentDocRow();
+            if (dr_doc == null) return;
+            if (dr_doc.GetM_ROWSRows().Length == 0)
+            {
+                MyMainForm.ShowWarning("Dokumentam nav izveidoti ieraksti.");
+                return;
+            }
+            var err = DataTasks.CheckDocHeader(dr_doc);
+            if (err.HasErrors)
+            {
+                FormM_ErrorList.ShowErrorList(this, err);
+                return;
+            }
+
+            FileDialog fd = new SaveFileDialog();
+            var folder = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+            fd.InitialDirectory = folder;
+            fd.DefaultExt = "xml";
+            fd.Filter = "XML faili (*.xml)|*.xml";
+            if (fd.ShowDialog(KlonsData.St.MyMainForm) != DialogResult.OK) return;
+            var einvoicedoc = EInvoiceTools.ToEInvoice(dr_doc, true);
+            var xml_text = EInvoiceTools.GetXML(einvoicedoc);
+            try
+            {
+                File.WriteAllText(fd.FileName, xml_text);
+                MyMainForm.ShowInfo("e-Rēķins veiksmīgi saglabāts.");
+            }
+            catch (Exception e)
+            {
+                MyException e1 = new MyException("Neizdevās saglabāt atskaiti.", e);
+                Form_Error.ShowException(KlonsData.St.MyMainForm, e1);
+            }
+        }
+
         private void sgrDocA_EditStarting(object sender, CancelEventArgs e)
         {
             var dr_doc = GetCurrentDocRow();
@@ -1401,5 +1497,11 @@ namespace KlonsM.FormsM
         {
             DoImportRows();
         }
+
+        private void TsiMakeEInvoice_Click(object sender, System.EventArgs e)
+        {
+            DoMakeEInvoice();
+        }
+
     }
 }

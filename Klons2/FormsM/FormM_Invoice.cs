@@ -98,6 +98,14 @@ namespace KlonsM.FormsM
             invoicedata.MainData.Signer = tbSigner.Text;
             invoicedata.MainData.SigningDate = tbDate.Text;
             invoicedata.MainData.ShowCarrier = chShowCarrier.Checked;
+            invoicedata.MainData.ShowSignatures = chShowSignature.Checked;
+            if (!chShowBarcode.Checked)
+            {
+                foreach(var row in invoicedata.RowData)
+                {
+                    row.Code = "";
+                }
+            }
 
             ReportViewerData rd = new ReportViewerData();
 

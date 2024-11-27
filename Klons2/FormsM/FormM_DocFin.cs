@@ -228,6 +228,8 @@ namespace KlonsM.FormsM
                     return "Akts";
                 case EDocType.Saņemti_pakalpojumi:
                 case EDocType.Sniegti_pakalpojumi:
+                case EDocType.Iepirkuma_rēķins:
+                case EDocType.Pārdošanas_rēķins:
                     return "Rēķ";
             }
             return null;

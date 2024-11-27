@@ -9,6 +9,7 @@ using KlonsLIB.Data;
 using KlonsLIB.Misc;
 using System.Globalization;
 using KlonsF.Classes;
+using KlonsLIB;
 
 namespace KlonsM.Classes
 {
@@ -117,7 +118,16 @@ namespace KlonsM.Classes
         public void ReadFrom(KlonsMDataSet.M_ROWSRow dr_row)
         {
             Code = dr_row.M_ITEMSRow.BARCODE;
-            Name = dr_row.M_ITEMSRow.NAME;
+            if (dr_row.IsIDITEMTEXTNull())
+            {
+                Name = dr_row.M_ITEMSRow.NAME;
+            }
+            else
+            {
+                int iditemtext = dr_row.IDITEMTEXT;
+                var dr_text = KlonsData.St.DataSetKlonsM.M_ITEMS_TEXTS.FindByID(iditemtext);
+                Name = dr_text?.TEXT;
+            }
             Unit = dr_row.M_UNITSRow.CODE;
             PVNTag = dr_row.M_PVNRATESRow.CODE;
             Amount = dr_row.AMOUNT;
@@ -186,6 +196,7 @@ namespace KlonsM.Classes
         public bool ShowDiscountColumn { get; set; }
         public bool ShowPVNIdColumn { get; set; }
         public bool ShowCarrier { get; set; }
+        public bool ShowSignatures { get; set; }
 
         private DocAccData DocAccData = null;
 

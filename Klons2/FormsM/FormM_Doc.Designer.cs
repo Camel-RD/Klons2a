@@ -149,6 +149,7 @@ namespace KlonsM.FormsM
             tsbFindPrev = new System.Windows.Forms.ToolStripButton();
             tsbFind = new System.Windows.Forms.ToolStripTextBox();
             tsbFindNext = new System.Windows.Forms.ToolStripButton();
+            tsiMakeEInvoice = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)mySplitContainer1).BeginInit();
             mySplitContainer1.Panel1.SuspendLayout();
             mySplitContainer1.Panel2.SuspendLayout();
@@ -191,7 +192,7 @@ namespace KlonsM.FormsM
             // mySplitContainer1.Panel2
             // 
             mySplitContainer1.Panel2.Controls.Add(dgvRows);
-            mySplitContainer1.Size = new System.Drawing.Size(1078, 483);
+            mySplitContainer1.Size = new System.Drawing.Size(1078, 489);
             mySplitContainer1.SplitterDistance = 289;
             mySplitContainer1.TabIndex = 2;
             // 
@@ -199,11 +200,10 @@ namespace KlonsM.FormsM
             // 
             menuStrip1.Dock = System.Windows.Forms.DockStyle.None;
             menuStrip1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            menuStrip1.ImageScalingSize = new System.Drawing.Size(16, 16);
             menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { dokumentsToolStripMenuItem });
             menuStrip1.Location = new System.Drawing.Point(9, 9);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new System.Drawing.Size(99, 25);
+            menuStrip1.Size = new System.Drawing.Size(219, 25);
             menuStrip1.TabIndex = 4;
             menuStrip1.Text = "menuStrip1";
             menuStrip1.Visible = false;
@@ -347,10 +347,10 @@ namespace KlonsM.FormsM
             // 
             // izdrukaiToolStripMenuItem
             // 
-            izdrukaiToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { pavadzīmeToolStripMenuItem });
+            izdrukaiToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { pavadzīmeToolStripMenuItem, tsiMakeEInvoice });
             izdrukaiToolStripMenuItem.Name = "izdrukaiToolStripMenuItem";
             izdrukaiToolStripMenuItem.Size = new System.Drawing.Size(330, 22);
-            izdrukaiToolStripMenuItem.Text = "Izdrukai";
+            izdrukaiToolStripMenuItem.Text = "Izdrukai vai izsūtīšanai";
             // 
             // pavadzīmeToolStripMenuItem
             // 
@@ -884,7 +884,7 @@ namespace KlonsM.FormsM
             dgvRows.Name = "dgvRows";
             dgvRows.RowHeadersWidth = 30;
             dgvRows.ShowCellToolTips = false;
-            dgvRows.Size = new System.Drawing.Size(1078, 190);
+            dgvRows.Size = new System.Drawing.Size(1078, 196);
             dgvRows.TabIndex = 0;
             dgvRows.MyKeyDown += dgvRows_MyKeyDown;
             dgvRows.MyCheckForChanges += dgvRows_MyCheckForChanges;
@@ -1117,9 +1117,8 @@ namespace KlonsM.FormsM
             bNav.DeleteItem = null;
             bNav.Dock = System.Windows.Forms.DockStyle.Bottom;
             bNav.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            bNav.ImageScalingSize = new System.Drawing.Size(16, 16);
             bNav.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { bindingNavigatorMoveFirstItem, bindingNavigatorMovePreviousItem, bindingNavigatorSeparator, bindingNavigatorPositionItem, bindingNavigatorCountItem, bindingNavigatorSeparator1, bindingNavigatorMoveNextItem, bindingNavigatorMoveLastItem, bindingNavigatorSeparator2, bniNew, bniDelete, bniSave, tsbFindPrev, tsbFind, tsbFindNext });
-            bNav.Location = new System.Drawing.Point(0, 483);
+            bNav.Location = new System.Drawing.Point(0, 489);
             bNav.MoveFirstItem = bindingNavigatorMoveFirstItem;
             bNav.MoveLastItem = bindingNavigatorMoveLastItem;
             bNav.MoveNextItem = bindingNavigatorMoveNextItem;
@@ -1127,7 +1126,7 @@ namespace KlonsM.FormsM
             bNav.Name = "bNav";
             bNav.PositionItem = bindingNavigatorPositionItem;
             bNav.SaveItem = bniSave;
-            bNav.Size = new System.Drawing.Size(1078, 31);
+            bNav.Size = new System.Drawing.Size(1078, 25);
             bNav.TabIndex = 3;
             bNav.Text = "myBindingNavigator1";
             bNav.ItemDeleting += bNav_ItemDeleting;
@@ -1135,7 +1134,7 @@ namespace KlonsM.FormsM
             // bindingNavigatorCountItem
             // 
             bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            bindingNavigatorCountItem.Size = new System.Drawing.Size(50, 28);
+            bindingNavigatorCountItem.Size = new System.Drawing.Size(50, 22);
             bindingNavigatorCountItem.Text = " no {0}";
             bindingNavigatorCountItem.ToolTipText = "Ierakstu skaits";
             // 
@@ -1145,7 +1144,7 @@ namespace KlonsM.FormsM
             bindingNavigatorMoveFirstItem.Image = (System.Drawing.Image)resources.GetObject("bindingNavigatorMoveFirstItem.Image");
             bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
             bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(28, 28);
+            bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(23, 22);
             bindingNavigatorMoveFirstItem.Text = "Iet uz pirmo";
             // 
             // bindingNavigatorMovePreviousItem
@@ -1154,13 +1153,13 @@ namespace KlonsM.FormsM
             bindingNavigatorMovePreviousItem.Image = (System.Drawing.Image)resources.GetObject("bindingNavigatorMovePreviousItem.Image");
             bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
             bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(28, 28);
+            bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(23, 22);
             bindingNavigatorMovePreviousItem.Text = "Iet uz iepriekšējo";
             // 
             // bindingNavigatorSeparator
             // 
             bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 31);
+            bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 25);
             // 
             // bindingNavigatorPositionItem
             // 
@@ -1174,7 +1173,7 @@ namespace KlonsM.FormsM
             // bindingNavigatorSeparator1
             // 
             bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
-            bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 31);
+            bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
             // bindingNavigatorMoveNextItem
             // 
@@ -1182,7 +1181,7 @@ namespace KlonsM.FormsM
             bindingNavigatorMoveNextItem.Image = (System.Drawing.Image)resources.GetObject("bindingNavigatorMoveNextItem.Image");
             bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
             bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(28, 28);
+            bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 22);
             bindingNavigatorMoveNextItem.Text = "Iet uz nākošo";
             // 
             // bindingNavigatorMoveLastItem
@@ -1191,20 +1190,20 @@ namespace KlonsM.FormsM
             bindingNavigatorMoveLastItem.Image = (System.Drawing.Image)resources.GetObject("bindingNavigatorMoveLastItem.Image");
             bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
             bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(28, 28);
+            bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 22);
             bindingNavigatorMoveLastItem.Text = "Iet uz pēdējo";
             // 
             // bindingNavigatorSeparator2
             // 
             bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
-            bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 31);
+            bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
             // 
             // bniNew
             // 
             bniNew.Image = (System.Drawing.Image)resources.GetObject("bniNew.Image");
             bniNew.Name = "bniNew";
             bniNew.RightToLeftAutoMirrorImage = true;
-            bniNew.Size = new System.Drawing.Size(74, 28);
+            bniNew.Size = new System.Drawing.Size(66, 22);
             bniNew.Text = "Jauns";
             bniNew.Click += bniNew_Click;
             // 
@@ -1213,7 +1212,7 @@ namespace KlonsM.FormsM
             bniDelete.Image = (System.Drawing.Image)resources.GetObject("bniDelete.Image");
             bniDelete.Name = "bniDelete";
             bniDelete.RightToLeftAutoMirrorImage = true;
-            bniDelete.Size = new System.Drawing.Size(72, 28);
+            bniDelete.Size = new System.Drawing.Size(64, 22);
             bniDelete.Text = "Dzēst";
             bniDelete.Click += bniDelete_Click;
             // 
@@ -1221,7 +1220,7 @@ namespace KlonsM.FormsM
             // 
             bniSave.Image = (System.Drawing.Image)resources.GetObject("bniSave.Image");
             bniSave.Name = "bniSave";
-            bniSave.Size = new System.Drawing.Size(92, 28);
+            bniSave.Size = new System.Drawing.Size(84, 22);
             bniSave.Text = "Saglabāt";
             bniSave.Click += bniSave_Click;
             // 
@@ -1231,7 +1230,7 @@ namespace KlonsM.FormsM
             tsbFindPrev.Image = (System.Drawing.Image)resources.GetObject("tsbFindPrev.Image");
             tsbFindPrev.Name = "tsbFindPrev";
             tsbFindPrev.RightToLeftAutoMirrorImage = true;
-            tsbFindPrev.Size = new System.Drawing.Size(28, 28);
+            tsbFindPrev.Size = new System.Drawing.Size(23, 22);
             tsbFindPrev.Text = "Iet uz iepriekšējo";
             tsbFindPrev.Click += tsbFindPrev_Click;
             // 
@@ -1239,7 +1238,7 @@ namespace KlonsM.FormsM
             // 
             tsbFind.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             tsbFind.Name = "tsbFind";
-            tsbFind.Size = new System.Drawing.Size(100, 31);
+            tsbFind.Size = new System.Drawing.Size(100, 25);
             tsbFind.ToolTipText = "meklēt tekstu kolonnā";
             tsbFind.Enter += tsbFind_Enter;
             tsbFind.KeyPress += tsbFind_KeyPress;
@@ -1250,9 +1249,16 @@ namespace KlonsM.FormsM
             tsbFindNext.Image = (System.Drawing.Image)resources.GetObject("tsbFindNext.Image");
             tsbFindNext.Name = "tsbFindNext";
             tsbFindNext.RightToLeftAutoMirrorImage = true;
-            tsbFindNext.Size = new System.Drawing.Size(28, 28);
+            tsbFindNext.Size = new System.Drawing.Size(23, 22);
             tsbFindNext.Text = "Iet uz nākošo";
             tsbFindNext.Click += tsbFindNext_Click;
+            // 
+            // tsiMakeEInvoice
+            // 
+            tsiMakeEInvoice.Name = "tsiMakeEInvoice";
+            tsiMakeEInvoice.Size = new System.Drawing.Size(145, 22);
+            tsiMakeEInvoice.Text = "E-Rēķins";
+            tsiMakeEInvoice.Click += TsiMakeEInvoice_Click;
             // 
             // FormM_Doc
             // 
@@ -1408,5 +1414,6 @@ namespace KlonsM.FormsM
         private System.Windows.Forms.DataGridViewTextBoxColumn dgcRowsId;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgcRowsIdDoc;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgcRowsIdSeq;
+        private System.Windows.Forms.ToolStripMenuItem tsiMakeEInvoice;
     }
 }

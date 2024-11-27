@@ -28,6 +28,7 @@ namespace KlonsA.Classes
 
         public decimal IM = 1667.0M;
         public static readonly DateTime ProgressiveIINStartDate = new DateTime(2018, 1, 1);
+        public static readonly DateTime ProgressiveIINEndDate = new DateTime(2024, 12, 31);
 
         public PayFx(bool hasProgressiveIIN = true)
         {
@@ -117,7 +118,7 @@ namespace KlonsA.Classes
 
             if (HasTaxDoc)
             {
-                if (Pay + PayNs <= IM)
+                if (IM == 0M || Pay + PayNs <= IM)
                 {
                     UsedIinEx = Math.Min(Pay + PayNs - DNS, IinEx);
                     IIN = (Pay + PayNs - DNS - UsedIinEx) * Ir;
@@ -168,7 +169,7 @@ namespace KlonsA.Classes
 
             if (HasTaxDoc)
             {
-                if (Pay + PayNs <= IM)
+                if (IM == 0M || Pay + PayNs <= IM)
                 {
                     UsedIinEx = Math.Min(Pay + PayNs - DNS, IinEx);
                     IIN = (Pay + PayNs - DNS - UsedIinEx) * Ir;
@@ -719,6 +720,7 @@ namespace KlonsA.Classes
         public static decimal GetIINMargin(DateTime dt)
         {
             if (dt < ProgressiveIINStartDate) return 0.0M;
+            if (dt > ProgressiveIINEndDate) return 8775.0M;
             else return 1667.0M;
         }
 

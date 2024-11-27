@@ -59,6 +59,7 @@
     <EmbeddedResource Include="SQL\SQLV003.txt" />
     <EmbeddedResource Include="SQL\SQLV012.txt" />
     <EmbeddedResource Include="SQL\SQLV023.txt" />
+    <EmbeddedResource Include="SQL\SQLV024.txt" />
     <Content Include="TODO-M.txt" />
     <Content Include="Reports\Report_PVNZ_1.rdlc" />
     <Content Include="Reports\Report_Apgr_BilFormula.rdlc" />
@@ -173,6 +174,7 @@
     <PackageReference Include="NPOI" Version="2.7.1" />
     <PackageReference Include="Portable.BouncyCastle" Version="1.9.0" />
     <PackageReference Include="SharpZipLib" Version="1.4.2" />
+    <PackageReference Include="UblSharp" Version="1.1.1" />
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="FormsF\Form_OpsFilter.Designer - Copy.cs" />
@@ -183,6 +185,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Remove="SQL\SQLV023.txt" />
+    <None Remove="SQL\SQLV024.txt" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="SourceGrid">

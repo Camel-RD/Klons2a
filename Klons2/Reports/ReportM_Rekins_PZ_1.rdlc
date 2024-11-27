@@ -155,6 +155,10 @@
           <DataField>ShowPVNIdColumn</DataField>
           <rd:TypeName>System.Boolean</rd:TypeName>
         </Field>
+        <Field Name="ShowSignatures">
+          <DataField>ShowSignatures</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
         <Field Name="Signer">
           <DataField>Signer</DataField>
           <rd:TypeName>System.String</rd:TypeName>
@@ -2375,7 +2379,6 @@
                             <PaddingTop>2pt</PaddingTop>
                           </Style>
                         </Textbox>
-                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                     <TablixCell>
@@ -5541,10 +5544,13 @@
             </TablixRowHierarchy>
             <KeepTogether>true</KeepTogether>
             <DataSetName>MainData</DataSetName>
-            <Top>12.22981cm</Top>
+            <Top>12.15726cm</Top>
             <Height>4.4032cm</Height>
             <Width>17.1312cm</Width>
             <ZIndex>5</ZIndex>
+            <Visibility>
+              <Hidden>=First(Fields!ShowSignatures.Value, "MainData")=False</Hidden>
+            </Visibility>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -5731,8 +5737,40 @@
               </Border>
             </Style>
           </Tablix>
+          <Textbox Name="Textbox32">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Dokuments ir sagatavots elektroniski un, pamatojoties uz savstarpējo vienošanos, derīgs bez paraksta.</Value>
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox32</rd:DefaultName>
+            <Top>16.6416cm</Top>
+            <Height>0.6cm</Height>
+            <Width>17.1312cm</Width>
+            <ZIndex>7</ZIndex>
+            <Visibility>
+              <Hidden>=First(Fields!ShowSignatures.Value, "MainData")=True</Hidden>
+            </Visibility>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
         </ReportItems>
-        <Height>16.95051cm</Height>
+        <Height>17.32093cm</Height>
         <Style />
       </Body>
       <Width>17.65888cm</Width>

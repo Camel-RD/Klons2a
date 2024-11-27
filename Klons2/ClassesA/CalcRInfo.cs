@@ -6,6 +6,7 @@ using KlonsF.DataSets;
 using KlonsLIB.Misc;
 using KlonsLIB.Data;
 using KlonsF.Classes;
+using Org.BouncyCastle.Crypto.Tls;
 
 namespace KlonsA.Classes
 {
@@ -58,6 +59,7 @@ namespace KlonsA.Classes
         }
 
         public static DateTime ProgressiveIINStartDate = new DateTime(2018, 1, 1);
+        public static DateTime ProgressiveIINEndDate = new DateTime(2024, 12, 31);
 
         public void CalcR(SalarySheetRowInfo sr, DateTime dt1, DateTime dt2)
         {
@@ -163,7 +165,7 @@ namespace KlonsA.Classes
         {
             wt.UseProgresiveIINRate = dt >= ProgressiveIINStartDate;
             wt.HasTaxDoc = !string.IsNullOrEmpty(drpr.TAXDOC_NO);
-            if (dt < ProgressiveIINStartDate)
+            if (dt < ProgressiveIINStartDate || dt > ProgressiveIINEndDate)
             {
                 wt.RateIIN = drl.IIN_LIKME;
                 wt.RateIIN2 = drl.IIN_LIKME;
@@ -237,10 +239,12 @@ namespace KlonsA.Classes
                     wt.ExRetaliation = drl.REPR;
 
                 if (drpr.PENSIONER == 1 || drpr.PENSIONER_SP == 1)
+                {
                     wt.ExUntaxedMinimum = 0.0M;
+                }
                 else
                 {
-                    if (dt < ProgressiveIINStartDate)
+                    if (dt < ProgressiveIINStartDate || dt > ProgressiveIINEndDate)
                     {
                         wt.ExUntaxedMinimum = drl.NEPLIEK_MIN;
                     }
@@ -278,10 +282,12 @@ namespace KlonsA.Classes
                     wt.ExRetaliation = drl.REPR;
 
                 if (drpr.PENSIONER == 1 || drpr.PENSIONER_SP == 1)
+                {
                     wt.ExUntaxedMinimum = 0.0M;
+                }
                 else
                 {
-                    if (dt1 < ProgressiveIINStartDate)
+                    if (dt1 < ProgressiveIINStartDate || dt1 > ProgressiveIINEndDate)
                     {
                         wt.ExUntaxedMinimum = drl.NEPLIEK_MIN;
                     }

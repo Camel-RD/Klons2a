@@ -31,1748 +31,1552 @@ namespace KlonsF
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Main));
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.miSistēma = new System.Windows.Forms.ToolStripMenuItem();
-            this.miNomainītSaimniecību = new System.Windows.Forms.ToolStripMenuItem();
-            this.miKāStrādāsim = new System.Windows.Forms.ToolStripMenuItem();
-            this.miShowWindowList = new System.Windows.Forms.ToolStripMenuItem();
-            this.miFDatuLabojumuReģistri = new System.Windows.Forms.ToolStripMenuItem();
-            this.miFDokumentuLabojumi = new System.Windows.Forms.ToolStripMenuItem();
-            this.miFKontējumuLabojumi = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator10 = new System.Windows.Forms.ToolStripSeparator();
-            this.miFMeklētIzmaiņas = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator11 = new System.Windows.Forms.ToolStripSeparator();
-            this.miFDatuEksports = new System.Windows.Forms.ToolStripMenuItem();
-            this.miFDatuImports = new System.Windows.Forms.ToolStripMenuItem();
-            this.miDatuBāzesImports = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator9 = new System.Windows.Forms.ToolStripSeparator();
-            this.miAtvērtProgrammasMapi = new System.Windows.Forms.ToolStripMenuItem();
-            this.miAtvērtRezervesKopijuMapi = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator21 = new System.Windows.Forms.ToolStripSeparator();
-            this.miFIzmestNesaglabātāsIzmaiņas = new System.Windows.Forms.ToolStripMenuItem();
-            this.miRejectChangesF = new System.Windows.Forms.ToolStripMenuItem();
-            this.miRejectChangesA = new System.Windows.Forms.ToolStripMenuItem();
-            this.miRejectChangesP = new System.Windows.Forms.ToolStripMenuItem();
-            this.miRejectChangesM = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator8 = new System.Windows.Forms.ToolStripSeparator();
-            this.miRejectChangesAll = new System.Windows.Forms.ToolStripMenuItem();
-            this.atkārtotiIelādētDatusNoDatuBāzesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.miReloadDataF = new System.Windows.Forms.ToolStripMenuItem();
-            this.miReloadDataA = new System.Windows.Forms.ToolStripMenuItem();
-            this.miReloadDataM = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator25 = new System.Windows.Forms.ToolStripSeparator();
-            this.miAizvērt = new System.Windows.Forms.ToolStripMenuItem();
-            this.miFReģistri = new System.Windows.Forms.ToolStripMenuItem();
-            this.miFDokumentim = new System.Windows.Forms.ToolStripMenuItem();
-            this.miFIeraksti = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.miFSākumaAtlikumi = new System.Windows.Forms.ToolStripMenuItem();
-            this.miFNeapmaksātieRēķini = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.miFKontuPlāns = new System.Windows.Forms.ToolStripMenuItem();
-            this.miFPVNPazīmes = new System.Windows.Forms.ToolStripMenuItem();
-            this.miFKontējumaPazīmes = new System.Windows.Forms.ToolStripMenuItem();
-            this.miFPersonas = new System.Windows.Forms.ToolStripMenuItem();
-            this.miFDokumentuVeidi = new System.Windows.Forms.ToolStripMenuItem();
-            this.miFBankuSaraksts = new System.Windows.Forms.ToolStripMenuItem();
-            this.miFValūtuKursi = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
-            this.miFKontējumuKontrole = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
-            this.miZiņasParUzņemumu = new System.Windows.Forms.ToolStripMenuItem();
-            this.miFAtskaites = new System.Windows.Forms.ToolStripMenuItem();
-            this.miFPVN = new System.Windows.Forms.ToolStripMenuItem();
-            this.miFPVNKopsavilkums = new System.Windows.Forms.ToolStripMenuItem();
-            this.miFPVNDeklarācija = new System.Windows.Forms.ToolStripMenuItem();
-            this.miFŽurnāls = new System.Windows.Forms.ToolStripMenuItem();
-            this.miFPVNSummuKontrole = new System.Windows.Forms.ToolStripMenuItem();
-            this.miFAvansaNorēķins = new System.Windows.Forms.ToolStripMenuItem();
-            this.miFApgrozijumaPārskati = new System.Windows.Forms.ToolStripMenuItem();
-            this.miFBilance = new System.Windows.Forms.ToolStripMenuItem();
-            this.miFPaMēnešiem = new System.Windows.Forms.ToolStripMenuItem();
-            this.miFNaudasPlūsma = new System.Windows.Forms.ToolStripMenuItem();
-            this.miFDarijumuŽurnāls = new System.Windows.Forms.ToolStripMenuItem();
-            this.miFPilnais = new System.Windows.Forms.ToolStripMenuItem();
-            this.miFKontuKorespondence = new System.Windows.Forms.ToolStripMenuItem();
-            this.miFValūtasKontuAtskaites = new System.Windows.Forms.ToolStripMenuItem();
-            this.miFDarijumuŽurnāls1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.miFNaudasPlūsma1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.miFKasesGrāmata = new System.Windows.Forms.ToolStripMenuItem();
-            this.miFPersonuPārskats = new System.Windows.Forms.ToolStripMenuItem();
-            this.miFSkaidrasNaudasDarijumi = new System.Windows.Forms.ToolStripMenuItem();
-            this.miFBilance1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.miFBilaneAtskaite = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
-            this.miFBilanceFormulas = new System.Windows.Forms.ToolStripMenuItem();
-            this.miFEdsTp = new System.Windows.Forms.ToolStripMenuItem();
-            this.miAAlgas = new System.Windows.Forms.ToolStripMenuItem();
-            this.miAAtlasītDatus = new System.Windows.Forms.ToolStripMenuItem();
-            this.miRepStats = new System.Windows.Forms.ToolStripMenuItem();
-            this.miADarbinieki = new System.Windows.Forms.ToolStripMenuItem();
-            this.miADarbiniekuDati = new System.Windows.Forms.ToolStripMenuItem();
-            this.miADarbinieki1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.miAstrādājošoPārskats = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator15 = new System.Windows.Forms.ToolStripSeparator();
-            this.miNeapliekamaisMinimums = new System.Windows.Forms.ToolStripMenuItem();
-            this.miAIzmaiņasNodokļuMaksātājaGrāmatiņāsnoEDS = new System.Windows.Forms.ToolStripMenuItem();
-            this.miADarbaNespējasLapas = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator16 = new System.Windows.Forms.ToolStripSeparator();
-            this.miANotikumuIzklāsts = new System.Windows.Forms.ToolStripMenuItem();
-            this.miANeizmantotāsAtvaļinājumaDienas = new System.Windows.Forms.ToolStripMenuItem();
-            this.miAStruktūrvienības = new System.Windows.Forms.ToolStripMenuItem();
-            this.miADatiParPerioduPirmsUzskaitesSākšanas = new System.Windows.Forms.ToolStripMenuItem();
-            this.miADarbaLaikaUzskaite = new System.Windows.Forms.ToolStripMenuItem();
-            this.miADarbiniekaDarbaLaikaUzskaitesDati = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator14 = new System.Windows.Forms.ToolStripSeparator();
-            this.miADarbaLaikaPlānuSaraksts = new System.Windows.Forms.ToolStripMenuItem();
-            this.miADarbaLaikaPlāns = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator12 = new System.Windows.Forms.ToolStripSeparator();
-            this.miADarbaLaikaUzskaitesLapuŠabloni = new System.Windows.Forms.ToolStripMenuItem();
-            this.miADarbaLaikaUzskaitesLapas = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator13 = new System.Windows.Forms.ToolStripSeparator();
-            this.miADarbaLaikaUzskaitesLapa = new System.Windows.Forms.ToolStripMenuItem();
-            this.miAAlguAprēķins = new System.Windows.Forms.ToolStripMenuItem();
-            this.miAAlgasAprēķinaLapuŠabloni = new System.Windows.Forms.ToolStripMenuItem();
-            this.miAAlgasAprēķinaLapuSaraksts = new System.Windows.Forms.ToolStripMenuItem();
-            this.miAAlgasAprēķinaLapas = new System.Windows.Forms.ToolStripMenuItem();
-            this.miAGabaldarbs = new System.Windows.Forms.ToolStripMenuItem();
-            this.miADarbaUzskaite = new System.Windows.Forms.ToolStripMenuItem();
-            this.miAKkatalogs = new System.Windows.Forms.ToolStripMenuItem();
-            this.miAKatalogaStruktūra = new System.Windows.Forms.ToolStripMenuItem();
-            this.miAMaksājumuSaraksti = new System.Windows.Forms.ToolStripMenuItem();
-            this.miAPārskatsPaPersonām = new System.Windows.Forms.ToolStripMenuItem();
-            this.miASarakstuŠabloni = new System.Windows.Forms.ToolStripMenuItem();
-            this.miAMakasājumuSaraksti1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.miAFiziskasPersonas = new System.Windows.Forms.ToolStripMenuItem();
-            this.miAPersonuSaraksts = new System.Windows.Forms.ToolStripMenuItem();
-            this.miAMaksājumi = new System.Windows.Forms.ToolStripMenuItem();
-            this.miADažādiSaraksti = new System.Windows.Forms.ToolStripMenuItem();
-            this.miAPapildusNotikumuKodi = new System.Windows.Forms.ToolStripMenuItem();
-            this.miALikmes = new System.Windows.Forms.ToolStripMenuItem();
-            this.miATeritoriālieKodi = new System.Windows.Forms.ToolStripMenuItem();
-            this.miAProfesijuKlasifikators = new System.Windows.Forms.ToolStripMenuItem();
-            this.miAZiņuKodi = new System.Windows.Forms.ToolStripMenuItem();
-            this.miAIenākumuVeidi = new System.Windows.Forms.ToolStripMenuItem();
-            this.miASvētkuDienas = new System.Windows.Forms.ToolStripMenuItem();
-            this.miAKalendārs = new System.Windows.Forms.ToolStripMenuItem();
-            this.miABankas = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator26 = new System.Windows.Forms.ToolStripSeparator();
-            this.miAAtskaites = new System.Windows.Forms.ToolStripMenuItem();
-            this.miAKopsavilkums = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
-            this.miAZiņasParDarbaŅēmējiem = new System.Windows.Forms.ToolStripMenuItem();
-            this.miAZiņojumsParVSAOI = new System.Windows.Forms.ToolStripMenuItem();
-            this.miAPaziņojumsParFiziskajāmPersonāmIzmaksātajāmSummāmkopsavilkums = new System.Windows.Forms.ToolStripMenuItem();
-            this.miPamatlīdzekļi = new System.Windows.Forms.ToolStripMenuItem();
-            this.miPPamatlīdzekļi = new System.Windows.Forms.ToolStripMenuItem();
-            this.miPNotikumi = new System.Windows.Forms.ToolStripMenuItem();
-            this.miPTaxDeprecYR = new System.Windows.Forms.ToolStripMenuItem();
-            this.miPPamatlīdzekļuKategorijas = new System.Windows.Forms.ToolStripMenuItem();
-            this.miPNolietojumaKategorijas = new System.Windows.Forms.ToolStripMenuItem();
-            this.miPNolietojumaKategorijasNodokļuVajadzībām = new System.Windows.Forms.ToolStripMenuItem();
-            this.miPStruktūrvienības = new System.Windows.Forms.ToolStripMenuItem();
-            this.miPAtrašanāsVietas = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator27 = new System.Windows.Forms.ToolStripSeparator();
-            this.miPAtskaites = new System.Windows.Forms.ToolStripMenuItem();
-            this.miPKustībasPārskats = new System.Windows.Forms.ToolStripMenuItem();
-            this.miPNnolietojumsNodokļuVajadzībāmPaKategorijām = new System.Windows.Forms.ToolStripMenuItem();
-            this.miMNoliktava = new System.Windows.Forms.ToolStripMenuItem();
-            this.miMDokumenti = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator17 = new System.Windows.Forms.ToolStripSeparator();
-            this.miMNoliktavasPartneri = new System.Windows.Forms.ToolStripMenuItem();
-            this.miMArtikuli = new System.Windows.Forms.ToolStripMenuItem();
-            this.miMArtikuluKategorijas = new System.Windows.Forms.ToolStripMenuItem();
-            this.miCenasUnAtlaides = new System.Windows.Forms.ToolStripMenuItem();
-            this.miCenuLapuSaraksts = new System.Windows.Forms.ToolStripMenuItem();
-            this.miCenuLapa = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator22 = new System.Windows.Forms.ToolStripSeparator();
-            this.miAtlaižuLapuSaraksts = new System.Windows.Forms.ToolStripMenuItem();
-            this.miAtlaižuLapa = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator18 = new System.Windows.Forms.ToolStripSeparator();
-            this.miMInventarizācijasDokumenti = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator19 = new System.Windows.Forms.ToolStripSeparator();
-            this.miMPārskati = new System.Windows.Forms.ToolStripMenuItem();
-            this.miMArtikulaKustībasPārskats = new System.Windows.Forms.ToolStripMenuItem();
-            this.miMIzlietojumaPārskats = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator23 = new System.Windows.Forms.ToolStripSeparator();
-            this.miMKustībaPaArtikuliem = new System.Windows.Forms.ToolStripMenuItem();
-            this.miMKustībaPaArtikuluKategorijām = new System.Windows.Forms.ToolStripMenuItem();
-            this.miMKustībaPaPiegādātājiem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator24 = new System.Windows.Forms.ToolStripSeparator();
-            this.miMRealizācijasPašizmaksa = new System.Windows.Forms.ToolStripMenuItem();
-            this.miMRealizācijasPašizmaksaPaDokumentiem = new System.Windows.Forms.ToolStripMenuItem();
-            this.miMRīki = new System.Windows.Forms.ToolStripMenuItem();
-            this.miMPilnsPārrēķins = new System.Windows.Forms.ToolStripMenuItem();
-            this.miMAtlikumuPārrēķins = new System.Windows.Forms.ToolStripMenuItem();
-            this.miMIsGonePārrēķins = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator20 = new System.Windows.Forms.ToolStripSeparator();
-            this.miMDažādiSaraksti = new System.Windows.Forms.ToolStripMenuItem();
-            this.miMKontuPlāns = new System.Windows.Forms.ToolStripMenuItem();
-            this.miMDarijumuVeidi = new System.Windows.Forms.ToolStripMenuItem();
-            this.miMNorēķinuVeidi = new System.Windows.Forms.ToolStripMenuItem();
-            this.miPartneruKategorijas = new System.Windows.Forms.ToolStripMenuItem();
-            this.miMValstis = new System.Windows.Forms.ToolStripMenuItem();
-            this.miMBankas = new System.Windows.Forms.ToolStripMenuItem();
-            this.miMKontēšanasShēma = new System.Windows.Forms.ToolStripMenuItem();
-            this.miMPVNAprēķinaAtsauces = new System.Windows.Forms.ToolStripMenuItem();
-            this.miMParams = new System.Windows.Forms.ToolStripMenuItem();
-            this.miLogi = new System.Windows.Forms.ToolStripMenuItem();
-            this.miInfo = new System.Windows.Forms.ToolStripMenuItem();
-            this.miFApraksts = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
-            this.miParProgrammu = new System.Windows.Forms.ToolStripMenuItem();
-            this.miCloseMDIForm = new System.Windows.Forms.ToolStripMenuItem();
-            this.myToolStrip = new System.Windows.Forms.ToolStrip();
-            this.aDownloader1 = new KlonsLIB.Components.ADownloader();
-            this.tsWindowList = new System.Windows.Forms.ToolStrip();
-            this.myStyleDefs = new KlonsP.Classes.MyStyleDefs();
-            this.menuStrip1.SuspendLayout();
-            this.SuspendLayout();
+            menuStrip1 = new System.Windows.Forms.MenuStrip();
+            miSistēma = new System.Windows.Forms.ToolStripMenuItem();
+            miNomainītSaimniecību = new System.Windows.Forms.ToolStripMenuItem();
+            miKāStrādāsim = new System.Windows.Forms.ToolStripMenuItem();
+            miShowWindowList = new System.Windows.Forms.ToolStripMenuItem();
+            miFDatuLabojumuReģistri = new System.Windows.Forms.ToolStripMenuItem();
+            miFDokumentuLabojumi = new System.Windows.Forms.ToolStripMenuItem();
+            miFKontējumuLabojumi = new System.Windows.Forms.ToolStripMenuItem();
+            toolStripSeparator10 = new System.Windows.Forms.ToolStripSeparator();
+            miFMeklētIzmaiņas = new System.Windows.Forms.ToolStripMenuItem();
+            toolStripSeparator11 = new System.Windows.Forms.ToolStripSeparator();
+            miFDatuEksports = new System.Windows.Forms.ToolStripMenuItem();
+            miFDatuImports = new System.Windows.Forms.ToolStripMenuItem();
+            miDatuBāzesImports = new System.Windows.Forms.ToolStripMenuItem();
+            toolStripSeparator9 = new System.Windows.Forms.ToolStripSeparator();
+            miAtvērtProgrammasMapi = new System.Windows.Forms.ToolStripMenuItem();
+            miAtvērtRezervesKopijuMapi = new System.Windows.Forms.ToolStripMenuItem();
+            toolStripSeparator21 = new System.Windows.Forms.ToolStripSeparator();
+            miFIzmestNesaglabātāsIzmaiņas = new System.Windows.Forms.ToolStripMenuItem();
+            miRejectChangesF = new System.Windows.Forms.ToolStripMenuItem();
+            miRejectChangesA = new System.Windows.Forms.ToolStripMenuItem();
+            miRejectChangesP = new System.Windows.Forms.ToolStripMenuItem();
+            miRejectChangesM = new System.Windows.Forms.ToolStripMenuItem();
+            toolStripSeparator8 = new System.Windows.Forms.ToolStripSeparator();
+            miRejectChangesAll = new System.Windows.Forms.ToolStripMenuItem();
+            atkārtotiIelādētDatusNoDatuBāzesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            miReloadDataF = new System.Windows.Forms.ToolStripMenuItem();
+            miReloadDataA = new System.Windows.Forms.ToolStripMenuItem();
+            miReloadDataM = new System.Windows.Forms.ToolStripMenuItem();
+            toolStripSeparator25 = new System.Windows.Forms.ToolStripSeparator();
+            miAizvērt = new System.Windows.Forms.ToolStripMenuItem();
+            miFReģistri = new System.Windows.Forms.ToolStripMenuItem();
+            miFDokumentim = new System.Windows.Forms.ToolStripMenuItem();
+            miFIeraksti = new System.Windows.Forms.ToolStripMenuItem();
+            toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            miFSākumaAtlikumi = new System.Windows.Forms.ToolStripMenuItem();
+            miFNeapmaksātieRēķini = new System.Windows.Forms.ToolStripMenuItem();
+            toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            miFKontuPlāns = new System.Windows.Forms.ToolStripMenuItem();
+            miFPVNPazīmes = new System.Windows.Forms.ToolStripMenuItem();
+            miFKontējumaPazīmes = new System.Windows.Forms.ToolStripMenuItem();
+            miFPersonas = new System.Windows.Forms.ToolStripMenuItem();
+            miFDokumentuVeidi = new System.Windows.Forms.ToolStripMenuItem();
+            miFBankuSaraksts = new System.Windows.Forms.ToolStripMenuItem();
+            miFValūtuKursi = new System.Windows.Forms.ToolStripMenuItem();
+            toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            miFKontējumuKontrole = new System.Windows.Forms.ToolStripMenuItem();
+            toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
+            miZiņasParUzņemumu = new System.Windows.Forms.ToolStripMenuItem();
+            miFAtskaites = new System.Windows.Forms.ToolStripMenuItem();
+            miFPVN = new System.Windows.Forms.ToolStripMenuItem();
+            miFPVNKopsavilkums = new System.Windows.Forms.ToolStripMenuItem();
+            miFPVNDeklarācija = new System.Windows.Forms.ToolStripMenuItem();
+            miFŽurnāls = new System.Windows.Forms.ToolStripMenuItem();
+            miFPVNSummuKontrole = new System.Windows.Forms.ToolStripMenuItem();
+            miFAvansaNorēķins = new System.Windows.Forms.ToolStripMenuItem();
+            miFApgrozijumaPārskati = new System.Windows.Forms.ToolStripMenuItem();
+            miFBilance = new System.Windows.Forms.ToolStripMenuItem();
+            miFPaMēnešiem = new System.Windows.Forms.ToolStripMenuItem();
+            miFNaudasPlūsma = new System.Windows.Forms.ToolStripMenuItem();
+            miFDarijumuŽurnāls = new System.Windows.Forms.ToolStripMenuItem();
+            miFPilnais = new System.Windows.Forms.ToolStripMenuItem();
+            miFKontuKorespondence = new System.Windows.Forms.ToolStripMenuItem();
+            miFValūtasKontuAtskaites = new System.Windows.Forms.ToolStripMenuItem();
+            miFDarijumuŽurnāls1 = new System.Windows.Forms.ToolStripMenuItem();
+            miFNaudasPlūsma1 = new System.Windows.Forms.ToolStripMenuItem();
+            miFKasesGrāmata = new System.Windows.Forms.ToolStripMenuItem();
+            miFPersonuPārskats = new System.Windows.Forms.ToolStripMenuItem();
+            miFSkaidrasNaudasDarijumi = new System.Windows.Forms.ToolStripMenuItem();
+            miFBilance1 = new System.Windows.Forms.ToolStripMenuItem();
+            miFBilaneAtskaite = new System.Windows.Forms.ToolStripMenuItem();
+            toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
+            miFBilanceFormulas = new System.Windows.Forms.ToolStripMenuItem();
+            miFEdsTp = new System.Windows.Forms.ToolStripMenuItem();
+            miAAlgas = new System.Windows.Forms.ToolStripMenuItem();
+            miAAtlasītDatus = new System.Windows.Forms.ToolStripMenuItem();
+            miRepStats = new System.Windows.Forms.ToolStripMenuItem();
+            miADarbinieki = new System.Windows.Forms.ToolStripMenuItem();
+            miADarbiniekuDati = new System.Windows.Forms.ToolStripMenuItem();
+            miADarbinieki1 = new System.Windows.Forms.ToolStripMenuItem();
+            toolStripSeparator15 = new System.Windows.Forms.ToolStripSeparator();
+            miNeapliekamaisMinimums = new System.Windows.Forms.ToolStripMenuItem();
+            miAIzmaiņasNodokļuMaksātājaGrāmatiņāsnoEDS = new System.Windows.Forms.ToolStripMenuItem();
+            miADarbaNespējasLapas = new System.Windows.Forms.ToolStripMenuItem();
+            toolStripSeparator16 = new System.Windows.Forms.ToolStripSeparator();
+            miANotikumuIzklāsts = new System.Windows.Forms.ToolStripMenuItem();
+            miAstrādājošoPārskats = new System.Windows.Forms.ToolStripMenuItem();
+            miANeizmantotāsAtvaļinājumaDienas = new System.Windows.Forms.ToolStripMenuItem();
+            miAStruktūrvienības = new System.Windows.Forms.ToolStripMenuItem();
+            miADatiParPerioduPirmsUzskaitesSākšanas = new System.Windows.Forms.ToolStripMenuItem();
+            miADarbaLaikaUzskaite = new System.Windows.Forms.ToolStripMenuItem();
+            miADarbiniekaDarbaLaikaUzskaitesDati = new System.Windows.Forms.ToolStripMenuItem();
+            toolStripSeparator14 = new System.Windows.Forms.ToolStripSeparator();
+            miADarbaLaikaPlānuSaraksts = new System.Windows.Forms.ToolStripMenuItem();
+            miADarbaLaikaPlāns = new System.Windows.Forms.ToolStripMenuItem();
+            toolStripSeparator12 = new System.Windows.Forms.ToolStripSeparator();
+            miADarbaLaikaUzskaitesLapuŠabloni = new System.Windows.Forms.ToolStripMenuItem();
+            miADarbaLaikaUzskaitesLapas = new System.Windows.Forms.ToolStripMenuItem();
+            toolStripSeparator13 = new System.Windows.Forms.ToolStripSeparator();
+            miADarbaLaikaUzskaitesLapa = new System.Windows.Forms.ToolStripMenuItem();
+            miAAlguAprēķins = new System.Windows.Forms.ToolStripMenuItem();
+            miAAlgasAprēķinaLapuŠabloni = new System.Windows.Forms.ToolStripMenuItem();
+            miAAlgasAprēķinaLapuSaraksts = new System.Windows.Forms.ToolStripMenuItem();
+            miAAlgasAprēķinaLapas = new System.Windows.Forms.ToolStripMenuItem();
+            miAGabaldarbs = new System.Windows.Forms.ToolStripMenuItem();
+            miADarbaUzskaite = new System.Windows.Forms.ToolStripMenuItem();
+            miAKkatalogs = new System.Windows.Forms.ToolStripMenuItem();
+            miAKatalogaStruktūra = new System.Windows.Forms.ToolStripMenuItem();
+            miAMaksājumuSaraksti = new System.Windows.Forms.ToolStripMenuItem();
+            miAPārskatsPaPersonām = new System.Windows.Forms.ToolStripMenuItem();
+            miASarakstuŠabloni = new System.Windows.Forms.ToolStripMenuItem();
+            miAMakasājumuSaraksti1 = new System.Windows.Forms.ToolStripMenuItem();
+            miAFiziskasPersonas = new System.Windows.Forms.ToolStripMenuItem();
+            miAPersonuSaraksts = new System.Windows.Forms.ToolStripMenuItem();
+            miAMaksājumi = new System.Windows.Forms.ToolStripMenuItem();
+            miADažādiSaraksti = new System.Windows.Forms.ToolStripMenuItem();
+            miAPapildusNotikumuKodi = new System.Windows.Forms.ToolStripMenuItem();
+            miALikmes = new System.Windows.Forms.ToolStripMenuItem();
+            miATeritoriālieKodi = new System.Windows.Forms.ToolStripMenuItem();
+            miAProfesijuKlasifikators = new System.Windows.Forms.ToolStripMenuItem();
+            miAZiņuKodi = new System.Windows.Forms.ToolStripMenuItem();
+            miAIenākumuVeidi = new System.Windows.Forms.ToolStripMenuItem();
+            miASvētkuDienas = new System.Windows.Forms.ToolStripMenuItem();
+            miAKalendārs = new System.Windows.Forms.ToolStripMenuItem();
+            miABankas = new System.Windows.Forms.ToolStripMenuItem();
+            toolStripSeparator26 = new System.Windows.Forms.ToolStripSeparator();
+            miAAtskaites = new System.Windows.Forms.ToolStripMenuItem();
+            miAKopsavilkums = new System.Windows.Forms.ToolStripMenuItem();
+            toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
+            miAZiņasParDarbaŅēmējiem = new System.Windows.Forms.ToolStripMenuItem();
+            miAZiņojumsParVSAOI = new System.Windows.Forms.ToolStripMenuItem();
+            miAPaziņojumsParFiziskajāmPersonāmIzmaksātajāmSummāmkopsavilkums = new System.Windows.Forms.ToolStripMenuItem();
+            miPamatlīdzekļi = new System.Windows.Forms.ToolStripMenuItem();
+            miPPamatlīdzekļi = new System.Windows.Forms.ToolStripMenuItem();
+            miPNotikumi = new System.Windows.Forms.ToolStripMenuItem();
+            miPTaxDeprecYR = new System.Windows.Forms.ToolStripMenuItem();
+            miPPamatlīdzekļuKategorijas = new System.Windows.Forms.ToolStripMenuItem();
+            miPNolietojumaKategorijas = new System.Windows.Forms.ToolStripMenuItem();
+            miPNolietojumaKategorijasNodokļuVajadzībām = new System.Windows.Forms.ToolStripMenuItem();
+            miPStruktūrvienības = new System.Windows.Forms.ToolStripMenuItem();
+            miPAtrašanāsVietas = new System.Windows.Forms.ToolStripMenuItem();
+            toolStripSeparator27 = new System.Windows.Forms.ToolStripSeparator();
+            miPAtskaites = new System.Windows.Forms.ToolStripMenuItem();
+            miPKustībasPārskats = new System.Windows.Forms.ToolStripMenuItem();
+            miPNnolietojumsNodokļuVajadzībāmPaKategorijām = new System.Windows.Forms.ToolStripMenuItem();
+            miMNoliktava = new System.Windows.Forms.ToolStripMenuItem();
+            miMDokumenti = new System.Windows.Forms.ToolStripMenuItem();
+            toolStripSeparator17 = new System.Windows.Forms.ToolStripSeparator();
+            miMNoliktavasPartneri = new System.Windows.Forms.ToolStripMenuItem();
+            miMArtikuli = new System.Windows.Forms.ToolStripMenuItem();
+            miMArtikuluKategorijas = new System.Windows.Forms.ToolStripMenuItem();
+            miCenasUnAtlaides = new System.Windows.Forms.ToolStripMenuItem();
+            miCenuLapuSaraksts = new System.Windows.Forms.ToolStripMenuItem();
+            miCenuLapa = new System.Windows.Forms.ToolStripMenuItem();
+            toolStripSeparator22 = new System.Windows.Forms.ToolStripSeparator();
+            miAtlaižuLapuSaraksts = new System.Windows.Forms.ToolStripMenuItem();
+            miAtlaižuLapa = new System.Windows.Forms.ToolStripMenuItem();
+            toolStripSeparator18 = new System.Windows.Forms.ToolStripSeparator();
+            miMInventarizācijasDokumenti = new System.Windows.Forms.ToolStripMenuItem();
+            toolStripSeparator19 = new System.Windows.Forms.ToolStripSeparator();
+            miMPārskati = new System.Windows.Forms.ToolStripMenuItem();
+            miMArtikulaKustībasPārskats = new System.Windows.Forms.ToolStripMenuItem();
+            miMIzlietojumaPārskats = new System.Windows.Forms.ToolStripMenuItem();
+            toolStripSeparator23 = new System.Windows.Forms.ToolStripSeparator();
+            miMKustībaPaArtikuliem = new System.Windows.Forms.ToolStripMenuItem();
+            miMKustībaPaArtikuluKategorijām = new System.Windows.Forms.ToolStripMenuItem();
+            miMKustībaPaPiegādātājiem = new System.Windows.Forms.ToolStripMenuItem();
+            toolStripSeparator24 = new System.Windows.Forms.ToolStripSeparator();
+            miMRealizācijasPašizmaksa = new System.Windows.Forms.ToolStripMenuItem();
+            miMRealizācijasPašizmaksaPaDokumentiem = new System.Windows.Forms.ToolStripMenuItem();
+            miMRīki = new System.Windows.Forms.ToolStripMenuItem();
+            miMPilnsPārrēķins = new System.Windows.Forms.ToolStripMenuItem();
+            miMAtlikumuPārrēķins = new System.Windows.Forms.ToolStripMenuItem();
+            miMIsGonePārrēķins = new System.Windows.Forms.ToolStripMenuItem();
+            toolStripSeparator20 = new System.Windows.Forms.ToolStripSeparator();
+            miMDažādiSaraksti = new System.Windows.Forms.ToolStripMenuItem();
+            miMKontuPlāns = new System.Windows.Forms.ToolStripMenuItem();
+            miMDarijumuVeidi = new System.Windows.Forms.ToolStripMenuItem();
+            miMNorēķinuVeidi = new System.Windows.Forms.ToolStripMenuItem();
+            miPartneruKategorijas = new System.Windows.Forms.ToolStripMenuItem();
+            miMValstis = new System.Windows.Forms.ToolStripMenuItem();
+            miMBankas = new System.Windows.Forms.ToolStripMenuItem();
+            miMKontēšanasShēma = new System.Windows.Forms.ToolStripMenuItem();
+            miMPVNAprēķinaAtsauces = new System.Windows.Forms.ToolStripMenuItem();
+            miMParams = new System.Windows.Forms.ToolStripMenuItem();
+            miLogi = new System.Windows.Forms.ToolStripMenuItem();
+            miInfo = new System.Windows.Forms.ToolStripMenuItem();
+            miFApraksts = new System.Windows.Forms.ToolStripMenuItem();
+            toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
+            miParProgrammu = new System.Windows.Forms.ToolStripMenuItem();
+            miCloseMDIForm = new System.Windows.Forms.ToolStripMenuItem();
+            myToolStrip = new System.Windows.Forms.ToolStrip();
+            aDownloader1 = new ADownloader();
+            tsWindowList = new System.Windows.Forms.ToolStrip();
+            myStyleDefs = new KlonsP.Classes.MyStyleDefs();
+            menuStrip1.SuspendLayout();
+            SuspendLayout();
             // 
             // menuStrip1
             // 
-            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(16, 16);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.miSistēma,
-            this.miFReģistri,
-            this.miFAtskaites,
-            this.miAAlgas,
-            this.miPamatlīdzekļi,
-            this.miMNoliktava,
-            this.miLogi,
-            this.miInfo,
-            this.miCloseMDIForm});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(1087, 38);
-            this.menuStrip1.TabIndex = 1;
-            this.menuStrip1.Text = "menuStrip1";
+            menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { miSistēma, miFReģistri, miFAtskaites, miAAlgas, miPamatlīdzekļi, miMNoliktava, miLogi, miInfo, miCloseMDIForm });
+            menuStrip1.Location = new System.Drawing.Point(0, 0);
+            menuStrip1.Name = "menuStrip1";
+            menuStrip1.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
+            menuStrip1.Size = new System.Drawing.Size(1087, 27);
+            menuStrip1.TabIndex = 1;
+            menuStrip1.Text = "menuStrip1";
             // 
             // miSistēma
             // 
-            this.miSistēma.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.miNomainītSaimniecību,
-            this.miKāStrādāsim,
-            this.miShowWindowList,
-            this.miFDatuLabojumuReģistri,
-            this.toolStripSeparator11,
-            this.miFDatuEksports,
-            this.miFDatuImports,
-            this.miDatuBāzesImports,
-            this.toolStripSeparator9,
-            this.miAtvērtProgrammasMapi,
-            this.miAtvērtRezervesKopijuMapi,
-            this.toolStripSeparator21,
-            this.miFIzmestNesaglabātāsIzmaiņas,
-            this.atkārtotiIelādētDatusNoDatuBāzesToolStripMenuItem,
-            this.toolStripSeparator25,
-            this.miAizvērt});
-            this.miSistēma.Name = "miSistēma";
-            this.miSistēma.Size = new System.Drawing.Size(104, 34);
-            this.miSistēma.Text = "&Sistēma";
-            this.miSistēma.DropDownOpening += new System.EventHandler(this.miSistēma_DropDownOpening);
+            miSistēma.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { miNomainītSaimniecību, miKāStrādāsim, miShowWindowList, miFDatuLabojumuReģistri, toolStripSeparator11, miFDatuEksports, miFDatuImports, miDatuBāzesImports, toolStripSeparator9, miAtvērtProgrammasMapi, miAtvērtRezervesKopijuMapi, toolStripSeparator21, miFIzmestNesaglabātāsIzmaiņas, atkārtotiIelādētDatusNoDatuBāzesToolStripMenuItem, toolStripSeparator25, miAizvērt });
+            miSistēma.Name = "miSistēma";
+            miSistēma.Size = new System.Drawing.Size(68, 23);
+            miSistēma.Text = "&Sistēma";
+            miSistēma.DropDownOpening += miSistēma_DropDownOpening;
             // 
             // miNomainītSaimniecību
             // 
-            this.miNomainītSaimniecību.Name = "miNomainītSaimniecību";
-            this.miNomainītSaimniecību.Size = new System.Drawing.Size(469, 38);
-            this.miNomainītSaimniecību.Text = "Nomainīt saimniecību";
-            this.miNomainītSaimniecību.Click += new System.EventHandler(this.miNomainītSaimniecību_Click);
+            miNomainītSaimniecību.Name = "miNomainītSaimniecību";
+            miNomainītSaimniecību.Size = new System.Drawing.Size(304, 24);
+            miNomainītSaimniecību.Text = "Nomainīt saimniecību";
+            miNomainītSaimniecību.Click += miNomainītSaimniecību_Click;
             // 
             // miKāStrādāsim
             // 
-            this.miKāStrādāsim.Name = "miKāStrādāsim";
-            this.miKāStrādāsim.Size = new System.Drawing.Size(469, 38);
-            this.miKāStrādāsim.Text = "Kā strādāsim?";
-            this.miKāStrādāsim.Click += new System.EventHandler(this.miKāStrādāsim_Click);
+            miKāStrādāsim.Name = "miKāStrādāsim";
+            miKāStrādāsim.Size = new System.Drawing.Size(304, 24);
+            miKāStrādāsim.Text = "Kā strādāsim?";
+            miKāStrādāsim.Click += miKāStrādāsim_Click;
             // 
             // miShowWindowList
             // 
-            this.miShowWindowList.Name = "miShowWindowList";
-            this.miShowWindowList.Size = new System.Drawing.Size(469, 38);
-            this.miShowWindowList.Text = "Rādīt atvērto logu sarakstu";
-            this.miShowWindowList.Click += new System.EventHandler(this.miShowWindowList_Click);
+            miShowWindowList.Name = "miShowWindowList";
+            miShowWindowList.Size = new System.Drawing.Size(304, 24);
+            miShowWindowList.Text = "Rādīt atvērto logu sarakstu";
+            miShowWindowList.Click += miShowWindowList_Click;
             // 
             // miFDatuLabojumuReģistri
             // 
-            this.miFDatuLabojumuReģistri.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.miFDokumentuLabojumi,
-            this.miFKontējumuLabojumi,
-            this.toolStripSeparator10,
-            this.miFMeklētIzmaiņas});
-            this.miFDatuLabojumuReģistri.Name = "miFDatuLabojumuReģistri";
-            this.miFDatuLabojumuReģistri.Size = new System.Drawing.Size(469, 38);
-            this.miFDatuLabojumuReģistri.Text = "Datu labojumu reģistri";
+            miFDatuLabojumuReģistri.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { miFDokumentuLabojumi, miFKontējumuLabojumi, toolStripSeparator10, miFMeklētIzmaiņas });
+            miFDatuLabojumuReģistri.Name = "miFDatuLabojumuReģistri";
+            miFDatuLabojumuReģistri.Size = new System.Drawing.Size(304, 24);
+            miFDatuLabojumuReģistri.Text = "Datu labojumu reģistri";
             // 
             // miFDokumentuLabojumi
             // 
-            this.miFDokumentuLabojumi.Name = "miFDokumentuLabojumi";
-            this.miFDokumentuLabojumi.Size = new System.Drawing.Size(318, 38);
-            this.miFDokumentuLabojumi.Text = "Dokumentu labojumi";
-            this.miFDokumentuLabojumi.Click += new System.EventHandler(this.miFDokumentuLabojumi_Click);
+            miFDokumentuLabojumi.Name = "miFDokumentuLabojumi";
+            miFDokumentuLabojumi.Size = new System.Drawing.Size(207, 24);
+            miFDokumentuLabojumi.Text = "Dokumentu labojumi";
+            miFDokumentuLabojumi.Click += miFDokumentuLabojumi_Click;
             // 
             // miFKontējumuLabojumi
             // 
-            this.miFKontējumuLabojumi.Name = "miFKontējumuLabojumi";
-            this.miFKontējumuLabojumi.Size = new System.Drawing.Size(318, 38);
-            this.miFKontējumuLabojumi.Text = "Kontējumu labojumi";
-            this.miFKontējumuLabojumi.Click += new System.EventHandler(this.miFKontējumuLabojumi_Click);
+            miFKontējumuLabojumi.Name = "miFKontējumuLabojumi";
+            miFKontējumuLabojumi.Size = new System.Drawing.Size(207, 24);
+            miFKontējumuLabojumi.Text = "Kontējumu labojumi";
+            miFKontējumuLabojumi.Click += miFKontējumuLabojumi_Click;
             // 
             // toolStripSeparator10
             // 
-            this.toolStripSeparator10.Name = "toolStripSeparator10";
-            this.toolStripSeparator10.Size = new System.Drawing.Size(315, 6);
+            toolStripSeparator10.Name = "toolStripSeparator10";
+            toolStripSeparator10.Size = new System.Drawing.Size(204, 6);
             // 
             // miFMeklētIzmaiņas
             // 
-            this.miFMeklētIzmaiņas.Name = "miFMeklētIzmaiņas";
-            this.miFMeklētIzmaiņas.Size = new System.Drawing.Size(318, 38);
-            this.miFMeklētIzmaiņas.Text = "Meklēt izmaiņas";
-            this.miFMeklētIzmaiņas.Click += new System.EventHandler(this.miFMeklētIzmaiņas_Click);
+            miFMeklētIzmaiņas.Name = "miFMeklētIzmaiņas";
+            miFMeklētIzmaiņas.Size = new System.Drawing.Size(207, 24);
+            miFMeklētIzmaiņas.Text = "Meklēt izmaiņas";
+            miFMeklētIzmaiņas.Click += miFMeklētIzmaiņas_Click;
             // 
             // toolStripSeparator11
             // 
-            this.toolStripSeparator11.Name = "toolStripSeparator11";
-            this.toolStripSeparator11.Size = new System.Drawing.Size(466, 6);
+            toolStripSeparator11.Name = "toolStripSeparator11";
+            toolStripSeparator11.Size = new System.Drawing.Size(301, 6);
             // 
             // miFDatuEksports
             // 
-            this.miFDatuEksports.Name = "miFDatuEksports";
-            this.miFDatuEksports.Size = new System.Drawing.Size(469, 38);
-            this.miFDatuEksports.Text = "Datu eksports";
-            this.miFDatuEksports.Click += new System.EventHandler(this.miFDatuEksports_Click);
+            miFDatuEksports.Name = "miFDatuEksports";
+            miFDatuEksports.Size = new System.Drawing.Size(304, 24);
+            miFDatuEksports.Text = "Datu eksports";
+            miFDatuEksports.Click += miFDatuEksports_Click;
             // 
             // miFDatuImports
             // 
-            this.miFDatuImports.Name = "miFDatuImports";
-            this.miFDatuImports.Size = new System.Drawing.Size(469, 38);
-            this.miFDatuImports.Text = "Datu imports";
-            this.miFDatuImports.Click += new System.EventHandler(this.miFDatuImports_Click);
+            miFDatuImports.Name = "miFDatuImports";
+            miFDatuImports.Size = new System.Drawing.Size(304, 24);
+            miFDatuImports.Text = "Datu imports";
+            miFDatuImports.Click += miFDatuImports_Click;
             // 
             // miDatuBāzesImports
             // 
-            this.miDatuBāzesImports.Name = "miDatuBāzesImports";
-            this.miDatuBāzesImports.Size = new System.Drawing.Size(469, 38);
-            this.miDatuBāzesImports.Text = "Datu bāzes imports";
-            this.miDatuBāzesImports.Click += new System.EventHandler(this.miDatuBāzesImports_Click);
+            miDatuBāzesImports.Name = "miDatuBāzesImports";
+            miDatuBāzesImports.Size = new System.Drawing.Size(304, 24);
+            miDatuBāzesImports.Text = "Datu bāzes imports";
+            miDatuBāzesImports.Click += miDatuBāzesImports_Click;
             // 
             // toolStripSeparator9
             // 
-            this.toolStripSeparator9.Name = "toolStripSeparator9";
-            this.toolStripSeparator9.Size = new System.Drawing.Size(466, 6);
+            toolStripSeparator9.Name = "toolStripSeparator9";
+            toolStripSeparator9.Size = new System.Drawing.Size(301, 6);
             // 
             // miAtvērtProgrammasMapi
             // 
-            this.miAtvērtProgrammasMapi.Name = "miAtvērtProgrammasMapi";
-            this.miAtvērtProgrammasMapi.Size = new System.Drawing.Size(469, 38);
-            this.miAtvērtProgrammasMapi.Text = "Atvērt programmas mapi";
-            this.miAtvērtProgrammasMapi.Click += new System.EventHandler(this.miAtvērtProgrammasMapi_Click);
+            miAtvērtProgrammasMapi.Name = "miAtvērtProgrammasMapi";
+            miAtvērtProgrammasMapi.Size = new System.Drawing.Size(304, 24);
+            miAtvērtProgrammasMapi.Text = "Atvērt programmas mapi";
+            miAtvērtProgrammasMapi.Click += miAtvērtProgrammasMapi_Click;
             // 
             // miAtvērtRezervesKopijuMapi
             // 
-            this.miAtvērtRezervesKopijuMapi.Name = "miAtvērtRezervesKopijuMapi";
-            this.miAtvērtRezervesKopijuMapi.Size = new System.Drawing.Size(469, 38);
-            this.miAtvērtRezervesKopijuMapi.Text = "Atvērt rezerves kopiju mapi";
-            this.miAtvērtRezervesKopijuMapi.Click += new System.EventHandler(this.miAtvērtRezervesKopijuMapi_Click);
+            miAtvērtRezervesKopijuMapi.Name = "miAtvērtRezervesKopijuMapi";
+            miAtvērtRezervesKopijuMapi.Size = new System.Drawing.Size(304, 24);
+            miAtvērtRezervesKopijuMapi.Text = "Atvērt rezerves kopiju mapi";
+            miAtvērtRezervesKopijuMapi.Click += miAtvērtRezervesKopijuMapi_Click;
             // 
             // toolStripSeparator21
             // 
-            this.toolStripSeparator21.Name = "toolStripSeparator21";
-            this.toolStripSeparator21.Size = new System.Drawing.Size(466, 6);
+            toolStripSeparator21.Name = "toolStripSeparator21";
+            toolStripSeparator21.Size = new System.Drawing.Size(301, 6);
             // 
             // miFIzmestNesaglabātāsIzmaiņas
             // 
-            this.miFIzmestNesaglabātāsIzmaiņas.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.miRejectChangesF,
-            this.miRejectChangesA,
-            this.miRejectChangesP,
-            this.miRejectChangesM,
-            this.toolStripSeparator8,
-            this.miRejectChangesAll});
-            this.miFIzmestNesaglabātāsIzmaiņas.Name = "miFIzmestNesaglabātāsIzmaiņas";
-            this.miFIzmestNesaglabātāsIzmaiņas.Size = new System.Drawing.Size(469, 38);
-            this.miFIzmestNesaglabātāsIzmaiņas.Text = "Izmest nesaglabātās izmaiņas";
+            miFIzmestNesaglabātāsIzmaiņas.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { miRejectChangesF, miRejectChangesA, miRejectChangesP, miRejectChangesM, toolStripSeparator8, miRejectChangesAll });
+            miFIzmestNesaglabātāsIzmaiņas.Name = "miFIzmestNesaglabātāsIzmaiņas";
+            miFIzmestNesaglabātāsIzmaiņas.Size = new System.Drawing.Size(304, 24);
+            miFIzmestNesaglabātāsIzmaiņas.Text = "Izmest nesaglabātās izmaiņas";
             // 
             // miRejectChangesF
             // 
-            this.miRejectChangesF.Name = "miRejectChangesF";
-            this.miRejectChangesF.Size = new System.Drawing.Size(241, 38);
-            this.miRejectChangesF.Text = "Finanses";
+            miRejectChangesF.Name = "miRejectChangesF";
+            miRejectChangesF.Size = new System.Drawing.Size(157, 24);
+            miRejectChangesF.Text = "Finanses";
             // 
             // miRejectChangesA
             // 
-            this.miRejectChangesA.Name = "miRejectChangesA";
-            this.miRejectChangesA.Size = new System.Drawing.Size(241, 38);
-            this.miRejectChangesA.Text = "Algas";
-            this.miRejectChangesA.Click += new System.EventHandler(this.miRejectChangesA_Click);
+            miRejectChangesA.Name = "miRejectChangesA";
+            miRejectChangesA.Size = new System.Drawing.Size(157, 24);
+            miRejectChangesA.Text = "Algas";
+            miRejectChangesA.Click += miRejectChangesA_Click;
             // 
             // miRejectChangesP
             // 
-            this.miRejectChangesP.Name = "miRejectChangesP";
-            this.miRejectChangesP.Size = new System.Drawing.Size(241, 38);
-            this.miRejectChangesP.Text = "Pamatlīdzekļi";
-            this.miRejectChangesP.Click += new System.EventHandler(this.miRejectChangesP_Click);
+            miRejectChangesP.Name = "miRejectChangesP";
+            miRejectChangesP.Size = new System.Drawing.Size(157, 24);
+            miRejectChangesP.Text = "Pamatlīdzekļi";
+            miRejectChangesP.Click += miRejectChangesP_Click;
             // 
             // miRejectChangesM
             // 
-            this.miRejectChangesM.Name = "miRejectChangesM";
-            this.miRejectChangesM.Size = new System.Drawing.Size(241, 38);
-            this.miRejectChangesM.Text = "Noliktava";
-            this.miRejectChangesM.Click += new System.EventHandler(this.miRejectChangesM_Click);
+            miRejectChangesM.Name = "miRejectChangesM";
+            miRejectChangesM.Size = new System.Drawing.Size(157, 24);
+            miRejectChangesM.Text = "Noliktava";
+            miRejectChangesM.Click += miRejectChangesM_Click;
             // 
             // toolStripSeparator8
             // 
-            this.toolStripSeparator8.Name = "toolStripSeparator8";
-            this.toolStripSeparator8.Size = new System.Drawing.Size(238, 6);
+            toolStripSeparator8.Name = "toolStripSeparator8";
+            toolStripSeparator8.Size = new System.Drawing.Size(154, 6);
             // 
             // miRejectChangesAll
             // 
-            this.miRejectChangesAll.Name = "miRejectChangesAll";
-            this.miRejectChangesAll.Size = new System.Drawing.Size(241, 38);
-            this.miRejectChangesAll.Text = "Visas";
-            this.miRejectChangesAll.Click += new System.EventHandler(this.miRejectChangesAll_Click);
+            miRejectChangesAll.Name = "miRejectChangesAll";
+            miRejectChangesAll.Size = new System.Drawing.Size(157, 24);
+            miRejectChangesAll.Text = "Visas";
+            miRejectChangesAll.Click += miRejectChangesAll_Click;
             // 
             // atkārtotiIelādētDatusNoDatuBāzesToolStripMenuItem
             // 
-            this.atkārtotiIelādētDatusNoDatuBāzesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.miReloadDataF,
-            this.miReloadDataA,
-            this.miReloadDataM});
-            this.atkārtotiIelādētDatusNoDatuBāzesToolStripMenuItem.Name = "atkārtotiIelādētDatusNoDatuBāzesToolStripMenuItem";
-            this.atkārtotiIelādētDatusNoDatuBāzesToolStripMenuItem.Size = new System.Drawing.Size(469, 38);
-            this.atkārtotiIelādētDatusNoDatuBāzesToolStripMenuItem.Text = "Atkārtoti ielādēt datus no datu bāzes";
+            atkārtotiIelādētDatusNoDatuBāzesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { miReloadDataF, miReloadDataA, miReloadDataM });
+            atkārtotiIelādētDatusNoDatuBāzesToolStripMenuItem.Name = "atkārtotiIelādētDatusNoDatuBāzesToolStripMenuItem";
+            atkārtotiIelādētDatusNoDatuBāzesToolStripMenuItem.Size = new System.Drawing.Size(304, 24);
+            atkārtotiIelādētDatusNoDatuBāzesToolStripMenuItem.Text = "Atkārtoti ielādēt datus no datu bāzes";
             // 
             // miReloadDataF
             // 
-            this.miReloadDataF.Name = "miReloadDataF";
-            this.miReloadDataF.Size = new System.Drawing.Size(206, 38);
-            this.miReloadDataF.Text = "Finanses";
-            this.miReloadDataF.Click += new System.EventHandler(this.miReloadDataF_Click);
+            miReloadDataF.Name = "miReloadDataF";
+            miReloadDataF.Size = new System.Drawing.Size(135, 24);
+            miReloadDataF.Text = "Finanses";
+            miReloadDataF.Click += miReloadDataF_Click;
             // 
             // miReloadDataA
             // 
-            this.miReloadDataA.Name = "miReloadDataA";
-            this.miReloadDataA.Size = new System.Drawing.Size(206, 38);
-            this.miReloadDataA.Text = "Algas";
-            this.miReloadDataA.Click += new System.EventHandler(this.miReloadDataA_Click);
+            miReloadDataA.Name = "miReloadDataA";
+            miReloadDataA.Size = new System.Drawing.Size(135, 24);
+            miReloadDataA.Text = "Algas";
+            miReloadDataA.Click += miReloadDataA_Click;
             // 
             // miReloadDataM
             // 
-            this.miReloadDataM.Name = "miReloadDataM";
-            this.miReloadDataM.Size = new System.Drawing.Size(206, 38);
-            this.miReloadDataM.Text = "Noliktava";
-            this.miReloadDataM.Click += new System.EventHandler(this.miReloadDataM_Click);
+            miReloadDataM.Name = "miReloadDataM";
+            miReloadDataM.Size = new System.Drawing.Size(135, 24);
+            miReloadDataM.Text = "Noliktava";
+            miReloadDataM.Click += miReloadDataM_Click;
             // 
             // toolStripSeparator25
             // 
-            this.toolStripSeparator25.Name = "toolStripSeparator25";
-            this.toolStripSeparator25.Size = new System.Drawing.Size(466, 6);
+            toolStripSeparator25.Name = "toolStripSeparator25";
+            toolStripSeparator25.Size = new System.Drawing.Size(301, 6);
             // 
             // miAizvērt
             // 
-            this.miAizvērt.Name = "miAizvērt";
-            this.miAizvērt.Size = new System.Drawing.Size(469, 38);
-            this.miAizvērt.Text = "Aizvērt";
-            this.miAizvērt.Click += new System.EventHandler(this.miAizvērt_Click);
+            miAizvērt.Name = "miAizvērt";
+            miAizvērt.Size = new System.Drawing.Size(304, 24);
+            miAizvērt.Text = "Aizvērt";
+            miAizvērt.Click += miAizvērt_Click;
             // 
             // miFReģistri
             // 
-            this.miFReģistri.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.miFDokumentim,
-            this.miFIeraksti,
-            this.toolStripSeparator1,
-            this.miFSākumaAtlikumi,
-            this.miFNeapmaksātieRēķini,
-            this.toolStripSeparator2,
-            this.miFKontuPlāns,
-            this.miFPVNPazīmes,
-            this.miFKontējumaPazīmes,
-            this.miFPersonas,
-            this.miFDokumentuVeidi,
-            this.miFBankuSaraksts,
-            this.miFValūtuKursi,
-            this.toolStripSeparator3,
-            this.miFKontējumuKontrole,
-            this.toolStripSeparator5,
-            this.miZiņasParUzņemumu});
-            this.miFReģistri.Name = "miFReģistri";
-            this.miFReģistri.Size = new System.Drawing.Size(100, 34);
-            this.miFReģistri.Text = "&Reģistri";
+            miFReģistri.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { miFDokumentim, miFIeraksti, toolStripSeparator1, miFSākumaAtlikumi, miFNeapmaksātieRēķini, toolStripSeparator2, miFKontuPlāns, miFPVNPazīmes, miFKontējumaPazīmes, miFPersonas, miFDokumentuVeidi, miFBankuSaraksts, miFValūtuKursi, toolStripSeparator3, miFKontējumuKontrole, toolStripSeparator5, miZiņasParUzņemumu });
+            miFReģistri.Name = "miFReģistri";
+            miFReģistri.Size = new System.Drawing.Size(66, 23);
+            miFReģistri.Text = "&Reģistri";
             // 
             // miFDokumentim
             // 
-            this.miFDokumentim.Name = "miFDokumentim";
-            this.miFDokumentim.Size = new System.Drawing.Size(318, 38);
-            this.miFDokumentim.Text = "Dokumenti";
-            this.miFDokumentim.Click += new System.EventHandler(this.miFDokumentim_Click);
+            miFDokumentim.Name = "miFDokumentim";
+            miFDokumentim.Size = new System.Drawing.Size(207, 24);
+            miFDokumentim.Text = "Dokumenti";
+            miFDokumentim.Click += miFDokumentim_Click;
             // 
             // miFIeraksti
             // 
-            this.miFIeraksti.Name = "miFIeraksti";
-            this.miFIeraksti.Size = new System.Drawing.Size(318, 38);
-            this.miFIeraksti.Text = "Ieraksti";
-            this.miFIeraksti.Click += new System.EventHandler(this.miFIeraksti_Click);
+            miFIeraksti.Name = "miFIeraksti";
+            miFIeraksti.Size = new System.Drawing.Size(207, 24);
+            miFIeraksti.Text = "Ieraksti";
+            miFIeraksti.Click += miFIeraksti_Click;
             // 
             // toolStripSeparator1
             // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(315, 6);
+            toolStripSeparator1.Name = "toolStripSeparator1";
+            toolStripSeparator1.Size = new System.Drawing.Size(204, 6);
             // 
             // miFSākumaAtlikumi
             // 
-            this.miFSākumaAtlikumi.Name = "miFSākumaAtlikumi";
-            this.miFSākumaAtlikumi.Size = new System.Drawing.Size(318, 38);
-            this.miFSākumaAtlikumi.Text = "Sākuma atlikumi";
-            this.miFSākumaAtlikumi.Click += new System.EventHandler(this.miFSākumaAtlikumi_Click);
+            miFSākumaAtlikumi.Name = "miFSākumaAtlikumi";
+            miFSākumaAtlikumi.Size = new System.Drawing.Size(207, 24);
+            miFSākumaAtlikumi.Text = "Sākuma atlikumi";
+            miFSākumaAtlikumi.Click += miFSākumaAtlikumi_Click;
             // 
             // miFNeapmaksātieRēķini
             // 
-            this.miFNeapmaksātieRēķini.Name = "miFNeapmaksātieRēķini";
-            this.miFNeapmaksātieRēķini.Size = new System.Drawing.Size(318, 38);
-            this.miFNeapmaksātieRēķini.Text = "Neapmaksātie rēķini";
-            this.miFNeapmaksātieRēķini.Click += new System.EventHandler(this.miFNeapmaksātieRēķini_Click);
+            miFNeapmaksātieRēķini.Name = "miFNeapmaksātieRēķini";
+            miFNeapmaksātieRēķini.Size = new System.Drawing.Size(207, 24);
+            miFNeapmaksātieRēķini.Text = "Neapmaksātie rēķini";
+            miFNeapmaksātieRēķini.Click += miFNeapmaksātieRēķini_Click;
             // 
             // toolStripSeparator2
             // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(315, 6);
+            toolStripSeparator2.Name = "toolStripSeparator2";
+            toolStripSeparator2.Size = new System.Drawing.Size(204, 6);
             // 
             // miFKontuPlāns
             // 
-            this.miFKontuPlāns.Name = "miFKontuPlāns";
-            this.miFKontuPlāns.Size = new System.Drawing.Size(318, 38);
-            this.miFKontuPlāns.Text = "Kontu plāns";
-            this.miFKontuPlāns.Click += new System.EventHandler(this.miFKontuPlāns_Click);
+            miFKontuPlāns.Name = "miFKontuPlāns";
+            miFKontuPlāns.Size = new System.Drawing.Size(207, 24);
+            miFKontuPlāns.Text = "Kontu plāns";
+            miFKontuPlāns.Click += miFKontuPlāns_Click;
             // 
             // miFPVNPazīmes
             // 
-            this.miFPVNPazīmes.Name = "miFPVNPazīmes";
-            this.miFPVNPazīmes.Size = new System.Drawing.Size(318, 38);
-            this.miFPVNPazīmes.Text = "PVN pazīmes";
-            this.miFPVNPazīmes.Click += new System.EventHandler(this.miFPVNPazīmes_Click);
+            miFPVNPazīmes.Name = "miFPVNPazīmes";
+            miFPVNPazīmes.Size = new System.Drawing.Size(207, 24);
+            miFPVNPazīmes.Text = "PVN pazīmes";
+            miFPVNPazīmes.Click += miFPVNPazīmes_Click;
             // 
             // miFKontējumaPazīmes
             // 
-            this.miFKontējumaPazīmes.Name = "miFKontējumaPazīmes";
-            this.miFKontējumaPazīmes.Size = new System.Drawing.Size(318, 38);
-            this.miFKontējumaPazīmes.Text = "Nozares / produkti";
-            this.miFKontējumaPazīmes.Click += new System.EventHandler(this.miFKontējumaPazīmes_Click);
+            miFKontējumaPazīmes.Name = "miFKontējumaPazīmes";
+            miFKontējumaPazīmes.Size = new System.Drawing.Size(207, 24);
+            miFKontējumaPazīmes.Text = "Nozares / produkti";
+            miFKontējumaPazīmes.Click += miFKontējumaPazīmes_Click;
             // 
             // miFPersonas
             // 
-            this.miFPersonas.Name = "miFPersonas";
-            this.miFPersonas.Size = new System.Drawing.Size(318, 38);
-            this.miFPersonas.Text = "Personas";
-            this.miFPersonas.Click += new System.EventHandler(this.miFPersonas_Click);
+            miFPersonas.Name = "miFPersonas";
+            miFPersonas.Size = new System.Drawing.Size(207, 24);
+            miFPersonas.Text = "Personas";
+            miFPersonas.Click += miFPersonas_Click;
             // 
             // miFDokumentuVeidi
             // 
-            this.miFDokumentuVeidi.Name = "miFDokumentuVeidi";
-            this.miFDokumentuVeidi.Size = new System.Drawing.Size(318, 38);
-            this.miFDokumentuVeidi.Text = "Dokumentu veidi";
-            this.miFDokumentuVeidi.Click += new System.EventHandler(this.miFDokumentuVeidi_Click);
+            miFDokumentuVeidi.Name = "miFDokumentuVeidi";
+            miFDokumentuVeidi.Size = new System.Drawing.Size(207, 24);
+            miFDokumentuVeidi.Text = "Dokumentu veidi";
+            miFDokumentuVeidi.Click += miFDokumentuVeidi_Click;
             // 
             // miFBankuSaraksts
             // 
-            this.miFBankuSaraksts.Name = "miFBankuSaraksts";
-            this.miFBankuSaraksts.Size = new System.Drawing.Size(318, 38);
-            this.miFBankuSaraksts.Text = "Banku saraksts";
-            this.miFBankuSaraksts.Click += new System.EventHandler(this.miFBankuSaraksts_Click);
+            miFBankuSaraksts.Name = "miFBankuSaraksts";
+            miFBankuSaraksts.Size = new System.Drawing.Size(207, 24);
+            miFBankuSaraksts.Text = "Banku saraksts";
+            miFBankuSaraksts.Click += miFBankuSaraksts_Click;
             // 
             // miFValūtuKursi
             // 
-            this.miFValūtuKursi.Name = "miFValūtuKursi";
-            this.miFValūtuKursi.Size = new System.Drawing.Size(318, 38);
-            this.miFValūtuKursi.Text = "Valūtu kursi";
-            this.miFValūtuKursi.Click += new System.EventHandler(this.miFValūtuKursi_Click);
+            miFValūtuKursi.Name = "miFValūtuKursi";
+            miFValūtuKursi.Size = new System.Drawing.Size(207, 24);
+            miFValūtuKursi.Text = "Valūtu kursi";
+            miFValūtuKursi.Click += miFValūtuKursi_Click;
             // 
             // toolStripSeparator3
             // 
-            this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(315, 6);
+            toolStripSeparator3.Name = "toolStripSeparator3";
+            toolStripSeparator3.Size = new System.Drawing.Size(204, 6);
             // 
             // miFKontējumuKontrole
             // 
-            this.miFKontējumuKontrole.Name = "miFKontējumuKontrole";
-            this.miFKontējumuKontrole.Size = new System.Drawing.Size(318, 38);
-            this.miFKontējumuKontrole.Text = "Kontējumu kontrole";
-            this.miFKontējumuKontrole.Click += new System.EventHandler(this.miFKontējumuKontrole_Click);
+            miFKontējumuKontrole.Name = "miFKontējumuKontrole";
+            miFKontējumuKontrole.Size = new System.Drawing.Size(207, 24);
+            miFKontējumuKontrole.Text = "Kontējumu kontrole";
+            miFKontējumuKontrole.Click += miFKontējumuKontrole_Click;
             // 
             // toolStripSeparator5
             // 
-            this.toolStripSeparator5.Name = "toolStripSeparator5";
-            this.toolStripSeparator5.Size = new System.Drawing.Size(315, 6);
+            toolStripSeparator5.Name = "toolStripSeparator5";
+            toolStripSeparator5.Size = new System.Drawing.Size(204, 6);
             // 
             // miZiņasParUzņemumu
             // 
-            this.miZiņasParUzņemumu.Name = "miZiņasParUzņemumu";
-            this.miZiņasParUzņemumu.Size = new System.Drawing.Size(318, 38);
-            this.miZiņasParUzņemumu.Text = "Ziņas par uzņēmumu";
-            this.miZiņasParUzņemumu.Click += new System.EventHandler(this.miZiņasParUzņemumu_Click);
+            miZiņasParUzņemumu.Name = "miZiņasParUzņemumu";
+            miZiņasParUzņemumu.Size = new System.Drawing.Size(207, 24);
+            miZiņasParUzņemumu.Text = "Ziņas par uzņēmumu";
+            miZiņasParUzņemumu.Click += miZiņasParUzņemumu_Click;
             // 
             // miFAtskaites
             // 
-            this.miFAtskaites.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.miFPVN,
-            this.miFAvansaNorēķins,
-            this.miFApgrozijumaPārskati,
-            this.miFKontuKorespondence,
-            this.miFValūtasKontuAtskaites,
-            this.miFDarijumuŽurnāls1,
-            this.miFNaudasPlūsma1,
-            this.miFKasesGrāmata,
-            this.miFPersonuPārskats,
-            this.miFSkaidrasNaudasDarijumi,
-            this.miFBilance1,
-            this.miFEdsTp});
-            this.miFAtskaites.Name = "miFAtskaites";
-            this.miFAtskaites.Size = new System.Drawing.Size(114, 34);
-            this.miFAtskaites.Text = "A&tskaites";
+            miFAtskaites.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { miFPVN, miFAvansaNorēķins, miFApgrozijumaPārskati, miFKontuKorespondence, miFValūtasKontuAtskaites, miFDarijumuŽurnāls1, miFNaudasPlūsma1, miFKasesGrāmata, miFPersonuPārskats, miFSkaidrasNaudasDarijumi, miFBilance1, miFEdsTp });
+            miFAtskaites.Name = "miFAtskaites";
+            miFAtskaites.Size = new System.Drawing.Size(76, 23);
+            miFAtskaites.Text = "A&tskaites";
             // 
             // miFPVN
             // 
-            this.miFPVN.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.miFPVNKopsavilkums,
-            this.miFPVNDeklarācija,
-            this.miFŽurnāls,
-            this.miFPVNSummuKontrole});
-            this.miFPVN.Name = "miFPVN";
-            this.miFPVN.Size = new System.Drawing.Size(443, 38);
-            this.miFPVN.Text = "PVN";
+            miFPVN.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { miFPVNKopsavilkums, miFPVNDeklarācija, miFŽurnāls, miFPVNSummuKontrole });
+            miFPVN.Name = "miFPVN";
+            miFPVN.Size = new System.Drawing.Size(287, 24);
+            miFPVN.Text = "PVN";
             // 
             // miFPVNKopsavilkums
             // 
-            this.miFPVNKopsavilkums.Name = "miFPVNKopsavilkums";
-            this.miFPVNKopsavilkums.Size = new System.Drawing.Size(274, 38);
-            this.miFPVNKopsavilkums.Text = "kopsavilkums";
-            this.miFPVNKopsavilkums.Click += new System.EventHandler(this.miFPVNKopsavilkums_Click);
+            miFPVNKopsavilkums.Name = "miFPVNKopsavilkums";
+            miFPVNKopsavilkums.Size = new System.Drawing.Size(179, 24);
+            miFPVNKopsavilkums.Text = "kopsavilkums";
+            miFPVNKopsavilkums.Click += miFPVNKopsavilkums_Click;
             // 
             // miFPVNDeklarācija
             // 
-            this.miFPVNDeklarācija.Name = "miFPVNDeklarācija";
-            this.miFPVNDeklarācija.Size = new System.Drawing.Size(274, 38);
-            this.miFPVNDeklarācija.Text = "deklarācija";
-            this.miFPVNDeklarācija.Click += new System.EventHandler(this.miFPVNDeklarācija_Click);
+            miFPVNDeklarācija.Name = "miFPVNDeklarācija";
+            miFPVNDeklarācija.Size = new System.Drawing.Size(179, 24);
+            miFPVNDeklarācija.Text = "deklarācija";
+            miFPVNDeklarācija.Click += miFPVNDeklarācija_Click;
             // 
             // miFŽurnāls
             // 
-            this.miFŽurnāls.Name = "miFŽurnāls";
-            this.miFŽurnāls.Size = new System.Drawing.Size(274, 38);
-            this.miFŽurnāls.Text = "žurnāls";
-            this.miFŽurnāls.Click += new System.EventHandler(this.miFŽurnāls_Click);
+            miFŽurnāls.Name = "miFŽurnāls";
+            miFŽurnāls.Size = new System.Drawing.Size(179, 24);
+            miFŽurnāls.Text = "žurnāls";
+            miFŽurnāls.Click += miFŽurnāls_Click;
             // 
             // miFPVNSummuKontrole
             // 
-            this.miFPVNSummuKontrole.Name = "miFPVNSummuKontrole";
-            this.miFPVNSummuKontrole.Size = new System.Drawing.Size(274, 38);
-            this.miFPVNSummuKontrole.Text = "summu kontrole";
-            this.miFPVNSummuKontrole.Click += new System.EventHandler(this.miFPVNSummuKontrole_Click);
+            miFPVNSummuKontrole.Name = "miFPVNSummuKontrole";
+            miFPVNSummuKontrole.Size = new System.Drawing.Size(179, 24);
+            miFPVNSummuKontrole.Text = "summu kontrole";
+            miFPVNSummuKontrole.Click += miFPVNSummuKontrole_Click;
             // 
             // miFAvansaNorēķins
             // 
-            this.miFAvansaNorēķins.Name = "miFAvansaNorēķins";
-            this.miFAvansaNorēķins.Size = new System.Drawing.Size(443, 38);
-            this.miFAvansaNorēķins.Text = "Avansa norēķins";
-            this.miFAvansaNorēķins.Click += new System.EventHandler(this.miFAvansaNorēķins_Click);
+            miFAvansaNorēķins.Name = "miFAvansaNorēķins";
+            miFAvansaNorēķins.Size = new System.Drawing.Size(287, 24);
+            miFAvansaNorēķins.Text = "Avansa norēķins";
+            miFAvansaNorēķins.Click += miFAvansaNorēķins_Click;
             // 
             // miFApgrozijumaPārskati
             // 
-            this.miFApgrozijumaPārskati.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.miFBilance,
-            this.miFPaMēnešiem,
-            this.miFNaudasPlūsma,
-            this.miFDarijumuŽurnāls,
-            this.miFPilnais});
-            this.miFApgrozijumaPārskati.Name = "miFApgrozijumaPārskati";
-            this.miFApgrozijumaPārskati.Size = new System.Drawing.Size(443, 38);
-            this.miFApgrozijumaPārskati.Text = "Apgrozijuma pārskati";
+            miFApgrozijumaPārskati.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { miFBilance, miFPaMēnešiem, miFNaudasPlūsma, miFDarijumuŽurnāls, miFPilnais });
+            miFApgrozijumaPārskati.Name = "miFApgrozijumaPārskati";
+            miFApgrozijumaPārskati.Size = new System.Drawing.Size(287, 24);
+            miFApgrozijumaPārskati.Text = "Apgrozijuma pārskati";
             // 
             // miFBilance
             // 
-            this.miFBilance.Name = "miFBilance";
-            this.miFBilance.Size = new System.Drawing.Size(274, 38);
-            this.miFBilance.Text = "bilance";
-            this.miFBilance.Click += new System.EventHandler(this.miFBilance_Click);
+            miFBilance.Name = "miFBilance";
+            miFBilance.Size = new System.Drawing.Size(179, 24);
+            miFBilance.Text = "bilance";
+            miFBilance.Click += miFBilance_Click;
             // 
             // miFPaMēnešiem
             // 
-            this.miFPaMēnešiem.Name = "miFPaMēnešiem";
-            this.miFPaMēnešiem.Size = new System.Drawing.Size(274, 38);
-            this.miFPaMēnešiem.Text = "pa mēnešiem";
-            this.miFPaMēnešiem.Click += new System.EventHandler(this.miFPaMēnešiem_Click);
+            miFPaMēnešiem.Name = "miFPaMēnešiem";
+            miFPaMēnešiem.Size = new System.Drawing.Size(179, 24);
+            miFPaMēnešiem.Text = "pa mēnešiem";
+            miFPaMēnešiem.Click += miFPaMēnešiem_Click;
             // 
             // miFNaudasPlūsma
             // 
-            this.miFNaudasPlūsma.Name = "miFNaudasPlūsma";
-            this.miFNaudasPlūsma.Size = new System.Drawing.Size(274, 38);
-            this.miFNaudasPlūsma.Text = "naudas plūsma";
-            this.miFNaudasPlūsma.Click += new System.EventHandler(this.miFNaudasPlūsma_Click);
+            miFNaudasPlūsma.Name = "miFNaudasPlūsma";
+            miFNaudasPlūsma.Size = new System.Drawing.Size(179, 24);
+            miFNaudasPlūsma.Text = "naudas plūsma";
+            miFNaudasPlūsma.Click += miFNaudasPlūsma_Click;
             // 
             // miFDarijumuŽurnāls
             // 
-            this.miFDarijumuŽurnāls.Name = "miFDarijumuŽurnāls";
-            this.miFDarijumuŽurnāls.Size = new System.Drawing.Size(274, 38);
-            this.miFDarijumuŽurnāls.Text = "darijumu žurnāls";
-            this.miFDarijumuŽurnāls.Click += new System.EventHandler(this.miFDarijumuŽurnāls_Click);
+            miFDarijumuŽurnāls.Name = "miFDarijumuŽurnāls";
+            miFDarijumuŽurnāls.Size = new System.Drawing.Size(179, 24);
+            miFDarijumuŽurnāls.Text = "darijumu žurnāls";
+            miFDarijumuŽurnāls.Click += miFDarijumuŽurnāls_Click;
             // 
             // miFPilnais
             // 
-            this.miFPilnais.Name = "miFPilnais";
-            this.miFPilnais.Size = new System.Drawing.Size(274, 38);
-            this.miFPilnais.Text = "pilnais";
-            this.miFPilnais.Click += new System.EventHandler(this.miFPilnais_Click);
+            miFPilnais.Name = "miFPilnais";
+            miFPilnais.Size = new System.Drawing.Size(179, 24);
+            miFPilnais.Text = "pilnais";
+            miFPilnais.Click += miFPilnais_Click;
             // 
             // miFKontuKorespondence
             // 
-            this.miFKontuKorespondence.Name = "miFKontuKorespondence";
-            this.miFKontuKorespondence.Size = new System.Drawing.Size(443, 38);
-            this.miFKontuKorespondence.Text = "Kontu korespondence";
-            this.miFKontuKorespondence.Click += new System.EventHandler(this.miFKontuKorespondence_Click);
+            miFKontuKorespondence.Name = "miFKontuKorespondence";
+            miFKontuKorespondence.Size = new System.Drawing.Size(287, 24);
+            miFKontuKorespondence.Text = "Kontu korespondence";
+            miFKontuKorespondence.Click += miFKontuKorespondence_Click;
             // 
             // miFValūtasKontuAtskaites
             // 
-            this.miFValūtasKontuAtskaites.Name = "miFValūtasKontuAtskaites";
-            this.miFValūtasKontuAtskaites.Size = new System.Drawing.Size(443, 38);
-            this.miFValūtasKontuAtskaites.Text = "Valūtas kontu atskaites";
-            this.miFValūtasKontuAtskaites.Click += new System.EventHandler(this.miFValūtasKontuAtskaites_Click);
+            miFValūtasKontuAtskaites.Name = "miFValūtasKontuAtskaites";
+            miFValūtasKontuAtskaites.Size = new System.Drawing.Size(287, 24);
+            miFValūtasKontuAtskaites.Text = "Valūtas kontu atskaites";
+            miFValūtasKontuAtskaites.Click += miFValūtasKontuAtskaites_Click;
             // 
             // miFDarijumuŽurnāls1
             // 
-            this.miFDarijumuŽurnāls1.Name = "miFDarijumuŽurnāls1";
-            this.miFDarijumuŽurnāls1.Size = new System.Drawing.Size(443, 38);
-            this.miFDarijumuŽurnāls1.Text = "Darijumu žurnāls";
-            this.miFDarijumuŽurnāls1.Click += new System.EventHandler(this.miFDarijumuŽurnāls1_Click);
+            miFDarijumuŽurnāls1.Name = "miFDarijumuŽurnāls1";
+            miFDarijumuŽurnāls1.Size = new System.Drawing.Size(287, 24);
+            miFDarijumuŽurnāls1.Text = "Darijumu žurnāls";
+            miFDarijumuŽurnāls1.Click += miFDarijumuŽurnāls1_Click;
             // 
             // miFNaudasPlūsma1
             // 
-            this.miFNaudasPlūsma1.Name = "miFNaudasPlūsma1";
-            this.miFNaudasPlūsma1.Size = new System.Drawing.Size(443, 38);
-            this.miFNaudasPlūsma1.Text = "Naudas plūsma";
-            this.miFNaudasPlūsma1.Click += new System.EventHandler(this.miFNaudasPlūsma1_Click);
+            miFNaudasPlūsma1.Name = "miFNaudasPlūsma1";
+            miFNaudasPlūsma1.Size = new System.Drawing.Size(287, 24);
+            miFNaudasPlūsma1.Text = "Naudas plūsma";
+            miFNaudasPlūsma1.Click += miFNaudasPlūsma1_Click;
             // 
             // miFKasesGrāmata
             // 
-            this.miFKasesGrāmata.Name = "miFKasesGrāmata";
-            this.miFKasesGrāmata.Size = new System.Drawing.Size(443, 38);
-            this.miFKasesGrāmata.Text = "Kases grāmata";
-            this.miFKasesGrāmata.Click += new System.EventHandler(this.miFKasesGrāmata_Click);
+            miFKasesGrāmata.Name = "miFKasesGrāmata";
+            miFKasesGrāmata.Size = new System.Drawing.Size(287, 24);
+            miFKasesGrāmata.Text = "Kases grāmata";
+            miFKasesGrāmata.Click += miFKasesGrāmata_Click;
             // 
             // miFPersonuPārskats
             // 
-            this.miFPersonuPārskats.Name = "miFPersonuPārskats";
-            this.miFPersonuPārskats.Size = new System.Drawing.Size(443, 38);
-            this.miFPersonuPārskats.Text = "Personu pārskats";
-            this.miFPersonuPārskats.Click += new System.EventHandler(this.miFPersonuPārskats_Click);
+            miFPersonuPārskats.Name = "miFPersonuPārskats";
+            miFPersonuPārskats.Size = new System.Drawing.Size(287, 24);
+            miFPersonuPārskats.Text = "Personu pārskats";
+            miFPersonuPārskats.Click += miFPersonuPārskats_Click;
             // 
             // miFSkaidrasNaudasDarijumi
             // 
-            this.miFSkaidrasNaudasDarijumi.Name = "miFSkaidrasNaudasDarijumi";
-            this.miFSkaidrasNaudasDarijumi.Size = new System.Drawing.Size(443, 38);
-            this.miFSkaidrasNaudasDarijumi.Text = "Skaidras naudas darijumi";
-            this.miFSkaidrasNaudasDarijumi.Click += new System.EventHandler(this.miFSkaidrasNaudasDarijumi_Click);
+            miFSkaidrasNaudasDarijumi.Name = "miFSkaidrasNaudasDarijumi";
+            miFSkaidrasNaudasDarijumi.Size = new System.Drawing.Size(287, 24);
+            miFSkaidrasNaudasDarijumi.Text = "Skaidras naudas darijumi";
+            miFSkaidrasNaudasDarijumi.Click += miFSkaidrasNaudasDarijumi_Click;
             // 
             // miFBilance1
             // 
-            this.miFBilance1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.miFBilaneAtskaite,
-            this.toolStripSeparator6,
-            this.miFBilanceFormulas});
-            this.miFBilance1.Name = "miFBilance1";
-            this.miFBilance1.Size = new System.Drawing.Size(443, 38);
-            this.miFBilance1.Text = "Bilance";
+            miFBilance1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { miFBilaneAtskaite, toolStripSeparator6, miFBilanceFormulas });
+            miFBilance1.Name = "miFBilance1";
+            miFBilance1.Size = new System.Drawing.Size(287, 24);
+            miFBilance1.Text = "Bilance";
             // 
             // miFBilaneAtskaite
             // 
-            this.miFBilaneAtskaite.Name = "miFBilaneAtskaite";
-            this.miFBilaneAtskaite.Size = new System.Drawing.Size(204, 38);
-            this.miFBilaneAtskaite.Text = "Atskaite";
-            this.miFBilaneAtskaite.Click += new System.EventHandler(this.miFBilaneAtskaite_Click);
+            miFBilaneAtskaite.Name = "miFBilaneAtskaite";
+            miFBilaneAtskaite.Size = new System.Drawing.Size(134, 24);
+            miFBilaneAtskaite.Text = "Atskaite";
+            miFBilaneAtskaite.Click += miFBilaneAtskaite_Click;
             // 
             // toolStripSeparator6
             // 
-            this.toolStripSeparator6.Name = "toolStripSeparator6";
-            this.toolStripSeparator6.Size = new System.Drawing.Size(201, 6);
+            toolStripSeparator6.Name = "toolStripSeparator6";
+            toolStripSeparator6.Size = new System.Drawing.Size(131, 6);
             // 
             // miFBilanceFormulas
             // 
-            this.miFBilanceFormulas.Name = "miFBilanceFormulas";
-            this.miFBilanceFormulas.Size = new System.Drawing.Size(204, 38);
-            this.miFBilanceFormulas.Text = "Formulas";
-            this.miFBilanceFormulas.Click += new System.EventHandler(this.miFBilanceFormulas_Click);
+            miFBilanceFormulas.Name = "miFBilanceFormulas";
+            miFBilanceFormulas.Size = new System.Drawing.Size(134, 24);
+            miFBilanceFormulas.Text = "Formulas";
+            miFBilanceFormulas.Click += miFBilanceFormulas_Click;
             // 
             // miFEdsTp
             // 
-            this.miFEdsTp.Name = "miFEdsTp";
-            this.miFEdsTp.Size = new System.Drawing.Size(443, 38);
-            this.miFEdsTp.Text = "Transakciju pārskats (no EDS XML)";
-            this.miFEdsTp.Click += new System.EventHandler(this.miFEdsTp_Click);
+            miFEdsTp.Name = "miFEdsTp";
+            miFEdsTp.Size = new System.Drawing.Size(287, 24);
+            miFEdsTp.Text = "Transakciju pārskats (no EDS XML)";
+            miFEdsTp.Click += miFEdsTp_Click;
             // 
             // miAAlgas
             // 
-            this.miAAlgas.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.miAAtlasītDatus,
-            this.miRepStats,
-            this.miADarbinieki,
-            this.miADarbaLaikaUzskaite,
-            this.miAAlguAprēķins,
-            this.miAGabaldarbs,
-            this.miAMaksājumuSaraksti,
-            this.miAFiziskasPersonas,
-            this.miADažādiSaraksti,
-            this.toolStripSeparator26,
-            this.miAAtskaites});
-            this.miAAlgas.MergeIndex = 1;
-            this.miAAlgas.Name = "miAAlgas";
-            this.miAAlgas.Size = new System.Drawing.Size(81, 34);
-            this.miAAlgas.Text = "A&lgas";
+            miAAlgas.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { miAAtlasītDatus, miRepStats, miADarbinieki, miADarbaLaikaUzskaite, miAAlguAprēķins, miAGabaldarbs, miAMaksājumuSaraksti, miAFiziskasPersonas, miADažādiSaraksti, toolStripSeparator26, miAAtskaites });
+            miAAlgas.MergeIndex = 1;
+            miAAlgas.Name = "miAAlgas";
+            miAAlgas.Size = new System.Drawing.Size(54, 23);
+            miAAlgas.Text = "A&lgas";
             // 
             // miAAtlasītDatus
             // 
-            this.miAAtlasītDatus.Name = "miAAtlasītDatus";
-            this.miAAtlasītDatus.Size = new System.Drawing.Size(363, 38);
-            this.miAAtlasītDatus.Text = "Atlasīt datus";
-            this.miAAtlasītDatus.Click += new System.EventHandler(this.miAAtlasītDatus_Click);
+            miAAtlasītDatus.Name = "miAAtlasītDatus";
+            miAAtlasītDatus.Size = new System.Drawing.Size(236, 24);
+            miAAtlasītDatus.Text = "Atlasīt datus";
+            miAAtlasītDatus.Click += miAAtlasītDatus_Click;
             // 
             // miRepStats
             // 
-            this.miRepStats.Name = "miRepStats";
-            this.miRepStats.Size = new System.Drawing.Size(363, 38);
-            this.miRepStats.Text = "Uzskaites mēneša apskats";
-            this.miRepStats.Click += new System.EventHandler(this.miRepStats_Click);
+            miRepStats.Name = "miRepStats";
+            miRepStats.Size = new System.Drawing.Size(236, 24);
+            miRepStats.Text = "Uzskaites mēneša apskats";
+            miRepStats.Click += miRepStats_Click;
             // 
             // miADarbinieki
             // 
-            this.miADarbinieki.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.miADarbiniekuDati,
-            this.miADarbinieki1,
-            this.toolStripSeparator15,
-            this.miNeapliekamaisMinimums,
-            this.miAIzmaiņasNodokļuMaksātājaGrāmatiņāsnoEDS,
-            this.miADarbaNespējasLapas,
-            this.toolStripSeparator16,
-            this.miANotikumuIzklāsts,
-            this.miAstrādājošoPārskats,
-            this.miANeizmantotāsAtvaļinājumaDienas,
-            this.miAStruktūrvienības,
-            this.miADatiParPerioduPirmsUzskaitesSākšanas});
-            this.miADarbinieki.Name = "miADarbinieki";
-            this.miADarbinieki.Size = new System.Drawing.Size(363, 38);
-            this.miADarbinieki.Text = "Darbinieki";
+            miADarbinieki.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { miADarbiniekuDati, miADarbinieki1, toolStripSeparator15, miNeapliekamaisMinimums, miAIzmaiņasNodokļuMaksātājaGrāmatiņāsnoEDS, miADarbaNespējasLapas, toolStripSeparator16, miANotikumuIzklāsts, miAstrādājošoPārskats, miANeizmantotāsAtvaļinājumaDienas, miAStruktūrvienības, miADatiParPerioduPirmsUzskaitesSākšanas });
+            miADarbinieki.Name = "miADarbinieki";
+            miADarbinieki.Size = new System.Drawing.Size(236, 24);
+            miADarbinieki.Text = "Darbinieki";
             // 
             // miADarbiniekuDati
             // 
-            this.miADarbiniekuDati.Name = "miADarbiniekuDati";
-            this.miADarbiniekuDati.Size = new System.Drawing.Size(586, 38);
-            this.miADarbiniekuDati.Text = "Darbinieku dati";
-            this.miADarbiniekuDati.Click += new System.EventHandler(this.miADarbiniekuDati_Click);
+            miADarbiniekuDati.Name = "miADarbiniekuDati";
+            miADarbiniekuDati.Size = new System.Drawing.Size(378, 24);
+            miADarbiniekuDati.Text = "Darbinieku dati";
+            miADarbiniekuDati.Click += miADarbiniekuDati_Click;
             // 
             // miADarbinieki1
             // 
-            this.miADarbinieki1.Name = "miADarbinieki1";
-            this.miADarbinieki1.Size = new System.Drawing.Size(586, 38);
-            this.miADarbinieki1.Text = "Darbinieku saraksts";
-            this.miADarbinieki1.Click += new System.EventHandler(this.miADarbinieki1_Click);
-            // 
-            // miAstrādājošoPārskats
-            // 
-            this.miAstrādājošoPārskats.Name = "miAstrādājošoPārskats";
-            this.miAstrādājošoPārskats.Size = new System.Drawing.Size(586, 38);
-            this.miAstrādājošoPārskats.Text = "Strādājošo pārskats";
-            this.miAstrādājošoPārskats.Click += new System.EventHandler(this.miAstrādājošoPārskats_Click);
+            miADarbinieki1.Name = "miADarbinieki1";
+            miADarbinieki1.Size = new System.Drawing.Size(378, 24);
+            miADarbinieki1.Text = "Darbinieku saraksts";
+            miADarbinieki1.Click += miADarbinieki1_Click;
             // 
             // toolStripSeparator15
             // 
-            this.toolStripSeparator15.Name = "toolStripSeparator15";
-            this.toolStripSeparator15.Size = new System.Drawing.Size(583, 6);
+            toolStripSeparator15.Name = "toolStripSeparator15";
+            toolStripSeparator15.Size = new System.Drawing.Size(375, 6);
             // 
             // miNeapliekamaisMinimums
             // 
-            this.miNeapliekamaisMinimums.Name = "miNeapliekamaisMinimums";
-            this.miNeapliekamaisMinimums.Size = new System.Drawing.Size(586, 38);
-            this.miNeapliekamaisMinimums.Text = "Neapliekamais minimums";
-            this.miNeapliekamaisMinimums.Click += new System.EventHandler(this.miNeapliekamaisMinimums_Click);
+            miNeapliekamaisMinimums.Name = "miNeapliekamaisMinimums";
+            miNeapliekamaisMinimums.Size = new System.Drawing.Size(378, 24);
+            miNeapliekamaisMinimums.Text = "Neapliekamais minimums";
+            miNeapliekamaisMinimums.Click += miNeapliekamaisMinimums_Click;
             // 
             // miAIzmaiņasNodokļuMaksātājaGrāmatiņāsnoEDS
             // 
-            this.miAIzmaiņasNodokļuMaksātājaGrāmatiņāsnoEDS.Name = "miAIzmaiņasNodokļuMaksātājaGrāmatiņāsnoEDS";
-            this.miAIzmaiņasNodokļuMaksātājaGrāmatiņāsnoEDS.Size = new System.Drawing.Size(586, 38);
-            this.miAIzmaiņasNodokļuMaksātājaGrāmatiņāsnoEDS.Text = "Izmaiņas nodokļu maksātāja grāmatiņās (no EDS)";
-            this.miAIzmaiņasNodokļuMaksātājaGrāmatiņāsnoEDS.Click += new System.EventHandler(this.miAIzmaiņasNodokļuMaksātājaGrāmatiņāsnoEDS_Click);
+            miAIzmaiņasNodokļuMaksātājaGrāmatiņāsnoEDS.Name = "miAIzmaiņasNodokļuMaksātājaGrāmatiņāsnoEDS";
+            miAIzmaiņasNodokļuMaksātājaGrāmatiņāsnoEDS.Size = new System.Drawing.Size(378, 24);
+            miAIzmaiņasNodokļuMaksātājaGrāmatiņāsnoEDS.Text = "Izmaiņas nodokļu maksātāja grāmatiņās (no EDS)";
+            miAIzmaiņasNodokļuMaksātājaGrāmatiņāsnoEDS.Click += miAIzmaiņasNodokļuMaksātājaGrāmatiņāsnoEDS_Click;
             // 
             // miADarbaNespējasLapas
             // 
-            this.miADarbaNespējasLapas.Name = "miADarbaNespējasLapas";
-            this.miADarbaNespējasLapas.Size = new System.Drawing.Size(586, 38);
-            this.miADarbaNespējasLapas.Text = "Darba nespējas lapas (no EDS)";
-            this.miADarbaNespējasLapas.Click += new System.EventHandler(this.miADarbaNespējasLapas_Click);
+            miADarbaNespējasLapas.Name = "miADarbaNespējasLapas";
+            miADarbaNespējasLapas.Size = new System.Drawing.Size(378, 24);
+            miADarbaNespējasLapas.Text = "Darba nespējas lapas (no EDS)";
+            miADarbaNespējasLapas.Click += miADarbaNespējasLapas_Click;
             // 
             // toolStripSeparator16
             // 
-            this.toolStripSeparator16.Name = "toolStripSeparator16";
-            this.toolStripSeparator16.Size = new System.Drawing.Size(583, 6);
+            toolStripSeparator16.Name = "toolStripSeparator16";
+            toolStripSeparator16.Size = new System.Drawing.Size(375, 6);
             // 
             // miANotikumuIzklāsts
             // 
-            this.miANotikumuIzklāsts.Name = "miANotikumuIzklāsts";
-            this.miANotikumuIzklāsts.Size = new System.Drawing.Size(586, 38);
-            this.miANotikumuIzklāsts.Text = "Notikumu izklāsts";
-            this.miANotikumuIzklāsts.Click += new System.EventHandler(this.miANotikumuIzklāsts_Click);
+            miANotikumuIzklāsts.Name = "miANotikumuIzklāsts";
+            miANotikumuIzklāsts.Size = new System.Drawing.Size(378, 24);
+            miANotikumuIzklāsts.Text = "Notikumu izklāsts";
+            miANotikumuIzklāsts.Click += miANotikumuIzklāsts_Click;
+            // 
+            // miAstrādājošoPārskats
+            // 
+            miAstrādājošoPārskats.Name = "miAstrādājošoPārskats";
+            miAstrādājošoPārskats.Size = new System.Drawing.Size(378, 24);
+            miAstrādājošoPārskats.Text = "Strādājošo pārskats";
+            miAstrādājošoPārskats.Click += miAstrādājošoPārskats_Click;
             // 
             // miANeizmantotāsAtvaļinājumaDienas
             // 
-            this.miANeizmantotāsAtvaļinājumaDienas.Name = "miANeizmantotāsAtvaļinājumaDienas";
-            this.miANeizmantotāsAtvaļinājumaDienas.Size = new System.Drawing.Size(586, 38);
-            this.miANeizmantotāsAtvaļinājumaDienas.Text = "Neizmantotās atvaļinājuma dienas";
-            this.miANeizmantotāsAtvaļinājumaDienas.Click += new System.EventHandler(this.miANeizmantotāsAtvaļinājumaDienas_Click);
+            miANeizmantotāsAtvaļinājumaDienas.Name = "miANeizmantotāsAtvaļinājumaDienas";
+            miANeizmantotāsAtvaļinājumaDienas.Size = new System.Drawing.Size(378, 24);
+            miANeizmantotāsAtvaļinājumaDienas.Text = "Neizmantotās atvaļinājuma dienas";
+            miANeizmantotāsAtvaļinājumaDienas.Click += miANeizmantotāsAtvaļinājumaDienas_Click;
             // 
             // miAStruktūrvienības
             // 
-            this.miAStruktūrvienības.Name = "miAStruktūrvienības";
-            this.miAStruktūrvienības.Size = new System.Drawing.Size(586, 38);
-            this.miAStruktūrvienības.Text = "Struktūrvienības";
-            this.miAStruktūrvienības.Click += new System.EventHandler(this.miAStruktūrvienības_Click);
+            miAStruktūrvienības.Name = "miAStruktūrvienības";
+            miAStruktūrvienības.Size = new System.Drawing.Size(378, 24);
+            miAStruktūrvienības.Text = "Struktūrvienības";
+            miAStruktūrvienības.Click += miAStruktūrvienības_Click;
             // 
             // miADatiParPerioduPirmsUzskaitesSākšanas
             // 
-            this.miADatiParPerioduPirmsUzskaitesSākšanas.Name = "miADatiParPerioduPirmsUzskaitesSākšanas";
-            this.miADatiParPerioduPirmsUzskaitesSākšanas.Size = new System.Drawing.Size(586, 38);
-            this.miADatiParPerioduPirmsUzskaitesSākšanas.Text = "Dati par periodu pirms uzskaites sākšanas";
-            this.miADatiParPerioduPirmsUzskaitesSākšanas.Click += new System.EventHandler(this.miADatiParPerioduPirmsUzskaitesSākšanas_Click);
+            miADatiParPerioduPirmsUzskaitesSākšanas.Name = "miADatiParPerioduPirmsUzskaitesSākšanas";
+            miADatiParPerioduPirmsUzskaitesSākšanas.Size = new System.Drawing.Size(378, 24);
+            miADatiParPerioduPirmsUzskaitesSākšanas.Text = "Dati par periodu pirms uzskaites sākšanas";
+            miADatiParPerioduPirmsUzskaitesSākšanas.Click += miADatiParPerioduPirmsUzskaitesSākšanas_Click;
             // 
             // miADarbaLaikaUzskaite
             // 
-            this.miADarbaLaikaUzskaite.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.miADarbiniekaDarbaLaikaUzskaitesDati,
-            this.toolStripSeparator14,
-            this.miADarbaLaikaPlānuSaraksts,
-            this.miADarbaLaikaPlāns,
-            this.toolStripSeparator12,
-            this.miADarbaLaikaUzskaitesLapuŠabloni,
-            this.miADarbaLaikaUzskaitesLapas,
-            this.toolStripSeparator13,
-            this.miADarbaLaikaUzskaitesLapa});
-            this.miADarbaLaikaUzskaite.Name = "miADarbaLaikaUzskaite";
-            this.miADarbaLaikaUzskaite.Size = new System.Drawing.Size(363, 38);
-            this.miADarbaLaikaUzskaite.Text = "Darba laika uzskaite";
+            miADarbaLaikaUzskaite.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { miADarbiniekaDarbaLaikaUzskaitesDati, toolStripSeparator14, miADarbaLaikaPlānuSaraksts, miADarbaLaikaPlāns, toolStripSeparator12, miADarbaLaikaUzskaitesLapuŠabloni, miADarbaLaikaUzskaitesLapas, toolStripSeparator13, miADarbaLaikaUzskaitesLapa });
+            miADarbaLaikaUzskaite.Name = "miADarbaLaikaUzskaite";
+            miADarbaLaikaUzskaite.Size = new System.Drawing.Size(236, 24);
+            miADarbaLaikaUzskaite.Text = "Darba laika uzskaite";
             // 
             // miADarbiniekaDarbaLaikaUzskaitesDati
             // 
-            this.miADarbiniekaDarbaLaikaUzskaitesDati.Name = "miADarbiniekaDarbaLaikaUzskaitesDati";
-            this.miADarbiniekaDarbaLaikaUzskaitesDati.Size = new System.Drawing.Size(464, 38);
-            this.miADarbiniekaDarbaLaikaUzskaitesDati.Text = "Darbinieka darba laika uzskaites dati";
-            this.miADarbiniekaDarbaLaikaUzskaitesDati.Click += new System.EventHandler(this.miADarbiniekaDarbaLaikaUzskaitesDati_Click);
+            miADarbiniekaDarbaLaikaUzskaitesDati.Name = "miADarbiniekaDarbaLaikaUzskaitesDati";
+            miADarbiniekaDarbaLaikaUzskaitesDati.Size = new System.Drawing.Size(299, 24);
+            miADarbiniekaDarbaLaikaUzskaitesDati.Text = "Darbinieka darba laika uzskaites dati";
+            miADarbiniekaDarbaLaikaUzskaitesDati.Click += miADarbiniekaDarbaLaikaUzskaitesDati_Click;
             // 
             // toolStripSeparator14
             // 
-            this.toolStripSeparator14.Name = "toolStripSeparator14";
-            this.toolStripSeparator14.Size = new System.Drawing.Size(461, 6);
+            toolStripSeparator14.Name = "toolStripSeparator14";
+            toolStripSeparator14.Size = new System.Drawing.Size(296, 6);
             // 
             // miADarbaLaikaPlānuSaraksts
             // 
-            this.miADarbaLaikaPlānuSaraksts.Name = "miADarbaLaikaPlānuSaraksts";
-            this.miADarbaLaikaPlānuSaraksts.Size = new System.Drawing.Size(464, 38);
-            this.miADarbaLaikaPlānuSaraksts.Text = "Darba laika plānu saraksts";
-            this.miADarbaLaikaPlānuSaraksts.Click += new System.EventHandler(this.miADarbaLaikaPlānuSaraksts_Click);
+            miADarbaLaikaPlānuSaraksts.Name = "miADarbaLaikaPlānuSaraksts";
+            miADarbaLaikaPlānuSaraksts.Size = new System.Drawing.Size(299, 24);
+            miADarbaLaikaPlānuSaraksts.Text = "Darba laika plānu saraksts";
+            miADarbaLaikaPlānuSaraksts.Click += miADarbaLaikaPlānuSaraksts_Click;
             // 
             // miADarbaLaikaPlāns
             // 
-            this.miADarbaLaikaPlāns.Name = "miADarbaLaikaPlāns";
-            this.miADarbaLaikaPlāns.Size = new System.Drawing.Size(464, 38);
-            this.miADarbaLaikaPlāns.Text = "Darba laika plāns";
-            this.miADarbaLaikaPlāns.Click += new System.EventHandler(this.miADarbaLaikaPlāns_Click);
+            miADarbaLaikaPlāns.Name = "miADarbaLaikaPlāns";
+            miADarbaLaikaPlāns.Size = new System.Drawing.Size(299, 24);
+            miADarbaLaikaPlāns.Text = "Darba laika plāns";
+            miADarbaLaikaPlāns.Click += miADarbaLaikaPlāns_Click;
             // 
             // toolStripSeparator12
             // 
-            this.toolStripSeparator12.Name = "toolStripSeparator12";
-            this.toolStripSeparator12.Size = new System.Drawing.Size(461, 6);
+            toolStripSeparator12.Name = "toolStripSeparator12";
+            toolStripSeparator12.Size = new System.Drawing.Size(296, 6);
             // 
             // miADarbaLaikaUzskaitesLapuŠabloni
             // 
-            this.miADarbaLaikaUzskaitesLapuŠabloni.Name = "miADarbaLaikaUzskaitesLapuŠabloni";
-            this.miADarbaLaikaUzskaitesLapuŠabloni.Size = new System.Drawing.Size(464, 38);
-            this.miADarbaLaikaUzskaitesLapuŠabloni.Text = "Darba laika uzskaites lapu sagataves";
-            this.miADarbaLaikaUzskaitesLapuŠabloni.Click += new System.EventHandler(this.miADarbaLaikaUzskaitesLapuŠabloni_Click);
+            miADarbaLaikaUzskaitesLapuŠabloni.Name = "miADarbaLaikaUzskaitesLapuŠabloni";
+            miADarbaLaikaUzskaitesLapuŠabloni.Size = new System.Drawing.Size(299, 24);
+            miADarbaLaikaUzskaitesLapuŠabloni.Text = "Darba laika uzskaites lapu sagataves";
+            miADarbaLaikaUzskaitesLapuŠabloni.Click += miADarbaLaikaUzskaitesLapuŠabloni_Click;
             // 
             // miADarbaLaikaUzskaitesLapas
             // 
-            this.miADarbaLaikaUzskaitesLapas.Name = "miADarbaLaikaUzskaitesLapas";
-            this.miADarbaLaikaUzskaitesLapas.Size = new System.Drawing.Size(464, 38);
-            this.miADarbaLaikaUzskaitesLapas.Text = "Darba laika uzskaites lapas";
-            this.miADarbaLaikaUzskaitesLapas.Click += new System.EventHandler(this.miADarbaLaikaUzskaitesLapas_Click);
+            miADarbaLaikaUzskaitesLapas.Name = "miADarbaLaikaUzskaitesLapas";
+            miADarbaLaikaUzskaitesLapas.Size = new System.Drawing.Size(299, 24);
+            miADarbaLaikaUzskaitesLapas.Text = "Darba laika uzskaites lapas";
+            miADarbaLaikaUzskaitesLapas.Click += miADarbaLaikaUzskaitesLapas_Click;
             // 
             // toolStripSeparator13
             // 
-            this.toolStripSeparator13.Name = "toolStripSeparator13";
-            this.toolStripSeparator13.Size = new System.Drawing.Size(461, 6);
+            toolStripSeparator13.Name = "toolStripSeparator13";
+            toolStripSeparator13.Size = new System.Drawing.Size(296, 6);
             // 
             // miADarbaLaikaUzskaitesLapa
             // 
-            this.miADarbaLaikaUzskaitesLapa.Name = "miADarbaLaikaUzskaitesLapa";
-            this.miADarbaLaikaUzskaitesLapa.Size = new System.Drawing.Size(464, 38);
-            this.miADarbaLaikaUzskaitesLapa.Text = "Darba laika uzskaites lapa";
-            this.miADarbaLaikaUzskaitesLapa.Click += new System.EventHandler(this.miADarbaLaikaUzskaitesLapa_Click);
+            miADarbaLaikaUzskaitesLapa.Name = "miADarbaLaikaUzskaitesLapa";
+            miADarbaLaikaUzskaitesLapa.Size = new System.Drawing.Size(299, 24);
+            miADarbaLaikaUzskaitesLapa.Text = "Darba laika uzskaites lapa";
+            miADarbaLaikaUzskaitesLapa.Click += miADarbaLaikaUzskaitesLapa_Click;
             // 
             // miAAlguAprēķins
             // 
-            this.miAAlguAprēķins.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.miAAlgasAprēķinaLapuŠabloni,
-            this.miAAlgasAprēķinaLapuSaraksts,
-            this.miAAlgasAprēķinaLapas});
-            this.miAAlguAprēķins.Name = "miAAlguAprēķins";
-            this.miAAlguAprēķins.Size = new System.Drawing.Size(363, 38);
-            this.miAAlguAprēķins.Text = "Algu aprēķins";
+            miAAlguAprēķins.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { miAAlgasAprēķinaLapuŠabloni, miAAlgasAprēķinaLapuSaraksts, miAAlgasAprēķinaLapas });
+            miAAlguAprēķins.Name = "miAAlguAprēķins";
+            miAAlguAprēķins.Size = new System.Drawing.Size(236, 24);
+            miAAlguAprēķins.Text = "Algu aprēķins";
             // 
             // miAAlgasAprēķinaLapuŠabloni
             // 
-            this.miAAlgasAprēķinaLapuŠabloni.Name = "miAAlgasAprēķinaLapuŠabloni";
-            this.miAAlgasAprēķinaLapuŠabloni.Size = new System.Drawing.Size(404, 38);
-            this.miAAlgasAprēķinaLapuŠabloni.Text = "Algas aprēķina lapu sagataves";
-            this.miAAlgasAprēķinaLapuŠabloni.Click += new System.EventHandler(this.miAAlgasAprēķinaLapuŠabloni_Click);
+            miAAlgasAprēķinaLapuŠabloni.Name = "miAAlgasAprēķinaLapuŠabloni";
+            miAAlgasAprēķinaLapuŠabloni.Size = new System.Drawing.Size(261, 24);
+            miAAlgasAprēķinaLapuŠabloni.Text = "Algas aprēķina lapu sagataves";
+            miAAlgasAprēķinaLapuŠabloni.Click += miAAlgasAprēķinaLapuŠabloni_Click;
             // 
             // miAAlgasAprēķinaLapuSaraksts
             // 
-            this.miAAlgasAprēķinaLapuSaraksts.Name = "miAAlgasAprēķinaLapuSaraksts";
-            this.miAAlgasAprēķinaLapuSaraksts.Size = new System.Drawing.Size(404, 38);
-            this.miAAlgasAprēķinaLapuSaraksts.Text = "Algas aprēķina lapu saraksts";
-            this.miAAlgasAprēķinaLapuSaraksts.Click += new System.EventHandler(this.miAAlgasAprēķinaLapuSaraksts_Click);
+            miAAlgasAprēķinaLapuSaraksts.Name = "miAAlgasAprēķinaLapuSaraksts";
+            miAAlgasAprēķinaLapuSaraksts.Size = new System.Drawing.Size(261, 24);
+            miAAlgasAprēķinaLapuSaraksts.Text = "Algas aprēķina lapu saraksts";
+            miAAlgasAprēķinaLapuSaraksts.Click += miAAlgasAprēķinaLapuSaraksts_Click;
             // 
             // miAAlgasAprēķinaLapas
             // 
-            this.miAAlgasAprēķinaLapas.Name = "miAAlgasAprēķinaLapas";
-            this.miAAlgasAprēķinaLapas.Size = new System.Drawing.Size(404, 38);
-            this.miAAlgasAprēķinaLapas.Text = "Algas aprēķina lapa";
-            this.miAAlgasAprēķinaLapas.Click += new System.EventHandler(this.miAAlgasAprēķinaLapas_Click);
+            miAAlgasAprēķinaLapas.Name = "miAAlgasAprēķinaLapas";
+            miAAlgasAprēķinaLapas.Size = new System.Drawing.Size(261, 24);
+            miAAlgasAprēķinaLapas.Text = "Algas aprēķina lapa";
+            miAAlgasAprēķinaLapas.Click += miAAlgasAprēķinaLapas_Click;
             // 
             // miAGabaldarbs
             // 
-            this.miAGabaldarbs.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.miADarbaUzskaite,
-            this.miAKkatalogs,
-            this.miAKatalogaStruktūra});
-            this.miAGabaldarbs.Name = "miAGabaldarbs";
-            this.miAGabaldarbs.Size = new System.Drawing.Size(363, 38);
-            this.miAGabaldarbs.Text = "Gabaldarbs";
+            miAGabaldarbs.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { miADarbaUzskaite, miAKkatalogs, miAKatalogaStruktūra });
+            miAGabaldarbs.Name = "miAGabaldarbs";
+            miAGabaldarbs.Size = new System.Drawing.Size(236, 24);
+            miAGabaldarbs.Text = "Gabaldarbs";
             // 
             // miADarbaUzskaite
             // 
-            this.miADarbaUzskaite.Name = "miADarbaUzskaite";
-            this.miADarbaUzskaite.Size = new System.Drawing.Size(291, 38);
-            this.miADarbaUzskaite.Text = "Darba uzskaite";
-            this.miADarbaUzskaite.Click += new System.EventHandler(this.miADarbaUzskaite_Click);
+            miADarbaUzskaite.Name = "miADarbaUzskaite";
+            miADarbaUzskaite.Size = new System.Drawing.Size(191, 24);
+            miADarbaUzskaite.Text = "Darba uzskaite";
+            miADarbaUzskaite.Click += miADarbaUzskaite_Click;
             // 
             // miAKkatalogs
             // 
-            this.miAKkatalogs.Name = "miAKkatalogs";
-            this.miAKkatalogs.Size = new System.Drawing.Size(291, 38);
-            this.miAKkatalogs.Text = "Katalogs";
-            this.miAKkatalogs.Click += new System.EventHandler(this.miAKkatalogs_Click);
+            miAKkatalogs.Name = "miAKkatalogs";
+            miAKkatalogs.Size = new System.Drawing.Size(191, 24);
+            miAKkatalogs.Text = "Katalogs";
+            miAKkatalogs.Click += miAKkatalogs_Click;
             // 
             // miAKatalogaStruktūra
             // 
-            this.miAKatalogaStruktūra.Name = "miAKatalogaStruktūra";
-            this.miAKatalogaStruktūra.Size = new System.Drawing.Size(291, 38);
-            this.miAKatalogaStruktūra.Text = "Kataloga struktūra";
-            this.miAKatalogaStruktūra.Click += new System.EventHandler(this.miAKatalogaStruktūra_Click);
+            miAKatalogaStruktūra.Name = "miAKatalogaStruktūra";
+            miAKatalogaStruktūra.Size = new System.Drawing.Size(191, 24);
+            miAKatalogaStruktūra.Text = "Kataloga struktūra";
+            miAKatalogaStruktūra.Click += miAKatalogaStruktūra_Click;
             // 
             // miAMaksājumuSaraksti
             // 
-            this.miAMaksājumuSaraksti.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.miAPārskatsPaPersonām,
-            this.miASarakstuŠabloni,
-            this.miAMakasājumuSaraksti1});
-            this.miAMaksājumuSaraksti.Name = "miAMaksājumuSaraksti";
-            this.miAMaksājumuSaraksti.Size = new System.Drawing.Size(363, 38);
-            this.miAMaksājumuSaraksti.Text = "Maksājumu saraksti";
+            miAMaksājumuSaraksti.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { miAPārskatsPaPersonām, miASarakstuŠabloni, miAMakasājumuSaraksti1 });
+            miAMaksājumuSaraksti.Name = "miAMaksājumuSaraksti";
+            miAMaksājumuSaraksti.Size = new System.Drawing.Size(236, 24);
+            miAMaksājumuSaraksti.Text = "Maksājumu saraksti";
             // 
             // miAPārskatsPaPersonām
             // 
-            this.miAPārskatsPaPersonām.Name = "miAPārskatsPaPersonām";
-            this.miAPārskatsPaPersonām.Size = new System.Drawing.Size(355, 38);
-            this.miAPārskatsPaPersonām.Text = "Pārskats pa darbiniekiem";
-            this.miAPārskatsPaPersonām.Click += new System.EventHandler(this.miAPārskatsPaPersonām_Click);
+            miAPārskatsPaPersonām.Name = "miAPārskatsPaPersonām";
+            miAPārskatsPaPersonām.Size = new System.Drawing.Size(230, 24);
+            miAPārskatsPaPersonām.Text = "Pārskats pa darbiniekiem";
+            miAPārskatsPaPersonām.Click += miAPārskatsPaPersonām_Click;
             // 
             // miASarakstuŠabloni
             // 
-            this.miASarakstuŠabloni.Name = "miASarakstuŠabloni";
-            this.miASarakstuŠabloni.Size = new System.Drawing.Size(355, 38);
-            this.miASarakstuŠabloni.Text = "Sarakstu sagataves";
-            this.miASarakstuŠabloni.Click += new System.EventHandler(this.miASarakstuŠabloni_Click);
+            miASarakstuŠabloni.Name = "miASarakstuŠabloni";
+            miASarakstuŠabloni.Size = new System.Drawing.Size(230, 24);
+            miASarakstuŠabloni.Text = "Sarakstu sagataves";
+            miASarakstuŠabloni.Click += miASarakstuŠabloni_Click;
             // 
             // miAMakasājumuSaraksti1
             // 
-            this.miAMakasājumuSaraksti1.Name = "miAMakasājumuSaraksti1";
-            this.miAMakasājumuSaraksti1.Size = new System.Drawing.Size(355, 38);
-            this.miAMakasājumuSaraksti1.Text = "Makasājumu saraksti";
-            this.miAMakasājumuSaraksti1.Click += new System.EventHandler(this.miAMakasājumuSaraksti1_Click);
+            miAMakasājumuSaraksti1.Name = "miAMakasājumuSaraksti1";
+            miAMakasājumuSaraksti1.Size = new System.Drawing.Size(230, 24);
+            miAMakasājumuSaraksti1.Text = "Makasājumu saraksti";
+            miAMakasājumuSaraksti1.Click += miAMakasājumuSaraksti1_Click;
             // 
             // miAFiziskasPersonas
             // 
-            this.miAFiziskasPersonas.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.miAPersonuSaraksts,
-            this.miAMaksājumi});
-            this.miAFiziskasPersonas.Name = "miAFiziskasPersonas";
-            this.miAFiziskasPersonas.Size = new System.Drawing.Size(363, 38);
-            this.miAFiziskasPersonas.Text = "Fiziskas personas";
+            miAFiziskasPersonas.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { miAPersonuSaraksts, miAMaksājumi });
+            miAFiziskasPersonas.Name = "miAFiziskasPersonas";
+            miAFiziskasPersonas.Size = new System.Drawing.Size(236, 24);
+            miAFiziskasPersonas.Text = "Fiziskas personas";
             // 
             // miAPersonuSaraksts
             // 
-            this.miAPersonuSaraksts.Name = "miAPersonuSaraksts";
-            this.miAPersonuSaraksts.Size = new System.Drawing.Size(274, 38);
-            this.miAPersonuSaraksts.Text = "Personu saraksts";
-            this.miAPersonuSaraksts.Click += new System.EventHandler(this.miAPersonuSaraksts_Click);
+            miAPersonuSaraksts.Name = "miAPersonuSaraksts";
+            miAPersonuSaraksts.Size = new System.Drawing.Size(180, 24);
+            miAPersonuSaraksts.Text = "Personu saraksts";
+            miAPersonuSaraksts.Click += miAPersonuSaraksts_Click;
             // 
             // miAMaksājumi
             // 
-            this.miAMaksājumi.Name = "miAMaksājumi";
-            this.miAMaksājumi.Size = new System.Drawing.Size(274, 38);
-            this.miAMaksājumi.Text = "Maksājumi";
-            this.miAMaksājumi.Click += new System.EventHandler(this.miAMaksājumi_Click);
+            miAMaksājumi.Name = "miAMaksājumi";
+            miAMaksājumi.Size = new System.Drawing.Size(180, 24);
+            miAMaksājumi.Text = "Maksājumi";
+            miAMaksājumi.Click += miAMaksājumi_Click;
             // 
             // miADažādiSaraksti
             // 
-            this.miADažādiSaraksti.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.miAPapildusNotikumuKodi,
-            this.miALikmes,
-            this.miATeritoriālieKodi,
-            this.miAProfesijuKlasifikators,
-            this.miAZiņuKodi,
-            this.miAIenākumuVeidi,
-            this.miASvētkuDienas,
-            this.miAKalendārs,
-            this.miABankas});
-            this.miADažādiSaraksti.Name = "miADažādiSaraksti";
-            this.miADažādiSaraksti.Size = new System.Drawing.Size(363, 38);
-            this.miADažādiSaraksti.Text = "Dažādi saraksti";
+            miADažādiSaraksti.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { miAPapildusNotikumuKodi, miALikmes, miATeritoriālieKodi, miAProfesijuKlasifikators, miAZiņuKodi, miAIenākumuVeidi, miASvētkuDienas, miAKalendārs, miABankas });
+            miADažādiSaraksti.Name = "miADažādiSaraksti";
+            miADažādiSaraksti.Size = new System.Drawing.Size(236, 24);
+            miADažādiSaraksti.Text = "Dažādi saraksti";
             // 
             // miAPapildusNotikumuKodi
             // 
-            this.miAPapildusNotikumuKodi.Name = "miAPapildusNotikumuKodi";
-            this.miAPapildusNotikumuKodi.Size = new System.Drawing.Size(340, 38);
-            this.miAPapildusNotikumuKodi.Text = "Papildus notikumu kodi";
-            this.miAPapildusNotikumuKodi.Click += new System.EventHandler(this.miAPapildusNotikumuKodi_Click);
+            miAPapildusNotikumuKodi.Name = "miAPapildusNotikumuKodi";
+            miAPapildusNotikumuKodi.Size = new System.Drawing.Size(222, 24);
+            miAPapildusNotikumuKodi.Text = "Papildus notikumu kodi";
+            miAPapildusNotikumuKodi.Click += miAPapildusNotikumuKodi_Click;
             // 
             // miALikmes
             // 
-            this.miALikmes.Name = "miALikmes";
-            this.miALikmes.Size = new System.Drawing.Size(340, 38);
-            this.miALikmes.Text = "Likmes";
-            this.miALikmes.Click += new System.EventHandler(this.miALikmes_Click);
+            miALikmes.Name = "miALikmes";
+            miALikmes.Size = new System.Drawing.Size(222, 24);
+            miALikmes.Text = "Likmes";
+            miALikmes.Click += miALikmes_Click;
             // 
             // miATeritoriālieKodi
             // 
-            this.miATeritoriālieKodi.Name = "miATeritoriālieKodi";
-            this.miATeritoriālieKodi.Size = new System.Drawing.Size(340, 38);
-            this.miATeritoriālieKodi.Text = "Teritoriju kodi";
-            this.miATeritoriālieKodi.Click += new System.EventHandler(this.miATeritoriālieKodi_Click);
+            miATeritoriālieKodi.Name = "miATeritoriālieKodi";
+            miATeritoriālieKodi.Size = new System.Drawing.Size(222, 24);
+            miATeritoriālieKodi.Text = "Teritoriju kodi";
+            miATeritoriālieKodi.Click += miATeritoriālieKodi_Click;
             // 
             // miAProfesijuKlasifikators
             // 
-            this.miAProfesijuKlasifikators.Name = "miAProfesijuKlasifikators";
-            this.miAProfesijuKlasifikators.Size = new System.Drawing.Size(340, 38);
-            this.miAProfesijuKlasifikators.Text = "Profesiju klasifikators";
-            this.miAProfesijuKlasifikators.Click += new System.EventHandler(this.miAProfesijuKlasifikators_Click);
+            miAProfesijuKlasifikators.Name = "miAProfesijuKlasifikators";
+            miAProfesijuKlasifikators.Size = new System.Drawing.Size(222, 24);
+            miAProfesijuKlasifikators.Text = "Profesiju klasifikators";
+            miAProfesijuKlasifikators.Click += miAProfesijuKlasifikators_Click;
             // 
             // miAZiņuKodi
             // 
-            this.miAZiņuKodi.Name = "miAZiņuKodi";
-            this.miAZiņuKodi.Size = new System.Drawing.Size(340, 38);
-            this.miAZiņuKodi.Text = "Ziņu kodi";
-            this.miAZiņuKodi.Click += new System.EventHandler(this.miAZiņuKodi_Click);
+            miAZiņuKodi.Name = "miAZiņuKodi";
+            miAZiņuKodi.Size = new System.Drawing.Size(222, 24);
+            miAZiņuKodi.Text = "Ziņu kodi";
+            miAZiņuKodi.Click += miAZiņuKodi_Click;
             // 
             // miAIenākumuVeidi
             // 
-            this.miAIenākumuVeidi.Name = "miAIenākumuVeidi";
-            this.miAIenākumuVeidi.Size = new System.Drawing.Size(340, 38);
-            this.miAIenākumuVeidi.Text = "Ienākumu veidi";
-            this.miAIenākumuVeidi.Click += new System.EventHandler(this.miAIenākumuVeidi_Click);
+            miAIenākumuVeidi.Name = "miAIenākumuVeidi";
+            miAIenākumuVeidi.Size = new System.Drawing.Size(222, 24);
+            miAIenākumuVeidi.Text = "Ienākumu veidi";
+            miAIenākumuVeidi.Click += miAIenākumuVeidi_Click;
             // 
             // miASvētkuDienas
             // 
-            this.miASvētkuDienas.Name = "miASvētkuDienas";
-            this.miASvētkuDienas.Size = new System.Drawing.Size(340, 38);
-            this.miASvētkuDienas.Text = "Svētku dienas";
-            this.miASvētkuDienas.Click += new System.EventHandler(this.miASvētkuDienas_Click);
+            miASvētkuDienas.Name = "miASvētkuDienas";
+            miASvētkuDienas.Size = new System.Drawing.Size(222, 24);
+            miASvētkuDienas.Text = "Svētku dienas";
+            miASvētkuDienas.Click += miASvētkuDienas_Click;
             // 
             // miAKalendārs
             // 
-            this.miAKalendārs.Name = "miAKalendārs";
-            this.miAKalendārs.Size = new System.Drawing.Size(340, 38);
-            this.miAKalendārs.Text = "Kalendārs";
-            this.miAKalendārs.Click += new System.EventHandler(this.miAKalendārs_Click);
+            miAKalendārs.Name = "miAKalendārs";
+            miAKalendārs.Size = new System.Drawing.Size(222, 24);
+            miAKalendārs.Text = "Kalendārs";
+            miAKalendārs.Click += miAKalendārs_Click;
             // 
             // miABankas
             // 
-            this.miABankas.Name = "miABankas";
-            this.miABankas.Size = new System.Drawing.Size(340, 38);
-            this.miABankas.Text = "Bankas";
-            this.miABankas.Click += new System.EventHandler(this.miABankas_Click);
+            miABankas.Name = "miABankas";
+            miABankas.Size = new System.Drawing.Size(222, 24);
+            miABankas.Text = "Bankas";
+            miABankas.Click += miABankas_Click;
             // 
             // toolStripSeparator26
             // 
-            this.toolStripSeparator26.Name = "toolStripSeparator26";
-            this.toolStripSeparator26.Size = new System.Drawing.Size(360, 6);
+            toolStripSeparator26.Name = "toolStripSeparator26";
+            toolStripSeparator26.Size = new System.Drawing.Size(233, 6);
             // 
             // miAAtskaites
             // 
-            this.miAAtskaites.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.miAKopsavilkums,
-            this.toolStripSeparator4,
-            this.miAZiņasParDarbaŅēmējiem,
-            this.miAZiņojumsParVSAOI,
-            this.miAPaziņojumsParFiziskajāmPersonāmIzmaksātajāmSummāmkopsavilkums});
-            this.miAAtskaites.MergeIndex = 2;
-            this.miAAtskaites.Name = "miAAtskaites";
-            this.miAAtskaites.Size = new System.Drawing.Size(363, 38);
-            this.miAAtskaites.Text = "Atskaites";
+            miAAtskaites.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { miAKopsavilkums, toolStripSeparator4, miAZiņasParDarbaŅēmējiem, miAZiņojumsParVSAOI, miAPaziņojumsParFiziskajāmPersonāmIzmaksātajāmSummāmkopsavilkums });
+            miAAtskaites.MergeIndex = 2;
+            miAAtskaites.Name = "miAAtskaites";
+            miAAtskaites.Size = new System.Drawing.Size(236, 24);
+            miAAtskaites.Text = "Atskaites";
             // 
             // miAKopsavilkums
             // 
-            this.miAKopsavilkums.Name = "miAKopsavilkums";
-            this.miAKopsavilkums.Size = new System.Drawing.Size(693, 38);
-            this.miAKopsavilkums.Text = "Kopsavilkums";
-            this.miAKopsavilkums.Click += new System.EventHandler(this.miAKopsavilkums_Click);
+            miAKopsavilkums.Name = "miAKopsavilkums";
+            miAKopsavilkums.Size = new System.Drawing.Size(445, 24);
+            miAKopsavilkums.Text = "Kopsavilkums";
+            miAKopsavilkums.Click += miAKopsavilkums_Click;
             // 
             // toolStripSeparator4
             // 
-            this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(690, 6);
+            toolStripSeparator4.Name = "toolStripSeparator4";
+            toolStripSeparator4.Size = new System.Drawing.Size(442, 6);
             // 
             // miAZiņasParDarbaŅēmējiem
             // 
-            this.miAZiņasParDarbaŅēmējiem.Name = "miAZiņasParDarbaŅēmējiem";
-            this.miAZiņasParDarbaŅēmējiem.Size = new System.Drawing.Size(693, 38);
-            this.miAZiņasParDarbaŅēmējiem.Text = "Ziņas par darba ņēmējiem";
-            this.miAZiņasParDarbaŅēmējiem.Click += new System.EventHandler(this.miAZiņasParDarbaŅēmējiem_Click);
+            miAZiņasParDarbaŅēmējiem.Name = "miAZiņasParDarbaŅēmējiem";
+            miAZiņasParDarbaŅēmējiem.Size = new System.Drawing.Size(445, 24);
+            miAZiņasParDarbaŅēmējiem.Text = "Ziņas par darba ņēmējiem";
+            miAZiņasParDarbaŅēmējiem.Click += miAZiņasParDarbaŅēmējiem_Click;
             // 
             // miAZiņojumsParVSAOI
             // 
-            this.miAZiņojumsParVSAOI.Name = "miAZiņojumsParVSAOI";
-            this.miAZiņojumsParVSAOI.Size = new System.Drawing.Size(693, 38);
-            this.miAZiņojumsParVSAOI.Text = "Ziņojums par VSAOI";
-            this.miAZiņojumsParVSAOI.Click += new System.EventHandler(this.miAZiņojumsParVSAOI_Click);
+            miAZiņojumsParVSAOI.Name = "miAZiņojumsParVSAOI";
+            miAZiņojumsParVSAOI.Size = new System.Drawing.Size(445, 24);
+            miAZiņojumsParVSAOI.Text = "Ziņojums par VSAOI";
+            miAZiņojumsParVSAOI.Click += miAZiņojumsParVSAOI_Click;
             // 
             // miAPaziņojumsParFiziskajāmPersonāmIzmaksātajāmSummāmkopsavilkums
             // 
-            this.miAPaziņojumsParFiziskajāmPersonāmIzmaksātajāmSummāmkopsavilkums.Name = "miAPaziņojumsParFiziskajāmPersonāmIzmaksātajāmSummāmkopsavilkums";
-            this.miAPaziņojumsParFiziskajāmPersonāmIzmaksātajāmSummāmkopsavilkums.Size = new System.Drawing.Size(693, 38);
-            this.miAPaziņojumsParFiziskajāmPersonāmIzmaksātajāmSummāmkopsavilkums.Text = "Paziņojums par fiziskajām personām izmaksātajām summām";
-            this.miAPaziņojumsParFiziskajāmPersonāmIzmaksātajāmSummāmkopsavilkums.Click += new System.EventHandler(this.miAPaziņojumsParFiziskajāmPersonāmIzmaksātajāmSummāmkopsavilkums_Click);
+            miAPaziņojumsParFiziskajāmPersonāmIzmaksātajāmSummāmkopsavilkums.Name = "miAPaziņojumsParFiziskajāmPersonāmIzmaksātajāmSummāmkopsavilkums";
+            miAPaziņojumsParFiziskajāmPersonāmIzmaksātajāmSummāmkopsavilkums.Size = new System.Drawing.Size(445, 24);
+            miAPaziņojumsParFiziskajāmPersonāmIzmaksātajāmSummāmkopsavilkums.Text = "Paziņojums par fiziskajām personām izmaksātajām summām";
+            miAPaziņojumsParFiziskajāmPersonāmIzmaksātajāmSummāmkopsavilkums.Click += miAPaziņojumsParFiziskajāmPersonāmIzmaksātajāmSummāmkopsavilkums_Click;
             // 
             // miPamatlīdzekļi
             // 
-            this.miPamatlīdzekļi.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.miPPamatlīdzekļi,
-            this.miPNotikumi,
-            this.miPTaxDeprecYR,
-            this.miPPamatlīdzekļuKategorijas,
-            this.miPNolietojumaKategorijas,
-            this.miPNolietojumaKategorijasNodokļuVajadzībām,
-            this.miPStruktūrvienības,
-            this.miPAtrašanāsVietas,
-            this.toolStripSeparator27,
-            this.miPAtskaites});
-            this.miPamatlīdzekļi.Name = "miPamatlīdzekļi";
-            this.miPamatlīdzekļi.Size = new System.Drawing.Size(154, 34);
-            this.miPamatlīdzekļi.Text = "Pamatlīdzekļi";
+            miPamatlīdzekļi.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { miPPamatlīdzekļi, miPNotikumi, miPTaxDeprecYR, miPPamatlīdzekļuKategorijas, miPNolietojumaKategorijas, miPNolietojumaKategorijasNodokļuVajadzībām, miPStruktūrvienības, miPAtrašanāsVietas, toolStripSeparator27, miPAtskaites });
+            miPamatlīdzekļi.Name = "miPamatlīdzekļi";
+            miPamatlīdzekļi.Size = new System.Drawing.Size(100, 23);
+            miPamatlīdzekļi.Text = "Pamatlīdzekļi";
             // 
             // miPPamatlīdzekļi
             // 
-            this.miPPamatlīdzekļi.Name = "miPPamatlīdzekļi";
-            this.miPPamatlīdzekļi.Size = new System.Drawing.Size(544, 38);
-            this.miPPamatlīdzekļi.Text = "Pamatlīdzekļi";
-            this.miPPamatlīdzekļi.Click += new System.EventHandler(this.miPPamatlīdzekļi_Click);
+            miPPamatlīdzekļi.Name = "miPPamatlīdzekļi";
+            miPPamatlīdzekļi.Size = new System.Drawing.Size(347, 24);
+            miPPamatlīdzekļi.Text = "Pamatlīdzekļi";
+            miPPamatlīdzekļi.Click += miPPamatlīdzekļi_Click;
             // 
             // miPNotikumi
             // 
-            this.miPNotikumi.Name = "miPNotikumi";
-            this.miPNotikumi.Size = new System.Drawing.Size(544, 38);
-            this.miPNotikumi.Text = "Notikumi";
-            this.miPNotikumi.Click += new System.EventHandler(this.miPNotikumi_Click);
+            miPNotikumi.Name = "miPNotikumi";
+            miPNotikumi.Size = new System.Drawing.Size(347, 24);
+            miPNotikumi.Text = "Notikumi";
+            miPNotikumi.Click += miPNotikumi_Click;
             // 
             // miPTaxDeprecYR
             // 
-            this.miPTaxDeprecYR.Name = "miPTaxDeprecYR";
-            this.miPTaxDeprecYR.Size = new System.Drawing.Size(544, 38);
-            this.miPTaxDeprecYR.Text = "Nolietojums nodokļa vajadzībām";
-            this.miPTaxDeprecYR.Click += new System.EventHandler(this.miPTaxDeprecYR_Click);
+            miPTaxDeprecYR.Name = "miPTaxDeprecYR";
+            miPTaxDeprecYR.Size = new System.Drawing.Size(347, 24);
+            miPTaxDeprecYR.Text = "Nolietojums nodokļa vajadzībām";
+            miPTaxDeprecYR.Click += miPTaxDeprecYR_Click;
             // 
             // miPPamatlīdzekļuKategorijas
             // 
-            this.miPPamatlīdzekļuKategorijas.Name = "miPPamatlīdzekļuKategorijas";
-            this.miPPamatlīdzekļuKategorijas.Size = new System.Drawing.Size(544, 38);
-            this.miPPamatlīdzekļuKategorijas.Text = "Pamatlīdzekļu kategorijas";
-            this.miPPamatlīdzekļuKategorijas.Click += new System.EventHandler(this.miPPamatlīdzekļuKategorijas_Click);
+            miPPamatlīdzekļuKategorijas.Name = "miPPamatlīdzekļuKategorijas";
+            miPPamatlīdzekļuKategorijas.Size = new System.Drawing.Size(347, 24);
+            miPPamatlīdzekļuKategorijas.Text = "Pamatlīdzekļu kategorijas";
+            miPPamatlīdzekļuKategorijas.Click += miPPamatlīdzekļuKategorijas_Click;
             // 
             // miPNolietojumaKategorijas
             // 
-            this.miPNolietojumaKategorijas.Name = "miPNolietojumaKategorijas";
-            this.miPNolietojumaKategorijas.Size = new System.Drawing.Size(544, 38);
-            this.miPNolietojumaKategorijas.Text = "Nolietojuma kategorijas";
-            this.miPNolietojumaKategorijas.Click += new System.EventHandler(this.miPNolietojumaKategorijas_Click);
+            miPNolietojumaKategorijas.Name = "miPNolietojumaKategorijas";
+            miPNolietojumaKategorijas.Size = new System.Drawing.Size(347, 24);
+            miPNolietojumaKategorijas.Text = "Nolietojuma kategorijas";
+            miPNolietojumaKategorijas.Click += miPNolietojumaKategorijas_Click;
             // 
             // miPNolietojumaKategorijasNodokļuVajadzībām
             // 
-            this.miPNolietojumaKategorijasNodokļuVajadzībām.Name = "miPNolietojumaKategorijasNodokļuVajadzībām";
-            this.miPNolietojumaKategorijasNodokļuVajadzībām.Size = new System.Drawing.Size(544, 38);
-            this.miPNolietojumaKategorijasNodokļuVajadzībām.Text = "Nolietojuma kategorijas nodokļa vajadzībām";
-            this.miPNolietojumaKategorijasNodokļuVajadzībām.Click += new System.EventHandler(this.miPNolietojumaKategorijasNodokļuVajadzībām_Click);
+            miPNolietojumaKategorijasNodokļuVajadzībām.Name = "miPNolietojumaKategorijasNodokļuVajadzībām";
+            miPNolietojumaKategorijasNodokļuVajadzībām.Size = new System.Drawing.Size(347, 24);
+            miPNolietojumaKategorijasNodokļuVajadzībām.Text = "Nolietojuma kategorijas nodokļa vajadzībām";
+            miPNolietojumaKategorijasNodokļuVajadzībām.Click += miPNolietojumaKategorijasNodokļuVajadzībām_Click;
             // 
             // miPStruktūrvienības
             // 
-            this.miPStruktūrvienības.Name = "miPStruktūrvienības";
-            this.miPStruktūrvienības.Size = new System.Drawing.Size(544, 38);
-            this.miPStruktūrvienības.Text = "Struktūrvienības";
-            this.miPStruktūrvienības.Click += new System.EventHandler(this.miPStruktūrvienības_Click);
+            miPStruktūrvienības.Name = "miPStruktūrvienības";
+            miPStruktūrvienības.Size = new System.Drawing.Size(347, 24);
+            miPStruktūrvienības.Text = "Struktūrvienības";
+            miPStruktūrvienības.Click += miPStruktūrvienības_Click;
             // 
             // miPAtrašanāsVietas
             // 
-            this.miPAtrašanāsVietas.Name = "miPAtrašanāsVietas";
-            this.miPAtrašanāsVietas.Size = new System.Drawing.Size(544, 38);
-            this.miPAtrašanāsVietas.Text = "Atrašanās vietas";
-            this.miPAtrašanāsVietas.Click += new System.EventHandler(this.miPAtrašanāsVietas_Click);
+            miPAtrašanāsVietas.Name = "miPAtrašanāsVietas";
+            miPAtrašanāsVietas.Size = new System.Drawing.Size(347, 24);
+            miPAtrašanāsVietas.Text = "Atrašanās vietas";
+            miPAtrašanāsVietas.Click += miPAtrašanāsVietas_Click;
             // 
             // toolStripSeparator27
             // 
-            this.toolStripSeparator27.Name = "toolStripSeparator27";
-            this.toolStripSeparator27.Size = new System.Drawing.Size(541, 6);
+            toolStripSeparator27.Name = "toolStripSeparator27";
+            toolStripSeparator27.Size = new System.Drawing.Size(344, 6);
             // 
             // miPAtskaites
             // 
-            this.miPAtskaites.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.miPKustībasPārskats,
-            this.miPNnolietojumsNodokļuVajadzībāmPaKategorijām});
-            this.miPAtskaites.Name = "miPAtskaites";
-            this.miPAtskaites.Size = new System.Drawing.Size(544, 38);
-            this.miPAtskaites.Text = "Atskaites";
+            miPAtskaites.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { miPKustībasPārskats, miPNnolietojumsNodokļuVajadzībāmPaKategorijām });
+            miPAtskaites.Name = "miPAtskaites";
+            miPAtskaites.Size = new System.Drawing.Size(347, 24);
+            miPAtskaites.Text = "Atskaites";
             // 
             // miPKustībasPārskats
             // 
-            this.miPKustībasPārskats.Name = "miPKustībasPārskats";
-            this.miPKustībasPārskats.Size = new System.Drawing.Size(583, 38);
-            this.miPKustībasPārskats.Text = "Kustības pārskats";
-            this.miPKustībasPārskats.Click += new System.EventHandler(this.miPKustībasPārskats_Click);
+            miPKustībasPārskats.Name = "miPKustībasPārskats";
+            miPKustībasPārskats.Size = new System.Drawing.Size(372, 24);
+            miPKustībasPārskats.Text = "Kustības pārskats";
+            miPKustībasPārskats.Click += miPKustībasPārskats_Click;
             // 
             // miPNnolietojumsNodokļuVajadzībāmPaKategorijām
             // 
-            this.miPNnolietojumsNodokļuVajadzībāmPaKategorijām.Name = "miPNnolietojumsNodokļuVajadzībāmPaKategorijām";
-            this.miPNnolietojumsNodokļuVajadzībāmPaKategorijām.Size = new System.Drawing.Size(583, 38);
-            this.miPNnolietojumsNodokļuVajadzībāmPaKategorijām.Text = "Nolietojums nodokļu vajadzībām pa kategorijām";
-            this.miPNnolietojumsNodokļuVajadzībāmPaKategorijām.Click += new System.EventHandler(this.miPNnolietojumsNodokļuVajadzībāmPaKategorijām_Click);
+            miPNnolietojumsNodokļuVajadzībāmPaKategorijām.Name = "miPNnolietojumsNodokļuVajadzībāmPaKategorijām";
+            miPNnolietojumsNodokļuVajadzībāmPaKategorijām.Size = new System.Drawing.Size(372, 24);
+            miPNnolietojumsNodokļuVajadzībāmPaKategorijām.Text = "Nolietojums nodokļu vajadzībām pa kategorijām";
+            miPNnolietojumsNodokļuVajadzībāmPaKategorijām.Click += miPNnolietojumsNodokļuVajadzībāmPaKategorijām_Click;
             // 
             // miMNoliktava
             // 
-            this.miMNoliktava.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.miMDokumenti,
-            this.toolStripSeparator17,
-            this.miMNoliktavasPartneri,
-            this.miMArtikuli,
-            this.miMArtikuluKategorijas,
-            this.miCenasUnAtlaides,
-            this.toolStripSeparator18,
-            this.miMInventarizācijasDokumenti,
-            this.toolStripSeparator19,
-            this.miMPārskati,
-            this.miMRīki,
-            this.toolStripSeparator20,
-            this.miMDažādiSaraksti,
-            this.miMParams});
-            this.miMNoliktava.Name = "miMNoliktava";
-            this.miMNoliktava.Size = new System.Drawing.Size(119, 34);
-            this.miMNoliktava.Text = "Noliktava";
+            miMNoliktava.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { miMDokumenti, toolStripSeparator17, miMNoliktavasPartneri, miMArtikuli, miMArtikuluKategorijas, miCenasUnAtlaides, toolStripSeparator18, miMInventarizācijasDokumenti, toolStripSeparator19, miMPārskati, miMRīki, toolStripSeparator20, miMDažādiSaraksti, miMParams });
+            miMNoliktava.Name = "miMNoliktava";
+            miMNoliktava.Size = new System.Drawing.Size(78, 23);
+            miMNoliktava.Text = "Noliktava";
             // 
             // miMDokumenti
             // 
-            this.miMDokumenti.Name = "miMDokumenti";
-            this.miMDokumenti.Size = new System.Drawing.Size(371, 38);
-            this.miMDokumenti.Text = "Dokumenti";
-            this.miMDokumenti.Click += new System.EventHandler(this.miMDokumenti_Click);
+            miMDokumenti.Name = "miMDokumenti";
+            miMDokumenti.Size = new System.Drawing.Size(240, 24);
+            miMDokumenti.Text = "Dokumenti";
+            miMDokumenti.Click += miMDokumenti_Click;
             // 
             // toolStripSeparator17
             // 
-            this.toolStripSeparator17.Name = "toolStripSeparator17";
-            this.toolStripSeparator17.Size = new System.Drawing.Size(368, 6);
+            toolStripSeparator17.Name = "toolStripSeparator17";
+            toolStripSeparator17.Size = new System.Drawing.Size(237, 6);
             // 
             // miMNoliktavasPartneri
             // 
-            this.miMNoliktavasPartneri.Name = "miMNoliktavasPartneri";
-            this.miMNoliktavasPartneri.Size = new System.Drawing.Size(371, 38);
-            this.miMNoliktavasPartneri.Text = "Noliktavas un partneri";
-            this.miMNoliktavasPartneri.Click += new System.EventHandler(this.miMNoliktavasPartneri_Click);
+            miMNoliktavasPartneri.Name = "miMNoliktavasPartneri";
+            miMNoliktavasPartneri.Size = new System.Drawing.Size(240, 24);
+            miMNoliktavasPartneri.Text = "Noliktavas un partneri";
+            miMNoliktavasPartneri.Click += miMNoliktavasPartneri_Click;
             // 
             // miMArtikuli
             // 
-            this.miMArtikuli.Name = "miMArtikuli";
-            this.miMArtikuli.Size = new System.Drawing.Size(371, 38);
-            this.miMArtikuli.Text = "Artikuli";
-            this.miMArtikuli.Click += new System.EventHandler(this.miMArtikuli_Click);
+            miMArtikuli.Name = "miMArtikuli";
+            miMArtikuli.Size = new System.Drawing.Size(240, 24);
+            miMArtikuli.Text = "Artikuli";
+            miMArtikuli.Click += miMArtikuli_Click;
             // 
             // miMArtikuluKategorijas
             // 
-            this.miMArtikuluKategorijas.Name = "miMArtikuluKategorijas";
-            this.miMArtikuluKategorijas.Size = new System.Drawing.Size(371, 38);
-            this.miMArtikuluKategorijas.Text = "Artikulu kategorijas";
-            this.miMArtikuluKategorijas.Click += new System.EventHandler(this.miMArtikuluKategorijas_Click);
+            miMArtikuluKategorijas.Name = "miMArtikuluKategorijas";
+            miMArtikuluKategorijas.Size = new System.Drawing.Size(240, 24);
+            miMArtikuluKategorijas.Text = "Artikulu kategorijas";
+            miMArtikuluKategorijas.Click += miMArtikuluKategorijas_Click;
             // 
             // miCenasUnAtlaides
             // 
-            this.miCenasUnAtlaides.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.miCenuLapuSaraksts,
-            this.miCenuLapa,
-            this.toolStripSeparator22,
-            this.miAtlaižuLapuSaraksts,
-            this.miAtlaižuLapa});
-            this.miCenasUnAtlaides.Name = "miCenasUnAtlaides";
-            this.miCenasUnAtlaides.Size = new System.Drawing.Size(371, 38);
-            this.miCenasUnAtlaides.Text = "Cenas un atlaides";
+            miCenasUnAtlaides.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { miCenuLapuSaraksts, miCenuLapa, toolStripSeparator22, miAtlaižuLapuSaraksts, miAtlaižuLapa });
+            miCenasUnAtlaides.Name = "miCenasUnAtlaides";
+            miCenasUnAtlaides.Size = new System.Drawing.Size(240, 24);
+            miCenasUnAtlaides.Text = "Cenas un atlaides";
             // 
             // miCenuLapuSaraksts
             // 
-            this.miCenuLapuSaraksts.Name = "miCenuLapuSaraksts";
-            this.miCenuLapuSaraksts.Size = new System.Drawing.Size(308, 38);
-            this.miCenuLapuSaraksts.Text = "Cenu lapu saraksts";
-            this.miCenuLapuSaraksts.Click += new System.EventHandler(this.miCenuLapuSaraksts_Click);
+            miCenuLapuSaraksts.Name = "miCenuLapuSaraksts";
+            miCenuLapuSaraksts.Size = new System.Drawing.Size(202, 24);
+            miCenuLapuSaraksts.Text = "Cenu lapu saraksts";
+            miCenuLapuSaraksts.Click += miCenuLapuSaraksts_Click;
             // 
             // miCenuLapa
             // 
-            this.miCenuLapa.Name = "miCenuLapa";
-            this.miCenuLapa.Size = new System.Drawing.Size(308, 38);
-            this.miCenuLapa.Text = "Cenu lapa";
-            this.miCenuLapa.Click += new System.EventHandler(this.miCenuLapa_Click);
+            miCenuLapa.Name = "miCenuLapa";
+            miCenuLapa.Size = new System.Drawing.Size(202, 24);
+            miCenuLapa.Text = "Cenu lapa";
+            miCenuLapa.Click += miCenuLapa_Click;
             // 
             // toolStripSeparator22
             // 
-            this.toolStripSeparator22.Name = "toolStripSeparator22";
-            this.toolStripSeparator22.Size = new System.Drawing.Size(305, 6);
+            toolStripSeparator22.Name = "toolStripSeparator22";
+            toolStripSeparator22.Size = new System.Drawing.Size(199, 6);
             // 
             // miAtlaižuLapuSaraksts
             // 
-            this.miAtlaižuLapuSaraksts.Name = "miAtlaižuLapuSaraksts";
-            this.miAtlaižuLapuSaraksts.Size = new System.Drawing.Size(308, 38);
-            this.miAtlaižuLapuSaraksts.Text = "Atlaižu lapu saraksts";
-            this.miAtlaižuLapuSaraksts.Click += new System.EventHandler(this.miAtlaižuLapuSaraksts_Click);
+            miAtlaižuLapuSaraksts.Name = "miAtlaižuLapuSaraksts";
+            miAtlaižuLapuSaraksts.Size = new System.Drawing.Size(202, 24);
+            miAtlaižuLapuSaraksts.Text = "Atlaižu lapu saraksts";
+            miAtlaižuLapuSaraksts.Click += miAtlaižuLapuSaraksts_Click;
             // 
             // miAtlaižuLapa
             // 
-            this.miAtlaižuLapa.Name = "miAtlaižuLapa";
-            this.miAtlaižuLapa.Size = new System.Drawing.Size(308, 38);
-            this.miAtlaižuLapa.Text = "Atlaižu lapa";
-            this.miAtlaižuLapa.Click += new System.EventHandler(this.miAtlaižuLapa_Click);
+            miAtlaižuLapa.Name = "miAtlaižuLapa";
+            miAtlaižuLapa.Size = new System.Drawing.Size(202, 24);
+            miAtlaižuLapa.Text = "Atlaižu lapa";
+            miAtlaižuLapa.Click += miAtlaižuLapa_Click;
             // 
             // toolStripSeparator18
             // 
-            this.toolStripSeparator18.Name = "toolStripSeparator18";
-            this.toolStripSeparator18.Size = new System.Drawing.Size(368, 6);
+            toolStripSeparator18.Name = "toolStripSeparator18";
+            toolStripSeparator18.Size = new System.Drawing.Size(237, 6);
             // 
             // miMInventarizācijasDokumenti
             // 
-            this.miMInventarizācijasDokumenti.Name = "miMInventarizācijasDokumenti";
-            this.miMInventarizācijasDokumenti.Size = new System.Drawing.Size(371, 38);
-            this.miMInventarizācijasDokumenti.Text = "Inventarizācijas dokumenti";
-            this.miMInventarizācijasDokumenti.Click += new System.EventHandler(this.miInventarizācijasDokumenti_Click);
+            miMInventarizācijasDokumenti.Name = "miMInventarizācijasDokumenti";
+            miMInventarizācijasDokumenti.Size = new System.Drawing.Size(240, 24);
+            miMInventarizācijasDokumenti.Text = "Inventarizācijas dokumenti";
+            miMInventarizācijasDokumenti.Click += miInventarizācijasDokumenti_Click;
             // 
             // toolStripSeparator19
             // 
-            this.toolStripSeparator19.Name = "toolStripSeparator19";
-            this.toolStripSeparator19.Size = new System.Drawing.Size(368, 6);
+            toolStripSeparator19.Name = "toolStripSeparator19";
+            toolStripSeparator19.Size = new System.Drawing.Size(237, 6);
             // 
             // miMPārskati
             // 
-            this.miMPārskati.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.miMArtikulaKustībasPārskats,
-            this.miMIzlietojumaPārskats,
-            this.toolStripSeparator23,
-            this.miMKustībaPaArtikuliem,
-            this.miMKustībaPaArtikuluKategorijām,
-            this.miMKustībaPaPiegādātājiem,
-            this.toolStripSeparator24,
-            this.miMRealizācijasPašizmaksa,
-            this.miMRealizācijasPašizmaksaPaDokumentiem});
-            this.miMPārskati.Name = "miMPārskati";
-            this.miMPārskati.Size = new System.Drawing.Size(371, 38);
-            this.miMPārskati.Text = "Pārskati";
+            miMPārskati.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { miMArtikulaKustībasPārskats, miMIzlietojumaPārskats, toolStripSeparator23, miMKustībaPaArtikuliem, miMKustībaPaArtikuluKategorijām, miMKustībaPaPiegādātājiem, toolStripSeparator24, miMRealizācijasPašizmaksa, miMRealizācijasPašizmaksaPaDokumentiem });
+            miMPārskati.Name = "miMPārskati";
+            miMPārskati.Size = new System.Drawing.Size(240, 24);
+            miMPārskati.Text = "Pārskati";
             // 
             // miMArtikulaKustībasPārskats
             // 
-            this.miMArtikulaKustībasPārskats.Name = "miMArtikulaKustībasPārskats";
-            this.miMArtikulaKustībasPārskats.Size = new System.Drawing.Size(776, 38);
-            this.miMArtikulaKustībasPārskats.Text = "Artikula kustības pārskats";
-            this.miMArtikulaKustībasPārskats.Click += new System.EventHandler(this.miMArtikulaKustībasPārskats_Click);
+            miMArtikulaKustībasPārskats.Name = "miMArtikulaKustībasPārskats";
+            miMArtikulaKustībasPārskats.Size = new System.Drawing.Size(497, 24);
+            miMArtikulaKustībasPārskats.Text = "Artikula kustības pārskats";
+            miMArtikulaKustībasPārskats.Click += miMArtikulaKustībasPārskats_Click;
             // 
             // miMIzlietojumaPārskats
             // 
-            this.miMIzlietojumaPārskats.Name = "miMIzlietojumaPārskats";
-            this.miMIzlietojumaPārskats.Size = new System.Drawing.Size(776, 38);
-            this.miMIzlietojumaPārskats.Text = "Izlietojuma pārskats";
-            this.miMIzlietojumaPārskats.Click += new System.EventHandler(this.miMIzlietojumaPārskats_Click);
+            miMIzlietojumaPārskats.Name = "miMIzlietojumaPārskats";
+            miMIzlietojumaPārskats.Size = new System.Drawing.Size(497, 24);
+            miMIzlietojumaPārskats.Text = "Izlietojuma pārskats";
+            miMIzlietojumaPārskats.Click += miMIzlietojumaPārskats_Click;
             // 
             // toolStripSeparator23
             // 
-            this.toolStripSeparator23.Name = "toolStripSeparator23";
-            this.toolStripSeparator23.Size = new System.Drawing.Size(773, 6);
+            toolStripSeparator23.Name = "toolStripSeparator23";
+            toolStripSeparator23.Size = new System.Drawing.Size(494, 6);
             // 
             // miMKustībaPaArtikuliem
             // 
-            this.miMKustībaPaArtikuliem.Name = "miMKustībaPaArtikuliem";
-            this.miMKustībaPaArtikuliem.ShowShortcutKeys = false;
-            this.miMKustībaPaArtikuliem.Size = new System.Drawing.Size(776, 38);
-            this.miMKustībaPaArtikuliem.Text = "Krājumu kustības pārskats - pa artikuliem";
-            this.miMKustībaPaArtikuliem.Click += new System.EventHandler(this.miKustībaPaArtikuliem_Click);
+            miMKustībaPaArtikuliem.Name = "miMKustībaPaArtikuliem";
+            miMKustībaPaArtikuliem.ShowShortcutKeys = false;
+            miMKustībaPaArtikuliem.Size = new System.Drawing.Size(497, 24);
+            miMKustībaPaArtikuliem.Text = "Krājumu kustības pārskats - pa artikuliem";
+            miMKustībaPaArtikuliem.Click += miKustībaPaArtikuliem_Click;
             // 
             // miMKustībaPaArtikuluKategorijām
             // 
-            this.miMKustībaPaArtikuluKategorijām.Name = "miMKustībaPaArtikuluKategorijām";
-            this.miMKustībaPaArtikuluKategorijām.Size = new System.Drawing.Size(776, 38);
-            this.miMKustībaPaArtikuluKategorijām.Text = "Krājumu kustības pārskats - pa artikulu kategorijām";
-            this.miMKustībaPaArtikuluKategorijām.Click += new System.EventHandler(this.miMKustībaPaArtikuluKategorijām_Click);
+            miMKustībaPaArtikuluKategorijām.Name = "miMKustībaPaArtikuluKategorijām";
+            miMKustībaPaArtikuluKategorijām.Size = new System.Drawing.Size(497, 24);
+            miMKustībaPaArtikuluKategorijām.Text = "Krājumu kustības pārskats - pa artikulu kategorijām";
+            miMKustībaPaArtikuluKategorijām.Click += miMKustībaPaArtikuluKategorijām_Click;
             // 
             // miMKustībaPaPiegādātājiem
             // 
-            this.miMKustībaPaPiegādātājiem.Name = "miMKustībaPaPiegādātājiem";
-            this.miMKustībaPaPiegādātājiem.Size = new System.Drawing.Size(776, 38);
-            this.miMKustībaPaPiegādātājiem.Text = "Krājumu kustības pārskats - pa piegādātajiem";
-            this.miMKustībaPaPiegādātājiem.Click += new System.EventHandler(this.miMKustībaPaPiegādātājiem_Click);
+            miMKustībaPaPiegādātājiem.Name = "miMKustībaPaPiegādātājiem";
+            miMKustībaPaPiegādātājiem.Size = new System.Drawing.Size(497, 24);
+            miMKustībaPaPiegādātājiem.Text = "Krājumu kustības pārskats - pa piegādātajiem";
+            miMKustībaPaPiegādātājiem.Click += miMKustībaPaPiegādātājiem_Click;
             // 
             // toolStripSeparator24
             // 
-            this.toolStripSeparator24.Name = "toolStripSeparator24";
-            this.toolStripSeparator24.Size = new System.Drawing.Size(773, 6);
+            toolStripSeparator24.Name = "toolStripSeparator24";
+            toolStripSeparator24.Size = new System.Drawing.Size(494, 6);
             // 
             // miMRealizācijasPašizmaksa
             // 
-            this.miMRealizācijasPašizmaksa.Name = "miMRealizācijasPašizmaksa";
-            this.miMRealizācijasPašizmaksa.Size = new System.Drawing.Size(776, 38);
-            this.miMRealizācijasPašizmaksa.Text = "Realizācijas pašizmaksas kontējumu kopsavilkums";
-            this.miMRealizācijasPašizmaksa.Click += new System.EventHandler(this.miMRealizācijasPašizmaksa_Click);
+            miMRealizācijasPašizmaksa.Name = "miMRealizācijasPašizmaksa";
+            miMRealizācijasPašizmaksa.Size = new System.Drawing.Size(497, 24);
+            miMRealizācijasPašizmaksa.Text = "Realizācijas pašizmaksas kontējumu kopsavilkums";
+            miMRealizācijasPašizmaksa.Click += miMRealizācijasPašizmaksa_Click;
             // 
             // miMRealizācijasPašizmaksaPaDokumentiem
             // 
-            this.miMRealizācijasPašizmaksaPaDokumentiem.Name = "miMRealizācijasPašizmaksaPaDokumentiem";
-            this.miMRealizācijasPašizmaksaPaDokumentiem.Size = new System.Drawing.Size(776, 38);
-            this.miMRealizācijasPašizmaksaPaDokumentiem.Text = "Realizācijas pašizmaksas kontējumu kopsavilkums - pa dokumentiem";
-            this.miMRealizācijasPašizmaksaPaDokumentiem.Click += new System.EventHandler(this.miMRealizācijasPašizmaksaPaDokumentiem_Click);
+            miMRealizācijasPašizmaksaPaDokumentiem.Name = "miMRealizācijasPašizmaksaPaDokumentiem";
+            miMRealizācijasPašizmaksaPaDokumentiem.Size = new System.Drawing.Size(497, 24);
+            miMRealizācijasPašizmaksaPaDokumentiem.Text = "Realizācijas pašizmaksas kontējumu kopsavilkums - pa dokumentiem";
+            miMRealizācijasPašizmaksaPaDokumentiem.Click += miMRealizācijasPašizmaksaPaDokumentiem_Click;
             // 
             // miMRīki
             // 
-            this.miMRīki.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.miMPilnsPārrēķins,
-            this.miMAtlikumuPārrēķins,
-            this.miMIsGonePārrēķins});
-            this.miMRīki.Name = "miMRīki";
-            this.miMRīki.Size = new System.Drawing.Size(371, 38);
-            this.miMRīki.Text = "Rīki";
+            miMRīki.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { miMPilnsPārrēķins, miMAtlikumuPārrēķins, miMIsGonePārrēķins });
+            miMRīki.Name = "miMRīki";
+            miMRīki.Size = new System.Drawing.Size(240, 24);
+            miMRīki.Text = "Rīki";
             // 
             // miMPilnsPārrēķins
             // 
-            this.miMPilnsPārrēķins.Name = "miMPilnsPārrēķins";
-            this.miMPilnsPārrēķins.Size = new System.Drawing.Size(599, 38);
-            this.miMPilnsPārrēķins.Text = "Pilns pārrēķins";
-            this.miMPilnsPārrēķins.Click += new System.EventHandler(this.miMPilnsPārrēķins_Click);
+            miMPilnsPārrēķins.Name = "miMPilnsPārrēķins";
+            miMPilnsPārrēķins.Size = new System.Drawing.Size(382, 24);
+            miMPilnsPārrēķins.Text = "Pilns pārrēķins";
+            miMPilnsPārrēķins.Click += miMPilnsPārrēķins_Click;
             // 
             // miMAtlikumuPārrēķins
             // 
-            this.miMAtlikumuPārrēķins.Name = "miMAtlikumuPārrēķins";
-            this.miMAtlikumuPārrēķins.Size = new System.Drawing.Size(599, 38);
-            this.miMAtlikumuPārrēķins.Text = "Tekošo atlikumu pārrēķins";
-            this.miMAtlikumuPārrēķins.Click += new System.EventHandler(this.miMAtlikumuPārrēķins_Click);
+            miMAtlikumuPārrēķins.Name = "miMAtlikumuPārrēķins";
+            miMAtlikumuPārrēķins.Size = new System.Drawing.Size(382, 24);
+            miMAtlikumuPārrēķins.Text = "Tekošo atlikumu pārrēķins";
+            miMAtlikumuPārrēķins.Click += miMAtlikumuPārrēķins_Click;
             // 
             // miMIsGonePārrēķins
             // 
-            this.miMIsGonePārrēķins.Name = "miMIsGonePārrēķins";
-            this.miMIsGonePārrēķins.Size = new System.Drawing.Size(599, 38);
-            this.miMIsGonePārrēķins.Text = "Iegādes dokumentu izlietojuma pazīmes pārrēķins";
-            this.miMIsGonePārrēķins.Click += new System.EventHandler(this.miMIsGonePārrēķins_Click);
+            miMIsGonePārrēķins.Name = "miMIsGonePārrēķins";
+            miMIsGonePārrēķins.Size = new System.Drawing.Size(382, 24);
+            miMIsGonePārrēķins.Text = "Iegādes dokumentu izlietojuma pazīmes pārrēķins";
+            miMIsGonePārrēķins.Click += miMIsGonePārrēķins_Click;
             // 
             // toolStripSeparator20
             // 
-            this.toolStripSeparator20.Name = "toolStripSeparator20";
-            this.toolStripSeparator20.Size = new System.Drawing.Size(368, 6);
+            toolStripSeparator20.Name = "toolStripSeparator20";
+            toolStripSeparator20.Size = new System.Drawing.Size(237, 6);
             // 
             // miMDažādiSaraksti
             // 
-            this.miMDažādiSaraksti.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.miMKontuPlāns,
-            this.miMDarijumuVeidi,
-            this.miMNorēķinuVeidi,
-            this.miPartneruKategorijas,
-            this.miMValstis,
-            this.miMBankas,
-            this.miMKontēšanasShēma,
-            this.miMPVNAprēķinaAtsauces});
-            this.miMDažādiSaraksti.Name = "miMDažādiSaraksti";
-            this.miMDažādiSaraksti.Size = new System.Drawing.Size(371, 38);
-            this.miMDažādiSaraksti.Text = "Dažādi saraksti";
+            miMDažādiSaraksti.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { miMKontuPlāns, miMDarijumuVeidi, miMNorēķinuVeidi, miPartneruKategorijas, miMValstis, miMBankas, miMKontēšanasShēma, miMPVNAprēķinaAtsauces });
+            miMDažādiSaraksti.Name = "miMDažādiSaraksti";
+            miMDažādiSaraksti.Size = new System.Drawing.Size(240, 24);
+            miMDažādiSaraksti.Text = "Dažādi saraksti";
             // 
             // miMKontuPlāns
             // 
-            this.miMKontuPlāns.Name = "miMKontuPlāns";
-            this.miMKontuPlāns.Size = new System.Drawing.Size(331, 38);
-            this.miMKontuPlāns.Text = "Kontu plāns";
-            this.miMKontuPlāns.Click += new System.EventHandler(this.miMKontuPlāns_Click);
+            miMKontuPlāns.Name = "miMKontuPlāns";
+            miMKontuPlāns.Size = new System.Drawing.Size(214, 24);
+            miMKontuPlāns.Text = "Kontu plāns";
+            miMKontuPlāns.Click += miMKontuPlāns_Click;
             // 
             // miMDarijumuVeidi
             // 
-            this.miMDarijumuVeidi.Name = "miMDarijumuVeidi";
-            this.miMDarijumuVeidi.Size = new System.Drawing.Size(331, 38);
-            this.miMDarijumuVeidi.Text = "Darijumu veidi";
-            this.miMDarijumuVeidi.Click += new System.EventHandler(this.miMDarijumuVeidi_Click);
+            miMDarijumuVeidi.Name = "miMDarijumuVeidi";
+            miMDarijumuVeidi.Size = new System.Drawing.Size(214, 24);
+            miMDarijumuVeidi.Text = "Darijumu veidi";
+            miMDarijumuVeidi.Click += miMDarijumuVeidi_Click;
             // 
             // miMNorēķinuVeidi
             // 
-            this.miMNorēķinuVeidi.Name = "miMNorēķinuVeidi";
-            this.miMNorēķinuVeidi.Size = new System.Drawing.Size(331, 38);
-            this.miMNorēķinuVeidi.Text = "Norēķinu veidi";
-            this.miMNorēķinuVeidi.Click += new System.EventHandler(this.miMNorēķinuVeidi_Click);
+            miMNorēķinuVeidi.Name = "miMNorēķinuVeidi";
+            miMNorēķinuVeidi.Size = new System.Drawing.Size(214, 24);
+            miMNorēķinuVeidi.Text = "Norēķinu veidi";
+            miMNorēķinuVeidi.Click += miMNorēķinuVeidi_Click;
             // 
             // miPartneruKategorijas
             // 
-            this.miPartneruKategorijas.Name = "miPartneruKategorijas";
-            this.miPartneruKategorijas.Size = new System.Drawing.Size(331, 38);
-            this.miPartneruKategorijas.Text = "Partneru kategorijas";
-            this.miPartneruKategorijas.Click += new System.EventHandler(this.miPartneruKategorijas_Click);
+            miPartneruKategorijas.Name = "miPartneruKategorijas";
+            miPartneruKategorijas.Size = new System.Drawing.Size(214, 24);
+            miPartneruKategorijas.Text = "Partneru kategorijas";
+            miPartneruKategorijas.Click += miPartneruKategorijas_Click;
             // 
             // miMValstis
             // 
-            this.miMValstis.Name = "miMValstis";
-            this.miMValstis.Size = new System.Drawing.Size(331, 38);
-            this.miMValstis.Text = "Valstis";
-            this.miMValstis.Visible = false;
-            this.miMValstis.Click += new System.EventHandler(this.miMValstis_Click);
+            miMValstis.Name = "miMValstis";
+            miMValstis.Size = new System.Drawing.Size(214, 24);
+            miMValstis.Text = "Valstis";
+            miMValstis.Visible = false;
+            miMValstis.Click += miMValstis_Click;
             // 
             // miMBankas
             // 
-            this.miMBankas.Name = "miMBankas";
-            this.miMBankas.Size = new System.Drawing.Size(331, 38);
-            this.miMBankas.Text = "Bankas";
-            this.miMBankas.Click += new System.EventHandler(this.miMBankas_Click);
+            miMBankas.Name = "miMBankas";
+            miMBankas.Size = new System.Drawing.Size(214, 24);
+            miMBankas.Text = "Bankas";
+            miMBankas.Click += miMBankas_Click;
             // 
             // miMKontēšanasShēma
             // 
-            this.miMKontēšanasShēma.Name = "miMKontēšanasShēma";
-            this.miMKontēšanasShēma.Size = new System.Drawing.Size(331, 38);
-            this.miMKontēšanasShēma.Text = "Kontēšanas shēma";
-            this.miMKontēšanasShēma.Click += new System.EventHandler(this.miMKontēšanasShēma_Click);
+            miMKontēšanasShēma.Name = "miMKontēšanasShēma";
+            miMKontēšanasShēma.Size = new System.Drawing.Size(214, 24);
+            miMKontēšanasShēma.Text = "Kontēšanas shēma";
+            miMKontēšanasShēma.Click += miMKontēšanasShēma_Click;
             // 
             // miMPVNAprēķinaAtsauces
             // 
-            this.miMPVNAprēķinaAtsauces.Name = "miMPVNAprēķinaAtsauces";
-            this.miMPVNAprēķinaAtsauces.Size = new System.Drawing.Size(331, 38);
-            this.miMPVNAprēķinaAtsauces.Text = "PVN aprēķina norādes";
-            this.miMPVNAprēķinaAtsauces.Click += new System.EventHandler(this.miMPVNAprēķinaAtsauces_Click);
+            miMPVNAprēķinaAtsauces.Name = "miMPVNAprēķinaAtsauces";
+            miMPVNAprēķinaAtsauces.Size = new System.Drawing.Size(214, 24);
+            miMPVNAprēķinaAtsauces.Text = "PVN aprēķina norādes";
+            miMPVNAprēķinaAtsauces.Click += miMPVNAprēķinaAtsauces_Click;
             // 
             // miMParams
             // 
-            this.miMParams.Name = "miMParams";
-            this.miMParams.Size = new System.Drawing.Size(371, 38);
-            this.miMParams.Text = "Ļoti svarīgi iestatijumi";
-            this.miMParams.Click += new System.EventHandler(this.miParamsM_Click);
+            miMParams.Name = "miMParams";
+            miMParams.Size = new System.Drawing.Size(240, 24);
+            miMParams.Text = "Ļoti svarīgi iestatijumi";
+            miMParams.Click += miParamsM_Click;
             // 
             // miLogi
             // 
-            this.miLogi.Name = "miLogi";
-            this.miLogi.Size = new System.Drawing.Size(70, 34);
-            this.miLogi.Text = "&Logi";
+            miLogi.Name = "miLogi";
+            miLogi.Size = new System.Drawing.Size(47, 23);
+            miLogi.Text = "&Logi";
             // 
             // miInfo
             // 
-            this.miInfo.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.miFApraksts,
-            this.toolStripSeparator7,
-            this.miParProgrammu});
-            this.miInfo.Name = "miInfo";
-            this.miInfo.Size = new System.Drawing.Size(67, 34);
-            this.miInfo.Text = "&Info";
+            miInfo.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { miFApraksts, toolStripSeparator7, miParProgrammu });
+            miInfo.Name = "miInfo";
+            miInfo.Size = new System.Drawing.Size(45, 23);
+            miInfo.Text = "&Info";
             // 
             // miFApraksts
             // 
-            this.miFApraksts.Name = "miFApraksts";
-            this.miFApraksts.Size = new System.Drawing.Size(268, 38);
-            this.miFApraksts.Text = "Apraksts";
-            this.miFApraksts.Click += new System.EventHandler(this.miFApraksts_Click);
+            miFApraksts.Name = "miFApraksts";
+            miFApraksts.Size = new System.Drawing.Size(175, 24);
+            miFApraksts.Text = "Apraksts";
+            miFApraksts.Click += miFApraksts_Click;
             // 
             // toolStripSeparator7
             // 
-            this.toolStripSeparator7.Name = "toolStripSeparator7";
-            this.toolStripSeparator7.Size = new System.Drawing.Size(265, 6);
+            toolStripSeparator7.Name = "toolStripSeparator7";
+            toolStripSeparator7.Size = new System.Drawing.Size(172, 6);
             // 
             // miParProgrammu
             // 
-            this.miParProgrammu.Name = "miParProgrammu";
-            this.miParProgrammu.Size = new System.Drawing.Size(268, 38);
-            this.miParProgrammu.Text = "Par programmu";
-            this.miParProgrammu.Click += new System.EventHandler(this.miParProgrammu_Click);
+            miParProgrammu.Name = "miParProgrammu";
+            miParProgrammu.Size = new System.Drawing.Size(175, 24);
+            miParProgrammu.Text = "Par programmu";
+            miParProgrammu.Click += miParProgrammu_Click;
             // 
             // miCloseMDIForm
             // 
-            this.miCloseMDIForm.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.miCloseMDIForm.Name = "miCloseMDIForm";
-            this.miCloseMDIForm.Size = new System.Drawing.Size(111, 34);
-            this.miCloseMDIForm.Text = "AI&ZVĒRT";
-            this.miCloseMDIForm.Visible = false;
-            this.miCloseMDIForm.Click += new System.EventHandler(this.miCloseMDIForm_Click);
+            miCloseMDIForm.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            miCloseMDIForm.Name = "miCloseMDIForm";
+            miCloseMDIForm.Size = new System.Drawing.Size(72, 23);
+            miCloseMDIForm.Text = "AI&ZVĒRT";
+            miCloseMDIForm.Visible = false;
+            miCloseMDIForm.Click += miCloseMDIForm_Click;
             // 
             // myToolStrip
             // 
-            this.myToolStrip.ImageScalingSize = new System.Drawing.Size(16, 16);
-            this.myToolStrip.Location = new System.Drawing.Point(0, 41);
-            this.myToolStrip.Name = "myToolStrip";
-            this.myToolStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.myToolStrip.Size = new System.Drawing.Size(891, 31);
-            this.myToolStrip.TabIndex = 3;
-            this.myToolStrip.Text = "toolStrip1";
-            this.myToolStrip.Visible = false;
+            myToolStrip.Location = new System.Drawing.Point(0, 41);
+            myToolStrip.Name = "myToolStrip";
+            myToolStrip.Size = new System.Drawing.Size(891, 31);
+            myToolStrip.TabIndex = 3;
+            myToolStrip.Text = "toolStrip1";
+            myToolStrip.Visible = false;
             // 
             // aDownloader1
             // 
-            this.aDownloader1.URL = "http://kastanis.biz/klonsver.txt";
-            this.aDownloader1.DataReceived += new System.EventHandler(this.aDownloader1_DataReceived);
-            this.aDownloader1.DownloadFailed += new System.EventHandler(this.aDownloader1_DownloadFailed);
+            aDownloader1.URL = "http://kastanis.biz/klonsver.txt";
+            aDownloader1.DataReceived += aDownloader1_DataReceived;
+            aDownloader1.DownloadFailed += aDownloader1_DownloadFailed;
             // 
             // tsWindowList
             // 
-            this.tsWindowList.CanOverflow = false;
-            this.tsWindowList.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.tsWindowList.ImageScalingSize = new System.Drawing.Size(16, 16);
-            this.tsWindowList.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow;
-            this.tsWindowList.Location = new System.Drawing.Point(0, 580);
-            this.tsWindowList.Name = "tsWindowList";
-            this.tsWindowList.ShowItemToolTips = false;
-            this.tsWindowList.Size = new System.Drawing.Size(1087, 0);
-            this.tsWindowList.TabIndex = 5;
-            this.tsWindowList.Text = "toolStrip1";
+            tsWindowList.CanOverflow = false;
+            tsWindowList.Dock = System.Windows.Forms.DockStyle.Bottom;
+            tsWindowList.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow;
+            tsWindowList.Location = new System.Drawing.Point(0, 580);
+            tsWindowList.Name = "tsWindowList";
+            tsWindowList.ShowItemToolTips = false;
+            tsWindowList.Size = new System.Drawing.Size(1087, 0);
+            tsWindowList.TabIndex = 5;
+            tsWindowList.Text = "toolStrip1";
             // 
             // myStyleDefs
             // 
-            this.myStyleDefs.MarkedCellBack = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(104)))), ((int)(((byte)(89)))));
-            this.myStyleDefs.MarkedCellFore = System.Drawing.Color.White;
+            myStyleDefs.MarkedCellBack = System.Drawing.Color.FromArgb(204, 104, 89);
+            myStyleDefs.MarkedCellFore = System.Drawing.Color.White;
             // 
             // Form_Main
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1087, 580);
-            this.Controls.Add(this.myToolStrip);
-            this.Controls.Add(this.tsWindowList);
-            this.Controls.Add(this.menuStrip1);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.IsMdiContainer = true;
-            this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.MyToolStrip = this.myToolStrip;
-            this.MyWindowList = this.miLogi;
-            this.MyWindowListToolStrip = this.tsWindowList;
-            this.Name = "Form_Main";
-            this.Text = "Klons2";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormMain_FormClosing);
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormMain_FormClosed);
-            this.Load += new System.EventHandler(this.FormMain_Load);
-            this.Shown += new System.EventHandler(this.FormMain_Shown);
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            ClientSize = new System.Drawing.Size(1087, 580);
+            Controls.Add(myToolStrip);
+            Controls.Add(tsWindowList);
+            Controls.Add(menuStrip1);
+            Icon = (System.Drawing.Icon)resources.GetObject("$this.Icon");
+            IsMdiContainer = true;
+            MainMenuStrip = menuStrip1;
+            Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            MyToolStrip = myToolStrip;
+            MyWindowList = miLogi;
+            MyWindowListToolStrip = tsWindowList;
+            Name = "Form_Main";
+            Text = "Klons2";
+            FormClosing += FormMain_FormClosing;
+            FormClosed += FormMain_FormClosed;
+            Load += FormMain_Load;
+            Shown += FormMain_Shown;
+            menuStrip1.ResumeLayout(false);
+            menuStrip1.PerformLayout();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion

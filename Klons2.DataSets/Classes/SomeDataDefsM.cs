@@ -72,7 +72,9 @@ namespace KlonsM.Classes
         Saņemti_pakalpojumi = 14,
         Sniegti_pakalpojumi = 15,
         No_noliktavas = 16,
-        Uz_noliktavu = 17
+        Uz_noliktavu = 17,
+        Iepirkuma_rēķins = 18,
+        Pārdošanas_rēķins = 19
     }
 
     public enum EDocType2

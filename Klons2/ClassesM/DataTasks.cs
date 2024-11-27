@@ -88,7 +88,12 @@ namespace KlonsM.Classes
             }
             if (dr_doc.IDSTOREIN == 1 || dr_doc.IDSTOREOUT == 1)
             {
-                ret.AddDocError(dr_doc.ID, "Jānorāda noliktavas.");
+                ret.AddDocError(dr_doc.ID, "Jānorāda noliktavas/partneri.");
+                return ret;
+            }
+            if (dr_doc.NR.IsNOE())
+            {
+                ret.AddDocError(dr_doc.ID, "Jānorāda dokumenta numurs.");
                 return ret;
             }
             if (!SomeDataDefs.IsGoodStoreOut(dr_doc.XDocType, dr_doc.XStoreOutType))
@@ -1779,6 +1784,7 @@ namespace KlonsM.Classes
             Add_SetNewIDsItem("M_ROWS", x => x.M_ROWS, x => x.SP_M_GEN_ROWS_ID);
             Add_SetNewIDsItem("M_ITEMS", x => x.M_ITEMS, x => x.SP_M_GEN_ITEMS_ID);
             Add_SetNewIDsItem("M_ITEMS_CAT", x => x.M_ITEMS_CAT, x => x.SP_M_GEN_ITEMS_CAT_ID);
+            Add_SetNewIDsItem("M_ITEMS_TEXTS", x => x.M_ITEMS_TEXTS, x => x.SP_M_GEN_ITEMS_TEXTS_ID);
             Add_SetNewIDsItem("M_STORES", x => x.M_STORES, x => x.SP_M_GEN_STORES_ID);
             Add_SetNewIDsItem("M_CONTACTS", x => x.M_CONTACTS, x => x.SP_M_GEN_CONTACTS_ID);
             Add_SetNewIDsItem("M_ADDRESSSES", x => x.M_ADDRESSSES, x => x.SP_M_GEN_ADDRESSSES_ID);

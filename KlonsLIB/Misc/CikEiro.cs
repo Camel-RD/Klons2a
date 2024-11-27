@@ -74,12 +74,16 @@ namespace KlonsLIB.Misc
 
         public static string CikEiro(decimal d)
         {
+            bool isnegative = d < 0M;
+            d = Math.Abs(d);
             string tukst = Cik_GetT(d);
             string centi = Cik_GetD(d);
             if (tukst == "") tukst = "Nulle";
             tukst += " eiro";
             string summa = tukst + " " + centi + " centi";
             summa = summa.Substring(0, 1).ToUpper() + summa.Substring(1);
+            if (isnegative)
+                summa = "- " + summa;
             return summa;
         }
 

@@ -334,7 +334,7 @@ namespace KlonsF
             {
                 ShowWarning("Darbs pie programmas noliktavas moduļa turpinās. " +
                     "Tas tiek piedāvāts testēšanas nolūkiem. " +
-                    "Lietotjāji tiek aicināti izmēģināt noliktavas moduļa iespējas "+
+                    "Lietotjāji tiek aicināti izmēģināt noliktavas moduļa iespējas " +
                     "un sūtīt savus ieteikumus tā uzlabojumiem un papildinājumiem.");
             }
             var f = ShowForm(typeof(T)) as MyFormBaseF;
@@ -529,7 +529,7 @@ namespace KlonsF
         }
         private void miFBilance_Click(object sender, EventArgs e)
         {
-            ShowForm(typeof (FormRep_Apgr1));
+            ShowForm(typeof(FormRep_Apgr1));
         }
         private void miFKontuKorespondence_Click(object sender, EventArgs e)
         {
@@ -628,7 +628,7 @@ namespace KlonsF
 
 
         #region ============ Menu Clicks P ==============
-        
+
         private void miPPamatlīdzekļi_Click(object sender, EventArgs e)
         {
             ShowFormP<KlonsP.Forms.FormP_Items>();
@@ -999,5 +999,9 @@ namespace KlonsF
 
         #endregion
 
+        private void papildusNosaukumiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ShowFormM<KlonsM.FormsM.FormM_ItemsTexts>();
+        }
     }
 }
