@@ -32,6 +32,8 @@ namespace KlonsF
             CheckMyFontAndColors();
             Application.ThreadException += Application_ThreadException;
             KlonsLIB.MyData.InWine = MyData.Settings.InWine == "YES";
+            miDatuBāzesImports.Visible = Directory.Exists(MyData.FolderForFbEmbed25) &&
+                File.Exists(Path.Combine(KlonsData.GetBasePath(), "Klons1.DataSets.dll"));
         }
 
         private void Application_ThreadException(object sender, System.Threading.ThreadExceptionEventArgs e)
