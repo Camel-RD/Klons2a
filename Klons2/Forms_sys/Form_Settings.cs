@@ -138,7 +138,7 @@ namespace KlonsF.Forms
             cmFont.Text = font.Name;
             int sz = (int)Math.Round(font.SizeInPoints * GetFontScaleFactor(), 0);
             if (sz < 6) sz = 6;
-            if (sz > 20) sz = 20;
+            if (sz > 24) sz = 24;
             string s = sz.ToString();
             if (sz < 10) s = "0" + s;
             cbFontSize.Text = s;
@@ -151,8 +151,8 @@ namespace KlonsF.Forms
             FontDialog fd = new FontDialog();
             fd.Font = this.Font;
             fd.ShowColor = false;
-            fd.MinSize = 8;
-            fd.MaxSize = 20;
+            fd.MinSize = 6;
+            fd.MaxSize = 24;
             fd.AllowScriptChange = false;
 
             if (fd.ShowDialog(this) != DialogResult.OK) return;
