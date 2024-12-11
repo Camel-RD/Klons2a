@@ -335,7 +335,8 @@ namespace KlonsLIB.Forms
             uint dpi = NM.GetDpiForWindow(Handle);
             float dpi_scaling = dpi / 96.0f;
             if (dpi_scaling > 1.5f) dpi_scaling = 1.5f;
-            float ret = (10.0f / DefaultFont.Size) * (1.5f / dpi_scaling);
+            float ret = 1.5f / dpi_scaling;
+            ret *= 10.0f / DefaultFont.Size;
             return ret;
 
         }
