@@ -92,7 +92,7 @@ namespace KlonsF.Forms
             MyData.Params.HideTotalSheets = chHideTotalSheet.Checked;
             MyData.Params.IINSimple = chIIN.Checked;
 
-            MyData.Settings.FormFont = this.Font;
+            MyData.Settings.FormFont = GetSelectedFont();
             MyData.Settings.ColorThemeId = colorThemeId;
             ColorThemeHelper.MyToolStripRenderer.SetColorTheme(Settings.ColorTheme);
 
@@ -130,6 +130,14 @@ namespace KlonsF.Forms
         void UpdateTabListColors()
         {
             tabList1.HotBackColor = ColorThemeHelper.ColorBetween(tabList1.BackColor, tabList1.ForeColor, 0.1f);
+        }
+
+        private Font GetSelectedFont()
+        {
+            FontStyle fs = Font.Style & (FontStyle.Bold | FontStyle.Regular | FontStyle.Italic);
+            int sz = int.Parse(cbFontSize.Text);
+            var ret = new Font(Font.FontFamily, sz, fs);
+            return ret;
         }
 
         private void ApplyFont(Font font)
