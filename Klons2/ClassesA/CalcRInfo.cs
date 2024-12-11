@@ -58,8 +58,8 @@ namespace KlonsA.Classes
             }
         }
 
-        public static DateTime ProgressiveIINStartDate = new DateTime(2018, 1, 1);
-        public static DateTime ProgressiveIINEndDate = new DateTime(2024, 12, 31);
+        public static DateTime ProgressiveIINStartDate { get; } = new DateTime(2018, 1, 1);
+        public static DateTime ProgressiveIINEndDate { get; } = new DateTime(2024, 12, 31);
 
         public void CalcR(SalarySheetRowInfo sr, DateTime dt1, DateTime dt2)
         {
@@ -88,7 +88,7 @@ namespace KlonsA.Classes
             var pr1 = fPersonR.LinkedPeriods[0].Item1 as KlonsADataSet.PERSONS_RRow;
             IsPensioner = pr1.PENSIONER == 1;
             HasTaxDoc = !string.IsNullOrEmpty(pr1.TAXDOC_NO);
-            UseProgresiveIINRate = (dt1 >= ProgressiveIINStartDate);
+            UseProgresiveIINRate = (dt1 >= ProgressiveIINStartDate && dt2 <= ProgressiveIINEndDate);
 
             GetRatesForPerson(wt1, pr1, dr_likmes, dt1);
 
@@ -163,7 +163,7 @@ namespace KlonsA.Classes
 
         public static void GetRatesForPerson(CalcRRow2 wt, KlonsADataSet.PERSONS_RRow drpr, KlonsADataSet.RATESRow drl, DateTime dt)
         {
-            wt.UseProgresiveIINRate = dt >= ProgressiveIINStartDate;
+            wt.UseProgresiveIINRate = dt >= ProgressiveIINStartDate && dt <= ProgressiveIINEndDate;
             wt.HasTaxDoc = !string.IsNullOrEmpty(drpr.TAXDOC_NO);
             if (dt < ProgressiveIINStartDate || dt > ProgressiveIINEndDate)
             {

@@ -67,20 +67,20 @@ namespace KlonsM.FormsM
 
         private void CheckRatesGridsEnable()
         {
-            dgvAcc.Enabled = 
+            SetControlEnabled(dgvAcc,
                 dgvRates.RowCount > 0 && 
                 dgvRates.CurrentRow != null &&
-                !dgvRates.CurrentRow.IsNewRow;
+                !dgvRates.CurrentRow.IsNewRow);
             CheckDataGridsEnable();
         }
 
         private void CheckDataGridsEnable()
         {
-            myGrid1.Enabled =
+            SetControlEnabled(myGrid1,
                 dgvAcc.Enabled &&
                 dgvAcc.RowCount > 0 &&
                 dgvAcc.CurrentRow != null &&
-                !dgvAcc.CurrentRow.IsNewRow;
+                !dgvAcc.CurrentRow.IsNewRow);
         }
 
         private KlonsMDataSet.M_PVNRATESRow GetCurrentRatesRow()

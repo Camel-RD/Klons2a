@@ -8,6 +8,7 @@
 	<ForceDesignerDpiUnaware>true</ForceDesignerDpiUnaware>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <Platforms>AnyCPU;x86;x64</Platforms>
+    <NuGetAudit>false</NuGetAudit>
   </PropertyGroup>
 
   <PropertyGroup>

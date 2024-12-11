@@ -8,6 +8,7 @@ using KlonsLIB.Data;
 using KlonsLIB.Misc;
 using Microsoft.CodeAnalysis.VisualBasic.Syntax;
 using KlonsLIB.Components;
+using System.Runtime.InteropServices;
 
 namespace KlonsLIB.Forms
 {
@@ -328,11 +329,23 @@ namespace KlonsLIB.Forms
             if (MyToolStrip != null)
                 ColorThemeHelper.ApplyToControlA(MyToolStrip, cth);
         }
-        
+
+        public float GetFontScaleFactor()
+        {
+            uint dpi = NM.GetDpiForWindow(Handle);
+            float dpi_scaling = dpi / 96.0f;
+            if (dpi_scaling > 1.5f) dpi_scaling = 1.5f;
+            float ret = (10.0f / DefaultFont.Size) * (1.5f / dpi_scaling);
+            return ret;
+
+        }
+
         public void CheckMyFontAndColors2()
         {
             SuspendLayout();
-            this.Font = Settings.FormFont;
+            float fontscalefactor = GetFontScaleFactor();
+            float fsz = Settings.FormFont.Size * fontscalefactor;
+            this.Font = new Font(Settings.FormFont.FontFamily, fsz, Settings.FormFont.Style);
             foreach (Control c in GetAllControls(this))
             {
                 if (c is ContainerControl)
@@ -491,6 +504,20 @@ namespace KlonsLIB.Forms
                     }
                 }
             }
+        }
+
+        public void SetControlEnabled(Control control, bool enabled)
+        {
+            if (!enabled && control.Focused)
+                ActiveControl = null;
+            control.Enabled = enabled;
+        }
+
+        public void SetControlVisible(Control control, bool visible)
+        {
+            if (!visible && control.Focused)
+                ActiveControl = null;
+            control.Enabled = visible;
         }
     }
 }

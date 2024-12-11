@@ -292,8 +292,8 @@ namespace KlonsA.Forms
         }
         private void CheckEnableRows()
         {
-            dgvShR.Enabled = !(bsShL.Count == 0 || dgvShL.CurrentRow == null || 
-                dgvShL.CurrentRow.IsNewRow);
+            SetControlEnabled(dgvShR, !(bsShL.Count == 0 || dgvShL.CurrentRow == null || 
+                dgvShL.CurrentRow.IsNewRow));
 
         }
 

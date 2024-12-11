@@ -282,8 +282,8 @@ namespace KlonsA.Forms
         {
             bool b1 = bsSarR.Count > 0 && bsSarR.Current != null;
             bool b2 = b1 && bsAlgasPapildsummas.Current != null;
-            sgrAprekins.Enabled = b1;
-            sgrBonus.Enabled = b2;
+            SetControlEnabled(sgrAprekins, b1);
+            SetControlEnabled(sgrBonus, b2);
         }
 
         private void cbLapas_Format(object sender, ListControlConvertEventArgs e)

@@ -289,11 +289,11 @@ namespace KlonsF.Forms
         private void dgvBalA1_CurrentCellChanged(object sender, EventArgs e)
         {
             if (dgvBalA1.CurrentCell == null) return;
-            dgvBalA2.Enabled = !dgvBalA1.CurrentRow.IsNewRow;
-            dgvBalA3.Enabled = !(dgvBalA1.CurrentRow.IsNewRow ||
-                (dgvBalA2.CurrentRow != null && dgvBalA2.CurrentRow.IsNewRow));
-            panel1.Enabled = dgvBalA2.Enabled;
-            panel2.Enabled = dgvBalA2.Enabled;
+            SetControlEnabled(dgvBalA2, !dgvBalA1.CurrentRow.IsNewRow);
+            SetControlEnabled(dgvBalA3, !(dgvBalA1.CurrentRow.IsNewRow ||
+                (dgvBalA2.CurrentRow != null && dgvBalA2.CurrentRow.IsNewRow)));
+            SetControlEnabled(panel1, dgvBalA2.Enabled);
+            SetControlEnabled(panel2, dgvBalA2.Enabled);
             dgcBalA1balid.ReadOnly =
                 dgvBalA1.NewRowIndex != dgvBalA1.CurrentCell.RowIndex;
         }
@@ -310,7 +310,7 @@ namespace KlonsF.Forms
         private void dgvBalA2_CurrentCellChanged(object sender, EventArgs e)
         {
             if (dgvBalA2.CurrentCell == null) return;
-            dgvBalA3.Enabled = !(dgvBalA2.CurrentRow.IsNewRow);
+            SetControlEnabled(dgvBalA3, !(dgvBalA2.CurrentRow.IsNewRow));
         }
 
         private void dgvBalA2_Leave(object sender, EventArgs e)
@@ -345,7 +345,7 @@ namespace KlonsF.Forms
             {
                 bsBalA2.Sort = null;
                 bsBalA2.DataSource = null;
-                dgvBalA2.Enabled = false;
+                SetControlEnabled(dgvBalA2, false);
             }
             else
             {
@@ -364,7 +364,7 @@ namespace KlonsF.Forms
             {
                 bsBalA3.Sort = null;
                 bsBalA3.DataSource = null;
-                dgvBalA3.Enabled = false;
+                SetControlEnabled(dgvBalA3, false);
             }
             else
             {

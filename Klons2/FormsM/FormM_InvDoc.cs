@@ -174,8 +174,8 @@ namespace KlonsM.FormsM
 
         private void CheckEnableRows()
         {
-            sgrDoc.Visible = bsDocs.Count > 0 && bsDocs.Current != null;
-            dgvRows.Enabled = bsDocs.Count > 0 && bsDocs.Current != null;
+            SetControlVisible(sgrDoc, bsDocs.Count > 0 && bsDocs.Current != null);
+            SetControlEnabled(dgvRows, bsDocs.Count > 0 && bsDocs.Current != null);
         }
 
         public override bool SaveData()
