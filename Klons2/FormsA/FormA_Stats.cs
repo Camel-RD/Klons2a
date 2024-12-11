@@ -57,7 +57,7 @@ namespace KlonsA.Forms
             }
             else
             {
-                dgvStats.Enabled = false;
+                SetControlEnabled(dgvStats, false);
             }
         }
 

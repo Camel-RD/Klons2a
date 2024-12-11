@@ -414,15 +414,15 @@ namespace KlonsA.Forms
 
         private void CheckEnableRows()
         {
-            dgvRows.Enabled = bsList.Count > 0 && dgvList.CurrentRow != null &&
-                               !dgvList.CurrentRow.IsNewRow;
+            SetControlEnabled(dgvRows, bsList.Count > 0 && dgvList.CurrentRow != null &&
+                               !dgvList.CurrentRow.IsNewRow);
             CheckEnableSGR();
         }
 
         private void CheckEnableSGR()
         {
-            sgrRow.Enabled = dgvRows.Enabled && bsRows.Count > 0 && 
-                dgvRows.CurrentRow != null && !dgvRows.CurrentRow.IsNewRow;
+            SetControlEnabled(sgrRow, dgvRows.Enabled && bsRows.Count > 0 && 
+                dgvRows.CurrentRow != null && !dgvRows.CurrentRow.IsNewRow);
         }
 
         private void dgvList_CurrentCellChanged(object sender, EventArgs e)

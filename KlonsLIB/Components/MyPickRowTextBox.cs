@@ -1,6 +1,7 @@
 ﻿using System;
 using System.ComponentModel;
 using System.Data;
+using System.Globalization;
 using System.Windows.Forms;
 
 namespace KlonsLIB.Components
@@ -227,7 +228,7 @@ namespace KlonsLIB.Components
             {
                 s1 = GetText(i);
                 if (s.Length > s1.Length) continue;
-                if (string.Compare(s, s1.Substring(0,s.Length), true) == 0)
+                if (MyCompare(s, s1.Substring(0,s.Length)) == 0)
                 {
                     return i;
                 }
@@ -248,55 +249,43 @@ namespace KlonsLIB.Components
             return -1;
         }
 
+        int MyCompare(string s1, string s2)
+        {
+            int ret = string.Compare(s1, s2, CultureInfo.InvariantCulture, CompareOptions.IgnoreNonSpace | CompareOptions.IgnoreCase);
+            return ret;
+        }
+
         private int FindStringSorted(string s)
         {
             if (dataManager == null) return -1;
             if (string.IsNullOrEmpty(s)) return -1;
             int k1 = 0;
             int k2 = dataManager.List.Count - 1;
-            int mk2 = k2;
-            int k3 = (k1 + k2)/2;
-            int m;
+            int khi = k2;
+            if (k2 == -1) return -1;
             string s1;
-            while (true)
+            int m;
+            while (k1 <= k2)
             {
+                int k3 = (k1 + k2) / 2;
                 s1 = GetText(k3);
-                m = string.Compare(s, s1, true);
+                m = MyCompare(s, s1);
                 if (m == 0) return k3;
                 if (m < 0)
                 {
-                    if (k2 == k3)
-                    {
-                        if (s.Length > s1.Length) return -1;
-                        s1 = s1.Substring(0, s.Length);
-                        if (string.Compare(s, s1, true) == 0)
-                            return k3;
-                        return -1;
-                    }
-                    k2 = k3;
-                    k3 = (k1 + k2)/2;
-
+                    k2 = k3 - 1;
                 }
-                if (m > 0)
+                else
                 {
-                    if (k1 == k3)
-                    {
-                        if (k1 < mk2)
-                        {
-                            k3++;
-                            s1 = GetText(k3);
-                            if (s.Length > s1.Length) return -1;
-                            s1 = s1.Substring(0, s.Length);
-                            if (string.Compare(s, s1, true) == 0)
-                                return k3;
-
-                        }
-                        return -1;
-                    }
-                    k1 = k3;
-                    k3 = (k1 + k2 + 1)/2;
+                    k1 = k3 + 1;
                 }
             }
+            if (k1 > khi) return -1;
+            s1 = GetText(k1);
+            s1 = s1.Substring(0, s.Length);
+            m = MyCompare(s, s1);
+            if (m == 0) return k1;
+            return -1;
         }
 
         private int FindStringExactSorted(string s)
@@ -304,28 +293,26 @@ namespace KlonsLIB.Components
             if (dataManager == null) return -1;
             if (string.IsNullOrEmpty(s)) return -1;
             int k1 = 0;
-            int k2 = dataManager.List.Count-1;
-            int k3 = (k1 + k2)/2;
-            int m;
-            while (true)
+            int k2 = dataManager.List.Count - 1;
+            int khi = k2;
+            if (k2 == -1) return -1;
+            string s1;
+            while (k1 <= k2)
             {
-                m = string.Compare(s, GetText(k3), true);
-                if(m == 0) return k3;
+                int k3 = (k1 + k2) / 2;
+                s1 = GetText(k3);
+                int m = MyCompare(s, s1);
+                if (m == 0) return k3;
                 if (m < 0)
                 {
-                    if (k2 == k3) return -1;
-                    k2 = k3;
-                    k3 = (k1 + k2)/2;
-
+                    k2 = k3 - 1;
                 }
-                if (m > 0)
+                else
                 {
-                    if (k1 == k3) return -1;
-                    k1 = k3;
-                    k3 = (k1 + k2 + 1)/2;
-
+                    k1 = k3 + 1;
                 }
             }
+            return -1;
         }
 
         private string GetText(int nr)

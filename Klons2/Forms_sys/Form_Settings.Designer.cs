@@ -38,19 +38,6 @@ namespace KlonsF.Forms
             KlonsLIB.Components.MyMcComboBox.MyItem myItem6 = new KlonsLIB.Components.MyMcComboBox.MyItem();
             KlonsLIB.Components.MyMcComboBox.MyItem myItem7 = new KlonsLIB.Components.MyMcComboBox.MyItem();
             KlonsLIB.Components.MyMcComboBox.MyItem myItem8 = new KlonsLIB.Components.MyMcComboBox.MyItem();
-            KlonsLIB.Components.MyMcComboBox.MyItem myItem9 = new KlonsLIB.Components.MyMcComboBox.MyItem();
-            KlonsLIB.Components.MyMcComboBox.MyItem myItem10 = new KlonsLIB.Components.MyMcComboBox.MyItem();
-            KlonsLIB.Components.MyMcComboBox.MyItem myItem11 = new KlonsLIB.Components.MyMcComboBox.MyItem();
-            KlonsLIB.Components.MyMcComboBox.MyItem myItem12 = new KlonsLIB.Components.MyMcComboBox.MyItem();
-            KlonsLIB.Components.MyMcComboBox.MyItem myItem13 = new KlonsLIB.Components.MyMcComboBox.MyItem();
-            KlonsLIB.Components.MyMcComboBox.MyItem myItem14 = new KlonsLIB.Components.MyMcComboBox.MyItem();
-            KlonsLIB.Components.MyMcComboBox.MyItem myItem15 = new KlonsLIB.Components.MyMcComboBox.MyItem();
-            KlonsLIB.Components.MyMcComboBox.MyItem myItem16 = new KlonsLIB.Components.MyMcComboBox.MyItem();
-            KlonsLIB.Components.MyMcComboBox.MyItem myItem17 = new KlonsLIB.Components.MyMcComboBox.MyItem();
-            KlonsLIB.Components.MyMcComboBox.MyItem myItem18 = new KlonsLIB.Components.MyMcComboBox.MyItem();
-            KlonsLIB.Components.MyMcComboBox.MyItem myItem19 = new KlonsLIB.Components.MyMcComboBox.MyItem();
-            KlonsLIB.Components.MyMcComboBox.MyItem myItem20 = new KlonsLIB.Components.MyMcComboBox.MyItem();
-            KlonsLIB.Components.MyMcComboBox.MyItem myItem21 = new KlonsLIB.Components.MyMcComboBox.MyItem();
             tabList1 = new Cyotek.Windows.Forms.TabList();
             tlpAppAppearance = new Cyotek.Windows.Forms.TabListPage();
             chInWine = new KlonsLIB.Components.MyCheckBox();
@@ -238,20 +225,7 @@ namespace KlonsF.Forms
             cbFontSize.GridLineHorizontal = false;
             cbFontSize.GridLineVertical = false;
             cbFontSize.IntegralHeight = false;
-            myItem5.Col1 = "08";
-            myItem6.Col1 = "09";
-            myItem7.Col1 = "10";
-            myItem8.Col1 = "11";
-            myItem9.Col1 = "12";
-            myItem10.Col1 = "13";
-            myItem11.Col1 = "14";
-            myItem12.Col1 = "15";
-            myItem13.Col1 = "16";
-            myItem14.Col1 = "18";
-            myItem15.Col1 = "20";
-            myItem16.Col1 = "22";
-            myItem17.Col1 = "24";
-            cbFontSize.Items.AddRange(new object[] { myItem5, myItem6, myItem7, myItem8, myItem9, myItem10, myItem11, myItem12, myItem13, myItem14, myItem15, myItem16, myItem17 });
+            cbFontSize.Items.AddRange(new object[] { "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "18", "20", "22", "24" });
             cbFontSize.ItemStrings = new string[]
     {
     "08",
@@ -507,11 +481,11 @@ namespace KlonsF.Forms
             cbBackUpPlan.GridLineHorizontal = false;
             cbBackUpPlan.GridLineVertical = false;
             cbBackUpPlan.IntegralHeight = false;
-            myItem18.Col1 = "Nekad";
-            myItem19.Col1 = "Pirms aktualizēšanas";
-            myItem20.Col1 = "Vienreiz dienā";
-            myItem21.Col1 = "Pirms katras atvēršanas";
-            cbBackUpPlan.Items.AddRange(new object[] { myItem18, myItem19, myItem20, myItem21 });
+            myItem5.Col1 = "Nekad";
+            myItem6.Col1 = "Pirms aktualizēšanas";
+            myItem7.Col1 = "Vienreiz dienā";
+            myItem8.Col1 = "Pirms katras atvēršanas";
+            cbBackUpPlan.Items.AddRange(new object[] { myItem5, myItem6, myItem7, myItem8 });
             cbBackUpPlan.ItemStrings = new string[]
     {
     "Nekad",

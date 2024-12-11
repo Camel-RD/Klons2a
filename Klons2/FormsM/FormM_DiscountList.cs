@@ -37,8 +37,8 @@ namespace KlonsM.FormsM
 
         private void CheckEnableRows()
         {
-            dgvRowsR.Enabled = bsLists.Count > 0 && bsLists.Current != null;
-            dgvRowsP.Enabled = bsLists.Count > 0 && bsLists.Current != null;
+            SetControlEnabled(dgvRowsR, bsLists.Count > 0 && bsLists.Current != null);
+            SetControlEnabled(dgvRowsP, bsLists.Count > 0 && bsLists.Current != null);
         }
 
         public override bool SaveData()

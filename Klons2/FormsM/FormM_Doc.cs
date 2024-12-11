@@ -510,8 +510,8 @@ namespace KlonsM.FormsM
 
         private void CheckEnableRows()
         {
-            sgrDocA.Visible = bsDocs.Count > 0 && bsDocs.Current != null;
-            dgvRows.Enabled = bsDocs.Count > 0 && bsDocs.Current != null;
+            SetControlVisible(sgrDocA, bsDocs.Count > 0 && bsDocs.Current != null);
+            SetControlEnabled(dgvRows, bsDocs.Count > 0 && bsDocs.Current != null);
         }
 
         private void CheckEnableDocsCheckBoxes()

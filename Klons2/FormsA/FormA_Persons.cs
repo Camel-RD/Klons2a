@@ -466,8 +466,8 @@ namespace KlonsA.Forms
 
         private void dgvPersons_CurrentCellChanged(object sender, EventArgs e)
         {
-            dgvAmati.Enabled = !(dgvPersons.CurrentRow == null || dgvPersons.RowCount == 1 ||
-                               dgvPersons.CurrentRow.IsNewRow);
+            SetControlEnabled(dgvAmati, !(dgvPersons.CurrentRow == null || dgvPersons.RowCount == 1 ||
+                               dgvPersons.CurrentRow.IsNewRow));
 
         }
 

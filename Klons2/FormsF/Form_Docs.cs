@@ -34,6 +34,7 @@ namespace KlonsF.Forms
             LoadColumnWidthsFromSettings();
             FormInitOnLoad();
             toolStrip1.Visible = true;
+            dgvOps.DisableAllColumnSorting();
         }
 
         private string warnAfterValidation = null;
@@ -2228,8 +2229,9 @@ namespace KlonsF.Forms
 
         private void dgvDocs_CurrentCellChanged(object sender, EventArgs e)
         {
-            dgvOps.Enabled = !(dgvDocs.CurrentRow == null || dgvDocs.RowCount == 1 ||
+            bool dgvOps_enabled = !(dgvDocs.CurrentRow == null || dgvDocs.RowCount == 1 ||
                                dgvDocs.CurrentRow.IsNewRow);
+            SetControlEnabled(dgvOps, dgvOps_enabled);
         }
 
         private void dgvDocs_SelectionChanged(object sender, EventArgs e)
@@ -2440,8 +2442,9 @@ namespace KlonsF.Forms
                 //|| dv.Row.RowState == DataRowState.Detached
                 )
             {
+                SetControlEnabled(dgvOps, false);
+                var ac = this.ActiveControl;
                 bsOPS.DataSource = null;
-                dgvOps.Enabled = false;
             }
             else
             {

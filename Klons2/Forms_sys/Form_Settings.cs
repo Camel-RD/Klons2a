@@ -136,9 +136,9 @@ namespace KlonsF.Forms
         {
             FontStyle fs = font.Style & (FontStyle.Bold | FontStyle.Regular | FontStyle.Italic);
             cmFont.Text = font.Name;
-            int sz = font.FontSizeX();
-            if (sz < 8) sz = 8;
-            if (sz > 16) sz = 16;
+            int sz = (int)Math.Round(font.SizeInPoints * GetFontScaleFactor(), 0);
+            if (sz < 6) sz = 6;
+            if (sz > 24) sz = 24;
             string s = sz.ToString();
             if (sz < 10) s = "0" + s;
             cbFontSize.Text = s;
@@ -151,8 +151,8 @@ namespace KlonsF.Forms
             FontDialog fd = new FontDialog();
             fd.Font = this.Font;
             fd.ShowColor = false;
-            fd.MinSize = 8;
-            fd.MaxSize = 16;
+            fd.MinSize = 6;
+            fd.MaxSize = 24;
             fd.AllowScriptChange = false;
 
             if (fd.ShowDialog(this) != DialogResult.OK) return;
@@ -166,6 +166,7 @@ namespace KlonsF.Forms
         private void cbFontSize_SelectedIndexChanged(object sender, EventArgs e)
         {
             int sz = int.Parse(cbFontSize.Text);
+            sz = (int)Math.Round(sz * GetFontScaleFactor(), 0);
             if (sz != this.Font.SizeInPoints)
                 SetFontSize(sz);
         }

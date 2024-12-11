@@ -11,6 +11,7 @@
     <ForceDesignerDpiUnaware>true</ForceDesignerDpiUnaware>
     <IsPublishable>False</IsPublishable>
 	<Platforms>AnyCPU;x86;x64</Platforms>
+    <NuGetAudit>false</NuGetAudit>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationDefaultFont>Microsoft Sans Serif, 10pt</ApplicationDefaultFont>

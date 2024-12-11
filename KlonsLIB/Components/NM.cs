@@ -175,5 +175,9 @@ namespace KlonsLIB.Components
             public Int16 wBorderWidth;
             public Int16 wBorders;
         }
+
+        [DllImport("user32.dll")] 
+        public static extern uint GetDpiForWindow(IntPtr hWnd);
+
     }
 }

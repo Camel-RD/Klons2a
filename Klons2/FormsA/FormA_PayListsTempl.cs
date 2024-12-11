@@ -242,8 +242,8 @@ namespace KlonsA.Forms
 
         private void CheckEnableGrid()
         {
-            dgvShR.Enabled = !(dgvShL.CurrentRow == null || 
-                dgvShL.CurrentRow.IsNewRow);
+            SetControlEnabled(dgvShR, !(dgvShL.CurrentRow == null || 
+                dgvShL.CurrentRow.IsNewRow));
         }
 
         private void dgvShL_CurrentCellChanged(object sender, EventArgs e)
