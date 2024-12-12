@@ -411,12 +411,12 @@ namespace KlonsF
         private void miAtvērtProgrammasMapi_Click(object sender, EventArgs e)
         {
             var myfolder = KlonsData.GetBasePath();
-            try { Process.Start(myfolder); } catch (Exception) { }
+            try { Process.Start("explorer.exe", myfolder); } catch (Exception) { }
         }
         private void miAtvērtRezervesKopijuMapi_Click(object sender, EventArgs e)
         {
             var myfolder = MyData.GetBackUpFolder();
-            try { Process.Start(myfolder); } catch (Exception) { }
+            try { Process.Start("explorer.exe", myfolder); } catch (Exception) { }
         }
         private void miRejectChangesF_Click(object sender, EventArgs e)
         {
@@ -622,7 +622,7 @@ namespace KlonsF
         private void miFApraksts_Click(object sender, EventArgs e)
         {
             var myfolder = MyData.GetManualsPath();
-            try { Process.Start(myfolder); } catch (Exception) { }
+            try { Process.Start("explorer.exe", myfolder); } catch (Exception) { }
         }
 
 
