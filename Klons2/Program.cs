@@ -21,7 +21,12 @@ namespace KlonsF
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.SetDefaultFont(new Font(new FontFamily("Microsoft Sans Serif"), 10f));
+            if (!AdjustCurrentCulture()) return;
+            Application.Run(new Form_Main());
+        }
 
+        static bool AdjustCurrentCulture()
+        {
             try
             {
                 var ci_lv = new CultureInfo("lv-LV", true);
@@ -31,12 +36,11 @@ namespace KlonsF
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Neizdevās nomainīt reģionālos iestatijumus uz 'lv-LV'.", "kļūda", 
+                MessageBox.Show("Neizdevās nomainīt reģionālos iestatijumus uz 'lv-LV'.", "kļūda",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
+                return false;
             }
-
-            Application.Run(new Form_Main());
+            return true;
         }
 
         [System.Runtime.InteropServices.DllImport("user32.dll")]
