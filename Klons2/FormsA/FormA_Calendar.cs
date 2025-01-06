@@ -54,7 +54,7 @@ namespace KlonsA.Forms
             grid.Redim(24, 32);
             for (int i = 0; i < grid.Columns.Count; i++)
             {
-                grid.Columns[i].Width = (int)((float)grid.DefaultHeight * 1.2f);
+                grid.Columns[i].Width = (int)((float)grid.DefaultHeight * 1.3f);
             }
             for (int i = 0; i < 12; i++)
             {

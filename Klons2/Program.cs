@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -20,6 +21,21 @@ namespace KlonsF
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.SetDefaultFont(new Font(new FontFamily("Microsoft Sans Serif"), 10f));
+
+            try
+            {
+                var ci_lv = new CultureInfo("lv-LV", true);
+                //ci_lv.NumberFormat.NumberDecimalSeparator = ".";
+                ci_lv.NumberFormat.NumberGroupSeparator = " ";
+                CultureInfo.CurrentCulture = ci_lv;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Neizdevās nomainīt reģionālos iestatijumus uz 'lv-LV'.", "kļūda", 
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             Application.Run(new Form_Main());
         }
 

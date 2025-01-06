@@ -300,7 +300,7 @@ namespace KlonsLIB.Components
 
         int MyCompare(string s1, string s2)
         {
-            int ret = string.Compare(s1, s2, CultureInfo.InvariantCulture, CompareOptions.IgnoreNonSpace | CompareOptions.IgnoreCase);
+            int ret = string.Compare(s1, s2, CultureInfo.CurrentCulture, CompareOptions.IgnoreNonSpace | CompareOptions.IgnoreCase);
             return ret;
         }
 
@@ -331,6 +331,7 @@ namespace KlonsLIB.Components
             }
             if (k1 > khi) return -1;
             s1 = GetDisplayText(k1);
+            if (s1.Length < s.Length) return -1;
             s1 = s1.Substring(0, s.Length);
             m = MyCompare(s, s1);
             if (m == 0) return k1;

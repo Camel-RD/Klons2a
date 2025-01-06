@@ -2511,7 +2511,9 @@ namespace KlonsF.Forms
         public void GetClId()
         {
             if (!CanEditDocsCurrentCell()) return;
-            var clid = dgvDocs.CurrentCell.FormattedValue as string;
+            var clid = dgvDocs.IsCurrentCellInEditMode ? 
+                dgvDocs.EditingControl.Text :
+                dgvDocs.CurrentCell.FormattedValue as string;
             var rt = GetClId(clid);
             if (rt == null) return;
             SetCurrentDocEditorValue(rt);

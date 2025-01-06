@@ -1001,9 +1001,5 @@ namespace KlonsF
 
         #endregion
 
-        private void papildusNosaukumiToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            ShowFormM<KlonsM.FormsM.FormM_ItemsTexts>();
-        }
     }
 }

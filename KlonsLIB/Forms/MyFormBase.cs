@@ -518,7 +518,7 @@ namespace KlonsLIB.Forms
         {
             if (!visible && control.Focused)
                 ActiveControl = null;
-            control.Enabled = visible;
+            control.Visible = visible;
         }
     }
 }
