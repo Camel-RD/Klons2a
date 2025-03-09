@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Platforms>AnyCPU;x64;x86</Platforms>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="SchematronOutput\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\XmlValidatorDll\XmlValidatorDll.csproj" />
+  </ItemGroup>
+
+  <Import Project="..\EInvoiceXSL\EInvoiceXSL.projitems" Label="Shared" />
+
+</Project>

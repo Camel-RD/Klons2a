@@ -13,6 +13,7 @@ using KlonsF.DataSets.klonsRepDataSetTableAdapters;
 using KlonsLIB.Forms;
 using KlonsLIB.Misc;
 using Microsoft.Reporting.WinForms;
+using KlonsF.FormsF_rep;
 
 namespace KlonsF.FormsReportParams
 {
@@ -194,20 +195,11 @@ namespace KlonsF.FormsReportParams
 
             int repid = lbCm.SelectedIndex;
             if (cbClid.Text == "*") cbClid.Text = "";
-            if (cbClid.Text != "") repid += 7;
+            if (cbClid.Text != "") repid += 8;
 
             ROps1aTableAdapter ad1a = MyData.GetKlonsFRepAdapter("ROps1a") as ROps1aTableAdapter;
             ROps2aTableAdapter ad2a = MyData.GetKlonsFRepAdapter("ROps2a") as ROps2aTableAdapter;
             ROps3aTableAdapter ad3a = MyData.GetKlonsFRepAdapter("ROps3a") as ROps3aTableAdapter;
-
-            ReportViewerData rd = new ReportViewerData();
-            if(repid != 6)
-                rd.Sources["DataSet1"] = MyData.DataSetKlonsFRep.ROps1a;
-            rd.Sources["DataSet_2a"] = MyData.DataSetKlonsFRep.ROps2a;
-            rd.Sources["DataSet_3a"] = MyData.DataSetKlonsFRep.ROps3a;
-
-            ReportViewerData rdsub = null;
-
 
             switch (repid)
             {
@@ -225,33 +217,49 @@ namespace KlonsF.FormsReportParams
                     ad3a.FillBy_koresp_02(MyData.DataSetKlonsFRep.ROps3a, startDate, endDate, ac);
                     break;
                 case 6:
+                case 7:
                     ad2a.FillBy_apgr_01(MyData.DataSetKlonsFRep.ROps2a, startDate, endDate, ac);
                     ad3a.FillBy_koresp_01(MyData.DataSetKlonsFRep.ROps3a, startDate, endDate, ac);
                     break;
-                case 7:
                 case 8:
                 case 9:
+                case 10:
                     ad1a.FillBy_koresp_11_clid(MyData.DataSetKlonsFRep.ROps1a, startDate, endDate, ac, clid);
                     ad2a.FillBy_apgr_01_clid(MyData.DataSetKlonsFRep.ROps2a, startDate, endDate, ac, clid);
                     ad3a.FillBy_koresp_01_clid(MyData.DataSetKlonsFRep.ROps3a, startDate, endDate, ac, clid);
                     break;
-                case 10:
+                case 11:
                     ad1a.FillBy_koresp_11_clid(MyData.DataSetKlonsFRep.ROps1a, startDate, endDate, ac, clid);
                     ad2a.FillBy_apgr_02_clid(MyData.DataSetKlonsFRep.ROps2a, startDate, endDate, ac, clid);
                     ad3a.FillBy_koresp_02_clid(MyData.DataSetKlonsFRep.ROps3a, startDate, endDate, ac, clid);
                     break;
                 case 5:
-                case 11:
+                case 12:
                     ad1a.FillBy_koresp_11(MyData.DataSetKlonsFRep.ROps1a, startDate, endDate, ac);
                     ad2a.FillBy_apgr_02_clid(MyData.DataSetKlonsFRep.ROps2a, startDate, endDate, ac, null);
                     ad3a.FillBy_koresp_02_clid(MyData.DataSetKlonsFRep.ROps3a, startDate, endDate, ac, null);
                     break;
             }
 
-
             MyData.ReportHelperF.PrepareRops1a();
             MyData.ReportHelperF.PrepareRops2a();
             MyData.ReportHelperF.PrepareRops2aRAC();
+
+
+            if (repid == 7)
+            {
+                MakeReportKorespTotalTable();
+                return;
+            }
+
+            ReportViewerData rd = new ReportViewerData();
+            if (repid != 6)
+                rd.Sources["DataSet1"] = MyData.DataSetKlonsFRep.ROps1a;
+            rd.Sources["DataSet_2a"] = MyData.DataSetKlonsFRep.ROps2a;
+            rd.Sources["DataSet_3a"] = MyData.DataSetKlonsFRep.ROps3a;
+
+            ReportViewerData rdsub = null;
+
 
             rd.AddReportParameters(
                 new string[]
@@ -337,6 +345,72 @@ namespace KlonsF.FormsReportParams
             }
 
             MyMainForm.ShowReport(rd);
+        }
+
+        void MakeReportKorespTotalTable()
+        {
+            decimal? AboveZero(decimal d) => d <= 0 ? null : d;
+
+            var rep = new List<RepRowKorespTotals>();
+            var t1 = MyData.DataSetKlonsFRep.ROps2a[0];
+            var empty = new RepRowKorespTotals();
+            
+            var acname = new RepRowKorespTotals()
+            {
+                Acc = cbAC.Text,
+                Descr = lbACName.Text,
+                Kind = 1
+            };
+            var saldo1 = new RepRowKorespTotals()
+            {
+                Descr = $"Sākuma atlikums uz {Utils.DateToString(startDate)}",
+                Debit = AboveZero(t1.SDb - t1.SCr),
+                Credit = AboveZero(t1.SCr - t1.SDb),
+            };
+            var apgroz = new RepRowKorespTotals()
+            {
+                Descr = $"Apgrozijums",
+                Debit = t1.TDb,
+                Credit = t1.TCr,
+            };
+            var dsaldo2 = t1.SDb - t1.SCr + t1.TDb - t1.TCr;
+            var saldo2 = new RepRowKorespTotals()
+            {
+                Descr = $"Beigu atlikums uz {Utils.DateToString(endDate)}",
+                Debit = AboveZero(dsaldo2),
+                Credit = AboveZero(-dsaldo2),
+            };
+
+            rep.Add(acname);
+            rep.Add(saldo1);
+            rep.Add(apgroz);
+            rep.Add(saldo2);
+            rep.Add(empty);
+
+            var r1t = new RepRowKorespTotals()
+            {
+                Descr = "Kopā",
+                Debit = 0M,
+                Credit = 0M,
+                Kind = 1
+            };
+            foreach (var t2 in MyData.DataSetKlonsFRep.ROps3a)
+            {
+                var r1 = new RepRowKorespTotals()
+                {
+                    Acc = t2.RAc,
+                    Descr = t2.Name,
+                    Debit = t2.SDb,
+                    Credit = t2.SCr,
+                };
+                r1t.Debit += r1.Debit;
+                r1t.Credit += r1.Credit;
+                rep.Add(r1);
+            }
+            rep.Add(r1t);
+
+            var frm = MyMainForm.ShowForm(typeof(FormRep_KorespTotal)) as FormRep_KorespTotal;
+            frm.SetRowSource(rep);
         }
 
         private void tsbPrevMonth_Click(object sender, EventArgs e)

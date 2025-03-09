@@ -226,6 +226,7 @@ namespace KlonsF
             aDownloader1 = new ADownloader();
             tsWindowList = new System.Windows.Forms.ToolStrip();
             myStyleDefs = new KlonsP.Classes.MyStyleDefs();
+            miMEinvoiceManager = new System.Windows.Forms.ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -1213,7 +1214,7 @@ namespace KlonsF
             // 
             // miMNoliktava
             // 
-            miMNoliktava.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { miMDokumenti, toolStripSeparator17, miMNoliktavasPartneri, miMArtikuli, miMArtikuluKategorijas, miCenasUnAtlaides, toolStripSeparator18, miMInventarizācijasDokumenti, toolStripSeparator19, miMPārskati, miMRīki, toolStripSeparator20, miMDažādiSaraksti, miMParams });
+            miMNoliktava.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { miMDokumenti, toolStripSeparator17, miMNoliktavasPartneri, miMArtikuli, miMArtikuluKategorijas, miCenasUnAtlaides, toolStripSeparator18, miMInventarizācijasDokumenti, toolStripSeparator19, miMPārskati, miMEinvoiceManager, miMRīki, toolStripSeparator20, miMDažādiSaraksti, miMParams });
             miMNoliktava.Name = "miMNoliktava";
             miMNoliktava.Size = new System.Drawing.Size(78, 23);
             miMNoliktava.Text = "Noliktava";
@@ -1552,6 +1553,13 @@ namespace KlonsF
             myStyleDefs.MarkedCellBack = System.Drawing.Color.FromArgb(204, 104, 89);
             myStyleDefs.MarkedCellFore = System.Drawing.Color.White;
             // 
+            // miMEinvoiceManager
+            // 
+            miMEinvoiceManager.Name = "miMEinvoiceManager";
+            miMEinvoiceManager.Size = new System.Drawing.Size(240, 24);
+            miMEinvoiceManager.Text = "e-Rēķinu pārlūks";
+            miMEinvoiceManager.Click += miMEinvoiceManager_Click;
+            // 
             // Form_Main
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1780,5 +1788,6 @@ namespace KlonsF
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator27;
         private System.Windows.Forms.ToolStripMenuItem miFEdsTp;
         private System.Windows.Forms.ToolStripMenuItem miAstrādājošoPārskats;
+        private System.Windows.Forms.ToolStripMenuItem miMEinvoiceManager;
     }
 }

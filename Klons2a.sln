@@ -16,6 +16,16 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyReportLib", "MyReportLib\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KlonsLIB", "KlonsLIB\KlonsLIB.csproj", "{388C25A1-0224-4B21-A607-727426DC286E}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "XmlTools", "XmlTools", "{9EF3E9BD-B489-44D5-BE39-E1100146A6A4}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "EInvoiceXSL", "XmlTools\EInvoiceXSL\EInvoiceXSL.shproj", "{01A062AB-1292-4C92-B68D-88C41E72BB4A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XmlTools", "XmlTools\XmlTools\XmlTools.csproj", "{E8A0AB2E-7120-41A3-B5D6-A6F7B10D1C86}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EInvoiceLib", "XmlTools\EInvoiceLib\EInvoiceLib.csproj", "{492E7EDE-46B4-4064-B9AD-949A08EEB8FE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XmlValidatorDll", "XmlTools\XmlValidatorDll\XmlValidatorDll.csproj", "{B1C8721F-545C-43BB-9BC0-BBDCAAC188D6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -107,11 +117,57 @@ Global
 		{388C25A1-0224-4B21-A607-727426DC286E}.Release|x64.ActiveCfg = Release|x64
 		{388C25A1-0224-4B21-A607-727426DC286E}.Release|x64.Build.0 = Release|x64
 		{388C25A1-0224-4B21-A607-727426DC286E}.Release|x86.ActiveCfg = Release|x64
+		{E8A0AB2E-7120-41A3-B5D6-A6F7B10D1C86}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8A0AB2E-7120-41A3-B5D6-A6F7B10D1C86}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8A0AB2E-7120-41A3-B5D6-A6F7B10D1C86}.Debug|x64.ActiveCfg = Debug|x64
+		{E8A0AB2E-7120-41A3-B5D6-A6F7B10D1C86}.Debug|x64.Build.0 = Debug|x64
+		{E8A0AB2E-7120-41A3-B5D6-A6F7B10D1C86}.Debug|x86.ActiveCfg = Debug|x86
+		{E8A0AB2E-7120-41A3-B5D6-A6F7B10D1C86}.Debug|x86.Build.0 = Debug|x86
+		{E8A0AB2E-7120-41A3-B5D6-A6F7B10D1C86}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8A0AB2E-7120-41A3-B5D6-A6F7B10D1C86}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E8A0AB2E-7120-41A3-B5D6-A6F7B10D1C86}.Release|x64.ActiveCfg = Release|x64
+		{E8A0AB2E-7120-41A3-B5D6-A6F7B10D1C86}.Release|x64.Build.0 = Release|x64
+		{E8A0AB2E-7120-41A3-B5D6-A6F7B10D1C86}.Release|x86.ActiveCfg = Release|x86
+		{E8A0AB2E-7120-41A3-B5D6-A6F7B10D1C86}.Release|x86.Build.0 = Release|x86
+		{492E7EDE-46B4-4064-B9AD-949A08EEB8FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{492E7EDE-46B4-4064-B9AD-949A08EEB8FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{492E7EDE-46B4-4064-B9AD-949A08EEB8FE}.Debug|x64.ActiveCfg = Debug|x64
+		{492E7EDE-46B4-4064-B9AD-949A08EEB8FE}.Debug|x64.Build.0 = Debug|x64
+		{492E7EDE-46B4-4064-B9AD-949A08EEB8FE}.Debug|x86.ActiveCfg = Debug|x86
+		{492E7EDE-46B4-4064-B9AD-949A08EEB8FE}.Debug|x86.Build.0 = Debug|x86
+		{492E7EDE-46B4-4064-B9AD-949A08EEB8FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{492E7EDE-46B4-4064-B9AD-949A08EEB8FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{492E7EDE-46B4-4064-B9AD-949A08EEB8FE}.Release|x64.ActiveCfg = Release|x64
+		{492E7EDE-46B4-4064-B9AD-949A08EEB8FE}.Release|x64.Build.0 = Release|x64
+		{492E7EDE-46B4-4064-B9AD-949A08EEB8FE}.Release|x86.ActiveCfg = Release|x86
+		{492E7EDE-46B4-4064-B9AD-949A08EEB8FE}.Release|x86.Build.0 = Release|x86
+		{B1C8721F-545C-43BB-9BC0-BBDCAAC188D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1C8721F-545C-43BB-9BC0-BBDCAAC188D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1C8721F-545C-43BB-9BC0-BBDCAAC188D6}.Debug|x64.ActiveCfg = Debug|x64
+		{B1C8721F-545C-43BB-9BC0-BBDCAAC188D6}.Debug|x64.Build.0 = Debug|x64
+		{B1C8721F-545C-43BB-9BC0-BBDCAAC188D6}.Debug|x86.ActiveCfg = Debug|x86
+		{B1C8721F-545C-43BB-9BC0-BBDCAAC188D6}.Debug|x86.Build.0 = Debug|x86
+		{B1C8721F-545C-43BB-9BC0-BBDCAAC188D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1C8721F-545C-43BB-9BC0-BBDCAAC188D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B1C8721F-545C-43BB-9BC0-BBDCAAC188D6}.Release|x64.ActiveCfg = Release|Any CPU
+		{B1C8721F-545C-43BB-9BC0-BBDCAAC188D6}.Release|x64.Build.0 = Release|Any CPU
+		{B1C8721F-545C-43BB-9BC0-BBDCAAC188D6}.Release|x86.ActiveCfg = Release|Any CPU
+		{B1C8721F-545C-43BB-9BC0-BBDCAAC188D6}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{01A062AB-1292-4C92-B68D-88C41E72BB4A} = {9EF3E9BD-B489-44D5-BE39-E1100146A6A4}
+		{E8A0AB2E-7120-41A3-B5D6-A6F7B10D1C86} = {9EF3E9BD-B489-44D5-BE39-E1100146A6A4}
+		{492E7EDE-46B4-4064-B9AD-949A08EEB8FE} = {9EF3E9BD-B489-44D5-BE39-E1100146A6A4}
+		{B1C8721F-545C-43BB-9BC0-BBDCAAC188D6} = {9EF3E9BD-B489-44D5-BE39-E1100146A6A4}
+	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E6C112F6-3EEC-44FC-A07C-B26DCA49E001}
+	EndGlobalSection
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		XmlTools\EInvoiceXSL\EInvoiceXSL.projitems*{01a062ab-1292-4c92-b68d-88c41e72bb4a}*SharedItemsImports = 13
+		XmlTools\EInvoiceXSL\EInvoiceXSL.projitems*{492e7ede-46b4-4064-b9ad-949a08eeb8fe}*SharedItemsImports = 5
 	EndGlobalSection
 EndGlobal

@@ -996,8 +996,10 @@ namespace KlonsF
         {
             ShowFormM<KlonsM.FormsM.FormM_PriceList>();
         }
-
-
+        private void miMEinvoiceManager_Click(object sender, EventArgs e)
+        {
+            ShowFormM<KlonsM.FormsEI.Form_EInvoiceManager>();
+        }
 
         #endregion
 

@@ -218,11 +218,11 @@ namespace KlonsF.FormsReportParams
             lbCm.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             lbCm.FormattingEnabled = true;
             lbCm.ItemHeight = 16;
-            lbCm.Items.AddRange(new object[] { "Pilnais konta korespondences pārskats", "Pilnais konta korespondences pārskats - 2", "Konta korespondences dokumentu pārskats", "Konta korespondences pārskats ar visu kontējumu", "Kontu grupas korespondences pārskats", "Par visām personām kontu grupā", "Tikai kopsavilkums" });
-            lbCm.Location = new System.Drawing.Point(16, 144);
+            lbCm.Items.AddRange(new object[] { "Pilnais konta korespondences pārskats", "Pilnais konta korespondences pārskats - 2", "Konta korespondences dokumentu pārskats", "Konta korespondences pārskats ar visu kontējumu", "Kontu grupas korespondences pārskats", "Par visām personām kontu grupā", "Tikai kopsavilkums", "Tikai kopsavilkums - tabula" });
+            lbCm.Location = new System.Drawing.Point(16, 128);
             lbCm.Margin = new System.Windows.Forms.Padding(2);
             lbCm.Name = "lbCm";
-            lbCm.Size = new System.Drawing.Size(364, 130);
+            lbCm.Size = new System.Drawing.Size(364, 146);
             lbCm.TabIndex = 4;
             lbCm.MouseDoubleClick += lbCm_MouseDoubleClick;
             // 
@@ -232,11 +232,10 @@ namespace KlonsF.FormsReportParams
             toolStrip1.Dock = System.Windows.Forms.DockStyle.None;
             toolStrip1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             toolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
-            toolStrip1.ImageScalingSize = new System.Drawing.Size(16, 16);
             toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { tsbPrevMonth, tsbNextMonth });
             toolStrip1.Location = new System.Drawing.Point(354, 21);
             toolStrip1.Name = "toolStrip1";
-            toolStrip1.Size = new System.Drawing.Size(59, 31);
+            toolStrip1.Size = new System.Drawing.Size(49, 25);
             toolStrip1.TabIndex = 11;
             toolStrip1.Text = "toolStrip1";
             // 
@@ -246,7 +245,7 @@ namespace KlonsF.FormsReportParams
             tsbPrevMonth.Image = (System.Drawing.Image)resources.GetObject("tsbPrevMonth.Image");
             tsbPrevMonth.Name = "tsbPrevMonth";
             tsbPrevMonth.RightToLeftAutoMirrorImage = true;
-            tsbPrevMonth.Size = new System.Drawing.Size(28, 28);
+            tsbPrevMonth.Size = new System.Drawing.Size(23, 22);
             tsbPrevMonth.Text = "iepriekšējais mēnesis";
             tsbPrevMonth.Click += tsbPrevMonth_Click;
             // 
@@ -256,7 +255,7 @@ namespace KlonsF.FormsReportParams
             tsbNextMonth.Image = (System.Drawing.Image)resources.GetObject("tsbNextMonth.Image");
             tsbNextMonth.Name = "tsbNextMonth";
             tsbNextMonth.RightToLeftAutoMirrorImage = true;
-            tsbNextMonth.Size = new System.Drawing.Size(28, 28);
+            tsbNextMonth.Size = new System.Drawing.Size(23, 22);
             tsbNextMonth.Text = "nākošais mēnesis";
             tsbNextMonth.ToolTipText = "Iet uz nākošo";
             tsbNextMonth.Click += tsbNextMonth_Click;

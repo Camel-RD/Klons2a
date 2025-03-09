@@ -86,11 +86,11 @@ namespace KlonsF.DataSets {
         
         private DOCS0DataTable tableDOCS0;
         
-        private global::System.Data.DataRelation relationFK_BAL0_AC4_ACP24_IDX1;
+        private global::System.Data.DataRelation relationFK_BAL0_CLID_PERSONS_CLID1;
         
         private global::System.Data.DataRelation relationFK_BAL0_AC1_ACP21_AC1;
         
-        private global::System.Data.DataRelation relationFK_BAL0_CLID_PERSONS_CLID1;
+        private global::System.Data.DataRelation relationFK_BAL0_AC4_ACP24_IDX1;
         
         private global::System.Data.DataRelation relationFK_BALA2_BALID_BALA1_BALID;
         
@@ -98,27 +98,27 @@ namespace KlonsF.DataSets {
         
         private global::System.Data.DataRelation relationFK_DOCTYPB_IDA_DOCTYPA_ID;
         
-        private global::System.Data.DataRelation relationFK_OPS_AC25_ACP25_IDX1;
-        
-        private global::System.Data.DataRelation relationFK_OPS_AC15_ACP25_IDX1;
-        
-        private global::System.Data.DataRelation relationFK_OPS_AC13_ACP23_IDX1;
-        
-        private global::System.Data.DataRelation relationFK_OPS_AC23_ACP23_IDX1;
-        
-        private global::System.Data.DataRelation relationFK_OPS_DOCID_OPSD_ID;
-        
-        private global::System.Data.DataRelation relationFK_OPS_AC14_ACP24_IDX1;
-        
-        private global::System.Data.DataRelation relationFK_OPS_AC24_ACP24_IDX1;
-        
-        private global::System.Data.DataRelation relationFK_OPS_AC11_ACP21_AC1;
-        
-        private global::System.Data.DataRelation relationFK_OPS_AC12_ACP21_AC1;
+        private global::System.Data.DataRelation relationFK_OPS_AC22_ACP21_AC1;
         
         private global::System.Data.DataRelation relationFK_OPS_AC21_ACP21_AC1;
         
-        private global::System.Data.DataRelation relationFK_OPS_AC22_ACP21_AC1;
+        private global::System.Data.DataRelation relationFK_OPS_AC12_ACP21_AC1;
+        
+        private global::System.Data.DataRelation relationFK_OPS_AC11_ACP21_AC1;
+        
+        private global::System.Data.DataRelation relationFK_OPS_AC24_ACP24_IDX1;
+        
+        private global::System.Data.DataRelation relationFK_OPS_AC14_ACP24_IDX1;
+        
+        private global::System.Data.DataRelation relationFK_OPS_DOCID_OPSD_ID;
+        
+        private global::System.Data.DataRelation relationFK_OPS_AC23_ACP23_IDX1;
+        
+        private global::System.Data.DataRelation relationFK_OPS_AC13_ACP23_IDX1;
+        
+        private global::System.Data.DataRelation relationFK_OPS_AC15_ACP25_IDX1;
+        
+        private global::System.Data.DataRelation relationFK_OPS_AC25_ACP25_IDX1;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -950,23 +950,23 @@ namespace KlonsF.DataSets {
                     this.tableDOCS0.InitVars();
                 }
             }
-            this.relationFK_BAL0_AC4_ACP24_IDX1 = this.Relations["FK_BAL0_AC4_ACP24_IDX1"];
-            this.relationFK_BAL0_AC1_ACP21_AC1 = this.Relations["FK_BAL0_AC1_ACP21_AC1"];
             this.relationFK_BAL0_CLID_PERSONS_CLID1 = this.Relations["FK_BAL0_CLID_PERSONS_CLID1"];
+            this.relationFK_BAL0_AC1_ACP21_AC1 = this.Relations["FK_BAL0_AC1_ACP21_AC1"];
+            this.relationFK_BAL0_AC4_ACP24_IDX1 = this.Relations["FK_BAL0_AC4_ACP24_IDX1"];
             this.relationFK_BALA2_BALID_BALA1_BALID = this.Relations["FK_BALA2_BALID_BALA1_BALID"];
             this.relationFK_BALA3_ID2_BALA2_ID = this.Relations["FK_BALA3_ID2_BALA2_ID"];
             this.relationFK_DOCTYPB_IDA_DOCTYPA_ID = this.Relations["FK_DOCTYPB_IDA_DOCTYPA_ID"];
-            this.relationFK_OPS_AC25_ACP25_IDX1 = this.Relations["FK_OPS_AC25_ACP25_IDX1"];
-            this.relationFK_OPS_AC15_ACP25_IDX1 = this.Relations["FK_OPS_AC15_ACP25_IDX1"];
-            this.relationFK_OPS_AC13_ACP23_IDX1 = this.Relations["FK_OPS_AC13_ACP23_IDX1"];
-            this.relationFK_OPS_AC23_ACP23_IDX1 = this.Relations["FK_OPS_AC23_ACP23_IDX1"];
-            this.relationFK_OPS_DOCID_OPSD_ID = this.Relations["FK_OPS_DOCID_OPSD_ID"];
-            this.relationFK_OPS_AC14_ACP24_IDX1 = this.Relations["FK_OPS_AC14_ACP24_IDX1"];
-            this.relationFK_OPS_AC24_ACP24_IDX1 = this.Relations["FK_OPS_AC24_ACP24_IDX1"];
-            this.relationFK_OPS_AC11_ACP21_AC1 = this.Relations["FK_OPS_AC11_ACP21_AC1"];
-            this.relationFK_OPS_AC12_ACP21_AC1 = this.Relations["FK_OPS_AC12_ACP21_AC1"];
-            this.relationFK_OPS_AC21_ACP21_AC1 = this.Relations["FK_OPS_AC21_ACP21_AC1"];
             this.relationFK_OPS_AC22_ACP21_AC1 = this.Relations["FK_OPS_AC22_ACP21_AC1"];
+            this.relationFK_OPS_AC21_ACP21_AC1 = this.Relations["FK_OPS_AC21_ACP21_AC1"];
+            this.relationFK_OPS_AC12_ACP21_AC1 = this.Relations["FK_OPS_AC12_ACP21_AC1"];
+            this.relationFK_OPS_AC11_ACP21_AC1 = this.Relations["FK_OPS_AC11_ACP21_AC1"];
+            this.relationFK_OPS_AC24_ACP24_IDX1 = this.Relations["FK_OPS_AC24_ACP24_IDX1"];
+            this.relationFK_OPS_AC14_ACP24_IDX1 = this.Relations["FK_OPS_AC14_ACP24_IDX1"];
+            this.relationFK_OPS_DOCID_OPSD_ID = this.Relations["FK_OPS_DOCID_OPSD_ID"];
+            this.relationFK_OPS_AC23_ACP23_IDX1 = this.Relations["FK_OPS_AC23_ACP23_IDX1"];
+            this.relationFK_OPS_AC13_ACP23_IDX1 = this.Relations["FK_OPS_AC13_ACP23_IDX1"];
+            this.relationFK_OPS_AC15_ACP25_IDX1 = this.Relations["FK_OPS_AC15_ACP25_IDX1"];
+            this.relationFK_OPS_AC25_ACP25_IDX1 = this.Relations["FK_OPS_AC25_ACP25_IDX1"];
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1040,9 +1040,9 @@ namespace KlonsF.DataSets {
             this.tableDOCS0 = new DOCS0DataTable();
             base.Tables.Add(this.tableDOCS0);
             global::System.Data.ForeignKeyConstraint fkc;
-            fkc = new global::System.Data.ForeignKeyConstraint("FK_BAL0_AC4_ACP24_IDX", new global::System.Data.DataColumn[] {
-                        this.tableAcP24.idxColumn}, new global::System.Data.DataColumn[] {
-                        this.tableBal0.AC24Column});
+            fkc = new global::System.Data.ForeignKeyConstraint("FK_BAL0_CLID_PERSONS_CLID", new global::System.Data.DataColumn[] {
+                        this.tablePersons.ClIdColumn}, new global::System.Data.DataColumn[] {
+                        this.tableBal0.ClIdColumn});
             this.tableBal0.Constraints.Add(fkc);
             fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
             fkc.DeleteRule = global::System.Data.Rule.None;
@@ -1054,9 +1054,9 @@ namespace KlonsF.DataSets {
             fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
             fkc.DeleteRule = global::System.Data.Rule.None;
             fkc.UpdateRule = global::System.Data.Rule.None;
-            fkc = new global::System.Data.ForeignKeyConstraint("FK_BAL0_CLID_PERSONS_CLID", new global::System.Data.DataColumn[] {
-                        this.tablePersons.ClIdColumn}, new global::System.Data.DataColumn[] {
-                        this.tableBal0.ClIdColumn});
+            fkc = new global::System.Data.ForeignKeyConstraint("FK_BAL0_AC4_ACP24_IDX", new global::System.Data.DataColumn[] {
+                        this.tableAcP24.idxColumn}, new global::System.Data.DataColumn[] {
+                        this.tableBal0.AC24Column});
             this.tableBal0.Constraints.Add(fkc);
             fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
             fkc.DeleteRule = global::System.Data.Rule.None;
@@ -1075,13 +1075,6 @@ namespace KlonsF.DataSets {
             fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
             fkc.DeleteRule = global::System.Data.Rule.Cascade;
             fkc.UpdateRule = global::System.Data.Rule.Cascade;
-            fkc = new global::System.Data.ForeignKeyConstraint("FK_DOCTYPB_ID_DOCTYP_ID", new global::System.Data.DataColumn[] {
-                        this.tableDocTyp.idColumn}, new global::System.Data.DataColumn[] {
-                        this.tableDocTypB.idColumn});
-            this.tableDocTypB.Constraints.Add(fkc);
-            fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
-            fkc.DeleteRule = global::System.Data.Rule.Cascade;
-            fkc.UpdateRule = global::System.Data.Rule.Cascade;
             fkc = new global::System.Data.ForeignKeyConstraint("FK_DOCTYPB_IDA_DOCTYPA_ID", new global::System.Data.DataColumn[] {
                         this.tableDocTypA.idColumn}, new global::System.Data.DataColumn[] {
                         this.tableDocTypB.idAColumn});
@@ -1089,65 +1082,16 @@ namespace KlonsF.DataSets {
             fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
             fkc.DeleteRule = global::System.Data.Rule.Cascade;
             fkc.UpdateRule = global::System.Data.Rule.Cascade;
-            fkc = new global::System.Data.ForeignKeyConstraint("FK_OPS_AC25_ACP25_IDX", new global::System.Data.DataColumn[] {
-                        this.tableAcp25.idxColumn}, new global::System.Data.DataColumn[] {
-                        this.tableOPS.AC25Column});
-            this.tableOPS.Constraints.Add(fkc);
-            fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
-            fkc.DeleteRule = global::System.Data.Rule.None;
-            fkc.UpdateRule = global::System.Data.Rule.None;
-            fkc = new global::System.Data.ForeignKeyConstraint("FK_OPS_AC15_ACP25_IDX", new global::System.Data.DataColumn[] {
-                        this.tableAcp25.idxColumn}, new global::System.Data.DataColumn[] {
-                        this.tableOPS.AC15Column});
-            this.tableOPS.Constraints.Add(fkc);
-            fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
-            fkc.DeleteRule = global::System.Data.Rule.None;
-            fkc.UpdateRule = global::System.Data.Rule.None;
-            fkc = new global::System.Data.ForeignKeyConstraint("FK_OPS_AC13_ACP23_IDX", new global::System.Data.DataColumn[] {
-                        this.tableAcp23.idxColumn}, new global::System.Data.DataColumn[] {
-                        this.tableOPS.AC13Column});
-            this.tableOPS.Constraints.Add(fkc);
-            fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
-            fkc.DeleteRule = global::System.Data.Rule.None;
-            fkc.UpdateRule = global::System.Data.Rule.None;
-            fkc = new global::System.Data.ForeignKeyConstraint("FK_OPS_AC23_ACP23_IDX", new global::System.Data.DataColumn[] {
-                        this.tableAcp23.idxColumn}, new global::System.Data.DataColumn[] {
-                        this.tableOPS.AC23Column});
-            this.tableOPS.Constraints.Add(fkc);
-            fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
-            fkc.DeleteRule = global::System.Data.Rule.None;
-            fkc.UpdateRule = global::System.Data.Rule.None;
-            fkc = new global::System.Data.ForeignKeyConstraint("FK_OPS_DOCID_OPSD_ID", new global::System.Data.DataColumn[] {
-                        this.tableOPSd.idColumn}, new global::System.Data.DataColumn[] {
-                        this.tableOPS.DocIdColumn});
-            this.tableOPS.Constraints.Add(fkc);
+            fkc = new global::System.Data.ForeignKeyConstraint("FK_DOCTYPB_ID_DOCTYP_ID", new global::System.Data.DataColumn[] {
+                        this.tableDocTyp.idColumn}, new global::System.Data.DataColumn[] {
+                        this.tableDocTypB.idColumn});
+            this.tableDocTypB.Constraints.Add(fkc);
             fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
             fkc.DeleteRule = global::System.Data.Rule.Cascade;
             fkc.UpdateRule = global::System.Data.Rule.Cascade;
-            fkc = new global::System.Data.ForeignKeyConstraint("FK_OPS_AC14_ACP24_IDX", new global::System.Data.DataColumn[] {
-                        this.tableAcP24.idxColumn}, new global::System.Data.DataColumn[] {
-                        this.tableOPS.AC14Column});
-            this.tableOPS.Constraints.Add(fkc);
-            fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
-            fkc.DeleteRule = global::System.Data.Rule.None;
-            fkc.UpdateRule = global::System.Data.Rule.None;
-            fkc = new global::System.Data.ForeignKeyConstraint("FK_OPS_AC24_ACP24_IDX", new global::System.Data.DataColumn[] {
-                        this.tableAcP24.idxColumn}, new global::System.Data.DataColumn[] {
-                        this.tableOPS.AC24Column});
-            this.tableOPS.Constraints.Add(fkc);
-            fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
-            fkc.DeleteRule = global::System.Data.Rule.None;
-            fkc.UpdateRule = global::System.Data.Rule.None;
-            fkc = new global::System.Data.ForeignKeyConstraint("FK_OPS_AC11_ACP21_AC", new global::System.Data.DataColumn[] {
+            fkc = new global::System.Data.ForeignKeyConstraint("FK_OPS_AC22_ACP21_AC", new global::System.Data.DataColumn[] {
                         this.tableAcP21.ACColumn}, new global::System.Data.DataColumn[] {
-                        this.tableOPS.AC11Column});
-            this.tableOPS.Constraints.Add(fkc);
-            fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
-            fkc.DeleteRule = global::System.Data.Rule.None;
-            fkc.UpdateRule = global::System.Data.Rule.None;
-            fkc = new global::System.Data.ForeignKeyConstraint("FK_OPS_AC12_ACP21_AC", new global::System.Data.DataColumn[] {
-                        this.tableAcP21.ACColumn}, new global::System.Data.DataColumn[] {
-                        this.tableOPS.AC12Column});
+                        this.tableOPS.AC22Column});
             this.tableOPS.Constraints.Add(fkc);
             fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
             fkc.DeleteRule = global::System.Data.Rule.None;
@@ -1159,16 +1103,72 @@ namespace KlonsF.DataSets {
             fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
             fkc.DeleteRule = global::System.Data.Rule.None;
             fkc.UpdateRule = global::System.Data.Rule.None;
-            fkc = new global::System.Data.ForeignKeyConstraint("FK_OPS_AC22_ACP21_AC", new global::System.Data.DataColumn[] {
+            fkc = new global::System.Data.ForeignKeyConstraint("FK_OPS_AC12_ACP21_AC", new global::System.Data.DataColumn[] {
                         this.tableAcP21.ACColumn}, new global::System.Data.DataColumn[] {
-                        this.tableOPS.AC22Column});
+                        this.tableOPS.AC12Column});
             this.tableOPS.Constraints.Add(fkc);
             fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
             fkc.DeleteRule = global::System.Data.Rule.None;
             fkc.UpdateRule = global::System.Data.Rule.None;
-            fkc = new global::System.Data.ForeignKeyConstraint("FK_OPSD_DOCTYP_DOCTYP_ID", new global::System.Data.DataColumn[] {
-                        this.tableDocTyp.idColumn}, new global::System.Data.DataColumn[] {
-                        this.tableOPSd.DocTypColumn});
+            fkc = new global::System.Data.ForeignKeyConstraint("FK_OPS_AC11_ACP21_AC", new global::System.Data.DataColumn[] {
+                        this.tableAcP21.ACColumn}, new global::System.Data.DataColumn[] {
+                        this.tableOPS.AC11Column});
+            this.tableOPS.Constraints.Add(fkc);
+            fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
+            fkc.DeleteRule = global::System.Data.Rule.None;
+            fkc.UpdateRule = global::System.Data.Rule.None;
+            fkc = new global::System.Data.ForeignKeyConstraint("FK_OPS_AC24_ACP24_IDX", new global::System.Data.DataColumn[] {
+                        this.tableAcP24.idxColumn}, new global::System.Data.DataColumn[] {
+                        this.tableOPS.AC24Column});
+            this.tableOPS.Constraints.Add(fkc);
+            fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
+            fkc.DeleteRule = global::System.Data.Rule.None;
+            fkc.UpdateRule = global::System.Data.Rule.None;
+            fkc = new global::System.Data.ForeignKeyConstraint("FK_OPS_AC14_ACP24_IDX", new global::System.Data.DataColumn[] {
+                        this.tableAcP24.idxColumn}, new global::System.Data.DataColumn[] {
+                        this.tableOPS.AC14Column});
+            this.tableOPS.Constraints.Add(fkc);
+            fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
+            fkc.DeleteRule = global::System.Data.Rule.None;
+            fkc.UpdateRule = global::System.Data.Rule.None;
+            fkc = new global::System.Data.ForeignKeyConstraint("FK_OPS_DOCID_OPSD_ID", new global::System.Data.DataColumn[] {
+                        this.tableOPSd.idColumn}, new global::System.Data.DataColumn[] {
+                        this.tableOPS.DocIdColumn});
+            this.tableOPS.Constraints.Add(fkc);
+            fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
+            fkc.DeleteRule = global::System.Data.Rule.Cascade;
+            fkc.UpdateRule = global::System.Data.Rule.Cascade;
+            fkc = new global::System.Data.ForeignKeyConstraint("FK_OPS_AC23_ACP23_IDX", new global::System.Data.DataColumn[] {
+                        this.tableAcp23.idxColumn}, new global::System.Data.DataColumn[] {
+                        this.tableOPS.AC23Column});
+            this.tableOPS.Constraints.Add(fkc);
+            fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
+            fkc.DeleteRule = global::System.Data.Rule.None;
+            fkc.UpdateRule = global::System.Data.Rule.None;
+            fkc = new global::System.Data.ForeignKeyConstraint("FK_OPS_AC13_ACP23_IDX", new global::System.Data.DataColumn[] {
+                        this.tableAcp23.idxColumn}, new global::System.Data.DataColumn[] {
+                        this.tableOPS.AC13Column});
+            this.tableOPS.Constraints.Add(fkc);
+            fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
+            fkc.DeleteRule = global::System.Data.Rule.None;
+            fkc.UpdateRule = global::System.Data.Rule.None;
+            fkc = new global::System.Data.ForeignKeyConstraint("FK_OPS_AC15_ACP25_IDX", new global::System.Data.DataColumn[] {
+                        this.tableAcp25.idxColumn}, new global::System.Data.DataColumn[] {
+                        this.tableOPS.AC15Column});
+            this.tableOPS.Constraints.Add(fkc);
+            fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
+            fkc.DeleteRule = global::System.Data.Rule.None;
+            fkc.UpdateRule = global::System.Data.Rule.None;
+            fkc = new global::System.Data.ForeignKeyConstraint("FK_OPS_AC25_ACP25_IDX", new global::System.Data.DataColumn[] {
+                        this.tableAcp25.idxColumn}, new global::System.Data.DataColumn[] {
+                        this.tableOPS.AC25Column});
+            this.tableOPS.Constraints.Add(fkc);
+            fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
+            fkc.DeleteRule = global::System.Data.Rule.None;
+            fkc.UpdateRule = global::System.Data.Rule.None;
+            fkc = new global::System.Data.ForeignKeyConstraint("FK_OPSD_CLID2_PERSONS_CLID", new global::System.Data.DataColumn[] {
+                        this.tablePersons.ClIdColumn}, new global::System.Data.DataColumn[] {
+                        this.tableOPSd.ClId2Column});
             this.tableOPSd.Constraints.Add(fkc);
             fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
             fkc.DeleteRule = global::System.Data.Rule.None;
@@ -1180,9 +1180,9 @@ namespace KlonsF.DataSets {
             fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
             fkc.DeleteRule = global::System.Data.Rule.None;
             fkc.UpdateRule = global::System.Data.Rule.None;
-            fkc = new global::System.Data.ForeignKeyConstraint("FK_OPSD_CLID2_PERSONS_CLID", new global::System.Data.DataColumn[] {
-                        this.tablePersons.ClIdColumn}, new global::System.Data.DataColumn[] {
-                        this.tableOPSd.ClId2Column});
+            fkc = new global::System.Data.ForeignKeyConstraint("FK_OPSD_DOCTYP_DOCTYP_ID", new global::System.Data.DataColumn[] {
+                        this.tableDocTyp.idColumn}, new global::System.Data.DataColumn[] {
+                        this.tableOPSd.DocTypColumn});
             this.tableOPSd.Constraints.Add(fkc);
             fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
             fkc.DeleteRule = global::System.Data.Rule.None;
@@ -1194,9 +1194,9 @@ namespace KlonsF.DataSets {
             fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
             fkc.DeleteRule = global::System.Data.Rule.None;
             fkc.UpdateRule = global::System.Data.Rule.None;
-            fkc = new global::System.Data.ForeignKeyConstraint("FK_DOCS0_AC_ACP21_AC", new global::System.Data.DataColumn[] {
-                        this.tableAcP21.ACColumn}, new global::System.Data.DataColumn[] {
-                        this.tableDOCS0.ACColumn});
+            fkc = new global::System.Data.ForeignKeyConstraint("FK_DOCS0_CLID_PERSONS_CLID", new global::System.Data.DataColumn[] {
+                        this.tablePersons.ClIdColumn}, new global::System.Data.DataColumn[] {
+                        this.tableDOCS0.CLIDColumn});
             this.tableDOCS0.Constraints.Add(fkc);
             fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
             fkc.DeleteRule = global::System.Data.Rule.None;
@@ -1208,25 +1208,25 @@ namespace KlonsF.DataSets {
             fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
             fkc.DeleteRule = global::System.Data.Rule.None;
             fkc.UpdateRule = global::System.Data.Rule.None;
-            fkc = new global::System.Data.ForeignKeyConstraint("FK_DOCS0_CLID_PERSONS_CLID", new global::System.Data.DataColumn[] {
-                        this.tablePersons.ClIdColumn}, new global::System.Data.DataColumn[] {
-                        this.tableDOCS0.CLIDColumn});
+            fkc = new global::System.Data.ForeignKeyConstraint("FK_DOCS0_AC_ACP21_AC", new global::System.Data.DataColumn[] {
+                        this.tableAcP21.ACColumn}, new global::System.Data.DataColumn[] {
+                        this.tableDOCS0.ACColumn});
             this.tableDOCS0.Constraints.Add(fkc);
             fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
             fkc.DeleteRule = global::System.Data.Rule.None;
             fkc.UpdateRule = global::System.Data.Rule.None;
-            this.relationFK_BAL0_AC4_ACP24_IDX1 = new global::System.Data.DataRelation("FK_BAL0_AC4_ACP24_IDX1", new global::System.Data.DataColumn[] {
-                        this.tableAcP24.idxColumn}, new global::System.Data.DataColumn[] {
-                        this.tableBal0.AC24Column}, false);
-            this.Relations.Add(this.relationFK_BAL0_AC4_ACP24_IDX1);
-            this.relationFK_BAL0_AC1_ACP21_AC1 = new global::System.Data.DataRelation("FK_BAL0_AC1_ACP21_AC1", new global::System.Data.DataColumn[] {
-                        this.tableAcP21.ACColumn}, new global::System.Data.DataColumn[] {
-                        this.tableBal0.AC11Column}, false);
-            this.Relations.Add(this.relationFK_BAL0_AC1_ACP21_AC1);
             this.relationFK_BAL0_CLID_PERSONS_CLID1 = new global::System.Data.DataRelation("FK_BAL0_CLID_PERSONS_CLID1", new global::System.Data.DataColumn[] {
                         this.tablePersons.ClIdColumn}, new global::System.Data.DataColumn[] {
                         this.tableBal0.ClIdColumn}, false);
             this.Relations.Add(this.relationFK_BAL0_CLID_PERSONS_CLID1);
+            this.relationFK_BAL0_AC1_ACP21_AC1 = new global::System.Data.DataRelation("FK_BAL0_AC1_ACP21_AC1", new global::System.Data.DataColumn[] {
+                        this.tableAcP21.ACColumn}, new global::System.Data.DataColumn[] {
+                        this.tableBal0.AC11Column}, false);
+            this.Relations.Add(this.relationFK_BAL0_AC1_ACP21_AC1);
+            this.relationFK_BAL0_AC4_ACP24_IDX1 = new global::System.Data.DataRelation("FK_BAL0_AC4_ACP24_IDX1", new global::System.Data.DataColumn[] {
+                        this.tableAcP24.idxColumn}, new global::System.Data.DataColumn[] {
+                        this.tableBal0.AC24Column}, false);
+            this.Relations.Add(this.relationFK_BAL0_AC4_ACP24_IDX1);
             this.relationFK_BALA2_BALID_BALA1_BALID = new global::System.Data.DataRelation("FK_BALA2_BALID_BALA1_BALID", new global::System.Data.DataColumn[] {
                         this.tableBalA1.balidColumn}, new global::System.Data.DataColumn[] {
                         this.tableBalA2.balidColumn}, false);
@@ -1239,50 +1239,50 @@ namespace KlonsF.DataSets {
                         this.tableDocTypA.idColumn}, new global::System.Data.DataColumn[] {
                         this.tableDocTypB.idAColumn}, false);
             this.Relations.Add(this.relationFK_DOCTYPB_IDA_DOCTYPA_ID);
-            this.relationFK_OPS_AC25_ACP25_IDX1 = new global::System.Data.DataRelation("FK_OPS_AC25_ACP25_IDX1", new global::System.Data.DataColumn[] {
-                        this.tableAcp25.idxColumn}, new global::System.Data.DataColumn[] {
-                        this.tableOPS.AC25Column}, false);
-            this.Relations.Add(this.relationFK_OPS_AC25_ACP25_IDX1);
-            this.relationFK_OPS_AC15_ACP25_IDX1 = new global::System.Data.DataRelation("FK_OPS_AC15_ACP25_IDX1", new global::System.Data.DataColumn[] {
-                        this.tableAcp25.idxColumn}, new global::System.Data.DataColumn[] {
-                        this.tableOPS.AC15Column}, false);
-            this.Relations.Add(this.relationFK_OPS_AC15_ACP25_IDX1);
-            this.relationFK_OPS_AC13_ACP23_IDX1 = new global::System.Data.DataRelation("FK_OPS_AC13_ACP23_IDX1", new global::System.Data.DataColumn[] {
-                        this.tableAcp23.idxColumn}, new global::System.Data.DataColumn[] {
-                        this.tableOPS.AC13Column}, false);
-            this.Relations.Add(this.relationFK_OPS_AC13_ACP23_IDX1);
-            this.relationFK_OPS_AC23_ACP23_IDX1 = new global::System.Data.DataRelation("FK_OPS_AC23_ACP23_IDX1", new global::System.Data.DataColumn[] {
-                        this.tableAcp23.idxColumn}, new global::System.Data.DataColumn[] {
-                        this.tableOPS.AC23Column}, false);
-            this.Relations.Add(this.relationFK_OPS_AC23_ACP23_IDX1);
-            this.relationFK_OPS_DOCID_OPSD_ID = new global::System.Data.DataRelation("FK_OPS_DOCID_OPSD_ID", new global::System.Data.DataColumn[] {
-                        this.tableOPSd.idColumn}, new global::System.Data.DataColumn[] {
-                        this.tableOPS.DocIdColumn}, false);
-            this.Relations.Add(this.relationFK_OPS_DOCID_OPSD_ID);
-            this.relationFK_OPS_AC14_ACP24_IDX1 = new global::System.Data.DataRelation("FK_OPS_AC14_ACP24_IDX1", new global::System.Data.DataColumn[] {
-                        this.tableAcP24.idxColumn}, new global::System.Data.DataColumn[] {
-                        this.tableOPS.AC14Column}, false);
-            this.Relations.Add(this.relationFK_OPS_AC14_ACP24_IDX1);
-            this.relationFK_OPS_AC24_ACP24_IDX1 = new global::System.Data.DataRelation("FK_OPS_AC24_ACP24_IDX1", new global::System.Data.DataColumn[] {
-                        this.tableAcP24.idxColumn}, new global::System.Data.DataColumn[] {
-                        this.tableOPS.AC24Column}, false);
-            this.Relations.Add(this.relationFK_OPS_AC24_ACP24_IDX1);
-            this.relationFK_OPS_AC11_ACP21_AC1 = new global::System.Data.DataRelation("FK_OPS_AC11_ACP21_AC1", new global::System.Data.DataColumn[] {
-                        this.tableAcP21.ACColumn}, new global::System.Data.DataColumn[] {
-                        this.tableOPS.AC11Column}, false);
-            this.Relations.Add(this.relationFK_OPS_AC11_ACP21_AC1);
-            this.relationFK_OPS_AC12_ACP21_AC1 = new global::System.Data.DataRelation("FK_OPS_AC12_ACP21_AC1", new global::System.Data.DataColumn[] {
-                        this.tableAcP21.ACColumn}, new global::System.Data.DataColumn[] {
-                        this.tableOPS.AC12Column}, false);
-            this.Relations.Add(this.relationFK_OPS_AC12_ACP21_AC1);
-            this.relationFK_OPS_AC21_ACP21_AC1 = new global::System.Data.DataRelation("FK_OPS_AC21_ACP21_AC1", new global::System.Data.DataColumn[] {
-                        this.tableAcP21.ACColumn}, new global::System.Data.DataColumn[] {
-                        this.tableOPS.AC21Column}, false);
-            this.Relations.Add(this.relationFK_OPS_AC21_ACP21_AC1);
             this.relationFK_OPS_AC22_ACP21_AC1 = new global::System.Data.DataRelation("FK_OPS_AC22_ACP21_AC1", new global::System.Data.DataColumn[] {
                         this.tableAcP21.ACColumn}, new global::System.Data.DataColumn[] {
                         this.tableOPS.AC22Column}, false);
             this.Relations.Add(this.relationFK_OPS_AC22_ACP21_AC1);
+            this.relationFK_OPS_AC21_ACP21_AC1 = new global::System.Data.DataRelation("FK_OPS_AC21_ACP21_AC1", new global::System.Data.DataColumn[] {
+                        this.tableAcP21.ACColumn}, new global::System.Data.DataColumn[] {
+                        this.tableOPS.AC21Column}, false);
+            this.Relations.Add(this.relationFK_OPS_AC21_ACP21_AC1);
+            this.relationFK_OPS_AC12_ACP21_AC1 = new global::System.Data.DataRelation("FK_OPS_AC12_ACP21_AC1", new global::System.Data.DataColumn[] {
+                        this.tableAcP21.ACColumn}, new global::System.Data.DataColumn[] {
+                        this.tableOPS.AC12Column}, false);
+            this.Relations.Add(this.relationFK_OPS_AC12_ACP21_AC1);
+            this.relationFK_OPS_AC11_ACP21_AC1 = new global::System.Data.DataRelation("FK_OPS_AC11_ACP21_AC1", new global::System.Data.DataColumn[] {
+                        this.tableAcP21.ACColumn}, new global::System.Data.DataColumn[] {
+                        this.tableOPS.AC11Column}, false);
+            this.Relations.Add(this.relationFK_OPS_AC11_ACP21_AC1);
+            this.relationFK_OPS_AC24_ACP24_IDX1 = new global::System.Data.DataRelation("FK_OPS_AC24_ACP24_IDX1", new global::System.Data.DataColumn[] {
+                        this.tableAcP24.idxColumn}, new global::System.Data.DataColumn[] {
+                        this.tableOPS.AC24Column}, false);
+            this.Relations.Add(this.relationFK_OPS_AC24_ACP24_IDX1);
+            this.relationFK_OPS_AC14_ACP24_IDX1 = new global::System.Data.DataRelation("FK_OPS_AC14_ACP24_IDX1", new global::System.Data.DataColumn[] {
+                        this.tableAcP24.idxColumn}, new global::System.Data.DataColumn[] {
+                        this.tableOPS.AC14Column}, false);
+            this.Relations.Add(this.relationFK_OPS_AC14_ACP24_IDX1);
+            this.relationFK_OPS_DOCID_OPSD_ID = new global::System.Data.DataRelation("FK_OPS_DOCID_OPSD_ID", new global::System.Data.DataColumn[] {
+                        this.tableOPSd.idColumn}, new global::System.Data.DataColumn[] {
+                        this.tableOPS.DocIdColumn}, false);
+            this.Relations.Add(this.relationFK_OPS_DOCID_OPSD_ID);
+            this.relationFK_OPS_AC23_ACP23_IDX1 = new global::System.Data.DataRelation("FK_OPS_AC23_ACP23_IDX1", new global::System.Data.DataColumn[] {
+                        this.tableAcp23.idxColumn}, new global::System.Data.DataColumn[] {
+                        this.tableOPS.AC23Column}, false);
+            this.Relations.Add(this.relationFK_OPS_AC23_ACP23_IDX1);
+            this.relationFK_OPS_AC13_ACP23_IDX1 = new global::System.Data.DataRelation("FK_OPS_AC13_ACP23_IDX1", new global::System.Data.DataColumn[] {
+                        this.tableAcp23.idxColumn}, new global::System.Data.DataColumn[] {
+                        this.tableOPS.AC13Column}, false);
+            this.Relations.Add(this.relationFK_OPS_AC13_ACP23_IDX1);
+            this.relationFK_OPS_AC15_ACP25_IDX1 = new global::System.Data.DataRelation("FK_OPS_AC15_ACP25_IDX1", new global::System.Data.DataColumn[] {
+                        this.tableAcp25.idxColumn}, new global::System.Data.DataColumn[] {
+                        this.tableOPS.AC15Column}, false);
+            this.Relations.Add(this.relationFK_OPS_AC15_ACP25_IDX1);
+            this.relationFK_OPS_AC25_ACP25_IDX1 = new global::System.Data.DataRelation("FK_OPS_AC25_ACP25_IDX1", new global::System.Data.DataColumn[] {
+                        this.tableAcp25.idxColumn}, new global::System.Data.DataColumn[] {
+                        this.tableOPS.AC25Column}, false);
+            this.Relations.Add(this.relationFK_OPS_AC25_ACP25_IDX1);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -10156,7 +10156,7 @@ namespace KlonsF.DataSets {
                 this.columnid.ReadOnly = true;
                 this.columnid.Unique = true;
                 this.columnPName.MaxLength = 20;
-                this.columnPValue.MaxLength = 50;
+                this.columnPValue.MaxLength = 250;
                 this.columnUsr.MaxLength = 15;
             }
             
@@ -13345,23 +13345,12 @@ namespace KlonsF.DataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public OPSRow[] GetOPSRowsByFK_OPS_AC11_ACP21_AC1() {
-                if ((this.Table.ChildRelations["FK_OPS_AC11_ACP21_AC1"] == null)) {
+            public OPSRow[] GetOPSRowsByFK_OPS_AC22_ACP21_AC1() {
+                if ((this.Table.ChildRelations["FK_OPS_AC22_ACP21_AC1"] == null)) {
                     return new OPSRow[0];
                 }
                 else {
-                    return ((OPSRow[])(base.GetChildRows(this.Table.ChildRelations["FK_OPS_AC11_ACP21_AC1"])));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public OPSRow[] GetOPSRowsByFK_OPS_AC12_ACP21_AC1() {
-                if ((this.Table.ChildRelations["FK_OPS_AC12_ACP21_AC1"] == null)) {
-                    return new OPSRow[0];
-                }
-                else {
-                    return ((OPSRow[])(base.GetChildRows(this.Table.ChildRelations["FK_OPS_AC12_ACP21_AC1"])));
+                    return ((OPSRow[])(base.GetChildRows(this.Table.ChildRelations["FK_OPS_AC22_ACP21_AC1"])));
                 }
             }
             
@@ -13378,12 +13367,23 @@ namespace KlonsF.DataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public OPSRow[] GetOPSRowsByFK_OPS_AC22_ACP21_AC1() {
-                if ((this.Table.ChildRelations["FK_OPS_AC22_ACP21_AC1"] == null)) {
+            public OPSRow[] GetOPSRowsByFK_OPS_AC12_ACP21_AC1() {
+                if ((this.Table.ChildRelations["FK_OPS_AC12_ACP21_AC1"] == null)) {
                     return new OPSRow[0];
                 }
                 else {
-                    return ((OPSRow[])(base.GetChildRows(this.Table.ChildRelations["FK_OPS_AC22_ACP21_AC1"])));
+                    return ((OPSRow[])(base.GetChildRows(this.Table.ChildRelations["FK_OPS_AC12_ACP21_AC1"])));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public OPSRow[] GetOPSRowsByFK_OPS_AC11_ACP21_AC1() {
+                if ((this.Table.ChildRelations["FK_OPS_AC11_ACP21_AC1"] == null)) {
+                    return new OPSRow[0];
+                }
+                else {
+                    return ((OPSRow[])(base.GetChildRows(this.Table.ChildRelations["FK_OPS_AC11_ACP21_AC1"])));
                 }
             }
             
@@ -13510,23 +13510,23 @@ namespace KlonsF.DataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public OPSRow[] GetOPSRowsByFK_OPS_AC13_ACP23_IDX1() {
-                if ((this.Table.ChildRelations["FK_OPS_AC13_ACP23_IDX1"] == null)) {
-                    return new OPSRow[0];
-                }
-                else {
-                    return ((OPSRow[])(base.GetChildRows(this.Table.ChildRelations["FK_OPS_AC13_ACP23_IDX1"])));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public OPSRow[] GetOPSRowsByFK_OPS_AC23_ACP23_IDX1() {
                 if ((this.Table.ChildRelations["FK_OPS_AC23_ACP23_IDX1"] == null)) {
                     return new OPSRow[0];
                 }
                 else {
                     return ((OPSRow[])(base.GetChildRows(this.Table.ChildRelations["FK_OPS_AC23_ACP23_IDX1"])));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public OPSRow[] GetOPSRowsByFK_OPS_AC13_ACP23_IDX1() {
+                if ((this.Table.ChildRelations["FK_OPS_AC13_ACP23_IDX1"] == null)) {
+                    return new OPSRow[0];
+                }
+                else {
+                    return ((OPSRow[])(base.GetChildRows(this.Table.ChildRelations["FK_OPS_AC13_ACP23_IDX1"])));
                 }
             }
         }
@@ -13642,23 +13642,23 @@ namespace KlonsF.DataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public OPSRow[] GetOPSRowsByFK_OPS_AC14_ACP24_IDX1() {
-                if ((this.Table.ChildRelations["FK_OPS_AC14_ACP24_IDX1"] == null)) {
-                    return new OPSRow[0];
-                }
-                else {
-                    return ((OPSRow[])(base.GetChildRows(this.Table.ChildRelations["FK_OPS_AC14_ACP24_IDX1"])));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public OPSRow[] GetOPSRowsByFK_OPS_AC24_ACP24_IDX1() {
                 if ((this.Table.ChildRelations["FK_OPS_AC24_ACP24_IDX1"] == null)) {
                     return new OPSRow[0];
                 }
                 else {
                     return ((OPSRow[])(base.GetChildRows(this.Table.ChildRelations["FK_OPS_AC24_ACP24_IDX1"])));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public OPSRow[] GetOPSRowsByFK_OPS_AC14_ACP24_IDX1() {
+                if ((this.Table.ChildRelations["FK_OPS_AC14_ACP24_IDX1"] == null)) {
+                    return new OPSRow[0];
+                }
+                else {
+                    return ((OPSRow[])(base.GetChildRows(this.Table.ChildRelations["FK_OPS_AC14_ACP24_IDX1"])));
                 }
             }
             
@@ -13757,23 +13757,23 @@ namespace KlonsF.DataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public OPSRow[] GetOPSRowsByFK_OPS_AC25_ACP25_IDX1() {
-                if ((this.Table.ChildRelations["FK_OPS_AC25_ACP25_IDX1"] == null)) {
-                    return new OPSRow[0];
-                }
-                else {
-                    return ((OPSRow[])(base.GetChildRows(this.Table.ChildRelations["FK_OPS_AC25_ACP25_IDX1"])));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public OPSRow[] GetOPSRowsByFK_OPS_AC15_ACP25_IDX1() {
                 if ((this.Table.ChildRelations["FK_OPS_AC15_ACP25_IDX1"] == null)) {
                     return new OPSRow[0];
                 }
                 else {
                     return ((OPSRow[])(base.GetChildRows(this.Table.ChildRelations["FK_OPS_AC15_ACP25_IDX1"])));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public OPSRow[] GetOPSRowsByFK_OPS_AC25_ACP25_IDX1() {
+                if ((this.Table.ChildRelations["FK_OPS_AC25_ACP25_IDX1"] == null)) {
+                    return new OPSRow[0];
+                }
+                else {
+                    return ((OPSRow[])(base.GetChildRows(this.Table.ChildRelations["FK_OPS_AC25_ACP25_IDX1"])));
                 }
             }
         }
@@ -14272,12 +14272,12 @@ namespace KlonsF.DataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public AcP24Row AcP24Row {
+            public PersonsRow PersonsRow {
                 get {
-                    return ((AcP24Row)(this.GetParentRow(this.Table.ParentRelations["FK_BAL0_AC4_ACP24_IDX1"])));
+                    return ((PersonsRow)(this.GetParentRow(this.Table.ParentRelations["FK_BAL0_CLID_PERSONS_CLID1"])));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK_BAL0_AC4_ACP24_IDX1"]);
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_BAL0_CLID_PERSONS_CLID1"]);
                 }
             }
             
@@ -14294,12 +14294,12 @@ namespace KlonsF.DataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public PersonsRow PersonsRow {
+            public AcP24Row AcP24Row {
                 get {
-                    return ((PersonsRow)(this.GetParentRow(this.Table.ParentRelations["FK_BAL0_CLID_PERSONS_CLID1"])));
+                    return ((AcP24Row)(this.GetParentRow(this.Table.ParentRelations["FK_BAL0_AC4_ACP24_IDX1"])));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK_BAL0_CLID_PERSONS_CLID1"]);
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_BAL0_AC4_ACP24_IDX1"]);
                 }
             }
             
@@ -17003,100 +17003,12 @@ namespace KlonsF.DataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public Acp25Row Acp25RowByFK_OPS_AC25_ACP25_IDX1 {
+            public AcP21Row AcP21RowByFK_OPS_AC22_ACP21_AC1 {
                 get {
-                    return ((Acp25Row)(this.GetParentRow(this.Table.ParentRelations["FK_OPS_AC25_ACP25_IDX1"])));
+                    return ((AcP21Row)(this.GetParentRow(this.Table.ParentRelations["FK_OPS_AC22_ACP21_AC1"])));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK_OPS_AC25_ACP25_IDX1"]);
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public Acp25Row Acp25RowByFK_OPS_AC15_ACP25_IDX1 {
-                get {
-                    return ((Acp25Row)(this.GetParentRow(this.Table.ParentRelations["FK_OPS_AC15_ACP25_IDX1"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK_OPS_AC15_ACP25_IDX1"]);
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public Acp23Row Acp23RowByFK_OPS_AC13_ACP23_IDX1 {
-                get {
-                    return ((Acp23Row)(this.GetParentRow(this.Table.ParentRelations["FK_OPS_AC13_ACP23_IDX1"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK_OPS_AC13_ACP23_IDX1"]);
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public Acp23Row Acp23RowByFK_OPS_AC23_ACP23_IDX1 {
-                get {
-                    return ((Acp23Row)(this.GetParentRow(this.Table.ParentRelations["FK_OPS_AC23_ACP23_IDX1"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK_OPS_AC23_ACP23_IDX1"]);
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public OPSdRow OPSdRow {
-                get {
-                    return ((OPSdRow)(this.GetParentRow(this.Table.ParentRelations["FK_OPS_DOCID_OPSD_ID"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK_OPS_DOCID_OPSD_ID"]);
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public AcP24Row AcP24RowByFK_OPS_AC14_ACP24_IDX1 {
-                get {
-                    return ((AcP24Row)(this.GetParentRow(this.Table.ParentRelations["FK_OPS_AC14_ACP24_IDX1"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK_OPS_AC14_ACP24_IDX1"]);
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public AcP24Row AcP24RowByFK_OPS_AC24_ACP24_IDX1 {
-                get {
-                    return ((AcP24Row)(this.GetParentRow(this.Table.ParentRelations["FK_OPS_AC24_ACP24_IDX1"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK_OPS_AC24_ACP24_IDX1"]);
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public AcP21Row AcP21RowByFK_OPS_AC11_ACP21_AC1 {
-                get {
-                    return ((AcP21Row)(this.GetParentRow(this.Table.ParentRelations["FK_OPS_AC11_ACP21_AC1"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK_OPS_AC11_ACP21_AC1"]);
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public AcP21Row AcP21RowByFK_OPS_AC12_ACP21_AC1 {
-                get {
-                    return ((AcP21Row)(this.GetParentRow(this.Table.ParentRelations["FK_OPS_AC12_ACP21_AC1"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK_OPS_AC12_ACP21_AC1"]);
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_OPS_AC22_ACP21_AC1"]);
                 }
             }
             
@@ -17113,12 +17025,100 @@ namespace KlonsF.DataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public AcP21Row AcP21RowByFK_OPS_AC22_ACP21_AC1 {
+            public AcP21Row AcP21RowByFK_OPS_AC12_ACP21_AC1 {
                 get {
-                    return ((AcP21Row)(this.GetParentRow(this.Table.ParentRelations["FK_OPS_AC22_ACP21_AC1"])));
+                    return ((AcP21Row)(this.GetParentRow(this.Table.ParentRelations["FK_OPS_AC12_ACP21_AC1"])));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK_OPS_AC22_ACP21_AC1"]);
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_OPS_AC12_ACP21_AC1"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public AcP21Row AcP21RowByFK_OPS_AC11_ACP21_AC1 {
+                get {
+                    return ((AcP21Row)(this.GetParentRow(this.Table.ParentRelations["FK_OPS_AC11_ACP21_AC1"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_OPS_AC11_ACP21_AC1"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public AcP24Row AcP24RowByFK_OPS_AC24_ACP24_IDX1 {
+                get {
+                    return ((AcP24Row)(this.GetParentRow(this.Table.ParentRelations["FK_OPS_AC24_ACP24_IDX1"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_OPS_AC24_ACP24_IDX1"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public AcP24Row AcP24RowByFK_OPS_AC14_ACP24_IDX1 {
+                get {
+                    return ((AcP24Row)(this.GetParentRow(this.Table.ParentRelations["FK_OPS_AC14_ACP24_IDX1"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_OPS_AC14_ACP24_IDX1"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public OPSdRow OPSdRow {
+                get {
+                    return ((OPSdRow)(this.GetParentRow(this.Table.ParentRelations["FK_OPS_DOCID_OPSD_ID"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_OPS_DOCID_OPSD_ID"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public Acp23Row Acp23RowByFK_OPS_AC23_ACP23_IDX1 {
+                get {
+                    return ((Acp23Row)(this.GetParentRow(this.Table.ParentRelations["FK_OPS_AC23_ACP23_IDX1"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_OPS_AC23_ACP23_IDX1"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public Acp23Row Acp23RowByFK_OPS_AC13_ACP23_IDX1 {
+                get {
+                    return ((Acp23Row)(this.GetParentRow(this.Table.ParentRelations["FK_OPS_AC13_ACP23_IDX1"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_OPS_AC13_ACP23_IDX1"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public Acp25Row Acp25RowByFK_OPS_AC15_ACP25_IDX1 {
+                get {
+                    return ((Acp25Row)(this.GetParentRow(this.Table.ParentRelations["FK_OPS_AC15_ACP25_IDX1"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_OPS_AC15_ACP25_IDX1"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public Acp25Row Acp25RowByFK_OPS_AC25_ACP25_IDX1 {
+                get {
+                    return ((Acp25Row)(this.GetParentRow(this.Table.ParentRelations["FK_OPS_AC25_ACP25_IDX1"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_OPS_AC25_ACP25_IDX1"]);
                 }
             }
             
