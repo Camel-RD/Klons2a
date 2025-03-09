@@ -679,6 +679,12 @@ namespace KlonsLIB.Components
             base.OnTextChanged(e);
         }
 
+        protected override void OnEnter(EventArgs e)
+        {
+            base.OnEnter(e);
+            SelectAll();
+        }
+
         public event RowSelectedEventHandler RowSelectedEvent;
         protected void OnRowSelectedEvent(int rownr, string value)
         {

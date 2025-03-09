@@ -32,8 +32,8 @@ public static class EInvoiceTools
         InvoiceType topInvoice = new InvoiceType();
         topInvoice.Xmlns = new XmlSerializerNamespaces(new XmlQualifiedName[]
         {
-        new XmlQualifiedName("cbc", "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"),
-        new XmlQualifiedName("cac", "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")
+            new XmlQualifiedName("cbc", "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"),
+            new XmlQualifiedName("cac", "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")
         });
 
         topInvoice.ID = $"{dr_doc.SR} {dr_doc.NR}".Trim().Zn(); ;
@@ -83,12 +83,12 @@ public static class EInvoiceTools
             };
 
             party.PartyIdentification = new List<PartyIdentificationType>()
-        {
-            new PartyIdentificationType()
-            {
-                ID = MyCompanyData.CompRegNr
-            }
-        };
+			{
+				new PartyIdentificationType()
+				{
+					ID = MyCompanyData.CompRegNr
+				}
+			};
 
             AddressType postalAddress = null;
             if (!MyCompanyData.CompAddrStreet.IsNOE())
@@ -108,20 +108,20 @@ public static class EInvoiceTools
             party.PostalAddress = postalAddress;
 
             party.PartyName = new List<PartyNameType>()
-        {
-            new PartyNameType()
-            {
-                Name = MyCompanyData.CompName
-            }
-        };
+			{
+				new PartyNameType()
+				{
+					Name = MyCompanyData.CompName
+				}
+			};
             party.PartyLegalEntity = new List<PartyLegalEntityType>()
-        {
-            new()
-            {
-                CompanyID = MyCompanyData.CompRegNr,
-                RegistrationName = MyCompanyData.CompName
-            }
-        };
+			{
+				new()
+				{
+					CompanyID = MyCompanyData.CompRegNr,
+					RegistrationName = MyCompanyData.CompName
+				}
+			};
             List<PartyTaxSchemeType> partyTaxScheme = null;
             if (is_vat_payer)
             {
@@ -154,12 +154,12 @@ public static class EInvoiceTools
                 Value = partner_EndpointID
             };
             party.PartyIdentification = new List<PartyIdentificationType>()
-        {
-            new PartyIdentificationType()
-            {
-                ID = partner.REGNR.Nz()
-            }
-        };
+			{
+				new PartyIdentificationType()
+				{
+					ID = partner.REGNR.Nz()
+				}
+			};
 
             AddressType postalAddress = null;
             if (!partner.STREET.IsNOE())
@@ -180,18 +180,18 @@ public static class EInvoiceTools
             party.PostalAddress = postalAddress;
             party.PartyName = [new() { Name = partner.NAME }];
             party.PartyLegalEntity = [new PartyLegalEntityType()
-        {
-            CompanyID = partner.REGNR,
-            RegistrationName = partner.NAME
-        }];
+			{
+				CompanyID = partner.REGNR,
+				RegistrationName = partner.NAME
+			}];
             List<PartyTaxSchemeType> partyTaxScheme = null;
             if (!partner.PVNREGNR.IsNOE())
             {
                 partyTaxScheme = [new PartyTaxSchemeType
-            {
-                CompanyID = partner.PVNREGNR,
-                TaxScheme = new TaxSchemeType { ID = "VAT" }
-            }];
+				{
+					CompanyID = partner.PVNREGNR,
+					TaxScheme = new TaxSchemeType { ID = "VAT" }
+				}];
             }
 
             party.PartyTaxScheme = partyTaxScheme;
@@ -201,7 +201,6 @@ public static class EInvoiceTools
 
         List<PaymentMeansType> MakePaymentMeans()
         {
-
             List<PaymentMeansType> listpaymentmeans = new List<PaymentMeansType>();
             PaymentMeansType paymentMeans = new PaymentMeansType();
             paymentMeans.PaymentMeansCode = new CodeType()

@@ -37,6 +37,7 @@ namespace KlonsF.Classes
 
         public string SettingsFileName = GetBasePath() + "\\Config\\Settings.xml";
         public string MasterListFileName = GetBasePath() + "\\Config\\MasterList.xml";
+        public string EInvoiceManagerConfigFileName = GetBasePath() + "\\Config\\EInvoiceManagerConfig.xml";
         public string FolderForXMLReports = GetBasePath() + "\\XMLReports";
         private string FolderForDBBackUp = GetBasePath() + "\\DB-backup";
         public string FolderForFbEmbed25 = GetBasePath() + "\\FbEmbed25" + (Environment.Is64BitProcess ? "x64" : "");

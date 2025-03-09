@@ -166,6 +166,7 @@
     <ProjectReference Include="..\NotyfyProp\NotyfyProp.csproj" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="Konscious.Security.Cryptography.Argon2" Version="1.3.1" />
     <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
     <PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" />
     <PackageReference Include="System.Runtime.CompilerServices.Unsafe" Version="6.0.0" />
@@ -192,5 +193,8 @@
     <Reference Include="SourceGrid">
       <HintPath>..\Libs\SourceGrid.dll</HintPath>
     </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="FormsEI\" />
   </ItemGroup>
 </Project>

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Reflection.Emit;
 using System.Windows.Forms;
 
 namespace KlonsLIB.Forms
@@ -39,6 +40,11 @@ namespace KlonsLIB.Forms
 
         private void Form_InputBox_Load(object sender, EventArgs e)
         {
+        }
+
+        private void Form_InputBox_Shown(object sender, EventArgs e)
+        {
+            label1.MaximumSize = new Size(Width - label1.Left, label1.MaximumSize.Height);
             tbInput.Top = label1.Bottom + 5;
             cmOK.Top = tbInput.Bottom + 10;
             cmCancel.Top = cmOK.Top;
@@ -46,6 +52,7 @@ namespace KlonsLIB.Forms
             s.Height = cmOK.Bottom + 10;
             this.ClientSize = s;
         }
+
 
         private void tbInput_KeyDown(object sender, KeyEventArgs e)
         {

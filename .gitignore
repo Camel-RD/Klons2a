@@ -21,6 +21,7 @@ Klons2/FBembed25
 Klons2/FBembed4
 Klons2/FBembed25x64
 Klons2/FBembed4x64
+DllExport/
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs

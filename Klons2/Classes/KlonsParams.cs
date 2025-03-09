@@ -699,6 +699,37 @@ namespace KlonsF.Classes
         }
 
 
+        // KlonsM - eInvoice
+        public string EInvoiceFolder
+        {
+            get { return GetParamStr("EINVOICEFOLDER"); }
+            set { SetParamStr("EINVOICEFOLDER", value); }
+        }
+
+        public string EInvoiceSenderEmail
+        {
+            get { return GetParamStr("EIEMAIL"); }
+            set { SetParamStr("EIEMAIL", value); }
+        }
+
+        public string EInvoiceSenderEmailPassword
+        {
+            get { return GetParamStr("EIEMAILPSW"); }
+            set { SetParamStr("EIEMAILPSW", value); }
+        }
+
+        public string EInvoiceSenderEmailServer
+        {
+            get { return GetParamStr("EIEMAILSERVER"); }
+            set { SetParamStr("EIEMAILSERVER", value); }
+        }
+
+        public int EInvoiceSenderEmailServerPort
+        {
+            get { return GetParamInt("EIEMAILSERVERPORT") ?? 0; }
+            set { SetParamInt("EIEMAILSERVERPORT", value); }
+        }
+
 
         private bool roundupset = false;
         private bool roundup = false;

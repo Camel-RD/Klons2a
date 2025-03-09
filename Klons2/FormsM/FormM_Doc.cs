@@ -1403,8 +1403,9 @@ namespace KlonsM.FormsM
             }
 
             FileDialog fd = new SaveFileDialog();
-            var folder = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-            fd.InitialDirectory = folder;
+            //var folder = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+            //fd.InitialDirectory = folder;
+            fd.ClientGuid = new Guid("3CBD031E-3244-407D-AC95-DA0BEE172B34");
             fd.DefaultExt = "xml";
             fd.Filter = "XML faili (*.xml)|*.xml";
             if (fd.ShowDialog(KlonsData.St.MyMainForm) != DialogResult.OK) return;

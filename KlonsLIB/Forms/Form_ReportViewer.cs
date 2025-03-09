@@ -27,6 +27,7 @@ namespace KlonsLIB.Forms
             InitializeComponent();
             CheckMyFontAndColors();
             reportViewer1.Messages = ReportHelper.ReportViewerMessages;
+            reportViewer1.ToolStripRenderer = ColorThemeHelper.MyToolStripRenderer;
 
             this.reportViewerData = reportViewerData;
 

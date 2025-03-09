@@ -41,6 +41,7 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="PropertyChanged.Fody" Version="4.1.0" />
+    <PackageReference Include="UblSharp" Version="1.1.1" />
   </ItemGroup>
   <PropertyGroup>
     <AssemblyTitle>DataObjectsA</AssemblyTitle>

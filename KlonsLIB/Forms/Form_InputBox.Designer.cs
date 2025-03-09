@@ -95,6 +95,7 @@ namespace KlonsLIB.Forms
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Form_InputBox";
             this.Load += new System.EventHandler(this.Form_InputBox_Load);
+            this.Shown += Form_InputBox_Shown;
             this.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.Form_InputBox_PreviewKeyDown);
             this.ResumeLayout(false);
             this.PerformLayout();
