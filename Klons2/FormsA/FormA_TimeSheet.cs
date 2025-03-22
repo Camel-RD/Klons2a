@@ -554,7 +554,13 @@ namespace KlonsA.Forms
                 if (jr == null) continue;
                 var id = jr.XObj.IDX;
                 if (id == idx)
+                {
+                    for (int j = 0; j < dgcV1.Index; j++)
+                    {
+                        dgvLapa.UpdateCellValue(j, i);
+                    }
                     dgvLapa.InvalidateRow(i);
+                }
             }
         }
 

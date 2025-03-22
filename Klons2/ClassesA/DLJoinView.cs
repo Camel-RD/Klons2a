@@ -441,6 +441,8 @@ namespace KlonsA.Classes
                 }
             }
 
+            int old_idp = dr_sar_r.IDP;
+            int old_idam = dr_sar_r.IDAM;
             dr_sar_r.IDP = idp;
             dr_sar_r.IDAM = idam;
 
@@ -461,6 +463,14 @@ namespace KlonsA.Classes
                 Position = s_position,
                 Title = s_title
             };
+
+            if (old_idp != idp ||
+                old_idam != idam)
+            {
+                XObj.Name = s_name;
+                XObj.Position = s_position;
+                XObj.Title = s_title;
+            }
 
             var jr_add_list = new List<JoinViewRow>();
 

@@ -90,6 +90,22 @@ namespace KlonsA.Forms
             }
         }
 
+        private void FormA_PersonsR_Shown(object sender, System.EventArgs e)
+        {
+            CheckSplitDistance();
+        }
+
+        private void CheckSplitDistance()
+        {
+            int ow = MyData.Settings.PersonsListTableWidth;
+            if (ow > 0)
+            {
+                int sd = (int)Math.Round(ow * ScaleFactor.Width, 0);
+                if (sd >= mySplitContainer1.Panel1MinSize)
+                    mySplitContainer1.SplitterDistance = sd;
+            }
+        }
+
         public void LoadSettings()
         {
             ShowPersonsList(MyData.Settings.ShowPersonList);
@@ -98,6 +114,10 @@ namespace KlonsA.Forms
         public override void SaveParams()
         {
             MyData.Settings.ShowPersonList = !mySplitContainer1.Panel1Collapsed;
+
+            int ow = mySplitContainer1.SplitterDistance;
+            ow = (int)Math.Round(ow / ScaleFactor.Width, 0);
+            MyData.Settings.PersonsListTableWidth = ow;
         }
 
         private void Form_PersonsR_FormClosed(object sender, FormClosedEventArgs e)

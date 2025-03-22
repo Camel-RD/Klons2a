@@ -35,6 +35,8 @@ namespace KlonsF.Classes
         private string inWine = "NO";
 
         private int opsTableHeight = 0;
+        private int personsListTableWidth = 0;
+        
 
         private int[] columnWidths_Docs = new int[0];
         private int[] columnWidths_Ops = new int[0];
@@ -306,6 +308,17 @@ namespace KlonsF.Classes
             {
                 if (opsTableHeight == value) return;
                 opsTableHeight = value;
+                HasChanged = true;
+            }
+        }
+
+        public int PersonsListTableWidth
+        {
+            get { return personsListTableWidth; }
+            set
+            {
+                if (personsListTableWidth == value) return;
+                personsListTableWidth = value;
                 HasChanged = true;
             }
         }

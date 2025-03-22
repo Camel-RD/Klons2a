@@ -221,19 +221,27 @@ namespace KlonsA.Forms
 
         public void MakePlans()
         {
-            if (bsPlans.Count > 0)
+            dgvPlans.AllowUserToAddRows = false;
+            try
             {
-                MyMainForm.ShowWarning("Norādītajam laika periodam jau ir izveidoti plāna ieraksti.");
-                return;
+                if (bsPlans.Count > 1)
+                {
+                    MyMainForm.ShowWarning("Norādītajam laika periodam jau ir izveidoti plāna ieraksti.");
+                    return;
+                }
+                if (!DataLoader.IsMonthLoaded(PYear, PMonth))
+                {
+                    MyMainForm.ShowWarning("Norādītajam laika periodam nav ielādēti dati.");
+                    return;
+                }
+                DataTasks.MakePlans(CalendarMonth);
+                SaveData();
+                dgvPlans.AutoResizeColumns();
             }
-            if(!DataLoader.IsMonthLoaded(PYear, PMonth))
+            finally
             {
-                MyMainForm.ShowWarning("Norādītajam laika periodam nav ielādēti dati.");
-                return;
+                dgvPlans.AllowUserToAddRows = true;
             }
-            DataTasks.MakePlans(CalendarMonth);
-            SaveData();
-            dgvPlans.AutoResizeColumns();
         }
 
         private void CheckPeriod()

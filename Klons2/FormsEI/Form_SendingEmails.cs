@@ -128,6 +128,10 @@ namespace KlonsM.FormsEI
             {
                 return "Saņēmēja e-pasta adreses kļūda.";
             }
+            catch (SmtpException ex)
+            {
+                return ex.Message;
+            }
             catch (Exception ex)
             {
                 return ex.Message;
@@ -178,15 +182,22 @@ namespace KlonsM.FormsEI
                 var err = $"{invoice.FileName}, {invoice.CustomerName}, {invoice.ID}\r\n";
                 err += ret + "\r\n\r\n";
                 tbSendingEmailsErrors.AppendText(err);
+                if (ret.StartsWith("The SMTP server requires a secure connection or the client was not authenticated"))
+                {
+                    MyMainForm.ShowWarning("E-pasta Autentifikācijas kļūda, iespējam nepareiza parole.");
+                    tsbSendingClose.Visible = true;
+                    tsbSendingCancel.Visible = false;
+                    return false;
+                }
             }
             var msg = $"{SentInvoices.Count} no {Invoices.Count} rēķini tika nosūtīti.";
             if (Invoices.Count == SentInvoices.Count)
             {
-                MyData.MyMainForm.ShowInfo(msg, owner: this);
+                MyMainForm.ShowInfo(msg, owner: this);
             }
             else
             {
-                MyData.MyMainForm.ShowWarning(msg, owner: this);
+                MyMainForm.ShowWarning(msg, owner: this);
             }
             tsbSendingClose.Visible = true;
             tsbSendingCancel.Visible = false;

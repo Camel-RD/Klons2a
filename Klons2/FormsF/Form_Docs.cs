@@ -2118,10 +2118,10 @@ namespace KlonsF.Forms
 
             decimal summ = f.Summ;
             decimal pvn = f.PVN;
-            string descr = f.descr;
-            string ac1 = f.ac1;
-            string docnr2 = f.docnr_out;
-            string docsr2 = f.docsr_out;
+            string descr = f.Descr;
+            string ac1 = f.AC1;
+            string docnr2 = f.Docnr_out;
+            string docsr2 = f.Docsr_out;
 
             var dr = dgvDocs.GetCurrentDataRow() as klonsDataSet.OPSdRow;
             if (dr == null) return;

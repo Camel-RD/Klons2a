@@ -79,7 +79,7 @@ namespace KlonsM.FormsM
 
         FbConnection FbCon = null;
         FbRemoteEvent FbEvents = null;
-        int SessionId = 0;
+        long SessionId = 0;
 
         Stopwatch sw = new Stopwatch();
         TimeSpan LastProgresUpdate = TimeSpan.Zero;
@@ -104,7 +104,7 @@ namespace KlonsM.FormsM
             await FbCon.OpenAsync();
 
             var fcm = new FbCommand("select current_connection from rdb$database;", FbCon);
-            SessionId = (int)await fcm.ExecuteScalarAsync();
+            SessionId = (long)await fcm.ExecuteScalarAsync();
 
             FbEvents = new FbRemoteEvent(sfc);
             await FbEvents.OpenAsync();

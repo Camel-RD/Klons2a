@@ -32,10 +32,10 @@ namespace KlonsF.Forms
 
         public decimal Summ = 0.00M;
         public decimal PVN = 0.00M;
-        public string descr = null;
-        public string ac1 = null;
-        public string docnr_out = null;
-        public string docsr_out = null;
+        public string Descr = null;
+        public string AC1 = null;
+        public string Docnr_out = null;
+        public string Docsr_out = null;
 
         private string clid = null;
         private string docnr = null;
@@ -57,7 +57,22 @@ namespace KlonsF.Forms
             ad2.FillBy_linkeddocs_1(MyData.DataSetKlonsFRep.TRepOPSd,
                 dateStart, dateEnd, clid, docnr);
 
+            FixDgvOPSColumnList();
         }
+
+        void FixDgvOPSColumnList()
+        {
+            var bad_columns = dgvOPS.Columns
+                .OfType<DataGridViewColumn>()
+                .Select(x => x.Name)
+                .Where(x => !x.StartsWith("dgcOPS"))
+                .ToList();
+            foreach (var column in bad_columns)
+            {
+                dgvOPS.Columns.Remove(column);
+            }
+        }
+
         private void CheckColumns()
         {
             string CHCOL = MyData.Params.CHCOL;
@@ -120,10 +135,10 @@ namespace KlonsF.Forms
         {
             Summ = 0.00M;
             PVN = 0.00M;
-            ac1 = null;
-            descr = null;
-            docnr_out = null;
-            docsr_out = null;
+            AC1 = null;
+            Descr = null;
+            Docnr_out = null;
+            Docsr_out = null;
 
             if (dgvOPSd.SelectedRows.Count == 0)
             {
@@ -131,17 +146,18 @@ namespace KlonsF.Forms
                 tbPVN.Text = "0.00";
                 return;
             }
-            decimal r;
+            decimal r1, r2;
             foreach (DataGridViewRow row in dgvOPSd.SelectedRows)
             {
-                r = (decimal)(row.Cells[dgcDocsSumm.Index].Value);
-                Summ += r;
-                PVN += (decimal)(row.Cells[dgcDocsPVN.Index].Value);
-                if (r > 0)
+                r1 = (decimal)(row.Cells[dgcDocsSumm.Index].Value);
+                r2 = (decimal)(row.Cells[dgcDocsPVN.Index].Value);
+                Summ += r1;
+                PVN += r2;
+                if (r1 > 0)
                 {
-                    descr = row.Cells[dgcDescr.Index].Value.AsString();
-                    docnr_out = row.Cells[dgcDocsDocNr.Index].Value.AsString();
-                    docsr_out = row.Cells[dgcDocsDocSt.Index].Value.AsString();
+                    Descr = row.Cells[dgcDescr.Index].Value.AsString();
+                    Docnr_out = row.Cells[dgcDocsDocNr.Index].Value.AsString();
+                    Docsr_out = row.Cells[dgcDocsDocSt.Index].Value.AsString();
                 }
             }
 
@@ -161,11 +177,11 @@ namespace KlonsF.Forms
                     var sk = dgvOPS[dgcOPSAC21.Index, 0].Value.AsString();
                     if (sd.LeftMax(3) == "231" && sk[0] == '6')
                     {
-                        ac1 = sk;
+                        AC1 = sk;
                     }
                     else if (sd[0] == '7' && sk.LeftMax(3) == "531")
                     {
-                        ac1 = sd;
+                        AC1 = sd;
                     }
                 }
             }

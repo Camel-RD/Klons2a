@@ -1688,7 +1688,7 @@ namespace KlonsA.Forms
             // 
             mySplitContainer1.Panel1.Controls.Add(dgvPersons);
             mySplitContainer1.Panel1.Controls.Add(panel1);
-            mySplitContainer1.Panel1MinSize = 28;
+            mySplitContainer1.Panel1MinSize = 100;
             // 
             // mySplitContainer1.Panel2
             // 
@@ -2238,6 +2238,7 @@ namespace KlonsA.Forms
             FormClosing += Form_PersonsR_FormClosing;
             FormClosed += Form_PersonsR_FormClosed;
             Load += Form_PersonsR_Load;
+            Shown += FormA_PersonsR_Shown;
             ((System.ComponentModel.ISupportInitialize)bnavNav).EndInit();
             bnavNav.ResumeLayout(false);
             bnavNav.PerformLayout();
