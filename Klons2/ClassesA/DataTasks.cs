@@ -195,6 +195,21 @@ namespace KlonsA.Classes
 
             var dt2 = (new DateTime(yr, mt, 1)).LastDayOfMonth();
 
+            var repeating_row = drs_sh.SelectMany(x => x.GetSALARY_SHEET_TEMPL_RRows())
+                .WhereX(x => true)
+                .GroupBy(x => (x.IDP, x.IDAM))
+                .Where(x => x.Count() > 1)
+                .Select(x => x.First())
+                .FirstOrDefault();
+
+            if (repeating_row != null)
+            {
+                var drp = MyData.DataSetKlonsA.POSITIONS.FindByID(repeating_row.IDAM).PERSONSRow;
+                string ser = $"Algas aprēķinu sagatavēs darbinieka {drp.YNAME} amats ir iekļauts vairāk kā vienu reizi.";
+                error_list.AddError(this_error_source, ser);
+                return error_list;
+            }
+
             var cur_idam = CheckSalarySheetsTemplUsed(yr, mt, drs_sh);
             if (cur_idam.Count > 0)
             {

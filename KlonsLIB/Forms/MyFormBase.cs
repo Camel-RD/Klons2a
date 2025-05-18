@@ -256,6 +256,7 @@ namespace KlonsLIB.Forms
 
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
         {
+            if (keyData == (Keys.Control | Keys.Shift | Keys.Tab)) return true;
             if (keyData == (Keys.Control | Keys.Tab)) return true;
             if (keyData == (Keys.Control | Keys.F6)) return true;
             if (keyData == (Keys.Control | Keys.Shift | Keys.F6)) return true;
@@ -263,6 +264,13 @@ namespace KlonsLIB.Forms
             {
                 this.Close();
                 return true;
+            }
+            if (keyData == Keys.Decimal)
+            {
+                //SendKeys.Send(".");
+                //return true;
+                msg.WParam = (IntPtr)Keys.OemPeriod;
+                return false;
             }
             return base.ProcessCmdKey(ref msg, keyData);
         }
