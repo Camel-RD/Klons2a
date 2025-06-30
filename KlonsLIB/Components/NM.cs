@@ -20,6 +20,7 @@ namespace KlonsLIB.Components
         public const int WM_PRINTCLIENT = 0x318;
         public const int WM_USER = 0x0400;
         public const int WM_NOTIFY = 0x004E;
+        public const int WM_LBUTTONDOWN = 0x0201;
 
 
 
@@ -115,7 +116,8 @@ namespace KlonsLIB.Components
             public enum TCM : uint
             {
                 FIRST = 0x1300,
-                GETITEMRECT = FIRST + 10
+                GETITEMRECT = FIRST + 10,
+                HITTEST = 0x130D
             }
         }
 
@@ -145,6 +147,14 @@ namespace KlonsLIB.Components
 
             public static implicit operator POINT(Point point) => new((int)point.X, (int)point.Y);
         }
+
+        [StructLayout(LayoutKind.Sequential)]
+        public struct TCHITTESTINFO
+        {
+            public POINT pt;
+            public int flags;
+        }
+
 
         [StructLayout(LayoutKind.Sequential, CharSet = CharSet.Auto)]
         public struct PARAFORMAT2

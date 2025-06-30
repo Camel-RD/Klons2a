@@ -26,6 +26,7 @@ namespace KlonsM.FormsEI
             InitializeComponent();
             CheckMyFontAndColors();
             MakeGrid();
+            tcTabs.TabPages[1].Hide();
         }
 
         string peppol_filename = "PEPPOL-EN16931-UBL.xsl";

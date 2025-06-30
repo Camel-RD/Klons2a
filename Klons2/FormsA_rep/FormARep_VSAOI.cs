@@ -251,6 +251,7 @@ namespace KlonsA.Forms
 
             string ver = "DokDDZv3";
             if (Year > 2022 || Year == 2022 && Month > 6) ver = "DokDDZv4";
+            if (Year > 2025 || Year == 2025 && Month > 5) ver = "DokDDZv5";
             XmlElement DokDDZv2 = xdoc.CreateElement(ver);
             DokDDZv2.SetAttribute("xmlns:xsd", "http://www.w3.org/2001/XMLSchema"); ;
             DokDDZv2.SetAttribute("xmlns:xsi", "http://www.w3.org/2001/XMLSchema-instance");
@@ -307,9 +308,11 @@ namespace KlonsA.Forms
                     }
                     xdoc.XENZ(r, "IeturetaisNodoklis", row.IIN);
                     xdoc.XE(r, "DarbaVeids", "1");
-                    xdoc.XE(r, "RiskaNodevasPazime", row.HasURVN ? "1" : "0");
+                    xdoc.XE(r, "RiskaNodevasPazime", row.HasURVN ? "true" : "false");
                     xdoc.XEIF(row.HasURVN, r, "RiskaNodeva", row.URVN);
                     xdoc.XE(r, "Stundas", (int)row.Hours);
+                    if (row.PaidInCash)
+                        xdoc.XE(r, "IenakumiIzmaksatiSkaidraNauda", "true");
                 }
             }
 

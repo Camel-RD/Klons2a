@@ -13,6 +13,7 @@ using KlonsF.DataSets;
 using KlonsLIB.Data;
 using KlonsLIB.Forms;
 using KlonsLIB.Misc;
+using NPOI.OpenXmlFormats.Wordprocessing;
 
 namespace KlonsA.Forms
 {
@@ -43,6 +44,12 @@ namespace KlonsA.Forms
         {
 
         }
+
+        private void FormA_Persons_DN_lapas_Shown(object sender, System.EventArgs e)
+        {
+
+        }
+
 
         public BindingList<DNLapaImportData> DataFullList = null;
         public BindingList<DNLapaImportData> DataChanges = null;

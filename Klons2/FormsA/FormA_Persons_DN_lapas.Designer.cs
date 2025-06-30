@@ -680,6 +680,7 @@ namespace KlonsA.Forms
             Name = "FormA_Persons_DN_lapas";
             Text = "Darba nespējas lapas";
             Load += Form_Persons_DN_lapas_Load;
+            Shown += FormA_Persons_DN_lapas_Shown;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)bsChanges).EndInit();

@@ -8,6 +8,7 @@ using KlonsLIB.Misc;
 using KlonsLIB.Data;
 using KlonsLIB.Forms;
 using KlonsF.Classes;
+using KlonsLIB;
 
 namespace KlonsA.Classes
 {
@@ -24,6 +25,18 @@ namespace KlonsA.Classes
         {
             Rows1 = new List<VSAOIReportRow1>();
             TotalRow = new VSAOIReportRow1();
+
+            var pmdt1 = dt1.FirstDayOfMonth().AddMonths(-1);
+            var idp_paidincash = MyData.DataSetKlonsA.PAYLISTS.WhereX(
+                d =>
+                d.YR == pmdt1.Year &&
+                d.MT == pmdt1.Month &&
+                d.XTpPay == EPaylistPaymentType.Cash)
+                .SelectMany(x => x.GetPAYLISTS_RRows())
+                .WhereX(x => x.TPAY > 0.0M)
+                .Select(x => x.IDP)
+                .Distinct()
+                .ToHashSet();
 
             var dr_sheet = MyData.DataSetKlonsA.SALARY_SHEETS.WhereX(
                 d =>
@@ -78,6 +91,7 @@ namespace KlonsA.Classes
                 rr.Hours = dr.FACT_HOURS;
                 rr.URVN = dr.URVN_AMAOUNT;
                 rr.HasURVN = rr.URVN > 0.0M;
+                rr.PaidInCash = idp_paidincash.Contains(drp.ID);
                 Rows1.Add(rr);
                 TotalRow.Add(rr);
             }
@@ -152,6 +166,7 @@ namespace KlonsA.Classes
         public bool HasURVN { get; set; } = false;
         public decimal URVN { get; set; } = 0.0M;
         public float Hours { get; set; } = 0.0f;
+        public bool PaidInCash { get; set; } = false;
 
         public void Add(VSAOIReportRow1 r)
         {

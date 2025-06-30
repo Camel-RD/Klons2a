@@ -2944,6 +2944,10 @@ iedzīvotāju ienākuma nodokli un uzņēmējdarbības riska valsts nodevu pārs
           <DataField>URVN</DataField>
           <rd:TypeName>System.Decimal</rd:TypeName>
         </Field>
+        <Field Name="PaidInCash">
+          <DataField>PaidInCash</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>KlonsA.Classes</rd:DataSetName>

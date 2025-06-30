@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel;
 using System.Runtime.InteropServices;
+using static KlonsLIB.Components.NM;
 using NM = KlonsLIB.Components.NM;
 
 namespace KlonsLIB.Components
@@ -37,7 +38,9 @@ namespace KlonsLIB.Components
             _highlightBackColor = SystemColors.GradientInactiveCaption;
             _highlightForeColor = Color.Black;
             _borderThickness = 1;
-
+            // if we are not using TabSizeMode.Fixed we cant adjust total width of tabcontrol page headers
+            // we do ItemSize.Width = TotalWidth / PageCount
+            SizeMode = TabSizeMode.Fixed;
             Invalidate();
         }
 
@@ -492,6 +495,40 @@ namespace KlonsLIB.Components
                 m.Result = 1;
                 return;
             }
+            if (m.Msg == (int)NM.ComCtl32.TCM.HITTEST)
+            {
+                base.WndProc(ref m);
+                var pHitTestInfo = (NM.TCHITTESTINFO*)m.LParam;
+                var tab_rects = GetTabSizes();
+                for (var i = 0; i <= tab_rects.Length - 1; i++)
+                {
+                    if (tab_rects[i].Contains(pHitTestInfo->pt.X - 20, pHitTestInfo->pt.Y))
+                    {
+                        m.Result = i;
+                        return;
+                    }
+                }
+                m.Result = -1;
+                return;
+            }
+            if (m.Msg == NM.WM_LBUTTONDOWN)
+            {
+                if (DefaultStyle)
+                {
+                    base.WndProc(ref m);
+                    return;
+                }
+                Point clientPoint = new Point((int)(m.LParam.ToInt32() & 0xFFFF), (int)(m.LParam.ToInt32() >> 16));
+                var tp = TestTab(clientPoint);
+                if (tp is not null)
+                {
+                    this.SelectedTab = tp;
+                    return;
+                }
+                base.WndProc(ref m);
+                return;
+            }
+
             base.WndProc(ref m);
         }
 
@@ -518,7 +555,6 @@ namespace KlonsLIB.Components
             return ret;
         }
 
-
         private TabPage TestTab(Point pt)
         {
             for (var index = 0; index <= TabCount - 1; index++)
@@ -527,12 +563,25 @@ namespace KlonsLIB.Components
             return null;
         }
 
+        public void UpdateFixedTabPageSizes()
+        {
+            var rects = GetTabSizes();
+            if (rects.Length == 0) return;
+            int total_width = rects.Sum(x => x.Width);
+            int item_size = total_width / rects.Length;
+            ItemSize = new Size(item_size + 2, rects[0].Height);
+        }
+
         /// <summary>Raises the <see cref="IExControl.DefaultStyleChanged" /> event.</summary>
         protected virtual void OnDefaultStyleChanged() => DefaultStyleChanged?.Invoke(this, EventArgs.Empty);
 
         protected override void ScaleControl(SizeF factor, BoundsSpecified specified)
         {
             base.ScaleControl(factor, specified);
+            if (SizeMode == TabSizeMode.Fixed)
+            {
+                UpdateFixedTabPageSizes();
+            }
         }
 
     }
