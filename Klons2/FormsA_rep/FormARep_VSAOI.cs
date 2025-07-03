@@ -270,7 +270,8 @@ namespace KlonsA.Forms
 
             xdoc.XE(DokDDZv2, "NmrKods", s);
 
-            xdoc.XE(DokDDZv2, "IzmaksasDatums", PayDay);
+            if (ver != "DokDDZv5")
+                xdoc.XE(DokDDZv2, "IzmaksasDatums", PayDay);
 
             xdoc.XE(DokDDZv2, "Sagatavotajs", tbName.Text);
             xdoc.XENZ(DokDDZv2, "Talrunis", tbPhoneNr.Text);
@@ -311,7 +312,7 @@ namespace KlonsA.Forms
                     xdoc.XE(r, "RiskaNodevasPazime", row.HasURVN ? "true" : "false");
                     xdoc.XEIF(row.HasURVN, r, "RiskaNodeva", row.URVN);
                     xdoc.XE(r, "Stundas", (int)row.Hours);
-                    if (row.PaidInCash)
+                    if (ver == "DokDDZv5" && row.PaidInCash)
                         xdoc.XE(r, "IenakumiIzmaksatiSkaidraNauda", "true");
                 }
             }
