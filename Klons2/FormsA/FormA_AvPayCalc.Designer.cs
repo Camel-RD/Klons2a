@@ -86,7 +86,7 @@
             dgvSar.Location = new System.Drawing.Point(0, 0);
             dgvSar.Name = "dgvSar";
             dgvSar.ReadOnly = true;
-            dgvSar.RowHeadersWidth = 25;
+            dgvSar.RowHeadersWidth = 30;
             dgvSar.Size = new System.Drawing.Size(902, 234);
             dgvSar.TabIndex = 0;
             // 

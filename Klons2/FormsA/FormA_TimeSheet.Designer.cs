@@ -172,7 +172,7 @@ namespace KlonsA.Forms
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             dgvLapa.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
-            dgvLapa.RowHeadersWidth = 53;
+            dgvLapa.RowHeadersWidth = 62;
             dgvLapa.ShowCellToolTips = false;
             dgvLapa.Size = new System.Drawing.Size(766, 386);
             dgvLapa.TabIndex = 0;

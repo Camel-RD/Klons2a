@@ -426,13 +426,11 @@ namespace KlonsLIB.Forms
         protected void ScaleToolStrip(ToolStrip tsp, SizeF factor)
         {
             float f = Math.Max(factor.Width, factor.Height);
-            if (f != 1.0f)
-            {
-                var imgsz = tsp.ImageScalingSize;
-                imgsz.Width = (int)((float)imgsz.Width * f);
-                imgsz.Height = (int)((float)imgsz.Height * f);
-                tsp.ImageScalingSize = imgsz;
-            }
+            if (f == 1.0f) return;
+            var imgsz = tsp.ImageScalingSize;
+            imgsz.Width = (int)((float)imgsz.Width * f);
+            imgsz.Height = (int)((float)imgsz.Height * f);
+            (tsp as ToolStrip).ImageScalingSize = imgsz;
         }
         #endregion
 

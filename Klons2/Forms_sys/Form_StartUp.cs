@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -41,7 +42,7 @@ namespace KlonsF.Forms
             DialogResult = DialogResult.Cancel;
         }
 
-        
+
         private bool CheckUserInput()
         {
             if (MyData.Settings.MasterEntry.Name == "")
@@ -61,7 +62,7 @@ namespace KlonsF.Forms
         private bool CheckUserAndConnect()
         {
             IsBackupDone = false;
-            if (MyData.CurrentDBTag == null || 
+            if (MyData.CurrentDBTag == null ||
                 !MyData.CurrentDBTag.Equals(MyData.Settings.MasterEntry))
             {
                 string usertp = null, dbver = null;
@@ -80,7 +81,7 @@ namespace KlonsF.Forms
                 {
                     if (usertp == "X") return false;
                 }
-                
+
                 GC.Collect();
 
                 if (!ConnectTo(MyData.Settings.MasterEntry, tbUser.Text, tbPSW.Text))
@@ -107,9 +108,9 @@ namespace KlonsF.Forms
                 MyData.GectSomeDbSysData(MyData.Settings.MasterEntry, tbUser.Text, tbPSW.Text,
                     out usertp, out dbver);
             }
-            catch(Exception ex) 
-            { 
-                return false; 
+            catch (Exception ex)
+            {
+                return false;
             }
 
             if (usertp == "X")
@@ -134,7 +135,7 @@ namespace KlonsF.Forms
             var bp = MyData.Settings.BackUpPlanX;
             if (bp == EBackUpPlan.Never) return false;
             var dt = BackupHelper.GetLastBackupDate(dbfilename, MyData.GetBackUpFolder());
-            if (!beforeupgrade && 
+            if (!beforeupgrade &&
                 dt.HasValue && (DateTime.Now >= dt.Value) &&
                 (DateTime.Now - dt.Value).TotalSeconds < 30d)
                 return false;
@@ -186,7 +187,7 @@ namespace KlonsF.Forms
                 return false;
                 //DialogResult = DialogResult.Abort;
             }
-            
+
             return true;
         }
 
@@ -264,6 +265,12 @@ namespace KlonsF.Forms
         {
             var fm = new Form_FbUsers();
             fm.ShowDialog(this);
+        }
+
+        private void miApraksts_Click(object sender, EventArgs e)
+        {
+            var myfolder = MyData.GetManualsPath();
+            try { Process.Start("explorer.exe", myfolder); } catch (Exception) { }
         }
     }
 }

@@ -1203,7 +1203,7 @@ namespace KlonsA.Forms
             dgvPapildSummas.Location = new System.Drawing.Point(3, 4);
             dgvPapildSummas.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             dgvPapildSummas.Name = "dgvPapildSummas";
-            dgvPapildSummas.RowHeadersWidth = 53;
+            dgvPapildSummas.RowHeadersWidth = 62;
             dgvPapildSummas.ShowCellToolTips = false;
             dgvPapildSummas.Size = new System.Drawing.Size(964, 506);
             dgvPapildSummas.TabIndex = 0;
@@ -1389,7 +1389,7 @@ namespace KlonsA.Forms
             dgvNotikumi.Location = new System.Drawing.Point(3, 4);
             dgvNotikumi.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             dgvNotikumi.Name = "dgvNotikumi";
-            dgvNotikumi.RowHeadersWidth = 53;
+            dgvNotikumi.RowHeadersWidth = 62;
             dgvNotikumi.ShowCellToolTips = false;
             dgvNotikumi.Size = new System.Drawing.Size(964, 506);
             dgvNotikumi.TabIndex = 0;
@@ -1716,7 +1716,7 @@ namespace KlonsA.Forms
             dgvPersons.Name = "dgvPersons";
             dgvPersons.ReadOnly = true;
             dgvPersons.RowHeadersVisible = false;
-            dgvPersons.RowHeadersWidth = 53;
+            dgvPersons.RowHeadersWidth = 62;
             dgvPersons.ShowCellToolTips = false;
             dgvPersons.Size = new System.Drawing.Size(200, 514);
             dgvPersons.TabIndex = 0;

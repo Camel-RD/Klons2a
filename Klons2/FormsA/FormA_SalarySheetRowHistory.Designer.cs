@@ -242,7 +242,7 @@
             this.dgvRows.Location = new System.Drawing.Point(0, 0);
             this.dgvRows.Name = "dgvRows";
             this.dgvRows.ReadOnly = true;
-            this.dgvRows.RowHeadersWidth = 53;
+            this.dgvRows.RowHeadersWidth = 62;
             this.dgvRows.ShowCellToolTips = false;
             this.dgvRows.Size = new System.Drawing.Size(886, 305);
             this.dgvRows.TabIndex = 2;

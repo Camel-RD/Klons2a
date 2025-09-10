@@ -19,6 +19,7 @@ namespace KlonsLIB.Forms
         public Color WindowTextColor { get; private set; }
         public Color BorderColor { get; private set; }
         public Color MenuHighlight { get; private set; }
+        public Color MenuButtonPressed { get; private set; }
 
         private Dictionary<Color, Color> SysToMy = new Dictionary<Color, Color>();
 
@@ -96,7 +97,7 @@ namespace KlonsLIB.Forms
             //MenuHighlight = SystemColors.MenuHighlight;
             //MenuHighlight = ColorThemeHelper.ColorBetween(WindowColor, WindowTextColor, 0.2f);
             MenuHighlight = ColorThemeHelper.MakeLighter(WindowColor, 0.3f, 0.7f, 2.5f);
-
+            MenuButtonPressed = ColorThemeHelper.MakeLighter(MenuHighlight, 0.2f, 0.7f, 2.5f);
             BorderColor = ControlColorDarkDark;
             UsingSystemColors = true;
             MakeTables();
@@ -112,6 +113,7 @@ namespace KlonsLIB.Forms
             ControlColorDark = Color.FromArgb(200, 200, 200);
             ControlColorDarkDark = ControlTextColor;
             MenuHighlight = Color.FromArgb(80, 80, 85);
+            MenuButtonPressed = ColorThemeHelper.MakeLighter(MenuHighlight, 0.2f, 0.7f, 2.5f);
             BorderColor = ControlColorDarkDark;
             UsingSystemColors = false;
             MakeTables();
@@ -126,6 +128,7 @@ namespace KlonsLIB.Forms
             ControlColorDark = Color.FromArgb(100, 100, 100);
             ControlColorDarkDark = Color.FromArgb(0, 240, 0);
             MenuHighlight = Color.FromArgb(0, 50, 0);
+            MenuButtonPressed = ColorThemeHelper.MakeLighter(MenuHighlight, 0.2f, 0.7f, 2.5f);
             BorderColor = ControlColorDarkDark;
             UsingSystemColors = false;
             MakeTables();
@@ -140,6 +143,7 @@ namespace KlonsLIB.Forms
             ControlColorDark = Color.FromArgb(150, 150, 150);
             ControlColorDarkDark = Color.FromArgb(70, 70, 70);
             MenuHighlight = Color.FromArgb(240, 240, 240);
+            MenuButtonPressed = ColorThemeHelper.MakeLighter(MenuHighlight, 0.2f, 0.7f, 2.5f);
             BorderColor = ControlColorDarkDark;
             UsingSystemColors = false;
             MakeTables();
@@ -391,6 +395,11 @@ namespace KlonsLIB.Forms
                     mycolortheme.GetColor(dgv.RowHeadersDefaultCellStyle.BackColor, mycolortheme.ControlColor);
                 dgv.RowHeadersDefaultCellStyle.ForeColor =
                     mycolortheme.GetColor(dgv.RowHeadersDefaultCellStyle.ForeColor, mycolortheme.ControlTextColor);
+                //testing small RowHeadersWidth (without error icons)
+                if (dgv.RowHeadersWidth > 60)
+                {
+                    dgv.RowHeadersWidth = 30;
+                }
             }
             else if (c is MyGrid mygrid)
             {

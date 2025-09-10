@@ -1,13 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Composition;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using KlonsLIB.Forms;
+using KlonsLIB.Misc;
 using Microsoft.Reporting.WinForms;
 
 namespace KlonsLIB.Forms
@@ -28,6 +31,10 @@ namespace KlonsLIB.Forms
             CheckMyFontAndColors();
             reportViewer1.Messages = ReportHelper.ReportViewerMessages;
             reportViewer1.ToolStripRenderer = ColorThemeHelper.MyToolStripRenderer;
+
+            ExportButton = GetExportButton();
+            ExportButton.DisplayStyle = ToolStripItemDisplayStyle.ImageAndText;
+            ExportButton.Text = "Eksportēt";
 
             this.reportViewerData = reportViewerData;
 
@@ -62,6 +69,39 @@ namespace KlonsLIB.Forms
             {
                 this.Close();
                 Form_Error.ShowException(MyMainForm, new MyException("Neizdevās atvērt atskaiti", ex));
+            }
+        }
+
+        private ToolStripDropDownButton ExportButton;
+        private bool ExportButtonColorsApplied = false;
+
+        private ToolStripDropDownButton GetExportButton()
+        {
+            var reportToolBar = Utils.GetFieldValue(reportViewer1, "reportToolBar");
+            if (reportToolBar == null) return null;
+            var export = Utils.GetFieldValue(reportToolBar, "export") as ToolStripDropDownButton;
+            return export;
+        }
+
+        protected override void OnShown(EventArgs e)
+        {
+            base.OnShown(e);
+            reportViewer1.StatusChanged += ReportViewer1_StatusChanged;
+            CheckExportButton();
+        }
+
+        private void ReportViewer1_StatusChanged(object sender, EventArgs e)
+        {
+            CheckExportButton();
+        }
+
+        private void CheckExportButton()
+        {
+            if (ExportButtonColorsApplied || ExportButton == null) return;
+            if (ExportButton.Visible && ExportButton.Enabled && ExportButton.DropDownItems.Count > 0)
+            {
+                ColorThemeHelper.ApplyToControlA(ExportButton, MyColorTheme);
+                ExportButtonColorsApplied = true;
             }
         }
 

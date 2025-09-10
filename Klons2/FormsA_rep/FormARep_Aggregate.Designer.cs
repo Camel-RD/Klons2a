@@ -379,7 +379,7 @@
             dgvRows.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             dgvRows.Name = "dgvRows";
             dgvRows.ReadOnly = true;
-            dgvRows.RowHeadersWidth = 53;
+            dgvRows.RowHeadersWidth = 62;
             dgvRows.ShowCellToolTips = false;
             dgvRows.Size = new System.Drawing.Size(966, 340);
             dgvRows.TabIndex = 1;

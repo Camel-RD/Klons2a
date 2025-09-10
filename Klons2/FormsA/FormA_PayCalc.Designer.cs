@@ -189,7 +189,7 @@
             dgvRows.Location = new System.Drawing.Point(0, 81);
             dgvRows.Name = "dgvRows";
             dgvRows.ReadOnly = true;
-            dgvRows.RowHeadersWidth = 25;
+            dgvRows.RowHeadersWidth = 30;
             dgvRows.Size = new System.Drawing.Size(919, 353);
             dgvRows.TabIndex = 1;
             // 

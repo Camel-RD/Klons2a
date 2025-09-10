@@ -69,7 +69,7 @@ namespace KlonsF.Forms
             this.dgvRows.Location = new System.Drawing.Point(0, 0);
             this.dgvRows.Name = "dgvRows";
             this.dgvRows.ReadOnly = true;
-            this.dgvRows.RowHeadersWidth = 25;
+            this.dgvRows.RowHeadersWidth = 30;
             this.dgvRows.ShowCellToolTips = false;
             this.dgvRows.Size = new System.Drawing.Size(949, 450);
             this.dgvRows.TabIndex = 0;

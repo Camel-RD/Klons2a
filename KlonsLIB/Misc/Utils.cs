@@ -462,6 +462,21 @@ namespace KlonsLIB.Misc
             }
         }
 
+        public static object GetFieldValue(object obj, string fieldName)
+        {
+            if (obj == null) return null;
+            FieldInfo field = GetField(obj.GetType(), fieldName);
+            if (field == null) return null;
+            try
+            {
+                return field.GetValue(obj);
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+        }
+
         public static bool GetPublicPropertyValue(object obj, string propname, out object value)
         {
             value = null;

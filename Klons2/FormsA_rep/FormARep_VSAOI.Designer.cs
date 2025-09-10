@@ -222,7 +222,7 @@
             dgvRep.Dock = System.Windows.Forms.DockStyle.Fill;
             dgvRep.Location = new System.Drawing.Point(0, 106);
             dgvRep.Name = "dgvRep";
-            dgvRep.RowHeadersWidth = 53;
+            dgvRep.RowHeadersWidth = 62;
             dgvRep.Size = new System.Drawing.Size(924, 282);
             dgvRep.TabIndex = 1;
             // 

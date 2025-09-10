@@ -53,7 +53,7 @@
             this.dgvRows.Location = new System.Drawing.Point(0, 0);
             this.dgvRows.Name = "dgvRows";
             this.dgvRows.ReadOnly = true;
-            this.dgvRows.RowHeadersWidth = 53;
+            this.dgvRows.RowHeadersWidth = 62;
             this.dgvRows.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvRows.Size = new System.Drawing.Size(864, 450);
             this.dgvRows.TabIndex = 0;

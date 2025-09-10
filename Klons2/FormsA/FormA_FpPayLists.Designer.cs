@@ -442,7 +442,7 @@
             dataGridViewCellStyle22.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             dgvRows.RowHeadersDefaultCellStyle = dataGridViewCellStyle22;
-            dgvRows.RowHeadersWidth = 53;
+            dgvRows.RowHeadersWidth = 62;
             dgvRows.Size = new System.Drawing.Size(670, 235);
             dgvRows.TabIndex = 0;
             dgvRows.MyKeyDown += dgvRows_MyKeyDown;

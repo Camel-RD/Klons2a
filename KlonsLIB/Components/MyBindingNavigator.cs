@@ -24,7 +24,39 @@ namespace KlonsLIB.Components
                 this.Renderer = new MyToolStripRenderer(KlonsLIB.MyData.Settings.ColorTheme);
             DataGrid = null;
             CountItemFormat = " no {0}";
+            InitialImageScalingFactor.Width = ImageScalingSize.Width / 16.0f;
+            InitialImageScalingFactor.Height = ImageScalingSize.Height / 16.0f;
         }
+
+        SizeF InitialImageScalingFactor = SizeF.Empty;
+
+        [DefaultValue(typeof(Size), "16,16")]
+        [Category("Appearance")]
+        public new Size ImageScalingSize
+        {
+            get
+            {
+                return base.ImageScalingSize;
+            }
+            set
+            {
+                // DPI scaling is applied to the default ImageSize in the ToolStrip constructor
+                // when ImageScalingSize is assigned a value in InitializeComponent, DPI scaling is ignored
+                // default ImageScalingSize is (16, 16)
+                if (InitialImageScalingFactor == SizeF.Empty)
+                {
+                    base.ImageScalingSize = value;
+                }
+                else
+                {
+                    var sz = value;
+                    sz.Width = (int)((float)sz.Width * InitialImageScalingFactor.Width);
+                    sz.Height = (int)((float)sz.Height * InitialImageScalingFactor.Height);
+                    base.ImageScalingSize = sz;
+                }
+            }
+        }
+
 
         private System.Windows.Forms.ToolStripButton _SaveItem = null;
 

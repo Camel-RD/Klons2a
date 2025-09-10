@@ -176,7 +176,7 @@ namespace KlonsA.Forms
             this.dgvSar.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvSar.Location = new System.Drawing.Point(0, 29);
             this.dgvSar.Name = "dgvSar";
-            this.dgvSar.RowHeadersWidth = 53;
+            this.dgvSar.RowHeadersWidth = 62;
             this.dgvSar.Size = new System.Drawing.Size(866, 375);
             this.dgvSar.TabIndex = 6;
             this.dgvSar.MyKeyDown += new System.Windows.Forms.KeyEventHandler(this.dgvSar_MyKeyDown);

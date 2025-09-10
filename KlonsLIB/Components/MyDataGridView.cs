@@ -67,6 +67,7 @@ namespace KlonsLIB.Components
             set { base.ClipboardCopyMode = value; }
         }
 
+
         public MyDataGridView() : base()
         {
             GoingToDialog = false;

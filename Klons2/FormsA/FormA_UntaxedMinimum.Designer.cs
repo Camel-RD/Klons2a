@@ -193,7 +193,7 @@
             dgvRows.Location = new System.Drawing.Point(0, 39);
             dgvRows.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             dgvRows.Name = "dgvRows";
-            dgvRows.RowHeadersWidth = 53;
+            dgvRows.RowHeadersWidth = 62;
             dgvRows.ShowCellToolTips = false;
             dgvRows.Size = new System.Drawing.Size(824, 402);
             dgvRows.TabIndex = 1;

@@ -353,7 +353,7 @@ namespace KlonsA.Forms
             this.dgvRows.Location = new System.Drawing.Point(0, 39);
             this.dgvRows.Name = "dgvRows";
             this.dgvRows.ReadOnly = true;
-            this.dgvRows.RowHeadersWidth = 25;
+            this.dgvRows.RowHeadersWidth = 30;
             this.dgvRows.ShowCellToolTips = false;
             this.dgvRows.Size = new System.Drawing.Size(1232, 434);
             this.dgvRows.TabIndex = 3;

@@ -46,13 +46,17 @@ namespace KlonsF.Forms
             lbFile = new MyLabel();
             lbDescr = new MyLabel();
             lbNane = new MyLabel();
-            cmFbAdmin = new System.Windows.Forms.Button();
+            menuStrip1 = new System.Windows.Forms.MenuStrip();
+            miApraksts = new System.Windows.Forms.ToolStripMenuItem();
+            miRīki = new System.Windows.Forms.ToolStripMenuItem();
+            firebirdLietotājiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new System.Drawing.Point(5, 10);
+            label1.Location = new System.Drawing.Point(5, 9);
             label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             label1.Name = "label1";
             label1.Size = new System.Drawing.Size(77, 17);
@@ -62,7 +66,7 @@ namespace KlonsF.Forms
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new System.Drawing.Point(5, 43);
+            label2.Location = new System.Drawing.Point(5, 42);
             label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             label2.Name = "label2";
             label2.Size = new System.Drawing.Size(67, 17);
@@ -72,7 +76,7 @@ namespace KlonsF.Forms
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new System.Drawing.Point(5, 95);
+            label3.Location = new System.Drawing.Point(5, 90);
             label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             label3.Name = "label3";
             label3.Size = new System.Drawing.Size(41, 17);
@@ -82,7 +86,7 @@ namespace KlonsF.Forms
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new System.Drawing.Point(5, 155);
+            label4.Location = new System.Drawing.Point(5, 154);
             label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             label4.Name = "label4";
             label4.Size = new System.Drawing.Size(105, 17);
@@ -92,7 +96,7 @@ namespace KlonsF.Forms
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new System.Drawing.Point(5, 187);
+            label5.Location = new System.Drawing.Point(5, 186);
             label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             label5.Name = "label5";
             label5.Size = new System.Drawing.Size(53, 17);
@@ -101,7 +105,7 @@ namespace KlonsF.Forms
             // 
             // cmConnect
             // 
-            cmConnect.Location = new System.Drawing.Point(26, 226);
+            cmConnect.Location = new System.Drawing.Point(26, 225);
             cmConnect.Margin = new System.Windows.Forms.Padding(2);
             cmConnect.Name = "cmConnect";
             cmConnect.Size = new System.Drawing.Size(88, 57);
@@ -112,7 +116,7 @@ namespace KlonsF.Forms
             // 
             // cmChange
             // 
-            cmChange.Location = new System.Drawing.Point(132, 226);
+            cmChange.Location = new System.Drawing.Point(132, 225);
             cmChange.Margin = new System.Windows.Forms.Padding(2);
             cmChange.Name = "cmChange";
             cmChange.Size = new System.Drawing.Size(88, 57);
@@ -123,7 +127,7 @@ namespace KlonsF.Forms
             // 
             // cmExit
             // 
-            cmExit.Location = new System.Drawing.Point(237, 226);
+            cmExit.Location = new System.Drawing.Point(237, 225);
             cmExit.Margin = new System.Windows.Forms.Padding(2);
             cmExit.Name = "cmExit";
             cmExit.Size = new System.Drawing.Size(88, 57);
@@ -135,7 +139,7 @@ namespace KlonsF.Forms
             // cmUsers
             // 
             cmUsers.AutoSize = true;
-            cmUsers.Location = new System.Drawing.Point(261, 149);
+            cmUsers.Location = new System.Drawing.Point(261, 148);
             cmUsers.Margin = new System.Windows.Forms.Padding(2);
             cmUsers.Name = "cmUsers";
             cmUsers.Size = new System.Drawing.Size(34, 30);
@@ -147,7 +151,7 @@ namespace KlonsF.Forms
             // tbPSW
             // 
             tbPSW.BorderColor = System.Drawing.SystemColors.ControlText;
-            tbPSW.Location = new System.Drawing.Point(120, 185);
+            tbPSW.Location = new System.Drawing.Point(120, 184);
             tbPSW.Margin = new System.Windows.Forms.Padding(2);
             tbPSW.Name = "tbPSW";
             tbPSW.Size = new System.Drawing.Size(138, 23);
@@ -156,7 +160,7 @@ namespace KlonsF.Forms
             // tbUser
             // 
             tbUser.BorderColor = System.Drawing.SystemColors.ControlText;
-            tbUser.Location = new System.Drawing.Point(120, 153);
+            tbUser.Location = new System.Drawing.Point(120, 152);
             tbUser.Margin = new System.Windows.Forms.Padding(2);
             tbUser.Name = "tbUser";
             tbUser.Size = new System.Drawing.Size(138, 23);
@@ -167,7 +171,7 @@ namespace KlonsF.Forms
             lbFile.BorderColor = System.Drawing.SystemColors.ControlText;
             lbFile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             lbFile.ForeColor = System.Drawing.SystemColors.ControlText;
-            lbFile.Location = new System.Drawing.Point(90, 95);
+            lbFile.Location = new System.Drawing.Point(90, 94);
             lbFile.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             lbFile.Name = "lbFile";
             lbFile.Padding = new System.Windows.Forms.Padding(2);
@@ -180,7 +184,7 @@ namespace KlonsF.Forms
             lbDescr.BorderColor = System.Drawing.SystemColors.ControlText;
             lbDescr.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             lbDescr.ForeColor = System.Drawing.SystemColors.ControlText;
-            lbDescr.Location = new System.Drawing.Point(90, 43);
+            lbDescr.Location = new System.Drawing.Point(90, 42);
             lbDescr.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             lbDescr.Name = "lbDescr";
             lbDescr.Padding = new System.Windows.Forms.Padding(2);
@@ -193,7 +197,7 @@ namespace KlonsF.Forms
             lbNane.BorderColor = System.Drawing.SystemColors.ControlText;
             lbNane.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             lbNane.ForeColor = System.Drawing.SystemColors.ControlText;
-            lbNane.Location = new System.Drawing.Point(90, 10);
+            lbNane.Location = new System.Drawing.Point(90, 9);
             lbNane.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             lbNane.Name = "lbNane";
             lbNane.Padding = new System.Windows.Forms.Padding(2);
@@ -201,24 +205,45 @@ namespace KlonsF.Forms
             lbNane.TabIndex = 1;
             lbNane.Text = "myLabel2";
             // 
-            // cmFbAdmin
+            // menuStrip1
             // 
-            cmFbAdmin.AutoSize = true;
-            cmFbAdmin.Location = new System.Drawing.Point(261, 181);
-            cmFbAdmin.Margin = new System.Windows.Forms.Padding(2);
-            cmFbAdmin.Name = "cmFbAdmin";
-            cmFbAdmin.Size = new System.Drawing.Size(77, 30);
-            cmFbAdmin.TabIndex = 8;
-            cmFbAdmin.Text = "Fb Admin";
-            cmFbAdmin.UseVisualStyleBackColor = false;
-            cmFbAdmin.Click += cmFbAdmin_Click;
+            menuStrip1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            menuStrip1.GripMargin = new System.Windows.Forms.Padding(0);
+            menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { miApraksts, miRīki });
+            menuStrip1.Location = new System.Drawing.Point(0, 291);
+            menuStrip1.Name = "menuStrip1";
+            menuStrip1.Padding = new System.Windows.Forms.Padding(0, 0, 0, 2);
+            menuStrip1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            menuStrip1.Size = new System.Drawing.Size(354, 25);
+            menuStrip1.TabIndex = 9;
+            menuStrip1.Text = "menuStrip1";
+            // 
+            // miApraksts
+            // 
+            miApraksts.Name = "miApraksts";
+            miApraksts.Size = new System.Drawing.Size(74, 23);
+            miApraksts.Text = "Apraksts";
+            miApraksts.Click += miApraksts_Click;
+            // 
+            // miRīki
+            // 
+            miRīki.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { firebirdLietotājiToolStripMenuItem });
+            miRīki.Name = "miRīki";
+            miRīki.Size = new System.Drawing.Size(42, 23);
+            miRīki.Text = "Rīki";
+            // 
+            // firebirdLietotājiToolStripMenuItem
+            // 
+            firebirdLietotājiToolStripMenuItem.Name = "firebirdLietotājiToolStripMenuItem";
+            firebirdLietotājiToolStripMenuItem.Size = new System.Drawing.Size(172, 24);
+            firebirdLietotājiToolStripMenuItem.Text = "Firebird lietotāji";
+            firebirdLietotājiToolStripMenuItem.Click += cmFbAdmin_Click;
             // 
             // Form_StartUp
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            ClientSize = new System.Drawing.Size(354, 292);
-            Controls.Add(cmFbAdmin);
+            ClientSize = new System.Drawing.Size(354, 316);
             Controls.Add(cmUsers);
             Controls.Add(cmExit);
             Controls.Add(cmChange);
@@ -233,7 +258,9 @@ namespace KlonsF.Forms
             Controls.Add(label4);
             Controls.Add(label1);
             Controls.Add(lbNane);
+            Controls.Add(menuStrip1);
             FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            MainMenuStrip = menuStrip1;
             Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             MaximizeBox = false;
             MinimizeBox = false;
@@ -241,6 +268,8 @@ namespace KlonsF.Forms
             StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             Text = "Pieslēgties";
             Load += FormStartUp_Load;
+            menuStrip1.ResumeLayout(false);
+            menuStrip1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -261,6 +290,9 @@ namespace KlonsF.Forms
         private System.Windows.Forms.Button cmChange;
         private System.Windows.Forms.Button cmExit;
         private System.Windows.Forms.Button cmUsers;
-        private System.Windows.Forms.Button cmFbAdmin;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem miRīki;
+        private System.Windows.Forms.ToolStripMenuItem firebirdLietotājiToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem miApraksts;
     }
 }

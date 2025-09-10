@@ -125,7 +125,7 @@ namespace KlonsF.Forms
             dgvAcp21.Location = new System.Drawing.Point(0, 28);
             dgvAcp21.Margin = new System.Windows.Forms.Padding(2);
             dgvAcp21.Name = "dgvAcp21";
-            dgvAcp21.RowHeadersWidth = 53;
+            dgvAcp21.RowHeadersWidth = 62;
             dgvAcp21.RowTemplate.Height = 25;
             dgvAcp21.Size = new System.Drawing.Size(826, 312);
             dgvAcp21.TabIndex = 1;

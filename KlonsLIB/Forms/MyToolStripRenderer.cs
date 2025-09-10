@@ -720,67 +720,25 @@ namespace KlonsLIB.Forms
             UseSystemColors = false;
         }
 
-        public override Color MenuItemSelected
-        {
-            get { return MyColorTheme.MenuHighlight; }
-        }
-        public override Color MenuItemSelectedGradientBegin
-        {
-            get { return MyColorTheme.MenuHighlight; }
-        }
-        public override Color MenuItemSelectedGradientEnd
-        {
-            get { return MyColorTheme.MenuHighlight; }
-        }
-        public override Color MenuItemPressedGradientBegin
-        {
-            get { return MyColorTheme.MenuHighlight; }
-        }
-        public override Color MenuItemPressedGradientEnd
-        {
-            get { return MyColorTheme.MenuHighlight; }
-        }
-
-        public override Color ButtonCheckedHighlight
-        {
-            get { return MyColorTheme.MenuHighlight; }
-        }
-        public override Color ButtonSelectedHighlight
-        {
-            get { return MyColorTheme.MenuHighlight; }
-        }
-        public override Color ButtonSelectedBorder
-        {
-            get { return MyColorTheme.ControlColorLight; }
-        }
-        public override Color ButtonSelectedHighlightBorder
-        {
-            get { return MyColorTheme.MenuHighlight;}
-        }
-        public override Color ButtonSelectedGradientBegin
-        {
-            get { return MyColorTheme.MenuHighlight; }
-        }
-        public override Color ButtonSelectedGradientEnd
-        {
-            get { return MyColorTheme.MenuHighlight; }
-        }
-        public override Color ToolStripBorder
-        {
-            get { return MyColorTheme.ControlColorLight; }
-        }
-        public override Color CheckSelectedBackground
-        {
-            get { return MyColorTheme.MenuHighlight; }
-        }
-        public override Color CheckBackground
-        {
-            get { return MyColorTheme.MenuHighlight; }
-        }
-        public override Color CheckPressedBackground
-        {
-            get { return MyColorTheme.MenuHighlight; }
-        }
+        public override Color MenuItemSelected => MyColorTheme.MenuHighlight;
+        public override Color MenuItemSelectedGradientBegin => MyColorTheme.MenuHighlight;
+        public override Color MenuItemSelectedGradientEnd => MyColorTheme.MenuHighlight;
+        public override Color MenuItemPressedGradientBegin => MyColorTheme.MenuHighlight;
+        public override Color MenuItemPressedGradientEnd => MyColorTheme.MenuHighlight;
+        public override Color ButtonCheckedHighlight => MyColorTheme.MenuHighlight;
+        public override Color ButtonSelectedHighlight => MyColorTheme.MenuHighlight;
+        public override Color ButtonSelectedBorder => MyColorTheme.ControlColorLight;
+        public override Color ButtonSelectedHighlightBorder => MyColorTheme.MenuHighlight;
+        public override Color ButtonSelectedGradientBegin => MyColorTheme.MenuHighlight;
+        public override Color ButtonSelectedGradientEnd => MyColorTheme.MenuHighlight;
+        public override Color ToolStripBorder => MyColorTheme.ControlColorLight;
+        public override Color CheckSelectedBackground => MyColorTheme.MenuHighlight;
+        public override Color CheckBackground => MyColorTheme.MenuHighlight;
+        public override Color CheckPressedBackground => MyColorTheme.MenuHighlight;
+        public override Color ButtonPressedHighlight => MyColorTheme.MenuButtonPressed;
+        public override Color ButtonPressedGradientBegin => MyColorTheme.MenuButtonPressed;
+        public override Color ButtonPressedGradientEnd => MyColorTheme.MenuButtonPressed;
+        public override Color ButtonPressedGradientMiddle => MyColorTheme.MenuButtonPressed;
 
     }
 

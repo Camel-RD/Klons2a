@@ -254,7 +254,7 @@
             dgvLists.Location = new System.Drawing.Point(0, 0);
             dgvLists.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             dgvLists.Name = "dgvLists";
-            dgvLists.RowHeadersWidth = 53;
+            dgvLists.RowHeadersWidth = 62;
             dgvLists.ShowCellToolTips = false;
             dgvLists.Size = new System.Drawing.Size(838, 217);
             dgvLists.TabIndex = 0;
@@ -415,7 +415,7 @@
             dgvRows.Location = new System.Drawing.Point(0, 0);
             dgvRows.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             dgvRows.Name = "dgvRows";
-            dgvRows.RowHeadersWidth = 53;
+            dgvRows.RowHeadersWidth = 62;
             dgvRows.ShowCellToolTips = false;
             dgvRows.Size = new System.Drawing.Size(838, 252);
             dgvRows.TabIndex = 0;

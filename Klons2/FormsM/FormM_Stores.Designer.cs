@@ -124,7 +124,7 @@ namespace KlonsM.FormsM
             dgvRows.Dock = System.Windows.Forms.DockStyle.Fill;
             dgvRows.Location = new System.Drawing.Point(0, 30);
             dgvRows.Name = "dgvRows";
-            dgvRows.RowHeadersWidth = 40;
+            dgvRows.RowHeadersWidth = 30;
             dgvRows.ShowCellToolTips = false;
             dgvRows.Size = new System.Drawing.Size(1149, 370);
             dgvRows.TabIndex = 1;

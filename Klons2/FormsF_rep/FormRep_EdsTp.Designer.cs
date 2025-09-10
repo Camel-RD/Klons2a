@@ -142,7 +142,7 @@ namespace KlonsF.FormsReportParams
             dgvRows.Location = new System.Drawing.Point(0, 33);
             dgvRows.Name = "dgvRows";
             dgvRows.ReadOnly = true;
-            dgvRows.RowHeadersWidth = 25;
+            dgvRows.RowHeadersWidth = 30;
             dgvRows.ShowCellToolTips = false;
             dgvRows.Size = new System.Drawing.Size(1106, 417);
             dgvRows.TabIndex = 1;
