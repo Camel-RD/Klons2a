@@ -126,7 +126,7 @@ namespace KlonsLIB.Forms
             return null;
         }
 
-        public MyFormBase ShowForm(Type formtype, object param = null)
+        public MyFormBase ShowForm(Type formtype, object param = null, bool maximized = true)
         {
             if (!formtype.IsSubclassOf(typeof(MyFormBase)))
                 throw new Exception("_MyFormBase expected.");
@@ -138,7 +138,7 @@ namespace KlonsLIB.Forms
                 {
                     if (f1.Enabled && !f1.IsMyDialog)
                     {
-                        f1.Select();
+                        SwitchToChild(f1);
                         return f1;
                     }
                     else
@@ -158,7 +158,14 @@ namespace KlonsLIB.Forms
                 f = Activator.CreateInstance(formtype, param) as MyFormBase;
             _myChildren.Add(f);
             f.MdiParent = this;
-            f.Show();
+            if (maximized && f.WindowState != FormWindowState.Maximized)
+            {
+                ShowChildMaximized(f);
+            }
+            else
+            {
+                f.Show();
+            }
             return f;
         }
 
@@ -240,7 +247,8 @@ namespace KlonsLIB.Forms
         private void SelectLastForm()
         {
             if (_myChildren.Count == 0) return;
-            _myChildren[_myChildren.Count - 1].Select();
+            var frm = _myChildren[_myChildren.Count - 1];
+            SwitchToChild(frm);
         }
 
         public void OnMyCloseForm(MyFormBase form)
@@ -377,14 +385,13 @@ namespace KlonsLIB.Forms
             return response == DialogResult.Yes;
         }
 
-        public void SwitchToChild(Form child)
+        public void DoWhileSuspendingRedraw(Action act)
         {
             // Suspend redraw on the main form
             Components.NM.SendMessage(Handle, Components.NM.WM_SETREDRAW, 0, 0);
             try
             {
-                // Show the child form
-                child.Activate();
+                act();
             }
             finally
             {
@@ -398,5 +405,19 @@ namespace KlonsLIB.Forms
             }
         }
 
+        public void SwitchToChild(Form child)
+        {
+            DoWhileSuspendingRedraw(() => child.Activate());
+        }
+
+        public void ShowChildMaximized(Form child)
+        {
+            DoWhileSuspendingRedraw(() => { child.Show(); child.Activate(); });
+        }
+
+        public void CloseChild(Form child)
+        {
+            DoWhileSuspendingRedraw(() => child.Close());
+        }
     }
 }

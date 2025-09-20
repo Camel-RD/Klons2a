@@ -203,7 +203,7 @@ namespace KlonsF
         private void miCloseMDIForm_Click(object sender, EventArgs e)
         {
             if (ActiveMdiChild == null) return;
-            ActiveMdiChild.Close();
+            CloseChild(ActiveMdiChild);
         }
 
         private void miSistēma_DropDownOpening(object sender, EventArgs e)

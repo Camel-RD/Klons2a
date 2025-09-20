@@ -147,7 +147,7 @@ namespace KlonsLIB.Forms
         public void ShowMyDialog()
         {
             isMyDialog = true;
-            this.Show();
+            MyMainForm.ShowChildMaximized(this);
         }
 
         public DialogResult ShowMyDialogModal()
