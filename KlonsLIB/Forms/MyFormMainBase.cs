@@ -385,11 +385,11 @@ namespace KlonsLIB.Forms
             {
                 // Show the child form
                 child.Activate();
-                // Resume redraw
-                Components.NM.SendMessage(Handle, Components.NM.WM_SETREDRAW, 1, 0);
             }
             finally
             {
+                // Resume redraw
+                Components.NM.SendMessage(Handle, Components.NM.WM_SETREDRAW, 1, 0);
                 // Force a redraw
                 Components.NM.RedrawWindow(Handle, IntPtr.Zero, IntPtr.Zero,
                     Components.NM.RDW_FRAME | Components.NM.RDW_INVALIDATE |
