@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
 using System.Windows.Forms;
+using static System.Windows.Forms.DataFormats;
 
 namespace KlonsLIB.Forms
 {
@@ -339,7 +340,7 @@ namespace KlonsLIB.Forms
             int k = (int)e.ClickedItem.Tag;
             Form f = _myChildren[k];
             if (!f.Enabled) return;
-            f.Activate();
+            SwitchToChild(f);
         }
 
         private void _windowListToolStrip_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
@@ -348,7 +349,7 @@ namespace KlonsLIB.Forms
             if (k >= _myChildren.Count) return;
             Form f = _myChildren[k];
             if (!f.Enabled) return;
-            f.Activate();
+            SwitchToChild(f);
         }
 
         public virtual void ShowInfo(string msg, string title = "Info", Form owner = null)
@@ -374,6 +375,27 @@ namespace KlonsLIB.Forms
                 owner);
 
             return response == DialogResult.Yes;
+        }
+
+        public void SwitchToChild(Form child)
+        {
+            // Suspend redraw on the main form
+            Components.NM.SendMessage(Handle, Components.NM.WM_SETREDRAW, 0, 0);
+            try
+            {
+                // Show the child form
+                child.Activate();
+                // Resume redraw
+                Components.NM.SendMessage(Handle, Components.NM.WM_SETREDRAW, 1, 0);
+            }
+            finally
+            {
+                // Force a redraw
+                Components.NM.RedrawWindow(Handle, IntPtr.Zero, IntPtr.Zero,
+                    Components.NM.RDW_FRAME | Components.NM.RDW_INVALIDATE |
+                    Components.NM.RDW_ALLCHILDREN | Components.NM.RDW_UPDATENOW);
+
+            }
         }
 
     }

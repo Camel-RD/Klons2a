@@ -47,6 +47,13 @@ namespace KlonsLIB.Components
 
         public const int TCM_ADJUSTRECT = 0x1328;
 
+        public const int WM_SETREDRAW = 0x000B;
+        public const uint RDW_INVALIDATE = 0x0001;
+        public const uint RDW_ALLCHILDREN = 0x0080;
+        public const uint RDW_UPDATENOW = 0x0100;
+        public const uint RDW_FRAME = 0x0400;
+
+
         public delegate IntPtr WndProcDelegate(IntPtr hWnd, uint msg, IntPtr wParam, IntPtr lParam);
 
 
@@ -189,5 +196,8 @@ namespace KlonsLIB.Components
         [DllImport("user32.dll")] 
         public static extern uint GetDpiForWindow(IntPtr hWnd);
 
+
+        [DllImport("user32.dll")]
+        public static extern bool RedrawWindow(IntPtr hWnd, IntPtr lprcUpdate, IntPtr hrgnUpdate, uint flags);
     }
 }
