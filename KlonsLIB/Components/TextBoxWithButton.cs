@@ -105,7 +105,7 @@ namespace KlonsLIB.Components
                     {
                         using (var pen = new Pen(BackColor, 1))
                         {
-                            gdc.DrawLine(pen, x, 0, x, Height);
+                            gdc.DrawLine(pen, x, 1, x, Height - 2);
                         }
                     }
                     break;

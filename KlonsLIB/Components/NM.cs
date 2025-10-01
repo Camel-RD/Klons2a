@@ -21,8 +21,9 @@ namespace KlonsLIB.Components
         public const int WM_USER = 0x0400;
         public const int WM_NOTIFY = 0x004E;
         public const int WM_LBUTTONDOWN = 0x0201;
-
-
+        public const int WM_SETFOCUS = 0x0007;
+        public const int WM_MOUSEACTIVATE = 0x0021;
+        public const int MA_ACTIVATE = 1;
 
         public const int SCF_SELECTION = 1;
         public const int PFM_LINESPACING = 256;

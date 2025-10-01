@@ -13,6 +13,7 @@ namespace KlonsLIB.Components
 
         private bool m_DrawBorder = true;
         private Color m_BorderColor = SystemColors.ControlDarkDark;
+        private bool _mouseActivated = false;
 
         public MyTextBox()
         {
@@ -121,6 +122,11 @@ namespace KlonsLIB.Components
             }
         }
 
+        [Category("Behavior")]
+        [DefaultValue(true)]
+        public bool SelectTextOnFocue { get; set; } = true;
+
+
         protected override void WndProc(ref Message m)
         {
             switch (m.Msg)
@@ -151,6 +157,18 @@ namespace KlonsLIB.Components
                     base.WndProc(ref m);
                     break;
                 */
+
+                case NM.WM_LBUTTONDOWN:
+                    _mouseActivated = !Focused;
+                    base.WndProc(ref m);
+                    if (_mouseActivated)
+                    {
+                        if (SelectTextOnFocue)
+                            SelectAll();
+                        _mouseActivated = false;
+                    }
+                    break;
+
                 default:
                     base.WndProc(ref m);
                     break;
@@ -194,7 +212,8 @@ namespace KlonsLIB.Components
         protected override void OnGotFocus(EventArgs e)
         {
             base.OnGotFocus(e);
-            this.SelectAll();
+            if (!_mouseActivated && SelectTextOnFocue)
+                this.SelectAll();
         }
 
         protected override void OnValidating(CancelEventArgs e)
@@ -218,7 +237,6 @@ namespace KlonsLIB.Components
             }
             
         }
-
 
     }
 }
