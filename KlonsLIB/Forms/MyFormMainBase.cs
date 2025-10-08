@@ -156,6 +156,8 @@ namespace KlonsLIB.Forms
                 f = Activator.CreateInstance(formtype) as MyFormBase;
             else
                 f = Activator.CreateInstance(formtype, param) as MyFormBase;
+            f.AfterShown += F_AfterShown;
+            SuspendRedraw(true);
             _myChildren.Add(f);
             f.MdiParent = this;
             if (maximized && f.WindowState != FormWindowState.Maximized)
@@ -167,6 +169,13 @@ namespace KlonsLIB.Forms
                 f.Show();
             }
             return f;
+            
+            void F_AfterShown(object sender, EventArgs e)
+            {
+                f.AfterShown -= F_AfterShown;
+                Application.DoEvents();
+                SuspendRedraw(false);
+            }
         }
 
         public MyFormBase ShowFormDialog(Type formtype, object param = null, object param2 = null)
@@ -385,23 +394,41 @@ namespace KlonsLIB.Forms
             return response == DialogResult.Yes;
         }
 
-        public void DoWhileSuspendingRedraw(Action act)
+
+        private int suspendRedrawCounter = 0;
+        public void SuspendRedraw(bool suspend)
         {
-            // Suspend redraw on the main form
-            Components.NM.SendMessage(Handle, Components.NM.WM_SETREDRAW, 0, 0);
-            try
+            if (suspend)
             {
-                act();
+                suspendRedrawCounter++;
+                if (suspendRedrawCounter > 1) return;
+                Components.NM.SendMessage(Handle, Components.NM.WM_SETREDRAW, 0, 0);
             }
-            finally
+            else
             {
+                if (suspendRedrawCounter == 0) return;
+                suspendRedrawCounter--;
+                if (suspendRedrawCounter > 0) return;
+
                 // Resume redraw
                 Components.NM.SendMessage(Handle, Components.NM.WM_SETREDRAW, 1, 0);
                 // Force a redraw
                 Components.NM.RedrawWindow(Handle, IntPtr.Zero, IntPtr.Zero,
                     Components.NM.RDW_FRAME | Components.NM.RDW_INVALIDATE |
                     Components.NM.RDW_ALLCHILDREN | Components.NM.RDW_UPDATENOW);
+            }
+        }
 
+        public void DoWhileSuspendingRedraw(Action act)
+        {
+            SuspendRedraw(true);
+            try
+            {
+                act();
+            }
+            finally
+            {
+                SuspendRedraw(false);
             }
         }
 

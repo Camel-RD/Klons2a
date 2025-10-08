@@ -92,8 +92,10 @@ namespace KlonsLIB.Forms
         {
             base.OnShown(e);
             //CheckMyFontAndColors2();
+            AfterShown?.Invoke(this, null);
         }
 
+        internal event EventHandler AfterShown;
 
         private bool isMyDialog = false;
 
