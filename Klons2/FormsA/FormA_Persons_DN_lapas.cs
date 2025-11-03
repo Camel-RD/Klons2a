@@ -147,6 +147,9 @@ namespace KlonsA.Forms
             bsFullList.DataSource = fulllist;
             bsChanges.DataSource = changes;
             bsNoMatch.DataSource = nomatch;
+            tpNoMatch.Text = $"Nesakritības ({nomatch.Count})";
+            tpAll.Text = $"Lapas ({fulllist.Count})";
+            tcPages.UpdateFixedTabPageSizes();
         }
 
         public string CheckChanges()

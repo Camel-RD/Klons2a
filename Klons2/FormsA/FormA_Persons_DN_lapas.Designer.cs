@@ -31,26 +31,26 @@ namespace KlonsA.Forms
         {
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormA_Persons_DN_lapas));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle31 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle32 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle33 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle34 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle35 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle36 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle37 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle38 = new System.Windows.Forms.DataGridViewCellStyle();
             panel1 = new System.Windows.Forms.Panel();
             cmSaveChanges = new System.Windows.Forms.Button();
             cmLoadFromFile = new System.Windows.Forms.Button();
@@ -71,7 +71,7 @@ namespace KlonsA.Forms
             bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             tcPages = new KlonsLIB.Components.ExTabControl();
-            tabPage1 = new System.Windows.Forms.TabPage();
+            tpChanges = new System.Windows.Forms.TabPage();
             dgvChanges = new KlonsLIB.Components.MyDataGridView();
             dgcChangesName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             dgcChangesPK = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -82,7 +82,7 @@ namespace KlonsA.Forms
             dgcChangesEdsDt2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             dgcChangesVeids = new System.Windows.Forms.DataGridViewTextBoxColumn();
             dgcChangesAction = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            tabPage2 = new System.Windows.Forms.TabPage();
+            tpNoMatch = new System.Windows.Forms.TabPage();
             dgvNoMatch = new KlonsLIB.Components.MyDataGridView();
             dgcBadName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             dgcBadPK = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -93,7 +93,7 @@ namespace KlonsA.Forms
             dgcBadEdsDt2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             dgcBadEdsVeids = new System.Windows.Forms.DataGridViewTextBoxColumn();
             bsNoMatch = new System.Windows.Forms.BindingSource(components);
-            tabPage3 = new System.Windows.Forms.TabPage();
+            tpAll = new System.Windows.Forms.TabPage();
             dgvFull = new KlonsLIB.Components.MyDataGridView();
             dgcFullName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             dgcFullPK = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -107,12 +107,12 @@ namespace KlonsA.Forms
             ((System.ComponentModel.ISupportInitialize)bNav).BeginInit();
             bNav.SuspendLayout();
             tcPages.SuspendLayout();
-            tabPage1.SuspendLayout();
+            tpChanges.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvChanges).BeginInit();
-            tabPage2.SuspendLayout();
+            tpNoMatch.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvNoMatch).BeginInit();
             ((System.ComponentModel.ISupportInitialize)bsNoMatch).BeginInit();
-            tabPage3.SuspendLayout();
+            tpAll.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvFull).BeginInit();
             ((System.ComponentModel.ISupportInitialize)bsFullList).BeginInit();
             SuspendLayout();
@@ -195,9 +195,8 @@ namespace KlonsA.Forms
             bNav.DeleteItem = null;
             bNav.Dock = System.Windows.Forms.DockStyle.Bottom;
             bNav.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            bNav.ImageScalingSize = new System.Drawing.Size(16, 16);
             bNav.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { tslActiveGrid, bindingNavigatorMoveFirstItem, bindingNavigatorMovePreviousItem, bindingNavigatorSeparator, bindingNavigatorPositionItem, bindingNavigatorCountItem, bindingNavigatorSeparator1, bindingNavigatorMoveNextItem, bindingNavigatorMoveLastItem, bindingNavigatorSeparator2, bindingNavigatorDeleteItem });
-            bNav.Location = new System.Drawing.Point(0, 417);
+            bNav.Location = new System.Drawing.Point(0, 425);
             bNav.MoveFirstItem = bindingNavigatorMoveFirstItem;
             bNav.MoveLastItem = bindingNavigatorMoveLastItem;
             bNav.MoveNextItem = bindingNavigatorMoveNextItem;
@@ -205,21 +204,21 @@ namespace KlonsA.Forms
             bNav.Name = "bNav";
             bNav.PositionItem = bindingNavigatorPositionItem;
             bNav.SaveItem = null;
-            bNav.Size = new System.Drawing.Size(1058, 33);
+            bNav.Size = new System.Drawing.Size(1058, 25);
             bNav.TabIndex = 6;
             bNav.Text = "myBindingNavigator1";
             // 
             // bindingNavigatorCountItem
             // 
             bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            bindingNavigatorCountItem.Size = new System.Drawing.Size(50, 30);
+            bindingNavigatorCountItem.Size = new System.Drawing.Size(50, 22);
             bindingNavigatorCountItem.Text = " no {0}";
             bindingNavigatorCountItem.ToolTipText = "Ierakstu skaits";
             // 
             // tslActiveGrid
             // 
             tslActiveGrid.Name = "tslActiveGrid";
-            tslActiveGrid.Size = new System.Drawing.Size(16, 30);
+            tslActiveGrid.Size = new System.Drawing.Size(16, 22);
             tslActiveGrid.Text = "..";
             // 
             // bindingNavigatorMoveFirstItem
@@ -228,7 +227,7 @@ namespace KlonsA.Forms
             bindingNavigatorMoveFirstItem.Image = (System.Drawing.Image)resources.GetObject("bindingNavigatorMoveFirstItem.Image");
             bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
             bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(27, 30);
+            bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(23, 22);
             bindingNavigatorMoveFirstItem.Text = "Iet uz pirmo";
             // 
             // bindingNavigatorMovePreviousItem
@@ -237,13 +236,13 @@ namespace KlonsA.Forms
             bindingNavigatorMovePreviousItem.Image = (System.Drawing.Image)resources.GetObject("bindingNavigatorMovePreviousItem.Image");
             bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
             bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(27, 30);
+            bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(23, 22);
             bindingNavigatorMovePreviousItem.Text = "Iet uz iepriekšējo";
             // 
             // bindingNavigatorSeparator
             // 
             bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 33);
+            bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 25);
             // 
             // bindingNavigatorPositionItem
             // 
@@ -257,7 +256,7 @@ namespace KlonsA.Forms
             // bindingNavigatorSeparator1
             // 
             bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
-            bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 33);
+            bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
             // bindingNavigatorMoveNextItem
             // 
@@ -265,7 +264,7 @@ namespace KlonsA.Forms
             bindingNavigatorMoveNextItem.Image = (System.Drawing.Image)resources.GetObject("bindingNavigatorMoveNextItem.Image");
             bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
             bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(27, 30);
+            bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 22);
             bindingNavigatorMoveNextItem.Text = "Iet uz nākošo";
             // 
             // bindingNavigatorMoveLastItem
@@ -274,29 +273,29 @@ namespace KlonsA.Forms
             bindingNavigatorMoveLastItem.Image = (System.Drawing.Image)resources.GetObject("bindingNavigatorMoveLastItem.Image");
             bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
             bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(27, 30);
+            bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 22);
             bindingNavigatorMoveLastItem.Text = "Iet uz pēdējo";
             // 
             // bindingNavigatorSeparator2
             // 
             bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
-            bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 33);
+            bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
             // 
             // bindingNavigatorDeleteItem
             // 
             bindingNavigatorDeleteItem.Image = (System.Drawing.Image)resources.GetObject("bindingNavigatorDeleteItem.Image");
             bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
             bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            bindingNavigatorDeleteItem.Size = new System.Drawing.Size(71, 30);
+            bindingNavigatorDeleteItem.Size = new System.Drawing.Size(64, 22);
             bindingNavigatorDeleteItem.Text = "Dzēst";
             bindingNavigatorDeleteItem.Click += bindingNavigatorDeleteItem_Click;
             // 
             // tcPages
             // 
             tcPages.BorderColor = System.Drawing.SystemColors.ControlText;
-            tcPages.Controls.Add(tabPage1);
-            tcPages.Controls.Add(tabPage2);
-            tcPages.Controls.Add(tabPage3);
+            tcPages.Controls.Add(tpChanges);
+            tcPages.Controls.Add(tpNoMatch);
+            tcPages.Controls.Add(tpAll);
             tcPages.DefaultStyle = false;
             tcPages.Dock = System.Windows.Forms.DockStyle.Fill;
             tcPages.DrawMode = System.Windows.Forms.TabDrawMode.OwnerDrawFixed;
@@ -307,33 +306,34 @@ namespace KlonsA.Forms
             tcPages.Location = new System.Drawing.Point(0, 33);
             tcPages.Name = "tcPages";
             tcPages.SelectedIndex = 0;
-            tcPages.Size = new System.Drawing.Size(1058, 384);
+            tcPages.Size = new System.Drawing.Size(1058, 392);
+            tcPages.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             tcPages.TabIndex = 7;
             // 
-            // tabPage1
+            // tpChanges
             // 
-            tabPage1.Controls.Add(dgvChanges);
-            tabPage1.Location = new System.Drawing.Point(4, 25);
-            tabPage1.Name = "tabPage1";
-            tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            tabPage1.Size = new System.Drawing.Size(1050, 355);
-            tabPage1.TabIndex = 0;
-            tabPage1.Text = "Izmaiņas";
-            tabPage1.UseVisualStyleBackColor = true;
+            tpChanges.Controls.Add(dgvChanges);
+            tpChanges.Location = new System.Drawing.Point(4, 25);
+            tpChanges.Name = "tpChanges";
+            tpChanges.Padding = new System.Windows.Forms.Padding(3);
+            tpChanges.Size = new System.Drawing.Size(1050, 363);
+            tpChanges.TabIndex = 0;
+            tpChanges.Text = "Izmaiņas";
+            tpChanges.UseVisualStyleBackColor = true;
             // 
             // dgvChanges
             // 
             dgvChanges.AllowUserToAddRows = false;
             dgvChanges.AutoGenerateColumns = false;
             dgvChanges.BackgroundColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            dgvChanges.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle21.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle21.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            dataGridViewCellStyle21.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle21.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            dgvChanges.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle21;
             dgvChanges.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvChanges.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { dgcChangesName, dgcChangesPK, dgcChangesDt1, dgcChangesDbDT2, dgcChangesDBVeids, dgcChangesEdsDt1, dgcChangesEdsDt2, dgcChangesVeids, dgcChangesAction });
             dgvChanges.DataSource = bsChanges;
@@ -342,7 +342,7 @@ namespace KlonsA.Forms
             dgvChanges.Name = "dgvChanges";
             dgvChanges.RowHeadersWidth = 62;
             dgvChanges.ShowCellToolTips = false;
-            dgvChanges.Size = new System.Drawing.Size(1044, 349);
+            dgvChanges.Size = new System.Drawing.Size(1044, 357);
             dgvChanges.TabIndex = 0;
             dgvChanges.CellParsing += dgvChanges_CellParsing;
             dgvChanges.Enter += dgvChanges_Enter;
@@ -366,9 +366,9 @@ namespace KlonsA.Forms
             // dgcChangesDt1
             // 
             dgcChangesDt1.DataPropertyName = "DB_Dt1";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.Format = "dd.MM.yyyy";
-            dgcChangesDt1.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle22.Format = "dd.MM.yyyy";
+            dgcChangesDt1.DefaultCellStyle = dataGridViewCellStyle22;
             dgcChangesDt1.HeaderText = "datums no";
             dgcChangesDt1.MinimumWidth = 8;
             dgcChangesDt1.Name = "dgcChangesDt1";
@@ -377,9 +377,9 @@ namespace KlonsA.Forms
             // dgcChangesDbDT2
             // 
             dgcChangesDbDT2.DataPropertyName = "DB_Dt2";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.Format = "dd.MM.yyyy";
-            dgcChangesDbDT2.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle23.Format = "dd.MM.yyyy";
+            dgcChangesDbDT2.DefaultCellStyle = dataGridViewCellStyle23;
             dgcChangesDbDT2.HeaderText = "datums līdz";
             dgcChangesDbDT2.MinimumWidth = 8;
             dgcChangesDbDT2.Name = "dgcChangesDbDT2";
@@ -388,8 +388,8 @@ namespace KlonsA.Forms
             // dgcChangesDBVeids
             // 
             dgcChangesDBVeids.DataPropertyName = "DB_Veids";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dgcChangesDBVeids.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dgcChangesDBVeids.DefaultCellStyle = dataGridViewCellStyle24;
             dgcChangesDBVeids.HeaderText = "veids";
             dgcChangesDBVeids.MinimumWidth = 8;
             dgcChangesDBVeids.Name = "dgcChangesDBVeids";
@@ -398,9 +398,9 @@ namespace KlonsA.Forms
             // dgcChangesEdsDt1
             // 
             dgcChangesEdsDt1.DataPropertyName = "EDS_Dt1";
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.Format = "dd.MM.yyyy";
-            dgcChangesEdsDt1.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle25.Format = "dd.MM.yyyy";
+            dgcChangesEdsDt1.DefaultCellStyle = dataGridViewCellStyle25;
             dgcChangesEdsDt1.HeaderText = "EDS datums no";
             dgcChangesEdsDt1.MinimumWidth = 8;
             dgcChangesEdsDt1.Name = "dgcChangesEdsDt1";
@@ -409,9 +409,9 @@ namespace KlonsA.Forms
             // dgcChangesEdsDt2
             // 
             dgcChangesEdsDt2.DataPropertyName = "EDS_Dt2";
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.Format = "dd.MM.yyyy";
-            dgcChangesEdsDt2.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle26.Format = "dd.MM.yyyy";
+            dgcChangesEdsDt2.DefaultCellStyle = dataGridViewCellStyle26;
             dgcChangesEdsDt2.HeaderText = "EDS datums līdz";
             dgcChangesEdsDt2.MinimumWidth = 8;
             dgcChangesEdsDt2.Name = "dgcChangesEdsDt2";
@@ -420,8 +420,8 @@ namespace KlonsA.Forms
             // dgcChangesVeids
             // 
             dgcChangesVeids.DataPropertyName = "EDS_veids";
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dgcChangesVeids.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dgcChangesVeids.DefaultCellStyle = dataGridViewCellStyle27;
             dgcChangesVeids.HeaderText = "EDS veids";
             dgcChangesVeids.MinimumWidth = 8;
             dgcChangesVeids.Name = "dgcChangesVeids";
@@ -435,16 +435,16 @@ namespace KlonsA.Forms
             dgcChangesAction.Name = "dgcChangesAction";
             dgcChangesAction.Width = 160;
             // 
-            // tabPage2
+            // tpNoMatch
             // 
-            tabPage2.Controls.Add(dgvNoMatch);
-            tabPage2.Location = new System.Drawing.Point(4, 25);
-            tabPage2.Name = "tabPage2";
-            tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            tabPage2.Size = new System.Drawing.Size(1050, 350);
-            tabPage2.TabIndex = 1;
-            tabPage2.Text = "Nesakritības";
-            tabPage2.UseVisualStyleBackColor = true;
+            tpNoMatch.Controls.Add(dgvNoMatch);
+            tpNoMatch.Location = new System.Drawing.Point(4, 25);
+            tpNoMatch.Name = "tpNoMatch";
+            tpNoMatch.Padding = new System.Windows.Forms.Padding(3);
+            tpNoMatch.Size = new System.Drawing.Size(1050, 363);
+            tpNoMatch.TabIndex = 1;
+            tpNoMatch.Text = "Nesakritības";
+            tpNoMatch.UseVisualStyleBackColor = true;
             // 
             // dgvNoMatch
             // 
@@ -452,14 +452,14 @@ namespace KlonsA.Forms
             dgvNoMatch.AllowUserToDeleteRows = false;
             dgvNoMatch.AutoGenerateColumns = false;
             dgvNoMatch.BackgroundColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            dgvNoMatch.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            dgvNoMatch.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dgvNoMatch.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvNoMatch.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { dgcBadName, dgcBadPK, dgcBadDbDt1, dgcBadDbDt2, dgcBadDbVeids, dgcBadEdsDt1, dgcBadEdsDt2, dgcBadEdsVeids });
             dgvNoMatch.DataSource = bsNoMatch;
@@ -469,7 +469,7 @@ namespace KlonsA.Forms
             dgvNoMatch.ReadOnly = true;
             dgvNoMatch.RowHeadersWidth = 62;
             dgvNoMatch.ShowCellToolTips = false;
-            dgvNoMatch.Size = new System.Drawing.Size(1044, 344);
+            dgvNoMatch.Size = new System.Drawing.Size(1044, 357);
             dgvNoMatch.TabIndex = 0;
             dgvNoMatch.Enter += dgvNoMatch_Enter;
             // 
@@ -485,8 +485,8 @@ namespace KlonsA.Forms
             // dgcBadPK
             // 
             dgcBadPK.DataPropertyName = "PersonsCode";
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dgcBadPK.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dgcBadPK.DefaultCellStyle = dataGridViewCellStyle28;
             dgcBadPK.HeaderText = "personas kods";
             dgcBadPK.MinimumWidth = 8;
             dgcBadPK.Name = "dgcBadPK";
@@ -496,9 +496,9 @@ namespace KlonsA.Forms
             // dgcBadDbDt1
             // 
             dgcBadDbDt1.DataPropertyName = "DB_Dt1";
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle10.Format = "dd.MM.yyyy";
-            dgcBadDbDt1.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle29.Format = "dd.MM.yyyy";
+            dgcBadDbDt1.DefaultCellStyle = dataGridViewCellStyle29;
             dgcBadDbDt1.HeaderText = "datums no";
             dgcBadDbDt1.MinimumWidth = 8;
             dgcBadDbDt1.Name = "dgcBadDbDt1";
@@ -508,9 +508,9 @@ namespace KlonsA.Forms
             // dgcBadDbDt2
             // 
             dgcBadDbDt2.DataPropertyName = "DB_Dt2";
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle11.Format = "dd.MM.yyyy";
-            dgcBadDbDt2.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle30.Format = "dd.MM.yyyy";
+            dgcBadDbDt2.DefaultCellStyle = dataGridViewCellStyle30;
             dgcBadDbDt2.HeaderText = "datums līdz";
             dgcBadDbDt2.MinimumWidth = 8;
             dgcBadDbDt2.Name = "dgcBadDbDt2";
@@ -520,8 +520,8 @@ namespace KlonsA.Forms
             // dgcBadDbVeids
             // 
             dgcBadDbVeids.DataPropertyName = "DB_Veids";
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dgcBadDbVeids.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle31.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dgcBadDbVeids.DefaultCellStyle = dataGridViewCellStyle31;
             dgcBadDbVeids.HeaderText = "veids";
             dgcBadDbVeids.MinimumWidth = 8;
             dgcBadDbVeids.Name = "dgcBadDbVeids";
@@ -531,9 +531,9 @@ namespace KlonsA.Forms
             // dgcBadEdsDt1
             // 
             dgcBadEdsDt1.DataPropertyName = "EDS_Dt1";
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle13.Format = "dd.MM.yyyy";
-            dgcBadEdsDt1.DefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle32.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle32.Format = "dd.MM.yyyy";
+            dgcBadEdsDt1.DefaultCellStyle = dataGridViewCellStyle32;
             dgcBadEdsDt1.HeaderText = "EDS datums līdz";
             dgcBadEdsDt1.MinimumWidth = 8;
             dgcBadEdsDt1.Name = "dgcBadEdsDt1";
@@ -543,9 +543,9 @@ namespace KlonsA.Forms
             // dgcBadEdsDt2
             // 
             dgcBadEdsDt2.DataPropertyName = "EDS_Dt2";
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle14.Format = "dd.MM.yyyy";
-            dgcBadEdsDt2.DefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle33.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle33.Format = "dd.MM.yyyy";
+            dgcBadEdsDt2.DefaultCellStyle = dataGridViewCellStyle33;
             dgcBadEdsDt2.HeaderText = "EDS datums līdz";
             dgcBadEdsDt2.MinimumWidth = 8;
             dgcBadEdsDt2.Name = "dgcBadEdsDt2";
@@ -555,8 +555,8 @@ namespace KlonsA.Forms
             // dgcBadEdsVeids
             // 
             dgcBadEdsVeids.DataPropertyName = "EDS_Veids";
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dgcBadEdsVeids.DefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle34.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dgcBadEdsVeids.DefaultCellStyle = dataGridViewCellStyle34;
             dgcBadEdsVeids.HeaderText = "EDS veids";
             dgcBadEdsVeids.MinimumWidth = 8;
             dgcBadEdsVeids.Name = "dgcBadEdsVeids";
@@ -567,16 +567,16 @@ namespace KlonsA.Forms
             // 
             bsNoMatch.AllowNew = false;
             // 
-            // tabPage3
+            // tpAll
             // 
-            tabPage3.Controls.Add(dgvFull);
-            tabPage3.Location = new System.Drawing.Point(4, 25);
-            tabPage3.Name = "tabPage3";
-            tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            tabPage3.Size = new System.Drawing.Size(1050, 350);
-            tabPage3.TabIndex = 2;
-            tabPage3.Text = "Lapas";
-            tabPage3.UseVisualStyleBackColor = true;
+            tpAll.Controls.Add(dgvFull);
+            tpAll.Location = new System.Drawing.Point(4, 25);
+            tpAll.Name = "tpAll";
+            tpAll.Padding = new System.Windows.Forms.Padding(3);
+            tpAll.Size = new System.Drawing.Size(1050, 363);
+            tpAll.TabIndex = 2;
+            tpAll.Text = "Lapas";
+            tpAll.UseVisualStyleBackColor = true;
             // 
             // dgvFull
             // 
@@ -584,14 +584,14 @@ namespace KlonsA.Forms
             dgvFull.AllowUserToDeleteRows = false;
             dgvFull.AutoGenerateColumns = false;
             dgvFull.BackgroundColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle16.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle16.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            dataGridViewCellStyle16.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            dgvFull.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            dgvFull.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
             dgvFull.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvFull.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { dgcFullName, dgcFullPK, dgcFullDt1, dgcFullDt2, dgcFullVeids, dgcFullStatus });
             dgvFull.DataSource = bsFullList;
@@ -601,7 +601,7 @@ namespace KlonsA.Forms
             dgvFull.ReadOnly = true;
             dgvFull.RowHeadersWidth = 62;
             dgvFull.ShowCellToolTips = false;
-            dgvFull.Size = new System.Drawing.Size(1044, 344);
+            dgvFull.Size = new System.Drawing.Size(1044, 357);
             dgvFull.TabIndex = 0;
             dgvFull.Enter += dgvFull_Enter;
             // 
@@ -617,8 +617,8 @@ namespace KlonsA.Forms
             // dgcFullPK
             // 
             dgcFullPK.DataPropertyName = "PersonsCode";
-            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dgcFullPK.DefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle35.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dgcFullPK.DefaultCellStyle = dataGridViewCellStyle35;
             dgcFullPK.HeaderText = "personas kods";
             dgcFullPK.MinimumWidth = 8;
             dgcFullPK.Name = "dgcFullPK";
@@ -628,9 +628,9 @@ namespace KlonsA.Forms
             // dgcFullDt1
             // 
             dgcFullDt1.DataPropertyName = "EDS_Dt1";
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle18.Format = "dd.MM.yyyy";
-            dgcFullDt1.DefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle36.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle36.Format = "dd.MM.yyyy";
+            dgcFullDt1.DefaultCellStyle = dataGridViewCellStyle36;
             dgcFullDt1.HeaderText = "datums no";
             dgcFullDt1.MinimumWidth = 8;
             dgcFullDt1.Name = "dgcFullDt1";
@@ -640,9 +640,9 @@ namespace KlonsA.Forms
             // dgcFullDt2
             // 
             dgcFullDt2.DataPropertyName = "EDS_Dt2";
-            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle19.Format = "dd.MM.yyyy";
-            dgcFullDt2.DefaultCellStyle = dataGridViewCellStyle19;
+            dataGridViewCellStyle37.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle37.Format = "dd.MM.yyyy";
+            dgcFullDt2.DefaultCellStyle = dataGridViewCellStyle37;
             dgcFullDt2.HeaderText = "datums līdz";
             dgcFullDt2.MinimumWidth = 8;
             dgcFullDt2.Name = "dgcFullDt2";
@@ -652,8 +652,8 @@ namespace KlonsA.Forms
             // dgcFullVeids
             // 
             dgcFullVeids.DataPropertyName = "EDS_Veids";
-            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dgcFullVeids.DefaultCellStyle = dataGridViewCellStyle20;
+            dataGridViewCellStyle38.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dgcFullVeids.DefaultCellStyle = dataGridViewCellStyle38;
             dgcFullVeids.HeaderText = "veids";
             dgcFullVeids.MinimumWidth = 8;
             dgcFullVeids.Name = "dgcFullVeids";
@@ -688,12 +688,12 @@ namespace KlonsA.Forms
             bNav.ResumeLayout(false);
             bNav.PerformLayout();
             tcPages.ResumeLayout(false);
-            tabPage1.ResumeLayout(false);
+            tpChanges.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dgvChanges).EndInit();
-            tabPage2.ResumeLayout(false);
+            tpNoMatch.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dgvNoMatch).EndInit();
             ((System.ComponentModel.ISupportInitialize)bsNoMatch).EndInit();
-            tabPage3.ResumeLayout(false);
+            tpAll.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dgvFull).EndInit();
             ((System.ComponentModel.ISupportInitialize)bsFullList).EndInit();
             ResumeLayout(false);
@@ -719,14 +719,14 @@ namespace KlonsA.Forms
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
         private KlonsLIB.Components.ExTabControl tcPages;
-        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage tpChanges;
         private KlonsLIB.Components.MyDataGridView dgvChanges;
-        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TabPage tpNoMatch;
         private System.Windows.Forms.BindingSource bsNoMatch;
         private KlonsLIB.Components.MyDataGridView dgvNoMatch;
         private System.Windows.Forms.ToolStripLabel tslActiveGrid;
         private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;
-        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.TabPage tpAll;
         private KlonsLIB.Components.MyDataGridView dgvFull;
         private System.Windows.Forms.BindingSource bsFullList;
         private System.Windows.Forms.Button cmSaveChanges;

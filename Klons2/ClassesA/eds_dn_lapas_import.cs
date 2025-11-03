@@ -232,7 +232,7 @@ namespace KlonsA.Classes
                 if (f_db == null && f_eds == null) continue;
                 if (f_db != null && f_eds != null && f_db.Veids == f_eds.Veids) continue;
                 if((f_db == null || f_db.Veids.IsNOE()) &&
-                    f_eds == null || f_eds.Veids.IsNOE()) continue;
+                    (f_eds == null || f_eds.Veids.IsNOE())) continue;
                 var list_data = new List<DNLapaImportData>();
                 if(f_db != null)
                 {
