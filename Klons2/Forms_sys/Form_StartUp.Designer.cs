@@ -105,6 +105,7 @@ namespace KlonsF.Forms
             // 
             // cmConnect
             // 
+            cmConnect.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             cmConnect.Location = new System.Drawing.Point(26, 225);
             cmConnect.Margin = new System.Windows.Forms.Padding(2);
             cmConnect.Name = "cmConnect";
@@ -116,6 +117,7 @@ namespace KlonsF.Forms
             // 
             // cmChange
             // 
+            cmChange.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             cmChange.Location = new System.Drawing.Point(132, 225);
             cmChange.Margin = new System.Windows.Forms.Padding(2);
             cmChange.Name = "cmChange";
@@ -127,6 +129,7 @@ namespace KlonsF.Forms
             // 
             // cmExit
             // 
+            cmExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             cmExit.Location = new System.Drawing.Point(237, 225);
             cmExit.Margin = new System.Windows.Forms.Padding(2);
             cmExit.Name = "cmExit";
@@ -139,10 +142,11 @@ namespace KlonsF.Forms
             // cmUsers
             // 
             cmUsers.AutoSize = true;
+            cmUsers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             cmUsers.Location = new System.Drawing.Point(261, 148);
             cmUsers.Margin = new System.Windows.Forms.Padding(2);
             cmUsers.Name = "cmUsers";
-            cmUsers.Size = new System.Drawing.Size(34, 30);
+            cmUsers.Size = new System.Drawing.Size(36, 30);
             cmUsers.TabIndex = 8;
             cmUsers.Text = ">>";
             cmUsers.UseVisualStyleBackColor = false;

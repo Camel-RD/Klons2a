@@ -30,6 +30,7 @@ namespace KlonsF
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Main));
             menuStrip1 = new System.Windows.Forms.MenuStrip();
             miSistēma = new System.Windows.Forms.ToolStripMenuItem();
@@ -201,6 +202,7 @@ namespace KlonsF
             toolStripSeparator24 = new System.Windows.Forms.ToolStripSeparator();
             miMRealizācijasPašizmaksa = new System.Windows.Forms.ToolStripMenuItem();
             miMRealizācijasPašizmaksaPaDokumentiem = new System.Windows.Forms.ToolStripMenuItem();
+            miMEinvoiceManager = new System.Windows.Forms.ToolStripMenuItem();
             miMRīki = new System.Windows.Forms.ToolStripMenuItem();
             miMPilnsPārrēķins = new System.Windows.Forms.ToolStripMenuItem();
             miMAtlikumuPārrēķins = new System.Windows.Forms.ToolStripMenuItem();
@@ -222,17 +224,18 @@ namespace KlonsF
             toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
             miParProgrammu = new System.Windows.Forms.ToolStripMenuItem();
             miCloseMDIForm = new System.Windows.Forms.ToolStripMenuItem();
+            miSupport = new System.Windows.Forms.ToolStripMenuItem();
             myToolStrip = new System.Windows.Forms.ToolStrip();
             aDownloader1 = new ADownloader();
             tsWindowList = new System.Windows.Forms.ToolStrip();
             myStyleDefs = new KlonsP.Classes.MyStyleDefs();
-            miMEinvoiceManager = new System.Windows.Forms.ToolStripMenuItem();
+            ChatCheckTimer = new System.Windows.Forms.Timer(components);
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // menuStrip1
             // 
-            menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { miSistēma, miFReģistri, miFAtskaites, miAAlgas, miPamatlīdzekļi, miMNoliktava, miLogi, miInfo, miCloseMDIForm });
+            menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { miSistēma, miFReģistri, miFAtskaites, miAAlgas, miPamatlīdzekļi, miMNoliktava, miLogi, miInfo, miCloseMDIForm, miSupport });
             menuStrip1.Location = new System.Drawing.Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
@@ -1376,6 +1379,13 @@ namespace KlonsF
             miMRealizācijasPašizmaksaPaDokumentiem.Text = "Realizācijas pašizmaksas kontējumu kopsavilkums - pa dokumentiem";
             miMRealizācijasPašizmaksaPaDokumentiem.Click += miMRealizācijasPašizmaksaPaDokumentiem_Click;
             // 
+            // miMEinvoiceManager
+            // 
+            miMEinvoiceManager.Name = "miMEinvoiceManager";
+            miMEinvoiceManager.Size = new System.Drawing.Size(240, 24);
+            miMEinvoiceManager.Text = "e-Rēķinu pārlūks";
+            miMEinvoiceManager.Click += miMEinvoiceManager_Click;
+            // 
             // miMRīki
             // 
             miMRīki.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { miMPilnsPārrēķins, miMAtlikumuPārrēķins, miMIsGonePārrēķins });
@@ -1521,6 +1531,13 @@ namespace KlonsF
             miCloseMDIForm.Visible = false;
             miCloseMDIForm.Click += miCloseMDIForm_Click;
             // 
+            // miSupport
+            // 
+            miSupport.Name = "miSupport";
+            miSupport.Size = new System.Drawing.Size(70, 23);
+            miSupport.Text = "Atbalsts";
+            miSupport.Click += miSupport_Click;
+            // 
             // myToolStrip
             // 
             myToolStrip.Location = new System.Drawing.Point(0, 41);
@@ -1553,12 +1570,11 @@ namespace KlonsF
             myStyleDefs.MarkedCellBack = System.Drawing.Color.FromArgb(204, 104, 89);
             myStyleDefs.MarkedCellFore = System.Drawing.Color.White;
             // 
-            // miMEinvoiceManager
+            // ChatCheckTimer
             // 
-            miMEinvoiceManager.Name = "miMEinvoiceManager";
-            miMEinvoiceManager.Size = new System.Drawing.Size(240, 24);
-            miMEinvoiceManager.Text = "e-Rēķinu pārlūks";
-            miMEinvoiceManager.Click += miMEinvoiceManager_Click;
+            ChatCheckTimer.Enabled = true;
+            ChatCheckTimer.Interval = 600000;
+            ChatCheckTimer.Tick += ChatCheckTimer_Tick;
             // 
             // Form_Main
             // 
@@ -1789,5 +1805,7 @@ namespace KlonsF
         private System.Windows.Forms.ToolStripMenuItem miFEdsTp;
         private System.Windows.Forms.ToolStripMenuItem miAstrādājošoPārskats;
         private System.Windows.Forms.ToolStripMenuItem miMEinvoiceManager;
+        private System.Windows.Forms.ToolStripMenuItem miSupport;
+        private System.Windows.Forms.Timer ChatCheckTimer;
     }
 }

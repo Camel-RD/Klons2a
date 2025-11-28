@@ -35,12 +35,12 @@ namespace KlonsF.Forms
             cmEditList = new System.Windows.Forms.Button();
             cmCancel = new System.Windows.Forms.Button();
             dgvFiles = new MyDataGridView();
+            dgcFilesDescr = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            dgcFilesName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             bsFiles = new System.Windows.Forms.BindingSource(components);
             cmNew = new System.Windows.Forms.Button();
             cmDelete = new System.Windows.Forms.Button();
             panel1 = new System.Windows.Forms.Panel();
-            dgcFilesDescr = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            dgcFilesName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)dgvFiles).BeginInit();
             ((System.ComponentModel.ISupportInitialize)bsFiles).BeginInit();
             panel1.SuspendLayout();
@@ -48,6 +48,7 @@ namespace KlonsF.Forms
             // 
             // cmSelect
             // 
+            cmSelect.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             cmSelect.Location = new System.Drawing.Point(11, 12);
             cmSelect.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             cmSelect.Name = "cmSelect";
@@ -59,6 +60,7 @@ namespace KlonsF.Forms
             // 
             // cmEditList
             // 
+            cmEditList.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             cmEditList.Location = new System.Drawing.Point(11, 156);
             cmEditList.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             cmEditList.Name = "cmEditList";
@@ -71,6 +73,7 @@ namespace KlonsF.Forms
             // cmCancel
             // 
             cmCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            cmCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             cmCancel.Location = new System.Drawing.Point(11, 231);
             cmCancel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             cmCancel.Name = "cmCancel";
@@ -104,6 +107,26 @@ namespace KlonsF.Forms
             dgvFiles.TabIndex = 0;
             dgvFiles.CellDoubleClick += dgvFiles_CellDoubleClick;
             // 
+            // dgcFilesDescr
+            // 
+            dgcFilesDescr.DataPropertyName = "name";
+            dgcFilesDescr.HeaderText = "kods";
+            dgcFilesDescr.MinimumWidth = 9;
+            dgcFilesDescr.Name = "dgcFilesDescr";
+            dgcFilesDescr.ReadOnly = true;
+            dgcFilesDescr.ToolTipText = "datubāzes  kods";
+            dgcFilesDescr.Width = 200;
+            // 
+            // dgcFilesName
+            // 
+            dgcFilesName.DataPropertyName = "descr";
+            dgcFilesName.HeaderText = "apraksts";
+            dgcFilesName.MinimumWidth = 9;
+            dgcFilesName.Name = "dgcFilesName";
+            dgcFilesName.ReadOnly = true;
+            dgcFilesName.ToolTipText = "datubāzes apraksts";
+            dgcFilesName.Width = 340;
+            // 
             // bsFiles
             // 
             bsFiles.AllowNew = false;
@@ -111,6 +134,7 @@ namespace KlonsF.Forms
             // 
             // cmNew
             // 
+            cmNew.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             cmNew.Location = new System.Drawing.Point(11, 55);
             cmNew.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             cmNew.Name = "cmNew";
@@ -122,6 +146,7 @@ namespace KlonsF.Forms
             // 
             // cmDelete
             // 
+            cmDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             cmDelete.Location = new System.Drawing.Point(11, 117);
             cmDelete.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             cmDelete.Name = "cmDelete";
@@ -144,26 +169,6 @@ namespace KlonsF.Forms
             panel1.Name = "panel1";
             panel1.Size = new System.Drawing.Size(114, 281);
             panel1.TabIndex = 6;
-            // 
-            // dgcFilesDescr
-            // 
-            dgcFilesDescr.DataPropertyName = "name";
-            dgcFilesDescr.HeaderText = "kods";
-            dgcFilesDescr.MinimumWidth = 9;
-            dgcFilesDescr.Name = "dgcFilesDescr";
-            dgcFilesDescr.ReadOnly = true;
-            dgcFilesDescr.ToolTipText = "datubāzes  kods";
-            dgcFilesDescr.Width = 200;
-            // 
-            // dgcFilesName
-            // 
-            dgcFilesName.DataPropertyName = "descr";
-            dgcFilesName.HeaderText = "apraksts";
-            dgcFilesName.MinimumWidth = 9;
-            dgcFilesName.Name = "dgcFilesName";
-            dgcFilesName.ReadOnly = true;
-            dgcFilesName.ToolTipText = "datubāzes apraksts";
-            dgcFilesName.Width = 340;
             // 
             // Form_Files
             // 

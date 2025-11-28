@@ -17,6 +17,8 @@ using KlonsF.FormsReportParams;
 using KlonsLIB.Forms;
 using KlonsLIB.Misc;
 using System.Diagnostics;
+using KlonsF.Forms_sys;
+using KlonsF.ClassesChat;
 
 namespace KlonsF
 {
@@ -85,6 +87,7 @@ namespace KlonsF
             base.OnShown(e);
             ChangeDB();
             DoVersionCheck();
+            CheckForChatUpdates(true);
         }
 
         private void FormMain_Shown(object sender, EventArgs e)
@@ -158,6 +161,12 @@ namespace KlonsF
 
             try
             {
+                MyData.ChatApi.GetChatData().SaveChat(MyData.ChatDataFileName);
+            }
+            catch (Exception) { }
+
+            try
+            {
                 if (this.WindowState == FormWindowState.Maximized)
                 {
                     MyData.Settings.WindowPos = "max";
@@ -217,6 +226,46 @@ namespace KlonsF
             miShowWindowList.Checked = b;
             MyData.Settings.ShowWindowListToolStrip = b;
             tsWindowList.Visible = b;
+        }
+
+        async void CheckForChatUpdates(bool onappstart)
+        {
+            var chatdata = MyData.ChatApi.GetChatData();
+            if (chatdata.ChatCheckInbox == EChatCheckInbox.Never)
+                return;
+
+            if (!onappstart && chatdata.ChatCheckInbox == EChatCheckInbox.OnAppStart)
+                return;
+
+            if (!onappstart)
+            {
+                long ms = chatdata.ChatCheckInbox switch
+                {
+                    EChatCheckInbox.After1Hour => 3600 * 1000,
+                    EChatCheckInbox.After5Hour => 5 * 3600 * 1000,
+                    EChatCheckInbox.After1Day => 24 * 3600 * 1000,
+                    _ => 0
+                };
+                if (ms == 0) return;
+                if ((DateTime.Now - chatdata.LastChecked).TotalMilliseconds < ms)
+                    return;
+            }
+            var (ret, msg) = await MyData.ChatApi.ChatHasNewData();
+            if (ret)
+            {
+                HighLightSupportMenu(true);
+            }
+        }
+
+        public void HighLightSupportMenu(bool value)
+        {
+            var c = value ? Color.FromArgb(193, 124, 32) : menuStrip1.ForeColor;
+            miSupport.ForeColor = c;
+        }
+
+        private void ChatCheckTimer_Tick(object sender, EventArgs e)
+        {
+            CheckForChatUpdates(false);
         }
 
 
@@ -470,6 +519,11 @@ namespace KlonsF
             if (!CloseAllForms()) return;
             Application.Exit();
         }
+        private void miSupport_Click(object sender, EventArgs e)
+        {
+            HighLightSupportMenu(false);
+            ShowForm(typeof(Form_Chat));
+        }
 
 
         #endregion
@@ -624,7 +678,6 @@ namespace KlonsF
             var myfolder = MyData.GetManualsPath();
             try { Process.Start("explorer.exe", myfolder); } catch (Exception) { }
         }
-
 
         #endregion
 

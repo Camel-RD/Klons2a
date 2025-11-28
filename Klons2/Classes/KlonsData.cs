@@ -16,6 +16,7 @@ using KlonsLIB.Forms;
 using KlonsLIB.Misc;
 using FirebirdSql.Data.FirebirdClient;
 using System.Collections.Generic;
+using KlonsF.ClassesChat;
 
 namespace KlonsF.Classes
 {
@@ -32,16 +33,17 @@ namespace KlonsF.Classes
         private DataSetHelper _klonsADataSetHelper = null;
         private DataSetHelper _klonsARepDataSetHelper = null;
 
-        public string Version = "034";
-        public string VersionStr = "2025.11.#1";
+        public string Version = "035";
+        public string VersionStr = "2025.11.#2";
 
-        public string SettingsFileName = GetBasePath() + "\\Config\\Settings.xml";
-        public string MasterListFileName = GetBasePath() + "\\Config\\MasterList.xml";
-        public string EInvoiceManagerConfigFileName = GetBasePath() + "\\Config\\EInvoiceManagerConfig.xml";
-        public string FolderForXMLReports = GetBasePath() + "\\XMLReports";
-        private string FolderForDBBackUp = GetBasePath() + "\\DB-backup";
-        public string FolderForFbEmbed25 = GetBasePath() + "\\FbEmbed25" + (Environment.Is64BitProcess ? "x64" : "");
-        public string FolderForFbEmbed4 = GetBasePath() + "\\FbEmbed4" + (Environment.Is64BitProcess ? "x64" : "");
+        public readonly string SettingsFileName = GetBasePath() + "\\Config\\Settings.xml";
+        public readonly string MasterListFileName = GetBasePath() + "\\Config\\MasterList.xml";
+        public readonly string EInvoiceManagerConfigFileName = GetBasePath() + "\\Config\\EInvoiceManagerConfig.xml";
+        public readonly string FolderForXMLReports = GetBasePath() + "\\XMLReports";
+        private readonly string FolderForDBBackUp = GetBasePath() + "\\DB-backup";
+        public readonly string FolderForFbEmbed25 = GetBasePath() + "\\FbEmbed25" + (Environment.Is64BitProcess ? "x64" : "");
+        public readonly string FolderForFbEmbed4 = GetBasePath() + "\\FbEmbed4" + (Environment.Is64BitProcess ? "x64" : "");
+        public readonly string ChatDataFileName = GetBasePath() + "\\Config\\Chat.xml";
 
         public KlonsSettings Settings = new KlonsSettings();
         public MasterList MasterList { get; private set; }
@@ -50,6 +52,7 @@ namespace KlonsF.Classes
         private KlonsParams _Params = null;
         public ReportHelperF ReportHelperF { get; private set; }
         public ReportHelperA ReportHelperA { get; private set; }
+        public ChatApi ChatApi { get; private set; }
 
         private string _currentUserName = "";
         public Form_Main MyMainForm { get { return Form_Main.MyInstance as Form_Main; } }
@@ -81,6 +84,8 @@ namespace KlonsF.Classes
             
             ReportHelperF = new ReportHelperF();
             ReportHelperA = new ReportHelperA();
+
+            ChatApi = new ChatApi();
 
             MakeDataSetHelpwers();
         }
