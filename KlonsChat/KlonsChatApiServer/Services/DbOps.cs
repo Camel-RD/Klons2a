@@ -1,23 +1,40 @@
-﻿using System;
+﻿using KlonsChatDb.Models;
+using KlonsChatDto.Models;
+using Microsoft.AspNetCore.SignalR;
+using Microsoft.EntityFrameworkCore;
+using System;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.EntityFrameworkCore;
-using KlonsChatDb.Models;
-using KlonsChatDto.Models;
 
 namespace KlonsChatApiServer.Services
 {
     public class DbOps
     {
         private readonly KlonsqDbContext DbCtx;
+        private readonly IHubContext<SignalHub> Hub;
 
         public static string AdminGuid;
 
-        public DbOps(KlonsqDbContext context)
+        public DbOps(KlonsqDbContext context, IHubContext<SignalHub> hub)
         {
             DbCtx = context;
+            Hub = hub;
         }
 
+        public async Task<bool> SendSignalToUser(string userid, string msg)
+        {
+            try
+            {
+                var userConnections = SignalHub.GetConnectionsForUser(userid);
+                foreach (var connectionId in userConnections)
+                    await Hub.Clients.Client(connectionId).SendAsync("ReceiveMessage", msg);
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+            return true;
+        }
         public async Task<AddItemsResult> AddItem(AddItemRequest reqdata)
         {
             var ret = new AddItemsResult();
@@ -70,6 +87,8 @@ namespace KlonsChatApiServer.Services
             DbCtx.Add(item);
             await DbCtx.SaveChangesAsync();
             ret.Item = ItemMapper.Map(item);
+            if (item.Type == EItemType.QuestionNew)
+                await SendSignalToUser(AdminGuid, "Chat updated");
             return ret;
         }
 

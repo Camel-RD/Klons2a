@@ -1,15 +1,20 @@
 using KlonsChatApiServer.Services;
 using KlonsChatDb.Models;
 using KlonsChatDto.Models;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.IdentityModel.Logging;
+using Microsoft.IdentityModel.Tokens;
 using System;
 using System.Net;
+using System.Text;
 using System.Threading.RateLimiting;
+using System.Threading.Tasks;
 
 namespace KlonsChatApiServer
 {
@@ -27,6 +32,19 @@ namespace KlonsChatApiServer
             DbOps.AdminGuid =
                 builder.Configuration.GetSection("Admin:AdminId").Value ??
                     throw new InvalidOperationException("'Admin:AdminId' not found.");
+
+            UserManager.Issuer =
+                builder.Configuration.GetSection("JwtConfig:ValidIssuer").Value ??
+                    throw new InvalidOperationException("'JwtConfig:ValidIssuer' not found.");
+
+            UserManager.Audience =
+                builder.Configuration.GetSection("JwtConfig:ValidAudiences").Value ??
+                    throw new InvalidOperationException("'JwtConfig:ValidAudiences' not found.");
+
+            UserManager.Secret =
+                builder.Configuration.GetSection("JwtConfig:Secret").Value ??
+                    throw new InvalidOperationException("'JwtConfig:Secret' not found.");
+
 
             builder.Services.AddDbContext<KlonsqDbContext>(options =>
             {
@@ -73,11 +91,64 @@ namespace KlonsChatApiServer
             });
 
 
+            builder.Services.AddAuthentication(options =>
+            {
+                options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+                options.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
+            }).AddJwtBearer(options =>
+            {
+                var secret = builder.Configuration["JwtConfig:Secret"];
+                var issuer = builder.Configuration["JwtConfig:ValidIssuer"];
+                var audience = builder.Configuration["JwtConfig:ValidAudiences"];
+                if (secret is null || issuer is null || audience is null)
+                    throw new ApplicationException("Jwt is not set in the configuration");
+                options.SaveToken = true;
+                options.RequireHttpsMetadata = false;
+                options.TokenValidationParameters = new TokenValidationParameters()
+                {
+                    ValidateIssuer = true,
+                    ValidateAudience = true,
+                    ValidAudience = audience,
+                    ValidIssuer = issuer,
+                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(secret))
+                };
+                // Hook the SignalR event to check for the token in the query string
+                options.Events = new JwtBearerEvents
+                {
+                    OnMessageReceived = context =>
+                    {
+                        var accessToken = context.Request.Query["access_token"];
+                        var path = context.HttpContext.Request.Path;
+                        if (!string.IsNullOrEmpty(accessToken) && path.StartsWithSegments("/signalhub"))
+                        {
+                            context.Token = accessToken;
+                        }
+                        return Task.CompletedTask;
+                    },
+                    OnTokenValidated = context =>
+                    {
+                        return Task.CompletedTask;
+                    },
+                    OnAuthenticationFailed = context =>
+                    {
+
+                        return Task.CompletedTask;
+                    },
+
+                };
+            });
+
+            IdentityModelEventSource.ShowPII = true;
+            IdentityModelEventSource.LogCompleteSecurityArtifact = true;
+
             builder.Services.AddAuthorization();
+            builder.Services.AddSignalR();
 
             var app = builder.Build();
 
             app.UseAuthorization();
+            app.UseAuthentication();
 
             app.MapGet("/items/{userguid}/{lastid}", async (
                 string userguid, int lastid, DbOps dbops) =>
@@ -114,6 +185,15 @@ namespace KlonsChatApiServer
                 return ret;
             });
 
+            app.MapGet("/login/{userguid}", (string userguid) =>
+            {
+                if (userguid != DbOps.AdminGuid)
+                    return Results.Forbid();
+                var token = UserManager.GenerateToken(userguid);
+                return Results.Ok(token);
+            });
+
+            app.MapHub<SignalHub>("/signalhub");
 
             app.Run();
         }

@@ -58,7 +58,7 @@ namespace KlonsF.ClassesChat
             if (string.IsNullOrEmpty(content))
                 return "Vispirms jāieraksta jautājums.";
 
-            if (string.IsNullOrEmpty(ChatData.UserGuid))
+            if (string.IsNullOrEmpty(ChatData.UserGuid) || ChatData.UserGuid.Length < 20)
             {
                 var b = new byte[16];
                 Random.Shared.NextBytes(b);
