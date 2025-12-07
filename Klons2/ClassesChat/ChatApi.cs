@@ -1,7 +1,6 @@
 ﻿using KlonsChatDto.Models;
 using KlonsF.Classes;
 using KlonsF.Properties;
-using NPOI.SS.Formula.Functions;
 using Refit;
 using System;
 using System.Collections.Generic;
@@ -38,17 +37,8 @@ namespace KlonsF.ClassesChat
 
         void InitRefit()
         {
-            var refitsettings = new RefitSettings();
-            var serializeroptions = new JsonSerializerOptions()
-            {
-                PropertyNameCaseInsensitive = true,
-                PropertyNamingPolicy = null
-            };
-            serializeroptions.Converters.Add(new ObjectToInferredTypesConverter());
-            var customserializer = new SystemTextJsonContentSerializer(serializeroptions);
-            refitsettings.ContentSerializer = customserializer;
             var serverurl = Settings.Default.ChatServerURL;
-            _ChatApi = RestService.For<IChatApi>(serverurl, refitsettings);
+            _ChatApi = KlonsChatApiClientFactory.Create(serverurl);
         }
 
         public async Task<string> AddItem(string content)
@@ -70,21 +60,14 @@ namespace KlonsF.ClassesChat
                 UserGuid = ChatData.UserGuid,
             };
             ChatData.LastChecked = DateTime.Now;
-            try
-            {
-                var ret = await _ChatApi.AddItem(req);
-                if (!ret.IsSuccessful || ret.Content.Result == EAddItemsResult.BadRequest ||
-                    ret.Content.Item?.Content == null)
-                {
-                    return "Neizdevās nosūtīt jautājumu.";
-                }
-                var addeditem = ret.Content.Item;
-                var nuewitems = ChatData.Add([addeditem]);
-            }
-            catch(Exception)
+            var ret = await _ChatApi.AddItem(req);
+            if (!ret.IsSuccessful || ret.Content.Result == EAddItemsResult.BadRequest ||
+                ret.Content.Item?.Content == null)
             {
                 return "Neizdevās nosūtīt jautājumu.";
             }
+            var addeditem = ret.Content.Item;
+            var nuewitems = ChatData.Add([addeditem]);
             ChatData.SaveChat(ChatFileName);
             return "OK";
         }
@@ -102,21 +85,14 @@ namespace KlonsF.ClassesChat
                     lastid = lastitem.Id.Value;
             }
             ChatData.LastChecked = DateTime.Now;
-            try
+            var ret = await _ChatApi.GetItems(ChatData.UserGuid, lastid);
+            if (!ret.IsSuccessful || ret.Content.Result == EGetItemsResult.None)
             {
-                var ret = await _ChatApi.GetItems(ChatData.UserGuid, lastid);
-                if (!ret.IsSuccessful || ret.Content.Result == EGetItemsResult.None)
-                {
-                    return "Neizdevās saņemt datus.";
-                }
-                if (ret.Content.Items != null && ret.Content.Items.Count > 0)
-                {
-                    var nuewitems = ChatData.Add(ret.Content.Items);
-                }
+                return "Neizdevās saņemt datus.";
             }
-            catch(Exception)
+            if (ret.Content.Items != null && ret.Content.Items.Count > 0)
             {
-                return "Neizdevās nosūtīt jautājumu.";
+                var nuewitems = ChatData.Add(ret.Content.Items);
             }
             ChatData.SaveChat(ChatFileName);
             return "OK";
@@ -127,16 +103,9 @@ namespace KlonsF.ClassesChat
             CheckChatApi();
             ChatData.LastChecked = DateTime.Now;
             int itemcountbefore = ChatData.ChatItems.Count;
-            try
-            {
-                var rt = await UpdateChat();
-                if (rt != "OK")
-                    return (false, rt);
-            }
-            catch(Exception)
-            {
-                return (false, "Neizdevās nosūtīt jautājumu.");
-            }
+            var rt = await UpdateChat();
+            if (rt != "OK")
+                return (false, rt);
             bool gotnews = ChatData.ChatItems.Count > itemcountbefore;
             return (gotnews, "OK");
         }
@@ -147,17 +116,10 @@ namespace KlonsF.ClassesChat
             if (string.IsNullOrEmpty(ChatData.UserGuid))
                 return "Nav norādīts lietotāja identifikators.";
             ChatData.LastChecked = DateTime.Now;
-            try
+            var ret = await _ChatApi.ClearChat(ChatData.UserGuid);
+            if (!ret.IsSuccessful || ret.Content.Result == EClearChatResult.None)
             {
-                var ret = await _ChatApi.ClearChat(ChatData.UserGuid);
-                if (!ret.IsSuccessful || ret.Content.Result == EClearChatResult.None)
-                {
-                    return "Neizdevās nosūtīt pieprasījumu.";
-                }
-            }
-            catch(Exception)
-            {
-                return "Neizdevās nosūtīt jautājumu.";
+                return "Neizdevās nosūtīt pieprasījumu.";
             }
             ChatData.ChatItems.Clear();
             if (ChatData.HasChangesSettings())
