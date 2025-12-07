@@ -25,25 +25,12 @@ namespace KlonsChatApiServer
             var builder = WebApplication.CreateBuilder(args);
 
             var connectionString =
-                builder.Configuration.GetConnectionString(
-                    "VotesConnection") ??
+                builder.Configuration.GetConnectionString("VotesConnection") ??
                     throw new InvalidOperationException("Connection string 'VotesConnection' not found.");
 
-            DbOps.AdminGuid =
-                builder.Configuration.GetSection("Admin:AdminId").Value ??
-                    throw new InvalidOperationException("'Admin:AdminId' not found.");
-
-            UserManager.Issuer =
-                builder.Configuration.GetSection("JwtConfig:ValidIssuer").Value ??
-                    throw new InvalidOperationException("'JwtConfig:ValidIssuer' not found.");
-
-            UserManager.Audience =
-                builder.Configuration.GetSection("JwtConfig:ValidAudiences").Value ??
-                    throw new InvalidOperationException("'JwtConfig:ValidAudiences' not found.");
-
-            UserManager.Secret =
-                builder.Configuration.GetSection("JwtConfig:Secret").Value ??
-                    throw new InvalidOperationException("'JwtConfig:Secret' not found.");
+            DbOps.AdminGuid = builder.Configuration.GetRequiredSection("Admin:AdminId").Value;
+            UserManager.TokenConfig = builder.Configuration.GetRequiredSection("JwtConfig").Get<UserManager.JwtConfig>();
+            UserManager.RateLimiter = builder.Configuration.GetRequiredSection("RateLimiter").Get<UserManager.RateLimiterConfig>();
 
 
             builder.Services.AddDbContext<KlonsqDbContext>(options =>
@@ -67,7 +54,7 @@ namespace KlonsChatApiServer
                 {
                     builder.AllowAnyHeader()
                         .WithMethods("GET", "POST", "PUT", "DELETE")
-                        .WithOrigins("http://localhost", "https://localhost")
+                        .WithOrigins("http://localhost", "https://localhost", "https://zbks.eu")
                         .AllowCredentials();
                 });
             });
@@ -84,9 +71,9 @@ namespace KlonsChatApiServer
                         partitionKey: httpContext.Connection.RemoteIpAddress.ToString(),
                         factory: _ => new FixedWindowRateLimiterOptions
                         {
-                            QueueLimit = 10,
-                            PermitLimit = 10,
-                            Window = TimeSpan.FromSeconds(15)
+                            QueueLimit = UserManager.RateLimiter.QueueLimit,
+                            PermitLimit = UserManager.RateLimiter.PermitLimit,
+                            Window = TimeSpan.FromSeconds(UserManager.RateLimiter.Window)
                         }));
             });
 
@@ -98,20 +85,15 @@ namespace KlonsChatApiServer
                 options.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
             }).AddJwtBearer(options =>
             {
-                var secret = builder.Configuration["JwtConfig:Secret"];
-                var issuer = builder.Configuration["JwtConfig:ValidIssuer"];
-                var audience = builder.Configuration["JwtConfig:ValidAudiences"];
-                if (secret is null || issuer is null || audience is null)
-                    throw new ApplicationException("Jwt is not set in the configuration");
                 options.SaveToken = true;
                 options.RequireHttpsMetadata = false;
                 options.TokenValidationParameters = new TokenValidationParameters()
                 {
                     ValidateIssuer = true,
                     ValidateAudience = true,
-                    ValidAudience = audience,
-                    ValidIssuer = issuer,
-                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(secret))
+                    ValidAudience = UserManager.TokenConfig.Audience,
+                    ValidIssuer = UserManager.TokenConfig.Issuer,
+                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(UserManager.TokenConfig.Secret))
                 };
                 // Hook the SignalR event to check for the token in the query string
                 options.Events = new JwtBearerEvents
@@ -147,6 +129,9 @@ namespace KlonsChatApiServer
 
             var app = builder.Build();
 
+            app.UseCors("Restricted");
+            if (UserManager.RateLimiter.Enabled)
+                app.UseRateLimiter();
             app.UseAuthorization();
             app.UseAuthentication();
 

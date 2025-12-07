@@ -1,8 +1,9 @@
-﻿namespace KlonsChatDto.Models;
-
-public class AddItemRequest
+﻿namespace KlonsChatDto.Models
 {
-    public string UserGuid { get; set; }
-    public string SupportGuid { get; set; }
-    public string Content { get; set; }
+    public class AddItemRequest
+    {
+        public string UserGuid { get; set; }
+        public string SupportGuid { get; set; }
+        public string Content { get; set; }
+    }
 }
