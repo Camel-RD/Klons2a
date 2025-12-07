@@ -25,8 +25,8 @@ namespace KlonsChatApiServer
             var builder = WebApplication.CreateBuilder(args);
 
             var connectionString =
-                builder.Configuration.GetConnectionString("VotesConnection") ??
-                    throw new InvalidOperationException("Connection string 'VotesConnection' not found.");
+                builder.Configuration.GetConnectionString("ChatConnection") ??
+                    throw new InvalidOperationException("Connection string 'ChatConnection' not found.");
 
             DbOps.AdminGuid = builder.Configuration.GetRequiredSection("Admin:AdminId").Value;
             UserManager.TokenConfig = builder.Configuration.GetRequiredSection("JwtConfig").Get<UserManager.JwtConfig>();

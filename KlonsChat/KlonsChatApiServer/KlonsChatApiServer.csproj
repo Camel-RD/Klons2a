@@ -13,8 +13,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\KlonsQ2\KlonsqDto\KlonsChatDto.csproj" />
     <ProjectReference Include="..\KlonsChatDb\KlonsChatDb.csproj" />
+    <ProjectReference Include="..\KlonsChatDto\KlonsChatDto.csproj" />
   </ItemGroup>
 
 </Project>
