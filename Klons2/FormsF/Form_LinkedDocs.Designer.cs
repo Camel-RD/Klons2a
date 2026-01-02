@@ -33,11 +33,11 @@ namespace KlonsF.Forms
         {
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_LinkedDocs));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             bsDocs = new MyBindingSource(components);
             bsOPS = new MyBindingSource2(components);
             toolStrip1 = new System.Windows.Forms.ToolStrip();
@@ -76,23 +76,6 @@ namespace KlonsF.Forms
             dgcOPSDescr = new System.Windows.Forms.DataGridViewTextBoxColumn();
             idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             docIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            descrDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            aC11DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            aC12DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            aC13DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            aC14DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            aC15DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            aC21DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            aC22DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            aC23DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            aC24DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            aC25DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            summCDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            curDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            summDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            qVDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            nLDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            zDtDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)bsDocs).BeginInit();
             ((System.ComponentModel.ISupportInitialize)bsOPS).BeginInit();
             toolStrip1.SuspendLayout();
@@ -239,8 +222,8 @@ namespace KlonsF.Forms
             // dgcDocsDate
             // 
             dgcDocsDate.DataPropertyName = "Dete";
-            dataGridViewCellStyle1.Format = "dd.MM.yyyy";
-            dgcDocsDate.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle6.Format = "dd.MM.yyyy";
+            dgcDocsDate.DefaultCellStyle = dataGridViewCellStyle6;
             dgcDocsDate.HeaderText = "datums";
             dgcDocsDate.Name = "dgcDocsDate";
             dgcDocsDate.ReadOnly = true;
@@ -282,9 +265,9 @@ namespace KlonsF.Forms
             // dgcDocsSumm
             // 
             dgcDocsSumm.DataPropertyName = "Summ";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle2.Format = "N2";
-            dgcDocsSumm.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle7.Format = "N2";
+            dgcDocsSumm.DefaultCellStyle = dataGridViewCellStyle7;
             dgcDocsSumm.HeaderText = "summa";
             dgcDocsSumm.Name = "dgcDocsSumm";
             dgcDocsSumm.ReadOnly = true;
@@ -293,9 +276,9 @@ namespace KlonsF.Forms
             // dgcDocsPVN
             // 
             dgcDocsPVN.DataPropertyName = "PVN";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle3.Format = "N2";
-            dgcDocsPVN.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle8.Format = "N2";
+            dgcDocsPVN.DefaultCellStyle = dataGridViewCellStyle8;
             dgcDocsPVN.HeaderText = "PVN";
             dgcDocsPVN.Name = "dgcDocsPVN";
             dgcDocsPVN.ReadOnly = true;
@@ -309,7 +292,7 @@ namespace KlonsF.Forms
             dgvOPS.AutoSave = false;
             dgvOPS.BackgroundColor = System.Drawing.SystemColors.Control;
             dgvOPS.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvOPS.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { dgcOPSAC11, dgcOPSAC12, dgcOPSAC13, dgcOPSAC14, dgcOPSAC15, dgcOPSAC21, dgcOPSAC22, dgcOPSAC23, dgcOPSAC24, dgcOPSAC25, dgcOPSSummC, dgcOPSCur, dgcOPSSumm, dgcOPSDescr, idDataGridViewTextBoxColumn, docIdDataGridViewTextBoxColumn, descrDataGridViewTextBoxColumn, aC11DataGridViewTextBoxColumn, aC12DataGridViewTextBoxColumn, aC13DataGridViewTextBoxColumn, aC14DataGridViewTextBoxColumn, aC15DataGridViewTextBoxColumn, aC21DataGridViewTextBoxColumn, aC22DataGridViewTextBoxColumn, aC23DataGridViewTextBoxColumn, aC24DataGridViewTextBoxColumn, aC25DataGridViewTextBoxColumn, summCDataGridViewTextBoxColumn, curDataGridViewTextBoxColumn, summDataGridViewTextBoxColumn, qVDataGridViewTextBoxColumn, nLDataGridViewTextBoxColumn, zDtDataGridViewTextBoxColumn });
+            dgvOPS.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { dgcOPSAC11, dgcOPSAC12, dgcOPSAC13, dgcOPSAC14, dgcOPSAC15, dgcOPSAC21, dgcOPSAC22, dgcOPSAC23, dgcOPSAC24, dgcOPSAC25, dgcOPSSummC, dgcOPSCur, dgcOPSSumm, dgcOPSDescr, idDataGridViewTextBoxColumn, docIdDataGridViewTextBoxColumn });
             dgvOPS.DataSource = bsOPS;
             dgvOPS.Dock = System.Windows.Forms.DockStyle.Fill;
             dgvOPS.Location = new System.Drawing.Point(0, 0);
@@ -411,9 +394,9 @@ namespace KlonsF.Forms
             // dgcOPSSummC
             // 
             dgcOPSSummC.DataPropertyName = "SummC";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle4.Format = "N2";
-            dgcOPSSummC.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle9.Format = "N2";
+            dgcOPSSummC.DefaultCellStyle = dataGridViewCellStyle9;
             dgcOPSSummC.HeaderText = "summa";
             dgcOPSSummC.Name = "dgcOPSSummC";
             dgcOPSSummC.ReadOnly = true;
@@ -432,9 +415,9 @@ namespace KlonsF.Forms
             // dgcOPSSumm
             // 
             dgcOPSSumm.DataPropertyName = "Summ";
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle5.Format = "N2";
-            dgcOPSSumm.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle10.Format = "N2";
+            dgcOPSSumm.DefaultCellStyle = dataGridViewCellStyle10;
             dgcOPSSumm.HeaderText = "summa";
             dgcOPSSumm.Name = "dgcOPSSumm";
             dgcOPSSumm.ReadOnly = true;
@@ -455,6 +438,7 @@ namespace KlonsF.Forms
             idDataGridViewTextBoxColumn.HeaderText = "id";
             idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
             idDataGridViewTextBoxColumn.ReadOnly = true;
+            idDataGridViewTextBoxColumn.Visible = false;
             // 
             // docIdDataGridViewTextBoxColumn
             // 
@@ -462,125 +446,7 @@ namespace KlonsF.Forms
             docIdDataGridViewTextBoxColumn.HeaderText = "DocId";
             docIdDataGridViewTextBoxColumn.Name = "docIdDataGridViewTextBoxColumn";
             docIdDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // descrDataGridViewTextBoxColumn
-            // 
-            descrDataGridViewTextBoxColumn.DataPropertyName = "Descr";
-            descrDataGridViewTextBoxColumn.HeaderText = "Descr";
-            descrDataGridViewTextBoxColumn.Name = "descrDataGridViewTextBoxColumn";
-            descrDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // aC11DataGridViewTextBoxColumn
-            // 
-            aC11DataGridViewTextBoxColumn.DataPropertyName = "AC11";
-            aC11DataGridViewTextBoxColumn.HeaderText = "AC11";
-            aC11DataGridViewTextBoxColumn.Name = "aC11DataGridViewTextBoxColumn";
-            aC11DataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // aC12DataGridViewTextBoxColumn
-            // 
-            aC12DataGridViewTextBoxColumn.DataPropertyName = "AC12";
-            aC12DataGridViewTextBoxColumn.HeaderText = "AC12";
-            aC12DataGridViewTextBoxColumn.Name = "aC12DataGridViewTextBoxColumn";
-            aC12DataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // aC13DataGridViewTextBoxColumn
-            // 
-            aC13DataGridViewTextBoxColumn.DataPropertyName = "AC13";
-            aC13DataGridViewTextBoxColumn.HeaderText = "AC13";
-            aC13DataGridViewTextBoxColumn.Name = "aC13DataGridViewTextBoxColumn";
-            aC13DataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // aC14DataGridViewTextBoxColumn
-            // 
-            aC14DataGridViewTextBoxColumn.DataPropertyName = "AC14";
-            aC14DataGridViewTextBoxColumn.HeaderText = "AC14";
-            aC14DataGridViewTextBoxColumn.Name = "aC14DataGridViewTextBoxColumn";
-            aC14DataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // aC15DataGridViewTextBoxColumn
-            // 
-            aC15DataGridViewTextBoxColumn.DataPropertyName = "AC15";
-            aC15DataGridViewTextBoxColumn.HeaderText = "AC15";
-            aC15DataGridViewTextBoxColumn.Name = "aC15DataGridViewTextBoxColumn";
-            aC15DataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // aC21DataGridViewTextBoxColumn
-            // 
-            aC21DataGridViewTextBoxColumn.DataPropertyName = "AC21";
-            aC21DataGridViewTextBoxColumn.HeaderText = "AC21";
-            aC21DataGridViewTextBoxColumn.Name = "aC21DataGridViewTextBoxColumn";
-            aC21DataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // aC22DataGridViewTextBoxColumn
-            // 
-            aC22DataGridViewTextBoxColumn.DataPropertyName = "AC22";
-            aC22DataGridViewTextBoxColumn.HeaderText = "AC22";
-            aC22DataGridViewTextBoxColumn.Name = "aC22DataGridViewTextBoxColumn";
-            aC22DataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // aC23DataGridViewTextBoxColumn
-            // 
-            aC23DataGridViewTextBoxColumn.DataPropertyName = "AC23";
-            aC23DataGridViewTextBoxColumn.HeaderText = "AC23";
-            aC23DataGridViewTextBoxColumn.Name = "aC23DataGridViewTextBoxColumn";
-            aC23DataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // aC24DataGridViewTextBoxColumn
-            // 
-            aC24DataGridViewTextBoxColumn.DataPropertyName = "AC24";
-            aC24DataGridViewTextBoxColumn.HeaderText = "AC24";
-            aC24DataGridViewTextBoxColumn.Name = "aC24DataGridViewTextBoxColumn";
-            aC24DataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // aC25DataGridViewTextBoxColumn
-            // 
-            aC25DataGridViewTextBoxColumn.DataPropertyName = "AC25";
-            aC25DataGridViewTextBoxColumn.HeaderText = "AC25";
-            aC25DataGridViewTextBoxColumn.Name = "aC25DataGridViewTextBoxColumn";
-            aC25DataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // summCDataGridViewTextBoxColumn
-            // 
-            summCDataGridViewTextBoxColumn.DataPropertyName = "SummC";
-            summCDataGridViewTextBoxColumn.HeaderText = "SummC";
-            summCDataGridViewTextBoxColumn.Name = "summCDataGridViewTextBoxColumn";
-            summCDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // curDataGridViewTextBoxColumn
-            // 
-            curDataGridViewTextBoxColumn.DataPropertyName = "Cur";
-            curDataGridViewTextBoxColumn.HeaderText = "Cur";
-            curDataGridViewTextBoxColumn.Name = "curDataGridViewTextBoxColumn";
-            curDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // summDataGridViewTextBoxColumn
-            // 
-            summDataGridViewTextBoxColumn.DataPropertyName = "Summ";
-            summDataGridViewTextBoxColumn.HeaderText = "Summ";
-            summDataGridViewTextBoxColumn.Name = "summDataGridViewTextBoxColumn";
-            summDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // qVDataGridViewTextBoxColumn
-            // 
-            qVDataGridViewTextBoxColumn.DataPropertyName = "QV";
-            qVDataGridViewTextBoxColumn.HeaderText = "QV";
-            qVDataGridViewTextBoxColumn.Name = "qVDataGridViewTextBoxColumn";
-            qVDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // nLDataGridViewTextBoxColumn
-            // 
-            nLDataGridViewTextBoxColumn.DataPropertyName = "NL";
-            nLDataGridViewTextBoxColumn.HeaderText = "NL";
-            nLDataGridViewTextBoxColumn.Name = "nLDataGridViewTextBoxColumn";
-            nLDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // zDtDataGridViewTextBoxColumn
-            // 
-            zDtDataGridViewTextBoxColumn.DataPropertyName = "ZDt";
-            zDtDataGridViewTextBoxColumn.HeaderText = "ZDt";
-            zDtDataGridViewTextBoxColumn.Name = "zDtDataGridViewTextBoxColumn";
-            zDtDataGridViewTextBoxColumn.ReadOnly = true;
+            docIdDataGridViewTextBoxColumn.Visible = false;
             // 
             // Form_LinkedDocs
             // 
@@ -650,22 +516,5 @@ namespace KlonsF.Forms
         private System.Windows.Forms.DataGridViewTextBoxColumn dgcOPSDescr;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn docIdDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn descrDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn aC11DataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn aC12DataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn aC13DataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn aC14DataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn aC15DataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn aC21DataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn aC22DataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn aC23DataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn aC24DataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn aC25DataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn summCDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn curDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn summDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn qVDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nLDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn zDtDataGridViewTextBoxColumn;
     }
 }

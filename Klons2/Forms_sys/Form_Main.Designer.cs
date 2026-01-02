@@ -1535,7 +1535,7 @@ namespace KlonsF
             // 
             miSupport.Name = "miSupport";
             miSupport.Size = new System.Drawing.Size(70, 23);
-            miSupport.Text = "Atbalsts";
+            miSupport.Text = "At&balsts";
             miSupport.Click += miSupport_Click;
             // 
             // myToolStrip

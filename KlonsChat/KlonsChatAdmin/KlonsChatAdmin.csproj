@@ -33,7 +33,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\KlonsQ2\KlonsqDto\KlonsChatDto.csproj" />
+    <ProjectReference Include="..\KlonsChatDto\KlonsChatDto.csproj" />
   </ItemGroup>
 
   <ItemGroup>

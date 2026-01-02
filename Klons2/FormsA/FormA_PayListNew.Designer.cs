@@ -175,7 +175,6 @@
             // 
             lbCM.BackColor = System.Drawing.SystemColors.Control;
             lbCM.FormattingEnabled = true;
-            lbCM.ItemHeight = 16;
             lbCM.Items.AddRange(new object[] { "Visām sagatavēm", "Norādītajai sagatavei", "Tukšu sarakstu" });
             lbCM.Location = new System.Drawing.Point(11, 226);
             lbCM.Name = "lbCM";
@@ -213,6 +212,7 @@
             // 
             // tbYR
             // 
+            tbYR.BackColor = System.Drawing.SystemColors.Control;
             tbYR.BorderColor = System.Drawing.SystemColors.ControlDarkDark;
             tbYR.Location = new System.Drawing.Point(126, 27);
             tbYR.Name = "tbYR";
@@ -222,6 +222,7 @@
             // 
             // tbMT
             // 
+            tbMT.BackColor = System.Drawing.SystemColors.Control;
             tbMT.BorderColor = System.Drawing.SystemColors.ControlDarkDark;
             tbMT.Location = new System.Drawing.Point(192, 27);
             tbMT.Name = "tbMT";

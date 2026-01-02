@@ -1,6 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>net8.0-windows</TargetFramework>
+    <TargetFramework>net10.0-windows</TargetFramework>
     <OutputType>WinExe</OutputType>
     <RootNamespace>KlonsF</RootNamespace>
     <ApplicationRevision>0</ApplicationRevision>
@@ -165,10 +165,10 @@
     <Content Include="Reports\Report_Skaidra_1.rdlc" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\KlonsQ2\KlonsqDto\KlonsChatDto.csproj" />
     <ProjectReference Include="..\DataObjects\DataObjects.csproj" />
     <ProjectReference Include="..\Klons1.DataSets\Klons1.DataSets.csproj" />
     <ProjectReference Include="..\Klons2.DataSets\Klons2.DataSets.csproj" />
+    <ProjectReference Include="..\KlonsChat\KlonsChatDto\KlonsChatDto.csproj" />
     <ProjectReference Include="..\KlonsLIB\KlonsLIB.csproj" />
     <ProjectReference Include="..\MyReportLib\MyReportLib.csproj" />
     <ProjectReference Include="..\NotyfyProp\NotyfyProp.csproj" />

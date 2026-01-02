@@ -31,6 +31,7 @@ namespace KlonsF.Forms
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             cmSelect = new System.Windows.Forms.Button();
             cmEditList = new System.Windows.Forms.Button();
             cmCancel = new System.Windows.Forms.Button();
@@ -93,6 +94,14 @@ namespace KlonsF.Forms
             dgvFiles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvFiles.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { dgcFilesDescr, dgcFilesName });
             dgvFiles.DataSource = bsFiles;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            dgvFiles.DefaultCellStyle = dataGridViewCellStyle1;
             dgvFiles.Dock = System.Windows.Forms.DockStyle.Fill;
             dgvFiles.Location = new System.Drawing.Point(0, 0);
             dgvFiles.Margin = new System.Windows.Forms.Padding(2);

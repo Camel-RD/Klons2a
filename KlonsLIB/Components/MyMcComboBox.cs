@@ -70,6 +70,16 @@ namespace KlonsLIB.Components
             }
         }
 
+
+        [Category("Apearance")]
+        [DefaultValue(typeof(Color), "Highlight")]
+        public Color SelectionBackColor { get; set; } = SystemColors.Highlight;
+
+        [Category("Apearance")]
+        [DefaultValue(typeof(Color), "HighlightText")]
+        public Color SelectionForeColor { get; set; } = SystemColors.HighlightText;
+
+
         public void SetListBinding(object datasource, string displaymember, string valuemember, string[] columnnames)
         {
             BeginUpdateX();
@@ -662,8 +672,8 @@ namespace KlonsLIB.Components
 
             if ((e.State & DrawItemState.Selected) != 0)
             {
-                backColor = SystemColors.Highlight;
-                textcolor = SystemColors.HighlightText;
+                backColor = SelectionBackColor;
+                textcolor = SelectionForeColor;
                 gridLineColor = SystemColors.HighlightText;
             }
 

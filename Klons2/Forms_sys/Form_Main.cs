@@ -32,6 +32,10 @@ namespace KlonsF
             InitializeComponent();
             SetupMenuRenderer();
             CheckMyFontAndColors();
+            if (MyColorTheme.UsingDarkColorMode)
+            {
+                Application.SetColorMode(SystemColorMode.Dark);
+            }
             Application.ThreadException += Application_ThreadException;
             KlonsLIB.MyData.InWine = MyData.Settings.InWine == "YES";
             miDatuBāzesImports.Visible = Directory.Exists(MyData.FolderForFbEmbed25) &&

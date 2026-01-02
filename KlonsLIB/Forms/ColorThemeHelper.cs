@@ -24,6 +24,7 @@ namespace KlonsLIB.Forms
         private Dictionary<Color, Color> SysToMy = new Dictionary<Color, Color>();
 
         public bool UsingSystemColors { get; private set; } = true;
+        public bool UsingDarkColorMode { get; private set; } = false;
 
         public MyColorTheme()
         {
@@ -116,6 +117,7 @@ namespace KlonsLIB.Forms
             MenuButtonPressed = ColorThemeHelper.MakeLighter(MenuHighlight, 0.2f, 0.7f, 2.5f);
             BorderColor = ControlColorDarkDark;
             UsingSystemColors = false;
+            UsingDarkColorMode = true;
             MakeTables();
         }
         public void UseGreenOnBlack()
@@ -131,6 +133,7 @@ namespace KlonsLIB.Forms
             MenuButtonPressed = ColorThemeHelper.MakeLighter(MenuHighlight, 0.2f, 0.7f, 2.5f);
             BorderColor = ControlColorDarkDark;
             UsingSystemColors = false;
+            UsingDarkColorMode = true;
             MakeTables();
         }
         public void UseBlackOnWhite()
@@ -159,44 +162,20 @@ namespace KlonsLIB.Forms
         static ColorThemeHelper()
         {
             MyToolStripRenderer = new MyToolStripRenderer();
+            ColorTheme_System = new MyColorTheme();
+            ColorTheme_System.UseSystemColors();
+            ColorTheme_Dark1 = new MyColorTheme();
+            ColorTheme_Dark1.UseDarkTheme1();
+            ColorTheme_Green = new MyColorTheme();
+            ColorTheme_Green.UseGreenOnBlack();
+            ColorTheme_BlackOnWhite = new MyColorTheme();
+            ColorTheme_BlackOnWhite.UseBlackOnWhite();
         }
 
-        public static MyColorTheme ColorTheme_System
-        {
-            get
-            {
-                MyColorTheme mc = new MyColorTheme();
-                mc.UseSystemColors();
-                return mc;
-            }
-        }
-        public static MyColorTheme ColorTheme_Dark1
-        {
-            get
-            {
-                MyColorTheme mc = new MyColorTheme();
-                mc.UseDarkTheme1();
-                return mc;
-            }
-        }
-        public static MyColorTheme ColorTheme_Green
-        {
-            get
-            {
-                MyColorTheme mc = new MyColorTheme();
-                mc.UseGreenOnBlack();
-                return mc;
-            }
-        }
-        public static MyColorTheme ColorTheme_BlackOnWhite
-        {
-            get
-            {
-                MyColorTheme mc = new MyColorTheme();
-                mc.UseBlackOnWhite();
-                return mc;
-            }
-        }
+        public static MyColorTheme ColorTheme_System { get; private set; }
+        public static MyColorTheme ColorTheme_Dark1 { get; private set; }
+        public static MyColorTheme ColorTheme_Green { get; private set; }
+        public static MyColorTheme ColorTheme_BlackOnWhite { get; private set; }
 
         public static MyColorTheme GetColorThemeById(string id)
         {
@@ -334,12 +313,16 @@ namespace KlonsLIB.Forms
                 c.BackColor = mycolortheme.GetColor(c.BackColor, mycolortheme.WindowColor);
                 cmyfcb.BorderColor = mycolortheme.GetColor(cmyfcb.BorderColor, mycolortheme.BorderColor);
                 cmyfcb.GridLineColor = mycolortheme.GetColor(cmyfcb.GridLineColor, mycolortheme.ControlTextColor);
+                if (mycolortheme.UsingDarkColorMode)
+                    cmyfcb.SelectionForeColor = Color.White;
             }
             else if (c is MyMcComboBox cmycb)
             {
                 c.ForeColor = mycolortheme.GetColor(c.ForeColor, mycolortheme.WindowTextColor);
                 c.BackColor = mycolortheme.GetColor(c.BackColor, mycolortheme.WindowColor);
                 cmycb.GridLineColor = mycolortheme.GetColor(cmycb.GridLineColor, mycolortheme.ControlTextColor);
+                if (mycolortheme.UsingDarkColorMode)
+                    cmycb.SelectionForeColor = Color.White;
             }
             else if (c is FlatComboBox cfcb)
             {
@@ -386,6 +369,10 @@ namespace KlonsLIB.Forms
                     mycolortheme.GetColor(dgv.DefaultCellStyle.BackColor, mycolortheme.WindowColor);
                 dgv.DefaultCellStyle.ForeColor =
                     mycolortheme.GetColor(dgv.DefaultCellStyle.ForeColor, mycolortheme.WindowTextColor);
+                if (mycolortheme == ColorTheme_Dark1)
+                {
+                    dgv.DefaultCellStyle.SelectionForeColor = Color.White;
+                }
                 dgv.EnableHeadersVisualStyles = false;
                 dgv.ColumnHeadersDefaultCellStyle.BackColor = 
                     mycolortheme.GetColor(dgv.ColumnHeadersDefaultCellStyle.BackColor, mycolortheme.ControlColor);
@@ -428,6 +415,8 @@ namespace KlonsLIB.Forms
                 ctbl.ForeColor = mycolortheme.GetColor(ctbl.ForeColor, mycolortheme.ControlTextColor);
                 ctbl.BackColor = mycolortheme.GetColor(ctbl.BackColor, mycolortheme.ControlColor);
                 ctbl.HotBackColor = mycolortheme.GetColor(ctbl.HotBackColor, mycolortheme.ControlColorDark);
+                if (mycolortheme.UsingDarkColorMode)
+                    ctbl.SelectionForeColor = Color.White;
             }
             else if (c is Button)
             {

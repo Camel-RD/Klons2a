@@ -164,7 +164,7 @@ namespace KlonsF.Forms
             cmReport.Location = new System.Drawing.Point(375, 171);
             cmReport.Margin = new System.Windows.Forms.Padding(2);
             cmReport.Name = "cmReport";
-            cmReport.Size = new System.Drawing.Size(115, 48);
+            cmReport.Size = new System.Drawing.Size(95, 48);
             cmReport.TabIndex = 3;
             cmReport.Text = "Atskaite";
             cmReport.UseVisualStyleBackColor = true;
@@ -176,7 +176,7 @@ namespace KlonsF.Forms
             cmEdit.Location = new System.Drawing.Point(375, 284);
             cmEdit.Margin = new System.Windows.Forms.Padding(2);
             cmEdit.Name = "cmEdit";
-            cmEdit.Size = new System.Drawing.Size(115, 56);
+            cmEdit.Size = new System.Drawing.Size(95, 56);
             cmEdit.TabIndex = 4;
             cmEdit.Text = "Rediģēt formulas";
             cmEdit.UseVisualStyleBackColor = true;
@@ -186,7 +186,6 @@ namespace KlonsF.Forms
             // 
             lbCM.BackColor = System.Drawing.SystemColors.Control;
             lbCM.FormattingEnabled = true;
-            lbCM.ItemHeight = 16;
             lbCM.Items.AddRange(new object[] { "Tikai rindas, kas nav tukšas", "Pilna atskaite", "Pa mēnešiem - apgrozijums", "Pa mēnešiem - atlikums", "Summu izklāsts pa atskaites rindu numuriem" });
             lbCM.Location = new System.Drawing.Point(11, 218);
             lbCM.Margin = new System.Windows.Forms.Padding(2);
@@ -200,7 +199,7 @@ namespace KlonsF.Forms
             cmTable.Location = new System.Drawing.Point(375, 229);
             cmTable.Margin = new System.Windows.Forms.Padding(2);
             cmTable.Name = "cmTable";
-            cmTable.Size = new System.Drawing.Size(115, 48);
+            cmTable.Size = new System.Drawing.Size(95, 48);
             cmTable.TabIndex = 3;
             cmTable.Text = "Atskaite - tabula";
             cmTable.UseVisualStyleBackColor = true;

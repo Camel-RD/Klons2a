@@ -228,6 +228,7 @@
             // 
             // tbRateCalDay
             // 
+            tbRateCalDay.BackColor = System.Drawing.SystemColors.Control;
             tbRateCalDay.BorderColor = System.Drawing.SystemColors.ControlDarkDark;
             tbRateCalDay.Location = new System.Drawing.Point(232, 83);
             tbRateCalDay.Name = "tbRateCalDay";
@@ -267,6 +268,7 @@
             // 
             // tbRateDay
             // 
+            tbRateDay.BackColor = System.Drawing.SystemColors.Control;
             tbRateDay.BorderColor = System.Drawing.SystemColors.ControlDarkDark;
             tbRateDay.Location = new System.Drawing.Point(232, 55);
             tbRateDay.Name = "tbRateDay";
@@ -277,6 +279,7 @@
             // 
             // tbRateHour
             // 
+            tbRateHour.BackColor = System.Drawing.SystemColors.Control;
             tbRateHour.BorderColor = System.Drawing.SystemColors.ControlDarkDark;
             tbRateHour.Location = new System.Drawing.Point(232, 28);
             tbRateHour.Name = "tbRateHour";

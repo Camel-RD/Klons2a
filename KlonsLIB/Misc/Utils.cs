@@ -56,6 +56,10 @@ namespace KlonsLIB.Misc
                 "\\bin\\x64\\release\\net8.0-windows",
                 "\\bin\\x86\\debug\\net8.0-windows",
                 "\\bin\\x86\\release\\net8.0-windows",
+                "\\bin\\x64\\debug\\net10.0-windows",
+                "\\bin\\x64\\release\\net10.0-windows",
+                "\\bin\\x86\\debug\\net10.0-windows",
+                "\\bin\\x86\\release\\net10.0-windows",
             };
             var p1 = ss.FirstOrDefault(x => s2.EndsWith(x));
             if (p1 == null) return s1;

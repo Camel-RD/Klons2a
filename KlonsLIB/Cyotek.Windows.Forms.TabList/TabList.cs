@@ -448,6 +448,15 @@ namespace Cyotek.Windows.Forms
         //[DefaultValue(typeof(Font), "Empty")]
         //public Font HeaderFont { get => base.Font; set; } = null;
 
+        [Category("Apearance")]
+        [DefaultValue(typeof(Color), "Highlight")]
+        public Color SelectionBackColor { get; set; } = SystemColors.Highlight;
+
+        [Category("Apearance")]
+        [DefaultValue(typeof(Color), "HighlightText")]
+        public Color SelectionForeColor { get; set; } = SystemColors.HighlightText;
+
+
         #endregion Public Properties
 
         #region Private Properties

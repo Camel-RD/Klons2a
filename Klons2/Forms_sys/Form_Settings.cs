@@ -185,6 +185,10 @@ namespace KlonsF.Forms
             MyMainForm.CheckMyFontAndColors1();
             MyMainForm.CheckMyFontAndColors2();
             MyMainForm.CheckMenuColorTheme();
+            if (MyMainForm.MyColorTheme.UsingDarkColorMode)
+            {
+                Application.SetColorMode(SystemColorMode.Dark);
+            }
             this.Close();
         }
 

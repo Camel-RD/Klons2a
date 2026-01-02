@@ -158,6 +158,7 @@
             // 
             // tbOut
             // 
+            tbOut.BackColor = System.Drawing.SystemColors.Window;
             tbOut.BorderColor = System.Drawing.SystemColors.ControlDarkDark;
             tbOut.BorderStyle = System.Windows.Forms.BorderStyle.None;
             tbOut.Dock = System.Windows.Forms.DockStyle.Fill;

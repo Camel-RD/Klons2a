@@ -88,7 +88,8 @@
             menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { clinetToolStripMenuItem });
             menuStrip1.Location = new System.Drawing.Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new System.Drawing.Size(560, 27);
+            menuStrip1.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
+            menuStrip1.Size = new System.Drawing.Size(631, 27);
             menuStrip1.TabIndex = 0;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -101,24 +102,27 @@
             // 
             // miStart
             // 
+            miStart.ForeColor = System.Drawing.Color.White;
             miStart.Name = "miStart";
-            miStart.Size = new System.Drawing.Size(107, 24);
+            miStart.Size = new System.Drawing.Size(180, 24);
             miStart.Text = "Start";
             miStart.Click += miStart_Click;
             // 
             // miStop
             // 
+            miStop.ForeColor = System.Drawing.Color.White;
             miStop.Name = "miStop";
-            miStop.Size = new System.Drawing.Size(107, 24);
+            miStop.Size = new System.Drawing.Size(180, 24);
             miStop.Text = "Stop";
             miStop.Click += miStop_Click;
             // 
             // tbSignals
             // 
             tbSignals.Dock = System.Windows.Forms.DockStyle.Fill;
+            tbSignals.ForeColor = System.Drawing.Color.White;
             tbSignals.Location = new System.Drawing.Point(0, 27);
             tbSignals.Name = "tbSignals";
-            tbSignals.Size = new System.Drawing.Size(560, 332);
+            tbSignals.Size = new System.Drawing.Size(631, 371);
             tbSignals.TabIndex = 1;
             tbSignals.Text = "";
             // 
@@ -131,16 +135,16 @@
             tabControl1.Location = new System.Drawing.Point(0, 0);
             tabControl1.Name = "tabControl1";
             tabControl1.SelectedIndex = 0;
-            tabControl1.Size = new System.Drawing.Size(568, 391);
+            tabControl1.Size = new System.Drawing.Size(639, 432);
             tabControl1.TabIndex = 2;
             // 
             // tpSignals
             // 
             tpSignals.Controls.Add(tbSignals);
             tpSignals.Controls.Add(menuStrip1);
-            tpSignals.Location = new System.Drawing.Point(4, 28);
+            tpSignals.Location = new System.Drawing.Point(4, 30);
             tpSignals.Name = "tpSignals";
-            tpSignals.Size = new System.Drawing.Size(560, 359);
+            tpSignals.Size = new System.Drawing.Size(631, 398);
             tpSignals.TabIndex = 0;
             tpSignals.Text = "Signals";
             // 
@@ -148,9 +152,9 @@
             // 
             tpChats.Controls.Add(splitContainer1);
             tpChats.Controls.Add(menuStrip2);
-            tpChats.Location = new System.Drawing.Point(4, 28);
+            tpChats.Location = new System.Drawing.Point(4, 30);
             tpChats.Name = "tpChats";
-            tpChats.Size = new System.Drawing.Size(560, 359);
+            tpChats.Size = new System.Drawing.Size(631, 398);
             tpChats.TabIndex = 1;
             tpChats.Text = "Chats";
             // 
@@ -170,16 +174,17 @@
             // splitContainer1.Panel2
             // 
             splitContainer1.Panel2.Controls.Add(tbIn);
-            splitContainer1.Size = new System.Drawing.Size(560, 332);
-            splitContainer1.SplitterDistance = 240;
+            splitContainer1.Size = new System.Drawing.Size(631, 371);
+            splitContainer1.SplitterDistance = 270;
             splitContainer1.TabIndex = 3;
             // 
             // tbOut
             // 
             tbOut.Dock = System.Windows.Forms.DockStyle.Fill;
-            tbOut.Location = new System.Drawing.Point(0, 96);
+            tbOut.ForeColor = System.Drawing.Color.White;
+            tbOut.Location = new System.Drawing.Point(0, 106);
             tbOut.Name = "tbOut";
-            tbOut.Size = new System.Drawing.Size(560, 144);
+            tbOut.Size = new System.Drawing.Size(631, 164);
             tbOut.TabIndex = 0;
             tbOut.Text = "";
             // 
@@ -194,65 +199,69 @@
             panel1.Dock = System.Windows.Forms.DockStyle.Top;
             panel1.Location = new System.Drawing.Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new System.Drawing.Size(560, 96);
+            panel1.Size = new System.Drawing.Size(631, 106);
             panel1.TabIndex = 1;
             // 
             // cbChats
             // 
+            cbChats.ForeColor = System.Drawing.Color.White;
             cbChats.FormattingEnabled = true;
-            cbChats.Location = new System.Drawing.Point(112, 63);
+            cbChats.Location = new System.Drawing.Point(126, 70);
             cbChats.Name = "cbChats";
-            cbChats.Size = new System.Drawing.Size(305, 27);
+            cbChats.Size = new System.Drawing.Size(343, 29);
             cbChats.TabIndex = 4;
             cbChats.SelectedIndexChanged += cbChats_SelectedIndexChanged;
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new System.Drawing.Point(5, 66);
+            label4.Location = new System.Drawing.Point(6, 73);
             label4.Name = "label4";
-            label4.Size = new System.Drawing.Size(101, 19);
+            label4.Size = new System.Drawing.Size(112, 21);
             label4.TabIndex = 3;
             label4.Text = "Updated chats:";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new System.Drawing.Point(5, 36);
+            label2.Location = new System.Drawing.Point(6, 40);
             label2.Name = "label2";
-            label2.Size = new System.Drawing.Size(76, 19);
+            label2.Size = new System.Drawing.Size(86, 21);
             label2.TabIndex = 3;
             label2.Text = "Support id:";
             // 
             // tbSupportId
             // 
-            tbSupportId.Location = new System.Drawing.Point(112, 33);
+            tbSupportId.ForeColor = System.Drawing.Color.White;
+            tbSupportId.Location = new System.Drawing.Point(126, 36);
             tbSupportId.Name = "tbSupportId";
-            tbSupportId.Size = new System.Drawing.Size(306, 26);
+            tbSupportId.Size = new System.Drawing.Size(344, 29);
             tbSupportId.TabIndex = 2;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new System.Drawing.Point(5, 6);
+            label1.Location = new System.Drawing.Point(6, 7);
             label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(55, 19);
+            label1.Size = new System.Drawing.Size(62, 21);
             label1.TabIndex = 1;
             label1.Text = "User id:";
             // 
             // tbUserId
             // 
-            tbUserId.Location = new System.Drawing.Point(112, 3);
+            tbUserId.ForeColor = System.Drawing.Color.White;
+            tbUserId.Location = new System.Drawing.Point(126, 3);
             tbUserId.Name = "tbUserId";
-            tbUserId.Size = new System.Drawing.Size(306, 26);
+            tbUserId.Size = new System.Drawing.Size(344, 29);
             tbUserId.TabIndex = 0;
             // 
             // tbIn
             // 
             tbIn.Dock = System.Windows.Forms.DockStyle.Fill;
+            tbIn.ForeColor = System.Drawing.Color.White;
             tbIn.Location = new System.Drawing.Point(0, 0);
             tbIn.Name = "tbIn";
-            tbIn.Size = new System.Drawing.Size(560, 88);
+            tbIn.Size = new System.Drawing.Size(631, 97);
             tbIn.TabIndex = 0;
             tbIn.Text = "";
             // 
@@ -261,7 +270,8 @@
             menuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { toolsToolStripMenuItem, miAdd, miGet, miClear, miGetUpdatedChats, miMarkChat });
             menuStrip2.Location = new System.Drawing.Point(0, 0);
             menuStrip2.Name = "menuStrip2";
-            menuStrip2.Size = new System.Drawing.Size(560, 27);
+            menuStrip2.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
+            menuStrip2.Size = new System.Drawing.Size(631, 27);
             menuStrip2.TabIndex = 2;
             menuStrip2.Text = "menuStrip2";
             // 
@@ -310,9 +320,9 @@
             // 
             tpTestUser.Controls.Add(splitContainer2);
             tpTestUser.Controls.Add(menuStrip3);
-            tpTestUser.Location = new System.Drawing.Point(4, 28);
+            tpTestUser.Location = new System.Drawing.Point(4, 30);
             tpTestUser.Name = "tpTestUser";
-            tpTestUser.Size = new System.Drawing.Size(560, 359);
+            tpTestUser.Size = new System.Drawing.Size(631, 398);
             tpTestUser.TabIndex = 2;
             tpTestUser.Text = "Test User";
             // 
@@ -332,16 +342,17 @@
             // splitContainer2.Panel2
             // 
             splitContainer2.Panel2.Controls.Add(tbIn2);
-            splitContainer2.Size = new System.Drawing.Size(560, 332);
-            splitContainer2.SplitterDistance = 240;
+            splitContainer2.Size = new System.Drawing.Size(631, 371);
+            splitContainer2.SplitterDistance = 270;
             splitContainer2.TabIndex = 3;
             // 
             // tbOut2
             // 
             tbOut2.Dock = System.Windows.Forms.DockStyle.Fill;
-            tbOut2.Location = new System.Drawing.Point(0, 33);
+            tbOut2.ForeColor = System.Drawing.Color.White;
+            tbOut2.Location = new System.Drawing.Point(0, 36);
             tbOut2.Name = "tbOut2";
-            tbOut2.Size = new System.Drawing.Size(560, 207);
+            tbOut2.Size = new System.Drawing.Size(631, 234);
             tbOut2.TabIndex = 0;
             tbOut2.Text = "";
             // 
@@ -352,31 +363,33 @@
             panel2.Dock = System.Windows.Forms.DockStyle.Top;
             panel2.Location = new System.Drawing.Point(0, 0);
             panel2.Name = "panel2";
-            panel2.Size = new System.Drawing.Size(560, 33);
+            panel2.Size = new System.Drawing.Size(631, 36);
             panel2.TabIndex = 1;
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new System.Drawing.Point(5, 6);
+            label3.Location = new System.Drawing.Point(6, 7);
             label3.Name = "label3";
-            label3.Size = new System.Drawing.Size(55, 19);
+            label3.Size = new System.Drawing.Size(62, 21);
             label3.TabIndex = 1;
             label3.Text = "User id:";
             // 
             // tbUserId2
             // 
-            tbUserId2.Location = new System.Drawing.Point(68, 3);
+            tbUserId2.ForeColor = System.Drawing.Color.White;
+            tbUserId2.Location = new System.Drawing.Point(76, 3);
             tbUserId2.Name = "tbUserId2";
-            tbUserId2.Size = new System.Drawing.Size(306, 26);
+            tbUserId2.Size = new System.Drawing.Size(344, 29);
             tbUserId2.TabIndex = 0;
             // 
             // tbIn2
             // 
             tbIn2.Dock = System.Windows.Forms.DockStyle.Fill;
+            tbIn2.ForeColor = System.Drawing.Color.White;
             tbIn2.Location = new System.Drawing.Point(0, 0);
             tbIn2.Name = "tbIn2";
-            tbIn2.Size = new System.Drawing.Size(560, 88);
+            tbIn2.Size = new System.Drawing.Size(631, 97);
             tbIn2.TabIndex = 0;
             tbIn2.Text = "";
             // 
@@ -385,7 +398,8 @@
             menuStrip3.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { miAdd2, miGet2, miClear2 });
             menuStrip3.Location = new System.Drawing.Point(0, 0);
             menuStrip3.Name = "menuStrip3";
-            menuStrip3.Size = new System.Drawing.Size(560, 27);
+            menuStrip3.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
+            menuStrip3.Size = new System.Drawing.Size(631, 27);
             menuStrip3.TabIndex = 2;
             menuStrip3.Text = "menuStrip1";
             // 
@@ -412,10 +426,12 @@
             // 
             // Form_Admin
             // 
-            AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
+            AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            ClientSize = new System.Drawing.Size(568, 391);
+            ClientSize = new System.Drawing.Size(639, 432);
             Controls.Add(tabControl1);
+            Font = new System.Drawing.Font("Segoe UI", 12F);
+            ForeColor = System.Drawing.Color.White;
             MainMenuStrip = menuStrip1;
             Name = "Form_Admin";
             Text = "Klons Chat Admin";

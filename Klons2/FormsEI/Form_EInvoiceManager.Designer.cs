@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_EInvoiceManager));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             tcTabs = new KlonsLIB.Components.ExTabControl();
             tpInvoiceList = new System.Windows.Forms.TabPage();
             dgvInvoiceList = new KlonsLIB.Components.MyDataGridView();
@@ -68,7 +68,7 @@
             label3 = new System.Windows.Forms.Label();
             btShowFolder = new System.Windows.Forms.Button();
             label2 = new System.Windows.Forms.Label();
-            cbInvoiceFolder = new KlonsLIB.Components.FlatComboBox();
+            cbInvoiceFolder = new System.Windows.Forms.ComboBox();
             tpInvoice = new System.Windows.Forms.TabPage();
             mySplitContainer1 = new KlonsLIB.Components.MySplitContainer();
             sgrInvoice = new KlonsLIB.MySourceGrid.MyGrid();
@@ -115,6 +115,10 @@
             tsbNewEmailTemplate = new System.Windows.Forms.ToolStripButton();
             tsbSenderEditTemplateName = new System.Windows.Forms.ToolStripButton();
             tsbDeleteEmailTemplate = new System.Windows.Forms.ToolStripButton();
+            toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
+            tsbTemplateCodeSenderName = new System.Windows.Forms.ToolStripMenuItem();
+            tsbTemplateCodeReceiverName = new System.Windows.Forms.ToolStripMenuItem();
+            tsbTemplateCodeInvoiceId = new System.Windows.Forms.ToolStripMenuItem();
             lbSendEmailInfo = new System.Windows.Forms.Label();
             cmSendEmail = new System.Windows.Forms.Button();
             tbSenderEmailBody = new KlonsLIB.Components.FlatRichTextBox();
@@ -142,10 +146,6 @@
             label4 = new System.Windows.Forms.Label();
             label1 = new System.Windows.Forms.Label();
             tbSettingsFileFolder = new KlonsLIB.Components.TextBoxWithButton();
-            toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
-            tsbTemplateCodeSenderName = new System.Windows.Forms.ToolStripMenuItem();
-            tsbTemplateCodeReceiverName = new System.Windows.Forms.ToolStripMenuItem();
-            tsbTemplateCodeInvoiceId = new System.Windows.Forms.ToolStripMenuItem();
             tcTabs.SuspendLayout();
             tpInvoiceList.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvInvoiceList).BeginInit();
@@ -182,6 +182,7 @@
             tcTabs.Name = "tcTabs";
             tcTabs.SelectedIndex = 0;
             tcTabs.Size = new System.Drawing.Size(796, 328);
+            tcTabs.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             tcTabs.TabIndex = 0;
             // 
             // tpInvoiceList
@@ -286,9 +287,9 @@
             // dgcInvoiceTotalAmount
             // 
             dgcInvoiceTotalAmount.DataPropertyName = "TotalAmount";
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle9.Format = "N2";
-            dgcInvoiceTotalAmount.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle1.Format = "N2";
+            dgcInvoiceTotalAmount.DefaultCellStyle = dataGridViewCellStyle1;
             dgcInvoiceTotalAmount.HeaderText = "summa";
             dgcInvoiceTotalAmount.Name = "dgcInvoiceTotalAmount";
             dgcInvoiceTotalAmount.ReadOnly = true;
@@ -417,6 +418,7 @@
             // 
             // tbFilterInvoices
             // 
+            tbFilterInvoices.BackColor = System.Drawing.SystemColors.Control;
             tbFilterInvoices.Location = new System.Drawing.Point(488, 3);
             tbFilterInvoices.Name = "tbFilterInvoices";
             tbFilterInvoices.Size = new System.Drawing.Size(115, 23);
@@ -453,10 +455,7 @@
             // 
             // cbInvoiceFolder
             // 
-            cbInvoiceFolder.BorderColor = System.Drawing.SystemColors.ControlText;
-            cbInvoiceFolder.DrawBorder = false;
             cbInvoiceFolder.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            cbInvoiceFolder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             cbInvoiceFolder.FormattingEnabled = true;
             cbInvoiceFolder.Location = new System.Drawing.Point(100, 3);
             cbInvoiceFolder.MaxDropDownItems = 15;
@@ -810,8 +809,8 @@
             // dgcLineQuantity
             // 
             dgcLineQuantity.DataPropertyName = "Quantity";
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.BottomCenter;
-            dgcLineQuantity.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.BottomCenter;
+            dgcLineQuantity.DefaultCellStyle = dataGridViewCellStyle2;
             dgcLineQuantity.HeaderText = "daudzums";
             dgcLineQuantity.Name = "dgcLineQuantity";
             dgcLineQuantity.ReadOnly = true;
@@ -829,9 +828,9 @@
             // dgcLinePrice
             // 
             dgcLinePrice.DataPropertyName = "Price";
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle11.Format = "0.######";
-            dgcLinePrice.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.Format = "0.######";
+            dgcLinePrice.DefaultCellStyle = dataGridViewCellStyle3;
             dgcLinePrice.HeaderText = "cena";
             dgcLinePrice.Name = "dgcLinePrice";
             dgcLinePrice.ReadOnly = true;
@@ -840,9 +839,9 @@
             // dgcLineAllowanceCharge
             // 
             dgcLineAllowanceCharge.DataPropertyName = "AllowanceCharge";
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle12.Format = "N2";
-            dgcLineAllowanceCharge.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle4.Format = "N2";
+            dgcLineAllowanceCharge.DefaultCellStyle = dataGridViewCellStyle4;
             dgcLineAllowanceCharge.HeaderText = "atlaide";
             dgcLineAllowanceCharge.Name = "dgcLineAllowanceCharge";
             dgcLineAllowanceCharge.ReadOnly = true;
@@ -851,9 +850,9 @@
             // dgcLineTotalAmountBeforeTax
             // 
             dgcLineTotalAmountBeforeTax.DataPropertyName = "TotalAmountBeforeTax";
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle13.Format = "N2";
-            dgcLineTotalAmountBeforeTax.DefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle5.Format = "N2";
+            dgcLineTotalAmountBeforeTax.DefaultCellStyle = dataGridViewCellStyle5;
             dgcLineTotalAmountBeforeTax.HeaderText = "suma";
             dgcLineTotalAmountBeforeTax.Name = "dgcLineTotalAmountBeforeTax";
             dgcLineTotalAmountBeforeTax.ReadOnly = true;
@@ -862,8 +861,8 @@
             // dgcLineVatRate
             // 
             dgcLineVatRate.DataPropertyName = "VatRate";
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dgcLineVatRate.DefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dgcLineVatRate.DefaultCellStyle = dataGridViewCellStyle6;
             dgcLineVatRate.HeaderText = "PVN likme";
             dgcLineVatRate.Name = "dgcLineVatRate";
             dgcLineVatRate.ReadOnly = true;
@@ -872,8 +871,8 @@
             // dgcLineVatType
             // 
             dgcLineVatType.DataPropertyName = "VatType";
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dgcLineVatType.DefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dgcLineVatType.DefaultCellStyle = dataGridViewCellStyle7;
             dgcLineVatType.HeaderText = "PVN vaids";
             dgcLineVatType.Name = "dgcLineVatType";
             dgcLineVatType.ReadOnly = true;
@@ -882,9 +881,9 @@
             // dgcLineTotalAmount
             // 
             dgcLineTotalAmount.DataPropertyName = "TotalAmount";
-            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle16.Format = "N2";
-            dgcLineTotalAmount.DefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle8.Format = "N2";
+            dgcLineTotalAmount.DefaultCellStyle = dataGridViewCellStyle8;
             dgcLineTotalAmount.HeaderText = "kopā ar PVN";
             dgcLineTotalAmount.Name = "dgcLineTotalAmount";
             dgcLineTotalAmount.ReadOnly = true;
@@ -948,7 +947,7 @@
             toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { tsbNewEmailTemplate, tsbSenderEditTemplateName, tsbDeleteEmailTemplate, toolStripDropDownButton1 });
             toolStrip1.Location = new System.Drawing.Point(571, 61);
             toolStrip1.Name = "toolStrip1";
-            toolStrip1.Size = new System.Drawing.Size(137, 26);
+            toolStrip1.Size = new System.Drawing.Size(106, 26);
             toolStrip1.TabIndex = 13;
             toolStrip1.Text = "toolStrip1";
             // 
@@ -981,6 +980,38 @@
             tsbDeleteEmailTemplate.Size = new System.Drawing.Size(23, 23);
             tsbDeleteEmailTemplate.Text = "Dzēst";
             tsbDeleteEmailTemplate.Click += tsbDeleteEmailTemplate_Click;
+            // 
+            // toolStripDropDownButton1
+            // 
+            toolStripDropDownButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            toolStripDropDownButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { tsbTemplateCodeSenderName, tsbTemplateCodeReceiverName, tsbTemplateCodeInvoiceId });
+            toolStripDropDownButton1.Image = (System.Drawing.Image)resources.GetObject("toolStripDropDownButton1.Image");
+            toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            toolStripDropDownButton1.Name = "toolStripDropDownButton1";
+            toolStripDropDownButton1.Size = new System.Drawing.Size(34, 23);
+            toolStripDropDownButton1.Text = "▼";
+            toolStripDropDownButton1.ToolTipText = "Ielikt sagatavē lauka kodu";
+            // 
+            // tsbTemplateCodeSenderName
+            // 
+            tsbTemplateCodeSenderName.Name = "tsbTemplateCodeSenderName";
+            tsbTemplateCodeSenderName.Size = new System.Drawing.Size(210, 24);
+            tsbTemplateCodeSenderName.Text = "Sūtītāja nosaukums";
+            tsbTemplateCodeSenderName.Click += tsbTemplateCodeSenderName_Click;
+            // 
+            // tsbTemplateCodeReceiverName
+            // 
+            tsbTemplateCodeReceiverName.Name = "tsbTemplateCodeReceiverName";
+            tsbTemplateCodeReceiverName.Size = new System.Drawing.Size(210, 24);
+            tsbTemplateCodeReceiverName.Text = "Saņēmēja nosaukums";
+            tsbTemplateCodeReceiverName.Click += tsbTemplateCodeReceiverName_Click;
+            // 
+            // tsbTemplateCodeInvoiceId
+            // 
+            tsbTemplateCodeInvoiceId.Name = "tsbTemplateCodeInvoiceId";
+            tsbTemplateCodeInvoiceId.Size = new System.Drawing.Size(210, 24);
+            tsbTemplateCodeInvoiceId.Text = "Rēķina numurs";
+            tsbTemplateCodeInvoiceId.Click += tsbTemplateCodeInvoiceId_Click;
             // 
             // lbSendEmailInfo
             // 
@@ -1094,6 +1125,7 @@
             // 
             // tbSenderEmail
             // 
+            tbSenderEmail.BackColor = System.Drawing.SystemColors.Window;
             tbSenderEmail.BorderColor = System.Drawing.SystemColors.ControlDarkDark;
             tbSenderEmail.Location = new System.Drawing.Point(71, 30);
             tbSenderEmail.Name = "tbSenderEmail";
@@ -1241,38 +1273,6 @@
             tbSettingsFileFolder.TabIndex = 0;
             tbSettingsFileFolder.ButtonClicked += tbSettingsFileFolder_ButtonClicked;
             // 
-            // toolStripDropDownButton1
-            // 
-            toolStripDropDownButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            toolStripDropDownButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { tsbTemplateCodeSenderName, tsbTemplateCodeReceiverName, tsbTemplateCodeInvoiceId });
-            toolStripDropDownButton1.Image = (System.Drawing.Image)resources.GetObject("toolStripDropDownButton1.Image");
-            toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            toolStripDropDownButton1.Name = "toolStripDropDownButton1";
-            toolStripDropDownButton1.Size = new System.Drawing.Size(34, 23);
-            toolStripDropDownButton1.Text = "▼";
-            toolStripDropDownButton1.ToolTipText = "Ielikt sagatavē lauka kodu";
-            // 
-            // tsbTemplateCodeSenderName
-            // 
-            tsbTemplateCodeSenderName.Name = "tsbTemplateCodeSenderName";
-            tsbTemplateCodeSenderName.Size = new System.Drawing.Size(210, 24);
-            tsbTemplateCodeSenderName.Text = "Sūtītāja nosaukums";
-            tsbTemplateCodeSenderName.Click += tsbTemplateCodeSenderName_Click;
-            // 
-            // tsbTemplateCodeReceiverName
-            // 
-            tsbTemplateCodeReceiverName.Name = "tsbTemplateCodeReceiverName";
-            tsbTemplateCodeReceiverName.Size = new System.Drawing.Size(210, 24);
-            tsbTemplateCodeReceiverName.Text = "Saņēmēja nosaukums";
-            tsbTemplateCodeReceiverName.Click += tsbTemplateCodeReceiverName_Click;
-            // 
-            // tsbTemplateCodeInvoiceId
-            // 
-            tsbTemplateCodeInvoiceId.Name = "tsbTemplateCodeInvoiceId";
-            tsbTemplateCodeInvoiceId.Size = new System.Drawing.Size(210, 24);
-            tsbTemplateCodeInvoiceId.Text = "Rēķina numurs";
-            tsbTemplateCodeInvoiceId.Click += tsbTemplateCodeInvoiceId_Click;
-            // 
             // Form_EInvoiceManager
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1324,7 +1324,7 @@
         private System.Windows.Forms.Label label1;
         private KlonsLIB.Components.TextBoxWithButton tbSettingsFileFolder;
         private System.Windows.Forms.Label label2;
-        private KlonsLIB.Components.FlatComboBox cbInvoiceFolder;
+        private System.Windows.Forms.ComboBox cbInvoiceFolder;
         private System.Windows.Forms.TabPage tpErrors;
         private KlonsLIB.Components.FlatRichTextBox tbErrors;
         private System.Windows.Forms.ToolStrip tspInvoiceList;
