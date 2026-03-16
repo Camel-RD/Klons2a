@@ -22,8 +22,19 @@ namespace KlonsF.ClassesChat
             if (ChatData == null)
             {
                 ChatData = ChatData.LoadChat(ChatFileName);
+                CheckUserGuid();
             }
             return ChatData;
+        }
+
+        void CheckUserGuid()
+        {
+            if (string.IsNullOrEmpty(ChatData.UserGuid) || ChatData.UserGuid.Length < 20)
+            {
+                var b = new byte[16];
+                Random.Shared.NextBytes(b);
+                ChatData.UserGuid = new Guid(b).ToString();
+            }
         }
 
         void CheckChatApi()

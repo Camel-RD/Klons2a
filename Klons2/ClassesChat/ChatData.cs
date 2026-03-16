@@ -83,11 +83,11 @@ namespace KlonsF.ClassesChat
 
         public static ChatData LoadChat(string filename)
         {
-            var settings = Utils.LoadDataFromXML<ChatData>(filename);
-            if (settings == null)
-                settings = new ChatData();
-            settings.NotModified = settings.Clone();
-            return settings;
+            var data = Utils.LoadDataFromXML<ChatData>(filename);
+            if (data == null)
+                data = new ChatData();
+            data.NotModified = data.Clone();
+            return data;
         }
 
         public bool SaveChat(string filename)
