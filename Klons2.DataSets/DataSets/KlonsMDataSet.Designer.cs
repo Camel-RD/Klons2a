@@ -6330,8 +6330,6 @@ namespace KlonsF.DataSets {
             
             private global::System.Data.DataColumn columnACC7;
             
-            private global::System.Data.DataColumn columnISGONE;
-            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public M_ROWSDataTable() {
@@ -6521,14 +6519,6 @@ namespace KlonsF.DataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn ISGONEColumn {
-                get {
-                    return this.columnISGONE;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -6582,8 +6572,7 @@ namespace KlonsF.DataSets {
                         decimal TOLDPRICE, 
                         long IDSEQ, 
                         string ACC6, 
-                        string ACC7, 
-                        int ISGONE) {
+                        string ACC7) {
                 M_ROWSRow rowM_ROWSRow = ((M_ROWSRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -6604,8 +6593,7 @@ namespace KlonsF.DataSets {
                         TOLDPRICE,
                         IDSEQ,
                         ACC6,
-                        ACC7,
-                        ISGONE};
+                        ACC7};
                 if ((parentM_DOCSRowByFK_M_ROWS_IDDOC != null)) {
                     columnValuesArray[1] = parentM_DOCSRowByFK_M_ROWS_IDDOC[0];
                 }
@@ -6669,7 +6657,6 @@ namespace KlonsF.DataSets {
                 this.columnIDSEQ = base.Columns["IDSEQ"];
                 this.columnACC6 = base.Columns["ACC6"];
                 this.columnACC7 = base.Columns["ACC7"];
-                this.columnISGONE = base.Columns["ISGONE"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6713,8 +6700,6 @@ namespace KlonsF.DataSets {
                 base.Columns.Add(this.columnACC6);
                 this.columnACC7 = new global::System.Data.DataColumn("ACC7", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnACC7);
-                this.columnISGONE = new global::System.Data.DataColumn("ISGONE", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnISGONE);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnID}, true));
                 this.columnID.AutoIncrement = true;
@@ -6754,8 +6739,6 @@ namespace KlonsF.DataSets {
                 this.columnACC7.AllowDBNull = false;
                 this.columnACC7.DefaultValue = ((string)(".?"));
                 this.columnACC7.MaxLength = 8;
-                this.columnISGONE.AllowDBNull = false;
-                this.columnISGONE.DefaultValue = ((int)(0));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -16295,17 +16278,6 @@ namespace KlonsF.DataSets {
                 }
                 set {
                     this[this.tableM_ROWS.ACC7Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int ISGONE {
-                get {
-                    return ((int)(this[this.tableM_ROWS.ISGONEColumn]));
-                }
-                set {
-                    this[this.tableM_ROWS.ISGONEColumn] = value;
                 }
             }
             
@@ -28924,11 +28896,10 @@ ORDER BY IDSEQ, ID";
             tableMapping.ColumnMappings.Add("OLDPRICE", "OLDPRICE");
             tableMapping.ColumnMappings.Add("TOLDPRICE", "TOLDPRICE");
             tableMapping.ColumnMappings.Add("IDITEMTEXT", "IDITEMTEXT");
-            tableMapping.ColumnMappings.Add("ISGONE", "ISGONE");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::FirebirdSql.Data.FirebirdClient.FbCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM ""M_ROWS"" WHERE ((""ID"" = @Original_ID) AND (""IDDOC"" = @Original_IDDOC) AND (""IDITEM"" = @Original_IDITEM) AND ((@IsNull_IDITEMTEXT = 1 AND ""IDITEMTEXT"" IS NULL) OR (""IDITEMTEXT"" = @Original_IDITEMTEXT)) AND (""UNITS"" = @Original_UNITS) AND (""AMOUNT"" = @Original_AMOUNT) AND (""DISCOUNT"" = @Original_DISCOUNT) AND (""PRICE0"" = @Original_PRICE0) AND (""PRICE"" = @Original_PRICE) AND (""TPRICE"" = @Original_TPRICE) AND (""IDPVNRATE"" = @Original_IDPVNRATE) AND ((@IsNull_IDCREDROW = 1 AND ""IDCREDROW"" IS NULL) OR (""IDCREDROW"" = @Original_IDCREDROW)) AND (""BUYPRICE"" = @Original_BUYPRICE) AND (""TBUYPRICE"" = @Original_TBUYPRICE) AND (""OLDPRICE"" = @Original_OLDPRICE) AND ((@IsNull_TOLDPRICE = 1 AND ""TOLDPRICE"" IS NULL) OR (""TOLDPRICE"" = @Original_TOLDPRICE)) AND (""IDSEQ"" = @Original_IDSEQ) AND (""ACC6"" = @Original_ACC6) AND (""ACC7"" = @Original_ACC7) AND (""ISGONE"" = @Original_ISGONE))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM ""M_ROWS"" WHERE ((""ID"" = @Original_ID) AND (""IDDOC"" = @Original_IDDOC) AND (""IDITEM"" = @Original_IDITEM) AND ((@IsNull_IDITEMTEXT = 1 AND ""IDITEMTEXT"" IS NULL) OR (""IDITEMTEXT"" = @Original_IDITEMTEXT)) AND (""UNITS"" = @Original_UNITS) AND (""AMOUNT"" = @Original_AMOUNT) AND (""DISCOUNT"" = @Original_DISCOUNT) AND (""PRICE0"" = @Original_PRICE0) AND (""PRICE"" = @Original_PRICE) AND (""TPRICE"" = @Original_TPRICE) AND (""IDPVNRATE"" = @Original_IDPVNRATE) AND ((@IsNull_IDCREDROW = 1 AND ""IDCREDROW"" IS NULL) OR (""IDCREDROW"" = @Original_IDCREDROW)) AND (""BUYPRICE"" = @Original_BUYPRICE) AND (""TBUYPRICE"" = @Original_TBUYPRICE) AND (""OLDPRICE"" = @Original_OLDPRICE) AND ((@IsNull_TOLDPRICE = 1 AND ""TOLDPRICE"" IS NULL) OR (""TOLDPRICE"" = @Original_TOLDPRICE)) AND (""IDSEQ"" = @Original_IDSEQ) AND (""ACC6"" = @Original_ACC6) AND (""ACC7"" = @Original_ACC7))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             global::FirebirdSql.Data.FirebirdClient.FbParameter param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
             param.ParameterName = "@Original_ID";
@@ -29107,17 +29078,9 @@ ORDER BY IDSEQ, ID";
             param.SourceColumn = "ACC7";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.DeleteCommand.Parameters.Add(param);
-            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
-            param.ParameterName = "@Original_ISGONE";
-            param.DbType = global::System.Data.DbType.Int32;
-            param.Size = 4;
-            param.IsNullable = true;
-            param.SourceColumn = "ISGONE";
-            param.SourceVersion = global::System.Data.DataRowVersion.Original;
-            this._adapter.DeleteCommand.Parameters.Add(param);
             this._adapter.InsertCommand = new global::FirebirdSql.Data.FirebirdClient.FbCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO ""M_ROWS"" (""ID"", ""IDDOC"", ""IDITEM"", ""IDITEMTEXT"", ""UNITS"", ""AMOUNT"", ""DISCOUNT"", ""PRICE0"", ""PRICE"", ""TPRICE"", ""IDPVNRATE"", ""IDCREDROW"", ""BUYPRICE"", ""TBUYPRICE"", ""OLDPRICE"", ""TOLDPRICE"", ""IDSEQ"", ""ACC6"", ""ACC7"", ""ISGONE"") VALUES (@ID, @IDDOC, @IDITEM, @IDITEMTEXT, @UNITS, @AMOUNT, @DISCOUNT, @PRICE0, @PRICE, @TPRICE, @IDPVNRATE, @IDCREDROW, @BUYPRICE, @TBUYPRICE, @OLDPRICE, @TOLDPRICE, @IDSEQ, @ACC6, @ACC7, @ISGONE)";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO ""M_ROWS"" (""ID"", ""IDDOC"", ""IDITEM"", ""IDITEMTEXT"", ""UNITS"", ""AMOUNT"", ""DISCOUNT"", ""PRICE0"", ""PRICE"", ""TPRICE"", ""IDPVNRATE"", ""IDCREDROW"", ""BUYPRICE"", ""TBUYPRICE"", ""OLDPRICE"", ""TOLDPRICE"", ""IDSEQ"", ""ACC6"", ""ACC7"") VALUES (@ID, @IDDOC, @IDITEM, @IDITEMTEXT, @UNITS, @AMOUNT, @DISCOUNT, @PRICE0, @PRICE, @TPRICE, @IDPVNRATE, @IDCREDROW, @BUYPRICE, @TBUYPRICE, @OLDPRICE, @TOLDPRICE, @IDSEQ, @ACC6, @ACC7)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
             param.ParameterName = "@ID";
@@ -29250,16 +29213,9 @@ ORDER BY IDSEQ, ID";
             param.IsNullable = true;
             param.SourceColumn = "ACC7";
             this._adapter.InsertCommand.Parameters.Add(param);
-            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
-            param.ParameterName = "@ISGONE";
-            param.DbType = global::System.Data.DbType.Int32;
-            param.Size = 4;
-            param.IsNullable = true;
-            param.SourceColumn = "ISGONE";
-            this._adapter.InsertCommand.Parameters.Add(param);
             this._adapter.UpdateCommand = new global::FirebirdSql.Data.FirebirdClient.FbCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE ""M_ROWS"" SET ""ID"" = @ID, ""IDDOC"" = @IDDOC, ""IDITEM"" = @IDITEM, ""IDITEMTEXT"" = @IDITEMTEXT, ""UNITS"" = @UNITS, ""AMOUNT"" = @AMOUNT, ""DISCOUNT"" = @DISCOUNT, ""PRICE0"" = @PRICE0, ""PRICE"" = @PRICE, ""TPRICE"" = @TPRICE, ""IDPVNRATE"" = @IDPVNRATE, ""IDCREDROW"" = @IDCREDROW, ""BUYPRICE"" = @BUYPRICE, ""TBUYPRICE"" = @TBUYPRICE, ""OLDPRICE"" = @OLDPRICE, ""TOLDPRICE"" = @TOLDPRICE, ""IDSEQ"" = @IDSEQ, ""ACC6"" = @ACC6, ""ACC7"" = @ACC7, ""ISGONE"" = @ISGONE WHERE ((""ID"" = @Original_ID) AND (""IDDOC"" = @Original_IDDOC) AND (""IDITEM"" = @Original_IDITEM) AND ((@IsNull_IDITEMTEXT = 1 AND ""IDITEMTEXT"" IS NULL) OR (""IDITEMTEXT"" = @Original_IDITEMTEXT)) AND (""UNITS"" = @Original_UNITS) AND (""AMOUNT"" = @Original_AMOUNT) AND (""DISCOUNT"" = @Original_DISCOUNT) AND (""PRICE0"" = @Original_PRICE0) AND (""PRICE"" = @Original_PRICE) AND (""TPRICE"" = @Original_TPRICE) AND (""IDPVNRATE"" = @Original_IDPVNRATE) AND ((@IsNull_IDCREDROW = 1 AND ""IDCREDROW"" IS NULL) OR (""IDCREDROW"" = @Original_IDCREDROW)) AND (""BUYPRICE"" = @Original_BUYPRICE) AND (""TBUYPRICE"" = @Original_TBUYPRICE) AND (""OLDPRICE"" = @Original_OLDPRICE) AND ((@IsNull_TOLDPRICE = 1 AND ""TOLDPRICE"" IS NULL) OR (""TOLDPRICE"" = @Original_TOLDPRICE)) AND (""IDSEQ"" = @Original_IDSEQ) AND (""ACC6"" = @Original_ACC6) AND (""ACC7"" = @Original_ACC7) AND (""ISGONE"" = @Original_ISGONE))";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE ""M_ROWS"" SET ""ID"" = @ID, ""IDDOC"" = @IDDOC, ""IDITEM"" = @IDITEM, ""IDITEMTEXT"" = @IDITEMTEXT, ""UNITS"" = @UNITS, ""AMOUNT"" = @AMOUNT, ""DISCOUNT"" = @DISCOUNT, ""PRICE0"" = @PRICE0, ""PRICE"" = @PRICE, ""TPRICE"" = @TPRICE, ""IDPVNRATE"" = @IDPVNRATE, ""IDCREDROW"" = @IDCREDROW, ""BUYPRICE"" = @BUYPRICE, ""TBUYPRICE"" = @TBUYPRICE, ""OLDPRICE"" = @OLDPRICE, ""TOLDPRICE"" = @TOLDPRICE, ""IDSEQ"" = @IDSEQ, ""ACC6"" = @ACC6, ""ACC7"" = @ACC7 WHERE ((""ID"" = @Original_ID) AND (""IDDOC"" = @Original_IDDOC) AND (""IDITEM"" = @Original_IDITEM) AND ((@IsNull_IDITEMTEXT = 1 AND ""IDITEMTEXT"" IS NULL) OR (""IDITEMTEXT"" = @Original_IDITEMTEXT)) AND (""UNITS"" = @Original_UNITS) AND (""AMOUNT"" = @Original_AMOUNT) AND (""DISCOUNT"" = @Original_DISCOUNT) AND (""PRICE0"" = @Original_PRICE0) AND (""PRICE"" = @Original_PRICE) AND (""TPRICE"" = @Original_TPRICE) AND (""IDPVNRATE"" = @Original_IDPVNRATE) AND ((@IsNull_IDCREDROW = 1 AND ""IDCREDROW"" IS NULL) OR (""IDCREDROW"" = @Original_IDCREDROW)) AND (""BUYPRICE"" = @Original_BUYPRICE) AND (""TBUYPRICE"" = @Original_TBUYPRICE) AND (""OLDPRICE"" = @Original_OLDPRICE) AND ((@IsNull_TOLDPRICE = 1 AND ""TOLDPRICE"" IS NULL) OR (""TOLDPRICE"" = @Original_TOLDPRICE)) AND (""IDSEQ"" = @Original_IDSEQ) AND (""ACC6"" = @Original_ACC6) AND (""ACC7"" = @Original_ACC7))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
             param.ParameterName = "@ID";
@@ -29391,13 +29347,6 @@ ORDER BY IDSEQ, ID";
             param.Size = 8;
             param.IsNullable = true;
             param.SourceColumn = "ACC7";
-            this._adapter.UpdateCommand.Parameters.Add(param);
-            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
-            param.ParameterName = "@ISGONE";
-            param.DbType = global::System.Data.DbType.Int32;
-            param.Size = 4;
-            param.IsNullable = true;
-            param.SourceColumn = "ISGONE";
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
             param.ParameterName = "@Original_ID";
@@ -29576,14 +29525,6 @@ ORDER BY IDSEQ, ID";
             param.SourceColumn = "ACC7";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.UpdateCommand.Parameters.Add(param);
-            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
-            param.ParameterName = "@Original_ISGONE";
-            param.DbType = global::System.Data.DbType.Int32;
-            param.Size = 4;
-            param.IsNullable = true;
-            param.SourceColumn = "ISGONE";
-            param.SourceVersion = global::System.Data.DataRowVersion.Original;
-            this._adapter.UpdateCommand.Parameters.Add(param);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -29601,7 +29542,7 @@ ORDER BY IDSEQ, ID";
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT ID, IDDOC, IDITEM, IDITEMTEXT, UNITS, AMOUNT, DISCOUNT, PRICE0, PRICE, TPR" +
                 "ICE, IDPVNRATE, IDCREDROW, BUYPRICE, TBUYPRICE, OLDPRICE, TOLDPRICE, IDSEQ, ACC6" +
-                ", ACC7, ISGONE\r\nFROM   M_ROWS\r\nORDER BY IDSEQ, ID";
+                ", ACC7\r\nFROM   M_ROWS\r\nORDER BY IDSEQ, ID";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::FirebirdSql.Data.FirebirdClient.FbCommand();
             this._commandCollection[1].Connection = this.Connection;
@@ -29728,8 +29669,7 @@ ORDER BY IDSEQ, ID";
                     global::System.Nullable<decimal> Original_TOLDPRICE, 
                     long Original_IDSEQ, 
                     string Original_ACC6, 
-                    string Original_ACC7, 
-                    int Original_ISGONE) {
+                    string Original_ACC7) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_ID));
             this.Adapter.DeleteCommand.Parameters[1].Value = ((int)(Original_IDDOC));
             this.Adapter.DeleteCommand.Parameters[2].Value = ((int)(Original_IDITEM));
@@ -29780,7 +29720,6 @@ ORDER BY IDSEQ, ID";
             else {
                 this.Adapter.DeleteCommand.Parameters[21].Value = ((string)(Original_ACC7));
             }
-            this.Adapter.DeleteCommand.Parameters[22].Value = ((int)(Original_ISGONE));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -29820,8 +29759,7 @@ ORDER BY IDSEQ, ID";
                     global::System.Nullable<decimal> TOLDPRICE, 
                     long IDSEQ, 
                     string ACC6, 
-                    string ACC7, 
-                    int ISGONE) {
+                    string ACC7) {
             this.Adapter.InsertCommand.Parameters[0].Value = ((int)(ID));
             this.Adapter.InsertCommand.Parameters[1].Value = ((int)(IDDOC));
             this.Adapter.InsertCommand.Parameters[2].Value = ((int)(IDITEM));
@@ -29866,7 +29804,6 @@ ORDER BY IDSEQ, ID";
             else {
                 this.Adapter.InsertCommand.Parameters[18].Value = ((string)(ACC7));
             }
-            this.Adapter.InsertCommand.Parameters[19].Value = ((int)(ISGONE));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -29907,7 +29844,6 @@ ORDER BY IDSEQ, ID";
                     long IDSEQ, 
                     string ACC6, 
                     string ACC7, 
-                    int ISGONE, 
                     int Original_ID, 
                     int Original_IDDOC, 
                     int Original_IDITEM, 
@@ -29926,8 +29862,7 @@ ORDER BY IDSEQ, ID";
                     global::System.Nullable<decimal> Original_TOLDPRICE, 
                     long Original_IDSEQ, 
                     string Original_ACC6, 
-                    string Original_ACC7, 
-                    int Original_ISGONE) {
+                    string Original_ACC7) {
             this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(ID));
             this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(IDDOC));
             this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(IDITEM));
@@ -29972,58 +29907,56 @@ ORDER BY IDSEQ, ID";
             else {
                 this.Adapter.UpdateCommand.Parameters[18].Value = ((string)(ACC7));
             }
-            this.Adapter.UpdateCommand.Parameters[19].Value = ((int)(ISGONE));
-            this.Adapter.UpdateCommand.Parameters[20].Value = ((int)(Original_ID));
-            this.Adapter.UpdateCommand.Parameters[21].Value = ((int)(Original_IDDOC));
-            this.Adapter.UpdateCommand.Parameters[22].Value = ((int)(Original_IDITEM));
+            this.Adapter.UpdateCommand.Parameters[19].Value = ((int)(Original_ID));
+            this.Adapter.UpdateCommand.Parameters[20].Value = ((int)(Original_IDDOC));
+            this.Adapter.UpdateCommand.Parameters[21].Value = ((int)(Original_IDITEM));
             if ((Original_IDITEMTEXT.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[23].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[24].Value = ((int)(Original_IDITEMTEXT.Value));
+                this.Adapter.UpdateCommand.Parameters[22].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[23].Value = ((int)(Original_IDITEMTEXT.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[23].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[24].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[22].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[23].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[25].Value = ((int)(Original_UNITS));
-            this.Adapter.UpdateCommand.Parameters[26].Value = ((decimal)(Original_AMOUNT));
-            this.Adapter.UpdateCommand.Parameters[27].Value = ((float)(Original_DISCOUNT));
-            this.Adapter.UpdateCommand.Parameters[28].Value = ((decimal)(Original_PRICE0));
-            this.Adapter.UpdateCommand.Parameters[29].Value = ((decimal)(Original_PRICE));
-            this.Adapter.UpdateCommand.Parameters[30].Value = ((decimal)(Original_TPRICE));
-            this.Adapter.UpdateCommand.Parameters[31].Value = ((int)(Original_IDPVNRATE));
+            this.Adapter.UpdateCommand.Parameters[24].Value = ((int)(Original_UNITS));
+            this.Adapter.UpdateCommand.Parameters[25].Value = ((decimal)(Original_AMOUNT));
+            this.Adapter.UpdateCommand.Parameters[26].Value = ((float)(Original_DISCOUNT));
+            this.Adapter.UpdateCommand.Parameters[27].Value = ((decimal)(Original_PRICE0));
+            this.Adapter.UpdateCommand.Parameters[28].Value = ((decimal)(Original_PRICE));
+            this.Adapter.UpdateCommand.Parameters[29].Value = ((decimal)(Original_TPRICE));
+            this.Adapter.UpdateCommand.Parameters[30].Value = ((int)(Original_IDPVNRATE));
             if ((Original_IDCREDROW.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[32].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[33].Value = ((int)(Original_IDCREDROW.Value));
+                this.Adapter.UpdateCommand.Parameters[31].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[32].Value = ((int)(Original_IDCREDROW.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[32].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[33].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[31].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[32].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[34].Value = ((decimal)(Original_BUYPRICE));
-            this.Adapter.UpdateCommand.Parameters[35].Value = ((decimal)(Original_TBUYPRICE));
-            this.Adapter.UpdateCommand.Parameters[36].Value = ((decimal)(Original_OLDPRICE));
+            this.Adapter.UpdateCommand.Parameters[33].Value = ((decimal)(Original_BUYPRICE));
+            this.Adapter.UpdateCommand.Parameters[34].Value = ((decimal)(Original_TBUYPRICE));
+            this.Adapter.UpdateCommand.Parameters[35].Value = ((decimal)(Original_OLDPRICE));
             if ((Original_TOLDPRICE.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[37].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[38].Value = ((decimal)(Original_TOLDPRICE.Value));
+                this.Adapter.UpdateCommand.Parameters[36].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[37].Value = ((decimal)(Original_TOLDPRICE.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[37].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[38].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[36].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[37].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[39].Value = ((long)(Original_IDSEQ));
+            this.Adapter.UpdateCommand.Parameters[38].Value = ((long)(Original_IDSEQ));
             if ((Original_ACC6 == null)) {
                 throw new global::System.ArgumentNullException("Original_ACC6");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[40].Value = ((string)(Original_ACC6));
+                this.Adapter.UpdateCommand.Parameters[39].Value = ((string)(Original_ACC6));
             }
             if ((Original_ACC7 == null)) {
                 throw new global::System.ArgumentNullException("Original_ACC7");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[41].Value = ((string)(Original_ACC7));
+                this.Adapter.UpdateCommand.Parameters[40].Value = ((string)(Original_ACC7));
             }
-            this.Adapter.UpdateCommand.Parameters[42].Value = ((int)(Original_ISGONE));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -30063,7 +29996,6 @@ ORDER BY IDSEQ, ID";
                     long IDSEQ, 
                     string ACC6, 
                     string ACC7, 
-                    int ISGONE, 
                     int Original_ID, 
                     int Original_IDDOC, 
                     int Original_IDITEM, 
@@ -30082,9 +30014,8 @@ ORDER BY IDSEQ, ID";
                     global::System.Nullable<decimal> Original_TOLDPRICE, 
                     long Original_IDSEQ, 
                     string Original_ACC6, 
-                    string Original_ACC7, 
-                    int Original_ISGONE) {
-            return this.Update(Original_ID, IDDOC, IDITEM, IDITEMTEXT, UNITS, AMOUNT, DISCOUNT, PRICE0, PRICE, TPRICE, IDPVNRATE, IDCREDROW, BUYPRICE, TBUYPRICE, OLDPRICE, TOLDPRICE, IDSEQ, ACC6, ACC7, ISGONE, Original_ID, Original_IDDOC, Original_IDITEM, Original_IDITEMTEXT, Original_UNITS, Original_AMOUNT, Original_DISCOUNT, Original_PRICE0, Original_PRICE, Original_TPRICE, Original_IDPVNRATE, Original_IDCREDROW, Original_BUYPRICE, Original_TBUYPRICE, Original_OLDPRICE, Original_TOLDPRICE, Original_IDSEQ, Original_ACC6, Original_ACC7, Original_ISGONE);
+                    string Original_ACC7) {
+            return this.Update(Original_ID, IDDOC, IDITEM, IDITEMTEXT, UNITS, AMOUNT, DISCOUNT, PRICE0, PRICE, TPRICE, IDPVNRATE, IDCREDROW, BUYPRICE, TBUYPRICE, OLDPRICE, TOLDPRICE, IDSEQ, ACC6, ACC7, Original_ID, Original_IDDOC, Original_IDITEM, Original_IDITEMTEXT, Original_UNITS, Original_AMOUNT, Original_DISCOUNT, Original_PRICE0, Original_PRICE, Original_TPRICE, Original_IDPVNRATE, Original_IDCREDROW, Original_BUYPRICE, Original_TBUYPRICE, Original_OLDPRICE, Original_TOLDPRICE, Original_IDSEQ, Original_ACC6, Original_ACC7);
         }
     }
     
