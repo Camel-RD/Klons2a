@@ -3739,7 +3739,7 @@ Round(
                                   <Style />
                                 </TextRun>
                                 <TextRun>
-                                  <Value>=MyReportLib.ReportFuncs.CikEiro(CDbl(Parameters!RAPMAKSAI.Value))</Value>
+                                  <Value>=MyReportLib.ReportFuncs.CikEiro(Val(Parameters!RAPMAKSAI.Value))</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>

@@ -2079,7 +2079,6 @@ First(Fields!DocNr.Value, "DataSet1"))</Value>
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
-                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                     <TablixCell>
@@ -2131,7 +2130,6 @@ First(Fields!DocNr.Value, "DataSet1"))</Value>
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
-                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                     <TablixCell>
@@ -2185,7 +2183,6 @@ First(Fields!DocNr.Value, "DataSet1"))</Value>
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
-                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                     <TablixCell>
@@ -2239,7 +2236,6 @@ First(Fields!DocNr.Value, "DataSet1"))</Value>
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
-                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                     <TablixCell>
@@ -2298,7 +2294,6 @@ Round(
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
-                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                     <TablixCell>
@@ -2354,7 +2349,6 @@ Round(
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
-                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                   </TablixCells>
@@ -2861,7 +2855,7 @@ Round(
                                   <Style />
                                 </TextRun>
                                 <TextRun>
-                                  <Value>=MyReportLib.ReportFuncs.CikEiro(CDbl(Parameters!RAPMAKSAI.Value))</Value>
+                                  <Value>=MyReportLib.ReportFuncs.CikEiro(Val(Parameters!RAPMAKSAI.Value))</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
