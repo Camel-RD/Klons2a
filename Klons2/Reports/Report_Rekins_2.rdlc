@@ -849,7 +849,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!BankId.Value</Value>
+                                  <Value>=Fields!Bank.Value</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -962,7 +962,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!Bank.Value</Value>
+                                  <Value>=Fields!BankId.Value</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -978,6 +978,7 @@
                             <PaddingTop>2pt</PaddingTop>
                           </Style>
                         </Textbox>
+                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                   </TablixCells>

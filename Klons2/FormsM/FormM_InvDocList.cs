@@ -278,6 +278,14 @@ namespace KlonsM.FormsM
                 e.FormattingApplied = true;
             }
 
+            if (e.ColumnIndex == dgcDocsPersons.Index)
+            {
+                var s = (string)e.Value;
+                s = s.Replace("\r\n", ", ");
+                s = s.Replace("\n", ", ");
+                e.Value = s;
+                e.FormattingApplied = true;
+            }
         }
 
         private void bniSave_Click(object sender, EventArgs e)
@@ -399,6 +407,19 @@ namespace KlonsM.FormsM
             FormM_InvDoc.ShowDocMyDialog(dr.ID);
         }
 
+        public void DoDeleteDoc()
+        {
+            if (!SaveData()) return;
+            var dr = GetCurrentDocRow();
+            if (dr == null) return;
+            if (dr.GetM_INV_ROWSRows().Length == 0)
+            {
+                DataMLoader.LoadInvRowsByFilter(dr.ID, true);
+            }
+            bsDocs.RemoveCurrent();
+            SaveData();
+        }
+
         private void dgvDocs_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.ColumnIndex == dgcDocsDT.Index ||
@@ -421,6 +442,11 @@ namespace KlonsM.FormsM
         private void tsbOpenDoc_Click(object sender, EventArgs e)
         {
             DoOpenDoc();
+        }
+
+        private void bniDelete_Click(object sender, EventArgs e)
+        {
+            DoDeleteDoc();
         }
     }
 }

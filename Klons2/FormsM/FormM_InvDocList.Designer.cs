@@ -30,10 +30,10 @@ namespace KlonsM.FormsM
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormM_InvDocList));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             bsDocs = new KlonsLIB.Data.MyBindingSource(components);
             myAdapterManager1 = new KlonsLIB.Data.MyAdapterManager();
             bNav = new KlonsLIB.Components.MyBindingNavigator();
@@ -63,16 +63,27 @@ namespace KlonsM.FormsM
             tsbFindNext = new System.Windows.Forms.ToolStripButton();
             panel1 = new System.Windows.Forms.Panel();
             dgvFilter = new KlonsLIB.Components.MyDataGridView();
-            bsDocFilter = new KlonsLIB.Data.MyBindingSourceToObj(components);
-            docFilterData1 = new DataObjectsFM.DocFilterData();
-            btFilter = new System.Windows.Forms.Button();
-            myConfigA1 = new MyConfigA();
-            bsItems = new KlonsLIB.Data.MyBindingSource(components);
             dgcFilterDt1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             dgcFilterDt2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             dgcFilterState = new KlonsLIB.Components.MyDgvMcCBColumn();
             dgcFilterIdStore = new KlonsLIB.Components.MyDgvTextboxColumn2();
+            dt1DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            dt2DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            docTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            docStateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            idStoreOutDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            idStoreInDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            idStoreOutOrInDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            dataBindingsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            modifiersDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            generateMemberDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            bsDocFilter = new KlonsLIB.Data.MyBindingSourceToObj(components);
+            docFilterData1 = new DataObjectsFM.DocFilterData();
             panel2 = new System.Windows.Forms.Panel();
+            btFilter = new System.Windows.Forms.Button();
+            myConfigA1 = new MyConfigA();
+            bsItems = new KlonsLIB.Data.MyBindingSource(components);
             ((System.ComponentModel.ISupportInitialize)bsDocs).BeginInit();
             ((System.ComponentModel.ISupportInitialize)myAdapterManager1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)bNav).BeginInit();
@@ -82,8 +93,8 @@ namespace KlonsM.FormsM
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvFilter).BeginInit();
             ((System.ComponentModel.ISupportInitialize)bsDocFilter).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)bsItems).BeginInit();
             panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)bsItems).BeginInit();
             SuspendLayout();
             // 
             // bsDocs
@@ -111,7 +122,6 @@ namespace KlonsM.FormsM
             bNav.DataGrid = dgvDocs;
             bNav.DeleteItem = null;
             bNav.Dock = System.Windows.Forms.DockStyle.Bottom;
-            bNav.ImageScalingSize = new System.Drawing.Size(16, 16);
             bNav.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { bindingNavigatorMoveFirstItem, bindingNavigatorMovePreviousItem, bindingNavigatorSeparator, bindingNavigatorPositionItem, bindingNavigatorCountItem, bindingNavigatorSeparator1, bindingNavigatorMoveNextItem, bindingNavigatorMoveLastItem, bindingNavigatorSeparator2, tsbOpenDoc, bniAdd, bniDelete, bniSave, tsbFindPrev, tsbFind, tsbFindNext });
             bNav.Location = new System.Drawing.Point(0, 413);
             bNav.MoveFirstItem = bindingNavigatorMoveFirstItem;
@@ -129,13 +139,14 @@ namespace KlonsM.FormsM
             // bindingNavigatorCountItem
             // 
             bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            bindingNavigatorCountItem.Size = new System.Drawing.Size(49, 34);
+            bindingNavigatorCountItem.Size = new System.Drawing.Size(52, 34);
             bindingNavigatorCountItem.Text = " no {0}";
             bindingNavigatorCountItem.ToolTipText = "Ierakstu skaits";
             // 
             // dgvDocs
             // 
             dgvDocs.AllowUserToAddRows = false;
+            dgvDocs.AllowUserToDeleteRows = false;
             dgvDocs.AutoGenerateColumns = false;
             dgvDocs.AutoSave = false;
             dgvDocs.BackgroundColor = System.Drawing.SystemColors.Control;
@@ -158,8 +169,8 @@ namespace KlonsM.FormsM
             // dgcDocsDT
             // 
             dgcDocsDT.DataPropertyName = "DT";
-            dataGridViewCellStyle4.Format = "dd.MM.yyyy";
-            dgcDocsDT.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Format = "dd.MM.yyyy";
+            dgcDocsDT.DefaultCellStyle = dataGridViewCellStyle1;
             dgcDocsDT.HeaderText = "datums";
             dgcDocsDT.MinimumWidth = 8;
             dgcDocsDT.Name = "dgcDocsDT";
@@ -230,7 +241,7 @@ namespace KlonsM.FormsM
             bindingNavigatorMoveFirstItem.Image = (System.Drawing.Image)resources.GetObject("bindingNavigatorMoveFirstItem.Image");
             bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
             bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(28, 34);
+            bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(23, 34);
             bindingNavigatorMoveFirstItem.Text = "Iet uz pirmo";
             // 
             // bindingNavigatorMovePreviousItem
@@ -239,7 +250,7 @@ namespace KlonsM.FormsM
             bindingNavigatorMovePreviousItem.Image = (System.Drawing.Image)resources.GetObject("bindingNavigatorMovePreviousItem.Image");
             bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
             bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(28, 34);
+            bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(23, 34);
             bindingNavigatorMovePreviousItem.Text = "Iet uz iepriekšējo";
             // 
             // bindingNavigatorSeparator
@@ -266,7 +277,7 @@ namespace KlonsM.FormsM
             bindingNavigatorMoveNextItem.Image = (System.Drawing.Image)resources.GetObject("bindingNavigatorMoveNextItem.Image");
             bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
             bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(28, 34);
+            bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 34);
             bindingNavigatorMoveNextItem.Text = "Iet uz nākošo";
             // 
             // bindingNavigatorMoveLastItem
@@ -275,7 +286,7 @@ namespace KlonsM.FormsM
             bindingNavigatorMoveLastItem.Image = (System.Drawing.Image)resources.GetObject("bindingNavigatorMoveLastItem.Image");
             bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
             bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(28, 34);
+            bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 34);
             bindingNavigatorMoveLastItem.Text = "Iet uz pēdējo";
             // 
             // bindingNavigatorSeparator2
@@ -288,7 +299,7 @@ namespace KlonsM.FormsM
             tsbOpenDoc.Image = (System.Drawing.Image)resources.GetObject("tsbOpenDoc.Image");
             tsbOpenDoc.ImageTransparentColor = System.Drawing.Color.Magenta;
             tsbOpenDoc.Name = "tsbOpenDoc";
-            tsbOpenDoc.Size = new System.Drawing.Size(75, 34);
+            tsbOpenDoc.Size = new System.Drawing.Size(69, 34);
             tsbOpenDoc.Text = "Atvērt";
             tsbOpenDoc.Click += tsbOpenDoc_Click;
             // 
@@ -297,7 +308,7 @@ namespace KlonsM.FormsM
             bniAdd.Image = (System.Drawing.Image)resources.GetObject("bniAdd.Image");
             bniAdd.Name = "bniAdd";
             bniAdd.RightToLeftAutoMirrorImage = true;
-            bniAdd.Size = new System.Drawing.Size(71, 34);
+            bniAdd.Size = new System.Drawing.Size(64, 34);
             bniAdd.Text = "Jauns";
             bniAdd.Click += bniAdd_Click;
             // 
@@ -306,14 +317,15 @@ namespace KlonsM.FormsM
             bniDelete.Image = (System.Drawing.Image)resources.GetObject("bniDelete.Image");
             bniDelete.Name = "bniDelete";
             bniDelete.RightToLeftAutoMirrorImage = true;
-            bniDelete.Size = new System.Drawing.Size(71, 34);
+            bniDelete.Size = new System.Drawing.Size(66, 34);
             bniDelete.Text = "Dzēst";
+            bniDelete.Click += bniDelete_Click;
             // 
             // bniSave
             // 
             bniSave.Image = (System.Drawing.Image)resources.GetObject("bniSave.Image");
             bniSave.Name = "bniSave";
-            bniSave.Size = new System.Drawing.Size(89, 34);
+            bniSave.Size = new System.Drawing.Size(88, 34);
             bniSave.Text = "Saglabāt";
             bniSave.Click += bniSave_Click;
             // 
@@ -323,7 +335,7 @@ namespace KlonsM.FormsM
             tsbFindPrev.Image = (System.Drawing.Image)resources.GetObject("tsbFindPrev.Image");
             tsbFindPrev.Name = "tsbFindPrev";
             tsbFindPrev.RightToLeftAutoMirrorImage = true;
-            tsbFindPrev.Size = new System.Drawing.Size(28, 34);
+            tsbFindPrev.Size = new System.Drawing.Size(23, 34);
             tsbFindPrev.Text = "Iet uz iepriekšējo";
             tsbFindPrev.Click += tsbFindPrev_Click;
             // 
@@ -341,7 +353,7 @@ namespace KlonsM.FormsM
             tsbFindNext.Image = (System.Drawing.Image)resources.GetObject("tsbFindNext.Image");
             tsbFindNext.Name = "tsbFindNext";
             tsbFindNext.RightToLeftAutoMirrorImage = true;
-            tsbFindNext.Size = new System.Drawing.Size(28, 34);
+            tsbFindNext.Size = new System.Drawing.Size(23, 34);
             tsbFindNext.Text = "Iet uz nākošo";
             tsbFindNext.Click += tsbFindNext_Click;
             // 
@@ -363,7 +375,7 @@ namespace KlonsM.FormsM
             dgvFilter.AutoGenerateColumns = false;
             dgvFilter.BackgroundColor = System.Drawing.SystemColors.Control;
             dgvFilter.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvFilter.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { dgcFilterDt1, dgcFilterDt2, dgcFilterState, dgcFilterIdStore });
+            dgvFilter.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { dgcFilterDt1, dgcFilterDt2, dgcFilterState, dgcFilterIdStore, dt1DataGridViewTextBoxColumn, dt2DataGridViewTextBoxColumn, docTypeDataGridViewTextBoxColumn, docStateDataGridViewTextBoxColumn, idStoreOutDataGridViewTextBoxColumn, idStoreInDataGridViewTextBoxColumn, idStoreOutOrInDataGridViewTextBoxColumn, dataBindingsDataGridViewTextBoxColumn, modifiersDataGridViewTextBoxColumn, generateMemberDataGridViewCheckBoxColumn, nameDataGridViewTextBoxColumn });
             dgvFilter.DataSource = bsDocFilter;
             dgvFilter.Dock = System.Windows.Forms.DockStyle.Fill;
             dgvFilter.Location = new System.Drawing.Point(0, 0);
@@ -377,49 +389,11 @@ namespace KlonsM.FormsM
             dgvFilter.CellFormatting += dgvFilter_CellFormatting;
             dgvFilter.CellParsing += dgvFilter_CellParsing;
             // 
-            // bsDocFilter
-            // 
-            bsDocFilter.MyDataSource = docFilterData1;
-            bsDocFilter.Position = 0;
-            // 
-            // docFilterData1
-            // 
-            docFilterData1.DocState = null;
-            docFilterData1.DocType = null;
-            docFilterData1.Dt1 = null;
-            docFilterData1.Dt2 = null;
-            docFilterData1.IdStoreIn = null;
-            docFilterData1.IdStoreOut = null;
-            docFilterData1.IdStoreOutOrIn = null;
-            // 
-            // btFilter
-            // 
-            btFilter.Dock = System.Windows.Forms.DockStyle.Fill;
-            btFilter.Location = new System.Drawing.Point(3, 3);
-            btFilter.Name = "btFilter";
-            btFilter.Size = new System.Drawing.Size(61, 55);
-            btFilter.TabIndex = 1;
-            btFilter.Text = "Atlasīt";
-            btFilter.UseVisualStyleBackColor = true;
-            btFilter.Click += btFilter_Click;
-            // 
-            // myConfigA1
-            // 
-            myConfigA1.DocStatusColor1 = System.Drawing.Color.LightYellow;
-            myConfigA1.DocStatusColor2 = System.Drawing.Color.LightBlue;
-            myConfigA1.DocStatusColor3 = System.Drawing.Color.LightGreen;
-            // 
-            // bsItems
-            // 
-            bsItems.DataMember = "M_ITEMS";
-            bsItems.MyDataSource = "KlonsMData";
-            bsItems.Sort = "BARCODE";
-            // 
             // dgcFilterDt1
             // 
             dgcFilterDt1.DataPropertyName = "Dt1";
-            dataGridViewCellStyle5.Format = "dd.MM.yyyy";
-            dgcFilterDt1.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Format = "dd.MM.yyyy";
+            dgcFilterDt1.DefaultCellStyle = dataGridViewCellStyle2;
             dgcFilterDt1.HeaderText = "datums no";
             dgcFilterDt1.MinimumWidth = 8;
             dgcFilterDt1.Name = "dgcFilterDt1";
@@ -429,8 +403,8 @@ namespace KlonsM.FormsM
             // dgcFilterDt2
             // 
             dgcFilterDt2.DataPropertyName = "Dt2";
-            dataGridViewCellStyle6.Format = "dd.MM.yyyy";
-            dgcFilterDt2.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Format = "dd.MM.yyyy";
+            dgcFilterDt2.DefaultCellStyle = dataGridViewCellStyle3;
             dgcFilterDt2.HeaderText = "datums līdz";
             dgcFilterDt2.MinimumWidth = 8;
             dgcFilterDt2.Name = "dgcFilterDt2";
@@ -461,6 +435,88 @@ namespace KlonsM.FormsM
             dgcFilterIdStore.ValueMember = "ID";
             dgcFilterIdStore.Width = 180;
             // 
+            // dt1DataGridViewTextBoxColumn
+            // 
+            dt1DataGridViewTextBoxColumn.DataPropertyName = "Dt1";
+            dt1DataGridViewTextBoxColumn.HeaderText = "Dt1";
+            dt1DataGridViewTextBoxColumn.Name = "dt1DataGridViewTextBoxColumn";
+            // 
+            // dt2DataGridViewTextBoxColumn
+            // 
+            dt2DataGridViewTextBoxColumn.DataPropertyName = "Dt2";
+            dt2DataGridViewTextBoxColumn.HeaderText = "Dt2";
+            dt2DataGridViewTextBoxColumn.Name = "dt2DataGridViewTextBoxColumn";
+            // 
+            // docTypeDataGridViewTextBoxColumn
+            // 
+            docTypeDataGridViewTextBoxColumn.DataPropertyName = "DocType";
+            docTypeDataGridViewTextBoxColumn.HeaderText = "DocType";
+            docTypeDataGridViewTextBoxColumn.Name = "docTypeDataGridViewTextBoxColumn";
+            // 
+            // docStateDataGridViewTextBoxColumn
+            // 
+            docStateDataGridViewTextBoxColumn.DataPropertyName = "DocState";
+            docStateDataGridViewTextBoxColumn.HeaderText = "DocState";
+            docStateDataGridViewTextBoxColumn.Name = "docStateDataGridViewTextBoxColumn";
+            // 
+            // idStoreOutDataGridViewTextBoxColumn
+            // 
+            idStoreOutDataGridViewTextBoxColumn.DataPropertyName = "IdStoreOut";
+            idStoreOutDataGridViewTextBoxColumn.HeaderText = "IdStoreOut";
+            idStoreOutDataGridViewTextBoxColumn.Name = "idStoreOutDataGridViewTextBoxColumn";
+            // 
+            // idStoreInDataGridViewTextBoxColumn
+            // 
+            idStoreInDataGridViewTextBoxColumn.DataPropertyName = "IdStoreIn";
+            idStoreInDataGridViewTextBoxColumn.HeaderText = "IdStoreIn";
+            idStoreInDataGridViewTextBoxColumn.Name = "idStoreInDataGridViewTextBoxColumn";
+            // 
+            // idStoreOutOrInDataGridViewTextBoxColumn
+            // 
+            idStoreOutOrInDataGridViewTextBoxColumn.DataPropertyName = "IdStoreOutOrIn";
+            idStoreOutOrInDataGridViewTextBoxColumn.HeaderText = "IdStoreOutOrIn";
+            idStoreOutOrInDataGridViewTextBoxColumn.Name = "idStoreOutOrInDataGridViewTextBoxColumn";
+            // 
+            // dataBindingsDataGridViewTextBoxColumn
+            // 
+            dataBindingsDataGridViewTextBoxColumn.DataPropertyName = "DataBindings";
+            dataBindingsDataGridViewTextBoxColumn.HeaderText = "DataBindings";
+            dataBindingsDataGridViewTextBoxColumn.Name = "dataBindingsDataGridViewTextBoxColumn";
+            dataBindingsDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // modifiersDataGridViewTextBoxColumn
+            // 
+            modifiersDataGridViewTextBoxColumn.DataPropertyName = "Modifiers";
+            modifiersDataGridViewTextBoxColumn.HeaderText = "Modifiers";
+            modifiersDataGridViewTextBoxColumn.Name = "modifiersDataGridViewTextBoxColumn";
+            // 
+            // generateMemberDataGridViewCheckBoxColumn
+            // 
+            generateMemberDataGridViewCheckBoxColumn.DataPropertyName = "GenerateMember";
+            generateMemberDataGridViewCheckBoxColumn.HeaderText = "GenerateMember";
+            generateMemberDataGridViewCheckBoxColumn.Name = "generateMemberDataGridViewCheckBoxColumn";
+            // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
+            nameDataGridViewTextBoxColumn.HeaderText = "Name";
+            nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            // 
+            // bsDocFilter
+            // 
+            bsDocFilter.MyDataSource = docFilterData1;
+            bsDocFilter.Position = 0;
+            // 
+            // docFilterData1
+            // 
+            docFilterData1.DocState = null;
+            docFilterData1.DocType = null;
+            docFilterData1.Dt1 = null;
+            docFilterData1.Dt2 = null;
+            docFilterData1.IdStoreIn = null;
+            docFilterData1.IdStoreOut = null;
+            docFilterData1.IdStoreOutOrIn = null;
+            // 
             // panel2
             // 
             panel2.Controls.Add(btFilter);
@@ -470,6 +526,29 @@ namespace KlonsM.FormsM
             panel2.Padding = new System.Windows.Forms.Padding(3);
             panel2.Size = new System.Drawing.Size(67, 61);
             panel2.TabIndex = 2;
+            // 
+            // btFilter
+            // 
+            btFilter.Dock = System.Windows.Forms.DockStyle.Fill;
+            btFilter.Location = new System.Drawing.Point(3, 3);
+            btFilter.Name = "btFilter";
+            btFilter.Size = new System.Drawing.Size(61, 55);
+            btFilter.TabIndex = 1;
+            btFilter.Text = "Atlasīt";
+            btFilter.UseVisualStyleBackColor = true;
+            btFilter.Click += btFilter_Click;
+            // 
+            // myConfigA1
+            // 
+            myConfigA1.DocStatusColor1 = System.Drawing.Color.LightYellow;
+            myConfigA1.DocStatusColor2 = System.Drawing.Color.LightBlue;
+            myConfigA1.DocStatusColor3 = System.Drawing.Color.LightGreen;
+            // 
+            // bsItems
+            // 
+            bsItems.DataMember = "M_ITEMS";
+            bsItems.MyDataSource = "KlonsMData";
+            bsItems.Sort = "BARCODE";
             // 
             // FormM_InvDocList
             // 
@@ -492,8 +571,8 @@ namespace KlonsM.FormsM
             panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dgvFilter).EndInit();
             ((System.ComponentModel.ISupportInitialize)bsDocFilter).EndInit();
-            ((System.ComponentModel.ISupportInitialize)bsItems).EndInit();
             panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)bsItems).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -540,5 +619,16 @@ namespace KlonsM.FormsM
         private KlonsLIB.Components.MyDgvMcCBColumn dgcFilterState;
         private KlonsLIB.Components.MyDgvTextboxColumn2 dgcFilterIdStore;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dt1DataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dt2DataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn docTypeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn docStateDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idStoreOutDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idStoreInDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idStoreOutOrInDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataBindingsDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn modifiersDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn generateMemberDataGridViewCheckBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
     }
 }
