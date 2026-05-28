@@ -41,22 +41,7 @@ namespace KlonsF.Forms
             bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             bsPersons = new MyBindingSource(components);
             dgvPersons = new MyDataGridView();
-            dgcClid = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            dgcName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            dgcRegNr = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            dgcPVNRegNr = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            dgcTP = new MyDgvMcCBColumn();
-            dgcTP2 = new MyDgvMcCBColumn();
-            dgcTP3 = new MyDgvCheckBoxColumn();
-            dgcAddr = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            dgcAddr2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            dgcATK = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            dgcBankId = new MyDgvMcCBColumn();
             bsBanks = new MyBindingSource(components);
-            dgcBank = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            dgcBankAcc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            dgcPhone = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            dgcAct = new MyDgvCheckBoxColumn();
             bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
@@ -75,6 +60,21 @@ namespace KlonsF.Forms
             cbAct = new MyMcFlatComboBox();
             label3 = new System.Windows.Forms.Label();
             panel1 = new System.Windows.Forms.Panel();
+            dgcClid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            dgcName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            dgcRegNr = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            dgcPVNRegNr = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            dgcTP = new MyDgvMcCBColumn();
+            dgcTP2 = new MyDgvMcCBColumn();
+            dgcTP3 = new MyDgvCheckBoxColumn();
+            dgcAddr = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            dgcAddr2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            dgcATK = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            dgcBankId = new MyDgvMcCBColumn();
+            dgcBank = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            dgcBankAcc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            dgcPhone = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            dgcAct = new MyDgvCheckBoxColumn();
             ((System.ComponentModel.ISupportInitialize)bnavPersons).BeginInit();
             bnavPersons.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)bsPersons).BeginInit();
@@ -155,187 +155,11 @@ namespace KlonsF.Forms
             dgvPersons.KeyDown += dgvPersons_KeyDown;
             dgvPersons.KeyPress += dgvPersons_KeyPress;
             // 
-            // dgcClid
-            // 
-            dgcClid.DataPropertyName = "ClId";
-            dgcClid.HeaderText = "kods";
-            dgcClid.MinimumWidth = 9;
-            dgcClid.Name = "dgcClid";
-            dgcClid.Width = 108;
-            // 
-            // dgcName
-            // 
-            dgcName.DataPropertyName = "Name";
-            dgcName.HeaderText = "nosaukums";
-            dgcName.MinimumWidth = 9;
-            dgcName.Name = "dgcName";
-            dgcName.Width = 281;
-            // 
-            // dgcRegNr
-            // 
-            dgcRegNr.DataPropertyName = "RegNr";
-            dgcRegNr.HeaderText = "reģ.nr.";
-            dgcRegNr.MinimumWidth = 9;
-            dgcRegNr.Name = "dgcRegNr";
-            dgcRegNr.ToolTipText = "Uzņēmuma reģistrācijas numurs, vai personas kods";
-            dgcRegNr.Width = 101;
-            // 
-            // dgcPVNRegNr
-            // 
-            dgcPVNRegNr.DataPropertyName = "PVNRegNr";
-            dgcPVNRegNr.HeaderText = "PVN reģ.nr.";
-            dgcPVNRegNr.MinimumWidth = 9;
-            dgcPVNRegNr.Name = "dgcPVNRegNr";
-            dgcPVNRegNr.Width = 120;
-            // 
-            // dgcTP
-            // 
-            dgcTP.ColumnNames = new string[]
-    {
-    "col1",
-    "col2"
-    };
-            dgcTP.ColumnWidths = "50;150";
-            dgcTP.DataPropertyName = "TP";
-            dgcTP.DisplayMember = "col1";
-            dgcTP.HeaderText = "veids";
-            dgcTP.ItemStrings = new string[]
-    {
-    "DB;debitors",
-    "KR;kreditors"
-    };
-            dgcTP.MaxDropDownItems = 15;
-            dgcTP.MinimumWidth = 9;
-            dgcTP.Name = "dgcTP";
-            dgcTP.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            dgcTP.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            dgcTP.ValueMember = "col1";
-            dgcTP.Width = 54;
-            // 
-            // dgcTP2
-            // 
-            dgcTP2.ColumnNames = new string[]
-    {
-    "col1",
-    "col2"
-    };
-            dgcTP2.DataPropertyName = "TP2";
-            dgcTP2.DisplayMember = "col1";
-            dgcTP2.HeaderText = "fp/jp";
-            dgcTP2.ItemStrings = new string[]
-    {
-    "FP;fiziska persona",
-    "JP;juridiska persona",
-    "DA;darbinieks"
-    };
-            dgcTP2.MaxDropDownItems = 15;
-            dgcTP2.MinimumWidth = 9;
-            dgcTP2.Name = "dgcTP2";
-            dgcTP2.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            dgcTP2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            dgcTP2.ValueMember = "col1";
-            dgcTP2.Width = 45;
-            // 
-            // dgcTP3
-            // 
-            dgcTP3.DataPropertyName = "TP3";
-            dgcTP3.FalseValue = "Nav";
-            dgcTP3.HeaderText = "pvn";
-            dgcTP3.MinimumWidth = 9;
-            dgcTP3.Name = "dgcTP3";
-            dgcTP3.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            dgcTP3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            dgcTP3.ToolTipText = "vai ir pvn maksātajs";
-            dgcTP3.TrueValue = "Ir";
-            dgcTP3.Width = 45;
-            // 
-            // dgcAddr
-            // 
-            dgcAddr.DataPropertyName = "Addr";
-            dgcAddr.HeaderText = "jur. adrese";
-            dgcAddr.MinimumWidth = 9;
-            dgcAddr.Name = "dgcAddr";
-            dgcAddr.ToolTipText = "Juridiskā adrese";
-            dgcAddr.Width = 180;
-            // 
-            // dgcAddr2
-            // 
-            dgcAddr2.DataPropertyName = "Addr2";
-            dgcAddr2.HeaderText = "fiz. adrese";
-            dgcAddr2.MinimumWidth = 9;
-            dgcAddr2.Name = "dgcAddr2";
-            dgcAddr2.ToolTipText = "Struktūrvienības adrese (pavadzīmēm)";
-            dgcAddr2.Width = 180;
-            // 
-            // dgcATK
-            // 
-            dgcATK.DataPropertyName = "ATK";
-            dgcATK.HeaderText = "ATK";
-            dgcATK.MinimumWidth = 9;
-            dgcATK.Name = "dgcATK";
-            dgcATK.Width = 90;
-            // 
-            // dgcBankId
-            // 
-            dgcBankId.ColumnNames = new string[]
-    {
-    "id",
-    "name"
-    };
-            dgcBankId.ColumnWidths = "100;200";
-            dgcBankId.DataPropertyName = "BankId";
-            dgcBankId.DataSource = bsBanks;
-            dgcBankId.DisplayMember = "Id";
-            dgcBankId.HeaderText = "bankas kods";
-            dgcBankId.MaxDropDownItems = 15;
-            dgcBankId.MinimumWidth = 9;
-            dgcBankId.Name = "dgcBankId";
-            dgcBankId.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            dgcBankId.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            dgcBankId.ToolTipText = "Bankas BIC kods";
-            dgcBankId.ValueMember = "Id";
-            dgcBankId.Width = 126;
-            // 
             // bsBanks
             // 
             bsBanks.DataMember = "Banks";
             bsBanks.MyDataSource = "KlonsData";
             bsBanks.Name2 = "bsBanks";
-            // 
-            // dgcBank
-            // 
-            dgcBank.DataPropertyName = "Bank";
-            dgcBank.HeaderText = "bankas nosaukums";
-            dgcBank.MaxInputLength = 50;
-            dgcBank.MinimumWidth = 9;
-            dgcBank.Name = "dgcBank";
-            dgcBank.Width = 180;
-            // 
-            // dgcBankAcc
-            // 
-            dgcBankAcc.DataPropertyName = "BankAcc";
-            dgcBankAcc.HeaderText = "bankas konts";
-            dgcBankAcc.MinimumWidth = 9;
-            dgcBankAcc.Name = "dgcBankAcc";
-            dgcBankAcc.Width = 135;
-            // 
-            // dgcPhone
-            // 
-            dgcPhone.DataPropertyName = "Phone";
-            dgcPhone.HeaderText = "telefona";
-            dgcPhone.MinimumWidth = 9;
-            dgcPhone.Name = "dgcPhone";
-            dgcPhone.Width = 90;
-            // 
-            // dgcAct
-            // 
-            dgcAct.DataPropertyName = "Act";
-            dgcAct.FalseValue = "0";
-            dgcAct.HeaderText = "aktīvs";
-            dgcAct.MinimumWidth = 9;
-            dgcAct.Name = "dgcAct";
-            dgcAct.TrueValue = "1";
-            dgcAct.Width = 54;
             // 
             // bindingNavigatorCountItem
             // 
@@ -528,6 +352,183 @@ namespace KlonsF.Forms
             panel1.Size = new System.Drawing.Size(901, 30);
             panel1.TabIndex = 0;
             // 
+            // dgcClid
+            // 
+            dgcClid.DataPropertyName = "ClId";
+            dgcClid.Frozen = true;
+            dgcClid.HeaderText = "kods";
+            dgcClid.MinimumWidth = 9;
+            dgcClid.Name = "dgcClid";
+            dgcClid.Width = 108;
+            // 
+            // dgcName
+            // 
+            dgcName.DataPropertyName = "Name";
+            dgcName.HeaderText = "nosaukums";
+            dgcName.MinimumWidth = 9;
+            dgcName.Name = "dgcName";
+            dgcName.Width = 281;
+            // 
+            // dgcRegNr
+            // 
+            dgcRegNr.DataPropertyName = "RegNr";
+            dgcRegNr.HeaderText = "reģ.nr.";
+            dgcRegNr.MinimumWidth = 9;
+            dgcRegNr.Name = "dgcRegNr";
+            dgcRegNr.ToolTipText = "Uzņēmuma reģistrācijas numurs, vai personas kods";
+            dgcRegNr.Width = 101;
+            // 
+            // dgcPVNRegNr
+            // 
+            dgcPVNRegNr.DataPropertyName = "PVNRegNr";
+            dgcPVNRegNr.HeaderText = "PVN reģ.nr.";
+            dgcPVNRegNr.MinimumWidth = 9;
+            dgcPVNRegNr.Name = "dgcPVNRegNr";
+            dgcPVNRegNr.Width = 120;
+            // 
+            // dgcTP
+            // 
+            dgcTP.ColumnNames = new string[]
+    {
+    "col1",
+    "col2"
+    };
+            dgcTP.ColumnWidths = "50;150";
+            dgcTP.DataPropertyName = "TP";
+            dgcTP.DisplayMember = "col1";
+            dgcTP.HeaderText = "veids";
+            dgcTP.ItemStrings = new string[]
+    {
+    "DB;debitors",
+    "KR;kreditors"
+    };
+            dgcTP.MaxDropDownItems = 15;
+            dgcTP.MinimumWidth = 9;
+            dgcTP.Name = "dgcTP";
+            dgcTP.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            dgcTP.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            dgcTP.ValueMember = "col1";
+            dgcTP.Width = 54;
+            // 
+            // dgcTP2
+            // 
+            dgcTP2.ColumnNames = new string[]
+    {
+    "col1",
+    "col2"
+    };
+            dgcTP2.DataPropertyName = "TP2";
+            dgcTP2.DisplayMember = "col1";
+            dgcTP2.HeaderText = "fp/jp";
+            dgcTP2.ItemStrings = new string[]
+    {
+    "FP;fiziska persona",
+    "JP;juridiska persona",
+    "DA;darbinieks"
+    };
+            dgcTP2.MaxDropDownItems = 15;
+            dgcTP2.MinimumWidth = 9;
+            dgcTP2.Name = "dgcTP2";
+            dgcTP2.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            dgcTP2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            dgcTP2.ValueMember = "col1";
+            dgcTP2.Width = 45;
+            // 
+            // dgcTP3
+            // 
+            dgcTP3.DataPropertyName = "TP3";
+            dgcTP3.FalseValue = "Nav";
+            dgcTP3.HeaderText = "pvn";
+            dgcTP3.MinimumWidth = 9;
+            dgcTP3.Name = "dgcTP3";
+            dgcTP3.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            dgcTP3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            dgcTP3.ToolTipText = "vai ir pvn maksātajs";
+            dgcTP3.TrueValue = "Ir";
+            dgcTP3.Width = 45;
+            // 
+            // dgcAddr
+            // 
+            dgcAddr.DataPropertyName = "Addr";
+            dgcAddr.HeaderText = "jur. adrese";
+            dgcAddr.MinimumWidth = 9;
+            dgcAddr.Name = "dgcAddr";
+            dgcAddr.ToolTipText = "Juridiskā adrese";
+            dgcAddr.Width = 180;
+            // 
+            // dgcAddr2
+            // 
+            dgcAddr2.DataPropertyName = "Addr2";
+            dgcAddr2.HeaderText = "fiz. adrese";
+            dgcAddr2.MinimumWidth = 9;
+            dgcAddr2.Name = "dgcAddr2";
+            dgcAddr2.ToolTipText = "Struktūrvienības adrese (pavadzīmēm)";
+            dgcAddr2.Width = 180;
+            // 
+            // dgcATK
+            // 
+            dgcATK.DataPropertyName = "ATK";
+            dgcATK.HeaderText = "ATK";
+            dgcATK.MinimumWidth = 9;
+            dgcATK.Name = "dgcATK";
+            dgcATK.Width = 90;
+            // 
+            // dgcBankId
+            // 
+            dgcBankId.ColumnNames = new string[]
+    {
+    "id",
+    "name"
+    };
+            dgcBankId.ColumnWidths = "100;200";
+            dgcBankId.DataPropertyName = "BankId";
+            dgcBankId.DataSource = bsBanks;
+            dgcBankId.DisplayMember = "Id";
+            dgcBankId.HeaderText = "bankas kods";
+            dgcBankId.MaxDropDownItems = 15;
+            dgcBankId.MinimumWidth = 9;
+            dgcBankId.Name = "dgcBankId";
+            dgcBankId.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            dgcBankId.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            dgcBankId.ToolTipText = "Bankas BIC kods";
+            dgcBankId.ValueMember = "Id";
+            dgcBankId.Width = 126;
+            // 
+            // dgcBank
+            // 
+            dgcBank.DataPropertyName = "Bank";
+            dgcBank.HeaderText = "bankas nosaukums";
+            dgcBank.MaxInputLength = 50;
+            dgcBank.MinimumWidth = 9;
+            dgcBank.Name = "dgcBank";
+            dgcBank.Width = 180;
+            // 
+            // dgcBankAcc
+            // 
+            dgcBankAcc.DataPropertyName = "BankAcc";
+            dgcBankAcc.HeaderText = "bankas konts";
+            dgcBankAcc.MinimumWidth = 9;
+            dgcBankAcc.Name = "dgcBankAcc";
+            dgcBankAcc.Width = 135;
+            // 
+            // dgcPhone
+            // 
+            dgcPhone.DataPropertyName = "Phone";
+            dgcPhone.HeaderText = "telefona";
+            dgcPhone.MinimumWidth = 9;
+            dgcPhone.Name = "dgcPhone";
+            dgcPhone.Width = 90;
+            // 
+            // dgcAct
+            // 
+            dgcAct.DataPropertyName = "Act";
+            dgcAct.FalseValue = "0";
+            dgcAct.HeaderText = "aktīvs";
+            dgcAct.MinimumWidth = 9;
+            dgcAct.Name = "dgcAct";
+            dgcAct.TrueValue = "1";
+            dgcAct.Width = 54;
+            // 
             // Form_Persons
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -577,6 +578,7 @@ namespace KlonsF.Forms
         private MyMcFlatComboBox cbAct;
         private System.Windows.Forms.Label label3;
         private MyBindingSource bsBanks;
+        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgcClid;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgcName;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgcRegNr;
@@ -592,6 +594,5 @@ namespace KlonsF.Forms
         private System.Windows.Forms.DataGridViewTextBoxColumn dgcBankAcc;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgcPhone;
         private MyDgvCheckBoxColumn dgcAct;
-        private System.Windows.Forms.Panel panel1;
     }
 }
