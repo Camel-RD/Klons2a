@@ -7,7 +7,7 @@ using KlonsF.DataSets;
 using KlonsLIB.Misc;
 using KlonsLIB.Data;
 using KlonsLIB.Forms;
-using KlonsF.DataSets.KlonsADataSetTableAdapters;
+using KlonsF.DataSets.klonsDataSetTableAdapters;
 using KlonsF.Classes;
 
 namespace KlonsF.ClassesF
@@ -59,7 +59,10 @@ namespace KlonsF.ClassesF
                 ds.OPS,
                 ds.OPSd,
                 ds.Persons,
-                ds.PersonTyp
+                ds.PersonTyp,
+                ds.F_PMT_TRFTRX,
+                ds.F_PMT_MSG,
+                ds.F_PMT_ACCOUNTS
             };
 
             foreach (var t in tables)
@@ -96,7 +99,8 @@ namespace KlonsF.ClassesF
                 ds.DocTypA,
                 ds.DocTypB,
                 ds.Persons,
-                ds.PersonTyp
+                ds.PersonTyp,
+                ds.F_PMT_ACCOUNTS
             };
             foreach (var t in tables)
                 MyData.FillTable(t);
@@ -134,5 +138,51 @@ namespace KlonsF.ClassesF
             var ds = MyData.DataSetKlonsF;
             return ds.AcPVN.Count > 0;
         }
+
+        private static bool DoLoadCheckErrors(Action act)
+        {
+            try
+            {
+                act();
+                return true;
+            }
+            catch (ConstraintException ex)
+            {
+                var de = new DetailedConstraintException2(ex.Message, MyData.DataSetKlonsM);
+                Form_Error.ShowException(de, "Neizdevās ielādēt datus no datu bāzes.");
+                return false;
+            }
+            catch (Exception ex)
+            {
+                Form_Error.ShowException(ex, "Neizdevās ielādēt datus no datu bāzes.");
+                return false;
+            }
+        }
+
+        public static bool LoadPmtMsgs()
+        {
+            var ds = MyData.DataSetKlonsF;
+            ds.F_PMT_TRFTRX.Clear();
+            ds.F_PMT_MSG.Clear();
+            MyData.FillTable(ds.F_PMT_MSG);
+            return true;
+        }
+
+        public static bool LoadPmtTrxByMsgId(int idmsg, bool clearbefore)
+        {
+            return DoLoadCheckErrors(() =>
+            {
+                LoadPmtTrxByMsgIdA(idmsg, clearbefore);
+            });
+        }
+
+        public static void LoadPmtTrxByMsgIdA(int idmsg, bool clearbefore)
+        {
+            var ad = MyData.KlonsFTableAdapterManager.F_PMT_TRFTRXTableAdapter;
+            var table = MyData.DataSetKlonsF.F_PMT_TRFTRX;
+            ad.ClearBeforeFill = clearbefore;
+            ad.FillBy_SP_F_PMT_TRFTRX_SEL(table, idmsg);
+        }
+
     }
 }

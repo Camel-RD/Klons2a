@@ -18,17 +18,18 @@ namespace KlonsF.Classes
             AppendChild(xmldecl);
         }
 
-        public string Save()
+        public string SaveWithBrowse(string folderparamname = "RepFolder", string proposedfilename = null)
         {
             FileDialog fd = new SaveFileDialog();
-            var folder = KlonsData.St.Params.RepFolder;
+            var folder = KlonsData.St.Params.GetParamStr(folderparamname);
             if (string.IsNullOrEmpty(folder) || !Directory.Exists(folder))
                 folder = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
             fd.InitialDirectory = folder;
             fd.DefaultExt = "xml";
             fd.Filter = "XML faili (*.xml)|*.xml";
+            fd.FileName = proposedfilename;
             if (fd.ShowDialog(KlonsData.St.MyMainForm) != DialogResult.OK) return null;
-            KlonsData.St.Params.RepFolder = Path.GetDirectoryName(fd.FileName);
+            KlonsData.St.Params.SetParamStr(folderparamname, Path.GetDirectoryName(fd.FileName));
             try
             {
                 Save(fd.FileName);
@@ -74,6 +75,12 @@ namespace KlonsF.Classes
                 return XE(name, FormatXMLDateTime(value));
             else
                 return XE(name, FormatXMLDate(value));
+        }
+        public XmlElement XE(XmlNode parent, string name)
+        {
+            XmlElement el =  CreateElement(name);
+            parent.AppendChild(el);
+            return el;
         }
         public XmlElement XE(XmlNode parent, string name, string text)
         {

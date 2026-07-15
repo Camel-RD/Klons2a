@@ -213,7 +213,7 @@ namespace KlonsA.Forms
                 xdoc = MakeXMLv2and3();
             }
             if (xdoc == null) return;
-            xdoc.Save();
+            xdoc.SaveWithBrowse();
         }
 
         private void cmTable_Click(object sender, EventArgs e)

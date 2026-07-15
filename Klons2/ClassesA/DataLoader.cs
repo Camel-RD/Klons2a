@@ -35,8 +35,7 @@ namespace KlonsA.Classes
 
         public static void RefreshMinMax()
         {
-            var ad = new KlonsF.DataSets.KlonsARepDataSetTableAdapters.QueriesTableAdapter();
-
+            var ad = MyData.KlonsARepQueriesTableAdapter;
             ad.SP_GET_MINMAX(out pdlminyr, out pdlminmt, out pdlmaxyr, out pdlmaxmt,
                 out paminyr, out paminmt, out pamaxyr, out pamaxmt);
         }

@@ -152,7 +152,7 @@ namespace KlonsF.Forms
                       || (sac21 == null && sac22 == null && sac23 == null && sac24 == null && sac25 == null);
             
             MyData.DataSetKlonsF.vw_OPS.Clear();
-            var vw_OPSTableAdapter = new vw_OPSTableAdapter();
+            var vw_OPSTableAdapter = MyData.KlonsFTableAdapterManager.vw_OPSTableAdapter;
             if (cmAndOr.Text == "un" || b1)
             {
 

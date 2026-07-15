@@ -682,6 +682,19 @@ namespace KlonsF
             var myfolder = MyData.GetManualsPath();
             try { Process.Start("explorer.exe", myfolder); } catch (Exception) { }
         }
+        private void miFParametri_Click(object sender, EventArgs e)
+        {
+            ShowForm(typeof(Form_CompanyData));
+        }
+        private void miFBankasKonti_Click(object sender, EventArgs e)
+        {
+            ShowForm(typeof(FormsF_pmt.Form_PmtAccounts));
+        }
+        private void miFMaksājumuSaraksts_Click(object sender, EventArgs e)
+        {
+            ShowForm(typeof(FormsF_pmt.Form_PmtDocList));
+        }
+
 
         #endregion
 

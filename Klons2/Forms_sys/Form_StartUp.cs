@@ -155,15 +155,15 @@ namespace KlonsF.Forms
             return UpgradeHelper.HasUpgrade(dbver, MyData.Version);
         }
 
-        private bool CheckForUpgrades(string dbver, bool skipbackup)
+        private (bool needed, bool ok) CheckForUpgrades(string dbver, bool skipbackup)
         {
             if (!UpgradeHelper.CanUseVeriom(dbver, MyData.Version))
             {
                 MyMainForm.ShowError("Programmas versija nav savietojama ar datu bāzes versiju.");
-                return false;
+                return (true, false);
             }
 
-            if (!UpgradeHelper.HasUpgrade(dbver, MyData.Version)) return true;
+            if (!UpgradeHelper.HasUpgrade(dbver, MyData.Version)) return (false, true);
 
             var ret = MyMessageBox.Show(
                 "Nepieciešams veikt datu bāzes versijas aktualizāciju.\n" +
@@ -176,7 +176,7 @@ namespace KlonsF.Forms
                 MessageBoxDefaultButton.Button2,
                 MyMainForm);
 
-            if (ret != DialogResult.Yes) return false;
+            if (ret != DialogResult.Yes) return (true, false);
 
             var dbfilename = MyData.GetFileName(MyData.CurrentDBTag);
             if (!skipbackup)
@@ -184,11 +184,11 @@ namespace KlonsF.Forms
 
             if (!UpgradeHelper.UpgradeThis(dbver, MyData.Version))
             {
-                return false;
+                return (true, false);
                 //DialogResult = DialogResult.Abort;
             }
 
-            return true;
+            return (true, true);
         }
 
         private void DoConnect()
@@ -201,7 +201,10 @@ namespace KlonsF.Forms
                 MyData.SetUpTableManager();
                 MyData.FillParamsForUser(tbUser.Text);
                 var dbver = MyData.Params.Version;
-                if (!CheckForUpgrades(dbver, IsBackupDone)) return;
+                var (upgradeneeded, upgradeok) = CheckForUpgrades(dbver, IsBackupDone);
+                if (!upgradeok) return;
+                if (upgradeneeded)
+                    MyData.FillParamsForUser(tbUser.Text);
                 MyData.FillBaseTables();
                 MyData.Settings.LastUserName = tbUser.Text;
                 MyMainForm.Text = "Klons2: " + MyData.Settings.MasterEntry.Descr.Nz();

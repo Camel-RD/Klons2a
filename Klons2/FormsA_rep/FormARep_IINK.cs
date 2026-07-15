@@ -346,7 +346,7 @@ namespace KlonsA.Forms
             if (Date2 < xdt) xdoc = MakeXML();
             else xdoc = MakeXML2();
             if (xdoc == null) return;
-            xdoc.Save();
+            xdoc.SaveWithBrowse();
         }
 
         private void tsbGetRows_Click(object sender, EventArgs e)

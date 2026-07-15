@@ -22,6 +22,7 @@ namespace KlonsF.Classes
 
         public void FillForUser(string username)
         {
+            KlonsData.St.DataSetKlonsF.Params.Clear();
             KlonsData.St.KlonsFTableAdapterManager.ParamsTableAdapter.FillByUserName(KlonsData.St.DataSetKlonsF.Params, username);
         }
 
@@ -555,6 +556,11 @@ namespace KlonsF.Classes
             get { return GetParamBool("SHPosTitle").GetValueOrDefault(false); }
             set { SetParamBool("SHPosTitle", value); }
         }
+        public bool SalarySheetHideDetailPanel
+        {
+            get { return GetParamBool("SHHideDetails").GetValueOrDefault(false); }
+            set { SetParamBool("SHHideDetails", value); }
+        }
 
         public int LoadYR1
         {
@@ -730,6 +736,29 @@ namespace KlonsF.Classes
             set { SetParamInt("EIEMAILSERVERPORT", value); }
         }
 
+        public int PmtLastMsgId
+        {
+            get { return GetParamInt("PmtLastMsgId") ?? 0; }
+            set { SetParamInt("PmtLastMsgId", value); }
+        }
+
+        public int PmtLastTrxId
+        {
+            get { return GetParamInt("PmtLastTrxId") ?? 0; }
+            set { SetParamInt("PmtLastTrxId", value); }
+        }
+
+        public string PmtMsgIdFmt
+        {
+            get { return GetParamStr("PmtMsgIdFmt"); }
+            set { SetParamStr("PmtMsgIdFmt", value); }
+        }
+
+        public string PmtTrxIdFmt
+        {
+            get { return GetParamStr("PmtTrxIdFmt"); }
+            set { SetParamStr("PmtTrxIdFmt", value); }
+        }
 
         private bool roundupset = false;
         private bool roundup = false;

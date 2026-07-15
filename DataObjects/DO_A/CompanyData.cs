@@ -28,5 +28,9 @@ namespace DataObjectsA
         public string _BankId { get; set; } = null;
         public string _BankName { get; set; } = null;
         public string _BankAcc { get; set; } = null;
+        public string _PmtLastMsgId { get; set; } = null;
+        public string _PmtLastTrxId { get; set; } = null;
+        public string _PmtMsgIdFmt { get; set; } = null;
+        public string _PmtTrxIdFmt { get; set; } = null;
     }
 }

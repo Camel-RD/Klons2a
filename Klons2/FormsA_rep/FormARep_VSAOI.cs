@@ -330,7 +330,7 @@ namespace KlonsA.Forms
 
             var xdoc = Year < 2017 ? MakeXML() : MakeXMLV2();
             if (xdoc == null) return;
-            xdoc.Save();
+            xdoc.SaveWithBrowse();
         }
 
         private void cmTable_Click(object sender, EventArgs e)

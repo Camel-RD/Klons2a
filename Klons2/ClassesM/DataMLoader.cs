@@ -190,7 +190,7 @@ namespace KlonsM.Classes
             var table_rows = MyData.DataSetKlonsM.M_ROWS;
             table_rows.Clear();
             table_docs.Clear();
-            var ad = new KlonsF.DataSets.KlonsMDataSetTableAdapters.M_DOCSTableAdapter();
+            var ad = MyData.KlonsMTableAdapterManager.M_DOCSTableAdapter;
             ad.FillBy_sp_m_filterdocs_01(table_docs, dt1, dt2, tp, state, 
                 idstoreout, idstorein, idstoreoutorin);
         }
@@ -206,7 +206,7 @@ namespace KlonsM.Classes
         public static void LoadDocAndRowsByFilterA(int iddoc, bool clearrowsbefore)
         {
             var table_docs = MyData.DataSetKlonsM.M_DOCS;
-            var ad = new KlonsF.DataSets.KlonsMDataSetTableAdapters.M_DOCSTableAdapter();
+            var ad = MyData.KlonsMTableAdapterManager.M_DOCSTableAdapter;
             ad.ClearBeforeFill = false;
             ad.FillBy_sp_m_filterdoc_02(table_docs, iddoc);
             LoadRowsByFilter(iddoc, clearrowsbefore);
@@ -223,7 +223,7 @@ namespace KlonsM.Classes
         public static void LoadRowsByFilterA(int iddoc, bool clearbefore)
         {
             var table_rows = MyData.DataSetKlonsM.M_ROWS;
-            var ad = new KlonsF.DataSets.KlonsMDataSetTableAdapters.M_ROWSTableAdapter();
+            var ad = MyData.KlonsMTableAdapterManager.M_ROWSTableAdapter;
             ad.ClearBeforeFill = clearbefore;
             ad.FillBy_sp_mfilter_row_01(table_rows, iddoc);
         }
@@ -244,7 +244,7 @@ namespace KlonsM.Classes
             var table_invrows = MyData.DataSetKlonsM.M_INV_ROWS;
             table_invrows.Clear();
             table_invdocs.Clear();
-            var ad = new KlonsF.DataSets.KlonsMDataSetTableAdapters.M_INV_DOCSTableAdapter();
+            var ad = MyData.KlonsMTableAdapterManager.M_INV_DOCSTableAdapter;
             ad.FillBy_SP_M_INVDOCS_1(table_invdocs, dt1, dt2, state, idstore);
         }
 
@@ -259,7 +259,7 @@ namespace KlonsM.Classes
         public static void LoadInvRowsByFilterA(int iddoc, bool clearbefore)
         {
             var table_invrows = MyData.DataSetKlonsM.M_INV_ROWS;
-            var ad = new KlonsF.DataSets.KlonsMDataSetTableAdapters.M_INV_ROWSTableAdapter();
+            var ad = MyData.KlonsMTableAdapterManager.M_INV_ROWSTableAdapter;
             ad.ClearBeforeFill = clearbefore;
             ad.FillBy_SP_M_INVROWS_1(table_invrows, iddoc);
         }
@@ -277,8 +277,8 @@ namespace KlonsM.Classes
         {
             var table_items = MyData.DataSetKlonsM.M_ITEMS;
             var table_itemsperstore = MyData.DataSetKlonsM.M_ITEMS_PER_STORE;
-            var ad1 = new KlonsF.DataSets.KlonsMDataSetTableAdapters.M_ITEMSTableAdapter();
-            var ad2 = new KlonsF.DataSets.KlonsMDataSetTableAdapters.M_ITEMS_PER_STORETableAdapter();
+            var ad1 = MyData.KlonsMTableAdapterManager.M_ITEMSTableAdapter;
+            var ad2 = MyData.KlonsMTableAdapterManager.M_ITEMS_PER_STORETableAdapter;
             ad1.ClearBeforeFill = false;
             ad2.ClearBeforeFill = false;
             ad1.FillBy_sp_m_filter_items_01(table_items, iddoc);

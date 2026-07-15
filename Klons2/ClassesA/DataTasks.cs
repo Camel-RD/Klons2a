@@ -1243,8 +1243,7 @@ namespace KlonsA.Classes
         public static void FillPayListsA(DateTime dt,int ids, bool fullrecalc)
         {
             var table_lists_r = MyData.DataSetKlonsA.PAYLISTS_R;
-            var ad = new KlonsF.DataSets.KlonsARepDataSetTableAdapters.PAY_SALDOTableAdapter();
-
+            var ad = MyData.GetKlonsARepAdapter("PAY_SALDO") as KlonsF.DataSets.KlonsARepDataSetTableAdapters.PAY_SALDOTableAdapter;
             var drs = table_lists_r
                 .WhereX(d => d.PAYLISTSRow.ID == ids)
                 .ToArray();
@@ -1267,7 +1266,7 @@ namespace KlonsA.Classes
         public static void FillPayListsB(DateTime dt, int ids)
         {
             var table_lists_r = MyData.DataSetKlonsA.PAYLISTS_R;
-            var ad = new KlonsF.DataSets.KlonsARepDataSetTableAdapters.SP_PAY_MATCHLISTS_1XTableAdapter();
+            var ad = MyData.GetKlonsARepAdapter("SP_PAY_MATCHLISTS_1X") as KlonsF.DataSets.KlonsARepDataSetTableAdapters.SP_PAY_MATCHLISTS_1XTableAdapter;
 
             var drs = table_lists_r
                 .WhereX(d => d.PAYLISTSRow.ID == ids)

@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -38,278 +38,272 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.dgvSar = new KlonsLIB.Components.MyDataGridView();
-            this.dgcCaption = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgcDays = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgcHours = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgcRate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgcPay = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgcDNS = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgcIINEx = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgcIIN = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgcCash = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.tbRateCalDay = new KlonsLIB.Components.MyTextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.cmReport = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.tbRateDay = new KlonsLIB.Components.MyTextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.tbRateHour = new KlonsLIB.Components.MyTextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.lbTitle = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvSar)).BeginInit();
-            this.panel1.SuspendLayout();
-            this.SuspendLayout();
+            dgvSar = new KlonsLIB.Components.MyDataGridView();
+            dgcCaption = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            dgcDays = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            dgcHours = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            dgcRate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            dgcPay = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            dgcDNS = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            dgcIINEx = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            dgcIIN = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            dgcCash = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            panel1 = new System.Windows.Forms.Panel();
+            tbRateCalDay = new KlonsLIB.Components.MyTextBox();
+            label1 = new System.Windows.Forms.Label();
+            cmReport = new System.Windows.Forms.Button();
+            button1 = new System.Windows.Forms.Button();
+            tbRateDay = new KlonsLIB.Components.MyTextBox();
+            label3 = new System.Windows.Forms.Label();
+            tbRateHour = new KlonsLIB.Components.MyTextBox();
+            label2 = new System.Windows.Forms.Label();
+            lbTitle = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)dgvSar).BeginInit();
+            panel1.SuspendLayout();
+            SuspendLayout();
             // 
             // dgvSar
             // 
-            this.dgvSar.AllowUserToAddRows = false;
-            this.dgvSar.AllowUserToDeleteRows = false;
-            this.dgvSar.AllowUserToResizeRows = false;
-            this.dgvSar.BackgroundColor = System.Drawing.SystemColors.Control;
+            dgvSar.AllowUserToAddRows = false;
+            dgvSar.AllowUserToDeleteRows = false;
+            dgvSar.AllowUserToResizeRows = false;
+            dgvSar.BackgroundColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 186);
             dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvSar.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvSar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvSar.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dgcCaption,
-            this.dgcDays,
-            this.dgcHours,
-            this.dgcRate,
-            this.dgcPay,
-            this.dgcDNS,
-            this.dgcIINEx,
-            this.dgcIIN,
-            this.dgcCash});
-            this.dgvSar.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvSar.Location = new System.Drawing.Point(0, 0);
-            this.dgvSar.Name = "dgvSar";
-            this.dgvSar.ReadOnly = true;
-            this.dgvSar.RowHeadersVisible = false;
-            this.dgvSar.Size = new System.Drawing.Size(828, 211);
-            this.dgvSar.TabIndex = 0;
+            dgvSar.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dgvSar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvSar.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { dgcCaption, dgcDays, dgcHours, dgcRate, dgcPay, dgcDNS, dgcIINEx, dgcIIN, dgcCash });
+            dgvSar.Dock = System.Windows.Forms.DockStyle.Fill;
+            dgvSar.Location = new System.Drawing.Point(0, 0);
+            dgvSar.Name = "dgvSar";
+            dgvSar.ReadOnly = true;
+            dgvSar.RowHeadersVisible = false;
+            dgvSar.Size = new System.Drawing.Size(828, 211);
+            dgvSar.TabIndex = 0;
             // 
             // dgcCaption
             // 
-            this.dgcCaption.DataPropertyName = "Caption";
-            this.dgcCaption.HeaderText = "datumi";
-            this.dgcCaption.Name = "dgcCaption";
-            this.dgcCaption.ReadOnly = true;
-            this.dgcCaption.Width = 200;
+            dgcCaption.DataPropertyName = "Caption";
+            dgcCaption.HeaderText = "datumi";
+            dgcCaption.Name = "dgcCaption";
+            dgcCaption.ReadOnly = true;
+            dgcCaption.Width = 200;
             // 
             // dgcDays
             // 
-            this.dgcDays.DataPropertyName = "Days";
+            dgcDays.DataPropertyName = "Days";
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.Format = "0;-0;\"\"";
-            this.dgcDays.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgcDays.HeaderText = "dienas";
-            this.dgcDays.Name = "dgcDays";
-            this.dgcDays.ReadOnly = true;
-            this.dgcDays.Width = 60;
+            dgcDays.DefaultCellStyle = dataGridViewCellStyle2;
+            dgcDays.HeaderText = "dienas";
+            dgcDays.Name = "dgcDays";
+            dgcDays.ReadOnly = true;
+            dgcDays.Width = 60;
             // 
             // dgcHours
             // 
-            this.dgcHours.DataPropertyName = "Hours";
+            dgcHours.DataPropertyName = "Hours";
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle3.Format = "0.##;-0.##;\"\"";
             dataGridViewCellStyle3.NullValue = null;
-            this.dgcHours.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dgcHours.HeaderText = "stundas";
-            this.dgcHours.Name = "dgcHours";
-            this.dgcHours.ReadOnly = true;
-            this.dgcHours.Width = 60;
+            dgcHours.DefaultCellStyle = dataGridViewCellStyle3;
+            dgcHours.HeaderText = "stundas";
+            dgcHours.Name = "dgcHours";
+            dgcHours.ReadOnly = true;
+            dgcHours.Width = 60;
             // 
             // dgcRate
             // 
-            this.dgcRate.DataPropertyName = "AvPayRate";
+            dgcRate.DataPropertyName = "AvPayRate";
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
             dataGridViewCellStyle4.Format = "0.0000;-0.0000";
-            this.dgcRate.DefaultCellStyle = dataGridViewCellStyle4;
-            this.dgcRate.HeaderText = "likme";
-            this.dgcRate.Name = "dgcRate";
-            this.dgcRate.ReadOnly = true;
-            this.dgcRate.ToolTipText = "Piemērotā vidējās izpeļņas dienas likme";
-            this.dgcRate.Width = 80;
+            dgcRate.DefaultCellStyle = dataGridViewCellStyle4;
+            dgcRate.HeaderText = "likme";
+            dgcRate.Name = "dgcRate";
+            dgcRate.ReadOnly = true;
+            dgcRate.ToolTipText = "Piemērotā vidējās izpeļņas dienas likme";
+            dgcRate.Width = 80;
             // 
             // dgcPay
             // 
-            this.dgcPay.DataPropertyName = "Pay";
+            dgcPay.DataPropertyName = "Pay";
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
             dataGridViewCellStyle5.Format = "0.00;-0.00;\"\"";
-            this.dgcPay.DefaultCellStyle = dataGridViewCellStyle5;
-            this.dgcPay.HeaderText = "aprēķināts";
-            this.dgcPay.Name = "dgcPay";
-            this.dgcPay.ReadOnly = true;
-            this.dgcPay.Width = 80;
+            dgcPay.DefaultCellStyle = dataGridViewCellStyle5;
+            dgcPay.HeaderText = "aprēķināts";
+            dgcPay.Name = "dgcPay";
+            dgcPay.ReadOnly = true;
+            dgcPay.Width = 80;
             // 
             // dgcDNS
             // 
-            this.dgcDNS.DataPropertyName = "DNS";
+            dgcDNS.DataPropertyName = "DNS";
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
             dataGridViewCellStyle6.Format = "0.00;-0.00;\"\"";
-            this.dgcDNS.DefaultCellStyle = dataGridViewCellStyle6;
-            this.dgcDNS.HeaderText = "DŅ SI";
-            this.dgcDNS.Name = "dgcDNS";
-            this.dgcDNS.ReadOnly = true;
-            this.dgcDNS.Width = 80;
+            dgcDNS.DefaultCellStyle = dataGridViewCellStyle6;
+            dgcDNS.HeaderText = "DŅ SI";
+            dgcDNS.Name = "dgcDNS";
+            dgcDNS.ReadOnly = true;
+            dgcDNS.Width = 80;
             // 
             // dgcIINEx
             // 
-            this.dgcIINEx.DataPropertyName = "IINEX";
+            dgcIINEx.DataPropertyName = "IINEX";
             dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
             dataGridViewCellStyle7.Format = "0.00;-0.00;\"\"";
-            this.dgcIINEx.DefaultCellStyle = dataGridViewCellStyle7;
-            this.dgcIINEx.HeaderText = "IIN atv.";
-            this.dgcIINEx.Name = "dgcIINEx";
-            this.dgcIINEx.ReadOnly = true;
-            this.dgcIINEx.Width = 80;
+            dgcIINEx.DefaultCellStyle = dataGridViewCellStyle7;
+            dgcIINEx.HeaderText = "IIN atv.";
+            dgcIINEx.Name = "dgcIINEx";
+            dgcIINEx.ReadOnly = true;
+            dgcIINEx.Width = 80;
             // 
             // dgcIIN
             // 
-            this.dgcIIN.DataPropertyName = "IIN";
+            dgcIIN.DataPropertyName = "IIN";
             dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
             dataGridViewCellStyle8.Format = "0.00;-0.00;\"\"";
-            this.dgcIIN.DefaultCellStyle = dataGridViewCellStyle8;
-            this.dgcIIN.HeaderText = "IIN";
-            this.dgcIIN.Name = "dgcIIN";
-            this.dgcIIN.ReadOnly = true;
-            this.dgcIIN.Width = 80;
+            dgcIIN.DefaultCellStyle = dataGridViewCellStyle8;
+            dgcIIN.HeaderText = "IIN";
+            dgcIIN.Name = "dgcIIN";
+            dgcIIN.ReadOnly = true;
+            dgcIIN.Width = 80;
             // 
             // dgcCash
             // 
-            this.dgcCash.DataPropertyName = "Cash";
+            dgcCash.DataPropertyName = "Cash";
             dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
             dataGridViewCellStyle9.Format = "0.00;-0.00;\"\"";
-            this.dgcCash.DefaultCellStyle = dataGridViewCellStyle9;
-            this.dgcCash.HeaderText = "pēc nod.";
-            this.dgcCash.Name = "dgcCash";
-            this.dgcCash.ReadOnly = true;
-            this.dgcCash.Width = 80;
+            dgcCash.DefaultCellStyle = dataGridViewCellStyle9;
+            dgcCash.HeaderText = "pēc nod.";
+            dgcCash.Name = "dgcCash";
+            dgcCash.ReadOnly = true;
+            dgcCash.Width = 80;
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.tbRateCalDay);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.cmReport);
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.tbRateDay);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.tbRateHour);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.lbTitle);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 211);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(828, 145);
-            this.panel1.TabIndex = 24;
+            panel1.Controls.Add(tbRateCalDay);
+            panel1.Controls.Add(label1);
+            panel1.Controls.Add(cmReport);
+            panel1.Controls.Add(button1);
+            panel1.Controls.Add(tbRateDay);
+            panel1.Controls.Add(label3);
+            panel1.Controls.Add(tbRateHour);
+            panel1.Controls.Add(label2);
+            panel1.Controls.Add(lbTitle);
+            panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            panel1.Location = new System.Drawing.Point(0, 211);
+            panel1.Name = "panel1";
+            panel1.Size = new System.Drawing.Size(828, 145);
+            panel1.TabIndex = 24;
             // 
             // tbRateCalDay
             // 
-            this.tbRateCalDay.BorderColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.tbRateCalDay.Location = new System.Drawing.Point(206, 92);
-            this.tbRateCalDay.Name = "tbRateCalDay";
-            this.tbRateCalDay.ReadOnly = true;
-            this.tbRateCalDay.Size = new System.Drawing.Size(86, 22);
-            this.tbRateCalDay.TabIndex = 32;
-            this.tbRateCalDay.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            tbRateCalDay.BackColor = System.Drawing.SystemColors.Control;
+            tbRateCalDay.BorderColor = System.Drawing.SystemColors.ControlDarkDark;
+            tbRateCalDay.Location = new System.Drawing.Point(206, 92);
+            tbRateCalDay.Name = "tbRateCalDay";
+            tbRateCalDay.ReadOnly = true;
+            tbRateCalDay.Size = new System.Drawing.Size(86, 23);
+            tbRateCalDay.TabIndex = 32;
+            tbRateCalDay.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(16, 92);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(180, 32);
-            this.label1.TabIndex = 33;
-            this.label1.Text = "Aprēķinātā vidējā kalendāra \r\ndienas likme:";
+            label1.AutoSize = true;
+            label1.Location = new System.Drawing.Point(16, 92);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(188, 34);
+            label1.TabIndex = 33;
+            label1.Text = "Aprēķinātā vidējā kalendāra \r\ndienas likme:";
             // 
             // cmReport
             // 
-            this.cmReport.Location = new System.Drawing.Point(532, 42);
-            this.cmReport.Name = "cmReport";
-            this.cmReport.Size = new System.Drawing.Size(120, 44);
-            this.cmReport.TabIndex = 26;
-            this.cmReport.Text = "Izdrukai";
-            this.cmReport.UseVisualStyleBackColor = true;
+            cmReport.Location = new System.Drawing.Point(532, 42);
+            cmReport.Name = "cmReport";
+            cmReport.Size = new System.Drawing.Size(120, 44);
+            cmReport.TabIndex = 26;
+            cmReport.Text = "Izdrukai";
+            cmReport.UseVisualStyleBackColor = true;
             // 
             // button1
             // 
-            this.button1.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.button1.Location = new System.Drawing.Point(532, 92);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(120, 42);
-            this.button1.TabIndex = 27;
-            this.button1.Text = "Aizvērt";
-            this.button1.UseVisualStyleBackColor = true;
+            button1.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            button1.Location = new System.Drawing.Point(532, 92);
+            button1.Name = "button1";
+            button1.Size = new System.Drawing.Size(120, 42);
+            button1.TabIndex = 27;
+            button1.Text = "Aizvērt";
+            button1.UseVisualStyleBackColor = true;
             // 
             // tbRateDay
             // 
-            this.tbRateDay.BorderColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.tbRateDay.Location = new System.Drawing.Point(206, 64);
-            this.tbRateDay.Name = "tbRateDay";
-            this.tbRateDay.ReadOnly = true;
-            this.tbRateDay.Size = new System.Drawing.Size(86, 22);
-            this.tbRateDay.TabIndex = 25;
-            this.tbRateDay.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            tbRateDay.BackColor = System.Drawing.SystemColors.Control;
+            tbRateDay.BorderColor = System.Drawing.SystemColors.ControlDarkDark;
+            tbRateDay.Location = new System.Drawing.Point(206, 64);
+            tbRateDay.Name = "tbRateDay";
+            tbRateDay.ReadOnly = true;
+            tbRateDay.Size = new System.Drawing.Size(86, 23);
+            tbRateDay.TabIndex = 25;
+            tbRateDay.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(16, 66);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(129, 16);
-            this.label3.TabIndex = 30;
-            this.label3.Text = "Vidējā dienas likme:";
+            label3.AutoSize = true;
+            label3.Location = new System.Drawing.Point(16, 66);
+            label3.Name = "label3";
+            label3.Size = new System.Drawing.Size(133, 17);
+            label3.TabIndex = 30;
+            label3.Text = "Vidējā dienas likme:";
             // 
             // tbRateHour
             // 
-            this.tbRateHour.BorderColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.tbRateHour.Location = new System.Drawing.Point(206, 36);
-            this.tbRateHour.Name = "tbRateHour";
-            this.tbRateHour.ReadOnly = true;
-            this.tbRateHour.Size = new System.Drawing.Size(86, 22);
-            this.tbRateHour.TabIndex = 24;
-            this.tbRateHour.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            tbRateHour.BackColor = System.Drawing.SystemColors.Control;
+            tbRateHour.BorderColor = System.Drawing.SystemColors.ControlDarkDark;
+            tbRateHour.Location = new System.Drawing.Point(206, 36);
+            tbRateHour.Name = "tbRateHour";
+            tbRateHour.ReadOnly = true;
+            tbRateHour.Size = new System.Drawing.Size(86, 23);
+            tbRateHour.TabIndex = 24;
+            tbRateHour.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(16, 38);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(135, 16);
-            this.label2.TabIndex = 29;
-            this.label2.Text = "Vidējā stundas likme:";
+            label2.AutoSize = true;
+            label2.Location = new System.Drawing.Point(16, 38);
+            label2.Name = "label2";
+            label2.Size = new System.Drawing.Size(141, 17);
+            label2.TabIndex = 29;
+            label2.Text = "Vidējā stundas likme:";
             // 
             // lbTitle
             // 
-            this.lbTitle.AutoSize = true;
-            this.lbTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.488F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(186)));
-            this.lbTitle.Location = new System.Drawing.Point(10, 10);
-            this.lbTitle.Name = "lbTitle";
-            this.lbTitle.Size = new System.Drawing.Size(51, 16);
-            this.lbTitle.TabIndex = 28;
-            this.lbTitle.Text = "label1";
+            lbTitle.AutoSize = true;
+            lbTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.488F, System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, 186);
+            lbTitle.Location = new System.Drawing.Point(10, 10);
+            lbTitle.Name = "lbTitle";
+            lbTitle.Size = new System.Drawing.Size(41, 13);
+            lbTitle.TabIndex = 28;
+            lbTitle.Text = "label1";
             // 
-            // Form_VacationCalc
+            // FormA_VacationCalc
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(828, 356);
-            this.Controls.Add(this.dgvSar);
-            this.Controls.Add(this.panel1);
-            this.Name = "Form_VacationCalc";
-            this.Text = "Atvaļinājuma naudas aprēķins";
-            this.Load += new System.EventHandler(this.Form_VacationCalc_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvSar)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.ResumeLayout(false);
+            AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            ClientSize = new System.Drawing.Size(828, 356);
+            Controls.Add(dgvSar);
+            Controls.Add(panel1);
+            Name = "FormA_VacationCalc";
+            Text = "Atvaļinājuma naudas aprēķins";
+            Load += Form_VacationCalc_Load;
+            ((System.ComponentModel.ISupportInitialize)dgvSar).EndInit();
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
+            ResumeLayout(false);
 
         }
 

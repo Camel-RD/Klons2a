@@ -237,6 +237,9 @@ namespace KlonsF.Classes
             Add_SetNewIDsItem("BalA3", x => x.BalA3, x => x.SP_BALA3_ID);
             Add_SetNewIDsItem("DOCS0", x => x.DOCS0, x => x.SP_BALA3_ID);
             Add_SetNewIDsItem("DOCS0", x => x.DOCS0, x => x.SP_BALA3_ID);
+            Add_SetNewIDsItem("F_PMT_ACCOUNTS", x => x.F_PMT_ACCOUNTS, x => x.SP_F_GEN_PMT_ACCOUNTS_ID);
+            Add_SetNewIDsItem("F_PMT_MSG", x => x.F_PMT_MSG, x => x.SP_F_GEN_PMT_MSG_ID);
+            Add_SetNewIDsItem("F_PMT_TRFTRX", x => x.F_PMT_TRFTRX, x => x.SP_F_GEN_PMT_TRFTRX_ID);
         }
 
         class SetNewIds_ListItemF

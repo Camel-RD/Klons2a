@@ -56,6 +56,7 @@ namespace KlonsA.Forms
             tabControl1.SelectedIndex = 0;
 
             ShowBonusList(!MyData.Params.HideBonusList);
+            ShowDataPanel(!MyData.Params.SalarySheetHideDetailPanel);
             ShowPositionTitleColumn(MyData.Params.SalarySheetShowPositionTitle);
 
             LoadColumnWidthsFromSettings();
@@ -1448,6 +1449,7 @@ namespace KlonsA.Forms
         {
             tabControl1.Visible = b;
             miShowDataPanel.Checked = b;
+            MyData.Params.SalarySheetHideDetailPanel = !b;
         }
 
         private void miShoeBonusList_Click(object sender, EventArgs e)

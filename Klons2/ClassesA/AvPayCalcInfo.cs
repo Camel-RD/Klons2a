@@ -1,12 +1,13 @@
-﻿using System;
+﻿using KlonsF.Classes;
+using KlonsF.DataSets;
+using KlonsF.DataSets.KlonsADataSetTableAdapters;
+using KlonsF.DataSets.KlonsARepDataSetTableAdapters;
+using KlonsLIB.Data;
+using KlonsLIB.Misc;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using KlonsF.DataSets;
-using KlonsLIB.Misc;
-using KlonsLIB.Data;
-using KlonsF.DataSets.KlonsADataSetTableAdapters;
-using KlonsF.Classes;
 
 namespace KlonsA.Classes
 {
@@ -105,7 +106,7 @@ namespace KlonsA.Classes
             }
 
             var table = MyData.DataSetKlonsARep.AVPAYCALC;
-            var ad = new KlonsF.DataSets.KlonsARepDataSetTableAdapters.AVPAYCALCTableAdapter();
+            var ad = MyData.GetKlonsARepAdapter("AVPAYCALC") as AVPAYCALCTableAdapter;
             table.Clear();
             ad.FillBy_SP_AVPAYCALC_01(table, idp, yr3, mt3, yr1a, mt1a);
 

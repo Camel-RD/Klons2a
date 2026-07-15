@@ -68,6 +68,7 @@
     <EmbeddedResource Include="SQL\SQLV024.txt" />
     <EmbeddedResource Include="SQL\SQLV027.txt" />
     <EmbeddedResource Include="SQL\SQLV035.txt" />
+    <EmbeddedResource Include="SQL\SQLV042.txt" />
     <Content Include="TODO-M.txt" />
     <Content Include="Reports\Report_PVNZ_1.rdlc" />
     <Content Include="Reports\Report_Apgr_BilFormula.rdlc" />
@@ -200,6 +201,7 @@
     <None Remove="SQL\SQLV024.txt" />
     <None Remove="SQL\SQLV027.txt" />
     <None Remove="SQL\SQLV035.txt" />
+    <None Remove="SQL\SQLV042.txt" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="SourceGrid">

@@ -64,24 +64,34 @@ namespace KlonsA.Forms
 
         private void PAYLISTS_R_PAYLISTS_RRowDeleted(object sender, KlonsADataSet.PAYLISTS_RRowChangeEvent e)
         {
-            if (e.Action == DataRowAction.Add || e.Action == DataRowAction.Change)
+            /*if (e.Action == DataRowAction.Add || e.Action == DataRowAction.Change)
             {
                 CheckListTotal(e.Row.PAYLISTSRow);
-            }
+            }*/
         }
 
         private void PAYLISTS_R_PAYLISTS_RRowChanged(object sender, KlonsADataSet.PAYLISTS_RRowChangeEvent e)
         {
+            if (e.Action == DataRowAction.Commit) return;
+
             KlonsADataSet.PAYLISTSRow dr = null;
 
-            if (e.Row.HasVersion(DataRowVersion.Original))
+            if (e.Row.RowState == DataRowState.Deleted ||
+                e.Row.RowState == DataRowState.Detached)
             {
-                int listid = (int)e.Row["IDS", DataRowVersion.Original];
-                dr = MyData.DataSetKlonsA.PAYLISTS.FindByID(listid);
+                if (e.Row.HasVersion(DataRowVersion.Original))
+                {
+                    int listid = (int)e.Row["IDS", DataRowVersion.Original];
+                    dr = MyData.DataSetKlonsA.PAYLISTS.FindByID(listid);
+                }
+                else
+                {
+                    dr = last_list_RowDeleting_parent;
+                }
             }
             else
             {
-                dr = last_list_RowDeleting_parent;
+                dr = e.Row.PAYLISTSRow;
             }
             if (dr == null) return;
             CheckListTotal(dr);
@@ -472,16 +482,18 @@ namespace KlonsA.Forms
 
         private void CheckEnableRows()
         {
-            dgvRows.Enabled = dgvLists.RowCount > 0 && dgvLists.CurrentRow != null && 
-                dgvLists.CurrentRow != null && !dgvLists.CurrentRow.IsNewRow;
+            SetControlEnabled(dgvRows,
+                dgvLists.RowCount > 0 && dgvLists.CurrentRow != null &&
+                dgvLists.CurrentRow != null && !dgvLists.CurrentRow.IsNewRow);
 
             CheckEnableSGR();
         }
 
         private void CheckEnableSGR()
         {
-            sgrPayRow.Enabled = dgvRows.Enabled && bsRows.Count > 0 &&
-                dgvRows.CurrentRow != null && !dgvRows.CurrentRow.IsNewRow;
+            SetControlEnabled(sgrPayRow, 
+                dgvRows.Enabled && bsRows.Count > 0 &&
+                dgvRows.CurrentRow != null && !dgvRows.CurrentRow.IsNewRow);
         }
 
         private void dgvLists_CurrentCellChanged(object sender, EventArgs e)
