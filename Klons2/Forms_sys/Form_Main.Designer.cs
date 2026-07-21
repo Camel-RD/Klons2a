@@ -67,6 +67,7 @@ namespace KlonsF
             miFDokumentim = new System.Windows.Forms.ToolStripMenuItem();
             miFIeraksti = new System.Windows.Forms.ToolStripMenuItem();
             miFMaksājumi = new System.Windows.Forms.ToolStripMenuItem();
+            miFParametri = new System.Windows.Forms.ToolStripMenuItem();
             miFBankasKonti = new System.Windows.Forms.ToolStripMenuItem();
             miFMaksājumuSaraksts = new System.Windows.Forms.ToolStripMenuItem();
             toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
@@ -233,7 +234,7 @@ namespace KlonsF
             tsWindowList = new System.Windows.Forms.ToolStrip();
             myStyleDefs = new KlonsP.Classes.MyStyleDefs();
             ChatCheckTimer = new System.Windows.Forms.Timer(components);
-            miFParametri = new System.Windows.Forms.ToolStripMenuItem();
+            toolStripSeparator28 = new System.Windows.Forms.ToolStripSeparator();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -447,7 +448,7 @@ namespace KlonsF
             // 
             // miFReģistri
             // 
-            miFReģistri.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { miFDokumentim, miFIeraksti, miFMaksājumi, toolStripSeparator1, miFSākumaAtlikumi, miFNeapmaksātieRēķini, toolStripSeparator2, miFKontuPlāns, miFPVNPazīmes, miFKontējumaPazīmes, miFPersonas, miFDokumentuVeidi, miFBankuSaraksts, miFValūtuKursi, toolStripSeparator3, miFKontējumuKontrole, toolStripSeparator5, miZiņasParUzņemumu });
+            miFReģistri.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { miFDokumentim, miFIeraksti, toolStripSeparator28, miFMaksājumi, toolStripSeparator1, miFSākumaAtlikumi, miFNeapmaksātieRēķini, toolStripSeparator2, miFKontuPlāns, miFPVNPazīmes, miFKontējumaPazīmes, miFPersonas, miFDokumentuVeidi, miFBankuSaraksts, miFValūtuKursi, toolStripSeparator3, miFKontējumuKontrole, toolStripSeparator5, miZiņasParUzņemumu });
             miFReģistri.Name = "miFReģistri";
             miFReģistri.Size = new System.Drawing.Size(71, 24);
             miFReģistri.Text = "&Reģistri";
@@ -472,6 +473,13 @@ namespace KlonsF
             miFMaksājumi.Name = "miFMaksājumi";
             miFMaksājumi.Size = new System.Drawing.Size(216, 24);
             miFMaksājumi.Text = "Maksājumi";
+            // 
+            // miFParametri
+            // 
+            miFParametri.Name = "miFParametri";
+            miFParametri.Size = new System.Drawing.Size(240, 24);
+            miFParametri.Text = "Parametri";
+            miFParametri.Click += miFParametri_Click;
             // 
             // miFBankasKonti
             // 
@@ -1601,12 +1609,10 @@ namespace KlonsF
             ChatCheckTimer.Interval = 600000;
             ChatCheckTimer.Tick += ChatCheckTimer_Tick;
             // 
-            // miFParametri
+            // toolStripSeparator28
             // 
-            miFParametri.Name = "miFParametri";
-            miFParametri.Size = new System.Drawing.Size(240, 24);
-            miFParametri.Text = "Parametri";
-            miFParametri.Click += miFParametri_Click;
+            toolStripSeparator28.Name = "toolStripSeparator28";
+            toolStripSeparator28.Size = new System.Drawing.Size(213, 6);
             // 
             // Form_Main
             // 
@@ -1843,5 +1849,6 @@ namespace KlonsF
         private System.Windows.Forms.ToolStripMenuItem miFBankasKonti;
         private System.Windows.Forms.ToolStripMenuItem miFMaksājumuSaraksts;
         private System.Windows.Forms.ToolStripMenuItem miFParametri;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator28;
     }
 }
