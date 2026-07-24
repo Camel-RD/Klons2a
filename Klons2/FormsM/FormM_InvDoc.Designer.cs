@@ -346,6 +346,7 @@ namespace KlonsM.FormsM
             this.dgcRowsIdItem.MinimumWidth = 8;
             this.dgcRowsIdItem.Name = "dgcRowsIdItem";
             this.dgcRowsIdItem.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgcRowsIdItem.Required = true;
             this.dgcRowsIdItem.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.dgcRowsIdItem.ValueMember = "ID";
             this.dgcRowsIdItem.Width = 160;

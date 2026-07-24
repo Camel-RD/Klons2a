@@ -69,7 +69,7 @@ namespace KlonsM.FormsM
         {
             var table = MyData.DataSetKlonsM.M_ITEMS;
             var dr = e.Row as KlonsMDataSet.M_ITEMSRow;
-            if (e.Column == table.CATColumn)
+            if (e.Column == table.CATColumn && dr.M_ITEMS_CATRow != null)
             {
                 int isservice = dr.M_ITEMS_CATRow.ISSERVICES;
                 int isproduced = dr.M_ITEMS_CATRow.ISPRODUCED;

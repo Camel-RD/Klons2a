@@ -1098,6 +1098,12 @@ namespace KlonsM.Classes
             return err;
         }
 
+        public static void DoDeleteFinDocByDocM(int iddocm)
+        {
+            DataTasks.DetachFinDocByIdDocM(iddocm);
+            MyData.KlonsMQueriesTableAdapter.SP_M_DEL_FINDOC(iddocm);
+        }
+
         public static ErrorList OpenDoc(KlonsMDataSet.M_DOCSRow dr_doc)
         {
             var ret = new ErrorList();
@@ -1109,6 +1115,7 @@ namespace KlonsM.Classes
                 MyData.KlonsMQueriesTableAdapter.SP_M_REMOVELINKS_01(dr_doc.ID, newstate);
                 DataMLoader.LoadDocAndRowsByFilter(dr_doc.ID, false);
                 DataMLoader.LoadLatestAmountsByDoc(dr_doc.ID);
+                DoDeleteFinDocByDocM(dr_doc.ID);
                 return ret;
             }
             catch (Exception ex)

@@ -16,6 +16,7 @@ using KlonsF.Classes;
 using KlonsLIB.Components;
 using System.IO;
 using KlonsF;
+using SourceGrid;
 
 namespace KlonsM.FormsM
 {
@@ -275,8 +276,11 @@ namespace KlonsM.FormsM
                 dr.BeginEdit();
                 if(dr.M_DOCSRow.XDocType == EDocType.Realizācija ||
                     dr.M_DOCSRow.XDocType == EDocType.Sniegti_pakalpojumi ||
+                    dr.M_DOCSRow.XDocType == EDocType.Pārvietots ||
                     dr.M_DOCSRow.XDocType == EDocType.Pārdošanas_rēķins ||
-                    dr.M_DOCSRow.XDocType == EDocType.Pārvietots)
+                    dr.M_DOCSRow.XDocType == EDocType.Avansa_rēķins ||
+                    dr.M_DOCSRow.XDocType == EDocType.Kredītrēķins_vienkāršs
+                    )
                 {
                     dr.PRICE0 = RoundPrice(dr_item.SELLPRICE);
                     dr.PRICE = RoundPrice(dr_item.SELLPRICE);
@@ -1060,6 +1064,12 @@ namespace KlonsM.FormsM
             return true;
         }
 
+        public void DoDeleteFinDocA(int iddocm)
+        {
+            DataTasks.DetachFinDocByIdDocM(iddocm);
+            MyData.KlonsMQueriesTableAdapter.SP_M_DEL_FINDOC(iddocm);
+        }
+
         public void DoAtvērt()
         {
             var dr_doc = GetGoodCurrentDocRow();
@@ -1074,14 +1084,23 @@ namespace KlonsM.FormsM
                 MyMainForm.ShowError("Neizdevās saglabāt izmaiņas.");
                 return;
             }
-            var err = DataTasks.OpenDoc(dr_doc);
-            CheckSave();
-            if (err.HasErrors)
+            if (SomeDataDefs.SkipIegrāmatotOp(dr_doc.XDocType))
             {
-                FormM_ErrorList.ShowErrorList(this, err);
-                return;
+                dr_doc.BeginEdit();
+                dr_doc.XState = EDocState.Atvērts;
+                dr_doc.EndEdit();
+                DataTasks.DoDeleteFinDocByDocM(dr_doc.ID);
             }
-            DataTasks.DetachFinDocByIdDocM(dr_doc.ID);
+            else
+            {
+                var err = DataTasks.OpenDoc(dr_doc);
+                CheckSave();
+                if (err.HasErrors)
+                {
+                    FormM_ErrorList.ShowErrorList(this, err);
+                    return;
+                }
+            }
         }
 
         public bool DoIegrānatotVeicotPilnuAprēķinu()
@@ -1270,6 +1289,13 @@ namespace KlonsM.FormsM
                 }
                 return;
             }
+            if (SomeDataDefs.SkipIegrāmatotOp(dr_doc.XDocType))
+            {
+                dr_doc.BeginEdit();
+                dr_doc.XState = EDocState.Iegrāmatots;
+                dr_doc.EndEdit();
+                SaveData();
+            }
             FormM_DocFin.ShowDialog(dr_doc.ID);
             CheckSave();
         }
@@ -1408,9 +1434,21 @@ namespace KlonsM.FormsM
             fd.ClientGuid = new Guid("3CBD031E-3244-407D-AC95-DA0BEE172B34");
             fd.DefaultExt = "xml";
             fd.Filter = "XML faili (*.xml)|*.xml";
+            var dr_partner = EInvoiceTools.GetPartnerType(dr_doc);
+            fd.FileName = $"{dr_doc.DT:yyyy.MM.dd}, Nr. {(dr_doc.SR.Nz() + " ").Trim()}{dr_doc.NR}, {dr_partner.NAME}";
             if (fd.ShowDialog(KlonsData.St.MyMainForm) != DialogResult.OK) return;
-            var einvoicedoc = EInvoiceTools.ToEInvoice(dr_doc, true);
-            var xml_text = EInvoiceTools.GetXML(einvoicedoc);
+            var xml_text = "";
+            if (dr_doc.XDocType == EDocType.Kredītrēķins_pircējam ||
+                dr_doc.XDocType == EDocType.Kredītrēķins_vienkāršs)
+            {
+                var ecreditnotedoc = EInvoiceTools.ToECreditNote(dr_doc, true);
+                xml_text = EInvoiceTools.GetXML(ecreditnotedoc);
+            }
+            else
+            {
+                var einvoicedoc = EInvoiceTools.ToEInvoice(dr_doc, true);
+                xml_text = EInvoiceTools.GetXML(einvoicedoc);
+            }
             try
             {
                 File.WriteAllText(fd.FileName, xml_text);
@@ -1426,9 +1464,22 @@ namespace KlonsM.FormsM
         private void sgrDocA_EditStarting(object sender, CancelEventArgs e)
         {
             var dr_doc = GetCurrentDocRow();
-            if (!CanEditCurrentDoc() || !CanEditDoc(dr_doc))
+            if (dr_doc == null || !CanEditDoc(dr_doc))
             {
                 e.Cancel = true;
+                return;
+            }
+            if (sgrDocA.Selection.ActivePosition == Position.Empty) return;
+            var activecell = sgrDocA.GetCell(sgrDocA.Selection.ActivePosition);
+            if (activecell == null) return;
+            if (activecell == grDocCdNr.DataCell || activecell == grDocCdSr.DataCell ||
+                activecell == grDocCdDT.DataCell)
+            {
+                if (!SomeDataDefs.AlloeCreditDocDataEdit(dr_doc.XDocType))
+                {
+                    e.Cancel = true;
+                    return;
+                }
             }
         }
 

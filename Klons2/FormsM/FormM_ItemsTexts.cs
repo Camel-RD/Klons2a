@@ -85,37 +85,6 @@ namespace KlonsM.FormsM
             return true;
         }
 
-        private void cmFind_Click(object sender, EventArgs e)
-        {
-            var s = tbText.Text;
-            if (s.IsNOE()) return;
-            int k = bsTexts.Find("TEXT", s);
-            if (k == -1)
-            {
-                MyMainForm.ShowInfo("Meklētais teksts netika atrasts.");
-                return;
-            }
-            bsTexts.Position = k;
-        }
-
-        private void cmAdd_Click(object sender, EventArgs e)
-        {
-            var s = tbText.Text;
-            if (s.IsNOE()) return;
-            int k = bsTexts.Find("TEXT", s);
-            if (k != -1)
-            {
-                MyMainForm.ShowWarning("Šāds teksts jau ir sarakstā.");
-                return;
-            }
-            var table = MyData.DataSetKlonsM.M_ITEMS_TEXTS;
-            var dr_new = table.NewM_ITEMS_TEXTSRow();
-            dr_new.IDITEM = IdItem.Value;
-            dr_new.TEXT = s;
-            table.AddM_ITEMS_TEXTSRow(dr_new);
-            FindItemText(dr_new.ID);
-        }
-
         private void SelectCurrent()
         {
             if (dgvRows.CurrentRow == null || dgvRows.CurrentRow.IsNewRow) return;
@@ -246,5 +215,62 @@ namespace KlonsM.FormsM
             SetResultNull = true;
             SetSelectedValue(0, false);
         }
+
+        private void cmFind_Click(object sender, EventArgs e)
+        {
+            var s = tbText.Text;
+            if (s.IsNOE()) return;
+            int k = bsTexts.Find("TEXT", s);
+            if (k == -1)
+            {
+                MyMainForm.ShowInfo("Meklētais teksts netika atrasts.");
+                return;
+            }
+            bsTexts.Position = k;
+        }
+
+        private void cmAdd_Click(object sender, EventArgs e)
+        {
+            var s = tbText.Text;
+            if (s.IsNOE()) return;
+            int k = bsTexts.Find("TEXT", s);
+            if (k != -1)
+            {
+                MyMainForm.ShowWarning("Šāds teksts jau ir sarakstā.");
+                return;
+            }
+            var table = MyData.DataSetKlonsM.M_ITEMS_TEXTS;
+            var dr_new = table.NewM_ITEMS_TEXTSRow();
+            dr_new.IDITEM = IdItem.Value;
+            dr_new.TEXT = s;
+            table.AddM_ITEMS_TEXTSRow(dr_new);
+            FindItemText(dr_new.ID);
+        }
+
+        private void cmOk_Click(object sender, EventArgs e)
+        {
+            var s = tbText.Text;
+            if (s.IsNOE())
+            {
+                SetResultNull = true;
+                SetSelectedValue(0, false);
+                return;
+            }
+            int k = bsTexts.Find("TEXT", s);
+            if (k != -1)
+            {
+                bsTexts.Position = k;
+                SelectCurrent();
+                return;
+            }
+            var table = MyData.DataSetKlonsM.M_ITEMS_TEXTS;
+            var dr_new = table.NewM_ITEMS_TEXTSRow();
+            dr_new.IDITEM = IdItem.Value;
+            dr_new.TEXT = s;
+            table.AddM_ITEMS_TEXTSRow(dr_new);
+            if (!FindItemText(dr_new.ID)) return;
+            SelectCurrent();
+        }
+
     }
 }

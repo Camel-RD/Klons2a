@@ -501,6 +501,7 @@ namespace KlonsM.FormsM
             dgcTP.HeaderText = "veids";
             dgcTP.MinimumWidth = 8;
             dgcTP.Name = "dgcTP";
+            dgcTP.Required = true;
             dgcTP.ValueMember = "ID";
             dgcTP.Width = 140;
             // 
@@ -512,6 +513,7 @@ namespace KlonsM.FormsM
             dgcIdCat.HeaderText = "kategorija";
             dgcIdCat.MinimumWidth = 8;
             dgcIdCat.Name = "dgcIdCat";
+            dgcIdCat.Required = true;
             dgcIdCat.ValueMember = "ID";
             dgcIdCat.Width = 160;
             // 
@@ -547,6 +549,7 @@ namespace KlonsM.FormsM
             dgcPVNTp.HeaderText = "PVN veids";
             dgcPVNTp.MinimumWidth = 8;
             dgcPVNTp.Name = "dgcPVNTp";
+            dgcPVNTp.Required = true;
             dgcPVNTp.ValueMember = "ID";
             dgcPVNTp.Width = 120;
             // 
@@ -558,6 +561,7 @@ namespace KlonsM.FormsM
             dgcAcc21.HeaderText = "konts 21";
             dgcAcc21.MinimumWidth = 8;
             dgcAcc21.Name = "dgcAcc21";
+            dgcAcc21.Required = true;
             dgcAcc21.ValueMember = "ID";
             dgcAcc21.Width = 80;
             // 
@@ -569,6 +573,7 @@ namespace KlonsM.FormsM
             dgcAcc23.HeaderText = "konts 23";
             dgcAcc23.MinimumWidth = 8;
             dgcAcc23.Name = "dgcAcc23";
+            dgcAcc23.Required = true;
             dgcAcc23.ValueMember = "ID";
             dgcAcc23.Width = 80;
             // 
@@ -580,6 +585,7 @@ namespace KlonsM.FormsM
             dgcAcc53.HeaderText = "konts 53";
             dgcAcc53.MinimumWidth = 8;
             dgcAcc53.Name = "dgcAcc53";
+            dgcAcc53.Required = true;
             dgcAcc53.ValueMember = "ID";
             dgcAcc53.Width = 80;
             // 

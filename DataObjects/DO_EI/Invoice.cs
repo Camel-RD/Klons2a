@@ -20,12 +20,16 @@ namespace DataObjectsEI
             this.CustomerAddressCountry = "LV";
         }
 
+        public string DocType { get; set; }
         public string ID { get; set; }
         public DateTime? IssueDate { get; set; }
         public DateTime? DueDate { get; set; }
         public string PayerFinancialAccountID { get; set; }
         public string PayeeFinancialAccountID { get; set; }
         public string Note { get; set; }
+        public string BillingReferenceId { get; set; }
+        public DateTime? BillingReferenceIssueDate { get; set; }
+
         public string CurrencyCode { get; set; }
         public string SupplierName { get; set; }
         public string SupplierAddress { get; set; }
@@ -43,52 +47,103 @@ namespace DataObjectsEI
         public decimal TotalAmountPayable { get; set; }
         public BindingList<InvoiceLine> InvoiceLines { get; private set; } = new();
 
-        public void ReadFrom(InvoiceType invoicetype)
+        public void ReadFrom(InvoiceType invoice)
         {
-            ID = invoicetype.ID;
-            IssueDate = invoicetype.IssueDate;
-            DueDate = invoicetype.DueDate;
-            Note = invoicetype.Note.Any() ?
-                invoicetype.Note.Select(x => x.Value).Aggregate((x1, x2) => x1 + "; " + x2) :
+            DocType = "Rēķins";
+            ID = invoice.ID;
+            IssueDate = invoice.IssueDate;
+            DueDate = invoice.DueDate;
+            Note = invoice.Note.Any() ?
+                invoice.Note.Select(x => x.Value).Aggregate((x1, x2) => x1 + "; " + x2) :
                 null;
-            CurrencyCode = invoicetype.DocumentCurrencyCode.Value;
+            CurrencyCode = invoice.DocumentCurrencyCode.Value;
 
-            PayerFinancialAccountID = invoicetype.PaymentMeans?.FirstOrDefault()?.PayerFinancialAccount?.ID;
-            PayeeFinancialAccountID = invoicetype.PaymentMeans?.FirstOrDefault()?.PayeeFinancialAccount?.ID;
+            BillingReferenceId = invoice.BillingReference?.FirstOrDefault()?.InvoiceDocumentReference?.ID;
+            BillingReferenceIssueDate = invoice.BillingReference?.FirstOrDefault()?.InvoiceDocumentReference?.IssueDate;
+            if (!string.IsNullOrEmpty(BillingReferenceId))
+                DocType = "Koriģējošs rēķins";
 
-            SupplierName = invoicetype.AccountingSupplierParty.Party.PartyName.FirstOrDefault()?.Name;
-            SupplierID = invoicetype.AccountingSupplierParty.Party.PartyIdentification.FirstOrDefault()?.ID;
-            SupplierEndpointID = invoicetype.AccountingSupplierParty.Party.EndpointID.Value;
-            var address = invoicetype.AccountingSupplierParty.Party.PostalAddress;
+            PayerFinancialAccountID = invoice.PaymentMeans?.FirstOrDefault()?.PayerFinancialAccount?.ID;
+            PayeeFinancialAccountID = invoice.PaymentMeans?.FirstOrDefault()?.PayeeFinancialAccount?.ID;
+
+            SupplierName = invoice.AccountingSupplierParty.Party.PartyName.FirstOrDefault()?.Name;
+            SupplierID = invoice.AccountingSupplierParty.Party.PartyIdentification.FirstOrDefault()?.ID;
+            SupplierEndpointID = invoice.AccountingSupplierParty.Party.EndpointID.Value;
+            var address = invoice.AccountingSupplierParty.Party.PostalAddress;
             SupplierAddress = FormatAddress(address);
             SupplierAddressCountry = address.Country.IdentificationCode;
 
-            CustomerName = invoicetype.AccountingCustomerParty.Party.PartyName.FirstOrDefault()?.Name;
-            CustomerID = invoicetype.AccountingCustomerParty.Party.PartyIdentification.FirstOrDefault()?.ID;
-            CustomerEndpointID = invoicetype.AccountingCustomerParty.Party.EndpointID.Value;
-            address = invoicetype.AccountingCustomerParty.Party.PostalAddress;
+            CustomerName = invoice.AccountingCustomerParty.Party.PartyName.FirstOrDefault()?.Name;
+            CustomerID = invoice.AccountingCustomerParty.Party.PartyIdentification.FirstOrDefault()?.ID;
+            CustomerEndpointID = invoice.AccountingCustomerParty.Party.EndpointID.Value;
+            address = invoice.AccountingCustomerParty.Party.PostalAddress;
             CustomerAddress = FormatAddress(address);
             CustomerAddressCountry = address.Country.IdentificationCode;
 
-            TotalAmount = invoicetype.LegalMonetaryTotal.TaxInclusiveAmount.Value;
-            TotalAmountBeforeTax = invoicetype.LegalMonetaryTotal.TaxExclusiveAmount.Value;
+            TotalAmount = invoice.LegalMonetaryTotal.TaxInclusiveAmount.Value;
+            TotalAmountBeforeTax = invoice.LegalMonetaryTotal.TaxExclusiveAmount.Value;
             TotalAmountTax = TotalAmount - TotalAmountBeforeTax;
-            TotalAmountPayable = invoicetype.LegalMonetaryTotal.PayableAmount.Value;
+            TotalAmountPayable = invoice.LegalMonetaryTotal.PayableAmount.Value;
 
-            var lines = invoicetype.InvoiceLine.Select(x => new InvoiceLine(x)).ToList();
+            var lines = invoice.InvoiceLine.Select(x => new InvoiceLine(x)).ToList();
             InvoiceLines.Clear();
             foreach (var line in lines)
                 InvoiceLines.Add(line);
         }
 
 
+        public void ReadFrom(CreditNoteType creditnote)
+        {
+            DocType = "Kredīteēķins";
+            ID = creditnote.ID;
+            IssueDate = creditnote.IssueDate;
+            Note = creditnote.Note.Any() ?
+                creditnote.Note.Select(x => x.Value).Aggregate((x1, x2) => x1 + "; " + x2) :
+                null;
+            CurrencyCode = creditnote.DocumentCurrencyCode.Value;
+
+            BillingReferenceId = creditnote.BillingReference?.FirstOrDefault()?.InvoiceDocumentReference?.ID;
+            BillingReferenceIssueDate = creditnote.BillingReference?.FirstOrDefault()?.InvoiceDocumentReference?.IssueDate;
+
+            PayerFinancialAccountID = creditnote.PaymentMeans?.FirstOrDefault()?.PayerFinancialAccount?.ID;
+            PayeeFinancialAccountID = creditnote.PaymentMeans?.FirstOrDefault()?.PayeeFinancialAccount?.ID;
+
+            SupplierName = creditnote.AccountingSupplierParty.Party.PartyName.FirstOrDefault()?.Name;
+            SupplierID = creditnote.AccountingSupplierParty.Party.PartyIdentification.FirstOrDefault()?.ID;
+            SupplierEndpointID = creditnote.AccountingSupplierParty.Party.EndpointID.Value;
+            var address = creditnote.AccountingSupplierParty.Party.PostalAddress;
+            SupplierAddress = FormatAddress(address);
+            SupplierAddressCountry = address.Country.IdentificationCode;
+
+            CustomerName = creditnote.AccountingCustomerParty.Party.PartyName.FirstOrDefault()?.Name;
+            CustomerID = creditnote.AccountingCustomerParty.Party.PartyIdentification.FirstOrDefault()?.ID;
+            CustomerEndpointID = creditnote.AccountingCustomerParty.Party.EndpointID.Value;
+            address = creditnote.AccountingCustomerParty.Party.PostalAddress;
+            CustomerAddress = FormatAddress(address);
+            CustomerAddressCountry = address.Country.IdentificationCode;
+
+            TotalAmount = creditnote.LegalMonetaryTotal.TaxInclusiveAmount.Value;
+            TotalAmountBeforeTax = creditnote.LegalMonetaryTotal.TaxExclusiveAmount.Value;
+            TotalAmountTax = TotalAmount - TotalAmountBeforeTax;
+            TotalAmountPayable = creditnote.LegalMonetaryTotal.PayableAmount.Value;
+
+            var lines = creditnote.CreditNoteLine.Select(x => new InvoiceLine(x)).ToList();
+            InvoiceLines.Clear();
+            foreach (var line in lines)
+                InvoiceLines.Add(line);
+        }
+
         public void ReadFrom(InvoiceView invoice)
         {
+            DocType = invoice.DocType;
             ID = invoice.ID;
             IssueDate = invoice.IssueDate;
             DueDate = invoice.DueDate;
             Note = invoice.Note;
             CurrencyCode = invoice.CurrencyCode;
+
+            BillingReferenceId = invoice.BillingReferenceId;
+            BillingReferenceIssueDate = invoice.BillingReferenceIssueDate;
 
             PayerFinancialAccountID = invoice.PayerFinancialAccountID;
             PayeeFinancialAccountID = invoice.PayeeFinancialAccountID;

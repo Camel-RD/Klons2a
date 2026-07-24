@@ -58,7 +58,7 @@ namespace KlonsM.FormsM
             // 
             btDoIt.Location = new System.Drawing.Point(437, 180);
             btDoIt.Name = "btDoIt";
-            btDoIt.Size = new System.Drawing.Size(112, 62);
+            btDoIt.Size = new System.Drawing.Size(89, 62);
             btDoIt.TabIndex = 7;
             btDoIt.Text = "Sagatavot izdruku";
             btDoIt.UseVisualStyleBackColor = true;
@@ -77,7 +77,6 @@ namespace KlonsM.FormsM
             // 
             lbInvoiceForm.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             lbInvoiceForm.FormattingEnabled = true;
-            lbInvoiceForm.ItemHeight = 16;
             lbInvoiceForm.Items.AddRange(new object[] { "Veidlapa 1 - ar atlaidi un PVN kodu", "Veidlapa 1 - bez atlaides un PVN koda", "Veidlapa 2 - vienkāršāks rēķins" });
             lbInvoiceForm.Location = new System.Drawing.Point(12, 198);
             lbInvoiceForm.Name = "lbInvoiceForm";
@@ -115,8 +114,9 @@ namespace KlonsM.FormsM
             cbTitle.BorderColor = System.Drawing.SystemColors.ControlDarkDark;
             cbTitle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             cbTitle.FormattingEnabled = true;
-            cbTitle.Items.AddRange(new object[] { "PREČU PAVADZĪME RĒĶINS", "PAVADZĪME", "RĒĶINS", "PRIEKŠAPMAKSAS RĒĶINS", "KREDĪTRĒĶINS", "PĀRVIETOŠANAS PAVADZĪME" });
+            cbTitle.Items.AddRange(new object[] { "PREČU PAVADZĪME RĒĶINS", "PAVADZĪME", "RĒĶINS", "AVANSA RĒĶINS", "PRIEKŠAPMAKSAS RĒĶINS", "KREDĪTRĒĶINS", "PĀRVIETOŠANAS PAVADZĪME" });
             cbTitle.Location = new System.Drawing.Point(188, 95);
+            cbTitle.MaxDropDownItems = 15;
             cbTitle.Name = "cbTitle";
             cbTitle.Size = new System.Drawing.Size(359, 24);
             cbTitle.TabIndex = 2;
@@ -135,10 +135,11 @@ namespace KlonsM.FormsM
             btCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             btCancel.Location = new System.Drawing.Point(437, 256);
             btCancel.Name = "btCancel";
-            btCancel.Size = new System.Drawing.Size(112, 40);
+            btCancel.Size = new System.Drawing.Size(89, 40);
             btCancel.TabIndex = 8;
             btCancel.Text = "Atcelt";
             btCancel.UseVisualStyleBackColor = true;
+            btCancel.Click += btCancel_Click;
             // 
             // chShowCarrier
             // 

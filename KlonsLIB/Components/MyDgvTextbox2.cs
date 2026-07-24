@@ -5,6 +5,7 @@ using System.Diagnostics;
 using System.Drawing;
 using System.Globalization;
 using System.Windows.Forms;
+using KlonsLIB.Forms;
 using KlonsLIB.Misc;
 
 namespace KlonsLIB.Components
@@ -37,42 +38,27 @@ namespace KlonsLIB.Components
             {
                 if (LimitToList && SelectedValue == null)
                     return "";
-                return SelectedValue == null ? "" : SelectedValue.ToString();
-                //return this.Text;
+                if (SelectedValue == null || SelectedIndex < 0) return null;
+                var displayvalue = GetDisplayText(SelectedIndex);
+                return displayvalue;
             }
             set
             {
-                if (!(value is string)) return;
-                try
-                {
-                    this.SelectedValueAsString = (string)value;
-                }
-                catch
-                {
-                    this.SelectedValue = null;
-                }
-                /*
                 string valueStr = value as string;
-                if (valueStr != null)
+                Text = valueStr;
+                if (string.Compare(valueStr, Text, true, CultureInfo.CurrentCulture) != 0)
                 {
-                    this.Text = valueStr;
-                    if (String.Compare(valueStr, Text, true, CultureInfo.CurrentCulture) != 0)
-                    {
-                        SelectedIndex = -1;
-                    }
+                    SelectedIndex = -1;
                 }
-                return;*/
             }
         }
 
-        public object GetEditingControlFormattedValue(
-            DataGridViewDataErrorContexts context)
+        public object GetEditingControlFormattedValue(DataGridViewDataErrorContexts context)
         {
             return EditingControlFormattedValue;
         }
 
-        public void ApplyCellStyleToEditingControl(
-            DataGridViewCellStyle dataGridViewCellStyle)
+        public void ApplyCellStyleToEditingControl(DataGridViewCellStyle dataGridViewCellStyle)
         {
             this.Font = dataGridViewCellStyle.Font;
             this.ForeColor = dataGridViewCellStyle.ForeColor;
@@ -180,6 +166,7 @@ namespace KlonsLIB.Components
         private string m_DisplayMember;
         private string m_ValueMember;
         private bool m_limitToList = true;
+        private bool m_required = false;
         private PropertyDescriptor m_ValueMemberProperty = null;
         private PropertyDescriptor m_DisplayMemberProperty = null;
         private CurrencyManager m_DataManager = null;
@@ -200,14 +187,13 @@ namespace KlonsLIB.Components
             cell.DisplayMember = this.DisplayMember;
             cell.ValueMember = this.ValueMember;
             cell.LimitToList = this.LimitToList;
+            cell.Required = this.Required;
             return cell;
         }
 
         public override void InitializeEditingControl(int rowIndex, object
             initialFormattedValue, DataGridViewCellStyle dataGridViewCellStyle)
         {
-            base.InitializeEditingControl(rowIndex, initialFormattedValue, dataGridViewCellStyle);
-
             m_EditingControl = base.DataGridView.EditingControl as MyDgvTextboxEditingControl2;
             if (m_EditingControl == null) return;
             m_EditingControl.BorderStyle = BorderStyle.None;
@@ -221,7 +207,9 @@ namespace KlonsLIB.Components
             m_EditingControl.ValueMember = m_ValueMember;
             m_EditingControl.LimitToList = LimitToList;
 
-            //cat skip, is set in base with Text = ...
+            base.InitializeEditingControl(rowIndex, initialFormattedValue, dataGridViewCellStyle);
+
+            //can skip, is set in base with Text = ...
             //m_EditingControl.SelectedValue = this.Value;
 
         }
@@ -231,8 +219,92 @@ namespace KlonsLIB.Components
             TypeConverter formattedValueTypeConverter,
             TypeConverter valueTypeConverter)
         {
-            if (formattedValue == null) return null;
-            return base.ParseFormattedValue(formattedValue, cellStyle, formattedValueTypeConverter, valueTypeConverter);
+            if (formattedValueTypeConverter == null)
+            {
+                if (DataSource == null)
+                {
+                    return base.ParseFormattedValue(formattedValue, cellStyle, formattedValueTypeConverter, valueTypeConverter);
+                }
+                if (DisplayMemberProperty != null)
+                {
+                    formattedValueTypeConverter = DisplayMemberProperty.Converter;
+                }
+                else if (ValueMemberProperty != null)
+                {
+                    formattedValueTypeConverter = ValueMemberProperty.Converter;
+                }
+            }
+            int rowindex = DataGridView?.CurrentRow?.Index ?? -1;
+            if (formattedValue == null || formattedValue == DBNull.Value || formattedValue as string == "")
+            {
+                if (Required)
+                {
+                    DataGridViewDataErrorEventArgs dgvdee = new DataGridViewDataErrorEventArgs(
+                        new MyException("Lauks nedrīkst būt tukšs."),
+                            ColumnIndex,
+                            rowindex,
+                            DataGridViewDataErrorContexts.Parsing);
+                    throw dgvdee.Exception;
+                }
+                return base.ParseFormattedValue(formattedValue, cellStyle, formattedValueTypeConverter, valueTypeConverter);
+            }
+            if (FormattedValueType != null && !FormattedValueType.IsAssignableFrom(formattedValue.GetType()))
+            {
+                if (DataGridView != null)
+                {
+                    DataGridViewDataErrorEventArgs dgvdee = new DataGridViewDataErrorEventArgs(
+                        new FormatException("Nekorekta lauka vērtība."),
+                            ColumnIndex,
+                            rowindex,
+                            DataGridViewDataErrorContexts.Parsing);
+                    //RaiseDataError(dgvdee);
+                    //if (dgvdee.ThrowException)
+                    {
+                        throw dgvdee.Exception;
+                    }
+                }
+                return base.ParseFormattedValue(formattedValue, cellStyle, formattedValueTypeConverter, valueTypeConverter);
+            }
+
+            string strValue = formattedValue as String;
+            if ((DataManager != null && (ValueMemberProperty != null || DisplayMemberProperty != null)) ||
+                !string.IsNullOrEmpty(ValueMember) || !string.IsNullOrEmpty(DisplayMember))
+            {
+                object value;
+                if (LookupValueByFormattedValue(rowindex, formattedValue, out value))
+                {
+                    return value;
+                }
+                else
+                {
+                    if (formattedValue == null)
+                    {
+                        value = null;
+                    }
+                    else if (DataGridView != null)
+                    {
+                        DataGridViewDataErrorEventArgs dgvdee = new DataGridViewDataErrorEventArgs(
+                            new ArgumentException("Nekorekta lauka vērtība."), ColumnIndex,
+                            rowindex, DataGridViewDataErrorContexts.Parsing);
+                        //RaiseDataError(dgvdee);
+                        //if (dgvdee.ThrowException)
+                        {
+                            throw dgvdee.Exception;
+                        }
+
+                        if (OwnsEditingControl(rowindex))
+                        {
+                            ((IDataGridViewEditingControl)m_EditingControl).EditingControlValueChanged = true;
+                            DataGridView.NotifyCurrentCellDirty(true);
+                        }
+                    }
+                }
+                return base.ParseFormattedValue(formattedValue, cellStyle, formattedValueTypeConverter, valueTypeConverter);
+            }
+            else
+            {
+                return base.ParseFormattedValue(formattedValue, cellStyle, formattedValueTypeConverter, valueTypeConverter);
+            }
         }
 
         public override Type EditType
@@ -708,6 +780,11 @@ namespace KlonsLIB.Components
             object item = null;
             if (this.DisplayMemberProperty != null || this.ValueMemberProperty != null)
             {
+                if (this.DisplayMemberProperty == this.ValueMemberProperty)
+                {
+                    displayValue = value;
+                    return true;
+                }
                 item = this.ItemFromComboBoxDataSource(this.ValueMemberProperty != null ? this.ValueMemberProperty : this.DisplayMemberProperty, value);
             }
             if (item == null)
@@ -717,6 +794,32 @@ namespace KlonsLIB.Components
             }
 
             displayValue = GetItemDisplayValue(item);
+            return true;
+        }
+
+        private bool LookupValueByFormattedValue(int rowIndex, object displayValue, out object value)
+        {
+            Debug.Assert(displayValue != null);
+            Debug.Assert(ValueMemberProperty != null || DisplayMemberProperty != null ||
+                         !string.IsNullOrEmpty(ValueMember) || !string.IsNullOrEmpty(DisplayMember));
+
+            object item = null;
+            if (DisplayMemberProperty != null || ValueMemberProperty != null)
+            {
+                var prop = DisplayMemberProperty != null ? DisplayMemberProperty : ValueMemberProperty;
+                if (prop == ValueMemberProperty)
+                {
+                    value = displayValue;
+                    return true;
+                }
+                item = ItemFromComboBoxDataSource(prop, displayValue);
+            }
+            if (item == null)
+            {
+                value = null;
+                return false;
+            }
+            value = GetItemValue(item);
             return true;
         }
 
@@ -758,6 +861,32 @@ namespace KlonsLIB.Components
                 displayValue = item;
             }
             return displayValue;
+        }
+
+        internal object GetItemValue(object item)
+        {
+            Debug.Assert(item != null);
+            bool valueSet = false;
+            object value = null;
+            if (ValueMemberProperty != null)
+            {
+                value = ValueMemberProperty.GetValue(item);
+                valueSet = true;
+            }
+            else if (!string.IsNullOrEmpty(ValueMember))
+            {
+                PropertyDescriptor propDesc = TypeDescriptor.GetProperties(item).Find(ValueMember, true /*caseInsensitive*/);
+                if (propDesc != null)
+                {
+                    value = propDesc.GetValue(item);
+                    valueSet = true;
+                }
+            }
+            if (!valueSet)
+            {
+                value = item;
+            }
+            return value;
         }
 
         private object ItemFromComboBoxDataSource(PropertyDescriptor property, object key)
@@ -807,6 +936,15 @@ namespace KlonsLIB.Components
                     {
                         m_EditingControl.LimitToList = value;
                     }
+            }
+        }
+
+        public bool Required
+        {
+            get { return m_required; }
+            set
+            {
+                m_required = value;
             }
         }
 
@@ -957,6 +1095,25 @@ namespace KlonsLIB.Components
                     this.TextBoxCellTemplateA.LimitToList = value;
                     ApplyToCells(cell => cell.LimitToList = value);
                 }
+            }
+        }
+
+        [
+            DefaultValue(false),
+            Category("Data"),
+        ]
+        public bool Required
+        {
+            get
+            {
+                CheckCellTemplate();
+                return this.TextBoxCellTemplateA.Required;
+            }
+            set
+            {
+                CheckCellTemplate();
+                this.TextBoxCellTemplateA.Required = value;
+                ApplyToCells(cell => cell.Required = value);
             }
         }
 

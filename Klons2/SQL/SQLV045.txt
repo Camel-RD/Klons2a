@@ -1,0 +1,36 @@
+SET TERM ^ ;
+
+ALTER PROCEDURE SP_M_DEL_FINDOC (
+    PIDDOCM integer)
+AS
+DECLARE VARIABLE VDOCID INT;
+BEGIN
+    for select f_opsd.id
+    from f_opsd
+    where (f_opsd.iddocm is not null) and (f_opsd.iddocm = :PIDDOCM)
+    into :VDOCID
+    do
+    begin
+        delete from f_ops where f_ops.docid = :VDOCID;
+    end
+    delete from f_opsd
+    where (f_opsd.iddocm is not null) and (f_opsd.iddocm = :PIDDOCM);
+END
+^
+
+SET TERM ; ^
+
+
+UPDATE OR INSERT INTO M_DOCTYPES (ID, CODE, NAME, OPTYPE)
+   VALUES (18, 'Iepirkuma rēķ.', 'Iepirkuma rēķiins', 0);
+UPDATE OR INSERT INTO M_DOCTYPES (ID, CODE, NAME, OPTYPE)
+   VALUES (19, 'Pārdošanas rēķ.', 'Pārdošanas rēķins', 0);
+UPDATE OR INSERT INTO M_DOCTYPES (ID, CODE, NAME, OPTYPE)
+   VALUES (20, 'Avansa rēķ.', 'Avansa rēķins', 0);
+UPDATE OR INSERT INTO M_DOCTYPES (ID, CODE, NAME, OPTYPE)
+   VALUES (21, 'Kredītrēķ. vienk.', 'Kredītrēķins vienkāršs', 0);
+
+
+UPDATE Params
+SET PVALUE = '045'
+WHERE PNAME = 'version';

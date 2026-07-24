@@ -101,7 +101,7 @@ namespace KlonsM.FormsM
             invoicedata.MainData.ShowSignatures = chShowSignature.Checked;
             if (!chShowBarcode.Checked)
             {
-                foreach(var row in invoicedata.RowData)
+                foreach (var row in invoicedata.RowData)
                 {
                     row.Code = "";
                 }
@@ -138,6 +138,11 @@ namespace KlonsM.FormsM
                 DoIt();
 
             });
+        }
+
+        private void btCancel_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

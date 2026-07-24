@@ -334,7 +334,8 @@ namespace KlonsM.FormsM
                     e.Value = dr.TAG1;
                 else 
                     e.Value = dr.TAG2;
-                e.FormattingApplied = true;
+                if (e.Value != null)
+                    e.FormattingApplied = true;
             }
         }
 

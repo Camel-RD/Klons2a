@@ -202,6 +202,7 @@ namespace KlonsM.FormsM
             dgcCat.MinimumWidth = 8;
             dgcCat.Name = "dgcCat";
             dgcCat.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            dgcCat.Required = true;
             dgcCat.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             dgcCat.ValueMember = "ID";
             dgcCat.Width = 140;
@@ -221,6 +222,7 @@ namespace KlonsM.FormsM
             dgcStore1.MinimumWidth = 8;
             dgcStore1.Name = "dgcStore1";
             dgcStore1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            dgcStore1.Required = true;
             dgcStore1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             dgcStore1.ValueMember = "ID";
             dgcStore1.Width = 160;
@@ -241,6 +243,7 @@ namespace KlonsM.FormsM
             dgcPVNRate.MinimumWidth = 8;
             dgcPVNRate.Name = "dgcPVNRate";
             dgcPVNRate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            dgcPVNRate.Required = true;
             dgcPVNRate.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             dgcPVNRate.ValueMember = "ID";
             dgcPVNRate.Width = 120;
@@ -282,6 +285,7 @@ namespace KlonsM.FormsM
             dgcUints.MinimumWidth = 8;
             dgcUints.Name = "dgcUints";
             dgcUints.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            dgcUints.Required = true;
             dgcUints.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             dgcUints.ValueMember = "ID";
             dgcUints.Width = 80;

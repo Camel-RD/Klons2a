@@ -229,6 +229,8 @@ namespace KlonsM.Classes
                 case EDocType.Atgriezts_no_pircēja:
                 case EDocType.Kredītrēķins_pircējam:
                 case EDocType.Pārdošanas_rēķins:
+                case EDocType.Avansa_rēķins:
+                case EDocType.Kredītrēķins_vienkāršs:
                     return EDocType2.Izdots_partnerim;
             }
             throw new Exception("DocType list incomplete");
@@ -284,7 +286,6 @@ namespace KlonsM.Classes
 
                 case EDocType.Iepirkums:
                 case EDocType.Saņemti_pakalpojumi:
-                case EDocType.Iepirkuma_rēķins:
                     return storeouttype == EStoreType.Partneris;
 
                 case EDocType.Realizācija:
@@ -296,7 +297,6 @@ namespace KlonsM.Classes
                 case EDocType.Norakstīts:
                 case EDocType.Izlietots:
                 case EDocType.Uz_noliktavu:
-                case EDocType.Pārdošanas_rēķins:
                     return storeouttype == EStoreType.Noliktava;
 
                 case EDocType.Sākuma_atlikums:
@@ -311,6 +311,18 @@ namespace KlonsM.Classes
 
                 case EDocType.Sniegti_pakalpojumi:
                     return storeouttype == EStoreType.Pakalpojumi;
+
+                case EDocType.Pārdošanas_rēķins:
+                case EDocType.Avansa_rēķins:
+                case EDocType.Kredītrēķins_vienkāršs:
+                    return storeouttype == EStoreType.Noliktava ||
+                        storeouttype == EStoreType.Pakalpojumi ||
+                        storeouttype == EStoreType.Citi;
+
+                case EDocType.Iepirkuma_rēķins:
+                    return storeouttype == EStoreType.Partneris ||
+                        storeouttype == EStoreType.Citi;
+
             }
             return false;
         }
@@ -329,7 +341,6 @@ namespace KlonsM.Classes
                 case EDocType.No_noliktavas:
                 case EDocType.Sākuma_atlikums:
                 case EDocType.Saražots:
-                case EDocType.Iepirkuma_rēķins:
                     return storeintype == EStoreType.Noliktava;
 
                 case EDocType.Saņemti_pakalpojumi:
@@ -341,7 +352,6 @@ namespace KlonsM.Classes
                 case EDocType.Atgriezts_no_pircēja:
                 case EDocType.Kredītrēķins_pircējam:
                 case EDocType.Sniegti_pakalpojumi:
-                case EDocType.Pārdošanas_rēķins:
                     return storeintype == EStoreType.Partneris;
 
                 case EDocType.Norakstīts:
@@ -352,6 +362,17 @@ namespace KlonsM.Classes
 
                 case EDocType.Izlietots:
                     return storeintype == EStoreType.Ražošana;
+
+                case EDocType.Pārdošanas_rēķins:
+                case EDocType.Avansa_rēķins:
+                case EDocType.Kredītrēķins_vienkāršs:
+                    return storeintype == EStoreType.Partneris ||
+                        storeintype == EStoreType.Citi;
+
+                case EDocType.Iepirkuma_rēķins:
+                    return storeintype == EStoreType.Noliktava ||
+                        storeintype == EStoreType.Pakalpojumi ||
+                        storeintype == EStoreType.Citi;
             }
             return false;
         }
@@ -359,7 +380,8 @@ namespace KlonsM.Classes
         public static bool IsCreditDoc(EDocType doctype)
         {
             return doctype == EDocType.Kredītrēķins_no_piegādātāja ||
-                doctype == EDocType.Kredītrēķins_pircējam;
+                doctype == EDocType.Kredītrēķins_pircējam ||
+                doctype == EDocType.Kredītrēķins_vienkāršs;
         }
 
         public static bool IsDoc231(EDocType doctype)
@@ -371,6 +393,8 @@ namespace KlonsM.Classes
                 case EDocType.Kredītrēķins_pircējam:
                 case EDocType.Sniegti_pakalpojumi:
                 case EDocType.Pārdošanas_rēķins:
+                case EDocType.Avansa_rēķins:
+                case EDocType.Kredītrēķins_vienkāršs:
                     return true;
             }
             return false;
@@ -480,6 +504,36 @@ namespace KlonsM.Classes
             return null;
         }
 
+        public static bool SkipIegrāmatotOp(EDocType doctp)
+        {
+            switch (doctp)
+            {
+                case EDocType.Saņemti_pakalpojumi:
+                case EDocType.Sniegti_pakalpojumi:
+                case EDocType.Iepirkuma_rēķins:
+                case EDocType.Pārdošanas_rēķins:
+                case EDocType.Avansa_rēķins:
+                case EDocType.Kredītrēķins_vienkāršs:
+                    return true;
+            }
+            return false;
+        }
+
+        public static bool AlloeCreditDocDataEdit(EDocType doctp)
+        {
+            switch (doctp)
+            {
+                case EDocType.Saņemti_pakalpojumi:
+                case EDocType.Sniegti_pakalpojumi:
+                case EDocType.Iepirkuma_rēķins:
+                case EDocType.Pārdošanas_rēķins:
+                case EDocType.Avansa_rēķins:
+                case EDocType.Kredītrēķins_vienkāršs:
+                    return true;
+            }
+            return false;
+        }
+
         public static bool AutoMakeFinOps(EDocType doctp)
         {
             switch (doctp)
@@ -496,6 +550,8 @@ namespace KlonsM.Classes
                 case EDocType.Pierakstīts:
                 case EDocType.Iepirkuma_rēķins:
                 case EDocType.Pārdošanas_rēķins:
+                case EDocType.Avansa_rēķins:
+                case EDocType.Kredītrēķins_vienkāršs:
                     return true;
             }
             return false;

@@ -74,6 +74,7 @@
             sgrInvoice = new KlonsLIB.MySourceGrid.MyGrid();
             invoiceView1 = new DataObjectsEI.InvoiceView();
             grInvoiceTitleDoc = new KlonsLIB.MySourceGrid.GridRows.MyGridRowTitle();
+            grInvoiceDocType = new KlonsLIB.MySourceGrid.GridRows.MyGridRowTextBoxA();
             grInvoiceId = new KlonsLIB.MySourceGrid.GridRows.MyGridRowTextBoxA();
             grInvoiceDate = new KlonsLIB.MySourceGrid.GridRows.MyGridRowTextBoxA();
             grInvoiceDateDue = new KlonsLIB.MySourceGrid.GridRows.MyGridRowTextBoxA();
@@ -89,6 +90,9 @@
             grInvoiceSupplierAddress = new KlonsLIB.MySourceGrid.GridRows.MyGridRowTextBoxA();
             grInvoicePaeeAccount = new KlonsLIB.MySourceGrid.GridRows.MyGridRowTextBoxA();
             grInvoiceNewColumn2 = new KlonsLIB.MySourceGrid.GridRows.MyGridRowCommand();
+            grInvoiceTitleBillingReference = new KlonsLIB.MySourceGrid.GridRows.MyGridRowTitle();
+            grInvoiceBillingReferenceDate = new KlonsLIB.MySourceGrid.GridRows.MyGridRowTextBoxA();
+            grInvoiceBillingReferenceId = new KlonsLIB.MySourceGrid.GridRows.MyGridRowTextBoxA();
             grInvoiceTitleCustomer = new KlonsLIB.MySourceGrid.GridRows.MyGridRowTitle();
             grInvoiceCustomerName = new KlonsLIB.MySourceGrid.GridRows.MyGridRowTextBoxA();
             grInvoiceCustomerRegNr = new KlonsLIB.MySourceGrid.GridRows.MyGridRowTextBoxA();
@@ -214,7 +218,7 @@
             dgvInvoiceList.Name = "dgvInvoiceList";
             dgvInvoiceList.RowHeadersWidth = 30;
             dgvInvoiceList.RowTemplate.Height = 25;
-            dgvInvoiceList.Size = new System.Drawing.Size(782, 233);
+            dgvInvoiceList.Size = new System.Drawing.Size(782, 232);
             dgvInvoiceList.TabIndex = 1;
             // 
             // dgcInvoiceChecked
@@ -311,10 +315,10 @@
             // 
             tspInvoiceList.Dock = System.Windows.Forms.DockStyle.Bottom;
             tspInvoiceList.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { tsbShowInvoice, tsdSelectInveoices, tsdValidateInveoices, tsbMoveSelectedInvices, tsbShowRealInvoice });
-            tspInvoiceList.Location = new System.Drawing.Point(3, 265);
+            tspInvoiceList.Location = new System.Drawing.Point(3, 264);
             tspInvoiceList.Name = "tspInvoiceList";
             tspInvoiceList.Padding = new System.Windows.Forms.Padding(0, 3, 1, 2);
-            tspInvoiceList.Size = new System.Drawing.Size(782, 31);
+            tspInvoiceList.Size = new System.Drawing.Size(782, 32);
             tspInvoiceList.TabIndex = 2;
             tspInvoiceList.Text = "toolStrip1";
             // 
@@ -324,7 +328,7 @@
             tsbShowInvoice.Image = (System.Drawing.Image)resources.GetObject("tsbShowInvoice.Image");
             tsbShowInvoice.ImageTransparentColor = System.Drawing.Color.Magenta;
             tsbShowInvoice.Name = "tsbShowInvoice";
-            tsbShowInvoice.Size = new System.Drawing.Size(51, 23);
+            tsbShowInvoice.Size = new System.Drawing.Size(53, 24);
             tsbShowInvoice.Text = "Atvērt";
             tsbShowInvoice.Click += tsbShowInvoice_Click;
             // 
@@ -335,20 +339,20 @@
             tsdSelectInveoices.Image = (System.Drawing.Image)resources.GetObject("tsdSelectInveoices.Image");
             tsdSelectInveoices.ImageTransparentColor = System.Drawing.Color.Magenta;
             tsdSelectInveoices.Name = "tsdSelectInveoices";
-            tsdSelectInveoices.Size = new System.Drawing.Size(69, 23);
+            tsdSelectInveoices.Size = new System.Drawing.Size(74, 24);
             tsdSelectInveoices.Text = "Ātzīmēt";
             // 
             // tsbSelectNoneInvoice
             // 
             tsbSelectNoneInvoice.Name = "tsbSelectNoneInvoice";
-            tsbSelectNoneInvoice.Size = new System.Drawing.Size(128, 24);
+            tsbSelectNoneInvoice.Size = new System.Drawing.Size(132, 24);
             tsbSelectNoneInvoice.Text = "Nevienu";
             tsbSelectNoneInvoice.Click += tsbSelectNoneInvoice_Click;
             // 
             // tsbSelectAllInvoices
             // 
             tsbSelectAllInvoices.Name = "tsbSelectAllInvoices";
-            tsbSelectAllInvoices.Size = new System.Drawing.Size(128, 24);
+            tsbSelectAllInvoices.Size = new System.Drawing.Size(132, 24);
             tsbSelectAllInvoices.Text = "Visus";
             tsbSelectAllInvoices.Click += tsbSelectAllInvoices_Click;
             // 
@@ -359,27 +363,27 @@
             tsdValidateInveoices.Image = (System.Drawing.Image)resources.GetObject("tsdValidateInveoices.Image");
             tsdValidateInveoices.ImageTransparentColor = System.Drawing.Color.Magenta;
             tsdValidateInveoices.Name = "tsdValidateInveoices";
-            tsdValidateInveoices.Size = new System.Drawing.Size(81, 23);
+            tsdValidateInveoices.Size = new System.Drawing.Size(85, 24);
             tsdValidateInveoices.Text = "Pārbaudīt";
             // 
             // tsbValidateCurrent
             // 
             tsbValidateCurrent.Name = "tsbValidateCurrent";
-            tsbValidateCurrent.Size = new System.Drawing.Size(139, 24);
+            tsbValidateCurrent.Size = new System.Drawing.Size(145, 24);
             tsbValidateCurrent.Text = "Norādīto";
             tsbValidateCurrent.Click += tsbValidateCurrent_Click;
             // 
             // tsbValidateSelected
             // 
             tsbValidateSelected.Name = "tsbValidateSelected";
-            tsbValidateSelected.Size = new System.Drawing.Size(139, 24);
+            tsbValidateSelected.Size = new System.Drawing.Size(145, 24);
             tsbValidateSelected.Text = "Atzīmētos";
             tsbValidateSelected.Click += tsbValidateSelected_Click;
             // 
             // tsbValidateAll
             // 
             tsbValidateAll.Name = "tsbValidateAll";
-            tsbValidateAll.Size = new System.Drawing.Size(139, 24);
+            tsbValidateAll.Size = new System.Drawing.Size(145, 24);
             tsbValidateAll.Text = "Visus";
             tsbValidateAll.Click += tsbValidateAll_Click;
             // 
@@ -389,7 +393,7 @@
             tsbMoveSelectedInvices.Image = (System.Drawing.Image)resources.GetObject("tsbMoveSelectedInvices.Image");
             tsbMoveSelectedInvices.ImageTransparentColor = System.Drawing.Color.Magenta;
             tsbMoveSelectedInvices.Name = "tsbMoveSelectedInvices";
-            tsbMoveSelectedInvices.Size = new System.Drawing.Size(131, 23);
+            tsbMoveSelectedInvices.Size = new System.Drawing.Size(140, 24);
             tsbMoveSelectedInvices.Text = "Pārvietot atzīmētos";
             tsbMoveSelectedInvices.Click += tsbMoveSelectedInvices_Click;
             // 
@@ -399,7 +403,7 @@
             tsbShowRealInvoice.Image = (System.Drawing.Image)resources.GetObject("tsbShowRealInvoice.Image");
             tsbShowRealInvoice.ImageTransparentColor = System.Drawing.Color.Magenta;
             tsbShowRealInvoice.Name = "tsbShowRealInvoice";
-            tsbShowRealInvoice.Size = new System.Drawing.Size(120, 23);
+            tsbShowRealInvoice.Size = new System.Drawing.Size(130, 24);
             tsbShowRealInvoice.Text = "Rādīt pilno rēķinu";
             tsbShowRealInvoice.Click += tsbShowRealInvoice_Click;
             // 
@@ -513,6 +517,7 @@
             sgrInvoice.Name = "sgrInvoice";
             sgrInvoice.OptimizeMode = SourceGrid.CellOptimizeMode.ForRows;
             sgrInvoice.RowList.Add(grInvoiceTitleDoc);
+            sgrInvoice.RowList.Add(grInvoiceDocType);
             sgrInvoice.RowList.Add(grInvoiceId);
             sgrInvoice.RowList.Add(grInvoiceDate);
             sgrInvoice.RowList.Add(grInvoiceDateDue);
@@ -527,6 +532,9 @@
             sgrInvoice.RowList.Add(grInvoiceSupplierPVNRegNr);
             sgrInvoice.RowList.Add(grInvoiceSupplierAddress);
             sgrInvoice.RowList.Add(grInvoicePaeeAccount);
+            sgrInvoice.RowList.Add(grInvoiceTitleBillingReference);
+            sgrInvoice.RowList.Add(grInvoiceBillingReferenceDate);
+            sgrInvoice.RowList.Add(grInvoiceBillingReferenceId);
             sgrInvoice.RowList.Add(grInvoiceNewColumn2);
             sgrInvoice.RowList.Add(grInvoiceTitleCustomer);
             sgrInvoice.RowList.Add(grInvoiceCustomerName);
@@ -543,6 +551,8 @@
             // 
             // invoiceView1
             // 
+            invoiceView1.BillingReferenceId = null;
+            invoiceView1.BillingReferenceIssueDate = null;
             invoiceView1.Checked = false;
             invoiceView1.CurrencyCode = "EUR";
             invoiceView1.CustomerAddress = null;
@@ -550,6 +560,7 @@
             invoiceView1.CustomerEndpointID = null;
             invoiceView1.CustomerID = null;
             invoiceView1.CustomerName = null;
+            invoiceView1.DocType = null;
             invoiceView1.DueDate = new System.DateTime(0L);
             invoiceView1.Email = null;
             invoiceView1.FullFileName = null;
@@ -575,6 +586,16 @@
             // 
             grInvoiceTitleDoc.Name = "grInvoiceTitleDoc";
             grInvoiceTitleDoc.RowTitle = "Rēķins";
+            // 
+            // grInvoiceDocType
+            // 
+            grInvoiceDocType.DataMember = "DocType";
+            grInvoiceDocType.DataSource = bsInvoiceList;
+            grInvoiceDocType.EditorTemplateName = "grtLineTextBox";
+            grInvoiceDocType.GridPropertyName = "DocType";
+            grInvoiceDocType.Name = "grInvoiceDocType";
+            grInvoiceDocType.RowTitle = "Veids";
+            grInvoiceDocType.RowValueType = KlonsLIB.MySourceGrid.GridRows.EMyGridRowValueType.String;
             // 
             // grInvoiceId
             // 
@@ -714,6 +735,32 @@
             grInvoiceNewColumn2.Name = "grInvoiceNewColumn2";
             grInvoiceNewColumn2.RowTitle = null;
             // 
+            // grInvoiceTitleBillingReference
+            // 
+            grInvoiceTitleBillingReference.Name = "grInvoiceTitleBillingReference";
+            grInvoiceTitleBillingReference.RowTitle = "Sākotnējais dokuments";
+            // 
+            // grInvoiceBillingReferenceDate
+            // 
+            grInvoiceBillingReferenceDate.AllowNull = true;
+            grInvoiceBillingReferenceDate.DataMember = "BillingReferenceIssueDate";
+            grInvoiceBillingReferenceDate.DataSource = bsInvoiceList;
+            grInvoiceBillingReferenceDate.GridPropertyName = "BillingReferenceIssueDate";
+            grInvoiceBillingReferenceDate.Name = "grInvoiceBillingReferenceDate";
+            grInvoiceBillingReferenceDate.RowTitle = "Datume";
+            grInvoiceBillingReferenceDate.RowValueType = KlonsLIB.MySourceGrid.GridRows.EMyGridRowValueType.DateN;
+            // 
+            // grInvoiceBillingReferenceId
+            // 
+            grInvoiceBillingReferenceId.AllowNull = true;
+            grInvoiceBillingReferenceId.DataMember = "BillingReferenceId";
+            grInvoiceBillingReferenceId.DataSource = bsInvoiceList;
+            grInvoiceBillingReferenceId.EditorTemplateName = "grtLineTextBox";
+            grInvoiceBillingReferenceId.GridPropertyName = "BillingReferenceId";
+            grInvoiceBillingReferenceId.Name = "grInvoiceBillingReferenceId";
+            grInvoiceBillingReferenceId.RowTitle = "Numurs";
+            grInvoiceBillingReferenceId.RowValueType = KlonsLIB.MySourceGrid.GridRows.EMyGridRowValueType.String;
+            // 
             // grInvoiceTitleCustomer
             // 
             grInvoiceTitleCustomer.Name = "grInvoiceTitleCustomer";
@@ -723,6 +770,7 @@
             // 
             grInvoiceCustomerName.DataMember = "CustomerName";
             grInvoiceCustomerName.DataSource = bsInvoiceList;
+            grInvoiceCustomerName.EditorTemplateName = "grtLineTextBox";
             grInvoiceCustomerName.GridPropertyName = "CustomerName";
             grInvoiceCustomerName.Name = "grInvoiceCustomerName";
             grInvoiceCustomerName.RowTitle = "Nosaukums";
@@ -732,6 +780,7 @@
             // 
             grInvoiceCustomerRegNr.DataMember = "CustomerID";
             grInvoiceCustomerRegNr.DataSource = bsInvoiceList;
+            grInvoiceCustomerRegNr.EditorTemplateName = "grtLineTextBox";
             grInvoiceCustomerRegNr.GridPropertyName = "CustomerID";
             grInvoiceCustomerRegNr.Name = "grInvoiceCustomerRegNr";
             grInvoiceCustomerRegNr.RowTitle = "Reģ.nr.";
@@ -741,6 +790,7 @@
             // 
             grInvoiceCustomerVATRegNr.DataMember = "CustomerEndpointID";
             grInvoiceCustomerVATRegNr.DataSource = bsInvoiceList;
+            grInvoiceCustomerVATRegNr.EditorTemplateName = "grtLineTextBox";
             grInvoiceCustomerVATRegNr.GridPropertyName = "CustomerEndpointID";
             grInvoiceCustomerVATRegNr.Name = "grInvoiceCustomerVATRegNr";
             grInvoiceCustomerVATRegNr.RowTitle = "PVN reģ.nr.";
@@ -750,6 +800,7 @@
             // 
             grInvoiceCustomerAddress.DataMember = "CustomerAddress";
             grInvoiceCustomerAddress.DataSource = bsInvoiceList;
+            grInvoiceCustomerAddress.EditorTemplateName = "grtLineTextBox";
             grInvoiceCustomerAddress.GridPropertyName = "CustomerAddress";
             grInvoiceCustomerAddress.Name = "grInvoiceCustomerAddress";
             grInvoiceCustomerAddress.RowTitle = "Adrese";
@@ -767,6 +818,7 @@
             // 
             // grtLineTextBox
             // 
+            grtLineTextBox.DataMember = null;
             grtLineTextBox.Name = "grtLineTextBox";
             grtLineTextBox.RowTitle = null;
             grtLineTextBox.RowValueType = KlonsLIB.MySourceGrid.GridRows.EMyGridRowValueType.String;
@@ -947,7 +999,7 @@
             toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { tsbNewEmailTemplate, tsbSenderEditTemplateName, tsbDeleteEmailTemplate, toolStripDropDownButton1 });
             toolStrip1.Location = new System.Drawing.Point(571, 61);
             toolStrip1.Name = "toolStrip1";
-            toolStrip1.Size = new System.Drawing.Size(106, 26);
+            toolStrip1.Size = new System.Drawing.Size(107, 27);
             toolStrip1.TabIndex = 13;
             toolStrip1.Text = "toolStrip1";
             // 
@@ -957,7 +1009,7 @@
             tsbNewEmailTemplate.Image = (System.Drawing.Image)resources.GetObject("tsbNewEmailTemplate.Image");
             tsbNewEmailTemplate.ImageTransparentColor = System.Drawing.Color.Magenta;
             tsbNewEmailTemplate.Name = "tsbNewEmailTemplate";
-            tsbNewEmailTemplate.Size = new System.Drawing.Size(23, 23);
+            tsbNewEmailTemplate.Size = new System.Drawing.Size(23, 24);
             tsbNewEmailTemplate.Text = "Pievienot";
             tsbNewEmailTemplate.Click += tsbNewEmailTemplate_Click;
             // 
@@ -967,7 +1019,7 @@
             tsbSenderEditTemplateName.Image = (System.Drawing.Image)resources.GetObject("tsbSenderEditTemplateName.Image");
             tsbSenderEditTemplateName.ImageTransparentColor = System.Drawing.Color.Magenta;
             tsbSenderEditTemplateName.Name = "tsbSenderEditTemplateName";
-            tsbSenderEditTemplateName.Size = new System.Drawing.Size(23, 23);
+            tsbSenderEditTemplateName.Size = new System.Drawing.Size(23, 24);
             tsbSenderEditTemplateName.Text = "Mainīt nosaukumu";
             tsbSenderEditTemplateName.Click += tsbSenderEditTemplateName_Click;
             // 
@@ -977,7 +1029,7 @@
             tsbDeleteEmailTemplate.Image = (System.Drawing.Image)resources.GetObject("tsbDeleteEmailTemplate.Image");
             tsbDeleteEmailTemplate.ImageTransparentColor = System.Drawing.Color.Magenta;
             tsbDeleteEmailTemplate.Name = "tsbDeleteEmailTemplate";
-            tsbDeleteEmailTemplate.Size = new System.Drawing.Size(23, 23);
+            tsbDeleteEmailTemplate.Size = new System.Drawing.Size(23, 24);
             tsbDeleteEmailTemplate.Text = "Dzēst";
             tsbDeleteEmailTemplate.Click += tsbDeleteEmailTemplate_Click;
             // 
@@ -988,28 +1040,28 @@
             toolStripDropDownButton1.Image = (System.Drawing.Image)resources.GetObject("toolStripDropDownButton1.Image");
             toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             toolStripDropDownButton1.Name = "toolStripDropDownButton1";
-            toolStripDropDownButton1.Size = new System.Drawing.Size(34, 23);
+            toolStripDropDownButton1.Size = new System.Drawing.Size(35, 24);
             toolStripDropDownButton1.Text = "▼";
             toolStripDropDownButton1.ToolTipText = "Ielikt sagatavē lauka kodu";
             // 
             // tsbTemplateCodeSenderName
             // 
             tsbTemplateCodeSenderName.Name = "tsbTemplateCodeSenderName";
-            tsbTemplateCodeSenderName.Size = new System.Drawing.Size(210, 24);
+            tsbTemplateCodeSenderName.Size = new System.Drawing.Size(220, 24);
             tsbTemplateCodeSenderName.Text = "Sūtītāja nosaukums";
             tsbTemplateCodeSenderName.Click += tsbTemplateCodeSenderName_Click;
             // 
             // tsbTemplateCodeReceiverName
             // 
             tsbTemplateCodeReceiverName.Name = "tsbTemplateCodeReceiverName";
-            tsbTemplateCodeReceiverName.Size = new System.Drawing.Size(210, 24);
+            tsbTemplateCodeReceiverName.Size = new System.Drawing.Size(220, 24);
             tsbTemplateCodeReceiverName.Text = "Saņēmēja nosaukums";
             tsbTemplateCodeReceiverName.Click += tsbTemplateCodeReceiverName_Click;
             // 
             // tsbTemplateCodeInvoiceId
             // 
             tsbTemplateCodeInvoiceId.Name = "tsbTemplateCodeInvoiceId";
-            tsbTemplateCodeInvoiceId.Size = new System.Drawing.Size(210, 24);
+            tsbTemplateCodeInvoiceId.Size = new System.Drawing.Size(220, 24);
             tsbTemplateCodeInvoiceId.Text = "Rēķina numurs";
             tsbTemplateCodeInvoiceId.Click += tsbTemplateCodeInvoiceId_Click;
             // 
@@ -1423,5 +1475,9 @@
         private System.Windows.Forms.ToolStripMenuItem tsbTemplateCodeSenderName;
         private System.Windows.Forms.ToolStripMenuItem tsbTemplateCodeReceiverName;
         private System.Windows.Forms.ToolStripMenuItem tsbTemplateCodeInvoiceId;
+        private KlonsLIB.MySourceGrid.GridRows.MyGridRowTextBoxA grInvoiceDocType;
+        private KlonsLIB.MySourceGrid.GridRows.MyGridRowTitle grInvoiceTitleBillingReference;
+        private KlonsLIB.MySourceGrid.GridRows.MyGridRowTextBoxA grInvoiceBillingReferenceDate;
+        private KlonsLIB.MySourceGrid.GridRows.MyGridRowTextBoxA grInvoiceBillingReferenceId;
     }
 }

@@ -92,57 +92,57 @@ namespace KlonsF.DataSets {
         
         private global::System.Data.DataRelation relationFK_M_ACCOUNTS_TP;
         
-        private global::System.Data.DataRelation relationFK_M_STORES_PVNTP;
-        
-        private global::System.Data.DataRelation relationFK_M_STORES_IDCOUNTRY1;
+        private global::System.Data.DataRelation relationFK_M_STORES_TP;
         
         private global::System.Data.DataRelation relationFK_M_STORES_IDCAT;
         
-        private global::System.Data.DataRelation relationFK_M_STORES_TP;
+        private global::System.Data.DataRelation relationFK_M_STORES_IDCOUNTRY1;
         
-        private global::System.Data.DataRelation relationFK_M_ITEMS_UNITS;
-        
-        private global::System.Data.DataRelation relationFK_M_ITEMS_STORE1;
-        
-        private global::System.Data.DataRelation relationFK_M_ITEMS_CAT;
+        private global::System.Data.DataRelation relationFK_M_STORES_PVNTP;
         
         private global::System.Data.DataRelation relationFK_M_ITEMS_PVNRATE;
         
-        private global::System.Data.DataRelation relationFK_M_ITEMS_PER_STORE_IDSTORE;
+        private global::System.Data.DataRelation relationFK_M_ITEMS_CAT;
+        
+        private global::System.Data.DataRelation relationFK_M_ITEMS_STORE1;
+        
+        private global::System.Data.DataRelation relationFK_M_ITEMS_UNITS;
         
         private global::System.Data.DataRelation relationFK_M_ITEMS_PER_STORE_IDITEM;
         
-        private global::System.Data.DataRelation relationFK_M_DOCS_IDSTOREIN;
-        
-        private global::System.Data.DataRelation relationFK_M_DOCS_IDSTOREOUT;
-        
-        private global::System.Data.DataRelation relationFK_M_DOCS_TP;
+        private global::System.Data.DataRelation relationFK_M_ITEMS_PER_STORE_IDSTORE;
         
         private global::System.Data.DataRelation relationFK_M_DOCS_IDDRIVER;
         
-        private global::System.Data.DataRelation relationFK_M_ROWS_IDITEMTEXT1;
+        private global::System.Data.DataRelation relationFK_M_DOCS_TP;
         
-        private global::System.Data.DataRelation relationFK_M_ROWS_IDITEM;
+        private global::System.Data.DataRelation relationFK_M_DOCS_IDSTOREOUT;
         
-        private global::System.Data.DataRelation relationFK_M_ROWS_IDDOC;
+        private global::System.Data.DataRelation relationFK_M_DOCS_IDSTOREIN;
+        
+        private global::System.Data.DataRelation relationFK_M_ROWS_UNITS1;
         
         private global::System.Data.DataRelation relationFK_M_ROWS_IDPVNRATE;
         
-        private global::System.Data.DataRelation relationFK_M_ROWS_UNITS1;
+        private global::System.Data.DataRelation relationFK_M_ROWS_IDDOC;
+        
+        private global::System.Data.DataRelation relationFK_M_ROWS_IDITEM;
+        
+        private global::System.Data.DataRelation relationFK_M_ROWS_IDITEMTEXT1;
         
         private global::System.Data.DataRelation relationFK_M_BANKACCOUNTS_IDSTORE;
         
         private global::System.Data.DataRelation relationFK_M_CONTACTS_IDSTORE;
         
-        private global::System.Data.DataRelation relationFK_M_ADDRESSSES_IDCOUNTRY;
-        
         private global::System.Data.DataRelation relationFK_M_ADDRESSSES_IDSTORE;
+        
+        private global::System.Data.DataRelation relationFK_M_ADDRESSSES_IDCOUNTRY;
         
         private global::System.Data.DataRelation relationFK_M_VEHICLES_IDSTORE;
         
-        private global::System.Data.DataRelation relationFK_M_PVNRATES2_IDTP;
-        
         private global::System.Data.DataRelation relationFK_M_PVNRATES2_IDRATE;
+        
+        private global::System.Data.DataRelation relationFK_M_PVNRATES2_IDTP;
         
         private global::System.Data.DataRelation relationFK_M_INV_DOCS_IDSTORE1;
         
@@ -152,13 +152,13 @@ namespace KlonsF.DataSets {
         
         private global::System.Data.DataRelation relationFK_M_PRICE_LISTS_R_IDL;
         
-        private global::System.Data.DataRelation relationFK_M_DISC_LISTS_P_IDSTORE1;
-        
         private global::System.Data.DataRelation relationFK_M_DISC_LISTS_P_IDL;
         
-        private global::System.Data.DataRelation relationFK_M_PRICE_LISTS_P_IDSTORE1;
+        private global::System.Data.DataRelation relationFK_M_DISC_LISTS_P_IDSTORE1;
         
         private global::System.Data.DataRelation relationFK_M_PRICE_LISTS_P_IDL;
+        
+        private global::System.Data.DataRelation relationFK_M_PRICE_LISTS_P_IDSTORE1;
         
         private global::System.Data.DataRelation relationFK_M_ITEMS_TEXTS_IDITEMS;
         
@@ -1053,40 +1053,40 @@ namespace KlonsF.DataSets {
                 }
             }
             this.relationFK_M_ACCOUNTS_TP = this.Relations["FK_M_ACCOUNTS_TP"];
-            this.relationFK_M_STORES_PVNTP = this.Relations["FK_M_STORES_PVNTP"];
-            this.relationFK_M_STORES_IDCOUNTRY1 = this.Relations["FK_M_STORES_IDCOUNTRY1"];
-            this.relationFK_M_STORES_IDCAT = this.Relations["FK_M_STORES_IDCAT"];
             this.relationFK_M_STORES_TP = this.Relations["FK_M_STORES_TP"];
-            this.relationFK_M_ITEMS_UNITS = this.Relations["FK_M_ITEMS_UNITS"];
-            this.relationFK_M_ITEMS_STORE1 = this.Relations["FK_M_ITEMS_STORE1"];
-            this.relationFK_M_ITEMS_CAT = this.Relations["FK_M_ITEMS_CAT"];
+            this.relationFK_M_STORES_IDCAT = this.Relations["FK_M_STORES_IDCAT"];
+            this.relationFK_M_STORES_IDCOUNTRY1 = this.Relations["FK_M_STORES_IDCOUNTRY1"];
+            this.relationFK_M_STORES_PVNTP = this.Relations["FK_M_STORES_PVNTP"];
             this.relationFK_M_ITEMS_PVNRATE = this.Relations["FK_M_ITEMS_PVNRATE"];
-            this.relationFK_M_ITEMS_PER_STORE_IDSTORE = this.Relations["FK_M_ITEMS_PER_STORE_IDSTORE"];
+            this.relationFK_M_ITEMS_CAT = this.Relations["FK_M_ITEMS_CAT"];
+            this.relationFK_M_ITEMS_STORE1 = this.Relations["FK_M_ITEMS_STORE1"];
+            this.relationFK_M_ITEMS_UNITS = this.Relations["FK_M_ITEMS_UNITS"];
             this.relationFK_M_ITEMS_PER_STORE_IDITEM = this.Relations["FK_M_ITEMS_PER_STORE_IDITEM"];
-            this.relationFK_M_DOCS_IDSTOREIN = this.Relations["FK_M_DOCS_IDSTOREIN"];
-            this.relationFK_M_DOCS_IDSTOREOUT = this.Relations["FK_M_DOCS_IDSTOREOUT"];
-            this.relationFK_M_DOCS_TP = this.Relations["FK_M_DOCS_TP"];
+            this.relationFK_M_ITEMS_PER_STORE_IDSTORE = this.Relations["FK_M_ITEMS_PER_STORE_IDSTORE"];
             this.relationFK_M_DOCS_IDDRIVER = this.Relations["FK_M_DOCS_IDDRIVER"];
-            this.relationFK_M_ROWS_IDITEMTEXT1 = this.Relations["FK_M_ROWS_IDITEMTEXT1"];
-            this.relationFK_M_ROWS_IDITEM = this.Relations["FK_M_ROWS_IDITEM"];
-            this.relationFK_M_ROWS_IDDOC = this.Relations["FK_M_ROWS_IDDOC"];
-            this.relationFK_M_ROWS_IDPVNRATE = this.Relations["FK_M_ROWS_IDPVNRATE"];
+            this.relationFK_M_DOCS_TP = this.Relations["FK_M_DOCS_TP"];
+            this.relationFK_M_DOCS_IDSTOREOUT = this.Relations["FK_M_DOCS_IDSTOREOUT"];
+            this.relationFK_M_DOCS_IDSTOREIN = this.Relations["FK_M_DOCS_IDSTOREIN"];
             this.relationFK_M_ROWS_UNITS1 = this.Relations["FK_M_ROWS_UNITS1"];
+            this.relationFK_M_ROWS_IDPVNRATE = this.Relations["FK_M_ROWS_IDPVNRATE"];
+            this.relationFK_M_ROWS_IDDOC = this.Relations["FK_M_ROWS_IDDOC"];
+            this.relationFK_M_ROWS_IDITEM = this.Relations["FK_M_ROWS_IDITEM"];
+            this.relationFK_M_ROWS_IDITEMTEXT1 = this.Relations["FK_M_ROWS_IDITEMTEXT1"];
             this.relationFK_M_BANKACCOUNTS_IDSTORE = this.Relations["FK_M_BANKACCOUNTS_IDSTORE"];
             this.relationFK_M_CONTACTS_IDSTORE = this.Relations["FK_M_CONTACTS_IDSTORE"];
-            this.relationFK_M_ADDRESSSES_IDCOUNTRY = this.Relations["FK_M_ADDRESSSES_IDCOUNTRY"];
             this.relationFK_M_ADDRESSSES_IDSTORE = this.Relations["FK_M_ADDRESSSES_IDSTORE"];
+            this.relationFK_M_ADDRESSSES_IDCOUNTRY = this.Relations["FK_M_ADDRESSSES_IDCOUNTRY"];
             this.relationFK_M_VEHICLES_IDSTORE = this.Relations["FK_M_VEHICLES_IDSTORE"];
-            this.relationFK_M_PVNRATES2_IDTP = this.Relations["FK_M_PVNRATES2_IDTP"];
             this.relationFK_M_PVNRATES2_IDRATE = this.Relations["FK_M_PVNRATES2_IDRATE"];
+            this.relationFK_M_PVNRATES2_IDTP = this.Relations["FK_M_PVNRATES2_IDTP"];
             this.relationFK_M_INV_DOCS_IDSTORE1 = this.Relations["FK_M_INV_DOCS_IDSTORE1"];
             this.relationFK_M_INV_ROWS_IDDOC = this.Relations["FK_M_INV_ROWS_IDDOC"];
             this.relationFK_M_DISC_LISTS_R_IDL = this.Relations["FK_M_DISC_LISTS_R_IDL"];
             this.relationFK_M_PRICE_LISTS_R_IDL = this.Relations["FK_M_PRICE_LISTS_R_IDL"];
-            this.relationFK_M_DISC_LISTS_P_IDSTORE1 = this.Relations["FK_M_DISC_LISTS_P_IDSTORE1"];
             this.relationFK_M_DISC_LISTS_P_IDL = this.Relations["FK_M_DISC_LISTS_P_IDL"];
-            this.relationFK_M_PRICE_LISTS_P_IDSTORE1 = this.Relations["FK_M_PRICE_LISTS_P_IDSTORE1"];
+            this.relationFK_M_DISC_LISTS_P_IDSTORE1 = this.Relations["FK_M_DISC_LISTS_P_IDSTORE1"];
             this.relationFK_M_PRICE_LISTS_P_IDL = this.Relations["FK_M_PRICE_LISTS_P_IDL"];
+            this.relationFK_M_PRICE_LISTS_P_IDSTORE1 = this.Relations["FK_M_PRICE_LISTS_P_IDSTORE1"];
             this.relationFK_M_ITEMS_TEXTS_IDITEMS = this.Relations["FK_M_ITEMS_TEXTS_IDITEMS"];
             this.relationFK_M_DOCS_IDADDRESSIN = this.Relations["FK_M_DOCS_IDADDRESSIN"];
             this.relationFK_M_DOCS_IDADDRESSOUT = this.Relations["FK_M_DOCS_IDADDRESSOUT"];
@@ -1180,16 +1180,9 @@ namespace KlonsF.DataSets {
             fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
             fkc.DeleteRule = global::System.Data.Rule.None;
             fkc.UpdateRule = global::System.Data.Rule.None;
-            fkc = new global::System.Data.ForeignKeyConstraint("FK_M_STORES_PVNTP1", new global::System.Data.DataColumn[] {
-                        this.tableM_PVNTYPE.IDColumn}, new global::System.Data.DataColumn[] {
-                        this.tableM_STORES.PVNTPColumn});
-            this.tableM_STORES.Constraints.Add(fkc);
-            fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
-            fkc.DeleteRule = global::System.Data.Rule.None;
-            fkc.UpdateRule = global::System.Data.Rule.Cascade;
-            fkc = new global::System.Data.ForeignKeyConstraint("FK_M_STORES_IDCOUNTRY", new global::System.Data.DataColumn[] {
-                        this.tableM_COUNTRIES.IDColumn}, new global::System.Data.DataColumn[] {
-                        this.tableM_STORES.IDCOUNTRYColumn});
+            fkc = new global::System.Data.ForeignKeyConstraint("FK_M_STORES_TP", new global::System.Data.DataColumn[] {
+                        this.tableM_STORETYPE.IDColumn}, new global::System.Data.DataColumn[] {
+                        this.tableM_STORES.TPColumn});
             this.tableM_STORES.Constraints.Add(fkc);
             fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
             fkc.DeleteRule = global::System.Data.Rule.None;
@@ -1201,16 +1194,30 @@ namespace KlonsF.DataSets {
             fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
             fkc.DeleteRule = global::System.Data.Rule.None;
             fkc.UpdateRule = global::System.Data.Rule.Cascade;
-            fkc = new global::System.Data.ForeignKeyConstraint("FK_M_STORES_TP", new global::System.Data.DataColumn[] {
-                        this.tableM_STORETYPE.IDColumn}, new global::System.Data.DataColumn[] {
-                        this.tableM_STORES.TPColumn});
+            fkc = new global::System.Data.ForeignKeyConstraint("FK_M_STORES_IDCOUNTRY", new global::System.Data.DataColumn[] {
+                        this.tableM_COUNTRIES.IDColumn}, new global::System.Data.DataColumn[] {
+                        this.tableM_STORES.IDCOUNTRYColumn});
             this.tableM_STORES.Constraints.Add(fkc);
             fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
             fkc.DeleteRule = global::System.Data.Rule.None;
             fkc.UpdateRule = global::System.Data.Rule.Cascade;
-            fkc = new global::System.Data.ForeignKeyConstraint("FK_M_ITEMS_UNITS", new global::System.Data.DataColumn[] {
-                        this.tableM_UNITS.IDColumn}, new global::System.Data.DataColumn[] {
-                        this.tableM_ITEMS.UNITSColumn});
+            fkc = new global::System.Data.ForeignKeyConstraint("FK_M_STORES_PVNTP1", new global::System.Data.DataColumn[] {
+                        this.tableM_PVNTYPE.IDColumn}, new global::System.Data.DataColumn[] {
+                        this.tableM_STORES.PVNTPColumn});
+            this.tableM_STORES.Constraints.Add(fkc);
+            fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
+            fkc.DeleteRule = global::System.Data.Rule.None;
+            fkc.UpdateRule = global::System.Data.Rule.Cascade;
+            fkc = new global::System.Data.ForeignKeyConstraint("FK_M_ITEMS_PVNRATE", new global::System.Data.DataColumn[] {
+                        this.tableM_PVNRATES.IDColumn}, new global::System.Data.DataColumn[] {
+                        this.tableM_ITEMS.PVNRATEColumn});
+            this.tableM_ITEMS.Constraints.Add(fkc);
+            fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
+            fkc.DeleteRule = global::System.Data.Rule.None;
+            fkc.UpdateRule = global::System.Data.Rule.None;
+            fkc = new global::System.Data.ForeignKeyConstraint("FK_M_ITEMS_CAT", new global::System.Data.DataColumn[] {
+                        this.tableM_ITEMS_CAT.IDColumn}, new global::System.Data.DataColumn[] {
+                        this.tableM_ITEMS.CATColumn});
             this.tableM_ITEMS.Constraints.Add(fkc);
             fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
             fkc.DeleteRule = global::System.Data.Rule.None;
@@ -1222,24 +1229,10 @@ namespace KlonsF.DataSets {
             fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
             fkc.DeleteRule = global::System.Data.Rule.None;
             fkc.UpdateRule = global::System.Data.Rule.Cascade;
-            fkc = new global::System.Data.ForeignKeyConstraint("FK_M_ITEMS_CAT", new global::System.Data.DataColumn[] {
-                        this.tableM_ITEMS_CAT.IDColumn}, new global::System.Data.DataColumn[] {
-                        this.tableM_ITEMS.CATColumn});
+            fkc = new global::System.Data.ForeignKeyConstraint("FK_M_ITEMS_UNITS", new global::System.Data.DataColumn[] {
+                        this.tableM_UNITS.IDColumn}, new global::System.Data.DataColumn[] {
+                        this.tableM_ITEMS.UNITSColumn});
             this.tableM_ITEMS.Constraints.Add(fkc);
-            fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
-            fkc.DeleteRule = global::System.Data.Rule.None;
-            fkc.UpdateRule = global::System.Data.Rule.Cascade;
-            fkc = new global::System.Data.ForeignKeyConstraint("FK_M_ITEMS_PVNRATE", new global::System.Data.DataColumn[] {
-                        this.tableM_PVNRATES.IDColumn}, new global::System.Data.DataColumn[] {
-                        this.tableM_ITEMS.PVNRATEColumn});
-            this.tableM_ITEMS.Constraints.Add(fkc);
-            fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
-            fkc.DeleteRule = global::System.Data.Rule.None;
-            fkc.UpdateRule = global::System.Data.Rule.None;
-            fkc = new global::System.Data.ForeignKeyConstraint("FK_M_ITEMS_PER_STORE_IDSTORE", new global::System.Data.DataColumn[] {
-                        this.tableM_STORES.IDColumn}, new global::System.Data.DataColumn[] {
-                        this.tableM_ITEMS_PER_STORE.IDSTOREColumn});
-            this.tableM_ITEMS_PER_STORE.Constraints.Add(fkc);
             fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
             fkc.DeleteRule = global::System.Data.Rule.None;
             fkc.UpdateRule = global::System.Data.Rule.Cascade;
@@ -1250,16 +1243,16 @@ namespace KlonsF.DataSets {
             fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
             fkc.DeleteRule = global::System.Data.Rule.None;
             fkc.UpdateRule = global::System.Data.Rule.None;
-            fkc = new global::System.Data.ForeignKeyConstraint("FK_M_DOCS_IDSTOREIN", new global::System.Data.DataColumn[] {
+            fkc = new global::System.Data.ForeignKeyConstraint("FK_M_ITEMS_PER_STORE_IDSTORE", new global::System.Data.DataColumn[] {
                         this.tableM_STORES.IDColumn}, new global::System.Data.DataColumn[] {
-                        this.tableM_DOCS.IDSTOREINColumn});
-            this.tableM_DOCS.Constraints.Add(fkc);
+                        this.tableM_ITEMS_PER_STORE.IDSTOREColumn});
+            this.tableM_ITEMS_PER_STORE.Constraints.Add(fkc);
             fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
             fkc.DeleteRule = global::System.Data.Rule.None;
             fkc.UpdateRule = global::System.Data.Rule.Cascade;
-            fkc = new global::System.Data.ForeignKeyConstraint("FK_M_DOCS_IDSTOREOUT", new global::System.Data.DataColumn[] {
-                        this.tableM_STORES.IDColumn}, new global::System.Data.DataColumn[] {
-                        this.tableM_DOCS.IDSTOREOUTColumn});
+            fkc = new global::System.Data.ForeignKeyConstraint("FK_M_DOCS_IDDRIVER", new global::System.Data.DataColumn[] {
+                        this.tableM_CONTACTS.IDColumn}, new global::System.Data.DataColumn[] {
+                        this.tableM_DOCS.IDDRIVERColumn});
             this.tableM_DOCS.Constraints.Add(fkc);
             fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
             fkc.DeleteRule = global::System.Data.Rule.None;
@@ -1271,10 +1264,45 @@ namespace KlonsF.DataSets {
             fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
             fkc.DeleteRule = global::System.Data.Rule.None;
             fkc.UpdateRule = global::System.Data.Rule.None;
-            fkc = new global::System.Data.ForeignKeyConstraint("FK_M_DOCS_IDDRIVER", new global::System.Data.DataColumn[] {
-                        this.tableM_CONTACTS.IDColumn}, new global::System.Data.DataColumn[] {
-                        this.tableM_DOCS.IDDRIVERColumn});
+            fkc = new global::System.Data.ForeignKeyConstraint("FK_M_DOCS_IDSTOREOUT", new global::System.Data.DataColumn[] {
+                        this.tableM_STORES.IDColumn}, new global::System.Data.DataColumn[] {
+                        this.tableM_DOCS.IDSTOREOUTColumn});
             this.tableM_DOCS.Constraints.Add(fkc);
+            fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
+            fkc.DeleteRule = global::System.Data.Rule.None;
+            fkc.UpdateRule = global::System.Data.Rule.Cascade;
+            fkc = new global::System.Data.ForeignKeyConstraint("FK_M_DOCS_IDSTOREIN", new global::System.Data.DataColumn[] {
+                        this.tableM_STORES.IDColumn}, new global::System.Data.DataColumn[] {
+                        this.tableM_DOCS.IDSTOREINColumn});
+            this.tableM_DOCS.Constraints.Add(fkc);
+            fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
+            fkc.DeleteRule = global::System.Data.Rule.None;
+            fkc.UpdateRule = global::System.Data.Rule.Cascade;
+            fkc = new global::System.Data.ForeignKeyConstraint("FK_M_ROWS_UNITS", new global::System.Data.DataColumn[] {
+                        this.tableM_UNITS.IDColumn}, new global::System.Data.DataColumn[] {
+                        this.tableM_ROWS.UNITSColumn});
+            this.tableM_ROWS.Constraints.Add(fkc);
+            fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
+            fkc.DeleteRule = global::System.Data.Rule.None;
+            fkc.UpdateRule = global::System.Data.Rule.Cascade;
+            fkc = new global::System.Data.ForeignKeyConstraint("FK_M_ROWS_IDPVNRATE", new global::System.Data.DataColumn[] {
+                        this.tableM_PVNRATES.IDColumn}, new global::System.Data.DataColumn[] {
+                        this.tableM_ROWS.IDPVNRATEColumn});
+            this.tableM_ROWS.Constraints.Add(fkc);
+            fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
+            fkc.DeleteRule = global::System.Data.Rule.None;
+            fkc.UpdateRule = global::System.Data.Rule.None;
+            fkc = new global::System.Data.ForeignKeyConstraint("FK_M_ROWS_IDDOC", new global::System.Data.DataColumn[] {
+                        this.tableM_DOCS.IDColumn}, new global::System.Data.DataColumn[] {
+                        this.tableM_ROWS.IDDOCColumn});
+            this.tableM_ROWS.Constraints.Add(fkc);
+            fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
+            fkc.DeleteRule = global::System.Data.Rule.Cascade;
+            fkc.UpdateRule = global::System.Data.Rule.Cascade;
+            fkc = new global::System.Data.ForeignKeyConstraint("FK_M_ROWS_IDITEM", new global::System.Data.DataColumn[] {
+                        this.tableM_ITEMS.IDColumn}, new global::System.Data.DataColumn[] {
+                        this.tableM_ROWS.IDITEMColumn});
+            this.tableM_ROWS.Constraints.Add(fkc);
             fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
             fkc.DeleteRule = global::System.Data.Rule.None;
             fkc.UpdateRule = global::System.Data.Rule.Cascade;
@@ -1285,44 +1313,16 @@ namespace KlonsF.DataSets {
             fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
             fkc.DeleteRule = global::System.Data.Rule.None;
             fkc.UpdateRule = global::System.Data.Rule.Cascade;
-            fkc = new global::System.Data.ForeignKeyConstraint("FK_M_ROWS_IDITEM", new global::System.Data.DataColumn[] {
-                        this.tableM_ITEMS.IDColumn}, new global::System.Data.DataColumn[] {
-                        this.tableM_ROWS.IDITEMColumn});
-            this.tableM_ROWS.Constraints.Add(fkc);
-            fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
-            fkc.DeleteRule = global::System.Data.Rule.None;
-            fkc.UpdateRule = global::System.Data.Rule.Cascade;
-            fkc = new global::System.Data.ForeignKeyConstraint("FK_M_ROWS_IDDOC", new global::System.Data.DataColumn[] {
-                        this.tableM_DOCS.IDColumn}, new global::System.Data.DataColumn[] {
-                        this.tableM_ROWS.IDDOCColumn});
-            this.tableM_ROWS.Constraints.Add(fkc);
-            fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
-            fkc.DeleteRule = global::System.Data.Rule.Cascade;
-            fkc.UpdateRule = global::System.Data.Rule.Cascade;
-            fkc = new global::System.Data.ForeignKeyConstraint("FK_M_ROWS_IDPVNRATE", new global::System.Data.DataColumn[] {
-                        this.tableM_PVNRATES.IDColumn}, new global::System.Data.DataColumn[] {
-                        this.tableM_ROWS.IDPVNRATEColumn});
-            this.tableM_ROWS.Constraints.Add(fkc);
-            fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
-            fkc.DeleteRule = global::System.Data.Rule.None;
-            fkc.UpdateRule = global::System.Data.Rule.None;
-            fkc = new global::System.Data.ForeignKeyConstraint("FK_M_ROWS_UNITS", new global::System.Data.DataColumn[] {
-                        this.tableM_UNITS.IDColumn}, new global::System.Data.DataColumn[] {
-                        this.tableM_ROWS.UNITSColumn});
-            this.tableM_ROWS.Constraints.Add(fkc);
+            fkc = new global::System.Data.ForeignKeyConstraint("FK_M_BANKACCOUNTS_IDBANK", new global::System.Data.DataColumn[] {
+                        this.tableM_BANKS.IDColumn}, new global::System.Data.DataColumn[] {
+                        this.tableM_BANKACCOUNTS.IDBANKColumn});
+            this.tableM_BANKACCOUNTS.Constraints.Add(fkc);
             fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
             fkc.DeleteRule = global::System.Data.Rule.None;
             fkc.UpdateRule = global::System.Data.Rule.Cascade;
             fkc = new global::System.Data.ForeignKeyConstraint("FK_M_BANKACCOUNTS_IDSTORE", new global::System.Data.DataColumn[] {
                         this.tableM_STORES.IDColumn}, new global::System.Data.DataColumn[] {
                         this.tableM_BANKACCOUNTS.IDSTOREColumn});
-            this.tableM_BANKACCOUNTS.Constraints.Add(fkc);
-            fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
-            fkc.DeleteRule = global::System.Data.Rule.None;
-            fkc.UpdateRule = global::System.Data.Rule.Cascade;
-            fkc = new global::System.Data.ForeignKeyConstraint("FK_M_BANKACCOUNTS_IDBANK", new global::System.Data.DataColumn[] {
-                        this.tableM_BANKS.IDColumn}, new global::System.Data.DataColumn[] {
-                        this.tableM_BANKACCOUNTS.IDBANKColumn});
             this.tableM_BANKACCOUNTS.Constraints.Add(fkc);
             fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
             fkc.DeleteRule = global::System.Data.Rule.None;
@@ -1334,16 +1334,16 @@ namespace KlonsF.DataSets {
             fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
             fkc.DeleteRule = global::System.Data.Rule.None;
             fkc.UpdateRule = global::System.Data.Rule.Cascade;
-            fkc = new global::System.Data.ForeignKeyConstraint("FK_M_ADDRESSSES_IDCOUNTRY1", new global::System.Data.DataColumn[] {
-                        this.tableM_COUNTRIES.IDColumn}, new global::System.Data.DataColumn[] {
-                        this.tableM_ADDRESSSES.IDCOUNTRYColumn});
+            fkc = new global::System.Data.ForeignKeyConstraint("FK_M_ADDRESSSES_IDSTORE", new global::System.Data.DataColumn[] {
+                        this.tableM_STORES.IDColumn}, new global::System.Data.DataColumn[] {
+                        this.tableM_ADDRESSSES.IDSTOREColumn});
             this.tableM_ADDRESSSES.Constraints.Add(fkc);
             fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
             fkc.DeleteRule = global::System.Data.Rule.None;
             fkc.UpdateRule = global::System.Data.Rule.Cascade;
-            fkc = new global::System.Data.ForeignKeyConstraint("FK_M_ADDRESSSES_IDSTORE", new global::System.Data.DataColumn[] {
-                        this.tableM_STORES.IDColumn}, new global::System.Data.DataColumn[] {
-                        this.tableM_ADDRESSSES.IDSTOREColumn});
+            fkc = new global::System.Data.ForeignKeyConstraint("FK_M_ADDRESSSES_IDCOUNTRY1", new global::System.Data.DataColumn[] {
+                        this.tableM_COUNTRIES.IDColumn}, new global::System.Data.DataColumn[] {
+                        this.tableM_ADDRESSSES.IDCOUNTRYColumn});
             this.tableM_ADDRESSSES.Constraints.Add(fkc);
             fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
             fkc.DeleteRule = global::System.Data.Rule.None;
@@ -1355,16 +1355,16 @@ namespace KlonsF.DataSets {
             fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
             fkc.DeleteRule = global::System.Data.Rule.None;
             fkc.UpdateRule = global::System.Data.Rule.Cascade;
-            fkc = new global::System.Data.ForeignKeyConstraint("FK_M_PVNRATES2_IDTP", new global::System.Data.DataColumn[] {
-                        this.tableM_PVNTYPE.IDColumn}, new global::System.Data.DataColumn[] {
-                        this.tableM_PVNRATES2.IDTPColumn});
+            fkc = new global::System.Data.ForeignKeyConstraint("FK_M_PVNRATES2_IDRATE", new global::System.Data.DataColumn[] {
+                        this.tableM_PVNRATES.IDColumn}, new global::System.Data.DataColumn[] {
+                        this.tableM_PVNRATES2.IDRATEColumn});
             this.tableM_PVNRATES2.Constraints.Add(fkc);
             fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
             fkc.DeleteRule = global::System.Data.Rule.None;
             fkc.UpdateRule = global::System.Data.Rule.Cascade;
-            fkc = new global::System.Data.ForeignKeyConstraint("FK_M_PVNRATES2_IDRATE", new global::System.Data.DataColumn[] {
-                        this.tableM_PVNRATES.IDColumn}, new global::System.Data.DataColumn[] {
-                        this.tableM_PVNRATES2.IDRATEColumn});
+            fkc = new global::System.Data.ForeignKeyConstraint("FK_M_PVNRATES2_IDTP", new global::System.Data.DataColumn[] {
+                        this.tableM_PVNTYPE.IDColumn}, new global::System.Data.DataColumn[] {
+                        this.tableM_PVNRATES2.IDTPColumn});
             this.tableM_PVNRATES2.Constraints.Add(fkc);
             fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
             fkc.DeleteRule = global::System.Data.Rule.None;
@@ -1390,6 +1390,13 @@ namespace KlonsF.DataSets {
             fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
             fkc.DeleteRule = global::System.Data.Rule.Cascade;
             fkc.UpdateRule = global::System.Data.Rule.Cascade;
+            fkc = new global::System.Data.ForeignKeyConstraint("FK_M_PRICE_LISTS_R_IDITEM", new global::System.Data.DataColumn[] {
+                        this.tableM_ITEMS.IDColumn}, new global::System.Data.DataColumn[] {
+                        this.tableM_PRICE_LISTS_R.IDITEMColumn});
+            this.tableM_PRICE_LISTS_R.Constraints.Add(fkc);
+            fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
+            fkc.DeleteRule = global::System.Data.Rule.None;
+            fkc.UpdateRule = global::System.Data.Rule.Cascade;
             fkc = new global::System.Data.ForeignKeyConstraint("FK_M_PRICE_LISTS_R_IDL", new global::System.Data.DataColumn[] {
                         this.tableM_PRICE_LISTS.IDColumn}, new global::System.Data.DataColumn[] {
                         this.tableM_PRICE_LISTS_R.IDLColumn});
@@ -1397,10 +1404,17 @@ namespace KlonsF.DataSets {
             fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
             fkc.DeleteRule = global::System.Data.Rule.Cascade;
             fkc.UpdateRule = global::System.Data.Rule.Cascade;
-            fkc = new global::System.Data.ForeignKeyConstraint("FK_M_PRICE_LISTS_R_IDITEM", new global::System.Data.DataColumn[] {
-                        this.tableM_ITEMS.IDColumn}, new global::System.Data.DataColumn[] {
-                        this.tableM_PRICE_LISTS_R.IDITEMColumn});
-            this.tableM_PRICE_LISTS_R.Constraints.Add(fkc);
+            fkc = new global::System.Data.ForeignKeyConstraint("FK_M_DISC_LISTS_P_IDL", new global::System.Data.DataColumn[] {
+                        this.tableM_DISC_LISTS.IDColumn}, new global::System.Data.DataColumn[] {
+                        this.tableM_DISC_LISTS_P.IDLColumn});
+            this.tableM_DISC_LISTS_P.Constraints.Add(fkc);
+            fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
+            fkc.DeleteRule = global::System.Data.Rule.Cascade;
+            fkc.UpdateRule = global::System.Data.Rule.Cascade;
+            fkc = new global::System.Data.ForeignKeyConstraint("FK_M_DISC_LISTS_P_IDSTORESCAT", new global::System.Data.DataColumn[] {
+                        this.tableM_STORES_CAT.IDColumn}, new global::System.Data.DataColumn[] {
+                        this.tableM_DISC_LISTS_P.IDSTORESCATColumn});
+            this.tableM_DISC_LISTS_P.Constraints.Add(fkc);
             fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
             fkc.DeleteRule = global::System.Data.Rule.None;
             fkc.UpdateRule = global::System.Data.Rule.Cascade;
@@ -1411,26 +1425,12 @@ namespace KlonsF.DataSets {
             fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
             fkc.DeleteRule = global::System.Data.Rule.None;
             fkc.UpdateRule = global::System.Data.Rule.Cascade;
-            fkc = new global::System.Data.ForeignKeyConstraint("FK_M_DISC_LISTS_P_IDSTORESCAT", new global::System.Data.DataColumn[] {
-                        this.tableM_STORES_CAT.IDColumn}, new global::System.Data.DataColumn[] {
-                        this.tableM_DISC_LISTS_P.IDSTORESCATColumn});
-            this.tableM_DISC_LISTS_P.Constraints.Add(fkc);
-            fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
-            fkc.DeleteRule = global::System.Data.Rule.None;
-            fkc.UpdateRule = global::System.Data.Rule.Cascade;
-            fkc = new global::System.Data.ForeignKeyConstraint("FK_M_DISC_LISTS_P_IDL", new global::System.Data.DataColumn[] {
-                        this.tableM_DISC_LISTS.IDColumn}, new global::System.Data.DataColumn[] {
-                        this.tableM_DISC_LISTS_P.IDLColumn});
-            this.tableM_DISC_LISTS_P.Constraints.Add(fkc);
-            fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
-            fkc.DeleteRule = global::System.Data.Rule.Cascade;
-            fkc.UpdateRule = global::System.Data.Rule.Cascade;
-            fkc = new global::System.Data.ForeignKeyConstraint("FK_M_PRICE_LISTS_P_IDSTORE", new global::System.Data.DataColumn[] {
-                        this.tableM_STORES.IDColumn}, new global::System.Data.DataColumn[] {
-                        this.tableM_PRICE_LISTS_P.IDSTOREColumn});
+            fkc = new global::System.Data.ForeignKeyConstraint("FK_M_PRICE_LISTS_P_IDL", new global::System.Data.DataColumn[] {
+                        this.tableM_PRICE_LISTS.IDColumn}, new global::System.Data.DataColumn[] {
+                        this.tableM_PRICE_LISTS_P.IDLColumn});
             this.tableM_PRICE_LISTS_P.Constraints.Add(fkc);
             fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
-            fkc.DeleteRule = global::System.Data.Rule.None;
+            fkc.DeleteRule = global::System.Data.Rule.Cascade;
             fkc.UpdateRule = global::System.Data.Rule.Cascade;
             fkc = new global::System.Data.ForeignKeyConstraint("FK_M_PRICE_LISTS_P_IDSTORESCAT", new global::System.Data.DataColumn[] {
                         this.tableM_STORES_CAT.IDColumn}, new global::System.Data.DataColumn[] {
@@ -1439,12 +1439,12 @@ namespace KlonsF.DataSets {
             fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
             fkc.DeleteRule = global::System.Data.Rule.None;
             fkc.UpdateRule = global::System.Data.Rule.Cascade;
-            fkc = new global::System.Data.ForeignKeyConstraint("FK_M_PRICE_LISTS_P_IDL", new global::System.Data.DataColumn[] {
-                        this.tableM_PRICE_LISTS.IDColumn}, new global::System.Data.DataColumn[] {
-                        this.tableM_PRICE_LISTS_P.IDLColumn});
+            fkc = new global::System.Data.ForeignKeyConstraint("FK_M_PRICE_LISTS_P_IDSTORE", new global::System.Data.DataColumn[] {
+                        this.tableM_STORES.IDColumn}, new global::System.Data.DataColumn[] {
+                        this.tableM_PRICE_LISTS_P.IDSTOREColumn});
             this.tableM_PRICE_LISTS_P.Constraints.Add(fkc);
             fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
-            fkc.DeleteRule = global::System.Data.Rule.Cascade;
+            fkc.DeleteRule = global::System.Data.Rule.None;
             fkc.UpdateRule = global::System.Data.Rule.Cascade;
             fkc = new global::System.Data.ForeignKeyConstraint("FK_M_ITEMS_TEXTS_IDITEMS", new global::System.Data.DataColumn[] {
                         this.tableM_ITEMS.IDColumn}, new global::System.Data.DataColumn[] {
@@ -1457,82 +1457,82 @@ namespace KlonsF.DataSets {
                         this.tableM_ACCOUNTTYPE.IDColumn}, new global::System.Data.DataColumn[] {
                         this.tableM_ACCOUNTS.TPColumn}, false);
             this.Relations.Add(this.relationFK_M_ACCOUNTS_TP);
-            this.relationFK_M_STORES_PVNTP = new global::System.Data.DataRelation("FK_M_STORES_PVNTP", new global::System.Data.DataColumn[] {
-                        this.tableM_PVNTYPE.IDColumn}, new global::System.Data.DataColumn[] {
-                        this.tableM_STORES.PVNTPColumn}, false);
-            this.Relations.Add(this.relationFK_M_STORES_PVNTP);
-            this.relationFK_M_STORES_IDCOUNTRY1 = new global::System.Data.DataRelation("FK_M_STORES_IDCOUNTRY1", new global::System.Data.DataColumn[] {
-                        this.tableM_COUNTRIES.IDColumn}, new global::System.Data.DataColumn[] {
-                        this.tableM_STORES.IDCOUNTRYColumn}, false);
-            this.Relations.Add(this.relationFK_M_STORES_IDCOUNTRY1);
-            this.relationFK_M_STORES_IDCAT = new global::System.Data.DataRelation("FK_M_STORES_IDCAT", new global::System.Data.DataColumn[] {
-                        this.tableM_STORES_CAT.IDColumn}, new global::System.Data.DataColumn[] {
-                        this.tableM_STORES.IDCATColumn}, false);
-            this.Relations.Add(this.relationFK_M_STORES_IDCAT);
             this.relationFK_M_STORES_TP = new global::System.Data.DataRelation("FK_M_STORES_TP", new global::System.Data.DataColumn[] {
                         this.tableM_STORETYPE.IDColumn}, new global::System.Data.DataColumn[] {
                         this.tableM_STORES.TPColumn}, false);
             this.Relations.Add(this.relationFK_M_STORES_TP);
-            this.relationFK_M_ITEMS_UNITS = new global::System.Data.DataRelation("FK_M_ITEMS_UNITS", new global::System.Data.DataColumn[] {
-                        this.tableM_UNITS.IDColumn}, new global::System.Data.DataColumn[] {
-                        this.tableM_ITEMS.UNITSColumn}, false);
-            this.Relations.Add(this.relationFK_M_ITEMS_UNITS);
-            this.relationFK_M_ITEMS_STORE1 = new global::System.Data.DataRelation("FK_M_ITEMS_STORE1", new global::System.Data.DataColumn[] {
-                        this.tableM_STORES.IDColumn}, new global::System.Data.DataColumn[] {
-                        this.tableM_ITEMS.STORE1Column}, false);
-            this.Relations.Add(this.relationFK_M_ITEMS_STORE1);
-            this.relationFK_M_ITEMS_CAT = new global::System.Data.DataRelation("FK_M_ITEMS_CAT", new global::System.Data.DataColumn[] {
-                        this.tableM_ITEMS_CAT.IDColumn}, new global::System.Data.DataColumn[] {
-                        this.tableM_ITEMS.CATColumn}, false);
-            this.Relations.Add(this.relationFK_M_ITEMS_CAT);
+            this.relationFK_M_STORES_IDCAT = new global::System.Data.DataRelation("FK_M_STORES_IDCAT", new global::System.Data.DataColumn[] {
+                        this.tableM_STORES_CAT.IDColumn}, new global::System.Data.DataColumn[] {
+                        this.tableM_STORES.IDCATColumn}, false);
+            this.Relations.Add(this.relationFK_M_STORES_IDCAT);
+            this.relationFK_M_STORES_IDCOUNTRY1 = new global::System.Data.DataRelation("FK_M_STORES_IDCOUNTRY1", new global::System.Data.DataColumn[] {
+                        this.tableM_COUNTRIES.IDColumn}, new global::System.Data.DataColumn[] {
+                        this.tableM_STORES.IDCOUNTRYColumn}, false);
+            this.Relations.Add(this.relationFK_M_STORES_IDCOUNTRY1);
+            this.relationFK_M_STORES_PVNTP = new global::System.Data.DataRelation("FK_M_STORES_PVNTP", new global::System.Data.DataColumn[] {
+                        this.tableM_PVNTYPE.IDColumn}, new global::System.Data.DataColumn[] {
+                        this.tableM_STORES.PVNTPColumn}, false);
+            this.Relations.Add(this.relationFK_M_STORES_PVNTP);
             this.relationFK_M_ITEMS_PVNRATE = new global::System.Data.DataRelation("FK_M_ITEMS_PVNRATE", new global::System.Data.DataColumn[] {
                         this.tableM_PVNRATES.IDColumn}, new global::System.Data.DataColumn[] {
                         this.tableM_ITEMS.PVNRATEColumn}, false);
             this.Relations.Add(this.relationFK_M_ITEMS_PVNRATE);
-            this.relationFK_M_ITEMS_PER_STORE_IDSTORE = new global::System.Data.DataRelation("FK_M_ITEMS_PER_STORE_IDSTORE", new global::System.Data.DataColumn[] {
+            this.relationFK_M_ITEMS_CAT = new global::System.Data.DataRelation("FK_M_ITEMS_CAT", new global::System.Data.DataColumn[] {
+                        this.tableM_ITEMS_CAT.IDColumn}, new global::System.Data.DataColumn[] {
+                        this.tableM_ITEMS.CATColumn}, false);
+            this.Relations.Add(this.relationFK_M_ITEMS_CAT);
+            this.relationFK_M_ITEMS_STORE1 = new global::System.Data.DataRelation("FK_M_ITEMS_STORE1", new global::System.Data.DataColumn[] {
                         this.tableM_STORES.IDColumn}, new global::System.Data.DataColumn[] {
-                        this.tableM_ITEMS_PER_STORE.IDSTOREColumn}, false);
-            this.Relations.Add(this.relationFK_M_ITEMS_PER_STORE_IDSTORE);
+                        this.tableM_ITEMS.STORE1Column}, false);
+            this.Relations.Add(this.relationFK_M_ITEMS_STORE1);
+            this.relationFK_M_ITEMS_UNITS = new global::System.Data.DataRelation("FK_M_ITEMS_UNITS", new global::System.Data.DataColumn[] {
+                        this.tableM_UNITS.IDColumn}, new global::System.Data.DataColumn[] {
+                        this.tableM_ITEMS.UNITSColumn}, false);
+            this.Relations.Add(this.relationFK_M_ITEMS_UNITS);
             this.relationFK_M_ITEMS_PER_STORE_IDITEM = new global::System.Data.DataRelation("FK_M_ITEMS_PER_STORE_IDITEM", new global::System.Data.DataColumn[] {
                         this.tableM_ITEMS.IDColumn}, new global::System.Data.DataColumn[] {
                         this.tableM_ITEMS_PER_STORE.IDITEMColumn}, false);
             this.Relations.Add(this.relationFK_M_ITEMS_PER_STORE_IDITEM);
-            this.relationFK_M_DOCS_IDSTOREIN = new global::System.Data.DataRelation("FK_M_DOCS_IDSTOREIN", new global::System.Data.DataColumn[] {
+            this.relationFK_M_ITEMS_PER_STORE_IDSTORE = new global::System.Data.DataRelation("FK_M_ITEMS_PER_STORE_IDSTORE", new global::System.Data.DataColumn[] {
                         this.tableM_STORES.IDColumn}, new global::System.Data.DataColumn[] {
-                        this.tableM_DOCS.IDSTOREINColumn}, false);
-            this.Relations.Add(this.relationFK_M_DOCS_IDSTOREIN);
-            this.relationFK_M_DOCS_IDSTOREOUT = new global::System.Data.DataRelation("FK_M_DOCS_IDSTOREOUT", new global::System.Data.DataColumn[] {
-                        this.tableM_STORES.IDColumn}, new global::System.Data.DataColumn[] {
-                        this.tableM_DOCS.IDSTOREOUTColumn}, false);
-            this.Relations.Add(this.relationFK_M_DOCS_IDSTOREOUT);
-            this.relationFK_M_DOCS_TP = new global::System.Data.DataRelation("FK_M_DOCS_TP", new global::System.Data.DataColumn[] {
-                        this.tableM_DOCTYPES.IDColumn}, new global::System.Data.DataColumn[] {
-                        this.tableM_DOCS.TPColumn}, false);
-            this.Relations.Add(this.relationFK_M_DOCS_TP);
+                        this.tableM_ITEMS_PER_STORE.IDSTOREColumn}, false);
+            this.Relations.Add(this.relationFK_M_ITEMS_PER_STORE_IDSTORE);
             this.relationFK_M_DOCS_IDDRIVER = new global::System.Data.DataRelation("FK_M_DOCS_IDDRIVER", new global::System.Data.DataColumn[] {
                         this.tableM_CONTACTS.IDColumn}, new global::System.Data.DataColumn[] {
                         this.tableM_DOCS.IDDRIVERColumn}, false);
             this.Relations.Add(this.relationFK_M_DOCS_IDDRIVER);
-            this.relationFK_M_ROWS_IDITEMTEXT1 = new global::System.Data.DataRelation("FK_M_ROWS_IDITEMTEXT1", new global::System.Data.DataColumn[] {
-                        this.tableM_ITEMS_TEXTS.IDColumn}, new global::System.Data.DataColumn[] {
-                        this.tableM_ROWS.IDITEMTEXTColumn}, false);
-            this.Relations.Add(this.relationFK_M_ROWS_IDITEMTEXT1);
-            this.relationFK_M_ROWS_IDITEM = new global::System.Data.DataRelation("FK_M_ROWS_IDITEM", new global::System.Data.DataColumn[] {
-                        this.tableM_ITEMS.IDColumn}, new global::System.Data.DataColumn[] {
-                        this.tableM_ROWS.IDITEMColumn}, false);
-            this.Relations.Add(this.relationFK_M_ROWS_IDITEM);
-            this.relationFK_M_ROWS_IDDOC = new global::System.Data.DataRelation("FK_M_ROWS_IDDOC", new global::System.Data.DataColumn[] {
-                        this.tableM_DOCS.IDColumn}, new global::System.Data.DataColumn[] {
-                        this.tableM_ROWS.IDDOCColumn}, false);
-            this.Relations.Add(this.relationFK_M_ROWS_IDDOC);
-            this.relationFK_M_ROWS_IDPVNRATE = new global::System.Data.DataRelation("FK_M_ROWS_IDPVNRATE", new global::System.Data.DataColumn[] {
-                        this.tableM_PVNRATES.IDColumn}, new global::System.Data.DataColumn[] {
-                        this.tableM_ROWS.IDPVNRATEColumn}, false);
-            this.Relations.Add(this.relationFK_M_ROWS_IDPVNRATE);
+            this.relationFK_M_DOCS_TP = new global::System.Data.DataRelation("FK_M_DOCS_TP", new global::System.Data.DataColumn[] {
+                        this.tableM_DOCTYPES.IDColumn}, new global::System.Data.DataColumn[] {
+                        this.tableM_DOCS.TPColumn}, false);
+            this.Relations.Add(this.relationFK_M_DOCS_TP);
+            this.relationFK_M_DOCS_IDSTOREOUT = new global::System.Data.DataRelation("FK_M_DOCS_IDSTOREOUT", new global::System.Data.DataColumn[] {
+                        this.tableM_STORES.IDColumn}, new global::System.Data.DataColumn[] {
+                        this.tableM_DOCS.IDSTOREOUTColumn}, false);
+            this.Relations.Add(this.relationFK_M_DOCS_IDSTOREOUT);
+            this.relationFK_M_DOCS_IDSTOREIN = new global::System.Data.DataRelation("FK_M_DOCS_IDSTOREIN", new global::System.Data.DataColumn[] {
+                        this.tableM_STORES.IDColumn}, new global::System.Data.DataColumn[] {
+                        this.tableM_DOCS.IDSTOREINColumn}, false);
+            this.Relations.Add(this.relationFK_M_DOCS_IDSTOREIN);
             this.relationFK_M_ROWS_UNITS1 = new global::System.Data.DataRelation("FK_M_ROWS_UNITS1", new global::System.Data.DataColumn[] {
                         this.tableM_UNITS.IDColumn}, new global::System.Data.DataColumn[] {
                         this.tableM_ROWS.UNITSColumn}, false);
             this.Relations.Add(this.relationFK_M_ROWS_UNITS1);
+            this.relationFK_M_ROWS_IDPVNRATE = new global::System.Data.DataRelation("FK_M_ROWS_IDPVNRATE", new global::System.Data.DataColumn[] {
+                        this.tableM_PVNRATES.IDColumn}, new global::System.Data.DataColumn[] {
+                        this.tableM_ROWS.IDPVNRATEColumn}, false);
+            this.Relations.Add(this.relationFK_M_ROWS_IDPVNRATE);
+            this.relationFK_M_ROWS_IDDOC = new global::System.Data.DataRelation("FK_M_ROWS_IDDOC", new global::System.Data.DataColumn[] {
+                        this.tableM_DOCS.IDColumn}, new global::System.Data.DataColumn[] {
+                        this.tableM_ROWS.IDDOCColumn}, false);
+            this.Relations.Add(this.relationFK_M_ROWS_IDDOC);
+            this.relationFK_M_ROWS_IDITEM = new global::System.Data.DataRelation("FK_M_ROWS_IDITEM", new global::System.Data.DataColumn[] {
+                        this.tableM_ITEMS.IDColumn}, new global::System.Data.DataColumn[] {
+                        this.tableM_ROWS.IDITEMColumn}, false);
+            this.Relations.Add(this.relationFK_M_ROWS_IDITEM);
+            this.relationFK_M_ROWS_IDITEMTEXT1 = new global::System.Data.DataRelation("FK_M_ROWS_IDITEMTEXT1", new global::System.Data.DataColumn[] {
+                        this.tableM_ITEMS_TEXTS.IDColumn}, new global::System.Data.DataColumn[] {
+                        this.tableM_ROWS.IDITEMTEXTColumn}, false);
+            this.Relations.Add(this.relationFK_M_ROWS_IDITEMTEXT1);
             this.relationFK_M_BANKACCOUNTS_IDSTORE = new global::System.Data.DataRelation("FK_M_BANKACCOUNTS_IDSTORE", new global::System.Data.DataColumn[] {
                         this.tableM_STORES.IDColumn}, new global::System.Data.DataColumn[] {
                         this.tableM_BANKACCOUNTS.IDSTOREColumn}, false);
@@ -1541,26 +1541,26 @@ namespace KlonsF.DataSets {
                         this.tableM_STORES.IDColumn}, new global::System.Data.DataColumn[] {
                         this.tableM_CONTACTS.IDSTOREColumn}, false);
             this.Relations.Add(this.relationFK_M_CONTACTS_IDSTORE);
-            this.relationFK_M_ADDRESSSES_IDCOUNTRY = new global::System.Data.DataRelation("FK_M_ADDRESSSES_IDCOUNTRY", new global::System.Data.DataColumn[] {
-                        this.tableM_COUNTRIES.IDColumn}, new global::System.Data.DataColumn[] {
-                        this.tableM_ADDRESSSES.IDCOUNTRYColumn}, false);
-            this.Relations.Add(this.relationFK_M_ADDRESSSES_IDCOUNTRY);
             this.relationFK_M_ADDRESSSES_IDSTORE = new global::System.Data.DataRelation("FK_M_ADDRESSSES_IDSTORE", new global::System.Data.DataColumn[] {
                         this.tableM_STORES.IDColumn}, new global::System.Data.DataColumn[] {
                         this.tableM_ADDRESSSES.IDSTOREColumn}, false);
             this.Relations.Add(this.relationFK_M_ADDRESSSES_IDSTORE);
+            this.relationFK_M_ADDRESSSES_IDCOUNTRY = new global::System.Data.DataRelation("FK_M_ADDRESSSES_IDCOUNTRY", new global::System.Data.DataColumn[] {
+                        this.tableM_COUNTRIES.IDColumn}, new global::System.Data.DataColumn[] {
+                        this.tableM_ADDRESSSES.IDCOUNTRYColumn}, false);
+            this.Relations.Add(this.relationFK_M_ADDRESSSES_IDCOUNTRY);
             this.relationFK_M_VEHICLES_IDSTORE = new global::System.Data.DataRelation("FK_M_VEHICLES_IDSTORE", new global::System.Data.DataColumn[] {
                         this.tableM_STORES.IDColumn}, new global::System.Data.DataColumn[] {
                         this.tableM_VEHICLES.IDSTOREColumn}, false);
             this.Relations.Add(this.relationFK_M_VEHICLES_IDSTORE);
-            this.relationFK_M_PVNRATES2_IDTP = new global::System.Data.DataRelation("FK_M_PVNRATES2_IDTP", new global::System.Data.DataColumn[] {
-                        this.tableM_PVNTYPE.IDColumn}, new global::System.Data.DataColumn[] {
-                        this.tableM_PVNRATES2.IDTPColumn}, false);
-            this.Relations.Add(this.relationFK_M_PVNRATES2_IDTP);
             this.relationFK_M_PVNRATES2_IDRATE = new global::System.Data.DataRelation("FK_M_PVNRATES2_IDRATE", new global::System.Data.DataColumn[] {
                         this.tableM_PVNRATES.IDColumn}, new global::System.Data.DataColumn[] {
                         this.tableM_PVNRATES2.IDRATEColumn}, false);
             this.Relations.Add(this.relationFK_M_PVNRATES2_IDRATE);
+            this.relationFK_M_PVNRATES2_IDTP = new global::System.Data.DataRelation("FK_M_PVNRATES2_IDTP", new global::System.Data.DataColumn[] {
+                        this.tableM_PVNTYPE.IDColumn}, new global::System.Data.DataColumn[] {
+                        this.tableM_PVNRATES2.IDTPColumn}, false);
+            this.Relations.Add(this.relationFK_M_PVNRATES2_IDTP);
             this.relationFK_M_INV_DOCS_IDSTORE1 = new global::System.Data.DataRelation("FK_M_INV_DOCS_IDSTORE1", new global::System.Data.DataColumn[] {
                         this.tableM_STORES.IDColumn}, new global::System.Data.DataColumn[] {
                         this.tableM_INV_DOCS.IDSTOREColumn}, false);
@@ -1577,22 +1577,22 @@ namespace KlonsF.DataSets {
                         this.tableM_PRICE_LISTS.IDColumn}, new global::System.Data.DataColumn[] {
                         this.tableM_PRICE_LISTS_R.IDLColumn}, false);
             this.Relations.Add(this.relationFK_M_PRICE_LISTS_R_IDL);
-            this.relationFK_M_DISC_LISTS_P_IDSTORE1 = new global::System.Data.DataRelation("FK_M_DISC_LISTS_P_IDSTORE1", new global::System.Data.DataColumn[] {
-                        this.tableM_STORES.IDColumn}, new global::System.Data.DataColumn[] {
-                        this.tableM_DISC_LISTS_P.IDSTOREColumn}, false);
-            this.Relations.Add(this.relationFK_M_DISC_LISTS_P_IDSTORE1);
             this.relationFK_M_DISC_LISTS_P_IDL = new global::System.Data.DataRelation("FK_M_DISC_LISTS_P_IDL", new global::System.Data.DataColumn[] {
                         this.tableM_DISC_LISTS.IDColumn}, new global::System.Data.DataColumn[] {
                         this.tableM_DISC_LISTS_P.IDLColumn}, false);
             this.Relations.Add(this.relationFK_M_DISC_LISTS_P_IDL);
-            this.relationFK_M_PRICE_LISTS_P_IDSTORE1 = new global::System.Data.DataRelation("FK_M_PRICE_LISTS_P_IDSTORE1", new global::System.Data.DataColumn[] {
+            this.relationFK_M_DISC_LISTS_P_IDSTORE1 = new global::System.Data.DataRelation("FK_M_DISC_LISTS_P_IDSTORE1", new global::System.Data.DataColumn[] {
                         this.tableM_STORES.IDColumn}, new global::System.Data.DataColumn[] {
-                        this.tableM_PRICE_LISTS_P.IDSTOREColumn}, false);
-            this.Relations.Add(this.relationFK_M_PRICE_LISTS_P_IDSTORE1);
+                        this.tableM_DISC_LISTS_P.IDSTOREColumn}, false);
+            this.Relations.Add(this.relationFK_M_DISC_LISTS_P_IDSTORE1);
             this.relationFK_M_PRICE_LISTS_P_IDL = new global::System.Data.DataRelation("FK_M_PRICE_LISTS_P_IDL", new global::System.Data.DataColumn[] {
                         this.tableM_PRICE_LISTS.IDColumn}, new global::System.Data.DataColumn[] {
                         this.tableM_PRICE_LISTS_P.IDLColumn}, false);
             this.Relations.Add(this.relationFK_M_PRICE_LISTS_P_IDL);
+            this.relationFK_M_PRICE_LISTS_P_IDSTORE1 = new global::System.Data.DataRelation("FK_M_PRICE_LISTS_P_IDSTORE1", new global::System.Data.DataColumn[] {
+                        this.tableM_STORES.IDColumn}, new global::System.Data.DataColumn[] {
+                        this.tableM_PRICE_LISTS_P.IDSTOREColumn}, false);
+            this.Relations.Add(this.relationFK_M_PRICE_LISTS_P_IDSTORE1);
             this.relationFK_M_ITEMS_TEXTS_IDITEMS = new global::System.Data.DataRelation("FK_M_ITEMS_TEXTS_IDITEMS", new global::System.Data.DataColumn[] {
                         this.tableM_ITEMS.IDColumn}, new global::System.Data.DataColumn[] {
                         this.tableM_ITEMS_TEXTS.IDITEMColumn}, false);
@@ -10067,6 +10067,7 @@ namespace KlonsF.DataSets {
                 this.columnINCURMT.AllowDBNull = false;
                 this.columnINCURMT.DefaultValue = ((int)(0));
                 this.columnCHANGESIGN.AllowDBNull = false;
+                this.columnCHANGESIGN.DefaultValue = ((int)(0));
                 this.columnBASE_DEB_FIN.AllowDBNull = false;
                 this.columnBASE_DEB_FIN.DefaultValue = ((int)(0));
                 this.columnBASE_DEB_PVN.MaxLength = 10;
@@ -14327,23 +14328,12 @@ namespace KlonsF.DataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public M_PVNTYPERow M_PVNTYPERow {
+            public M_STORETYPERow M_STORETYPERow {
                 get {
-                    return ((M_PVNTYPERow)(this.GetParentRow(this.Table.ParentRelations["FK_M_STORES_PVNTP"])));
+                    return ((M_STORETYPERow)(this.GetParentRow(this.Table.ParentRelations["FK_M_STORES_TP"])));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK_M_STORES_PVNTP"]);
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public M_COUNTRIESRow M_COUNTRIESRow {
-                get {
-                    return ((M_COUNTRIESRow)(this.GetParentRow(this.Table.ParentRelations["FK_M_STORES_IDCOUNTRY1"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK_M_STORES_IDCOUNTRY1"]);
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_M_STORES_TP"]);
                 }
             }
             
@@ -14360,12 +14350,23 @@ namespace KlonsF.DataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public M_STORETYPERow M_STORETYPERow {
+            public M_COUNTRIESRow M_COUNTRIESRow {
                 get {
-                    return ((M_STORETYPERow)(this.GetParentRow(this.Table.ParentRelations["FK_M_STORES_TP"])));
+                    return ((M_COUNTRIESRow)(this.GetParentRow(this.Table.ParentRelations["FK_M_STORES_IDCOUNTRY1"])));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK_M_STORES_TP"]);
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_M_STORES_IDCOUNTRY1"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public M_PVNTYPERow M_PVNTYPERow {
+                get {
+                    return ((M_PVNTYPERow)(this.GetParentRow(this.Table.ParentRelations["FK_M_STORES_PVNTP"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_M_STORES_PVNTP"]);
                 }
             }
             
@@ -14592,23 +14593,23 @@ namespace KlonsF.DataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public M_DOCSRow[] GetM_DOCSRowsByFK_M_DOCS_IDSTOREIN() {
-                if ((this.Table.ChildRelations["FK_M_DOCS_IDSTOREIN"] == null)) {
-                    return new M_DOCSRow[0];
-                }
-                else {
-                    return ((M_DOCSRow[])(base.GetChildRows(this.Table.ChildRelations["FK_M_DOCS_IDSTOREIN"])));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public M_DOCSRow[] GetM_DOCSRowsByFK_M_DOCS_IDSTOREOUT() {
                 if ((this.Table.ChildRelations["FK_M_DOCS_IDSTOREOUT"] == null)) {
                     return new M_DOCSRow[0];
                 }
                 else {
                     return ((M_DOCSRow[])(base.GetChildRows(this.Table.ChildRelations["FK_M_DOCS_IDSTOREOUT"])));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public M_DOCSRow[] GetM_DOCSRowsByFK_M_DOCS_IDSTOREIN() {
+                if ((this.Table.ChildRelations["FK_M_DOCS_IDSTOREIN"] == null)) {
+                    return new M_DOCSRow[0];
+                }
+                else {
+                    return ((M_DOCSRow[])(base.GetChildRows(this.Table.ChildRelations["FK_M_DOCS_IDSTOREIN"])));
                 }
             }
             
@@ -15093,23 +15094,12 @@ namespace KlonsF.DataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public M_UNITSRow M_UNITSRow {
+            public M_PVNRATESRow M_PVNRATESRow {
                 get {
-                    return ((M_UNITSRow)(this.GetParentRow(this.Table.ParentRelations["FK_M_ITEMS_UNITS"])));
+                    return ((M_PVNRATESRow)(this.GetParentRow(this.Table.ParentRelations["FK_M_ITEMS_PVNRATE"])));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK_M_ITEMS_UNITS"]);
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public M_STORESRow M_STORESRow {
-                get {
-                    return ((M_STORESRow)(this.GetParentRow(this.Table.ParentRelations["FK_M_ITEMS_STORE1"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK_M_ITEMS_STORE1"]);
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_M_ITEMS_PVNRATE"]);
                 }
             }
             
@@ -15126,12 +15116,23 @@ namespace KlonsF.DataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public M_PVNRATESRow M_PVNRATESRow {
+            public M_STORESRow M_STORESRow {
                 get {
-                    return ((M_PVNRATESRow)(this.GetParentRow(this.Table.ParentRelations["FK_M_ITEMS_PVNRATE"])));
+                    return ((M_STORESRow)(this.GetParentRow(this.Table.ParentRelations["FK_M_ITEMS_STORE1"])));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK_M_ITEMS_PVNRATE"]);
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_M_ITEMS_STORE1"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public M_UNITSRow M_UNITSRow {
+                get {
+                    return ((M_UNITSRow)(this.GetParentRow(this.Table.ParentRelations["FK_M_ITEMS_UNITS"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_M_ITEMS_UNITS"]);
                 }
             }
             
@@ -15253,23 +15254,23 @@ namespace KlonsF.DataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public M_STORESRow M_STORESRow {
-                get {
-                    return ((M_STORESRow)(this.GetParentRow(this.Table.ParentRelations["FK_M_ITEMS_PER_STORE_IDSTORE"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK_M_ITEMS_PER_STORE_IDSTORE"]);
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public M_ITEMSRow M_ITEMSRow {
                 get {
                     return ((M_ITEMSRow)(this.GetParentRow(this.Table.ParentRelations["FK_M_ITEMS_PER_STORE_IDITEM"])));
                 }
                 set {
                     this.SetParentRow(value, this.Table.ParentRelations["FK_M_ITEMS_PER_STORE_IDITEM"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public M_STORESRow M_STORESRow {
+                get {
+                    return ((M_STORESRow)(this.GetParentRow(this.Table.ParentRelations["FK_M_ITEMS_PER_STORE_IDSTORE"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_M_ITEMS_PER_STORE_IDSTORE"]);
                 }
             }
         }
@@ -15767,23 +15768,12 @@ namespace KlonsF.DataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public M_STORESRow M_STORESRowByFK_M_DOCS_IDSTOREIN1 {
+            public M_CONTACTSRow M_CONTACTSRow {
                 get {
-                    return ((M_STORESRow)(this.GetParentRow(this.Table.ParentRelations["FK_M_DOCS_IDSTOREIN"])));
+                    return ((M_CONTACTSRow)(this.GetParentRow(this.Table.ParentRelations["FK_M_DOCS_IDDRIVER"])));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK_M_DOCS_IDSTOREIN"]);
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public M_STORESRow M_STORESRowByFK_M_DOCS_IDSTOREOUT1 {
-                get {
-                    return ((M_STORESRow)(this.GetParentRow(this.Table.ParentRelations["FK_M_DOCS_IDSTOREOUT"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK_M_DOCS_IDSTOREOUT"]);
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_M_DOCS_IDDRIVER"]);
                 }
             }
             
@@ -15800,12 +15790,23 @@ namespace KlonsF.DataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public M_CONTACTSRow M_CONTACTSRow {
+            public M_STORESRow M_STORESRowByFK_M_DOCS_IDSTOREOUT1 {
                 get {
-                    return ((M_CONTACTSRow)(this.GetParentRow(this.Table.ParentRelations["FK_M_DOCS_IDDRIVER"])));
+                    return ((M_STORESRow)(this.GetParentRow(this.Table.ParentRelations["FK_M_DOCS_IDSTOREOUT"])));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK_M_DOCS_IDDRIVER"]);
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_M_DOCS_IDSTOREOUT"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public M_STORESRow M_STORESRowByFK_M_DOCS_IDSTOREIN1 {
+                get {
+                    return ((M_STORESRow)(this.GetParentRow(this.Table.ParentRelations["FK_M_DOCS_IDSTOREIN"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_M_DOCS_IDSTOREIN"]);
                 }
             }
             
@@ -16283,34 +16284,12 @@ namespace KlonsF.DataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public M_ITEMS_TEXTSRow M_ITEMS_TEXTSRow {
+            public M_UNITSRow M_UNITSRow {
                 get {
-                    return ((M_ITEMS_TEXTSRow)(this.GetParentRow(this.Table.ParentRelations["FK_M_ROWS_IDITEMTEXT1"])));
+                    return ((M_UNITSRow)(this.GetParentRow(this.Table.ParentRelations["FK_M_ROWS_UNITS1"])));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK_M_ROWS_IDITEMTEXT1"]);
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public M_ITEMSRow M_ITEMSRow {
-                get {
-                    return ((M_ITEMSRow)(this.GetParentRow(this.Table.ParentRelations["FK_M_ROWS_IDITEM"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK_M_ROWS_IDITEM"]);
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public M_DOCSRow M_DOCSRow {
-                get {
-                    return ((M_DOCSRow)(this.GetParentRow(this.Table.ParentRelations["FK_M_ROWS_IDDOC"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK_M_ROWS_IDDOC"]);
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_M_ROWS_UNITS1"]);
                 }
             }
             
@@ -16327,12 +16306,34 @@ namespace KlonsF.DataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public M_UNITSRow M_UNITSRow {
+            public M_DOCSRow M_DOCSRow {
                 get {
-                    return ((M_UNITSRow)(this.GetParentRow(this.Table.ParentRelations["FK_M_ROWS_UNITS1"])));
+                    return ((M_DOCSRow)(this.GetParentRow(this.Table.ParentRelations["FK_M_ROWS_IDDOC"])));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK_M_ROWS_UNITS1"]);
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_M_ROWS_IDDOC"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public M_ITEMSRow M_ITEMSRow {
+                get {
+                    return ((M_ITEMSRow)(this.GetParentRow(this.Table.ParentRelations["FK_M_ROWS_IDITEM"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_M_ROWS_IDITEM"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public M_ITEMS_TEXTSRow M_ITEMS_TEXTSRow {
+                get {
+                    return ((M_ITEMS_TEXTSRow)(this.GetParentRow(this.Table.ParentRelations["FK_M_ROWS_IDITEMTEXT1"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_M_ROWS_IDITEMTEXT1"]);
                 }
             }
             
@@ -17097,23 +17098,23 @@ namespace KlonsF.DataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public M_COUNTRIESRow M_COUNTRIESRow {
-                get {
-                    return ((M_COUNTRIESRow)(this.GetParentRow(this.Table.ParentRelations["FK_M_ADDRESSSES_IDCOUNTRY"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK_M_ADDRESSSES_IDCOUNTRY"]);
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public M_STORESRow M_STORESRow {
                 get {
                     return ((M_STORESRow)(this.GetParentRow(this.Table.ParentRelations["FK_M_ADDRESSSES_IDSTORE"])));
                 }
                 set {
                     this.SetParentRow(value, this.Table.ParentRelations["FK_M_ADDRESSSES_IDSTORE"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public M_COUNTRIESRow M_COUNTRIESRow {
+                get {
+                    return ((M_COUNTRIESRow)(this.GetParentRow(this.Table.ParentRelations["FK_M_ADDRESSSES_IDCOUNTRY"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_M_ADDRESSSES_IDCOUNTRY"]);
                 }
             }
             
@@ -17704,23 +17705,23 @@ namespace KlonsF.DataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public M_PVNTYPERow M_PVNTYPERow {
-                get {
-                    return ((M_PVNTYPERow)(this.GetParentRow(this.Table.ParentRelations["FK_M_PVNRATES2_IDTP"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK_M_PVNRATES2_IDTP"]);
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public M_PVNRATESRow M_PVNRATESRow {
                 get {
                     return ((M_PVNRATESRow)(this.GetParentRow(this.Table.ParentRelations["FK_M_PVNRATES2_IDRATE"])));
                 }
                 set {
                     this.SetParentRow(value, this.Table.ParentRelations["FK_M_PVNRATES2_IDRATE"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public M_PVNTYPERow M_PVNTYPERow {
+                get {
+                    return ((M_PVNTYPERow)(this.GetParentRow(this.Table.ParentRelations["FK_M_PVNRATES2_IDTP"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_M_PVNRATES2_IDTP"]);
                 }
             }
             
@@ -18591,23 +18592,23 @@ namespace KlonsF.DataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public M_STORESRow M_STORESRow {
-                get {
-                    return ((M_STORESRow)(this.GetParentRow(this.Table.ParentRelations["FK_M_DISC_LISTS_P_IDSTORE1"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK_M_DISC_LISTS_P_IDSTORE1"]);
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public M_DISC_LISTSRow M_DISC_LISTSRow {
                 get {
                     return ((M_DISC_LISTSRow)(this.GetParentRow(this.Table.ParentRelations["FK_M_DISC_LISTS_P_IDL"])));
                 }
                 set {
                     this.SetParentRow(value, this.Table.ParentRelations["FK_M_DISC_LISTS_P_IDL"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public M_STORESRow M_STORESRow {
+                get {
+                    return ((M_STORESRow)(this.GetParentRow(this.Table.ParentRelations["FK_M_DISC_LISTS_P_IDSTORE1"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_M_DISC_LISTS_P_IDSTORE1"]);
                 }
             }
             
@@ -18776,23 +18777,23 @@ namespace KlonsF.DataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public M_STORESRow M_STORESRow {
-                get {
-                    return ((M_STORESRow)(this.GetParentRow(this.Table.ParentRelations["FK_M_PRICE_LISTS_P_IDSTORE1"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK_M_PRICE_LISTS_P_IDSTORE1"]);
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public M_PRICE_LISTSRow M_PRICE_LISTSRow {
                 get {
                     return ((M_PRICE_LISTSRow)(this.GetParentRow(this.Table.ParentRelations["FK_M_PRICE_LISTS_P_IDL"])));
                 }
                 set {
                     this.SetParentRow(value, this.Table.ParentRelations["FK_M_PRICE_LISTS_P_IDL"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public M_STORESRow M_STORESRow {
+                get {
+                    return ((M_STORESRow)(this.GetParentRow(this.Table.ParentRelations["FK_M_PRICE_LISTS_P_IDSTORE1"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_M_PRICE_LISTS_P_IDSTORE1"]);
                 }
             }
             
@@ -44315,21 +44316,66 @@ ORDER BY IDSEQ, ID";
                     allChangedRows.AddRange(updatedRows);
                 }
             }
+            if ((this._m_CONTACTSTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.M_CONTACTS.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._m_CONTACTSTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this._m_TRANSACTIONTYPETableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.M_TRANSACTIONTYPE.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._m_TRANSACTIONTYPETableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this._m_PAYMENTTYPETableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.M_PAYMENTTYPE.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._m_PAYMENTTYPETableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this._m_ADDRESSSESTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.M_ADDRESSSES.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._m_ADDRESSSESTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this._m_DOCTYPESTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.M_DOCTYPES.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._m_DOCTYPESTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this._m_VEHICLESTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.M_VEHICLES.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._m_VEHICLESTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
             if ((this._m_ITEMSTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.M_ITEMS.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
                     result = (result + this._m_ITEMSTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
-            if ((this._m_PRICE_LISTSTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.M_PRICE_LISTS.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._m_PRICE_LISTSTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -44351,39 +44397,12 @@ ORDER BY IDSEQ, ID";
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._m_PAYMENTTYPETableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.M_PAYMENTTYPE.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._m_PRICE_LISTSTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.M_PRICE_LISTS.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._m_PAYMENTTYPETableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
-            if ((this._m_TRANSACTIONTYPETableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.M_TRANSACTIONTYPE.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._m_TRANSACTIONTYPETableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
-            if ((this._m_VEHICLESTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.M_VEHICLES.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._m_VEHICLESTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
-            if ((this._m_ADDRESSSESTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.M_ADDRESSSES.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._m_ADDRESSSESTableAdapter.Update(updatedRows));
+                    result = (result + this._m_PRICE_LISTSTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -44393,15 +44412,6 @@ ORDER BY IDSEQ, ID";
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
                     result = (result + this._m_ITEMS_TEXTSTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
-            if ((this._m_CONTACTSTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.M_CONTACTS.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._m_CONTACTSTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -44423,15 +44433,6 @@ ORDER BY IDSEQ, ID";
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._m_DOCTYPESTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.M_DOCTYPES.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._m_DOCTYPESTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
             if ((this._m_ACCOUNTTYPETableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.M_ACCOUNTTYPE.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
@@ -44450,15 +44451,6 @@ ORDER BY IDSEQ, ID";
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._m_ROWSTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.M_ROWS.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._m_ROWSTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
             if ((this._m_PVNRATES2TableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.M_PVNRATES2.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
@@ -44474,6 +44466,15 @@ ORDER BY IDSEQ, ID";
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
                     result = (result + this._m_PVNTEXTSTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this._m_ROWSTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.M_ROWS.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._m_ROWSTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -44614,19 +44615,59 @@ ORDER BY IDSEQ, ID";
                     allAddedRows.AddRange(addedRows);
                 }
             }
+            if ((this._m_CONTACTSTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.M_CONTACTS.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._m_CONTACTSTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this._m_TRANSACTIONTYPETableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.M_TRANSACTIONTYPE.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._m_TRANSACTIONTYPETableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this._m_PAYMENTTYPETableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.M_PAYMENTTYPE.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._m_PAYMENTTYPETableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this._m_ADDRESSSESTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.M_ADDRESSSES.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._m_ADDRESSSESTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this._m_DOCTYPESTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.M_DOCTYPES.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._m_DOCTYPESTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this._m_VEHICLESTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.M_VEHICLES.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._m_VEHICLESTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
             if ((this._m_ITEMSTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.M_ITEMS.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
                     result = (result + this._m_ITEMSTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
-            if ((this._m_PRICE_LISTSTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.M_PRICE_LISTS.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._m_PRICE_LISTSTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -44646,35 +44687,11 @@ ORDER BY IDSEQ, ID";
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._m_PAYMENTTYPETableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.M_PAYMENTTYPE.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._m_PRICE_LISTSTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.M_PRICE_LISTS.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._m_PAYMENTTYPETableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
-            if ((this._m_TRANSACTIONTYPETableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.M_TRANSACTIONTYPE.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._m_TRANSACTIONTYPETableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
-            if ((this._m_VEHICLESTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.M_VEHICLES.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._m_VEHICLESTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
-            if ((this._m_ADDRESSSESTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.M_ADDRESSSES.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._m_ADDRESSSESTableAdapter.Update(addedRows));
+                    result = (result + this._m_PRICE_LISTSTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -44683,14 +44700,6 @@ ORDER BY IDSEQ, ID";
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
                     result = (result + this._m_ITEMS_TEXTSTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
-            if ((this._m_CONTACTSTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.M_CONTACTS.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._m_CONTACTSTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -44710,14 +44719,6 @@ ORDER BY IDSEQ, ID";
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._m_DOCTYPESTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.M_DOCTYPES.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._m_DOCTYPESTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
             if ((this._m_ACCOUNTTYPETableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.M_ACCOUNTTYPE.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
@@ -44734,14 +44735,6 @@ ORDER BY IDSEQ, ID";
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._m_ROWSTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.M_ROWS.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._m_ROWSTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
             if ((this._m_PVNRATES2TableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.M_PVNRATES2.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
@@ -44755,6 +44748,14 @@ ORDER BY IDSEQ, ID";
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
                     result = (result + this._m_PVNTEXTSTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this._m_ROWSTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.M_ROWS.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._m_ROWSTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -44880,6 +44881,14 @@ ORDER BY IDSEQ, ID";
                     allChangedRows.AddRange(deletedRows);
                 }
             }
+            if ((this._m_ROWSTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.M_ROWS.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._m_ROWSTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
             if ((this._m_PVNTEXTSTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.M_PVNTEXTS.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
@@ -44893,14 +44902,6 @@ ORDER BY IDSEQ, ID";
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
                     result = (result + this._m_PVNRATES2TableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
-            if ((this._m_ROWSTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.M_ROWS.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._m_ROWSTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -44920,14 +44921,6 @@ ORDER BY IDSEQ, ID";
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._m_DOCTYPESTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.M_DOCTYPES.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._m_DOCTYPESTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
             if ((this._m_DOCSTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.M_DOCS.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
@@ -44944,14 +44937,6 @@ ORDER BY IDSEQ, ID";
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._m_CONTACTSTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.M_CONTACTS.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._m_CONTACTSTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
             if ((this._m_ITEMS_TEXTSTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.M_ITEMS_TEXTS.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
@@ -44960,35 +44945,11 @@ ORDER BY IDSEQ, ID";
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._m_ADDRESSSESTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.M_ADDRESSSES.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._m_PRICE_LISTSTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.M_PRICE_LISTS.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._m_ADDRESSSESTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
-            if ((this._m_VEHICLESTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.M_VEHICLES.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._m_VEHICLESTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
-            if ((this._m_TRANSACTIONTYPETableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.M_TRANSACTIONTYPE.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._m_TRANSACTIONTYPETableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
-            if ((this._m_PAYMENTTYPETableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.M_PAYMENTTYPE.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._m_PAYMENTTYPETableAdapter.Update(deletedRows));
+                    result = (result + this._m_PRICE_LISTSTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -45008,19 +44969,59 @@ ORDER BY IDSEQ, ID";
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._m_PRICE_LISTSTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.M_PRICE_LISTS.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._m_PRICE_LISTSTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
             if ((this._m_ITEMSTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.M_ITEMS.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
                     result = (result + this._m_ITEMSTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._m_VEHICLESTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.M_VEHICLES.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._m_VEHICLESTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._m_DOCTYPESTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.M_DOCTYPES.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._m_DOCTYPESTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._m_ADDRESSSESTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.M_ADDRESSSES.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._m_ADDRESSSESTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._m_PAYMENTTYPETableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.M_PAYMENTTYPE.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._m_PAYMENTTYPETableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._m_TRANSACTIONTYPETableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.M_TRANSACTIONTYPE.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._m_TRANSACTIONTYPETableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._m_CONTACTSTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.M_CONTACTS.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._m_CONTACTSTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }

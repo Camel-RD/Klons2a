@@ -83,7 +83,7 @@ namespace KlonsM.FormsM
             bsStoreIn = new KlonsLIB.Data.MyBindingSource(components);
             grDocCMCol2 = new KlonsLIB.MySourceGrid.GridRows.MyGridRowCommand();
             grDocTitleCredDoc = new KlonsLIB.MySourceGrid.GridRows.MyGridRowTitle();
-            gdDocCdDT = new KlonsLIB.MySourceGrid.GridRows.MyGridRowTextBoxA();
+            grDocCdDT = new KlonsLIB.MySourceGrid.GridRows.MyGridRowTextBoxA();
             grDocCdSr = new KlonsLIB.MySourceGrid.GridRows.MyGridRowTextBoxA();
             grDocCdNr = new KlonsLIB.MySourceGrid.GridRows.MyGridRowTextBoxA();
             grDocTitleTransoirt = new KlonsLIB.MySourceGrid.GridRows.MyGridRowTitle();
@@ -384,7 +384,7 @@ namespace KlonsM.FormsM
             sgrDocA.RowList.Add(grDocStoreIn);
             sgrDocA.RowList.Add(grDocCMCol2);
             sgrDocA.RowList.Add(grDocTitleCredDoc);
-            sgrDocA.RowList.Add(gdDocCdDT);
+            sgrDocA.RowList.Add(grDocCdDT);
             sgrDocA.RowList.Add(grDocCdSr);
             sgrDocA.RowList.Add(grDocCdNr);
             sgrDocA.RowList.Add(grDocTitleTransoirt);
@@ -595,14 +595,14 @@ namespace KlonsM.FormsM
             // 
             // gdDocCdDT
             // 
-            gdDocCdDT.AllowNull = true;
-            gdDocCdDT.DataMember = "CREDDOCDT";
-            gdDocCdDT.DataSource = bsDocs;
-            gdDocCdDT.GridPropertyName = "_CREDDOCDT";
-            gdDocCdDT.Name = "gdDocCdDT";
-            gdDocCdDT.ReadOnly = true;
-            gdDocCdDT.RowTitle = "Datums";
-            gdDocCdDT.RowValueType = KlonsLIB.MySourceGrid.GridRows.EMyGridRowValueType.DateN;
+            grDocCdDT.AllowNull = true;
+            grDocCdDT.DataMember = "CREDDOCDT";
+            grDocCdDT.DataSource = bsDocs;
+            grDocCdDT.GridPropertyName = "_CREDDOCDT";
+            grDocCdDT.Name = "gdDocCdDT";
+            grDocCdDT.ReadOnly = false;
+            grDocCdDT.RowTitle = "Datums";
+            grDocCdDT.RowValueType = KlonsLIB.MySourceGrid.GridRows.EMyGridRowValueType.DateN;
             // 
             // grDocCdSr
             // 
@@ -611,7 +611,7 @@ namespace KlonsM.FormsM
             grDocCdSr.DataSource = bsDocs;
             grDocCdSr.GridPropertyName = "_CREDDOCSR";
             grDocCdSr.Name = "grDocCdSr";
-            grDocCdSr.ReadOnly = true;
+            grDocCdSr.ReadOnly = false;
             grDocCdSr.RowTitle = "Sērija";
             grDocCdSr.RowValueType = KlonsLIB.MySourceGrid.GridRows.EMyGridRowValueType.String;
             // 
@@ -622,7 +622,7 @@ namespace KlonsM.FormsM
             grDocCdNr.DataSource = bsDocs;
             grDocCdNr.GridPropertyName = "_CREDDOCNR";
             grDocCdNr.Name = "grDocCdNr";
-            grDocCdNr.ReadOnly = true;
+            grDocCdNr.ReadOnly = false;
             grDocCdNr.RowTitle = "Numurs";
             grDocCdNr.RowValueType = KlonsLIB.MySourceGrid.GridRows.EMyGridRowValueType.String;
             // 
@@ -905,6 +905,7 @@ namespace KlonsM.FormsM
             dgcRowsIdItem.MinimumWidth = 8;
             dgcRowsIdItem.Name = "dgcRowsIdItem";
             dgcRowsIdItem.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            dgcRowsIdItem.Required = true;
             dgcRowsIdItem.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             dgcRowsIdItem.ValueMember = "ID";
             dgcRowsIdItem.Width = 150;
@@ -1328,7 +1329,7 @@ namespace KlonsM.FormsM
         private KlonsLIB.MySourceGrid.GridRows.MyGridRowTitle grDocTitleKrajumi;
         private KlonsLIB.MySourceGrid.GridRows.MyGridRowCommand grDocCMCol2;
         private KlonsLIB.MySourceGrid.GridRows.MyGridRowTitle grDocTitleCredDoc;
-        private KlonsLIB.MySourceGrid.GridRows.MyGridRowTextBoxA gdDocCdDT;
+        private KlonsLIB.MySourceGrid.GridRows.MyGridRowTextBoxA grDocCdDT;
         private KlonsLIB.MySourceGrid.GridRows.MyGridRowTextBoxA grDocCdSr;
         private KlonsLIB.MySourceGrid.GridRows.MyGridRowTextBoxA grDocCdNr;
         private KlonsLIB.MySourceGrid.GridRows.MyGridRowTitle grDocTitleTransoirt;

@@ -22,6 +22,12 @@ namespace DataObjectsEI
             ReadFrom(line);
         }
 
+        public InvoiceLine(CreditNoteLineType line)
+        {
+            VatType = "S";
+            ReadFrom(line);
+        }
+
         public string ID { get; set; }
         public string ItemName { get; set; }
         public decimal Quantity { get; set; }
@@ -39,6 +45,26 @@ namespace DataObjectsEI
             ItemName = line.Item.Name;
             Quantity = line.InvoicedQuantity.Value;
             Unit = line.InvoicedQuantity.unitCode;
+            Price = line.Price.PriceAmount.Value;
+            AllowanceCharge = 0M;
+            if (line.AllowanceCharge != null)
+                AllowanceCharge = line.AllowanceCharge
+                    .Where(x => x.ChargeIndicator)
+                    .Select(x => x?.Amount?.Value ?? 0M)
+                    .Sum();
+            TotalAmountBeforeTax = line.LineExtensionAmount.Value;
+            VatRate = line.Item.ClassifiedTaxCategory.FirstOrDefault()?.Percent ?? 0M;
+            VatType = line.Item.ClassifiedTaxCategory.FirstOrDefault()?.ID;
+            decimal vat = Math.Round(TotalAmountBeforeTax * VatRate / 100M, 2);
+            TotalAmount = TotalAmountBeforeTax + vat;
+        }
+
+        public void ReadFrom(CreditNoteLineType line)
+        {
+            ID = line.ID;
+            ItemName = line.Item.Name;
+            Quantity = line.CreditedQuantity.Value;
+            Unit = line.CreditedQuantity.unitCode;
             Price = line.Price.PriceAmount.Value;
             AllowanceCharge = 0M;
             if (line.AllowanceCharge != null)

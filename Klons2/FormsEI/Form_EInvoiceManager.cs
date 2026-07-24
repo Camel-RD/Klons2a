@@ -295,12 +295,46 @@ namespace KlonsM.FormsEI
             bsInvoiceList.DataSource = list;
         }
 
+        public enum EDocType { None, Invoice, CreditNote }
+
+        public static EDocType GetDocType(string text)
+        {
+            using var reader = XmlReader.Create(text);
+            string rootName = null;
+            while (reader.Read())
+            {
+                if (reader.NodeType == XmlNodeType.Element)
+                {
+                    rootName = reader.LocalName;
+                    break;
+                }
+            }
+            rootName = rootName.ToLower();
+            if (rootName == "invoice") return EDocType.Invoice;
+            if (rootName == "creditnote") return EDocType.CreditNote;
+            return EDocType.None;
+        }
+
         InvoiceType LoadInvoice(string filename)
         {
             try
             {
                 var xml = File.ReadAllText(filename);
                 var ret = UblDocument.Parse<InvoiceType>(xml);
+                return ret;
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+        }
+
+        CreditNoteType LoadCreditNote(string filename)
+        {
+            try
+            {
+                var xml = File.ReadAllText(filename);
+                var ret = UblDocument.Parse<CreditNoteType>(xml);
                 return ret;
             }
             catch (Exception)
@@ -328,7 +362,7 @@ namespace KlonsM.FormsEI
             return ret;
         }
 
-        bool ReadInvoice(string filename, out InvoiceView invoice)
+        bool ReadInvoice(string filename, out InvoiceView invoiceview)
         {
             var fnmwitountext = Path.GetFileNameWithoutExtension(filename);
             var folder1 = Path.GetDirectoryName(filename);
@@ -336,7 +370,7 @@ namespace KlonsM.FormsEI
                 .Select(x => Path.GetExtension(x)?.ToLower())
                 .Where(x => x != ".xml")
                 .FirstOrDefault();
-            invoice = new InvoiceView()
+            invoiceview = new InvoiceView()
             {
                 FullFileName = filename,
                 SubFolderName = Path.GetFileName(Path.GetDirectoryName(filename)),
@@ -349,27 +383,40 @@ namespace KlonsM.FormsEI
                 var fnm = Path.GetFileName(filename);
                 var folder = Path.GetFileName(Path.GetDirectoryName(filename));
                 var err2 = $"Fails:{folder}\\{fnm}\r\n{err}";
-                invoice.ValidationMessage = err;
-                AddFileError(fnm, folder, invoice.ValidationMessage);
+                invoiceview.ValidationMessage = err;
+                AddFileError(fnm, folder, invoiceview.ValidationMessage);
                 return false;
             }
-            InvoiceType invoicetype = LoadInvoice(filename);
-            if (invoicetype == null)
+            var doctype = GetDocType(filename);
+            if (doctype == EDocType.None) return false;
+            InvoiceType invoice = null;
+            CreditNoteType creditnote = null;
+
+            if (doctype == EDocType.Invoice)
+                invoice = LoadInvoice(filename);
+            else
+                creditnote = LoadCreditNote(filename);
+
+            if (invoice == null && creditnote == null)
             {
-                invoice.ValidationMessage = "Neizdevās nolasīt rēķina datus no faila.";
-                AddFileError(invoice.FileName, invoice.SubFolderName, invoice.ValidationMessage);
+                invoiceview.ValidationMessage = "Neizdevās nolasīt rēķina datus no faila.";
+                AddFileError(invoiceview.FileName, invoiceview.SubFolderName, invoiceview.ValidationMessage);
                 return false;
             }
+
             try
             {
-                invoice.ReadFrom(invoicetype);
-                invoice.ValidationMessage = "Ok";
+                if (doctype == EDocType.Invoice)
+                    invoiceview.ReadFrom(invoice);
+                else
+                    invoiceview.ReadFrom(creditnote);
+                invoiceview.ValidationMessage = "Ok";
                 return true;
             }
             catch (Exception)
             {
-                invoice.ValidationMessage = "Neizdevās nolasīt rēķina datus no faila.";
-                AddFileError(invoice.FileName, invoice.SubFolderName, invoice.ValidationMessage);
+                invoiceview.ValidationMessage = "Neizdevās nolasīt rēķina datus no faila.";
+                AddFileError(invoiceview.FileName, invoiceview.SubFolderName, invoiceview.ValidationMessage);
                 return false;
             }
         }

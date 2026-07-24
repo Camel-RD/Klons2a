@@ -230,6 +230,8 @@ namespace KlonsM.FormsM
                 case EDocType.Sniegti_pakalpojumi:
                 case EDocType.Iepirkuma_rēķins:
                 case EDocType.Pārdošanas_rēķins:
+                case EDocType.Avansa_rēķins:
+                case EDocType.Kredītrēķins_vienkāršs:
                     return "Rēķ";
             }
             return null;
@@ -268,7 +270,7 @@ namespace KlonsM.FormsM
 
             if (dr_doc.XState != EDocState.Iegrāmatots)
             {
-                ret.AddError("", "Dokuments nav iegrāmatots.");
+                ret.AddError("", "Kontēšana netika veikta, jo dokuments nav iegrāmatots.");
                 return ret;
             }
 
@@ -341,6 +343,7 @@ namespace KlonsM.FormsM
             dr_fdoc.Descr = GetDocDescription(iddoc);
             dr_fdoc.Summ = DocFinData.PVNBase + DocFinData.PVN;
             dr_fdoc.PVN = DocFinData.SumPVNRows();
+            dr_fdoc.IDDOCM = iddoc;
             table_fdocs.Rows.Add(dr_fdoc);
             foreach(var accdata in DocAccRepRows)
             {

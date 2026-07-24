@@ -32,11 +32,11 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormM_ItemsTexts));
             bNav = new KlonsLIB.Components.MyBindingNavigator();
             bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            bsTexts = new KlonsLIB.Data.MyBindingSource2(components);
+            bsItems = new KlonsLIB.Data.MyBindingSource(components);
             bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             dgvRows = new KlonsLIB.Components.MyDataGridView();
             dgcText = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            bsTexts = new KlonsLIB.Data.MyBindingSource2(components);
-            bsItems = new KlonsLIB.Data.MyBindingSource(components);
             bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
@@ -55,11 +55,12 @@
             cmFind = new System.Windows.Forms.Button();
             tbText = new KlonsLIB.Components.MyTextBox();
             myAdapterManager1 = new KlonsLIB.Data.MyAdapterManager();
+            cmOk = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)bNav).BeginInit();
             bNav.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dgvRows).BeginInit();
             ((System.ComponentModel.ISupportInitialize)bsTexts).BeginInit();
             ((System.ComponentModel.ISupportInitialize)bsItems).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvRows).BeginInit();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)myAdapterManager1).BeginInit();
             SuspendLayout();
@@ -96,6 +97,17 @@
             bindingNavigatorAddNewItem.Size = new System.Drawing.Size(66, 22);
             bindingNavigatorAddNewItem.Text = "Jauns";
             // 
+            // bsTexts
+            // 
+            bsTexts.DataMember = "FK_M_ITEMS_TEXTS_IDITEMS";
+            bsTexts.DataSource = bsItems;
+            bsTexts.CurrentChanged += bsTexts_CurrentChanged;
+            // 
+            // bsItems
+            // 
+            bsItems.DataMember = "M_ITEMS";
+            bsItems.MyDataSource = "KlonsMData";
+            // 
             // bindingNavigatorCountItem
             // 
             bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
@@ -115,7 +127,7 @@
             dgvRows.Name = "dgvRows";
             dgvRows.RowHeadersWidth = 30;
             dgvRows.Size = new System.Drawing.Size(585, 240);
-            dgvRows.TabIndex = 4;
+            dgvRows.TabIndex = 1;
             dgvRows.MyKeyDown += dgvRows_MyKeyDown;
             dgvRows.MyCheckForChanges += dgvRows_MyCheckForChanges;
             dgvRows.CellDoubleClick += dgvRows_CellDoubleClick;
@@ -128,17 +140,6 @@
             dgcText.HeaderText = "artikula nosaukums";
             dgcText.Name = "dgcText";
             dgcText.Width = 500;
-            // 
-            // bsTexts
-            // 
-            bsTexts.DataMember = "FK_M_ITEMS_TEXTS_IDITEMS";
-            bsTexts.DataSource = bsItems;
-            bsTexts.CurrentChanged += bsTexts_CurrentChanged;
-            // 
-            // bsItems
-            // 
-            bsItems.DataMember = "M_ITEMS";
-            bsItems.MyDataSource = "KlonsMData";
             // 
             // bindingNavigatorMoveFirstItem
             // 
@@ -223,13 +224,14 @@
             panel1.Controls.Add(tbCurrItem);
             panel1.Controls.Add(cmSetResultNull);
             panel1.Controls.Add(cmAdd);
+            panel1.Controls.Add(cmOk);
             panel1.Controls.Add(cmFind);
             panel1.Controls.Add(tbText);
             panel1.Dock = System.Windows.Forms.DockStyle.Top;
             panel1.Location = new System.Drawing.Point(0, 0);
             panel1.Name = "panel1";
             panel1.Size = new System.Drawing.Size(585, 94);
-            panel1.TabIndex = 3;
+            panel1.TabIndex = 0;
             // 
             // label1
             // 
@@ -237,7 +239,7 @@
             label1.Location = new System.Drawing.Point(3, 31);
             label1.Name = "label1";
             label1.Size = new System.Drawing.Size(84, 17);
-            label1.TabIndex = 3;
+            label1.TabIndex = 6;
             label1.Text = "nosaukums:";
             // 
             // tbCurrItem
@@ -246,15 +248,16 @@
             tbCurrItem.Dock = System.Windows.Forms.DockStyle.Top;
             tbCurrItem.Location = new System.Drawing.Point(0, 0);
             tbCurrItem.Name = "tbCurrItem";
+            tbCurrItem.ReadOnly = true;
             tbCurrItem.Size = new System.Drawing.Size(585, 23);
-            tbCurrItem.TabIndex = 2;
+            tbCurrItem.TabIndex = 5;
             // 
             // cmSetResultNull
             // 
             cmSetResultNull.Location = new System.Drawing.Point(161, 59);
             cmSetResultNull.Name = "cmSetResultNull";
             cmSetResultNull.Size = new System.Drawing.Size(226, 29);
-            cmSetResultNull.TabIndex = 1;
+            cmSetResultNull.TabIndex = 4;
             cmSetResultNull.Text = "Neizmatot papildus nosaukumu";
             cmSetResultNull.UseVisualStyleBackColor = true;
             cmSetResultNull.Click += cmSetResultNull_Click;
@@ -264,7 +267,7 @@
             cmAdd.Location = new System.Drawing.Point(76, 59);
             cmAdd.Name = "cmAdd";
             cmAdd.Size = new System.Drawing.Size(79, 29);
-            cmAdd.TabIndex = 1;
+            cmAdd.TabIndex = 3;
             cmAdd.Text = "Pievienot";
             cmAdd.UseVisualStyleBackColor = true;
             cmAdd.Click += cmAdd_Click;
@@ -274,7 +277,7 @@
             cmFind.Location = new System.Drawing.Point(3, 59);
             cmFind.Name = "cmFind";
             cmFind.Size = new System.Drawing.Size(67, 29);
-            cmFind.TabIndex = 1;
+            cmFind.TabIndex = 2;
             cmFind.Text = "Meklēt";
             cmFind.UseVisualStyleBackColor = true;
             cmFind.Click += cmFind_Click;
@@ -297,6 +300,16 @@
     null
     };
             // 
+            // cmOk
+            // 
+            cmOk.Location = new System.Drawing.Point(504, 59);
+            cmOk.Name = "cmOk";
+            cmOk.Size = new System.Drawing.Size(67, 29);
+            cmOk.TabIndex = 1;
+            cmOk.Text = "Ok";
+            cmOk.UseVisualStyleBackColor = true;
+            cmOk.Click += cmOk_Click;
+            // 
             // FormM_ItemsTexts
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -312,9 +325,9 @@
             ((System.ComponentModel.ISupportInitialize)bNav).EndInit();
             bNav.ResumeLayout(false);
             bNav.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dgvRows).EndInit();
             ((System.ComponentModel.ISupportInitialize)bsTexts).EndInit();
             ((System.ComponentModel.ISupportInitialize)bsItems).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvRows).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)myAdapterManager1).EndInit();
@@ -348,5 +361,6 @@
         private KlonsLIB.Data.MyAdapterManager myAdapterManager1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button cmSetResultNull;
+        private System.Windows.Forms.Button cmOk;
     }
 }
