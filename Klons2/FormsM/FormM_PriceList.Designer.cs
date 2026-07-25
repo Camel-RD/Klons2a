@@ -285,6 +285,7 @@ namespace KlonsM.FormsM
             dgcRIdItem.HeaderText = "artikuls";
             dgcRIdItem.MinimumWidth = 8;
             dgcRIdItem.Name = "dgcRIdItem";
+            dgcRIdItem.Required = true;
             dgcRIdItem.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             dgcRIdItem.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             dgcRIdItem.ValueMember = "ID";

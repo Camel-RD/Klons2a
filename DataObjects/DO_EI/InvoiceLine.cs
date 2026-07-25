@@ -29,6 +29,7 @@ namespace DataObjectsEI
         }
 
         public string ID { get; set; }
+        public string ItemId { get; set; }
         public string ItemName { get; set; }
         public decimal Quantity { get; set; }
         public string Unit { get; set; }
@@ -43,6 +44,7 @@ namespace DataObjectsEI
         {
             ID = line.ID;
             ItemName = line.Item.Name;
+            ItemId = line.Item.SellersItemIdentification?.ID?.Value;
             Quantity = line.InvoicedQuantity.Value;
             Unit = line.InvoicedQuantity.unitCode;
             Price = line.Price.PriceAmount.Value;
@@ -63,11 +65,12 @@ namespace DataObjectsEI
         {
             ID = line.ID;
             ItemName = line.Item.Name;
+            ItemId = line.Item.SellersItemIdentification?.ID?.Value;
             Quantity = line.CreditedQuantity.Value;
             Unit = line.CreditedQuantity.unitCode;
             Price = line.Price.PriceAmount.Value;
             AllowanceCharge = 0M;
-            if (line.AllowanceCharge != null)
+            if (line.AllowanceCharge != null && line.AllowanceCharge.Count > 0)
                 AllowanceCharge = line.AllowanceCharge.Select(x => x?.Amount?.Value ?? 0M).Sum();
             TotalAmountBeforeTax = line.LineExtensionAmount.Value;
             VatRate = line.Item.ClassifiedTaxCategory.FirstOrDefault()?.Percent ?? 0M;

@@ -204,6 +204,10 @@
     <None Remove="SQL\SQLV035.txt" />
     <None Remove="SQL\SQLV042.txt" />
     <None Remove="SQL\SQLV044.txt" />
+    <None Remove="SQL\SQLV045.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="SQL\SQLV045.txt" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="SourceGrid">

@@ -89,28 +89,24 @@
             grInvoiceSupplierPVNRegNr = new KlonsLIB.MySourceGrid.GridRows.MyGridRowTextBoxA();
             grInvoiceSupplierAddress = new KlonsLIB.MySourceGrid.GridRows.MyGridRowTextBoxA();
             grInvoicePaeeAccount = new KlonsLIB.MySourceGrid.GridRows.MyGridRowTextBoxA();
-            grInvoiceNewColumn2 = new KlonsLIB.MySourceGrid.GridRows.MyGridRowCommand();
             grInvoiceTitleBillingReference = new KlonsLIB.MySourceGrid.GridRows.MyGridRowTitle();
             grInvoiceBillingReferenceDate = new KlonsLIB.MySourceGrid.GridRows.MyGridRowTextBoxA();
             grInvoiceBillingReferenceId = new KlonsLIB.MySourceGrid.GridRows.MyGridRowTextBoxA();
+            grInvoiceNewColumn2 = new KlonsLIB.MySourceGrid.GridRows.MyGridRowCommand();
             grInvoiceTitleCustomer = new KlonsLIB.MySourceGrid.GridRows.MyGridRowTitle();
             grInvoiceCustomerName = new KlonsLIB.MySourceGrid.GridRows.MyGridRowTextBoxA();
             grInvoiceCustomerRegNr = new KlonsLIB.MySourceGrid.GridRows.MyGridRowTextBoxA();
             grInvoiceCustomerVATRegNr = new KlonsLIB.MySourceGrid.GridRows.MyGridRowTextBoxA();
             grInvoiceCustomerAddress = new KlonsLIB.MySourceGrid.GridRows.MyGridRowTextBoxA();
             gdInvoicePayerAccount = new KlonsLIB.MySourceGrid.GridRows.MyGridRowTextBoxA();
+            grInvoiceTitleOtherReferences = new KlonsLIB.MySourceGrid.GridRows.MyGridRowTitle();
+            grInvoiceContractId = new KlonsLIB.MySourceGrid.GridRows.MyGridRowTextBoxA();
+            grInvoiceOrderid = new KlonsLIB.MySourceGrid.GridRows.MyGridRowTextBoxA();
+            grInvoiceNewColumn3 = new KlonsLIB.MySourceGrid.GridRows.MyGridRowCommand();
+            grInvoiceTitleNote = new KlonsLIB.MySourceGrid.GridRows.MyGridRowTitle();
+            grInvoiceNote = new KlonsLIB.MySourceGrid.GridRows.MyGridRowMultiLineTextBox();
             grtLineTextBox = new KlonsLIB.MySourceGrid.GridRows.MyGridRowTextBoxA();
             dgvLines = new KlonsLIB.Components.MyDataGridView();
-            dgcLineId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            dgcLineItemName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            dgcLineQuantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            dgcLineUnit = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            dgcLinePrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            dgcLineAllowanceCharge = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            dgcLineTotalAmountBeforeTax = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            dgcLineVatRate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            dgcLineVatType = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            dgcLineTotalAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             bsInvoiceLines = new System.Windows.Forms.BindingSource(components);
             tpErrors = new System.Windows.Forms.TabPage();
             tbErrors = new KlonsLIB.Components.FlatRichTextBox();
@@ -150,6 +146,17 @@
             label4 = new System.Windows.Forms.Label();
             label1 = new System.Windows.Forms.Label();
             tbSettingsFileFolder = new KlonsLIB.Components.TextBoxWithButton();
+            dgcLineId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            dgcLineItemId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            dgcLineItemName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            dgcLineQuantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            dgcLineUnit = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            dgcLinePrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            dgcLineAllowanceCharge = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            dgcLineTotalAmountBeforeTax = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            dgcLineVatRate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            dgcLineVatType = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            dgcLineTotalAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             tcTabs.SuspendLayout();
             tpInvoiceList.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvInvoiceList).BeginInit();
@@ -185,7 +192,7 @@
             tcTabs.Location = new System.Drawing.Point(0, 0);
             tcTabs.Name = "tcTabs";
             tcTabs.SelectedIndex = 0;
-            tcTabs.Size = new System.Drawing.Size(796, 328);
+            tcTabs.Size = new System.Drawing.Size(1107, 328);
             tcTabs.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             tcTabs.TabIndex = 0;
             // 
@@ -197,7 +204,7 @@
             tpInvoiceList.Location = new System.Drawing.Point(4, 25);
             tpInvoiceList.Name = "tpInvoiceList";
             tpInvoiceList.Padding = new System.Windows.Forms.Padding(3);
-            tpInvoiceList.Size = new System.Drawing.Size(788, 299);
+            tpInvoiceList.Size = new System.Drawing.Size(881, 299);
             tpInvoiceList.TabIndex = 0;
             tpInvoiceList.Text = "Rēķinu saraksts";
             tpInvoiceList.UseVisualStyleBackColor = true;
@@ -218,7 +225,7 @@
             dgvInvoiceList.Name = "dgvInvoiceList";
             dgvInvoiceList.RowHeadersWidth = 30;
             dgvInvoiceList.RowTemplate.Height = 25;
-            dgvInvoiceList.Size = new System.Drawing.Size(782, 232);
+            dgvInvoiceList.Size = new System.Drawing.Size(875, 232);
             dgvInvoiceList.TabIndex = 1;
             // 
             // dgcInvoiceChecked
@@ -318,7 +325,7 @@
             tspInvoiceList.Location = new System.Drawing.Point(3, 264);
             tspInvoiceList.Name = "tspInvoiceList";
             tspInvoiceList.Padding = new System.Windows.Forms.Padding(0, 3, 1, 2);
-            tspInvoiceList.Size = new System.Drawing.Size(782, 32);
+            tspInvoiceList.Size = new System.Drawing.Size(875, 32);
             tspInvoiceList.TabIndex = 2;
             tspInvoiceList.Text = "toolStrip1";
             // 
@@ -417,7 +424,7 @@
             panel1.Dock = System.Windows.Forms.DockStyle.Top;
             panel1.Location = new System.Drawing.Point(3, 3);
             panel1.Name = "panel1";
-            panel1.Size = new System.Drawing.Size(782, 29);
+            panel1.Size = new System.Drawing.Size(875, 29);
             panel1.TabIndex = 0;
             // 
             // tbFilterInvoices
@@ -474,7 +481,7 @@
             tpInvoice.Location = new System.Drawing.Point(4, 25);
             tpInvoice.Name = "tpInvoice";
             tpInvoice.Padding = new System.Windows.Forms.Padding(3);
-            tpInvoice.Size = new System.Drawing.Size(788, 299);
+            tpInvoice.Size = new System.Drawing.Size(1099, 299);
             tpInvoice.TabIndex = 1;
             tpInvoice.Text = "Rēķins";
             tpInvoice.UseVisualStyleBackColor = true;
@@ -483,7 +490,6 @@
             // 
             mySplitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             mySplitContainer1.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
-            mySplitContainer1.IsSplitterFixed = true;
             mySplitContainer1.Location = new System.Drawing.Point(3, 3);
             mySplitContainer1.Name = "mySplitContainer1";
             mySplitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
@@ -497,9 +503,9 @@
             // 
             mySplitContainer1.Panel2.Controls.Add(dgvLines);
             mySplitContainer1.Panel2MinSize = 21;
-            mySplitContainer1.Size = new System.Drawing.Size(782, 293);
+            mySplitContainer1.Size = new System.Drawing.Size(1093, 293);
             mySplitContainer1.SplitterDistance = 126;
-            mySplitContainer1.SplitterWidth = 3;
+            mySplitContainer1.SplitterWidth = 5;
             mySplitContainer1.TabIndex = 1;
             // 
             // sgrInvoice
@@ -542,9 +548,15 @@
             sgrInvoice.RowList.Add(grInvoiceCustomerVATRegNr);
             sgrInvoice.RowList.Add(grInvoiceCustomerAddress);
             sgrInvoice.RowList.Add(gdInvoicePayerAccount);
+            sgrInvoice.RowList.Add(grInvoiceTitleOtherReferences);
+            sgrInvoice.RowList.Add(grInvoiceContractId);
+            sgrInvoice.RowList.Add(grInvoiceOrderid);
+            sgrInvoice.RowList.Add(grInvoiceNewColumn3);
+            sgrInvoice.RowList.Add(grInvoiceTitleNote);
+            sgrInvoice.RowList.Add(grInvoiceNote);
             sgrInvoice.RowTemplateList.Add(grtLineTextBox);
             sgrInvoice.SelectionMode = SourceGrid.GridSelectionMode.Cell;
-            sgrInvoice.Size = new System.Drawing.Size(782, 126);
+            sgrInvoice.Size = new System.Drawing.Size(1093, 126);
             sgrInvoice.TabIndex = 0;
             sgrInvoice.TabStop = true;
             sgrInvoice.ToolTipText = "";
@@ -554,6 +566,7 @@
             invoiceView1.BillingReferenceId = null;
             invoiceView1.BillingReferenceIssueDate = null;
             invoiceView1.Checked = false;
+            invoiceView1.ContractDocumentReferenceId = null;
             invoiceView1.CurrencyCode = "EUR";
             invoiceView1.CustomerAddress = null;
             invoiceView1.CustomerAddressCountry = "LV";
@@ -568,6 +581,7 @@
             invoiceView1.InvoiceDocumentExtension = null;
             invoiceView1.IssueDate = new System.DateTime(0L);
             invoiceView1.Note = "";
+            invoiceView1.OrderReferenceId = null;
             invoiceView1.PayeeFinancialAccountID = null;
             invoiceView1.PayerFinancialAccountID = null;
             invoiceView1.SubFolderName = null;
@@ -667,9 +681,9 @@
             // 
             // grInvoiceNewColumn1
             // 
-            grInvoiceNewColumn1.CaptionColumnWidth = 100;
+            grInvoiceNewColumn1.CaptionColumnWidth = 110;
             grInvoiceNewColumn1.Command = KlonsLIB.MySourceGrid.GridRows.EMyGridRowCommands.StartNewColumn;
-            grInvoiceNewColumn1.DataColumnWidth = 200;
+            grInvoiceNewColumn1.DataColumnWidth = 220;
             grInvoiceNewColumn1.Name = "grInvoiceNewColumn1";
             grInvoiceNewColumn1.RowTitle = null;
             grInvoiceNewColumn1.SetColumnWidth = true;
@@ -729,12 +743,6 @@
             grInvoicePaeeAccount.RowTitle = "Bankas konts";
             grInvoicePaeeAccount.RowValueType = KlonsLIB.MySourceGrid.GridRows.EMyGridRowValueType.String;
             // 
-            // grInvoiceNewColumn2
-            // 
-            grInvoiceNewColumn2.Command = KlonsLIB.MySourceGrid.GridRows.EMyGridRowCommands.StartNewColumn;
-            grInvoiceNewColumn2.Name = "grInvoiceNewColumn2";
-            grInvoiceNewColumn2.RowTitle = null;
-            // 
             // grInvoiceTitleBillingReference
             // 
             grInvoiceTitleBillingReference.Name = "grInvoiceTitleBillingReference";
@@ -760,6 +768,12 @@
             grInvoiceBillingReferenceId.Name = "grInvoiceBillingReferenceId";
             grInvoiceBillingReferenceId.RowTitle = "Numurs";
             grInvoiceBillingReferenceId.RowValueType = KlonsLIB.MySourceGrid.GridRows.EMyGridRowValueType.String;
+            // 
+            // grInvoiceNewColumn2
+            // 
+            grInvoiceNewColumn2.Command = KlonsLIB.MySourceGrid.GridRows.EMyGridRowCommands.StartNewColumn;
+            grInvoiceNewColumn2.Name = "grInvoiceNewColumn2";
+            grInvoiceNewColumn2.RowTitle = null;
             // 
             // grInvoiceTitleCustomer
             // 
@@ -816,9 +830,58 @@
             gdInvoicePayerAccount.RowTitle = "Bankas konts";
             gdInvoicePayerAccount.RowValueType = KlonsLIB.MySourceGrid.GridRows.EMyGridRowValueType.String;
             // 
+            // grInvoiceTitleOtherReferences
+            // 
+            grInvoiceTitleOtherReferences.Name = "grInvoiceTitleOtherReferences";
+            grInvoiceTitleOtherReferences.RowTitle = "Citas atsauces";
+            // 
+            // grInvoiceContractId
+            // 
+            grInvoiceContractId.AllowNull = true;
+            grInvoiceContractId.DataMember = "ContractDocumentReferenceId";
+            grInvoiceContractId.DataSource = bsInvoiceList;
+            grInvoiceContractId.EditorTemplateName = "grtLineTextBox";
+            grInvoiceContractId.GridPropertyName = "ContractDocumentReferenceId";
+            grInvoiceContractId.Name = "grInvoiceContractId";
+            grInvoiceContractId.RowTitle = "Līguma Nr.";
+            grInvoiceContractId.RowValueType = KlonsLIB.MySourceGrid.GridRows.EMyGridRowValueType.String;
+            // 
+            // grInvoiceOrderid
+            // 
+            grInvoiceOrderid.AllowNull = true;
+            grInvoiceOrderid.DataMember = "OrderReferenceId";
+            grInvoiceOrderid.DataSource = bsInvoiceList;
+            grInvoiceOrderid.EditorTemplateName = "grtLineTextBox";
+            grInvoiceOrderid.GridPropertyName = "OrderReferenceId";
+            grInvoiceOrderid.Name = "grInvoiceOrderid";
+            grInvoiceOrderid.RowTitle = "Pasūtijuma Nr.";
+            grInvoiceOrderid.RowValueType = KlonsLIB.MySourceGrid.GridRows.EMyGridRowValueType.String;
+            // 
+            // grInvoiceNewColumn3
+            // 
+            grInvoiceNewColumn3.CaptionColumnWidth = 100;
+            grInvoiceNewColumn3.Command = KlonsLIB.MySourceGrid.GridRows.EMyGridRowCommands.StartNewSection;
+            grInvoiceNewColumn3.DataColumnWidth = 100;
+            grInvoiceNewColumn3.Name = "grInvoiceNewColumn3";
+            grInvoiceNewColumn3.RowTitle = "";
+            // 
+            // grInvoiceTitleNote
+            // 
+            grInvoiceTitleNote.Name = "grInvoiceTitleNote";
+            grInvoiceTitleNote.RowTitle = "Piezīmes";
+            // 
+            // grInvoiceNote
+            // 
+            grInvoiceNote.AllowNull = true;
+            grInvoiceNote.DataMember = "Note";
+            grInvoiceNote.DataSource = bsInvoiceList;
+            grInvoiceNote.GridPropertyName = "Note";
+            grInvoiceNote.Name = "grInvoiceNote";
+            grInvoiceNote.RowSpan = 5;
+            grInvoiceNote.RowTitle = null;
+            // 
             // grtLineTextBox
             // 
-            grtLineTextBox.DataMember = null;
             grtLineTextBox.Name = "grtLineTextBox";
             grtLineTextBox.RowTitle = null;
             grtLineTextBox.RowValueType = KlonsLIB.MySourceGrid.GridRows.EMyGridRowValueType.String;
@@ -831,7 +894,7 @@
             dgvLines.AutoGenerateColumns = false;
             dgvLines.BackgroundColor = System.Drawing.SystemColors.Control;
             dgvLines.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvLines.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { dgcLineId, dgcLineItemName, dgcLineQuantity, dgcLineUnit, dgcLinePrice, dgcLineAllowanceCharge, dgcLineTotalAmountBeforeTax, dgcLineVatRate, dgcLineVatType, dgcLineTotalAmount });
+            dgvLines.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { dgcLineId, dgcLineItemId, dgcLineItemName, dgcLineQuantity, dgcLineUnit, dgcLinePrice, dgcLineAllowanceCharge, dgcLineTotalAmountBeforeTax, dgcLineVatRate, dgcLineVatType, dgcLineTotalAmount });
             dgvLines.DataSource = bsInvoiceLines;
             dgvLines.Dock = System.Windows.Forms.DockStyle.Fill;
             dgvLines.Location = new System.Drawing.Point(0, 0);
@@ -839,107 +902,8 @@
             dgvLines.ReadOnly = true;
             dgvLines.RowHeadersWidth = 30;
             dgvLines.RowTemplate.Height = 25;
-            dgvLines.Size = new System.Drawing.Size(782, 164);
+            dgvLines.Size = new System.Drawing.Size(1093, 162);
             dgvLines.TabIndex = 0;
-            // 
-            // dgcLineId
-            // 
-            dgcLineId.DataPropertyName = "ID";
-            dgcLineId.HeaderText = "ID";
-            dgcLineId.Name = "dgcLineId";
-            dgcLineId.ReadOnly = true;
-            dgcLineId.Width = 90;
-            // 
-            // dgcLineItemName
-            // 
-            dgcLineItemName.DataPropertyName = "ItemName";
-            dgcLineItemName.HeaderText = "nosaukums";
-            dgcLineItemName.Name = "dgcLineItemName";
-            dgcLineItemName.ReadOnly = true;
-            dgcLineItemName.Width = 200;
-            // 
-            // dgcLineQuantity
-            // 
-            dgcLineQuantity.DataPropertyName = "Quantity";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.BottomCenter;
-            dgcLineQuantity.DefaultCellStyle = dataGridViewCellStyle2;
-            dgcLineQuantity.HeaderText = "daudzums";
-            dgcLineQuantity.Name = "dgcLineQuantity";
-            dgcLineQuantity.ReadOnly = true;
-            dgcLineQuantity.Width = 80;
-            // 
-            // dgcLineUnit
-            // 
-            dgcLineUnit.DataPropertyName = "Unit";
-            dgcLineUnit.HeaderText = "mērv.";
-            dgcLineUnit.Name = "dgcLineUnit";
-            dgcLineUnit.ReadOnly = true;
-            dgcLineUnit.ToolTipText = "mērvienība";
-            dgcLineUnit.Width = 60;
-            // 
-            // dgcLinePrice
-            // 
-            dgcLinePrice.DataPropertyName = "Price";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.Format = "0.######";
-            dgcLinePrice.DefaultCellStyle = dataGridViewCellStyle3;
-            dgcLinePrice.HeaderText = "cena";
-            dgcLinePrice.Name = "dgcLinePrice";
-            dgcLinePrice.ReadOnly = true;
-            dgcLinePrice.Width = 80;
-            // 
-            // dgcLineAllowanceCharge
-            // 
-            dgcLineAllowanceCharge.DataPropertyName = "AllowanceCharge";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle4.Format = "N2";
-            dgcLineAllowanceCharge.DefaultCellStyle = dataGridViewCellStyle4;
-            dgcLineAllowanceCharge.HeaderText = "atlaide";
-            dgcLineAllowanceCharge.Name = "dgcLineAllowanceCharge";
-            dgcLineAllowanceCharge.ReadOnly = true;
-            dgcLineAllowanceCharge.Width = 80;
-            // 
-            // dgcLineTotalAmountBeforeTax
-            // 
-            dgcLineTotalAmountBeforeTax.DataPropertyName = "TotalAmountBeforeTax";
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle5.Format = "N2";
-            dgcLineTotalAmountBeforeTax.DefaultCellStyle = dataGridViewCellStyle5;
-            dgcLineTotalAmountBeforeTax.HeaderText = "suma";
-            dgcLineTotalAmountBeforeTax.Name = "dgcLineTotalAmountBeforeTax";
-            dgcLineTotalAmountBeforeTax.ReadOnly = true;
-            dgcLineTotalAmountBeforeTax.Width = 90;
-            // 
-            // dgcLineVatRate
-            // 
-            dgcLineVatRate.DataPropertyName = "VatRate";
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dgcLineVatRate.DefaultCellStyle = dataGridViewCellStyle6;
-            dgcLineVatRate.HeaderText = "PVN likme";
-            dgcLineVatRate.Name = "dgcLineVatRate";
-            dgcLineVatRate.ReadOnly = true;
-            dgcLineVatRate.Width = 60;
-            // 
-            // dgcLineVatType
-            // 
-            dgcLineVatType.DataPropertyName = "VatType";
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dgcLineVatType.DefaultCellStyle = dataGridViewCellStyle7;
-            dgcLineVatType.HeaderText = "PVN vaids";
-            dgcLineVatType.Name = "dgcLineVatType";
-            dgcLineVatType.ReadOnly = true;
-            dgcLineVatType.Width = 60;
-            // 
-            // dgcLineTotalAmount
-            // 
-            dgcLineTotalAmount.DataPropertyName = "TotalAmount";
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle8.Format = "N2";
-            dgcLineTotalAmount.DefaultCellStyle = dataGridViewCellStyle8;
-            dgcLineTotalAmount.HeaderText = "kopā ar PVN";
-            dgcLineTotalAmount.Name = "dgcLineTotalAmount";
-            dgcLineTotalAmount.ReadOnly = true;
-            dgcLineTotalAmount.Width = 90;
             // 
             // bsInvoiceLines
             // 
@@ -951,7 +915,7 @@
             tpErrors.Location = new System.Drawing.Point(4, 25);
             tpErrors.Name = "tpErrors";
             tpErrors.Padding = new System.Windows.Forms.Padding(3);
-            tpErrors.Size = new System.Drawing.Size(788, 299);
+            tpErrors.Size = new System.Drawing.Size(881, 299);
             tpErrors.TabIndex = 3;
             tpErrors.Text = "Kļūdas";
             tpErrors.UseVisualStyleBackColor = true;
@@ -963,7 +927,7 @@
             tbErrors.Dock = System.Windows.Forms.DockStyle.Fill;
             tbErrors.Location = new System.Drawing.Point(3, 3);
             tbErrors.Name = "tbErrors";
-            tbErrors.Size = new System.Drawing.Size(782, 293);
+            tbErrors.Size = new System.Drawing.Size(875, 293);
             tbErrors.TabIndex = 0;
             tbErrors.Text = "";
             // 
@@ -985,7 +949,7 @@
             tpSendPerEmail.Location = new System.Drawing.Point(4, 25);
             tpSendPerEmail.Name = "tpSendPerEmail";
             tpSendPerEmail.Padding = new System.Windows.Forms.Padding(3);
-            tpSendPerEmail.Size = new System.Drawing.Size(788, 299);
+            tpSendPerEmail.Size = new System.Drawing.Size(881, 299);
             tpSendPerEmail.TabIndex = 4;
             tpSendPerEmail.Text = "Sūtīt pa e-pastu";
             tpSendPerEmail.UseVisualStyleBackColor = true;
@@ -1203,7 +1167,7 @@
             tpSettings.Location = new System.Drawing.Point(4, 25);
             tpSettings.Name = "tpSettings";
             tpSettings.Padding = new System.Windows.Forms.Padding(3);
-            tpSettings.Size = new System.Drawing.Size(788, 299);
+            tpSettings.Size = new System.Drawing.Size(881, 299);
             tpSettings.TabIndex = 2;
             tpSettings.Text = "Iestatijumi";
             tpSettings.UseVisualStyleBackColor = true;
@@ -1325,11 +1289,130 @@
             tbSettingsFileFolder.TabIndex = 0;
             tbSettingsFileFolder.ButtonClicked += tbSettingsFileFolder_ButtonClicked;
             // 
+            // dgcLineId
+            // 
+            dgcLineId.DataPropertyName = "ID";
+            dgcLineId.HeaderText = "id";
+            dgcLineId.Name = "dgcLineId";
+            dgcLineId.ReadOnly = true;
+            dgcLineId.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            dgcLineId.ToolTipText = "rēķina rindas identifikators";
+            dgcLineId.Width = 40;
+            // 
+            // dgcLineItemId
+            // 
+            dgcLineItemId.DataPropertyName = "ItemId";
+            dgcLineItemId.HeaderText = "artikuls";
+            dgcLineItemId.Name = "dgcLineItemId";
+            dgcLineItemId.ReadOnly = true;
+            dgcLineItemId.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            dgcLineItemId.Width = 120;
+            // 
+            // dgcLineItemName
+            // 
+            dgcLineItemName.DataPropertyName = "ItemName";
+            dgcLineItemName.HeaderText = "nosaukums";
+            dgcLineItemName.Name = "dgcLineItemName";
+            dgcLineItemName.ReadOnly = true;
+            dgcLineItemName.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            dgcLineItemName.Width = 200;
+            // 
+            // dgcLineQuantity
+            // 
+            dgcLineQuantity.DataPropertyName = "Quantity";
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.BottomCenter;
+            dgcLineQuantity.DefaultCellStyle = dataGridViewCellStyle2;
+            dgcLineQuantity.HeaderText = "daudzums";
+            dgcLineQuantity.Name = "dgcLineQuantity";
+            dgcLineQuantity.ReadOnly = true;
+            dgcLineQuantity.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            dgcLineQuantity.Width = 80;
+            // 
+            // dgcLineUnit
+            // 
+            dgcLineUnit.DataPropertyName = "Unit";
+            dgcLineUnit.HeaderText = "mērv.";
+            dgcLineUnit.Name = "dgcLineUnit";
+            dgcLineUnit.ReadOnly = true;
+            dgcLineUnit.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            dgcLineUnit.ToolTipText = "mērvienība";
+            dgcLineUnit.Width = 60;
+            // 
+            // dgcLinePrice
+            // 
+            dgcLinePrice.DataPropertyName = "Price";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.Format = "0.######";
+            dgcLinePrice.DefaultCellStyle = dataGridViewCellStyle3;
+            dgcLinePrice.HeaderText = "cena";
+            dgcLinePrice.Name = "dgcLinePrice";
+            dgcLinePrice.ReadOnly = true;
+            dgcLinePrice.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            dgcLinePrice.Width = 80;
+            // 
+            // dgcLineAllowanceCharge
+            // 
+            dgcLineAllowanceCharge.DataPropertyName = "AllowanceCharge";
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle4.Format = "N2";
+            dgcLineAllowanceCharge.DefaultCellStyle = dataGridViewCellStyle4;
+            dgcLineAllowanceCharge.HeaderText = "atlaide";
+            dgcLineAllowanceCharge.Name = "dgcLineAllowanceCharge";
+            dgcLineAllowanceCharge.ReadOnly = true;
+            dgcLineAllowanceCharge.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            dgcLineAllowanceCharge.Width = 80;
+            // 
+            // dgcLineTotalAmountBeforeTax
+            // 
+            dgcLineTotalAmountBeforeTax.DataPropertyName = "TotalAmountBeforeTax";
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle5.Format = "N2";
+            dgcLineTotalAmountBeforeTax.DefaultCellStyle = dataGridViewCellStyle5;
+            dgcLineTotalAmountBeforeTax.HeaderText = "summa";
+            dgcLineTotalAmountBeforeTax.Name = "dgcLineTotalAmountBeforeTax";
+            dgcLineTotalAmountBeforeTax.ReadOnly = true;
+            dgcLineTotalAmountBeforeTax.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            dgcLineTotalAmountBeforeTax.Width = 90;
+            // 
+            // dgcLineVatRate
+            // 
+            dgcLineVatRate.DataPropertyName = "VatRate";
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dgcLineVatRate.DefaultCellStyle = dataGridViewCellStyle6;
+            dgcLineVatRate.HeaderText = "PVN likme";
+            dgcLineVatRate.Name = "dgcLineVatRate";
+            dgcLineVatRate.ReadOnly = true;
+            dgcLineVatRate.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            dgcLineVatRate.Width = 90;
+            // 
+            // dgcLineVatType
+            // 
+            dgcLineVatType.DataPropertyName = "VatType";
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dgcLineVatType.DefaultCellStyle = dataGridViewCellStyle7;
+            dgcLineVatType.HeaderText = "PVN vaids";
+            dgcLineVatType.Name = "dgcLineVatType";
+            dgcLineVatType.ReadOnly = true;
+            dgcLineVatType.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            dgcLineVatType.Width = 90;
+            // 
+            // dgcLineTotalAmount
+            // 
+            dgcLineTotalAmount.DataPropertyName = "TotalAmount";
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle8.Format = "N2";
+            dgcLineTotalAmount.DefaultCellStyle = dataGridViewCellStyle8;
+            dgcLineTotalAmount.HeaderText = "kopā ar PVN";
+            dgcLineTotalAmount.Name = "dgcLineTotalAmount";
+            dgcLineTotalAmount.ReadOnly = true;
+            dgcLineTotalAmount.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            dgcLineTotalAmount.Width = 99;
+            // 
             // Form_EInvoiceManager
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            ClientSize = new System.Drawing.Size(796, 328);
+            ClientSize = new System.Drawing.Size(1107, 328);
             Controls.Add(tcTabs);
             Margin = new System.Windows.Forms.Padding(2);
             Name = "Form_EInvoiceManager";
@@ -1422,16 +1505,6 @@
         private System.Windows.Forms.TextBox tbFilterInvoices;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ToolStripButton tsbShowRealInvoice;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgcLineId;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgcLineItemName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgcLineQuantity;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgcLineUnit;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgcLinePrice;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgcLineAllowanceCharge;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgcLineTotalAmountBeforeTax;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgcLineVatRate;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgcLineVatType;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgcLineTotalAmount;
         private System.Windows.Forms.Label lbEmailPasswordStatuss;
         private System.Windows.Forms.TextBox tbSettingsEmail;
         private System.Windows.Forms.Label label5;
@@ -1479,5 +1552,22 @@
         private KlonsLIB.MySourceGrid.GridRows.MyGridRowTitle grInvoiceTitleBillingReference;
         private KlonsLIB.MySourceGrid.GridRows.MyGridRowTextBoxA grInvoiceBillingReferenceDate;
         private KlonsLIB.MySourceGrid.GridRows.MyGridRowTextBoxA grInvoiceBillingReferenceId;
+        private KlonsLIB.MySourceGrid.GridRows.MyGridRowCommand grInvoiceNewColumn3;
+        private KlonsLIB.MySourceGrid.GridRows.MyGridRowMultiLineTextBox grInvoiceNote;
+        private KlonsLIB.MySourceGrid.GridRows.MyGridRowTitle grInvoiceTitleOtherReferences;
+        private KlonsLIB.MySourceGrid.GridRows.MyGridRowTextBoxA grInvoiceContractId;
+        private KlonsLIB.MySourceGrid.GridRows.MyGridRowTextBoxA grInvoiceOrderid;
+        private KlonsLIB.MySourceGrid.GridRows.MyGridRowTitle grInvoiceTitleNote;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgcLineId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgcLineItemId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgcLineItemName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgcLineQuantity;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgcLineUnit;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgcLinePrice;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgcLineAllowanceCharge;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgcLineTotalAmountBeforeTax;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgcLineVatRate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgcLineVatType;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgcLineTotalAmount;
     }
 }

@@ -1,18 +1,19 @@
-﻿using System;
-using System.IO;
-using System.Text;
-using System.Collections.Generic;
-using System.Linq;
-using System.Windows.Forms;
-using DataObjectsEI;
+﻿using DataObjectsEI;
 using KlonsF.Classes;
+using KlonsLIB;
 using KlonsLIB.Forms;
 using KlonsLIB.Misc;
-using System.ComponentModel;
-using UblSharp;
-using System.Xml;
-using System.Diagnostics;
 using KlonsM.Classes;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Windows.Forms;
+using System.Xml;
+using UblSharp;
 
 namespace KlonsM.FormsEI
 {
@@ -40,8 +41,7 @@ namespace KlonsM.FormsEI
             sgrInvoice.MakeGrid2();
             sgrInvoice.LinkGrid();
             int h = 0;
-            for (int i = 0; i < sgrInvoice.RowsCount; i++)
-                h += sgrInvoice.Rows[i].Height;
+            h = sgrInvoice.Rows.Take(grInvoiceNote.RowNr).Sum(x => x.Height);
             mySplitContainer1.SplitterDistance = h + SystemInformation.HorizontalScrollBarHeight + 6;
             sgrInvoice.ClipboardMode = SourceGrid.ClipboardMode.Copy;
             //grDocPVNType.DataCell.View.WordWrap = true;
@@ -60,6 +60,7 @@ namespace KlonsM.FormsEI
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
             MyData.SaveSettings();
+            MyData.Params.Save();
         }
 
         string EncryptedEmailPassword = null;
@@ -109,6 +110,7 @@ namespace KlonsM.FormsEI
             MyData.Params.EInvoiceSenderEmailServerPort = port;
             MyData.Params.EInvoiceSenderEmail = tbSettingsEmail.Text;
             MyData.Params.EInvoiceSenderEmailPassword = EncryptedEmailPassword;
+            MyData.Params.Save();
             MyData.SaveSettings();
         }
 
@@ -410,6 +412,7 @@ namespace KlonsM.FormsEI
                     invoiceview.ReadFrom(invoice);
                 else
                     invoiceview.ReadFrom(creditnote);
+                AdjustLineUnits(invoiceview);
                 invoiceview.ValidationMessage = "Ok";
                 return true;
             }
@@ -418,6 +421,20 @@ namespace KlonsM.FormsEI
                 invoiceview.ValidationMessage = "Neizdevās nolasīt rēķina datus no faila.";
                 AddFileError(invoiceview.FileName, invoiceview.SubFolderName, invoiceview.ValidationMessage);
                 return false;
+            }
+        }
+
+        public void AdjustLineUnits(InvoiceView invoice)
+        {
+            if (invoice == null || invoice.InvoiceLines.Count == 0) return;
+            var table_units = MyData.DataSetKlonsM.M_UNITS;
+            foreach(var line in invoice.InvoiceLines)
+            {
+                var code2 = line.Unit;
+                if (code2.IsNOE()) continue;
+                var dr_units = table_units.FirstOrDefault(x => x.CODE2 == code2);
+                if (dr_units == null) return;
+                line.Unit = dr_units.CODE;
             }
         }
 

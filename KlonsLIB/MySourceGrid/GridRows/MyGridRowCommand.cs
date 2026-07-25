@@ -10,7 +10,7 @@ namespace KlonsLIB.MySourceGrid.GridRows
 {
     public enum EMyGridRowCommands
     {
-        None, StartNewColumn
+        None, StartNewColumn, StartNewSection
     }
 
     public class MyGridRowCommand : MyGridRowBase

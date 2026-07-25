@@ -39,25 +39,25 @@ public static class EInvoiceTools
         topInvoice.ID = $"{dr_doc.SR} {dr_doc.NR}".Trim().Zn(); ;
         topInvoice.CustomizationID = "urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0";
         topInvoice.ProfileID = "urn:fdc:peppol.eu:2017:poacc:billing:01:1.0";
-        topInvoice.IssueDate = new DateType()
-        {
-            Value = dr_doc.DT
-        };
-        topInvoice.DueDate = new DateType()
-        {
-            Value = dr_doc.IsDUEDATENull() ? DateTime.Today : dr_doc.DUEDATE
-        };
-        topInvoice.InvoiceTypeCode = new CodeType()
-        {
-            Value = "380"
-        };
+        topInvoice.IssueDate = dr_doc.DT;
+        topInvoice.DueDate = dr_doc.IsDUEDATENull() ? DateTime.Today : dr_doc.DUEDATE;
+        topInvoice.InvoiceTypeCode = "380";
         topInvoice.BuyerReference = partner.REGNR;
-        topInvoice.DocumentCurrencyCode = new CodeType()
-        {
-            Value = "EUR"
-        };
+        topInvoice.DocumentCurrencyCode = "EUR";
 
         topInvoice.Note = null;
+
+        if (!dr_doc.CREDDOCNR.IsNOE())
+        {
+            topInvoice.BillingReference = new List<BillingReferenceType>{new()
+            {
+                InvoiceDocumentReference = new DocumentReferenceType()
+                {
+                    ID = $"{dr_doc.CREDDOCSR} {dr_doc.CREDDOCNR}".Trim().Zn(),
+                    IssueDate = dr_doc.CREDDOCDT
+                }
+            }};
+        }
 
         topInvoice.AccountingSupplierParty = MakeSupplierParty(is_vat_payer);
         topInvoice.AccountingCustomerParty = MakeCustomerParty(partner);
@@ -74,13 +74,17 @@ public static class EInvoiceTools
         {
             List<InvoiceLineType> invoiceLineList = new List<InvoiceLineType>();
 
-            foreach (var line in dr_doc.GetM_ROWSRows())
+            int i = 0;
+            var drs = dr_doc.GetM_ROWSRows().OrderBy(x => x.IDSEQ).ThenBy(x => x.ID);
+            foreach (var line in drs)
             {
+                i++;
                 var dr_item = line.M_ITEMSRow;
                 string currentVatCategory = GetVATCategeoryId(line, is_vat_payer);
                 InvoiceLineType invoiceLine = new InvoiceLineType();
 
-                invoiceLine.ID = line.ID.ToString();
+                invoiceLine.ID = i.ToString();
+                //invoiceLine.ID = line.ID.ToString();
                 invoiceLine.Item = MakeItem();
                 invoiceLine.Item.ClassifiedTaxCategory = [MakeItemTaxCategory()];
                 invoiceLine.InvoicedQuantity = MakeQuantity();
@@ -111,10 +115,7 @@ public static class EInvoiceTools
                     PercentType percent = null;
                     if (!(currentVatCategory == "O"))
                     {
-                        percent = new PercentType()
-                        {
-                            Value = line.M_PVNRATESRow.RATE
-                        };
+                        percent = line.M_PVNRATESRow.RATE;
                     }
                     taxCategory.Percent = percent;
                     taxCategory.TaxScheme = new TaxSchemeType
@@ -266,33 +267,24 @@ public static class EInvoiceTools
         topCreditNote.ID = $"{dr_doc.SR} {dr_doc.NR}".Trim().Zn();
         topCreditNote.CustomizationID = "urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0";
         topCreditNote.ProfileID = "urn:fdc:peppol.eu:2017:poacc:billing:01:1.0";
-        topCreditNote.IssueDate = new DateType()
-        {
-            Value = dr_doc.DT
-        };
-        topCreditNote.CreditNoteTypeCode = new CodeType()
-        {
-            Value = "381"
-        };
+        topCreditNote.IssueDate = dr_doc.DT;
+        topCreditNote.CreditNoteTypeCode = "381";
         topCreditNote.BuyerReference = partner.REGNR;
-        topCreditNote.DocumentCurrencyCode = new CodeType()
-        {
-            Value = "EUR"
-        };
+        topCreditNote.DocumentCurrencyCode = "EUR";
 
         topCreditNote.Note = null;
 
-        topCreditNote.BillingReference = new List<BillingReferenceType>
+        if (!dr_doc.CREDDOCNR.IsNOE())
         {
-            new()
+            topCreditNote.BillingReference = new List<BillingReferenceType>{new()
             {
                 InvoiceDocumentReference = new DocumentReferenceType()
                 {
                     ID = $"{dr_doc.CREDDOCSR} {dr_doc.CREDDOCNR}".Trim().Zn(),
                     IssueDate = dr_doc.CREDDOCDT
                 }
-            }
-        };
+            }};
+        }
 
         topCreditNote.AccountingSupplierParty = MakeSupplierParty(is_vat_payer);
         topCreditNote.AccountingCustomerParty = MakeCustomerParty(partner);
@@ -309,13 +301,17 @@ public static class EInvoiceTools
         {
             List<CreditNoteLineType> creditNoteLineList = new List<CreditNoteLineType>();
 
-            foreach (var line in dr_doc.GetM_ROWSRows())
+            int i = 0;
+            var drs = dr_doc.GetM_ROWSRows().OrderBy(x => x.IDSEQ).ThenBy(x => x.ID);
+            foreach (var line in drs)
             {
+                i++;
                 var dr_item = line.M_ITEMSRow;
                 string currentVatCategory = GetVATCategeoryId(line, is_vat_payer);
                 CreditNoteLineType creditNoteLine = new CreditNoteLineType();
 
-                creditNoteLine.ID = line.ID.ToString();
+                creditNoteLine.ID = i.ToString();
+                //creditNoteLine.ID = line.ID.ToString();
                 creditNoteLine.Item = MakeItem();
                 creditNoteLine.Item.ClassifiedTaxCategory = [MakeItemTaxCategory()];
                 creditNoteLine.CreditedQuantity = MakeQuantity();
@@ -346,10 +342,7 @@ public static class EInvoiceTools
                     PercentType percent = null;
                     if (!(currentVatCategory == "O"))
                     {
-                        percent = new PercentType()
-                        {
-                            Value = line.M_PVNRATESRow.RATE
-                        };
+                        percent = line.M_PVNRATESRow.RATE;
                     }
                     taxCategory.Percent = percent;
                     taxCategory.TaxScheme = new TaxSchemeType
@@ -398,10 +391,7 @@ public static class EInvoiceTools
 
                     var allowanceChargeList = new List<AllowanceChargeType>();
                     AllowanceChargeType allowanceCharge = new AllowanceChargeType();
-                    allowanceCharge.AllowanceChargeReasonCode = new CodeType()
-                    {
-                        Value = "95"
-                    };
+                    allowanceCharge.AllowanceChargeReasonCode = "95";
                     allowanceCharge.ChargeIndicator = line.DISCOUNT > 0f;
                     allowanceCharge.BaseAmount = new AmountType()
                     {

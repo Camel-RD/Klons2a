@@ -306,28 +306,56 @@ namespace KlonsLIB.MySourceGrid
                 rowdef.MakeTemplateRow(this);
             }
 
-            int rowscount = 0;
-            int rowscount2 = 0;
+            int rowcount_total = 0;
+            int rowcount_block = 0;
+            int rownr_sectionstart = 0;
+            int columnount_total = 0;
+            int columnount_section = 0;
+            List<int> sections_rowcount = [];
+            List<int> sections_firstrownr = [0];
 
             for (int i = 0; i < gridRowList.Count; i++)
             {
                 var gridrow = gridRowList[i];
-                if (gridrow is MyGridRowCommand grcm &&
-                    grcm.Command == EMyGridRowCommands.StartNewColumn)
+                if (gridrow is MyGridRowCommand grcm)
                 {
-                    if (rowscount < rowscount2) rowscount = rowscount2;
-                    rowscount2 = 0;
+                    if (grcm.Command == EMyGridRowCommands.StartNewColumn)
+                    {
+                        if (rowcount_total < rowcount_block) rowcount_total = rowcount_block;
+                        rowcount_block = rownr_sectionstart;
+                        columnount_section += 3;
+                        if (columnount_total < columnount_section) columnount_total = columnount_section;
+                    }
+                    if (grcm.Command == EMyGridRowCommands.StartNewSection)
+                    {
+                        rowcount_block++;
+                        if (rowcount_total < rowcount_block) rowcount_total = rowcount_block;
+                        sections_rowcount.Add(rowcount_total - rownr_sectionstart);
+                        sections_firstrownr.Add(rowcount_total);
+                        rowcount_block = rowcount_total;
+                        rownr_sectionstart = rowcount_total;
+                        columnount_section = 0;
+                    }
                 }
                 else
                 {
-                    rowscount2 += gridrow.GetRowCount();
+                    if (columnount_section == 0) columnount_section = 3;
+                    if (columnount_total == 0) columnount_total = 3;
+                    rowcount_block += gridrow.GetRowCount();
                 }
             }
-            if (rowscount < rowscount2) rowscount = rowscount2;
-            this.RowsCount = rowscount;
+            if (rowcount_total < rowcount_block) rowcount_total = rowcount_block;
+            sections_rowcount.Add(rowcount_total - rownr_sectionstart);
+
+            this.RowsCount = rowcount_total;
+            this.ColumnsCount = columnount_total;
 
             int rownr = 0;
             int colnr = 0;
+            int sectionnr = 0;
+            int[] columnwidths = new int[columnount_total];
+            Array.Fill(columnwidths, -1);
+
             for (int i = 0; i < gridRowList.Count; i++)
             {
                 var rowdef = gridRowList[i];
@@ -335,20 +363,42 @@ namespace KlonsLIB.MySourceGrid
                 {
                     if (grcommand.Command == EMyGridRowCommands.StartNewColumn)
                     {
-                        rownr = 0;
+                        rownr = sections_firstrownr[sectionnr];
                         colnr += 3;
-                        if (grcommand.SetColumnWidth)
-                        {
-                            if (grcommand.CaptionColumnWidth != -1)
-                                captioncolumnwidth = grcommand.CaptionColumnWidth;
-                            if (grcommand.DataColumnWidth != -1)
-                                datalumnwidth = grcommand.DataColumnWidth;
-                        }
-                        this.ColumnsCount += 3;
-                        this.Columns[colnr - 1].Width = ColumnWidth1;
-                        this.Columns[colnr].Width = captioncolumnwidth;
-                        this.Columns[colnr + 1].Width = datalumnwidth;
                     }
+                    if (grcommand.Command == EMyGridRowCommands.StartNewSection)
+                    {
+                        sectionnr++;
+                        rownr = sections_firstrownr[sectionnr];
+                        colnr = 0;
+                        if (rownr > 0)
+                            this.Rows[rownr - 1].Height = ColumnWidth1;
+                    }
+
+                    if (grcommand.SetColumnWidth)
+                    {
+                        if (grcommand.CaptionColumnWidth != -1)
+                            captioncolumnwidth = grcommand.CaptionColumnWidth;
+                        if (grcommand.DataColumnWidth != -1)
+                            datalumnwidth = grcommand.DataColumnWidth;
+                    }
+
+                    if (colnr > 0 && columnwidths[colnr - 1] == -1)
+                    {
+                        this.Columns[colnr - 1].Width = ColumnWidth1;
+                        columnwidths[colnr - 1] = ColumnWidth1;
+                    }
+                    if (columnwidths[colnr] == -1)
+                    {
+                        this.Columns[colnr].Width = captioncolumnwidth;
+                        columnwidths[colnr] = captioncolumnwidth;
+                    }
+                    if (columnwidths[colnr + 1] == -1)
+                    {
+                        this.Columns[colnr + 1].Width = datalumnwidth;
+                        columnwidths[colnr + 1] = datalumnwidth;
+                    }
+
                     rowdef.RowNr = rownr;
                 }
                 else

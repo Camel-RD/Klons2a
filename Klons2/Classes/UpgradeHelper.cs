@@ -23,7 +23,7 @@ namespace KlonsF.Classes
         }
 
         private static string[] dbversions =
-            new string[] { "003", "012", "023", "024", "027", "035", "042", "044" };
+            new string[] { "003", "012", "023", "024", "027", "035", "042", "044", "045" };
 
         public static bool HasUpgrade(string db_ver, string app_ver)
         {

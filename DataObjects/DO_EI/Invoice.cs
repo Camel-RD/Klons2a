@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using UblSharp;
 using UblSharp.CommonAggregateComponents;
 using NotyfyProp;
+using UblSharp.UnqualifiedDataTypes;
 
 namespace DataObjectsEI
 {
@@ -29,7 +30,8 @@ namespace DataObjectsEI
         public string Note { get; set; }
         public string BillingReferenceId { get; set; }
         public DateTime? BillingReferenceIssueDate { get; set; }
-
+        public string ContractDocumentReferenceId { get; set; }
+        public string OrderReferenceId { get; set; }
         public string CurrencyCode { get; set; }
         public string SupplierName { get; set; }
         public string SupplierAddress { get; set; }
@@ -52,22 +54,29 @@ namespace DataObjectsEI
             DocType = "Rēķins";
             ID = invoice.ID;
             IssueDate = invoice.IssueDate;
-            DueDate = invoice.DueDate;
+            DueDate = FromDateType(invoice.DueDate);
             Note = invoice.Note.Any() ?
                 invoice.Note.Select(x => x.Value).Aggregate((x1, x2) => x1 + "; " + x2) :
                 null;
             CurrencyCode = invoice.DocumentCurrencyCode.Value;
 
-            BillingReferenceId = invoice.BillingReference?.FirstOrDefault()?.InvoiceDocumentReference?.ID;
-            BillingReferenceIssueDate = invoice.BillingReference?.FirstOrDefault()?.InvoiceDocumentReference?.IssueDate;
+            BillingReferenceId = invoice.BillingReference?.FirstOrDefault()?.InvoiceDocumentReference?.ID?.Value;
+            BillingReferenceIssueDate = FromDateType(invoice.BillingReference?.FirstOrDefault()?.InvoiceDocumentReference?.IssueDate);
+
             if (!string.IsNullOrEmpty(BillingReferenceId))
                 DocType = "Koriģējošs rēķins";
 
-            PayerFinancialAccountID = invoice.PaymentMeans?.FirstOrDefault()?.PayerFinancialAccount?.ID;
-            PayeeFinancialAccountID = invoice.PaymentMeans?.FirstOrDefault()?.PayeeFinancialAccount?.ID;
+            ContractDocumentReferenceId = invoice.ContractDocumentReference?.FirstOrDefault()?.ID?.Value;
+            OrderReferenceId = invoice.OrderReference?.ID?.Value;
+
+            var paymentMeans = invoice.PaymentMeans?.FirstOrDefault();
+            PayeeFinancialAccountID = paymentMeans?.PayeeFinancialAccount?.ID?.Value;
+            PayerFinancialAccountID = paymentMeans?.PayerFinancialAccount?.ID?.Value;
+            if (PayerFinancialAccountID is null)
+                PayerFinancialAccountID = paymentMeans?.PaymentMandate?.PayerFinancialAccount?.ID?.Value;
 
             SupplierName = invoice.AccountingSupplierParty.Party.PartyName.FirstOrDefault()?.Name;
-            SupplierID = invoice.AccountingSupplierParty.Party.PartyIdentification.FirstOrDefault()?.ID;
+            SupplierID = invoice.AccountingSupplierParty.Party.PartyIdentification.FirstOrDefault()?.ID?.Value;
             SupplierEndpointID = invoice.AccountingSupplierParty.Party.EndpointID.Value;
             var address = invoice.AccountingSupplierParty.Party.PostalAddress;
             SupplierAddress = FormatAddress(address);
@@ -102,21 +111,27 @@ namespace DataObjectsEI
                 null;
             CurrencyCode = creditnote.DocumentCurrencyCode.Value;
 
-            BillingReferenceId = creditnote.BillingReference?.FirstOrDefault()?.InvoiceDocumentReference?.ID;
-            BillingReferenceIssueDate = creditnote.BillingReference?.FirstOrDefault()?.InvoiceDocumentReference?.IssueDate;
+            BillingReferenceId = creditnote.BillingReference?.FirstOrDefault()?.InvoiceDocumentReference?.ID?.Value;
+            BillingReferenceIssueDate = FromDateType(creditnote.BillingReference?.FirstOrDefault()?.InvoiceDocumentReference?.IssueDate);
 
-            PayerFinancialAccountID = creditnote.PaymentMeans?.FirstOrDefault()?.PayerFinancialAccount?.ID;
-            PayeeFinancialAccountID = creditnote.PaymentMeans?.FirstOrDefault()?.PayeeFinancialAccount?.ID;
+            ContractDocumentReferenceId = creditnote.ContractDocumentReference?.FirstOrDefault()?.ID?.Value;
+            OrderReferenceId = creditnote.OrderReference?.ID?.Value;
+
+            var paymentMeans = creditnote.PaymentMeans?.FirstOrDefault();
+            PayeeFinancialAccountID = paymentMeans?.PayeeFinancialAccount?.ID?.Value;
+            PayerFinancialAccountID = paymentMeans?.PayerFinancialAccount?.ID?.Value;
+            if (PayerFinancialAccountID is null)
+                PayerFinancialAccountID = paymentMeans?.PaymentMandate?.PayerFinancialAccount?.ID?.Value;
 
             SupplierName = creditnote.AccountingSupplierParty.Party.PartyName.FirstOrDefault()?.Name;
-            SupplierID = creditnote.AccountingSupplierParty.Party.PartyIdentification.FirstOrDefault()?.ID;
+            SupplierID = creditnote.AccountingSupplierParty.Party.PartyIdentification.FirstOrDefault()?.ID?.Value;
             SupplierEndpointID = creditnote.AccountingSupplierParty.Party.EndpointID.Value;
             var address = creditnote.AccountingSupplierParty.Party.PostalAddress;
             SupplierAddress = FormatAddress(address);
             SupplierAddressCountry = address.Country.IdentificationCode;
 
             CustomerName = creditnote.AccountingCustomerParty.Party.PartyName.FirstOrDefault()?.Name;
-            CustomerID = creditnote.AccountingCustomerParty.Party.PartyIdentification.FirstOrDefault()?.ID;
+            CustomerID = creditnote.AccountingCustomerParty.Party.PartyIdentification.FirstOrDefault()?.ID?.Value;
             CustomerEndpointID = creditnote.AccountingCustomerParty.Party.EndpointID.Value;
             address = creditnote.AccountingCustomerParty.Party.PostalAddress;
             CustomerAddress = FormatAddress(address);
@@ -145,6 +160,9 @@ namespace DataObjectsEI
             BillingReferenceId = invoice.BillingReferenceId;
             BillingReferenceIssueDate = invoice.BillingReferenceIssueDate;
 
+            ContractDocumentReferenceId = invoice.ContractDocumentReferenceId;
+            OrderReferenceId = invoice.OrderReferenceId;
+
             PayerFinancialAccountID = invoice.PayerFinancialAccountID;
             PayeeFinancialAccountID = invoice.PayeeFinancialAccountID;
 
@@ -168,6 +186,12 @@ namespace DataObjectsEI
             InvoiceLines.Clear();
             foreach (var line in invoice.InvoiceLines)
                 InvoiceLines.Add(line);
+        }
+
+        static DateTime? FromDateType(DateType dt)
+        {
+            if (dt is null) return null;
+            return dt.Value.LocalDateTime;
         }
 
         string FormatAddress(AddressType address)
