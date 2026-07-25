@@ -1,0 +1,10 @@
+v2026.07.#04
+
+	Noliktava:
+		Pievienoti noliktavas dokumentu veidi
+		Kredītrēķina pazīme ir rediģējama rēķiniem
+	E-rēķini:
+		Pievienots CreditNote eksports
+		Pievienots koriģējošo rēķinu eksports iekļaujot sākotnējā rēķina datus
+		Papildināts e-rēķinu pārlūks ar papildus attēlojamajiem laukiem
+
