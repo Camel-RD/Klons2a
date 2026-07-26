@@ -1,0 +1,11 @@
+UPDATE OR INSERT INTO F_ACPVN (ID, NM, T, PZ1, PZ2, PZ2A, PZ3, PZ4, PZ5) 
+VALUES ('119', 'Sniegtie pakalpojumi citās Eiropas Savienības dalībvalstīs (dekl. 48.2)', 0, 'P', 15, 0, 72, 1, 0);
+
+UPDATE F_ACPVN
+SET NM = 'Citās valstīs veiktie darījumi (dekl. 48.2)', PZ4 = 1
+WHERE (ID = '118');
+
+
+UPDATE Params
+SET PVALUE = '046'
+WHERE PNAME = 'version';

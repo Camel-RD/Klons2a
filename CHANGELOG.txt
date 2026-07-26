@@ -1,3 +1,11 @@
+v2026.07.#05
+
+	PVN:
+		Pievienota PVN pazīme 119 - Sniegtie pakalpojumi citās Eiropas Savienības dalībvalstīs (dekl. 48.2)
+		PVN deklarācijas tabulas skatā bijas samainītas vietām 48.1 un 48.2 vērtības
+	Datu ievade tabulās:
+		Mēģinājums saglabāt fokusu uz rediģējamās rindas pēc tabulas rindu auto-kārtošanas (sorting).
+
 v2026.07.#04
 
 	Noliktava:

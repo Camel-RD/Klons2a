@@ -165,18 +165,21 @@ namespace KlonsF.Forms
 
             if (!UpgradeHelper.HasUpgrade(dbver, MyData.Version)) return (false, true);
 
-            var ret = MyMessageBox.Show(
-                "Nepieciešams veikt datu bāzes versijas aktualizāciju.\n" +
-                "Pirms to darīt, ieteicams aizvērt programmu un\n" +
-                "izveidot datu rezerves kopiju.\n\n" +
-                "Vai sākt datu bāzes aktualizāciju?"
-                , "Jauna versija!",
-                MessageBoxButtons.YesNo,
-                MessageBoxIcon.Warning,
-                MessageBoxDefaultButton.Button2,
-                MyMainForm);
+            if (!UpgradeHelper.IsSilentUpgrade(dbver, MyData.Version))
+            {
+                var ret = MyMessageBox.Show(
+                    "Nepieciešams veikt datu bāzes versijas aktualizāciju.\n" +
+                    "Pirms to darīt, ieteicams aizvērt programmu un\n" +
+                    "izveidot datu rezerves kopiju.\n\n" +
+                    "Vai sākt datu bāzes aktualizāciju?"
+                    , "Jauna versija!",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Warning,
+                    MessageBoxDefaultButton.Button2,
+                    MyMainForm);
 
-            if (ret != DialogResult.Yes) return (true, false);
+                if (ret != DialogResult.Yes) return (true, false);
+            }
 
             var dbfilename = MyData.GetFileName(MyData.CurrentDBTag);
             if (!skipbackup)

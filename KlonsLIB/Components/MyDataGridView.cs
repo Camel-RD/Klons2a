@@ -599,6 +599,11 @@ namespace KlonsLIB.Components
             ClearSelection();
         }
 
+        protected override void OnRowValidated(DataGridViewCellEventArgs e)
+        {
+            base.OnRowValidated(e);
+        }
+
         public bool EndEditX()
         {
             if (!EndEdit()) return false;
@@ -625,15 +630,27 @@ namespace KlonsLIB.Components
         }
 
 
-
-
         private const int WM_CHAR = 0x0102;
 
         protected override void OnValidating(CancelEventArgs e)
         {
             if (GoingToDialog) return;
+
+            var bs = DataSource as BindingSource;
+            object cr = null;
+            if (bs != null && CurrentRow != null && !CurrentRow.IsNewRow && bs.Current != null) 
+                cr = bs.Current;
+
             base.OnValidating(e);
+
+            if (cr != null && bs?.Current != null && bs?.Current != cr)
+            {
+                int crk = bs.IndexOf(cr);
+                if (crk > -1)
+                    bs.Position = crk;
+            }
         }
+
         protected override void OnRowValidating(DataGridViewCellCancelEventArgs e)
         {
             //if grid is bad state - not synced with datasource

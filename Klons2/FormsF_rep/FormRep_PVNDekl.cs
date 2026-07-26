@@ -331,7 +331,7 @@ namespace KlonsF.FormsReportParams
             ax[48] = sc("115");
             //rinda 481 482
             ax[71] = sc("117") + sc("K046") + sc("K055");
-            ax[72] = sc("118");
+            ax[72] = sc("118") + sc("119");
             ax[43] = ax[44] + ax[45] + ax[75] + ax[46] + ax[47] + ax[48] + ax[71];
 
             ax[49] = sc("121");
@@ -757,8 +757,8 @@ namespace KlonsF.FormsReportParams
             AddRow(46, true, false, "46", "ārpuskopienas preču piegādes muitas noliktavās un brīvajās zonās");
             AddRow(47, true, false, "47", "uz ES dalībvalstīm piegādātie jaunie transportlīdzekļi");
             AddRow(48, true, false, "48", "par sniegtajiem pakalpojumiem");
-            AddRow(72, true, false, "481", "eksportētās preces");
-            AddRow(71, false, false, "482", "Citās valstīs veiktie darījumi");
+            AddRow(71, true, false, "481", "eksportētās preces");
+            AddRow(72, false, false, "482", "Citās valstīs veiktie darījumi");
             AddRow(49, false, false, "49", "Ar PVN neapliekamie darījumi");
             AddRow(50, false, false, "50", "No ES dalībvalstīm saņemtās preces  un pakalpojumi (standartlikme)");
             AddRow(51, false, false, "51", "No ES dalībvalstīm saņemtās preces (samazinātā likme)");
@@ -1496,7 +1496,7 @@ namespace KlonsF.FormsReportParams
             }
 
             if (xsumma != 150.0M)
-                MyMainForm.ShowWarning("Vai summas lauka vērtībai nevajadzētu būt 150.00 eiro?");
+                MyMainForm.ShowWarning("Vai summu robežas lauka vērtībai nevajadzētu būt 150.00 eiro?");
 
             SaveParams();
 

@@ -23,7 +23,10 @@ namespace KlonsF.Classes
         }
 
         private static string[] dbversions =
-            new string[] { "003", "012", "023", "024", "027", "035", "042", "044", "045" };
+            new string[] { "003", "012", "023", "024", "027", "035", "042", "044", "045", "046"};
+
+        private static string[] dbversions_silentupgrade =
+            new string[] { "046" };
 
         public static bool HasUpgrade(string db_ver, string app_ver)
         {
@@ -34,6 +37,17 @@ namespace KlonsF.Classes
                 if (string.Compare(s, db_ver) > 0) return true;
             }
             return false;
+        }
+        
+        public static bool IsSilentUpgrade(string from_ver, string to_ver)
+        {
+            foreach (var s in dbversions)
+            {
+                if (string.Compare(s, from_ver) <= 0) continue;
+                if (string.Compare(s, to_ver) > 0) break;
+                if (!dbversions_silentupgrade.Contains(s)) return false;
+            }
+            return true;
         }
 
         public static void ShowError(Exception e)
