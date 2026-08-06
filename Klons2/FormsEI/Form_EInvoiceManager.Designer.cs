@@ -204,7 +204,7 @@
             tpInvoiceList.Location = new System.Drawing.Point(4, 25);
             tpInvoiceList.Name = "tpInvoiceList";
             tpInvoiceList.Padding = new System.Windows.Forms.Padding(3);
-            tpInvoiceList.Size = new System.Drawing.Size(881, 299);
+            tpInvoiceList.Size = new System.Drawing.Size(1099, 299);
             tpInvoiceList.TabIndex = 0;
             tpInvoiceList.Text = "Rēķinu saraksts";
             tpInvoiceList.UseVisualStyleBackColor = true;
@@ -225,7 +225,7 @@
             dgvInvoiceList.Name = "dgvInvoiceList";
             dgvInvoiceList.RowHeadersWidth = 30;
             dgvInvoiceList.RowTemplate.Height = 25;
-            dgvInvoiceList.Size = new System.Drawing.Size(875, 232);
+            dgvInvoiceList.Size = new System.Drawing.Size(1093, 232);
             dgvInvoiceList.TabIndex = 1;
             // 
             // dgcInvoiceChecked
@@ -325,7 +325,7 @@
             tspInvoiceList.Location = new System.Drawing.Point(3, 264);
             tspInvoiceList.Name = "tspInvoiceList";
             tspInvoiceList.Padding = new System.Windows.Forms.Padding(0, 3, 1, 2);
-            tspInvoiceList.Size = new System.Drawing.Size(875, 32);
+            tspInvoiceList.Size = new System.Drawing.Size(1093, 32);
             tspInvoiceList.TabIndex = 2;
             tspInvoiceList.Text = "toolStrip1";
             // 
@@ -424,7 +424,7 @@
             panel1.Dock = System.Windows.Forms.DockStyle.Top;
             panel1.Location = new System.Drawing.Point(3, 3);
             panel1.Name = "panel1";
-            panel1.Size = new System.Drawing.Size(875, 29);
+            panel1.Size = new System.Drawing.Size(1093, 29);
             panel1.TabIndex = 0;
             // 
             // tbFilterInvoices
@@ -882,6 +882,7 @@
             // 
             // grtLineTextBox
             // 
+            grtLineTextBox.DataMember = null;
             grtLineTextBox.Name = "grtLineTextBox";
             grtLineTextBox.RowTitle = null;
             grtLineTextBox.RowValueType = KlonsLIB.MySourceGrid.GridRows.EMyGridRowValueType.String;
@@ -915,7 +916,7 @@
             tpErrors.Location = new System.Drawing.Point(4, 25);
             tpErrors.Name = "tpErrors";
             tpErrors.Padding = new System.Windows.Forms.Padding(3);
-            tpErrors.Size = new System.Drawing.Size(881, 299);
+            tpErrors.Size = new System.Drawing.Size(1099, 299);
             tpErrors.TabIndex = 3;
             tpErrors.Text = "Kļūdas";
             tpErrors.UseVisualStyleBackColor = true;
@@ -927,7 +928,7 @@
             tbErrors.Dock = System.Windows.Forms.DockStyle.Fill;
             tbErrors.Location = new System.Drawing.Point(3, 3);
             tbErrors.Name = "tbErrors";
-            tbErrors.Size = new System.Drawing.Size(875, 293);
+            tbErrors.Size = new System.Drawing.Size(1093, 293);
             tbErrors.TabIndex = 0;
             tbErrors.Text = "";
             // 
@@ -949,7 +950,7 @@
             tpSendPerEmail.Location = new System.Drawing.Point(4, 25);
             tpSendPerEmail.Name = "tpSendPerEmail";
             tpSendPerEmail.Padding = new System.Windows.Forms.Padding(3);
-            tpSendPerEmail.Size = new System.Drawing.Size(881, 299);
+            tpSendPerEmail.Size = new System.Drawing.Size(1099, 299);
             tpSendPerEmail.TabIndex = 4;
             tpSendPerEmail.Text = "Sūtīt pa e-pastu";
             tpSendPerEmail.UseVisualStyleBackColor = true;
@@ -1167,7 +1168,7 @@
             tpSettings.Location = new System.Drawing.Point(4, 25);
             tpSettings.Name = "tpSettings";
             tpSettings.Padding = new System.Windows.Forms.Padding(3);
-            tpSettings.Size = new System.Drawing.Size(881, 299);
+            tpSettings.Size = new System.Drawing.Size(1099, 299);
             tpSettings.TabIndex = 2;
             tpSettings.Text = "Iestatijumi";
             tpSettings.UseVisualStyleBackColor = true;
@@ -1388,13 +1389,13 @@
             // dgcLineVatType
             // 
             dgcLineVatType.DataPropertyName = "VatType";
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dgcLineVatType.DefaultCellStyle = dataGridViewCellStyle7;
             dgcLineVatType.HeaderText = "PVN vaids";
             dgcLineVatType.Name = "dgcLineVatType";
             dgcLineVatType.ReadOnly = true;
             dgcLineVatType.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            dgcLineVatType.Width = 90;
+            dgcLineVatType.Width = 120;
             // 
             // dgcLineTotalAmount
             // 

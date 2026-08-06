@@ -412,7 +412,7 @@ namespace KlonsM.FormsEI
                     invoiceview.ReadFrom(invoice);
                 else
                     invoiceview.ReadFrom(creditnote);
-                AdjustLineUnits(invoiceview);
+                AdjustLine(invoiceview);
                 invoiceview.ValidationMessage = "Ok";
                 return true;
             }
@@ -424,17 +424,34 @@ namespace KlonsM.FormsEI
             }
         }
 
-        public void AdjustLineUnits(InvoiceView invoice)
+        public void AdjustLine(InvoiceView invoice)
         {
             if (invoice == null || invoice.InvoiceLines.Count == 0) return;
             var table_units = MyData.DataSetKlonsM.M_UNITS;
             foreach(var line in invoice.InvoiceLines)
             {
+                line.ItemId = (line.ItemId, line.ItemBarCode) switch
+                {
+                    (null, null) => null,
+                    (null, _) => line.ItemBarCode,
+                    (_, null) => line.ItemId,
+                    _ => $"{line.ItemId}; {line.ItemBarCode}"
+                };
+
                 var code2 = line.Unit;
                 if (code2.IsNOE()) continue;
                 var dr_units = table_units.FirstOrDefault(x => x.CODE2 == code2);
                 if (dr_units == null) return;
                 line.Unit = dr_units.CODE;
+
+                var vattp = line.VatType;
+                if (vattp.IsNOE()) continue;
+                if (vattp == "S") vattp = "";
+                else if (vattp == "AE") vattp = "reversais";
+                else if (vattp == "E") vattp = "neapliek";
+                else if (vattp == "Z") vattp = "0% likme";
+                else if (vattp == "O") vattp = "nepiemēro";
+                line.VatType = vattp;
             }
         }
 

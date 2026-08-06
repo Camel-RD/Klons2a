@@ -7,7 +7,7 @@ Klons2 ir bezmaksas grāmatvedības uzskaites programmu komplekts, kurā ietilps
   - Noliktavas uzskaites modulis
 
 Lejuplādēt programmu pēdējo versiju:
-  - Klons2 ver. 2026.07.#5 [lejuplādēt](https://github.com/Camel-RD/Klons2a/releases/latest/download/setup_klons.zip)
+  - Klons2 ver. 2026.08.#1 [lejuplādēt](https://github.com/Camel-RD/Klons2a/releases/latest/download/setup_klons.zip)
 
 ## Finanšu uzskaites modulis
 
@@ -42,6 +42,9 @@ Klons2 finanšu uzskaites modulī ietilpst:
   - Apgrozijumu pārskats
   - Rēķinu un maksājumu pārskats
   - Neaapmaksāto rēķinu pārskats
+
+**Maksājumu uzdevumi**
+  - Maksājumu uzdevumu sagatavošana importēšanai internetbankā
 
 **Deklarācija par skaidrā naudā veiktajiem darijumiem**
 

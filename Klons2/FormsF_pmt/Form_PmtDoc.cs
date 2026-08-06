@@ -538,10 +538,10 @@ namespace KlonsF.FormsF_pmt
             var FinInstnId = xdoc.XE(DbtrAgt, "FinInstnId");
             xdoc.XE(FinInstnId, "BICFI", dr_acc.BANK);
 
-            var CdtTrfTxInf = xdoc.XE(PmtInf, "CdtTrfTxInf");
             var drs_trx = dr_doc.GetF_PMT_TRFTRXRows().OrderBy(x => x.ID1).ToArray();
             foreach(var dr_trx in drs_trx)
             {
+                var CdtTrfTxInf = xdoc.XE(PmtInf, "CdtTrfTxInf");
                 var PmtId = xdoc.XE(CdtTrfTxInf, "PmtId");
                 xdoc.XE(PmtId, "InstrId", dr_trx.ID1STR);
                 xdoc.XE(PmtId, "EndToEndId", dr_trx.ID2STR);

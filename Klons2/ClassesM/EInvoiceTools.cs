@@ -113,9 +113,13 @@ public static class EInvoiceTools
                         ID = currentVatCategory
                     };
                     PercentType percent = null;
-                    if (!(currentVatCategory == "O"))
+                    if (currentVatCategory == "S")
                     {
                         percent = line.M_PVNRATESRow.RATE;
+                    }
+                    else if (currentVatCategory == "AE" || currentVatCategory == "Z")
+                    {
+                        percent = 0.0M;
                     }
                     taxCategory.Percent = percent;
                     taxCategory.TaxScheme = new TaxSchemeType
@@ -340,9 +344,13 @@ public static class EInvoiceTools
                         ID = currentVatCategory
                     };
                     PercentType percent = null;
-                    if (!(currentVatCategory == "O"))
+                    if (currentVatCategory == "S")
                     {
                         percent = line.M_PVNRATESRow.RATE;
+                    }
+                    else if (currentVatCategory == "AE" || currentVatCategory == "Z")
+                    {
+                        percent = 0.0M;
                     }
                     taxCategory.Percent = percent;
                     taxCategory.TaxScheme = new TaxSchemeType

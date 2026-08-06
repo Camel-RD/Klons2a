@@ -189,6 +189,11 @@ namespace KlonsF.Forms
             {
                 Application.SetColorMode(SystemColorMode.Dark);
             }
+            else
+            {
+                Application.SetColorMode(SystemColorMode.Classic);
+            }
+
             this.Close();
         }
 
