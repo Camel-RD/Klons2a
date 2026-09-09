@@ -695,7 +695,7 @@ namespace KlonsM.FormsEI
             }
             if (invoice.InvoiceDocumentExtension.IsNOE())
             {
-                MyMainForm.ShowWarning("e=Rēķinam nav pievienots pilnais rēķins, vai tas nav atrasts.");
+                MyMainForm.ShowWarning("e-Rēķinam nav pievienots pilnais rēķins, vai tas nav atrasts.");
                 return;
             }
 
@@ -703,7 +703,7 @@ namespace KlonsM.FormsEI
             var fnm2 = Path.Combine(Path.GetDirectoryName(invoice.FullFileName), fnm);
             if (!File.Exists(fnm2))
             {
-                MyMainForm.ShowWarning($"e=Rēķina pilnā rēķina fails [{fnm}] netika atrasts.");
+                MyMainForm.ShowWarning($"e-Rēķina pilnā rēķina fails [{fnm}] netika atrasts.");
                 return;
             }
             try

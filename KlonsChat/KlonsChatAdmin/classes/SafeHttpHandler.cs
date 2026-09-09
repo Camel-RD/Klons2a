@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace KlonsChatAdmin.classes
+namespace Test2.Client
 {
     public class SafeHttpHandler : DelegatingHandler
     {

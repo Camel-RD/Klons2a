@@ -416,7 +416,7 @@ namespace KlonsM.Classes
                     PVNBase = grp_rateid.Sum(x => x.PVNBase)
                 };
 
-                decimal pvn = Math.Round(docpvndata.PVNBase * docpvndata.PVNRate / 100M, 4);
+                decimal pvn = Math.Round(docpvndata.PVNBase * docpvndata.PVNRate / 100M, 4, MidpointRounding.AwayFromZero);
 
                 if (docpvndata.IsReversePVN)
                     docpvndata.ReversePVN = pvn;
@@ -483,7 +483,7 @@ namespace KlonsM.Classes
                 .Select(x => new RowAccDataTotalB()
                 {
                     Acc = x.Key,
-                    Amount = Math.Round(x.Sum(y => y.Amount), 2),
+                    Amount = Math.Round(x.Sum(y => y.Amount), 2, MidpointRounding.AwayFromZero),
                     Tp = x.First().Tp
                 })
                 .OrderBy(x => x.Tp)
@@ -497,7 +497,7 @@ namespace KlonsM.Classes
                 .Select(x => new RowAccDataTotalB()
                 {
                     Acc = x.Key,
-                    Amount = Math.Round(x.Sum(y => y.Amount), 2),
+                    Amount = Math.Round(x.Sum(y => y.Amount), 2, MidpointRounding.AwayFromZero),
                     Tp = x.First().Tp
                 })
                 .GroupBy(x => x.Acc.Text)

@@ -1,3 +1,7 @@
+v2026.09.#01
+	Noliktava:
+		Koriģēta summu apaļošan
+
 v2026.08.#01
 	
 	E-rēķini:

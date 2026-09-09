@@ -260,7 +260,7 @@ namespace KlonsM.FormsM
 
         private decimal RoundPrice(decimal price)
         {
-            return Math.Round(price, DecimalsInPrices);
+            return Math.Round(price, DecimalsInPrices, MidpointRounding.AwayFromZero);
         }
 
         private void M_ROWS_ColumnChangedA(DataColumnChangeEventArgs e)
@@ -313,7 +313,7 @@ namespace KlonsM.FormsM
             {
                 var dr = e.Row as KlonsMDataSet.M_ROWSRow;
                 var price = RoundPrice(dr.PRICE0 + (decimal)dr.DISCOUNT / 100M * dr.PRICE0);
-                var tprice = Math.Round(dr.AMOUNT * price, 2);
+                var tprice = Math.Round(dr.AMOUNT * price, 2, MidpointRounding.AwayFromZero);
                 if (dr.PRICE != price) dr.PRICE = price;
                 if (dr.TPRICE != tprice) dr.TPRICE = tprice;
                 if (SomeDataDefs.PriceIsBuyPrice(dr.M_DOCSRow.XDocType))
