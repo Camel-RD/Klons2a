@@ -16,6 +16,8 @@ namespace KlonsM.Classes;
 
 public static class EInvoiceTools
 {
+    public static decimal Round(decimal val, int k) => Math.Round(val, k, MidpointRounding.AwayFromZero);
+
     public static KlonsMDataSet.M_STORESRow GetPartnerType(KlonsMDataSet.M_DOCSRow dr_doc)
     {
         if (dr_doc.XStoreInType == KlonsM.Classes.EStoreType.Partneris)
@@ -157,7 +159,7 @@ public static class EInvoiceTools
                     var lineExtensionAmount = new AmountType()
                     {
                         currencyID = "EUR",
-                        Value = Math.Round(line.TPRICE, 2)
+                        Value = Round(line.TPRICE, 2)
                     };
                     return lineExtensionAmount;
                 }
@@ -176,13 +178,13 @@ public static class EInvoiceTools
                     allowanceCharge.BaseAmount = new AmountType()
                     {
                         currencyID = "EUR",
-                        Value = Math.Round(line.AMOUNT * line.PRICE0, 2)
+                        Value = Round(line.AMOUNT * line.PRICE0, 2)
                     };
                     allowanceCharge.MultiplierFactorNumeric = (decimal)Math.Abs(line.DISCOUNT);
                     allowanceCharge.Amount = new AmountType
                     {
                         currencyID = "EUR",
-                        Value = Math.Abs(Math.Round(line.TPRICE, 2) - Math.Round(line.AMOUNT * line.PRICE0, 2))
+                        Value = Math.Abs(Round(line.TPRICE, 2) - Round(line.AMOUNT * line.PRICE0, 2))
                     };
                     allowanceChargeList.Add(allowanceCharge);
 
@@ -227,7 +229,7 @@ public static class EInvoiceTools
             };
             decimal doctotalamount = dr_doc.SUMM;
             decimal totalvatamount = topInvoice?.TaxTotal?.FirstOrDefault()?.TaxAmount?.Value ?? 0M;
-            decimal taxExclusiveAmount = Math.Round(doctotalamount - totalvatamount, 2);
+            decimal taxExclusiveAmount = Round(doctotalamount - totalvatamount, 2);
             monetaryTotal.TaxExclusiveAmount = new AmountType()
             {
                 currencyID = "EUR",
@@ -236,7 +238,7 @@ public static class EInvoiceTools
             monetaryTotal.TaxInclusiveAmount = new AmountType()
             {
                 currencyID = "EUR",
-                Value = Math.Round(dr_doc.SUMM, 2)
+                Value = Round(dr_doc.SUMM, 2)
             };
             /*monetaryTotal.PrepaidAmount = new AmountType
             {
@@ -246,7 +248,7 @@ public static class EInvoiceTools
             monetaryTotal.PayableAmount = new AmountType
             {
                 currencyID = "EUR",
-                Value = Math.Round(dr_doc.SUMM, 2)
+                Value = Round(dr_doc.SUMM, 2)
             };
             return monetaryTotal;
         }
@@ -388,7 +390,7 @@ public static class EInvoiceTools
                     var lineExtensionAmount = new AmountType()
                     {
                         currencyID = "EUR",
-                        Value = Math.Round(line.TPRICE, 2)
+                        Value = Round(line.TPRICE, 2)
                     };
                     return lineExtensionAmount;
                 }
@@ -404,13 +406,13 @@ public static class EInvoiceTools
                     allowanceCharge.BaseAmount = new AmountType()
                     {
                         currencyID = "EUR",
-                        Value = Math.Round(line.AMOUNT * line.PRICE0, 2)
+                        Value = Round(line.AMOUNT * line.PRICE0, 2)
                     };
                     allowanceCharge.MultiplierFactorNumeric = (decimal)Math.Abs(line.DISCOUNT);
                     allowanceCharge.Amount = new AmountType
                     {
                         currencyID = "EUR",
-                        Value = Math.Abs(Math.Round(line.TPRICE, 2) - Math.Round(line.AMOUNT * line.PRICE0, 2))
+                        Value = Math.Abs(Round(line.TPRICE, 2) - Round(line.AMOUNT * line.PRICE0, 2))
                     };
                     allowanceChargeList.Add(allowanceCharge);
 
@@ -454,7 +456,7 @@ public static class EInvoiceTools
             };
             decimal doctotalamount = dr_doc.SUMM;
             decimal totalvatamount = topCreditNote?.TaxTotal?.FirstOrDefault()?.TaxAmount?.Value ?? 0M;
-            decimal taxExclusiveAmount = Math.Round(doctotalamount - totalvatamount, 2);
+            decimal taxExclusiveAmount = Round(doctotalamount - totalvatamount, 2);
             monetaryTotal.TaxExclusiveAmount = new AmountType()
             {
                 currencyID = "EUR",
@@ -463,7 +465,7 @@ public static class EInvoiceTools
             monetaryTotal.TaxInclusiveAmount = new AmountType()
             {
                 currencyID = "EUR",
-                Value = Math.Round(dr_doc.SUMM, 2)
+                Value = Round(dr_doc.SUMM, 2)
             };
             /*monetaryTotal.PrepaidAmount = new AmountType
             {
@@ -473,7 +475,7 @@ public static class EInvoiceTools
             monetaryTotal.PayableAmount = new AmountType
             {
                 currencyID = "EUR",
-                Value = Math.Round(dr_doc.SUMM, 2)
+                Value = Round(dr_doc.SUMM, 2)
             };
             return monetaryTotal;
         }
@@ -671,7 +673,7 @@ public static class EInvoiceTools
         taxTotal.TaxAmount = new AmountType()
         {
             currencyID = "EUR",
-            Value = vatCategories.Sum(x => Math.Round(x.VAT, 2))
+            Value = vatCategories.Sum(x => Round(x.VAT, 2))
         };
         taxTotal.TaxSubtotal = vatCategories
             .Select(MakeTaxSubtotal)
@@ -686,7 +688,7 @@ public static class EInvoiceTools
         taxSubtotal.TaxableAmount = new AmountType
         {
             currencyID = "EUR",
-            Value = Math.Round(vatitem.Base, 2)
+            Value = Round(vatitem.Base, 2)
         };
         taxSubtotal.TaxAmount = new AmountType
         {
@@ -741,7 +743,7 @@ public static class EInvoiceTools
         public string Category { get; set; }
         public decimal Base { get; set; }
         public decimal Rate { get; set; }
-        public decimal VAT => Math.Round(Base * Rate / 100M, 2);
+        public decimal VAT => Round(Base * Rate / 100M, 2);
         public decimal Total => Base + (Category == "S" ? VAT : 0M);
 
     }

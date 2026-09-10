@@ -77,8 +77,8 @@ namespace KlonsM.Classes
             }
             foreach (var row in RowData)
             {
-                row.Price0 = Math.Round(row.Price0, maxdec);
-                row.Price = Math.Round(row.Price, maxdec);
+                row.Price0 = Math.Round(row.Price0, maxdec, MidpointRounding.AwayFromZero);
+                row.Price = Math.Round(row.Price, maxdec, MidpointRounding.AwayFromZero);
             }
             int dec1 = RowData.Max(x => getdec(x.Price0));
             int dec2 = RowData.Max(x => getdec(x.Price));
