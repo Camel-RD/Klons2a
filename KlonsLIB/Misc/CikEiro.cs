@@ -11,7 +11,7 @@ namespace KlonsLIB.Misc
         public static string[] Cik_Nums = new string[]
         {
             "nulle","viens","divi","trīs","četri","pieci",
-            "seši","septiņa","astoņi","deviņi","desmit"
+            "seši","septiņi","astoņi","deviņi","desmit"
         };
         public static string[] Cik_Nums1 = new string[]
         {

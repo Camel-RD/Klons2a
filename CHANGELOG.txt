@@ -1,3 +1,7 @@
+v2026.10.#01
+	Noliktava:
+		rēķinu veidlapas korekcijas
+
 v2026.09.#01
 	Noliktava:
 		Koriģēta summu apaļošan
